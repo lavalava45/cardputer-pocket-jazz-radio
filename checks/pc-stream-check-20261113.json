@@ -3,9 +3,9 @@
   "method": "HTTPS GET, standard CA+hostname, no HTTP downgrade; Arduino-ESP32 3.3.9 HTTPClient User-Agent/Accept-Encoding/Connection, Icy-MetaData: 1; bounded ICY metadata removal; 8192 volatile MP3 audio bytes; three aligned MPEG Layer III headers. No audio retained.",
   "limitation": "Only network+MP3 framing from this Windows host; not actual Cardputer playback.",
   "counts": {
-    "primary": 55,
-    "backup": 5,
-    "passed": 60,
+    "primary": 51,
+    "backup": 4,
+    "passed": 55,
     "failed": 0
   },
   "streams": [
@@ -371,66 +371,6 @@
     },
     {
       "playlist": "02-modern-jazz.m3u",
-      "station": "181.fm Fusion Jazz | USA",
-      "kind": "primary",
-      "url": "https://listen.181fm.com/181-fusionjazz_128k.mp3",
-      "status": "PASS",
-      "http": 200,
-      "content_type": "audio/mpeg",
-      "bytes_examined": 8192,
-      "raw_bytes_received": 8192,
-      "icy_interval": 16000,
-      "final_url": "https://listen.181fm.com/181-fusionjazz_128k.mp3",
-      "mp3": {
-        "mpeg": "1",
-        "sample_rate_hz": 44100,
-        "bitrate_kbps_first_frame": 128,
-        "first_frame_offset": 0
-      },
-      "attempts": 1
-    },
-    {
-      "playlist": "02-modern-jazz.m3u",
-      "station": "181.fm Trance Jazz | USA",
-      "kind": "primary",
-      "url": "https://listen.181fm.com/181-trancejazz_128k.mp3",
-      "status": "PASS",
-      "http": 200,
-      "content_type": "audio/mpeg",
-      "bytes_examined": 8192,
-      "raw_bytes_received": 8192,
-      "icy_interval": 16000,
-      "final_url": "https://listen.181fm.com/181-trancejazz_128k.mp3",
-      "mp3": {
-        "mpeg": "1",
-        "sample_rate_hz": 44100,
-        "bitrate_kbps_first_frame": 128,
-        "first_frame_offset": 0
-      },
-      "attempts": 1
-    },
-    {
-      "playlist": "02-modern-jazz.m3u",
-      "station": "181.fm Acid Jazz | USA",
-      "kind": "primary",
-      "url": "https://listen.181fm.com/181-acidjazz_128k.mp3",
-      "status": "PASS",
-      "http": 200,
-      "content_type": "audio/mpeg",
-      "bytes_examined": 8192,
-      "raw_bytes_received": 8192,
-      "icy_interval": 16000,
-      "final_url": "https://listen.181fm.com/181-acidjazz_128k.mp3",
-      "mp3": {
-        "mpeg": "1",
-        "sample_rate_hz": 44100,
-        "bitrate_kbps_first_frame": 128,
-        "first_frame_offset": 0
-      },
-      "attempts": 1
-    },
-    {
-      "playlist": "02-modern-jazz.m3u",
       "station": "Jazz Radio Electro Swing | France",
       "kind": "primary",
       "url": "https://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3",
@@ -661,46 +601,6 @@
       "raw_bytes_received": 8192,
       "icy_interval": 16000,
       "final_url": "https://listen.181fm.com/181-breeze_128k.mp3",
-      "mp3": {
-        "mpeg": "1",
-        "sample_rate_hz": 44100,
-        "bitrate_kbps_first_frame": 128,
-        "first_frame_offset": 0
-      },
-      "attempts": 1
-    },
-    {
-      "playlist": "03-mellow-bossa.m3u",
-      "station": "Groove Salad | SomaFM",
-      "kind": "primary",
-      "url": "https://ice5.somafm.com/groovesalad-128-mp3",
-      "status": "PASS",
-      "http": 200,
-      "content_type": "audio/mpeg",
-      "bytes_examined": 8192,
-      "raw_bytes_received": 8192,
-      "icy_interval": 45000,
-      "final_url": "https://ice5.somafm.com/groovesalad-128-mp3",
-      "mp3": {
-        "mpeg": "1",
-        "sample_rate_hz": 44100,
-        "bitrate_kbps_first_frame": 128,
-        "first_frame_offset": 0
-      },
-      "attempts": 1
-    },
-    {
-      "playlist": "03-mellow-bossa.m3u",
-      "station": "Groove Salad | SomaFM",
-      "kind": "backup",
-      "url": "https://ice6.somafm.com/groovesalad-128-mp3",
-      "status": "PASS",
-      "http": 200,
-      "content_type": "audio/mpeg",
-      "bytes_examined": 8192,
-      "raw_bytes_received": 8192,
-      "icy_interval": 45000,
-      "final_url": "https://ice6.somafm.com/groovesalad-128-mp3",
       "mp3": {
         "mpeg": "1",
         "sample_rate_hz": 44100,
@@ -1210,5 +1110,5 @@
       "attempts": 1
     }
   ],
-  "editorial_change": "Removed Sonic Universe from the curated jazz catalog; 60 unchanged URLs retain the original 2026-11-13 PC test observations. No fresh network tests were run for this removal."
+  "editorial_change": "Removed Sonic Universe from the curated jazz catalog; 60 unchanged URLs retain the original 2026-11-13 PC test observations. No fresh network tests were run for this removal. On 2026-11-14, removed Groove Salad (primary+backup) and 181.fm Fusion/Trance/Acid Jazz (primary each) on owner editorial request. Remaining 55 observations are inherited from original PC checks, not newly tested."
 }

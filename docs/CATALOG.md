@@ -4,9 +4,9 @@
 
 **A carefully curated jazz radio directory for M5Stack Cardputer ADV**
 
-[![Catalog](https://img.shields.io/badge/catalog-2026.11.13.2-D0AB72)](../manifest.json)
-[![Stations](https://img.shields.io/badge/stations-55-3A9188)](../catalog/)
-[![Streams checked](https://img.shields.io/badge/PC_stream_checks-60%2F60_pass-3A9188)](../checks/pc-stream-check-20261113.json)
+[![Catalog](https://img.shields.io/badge/catalog-2026.11.14.1-D0AB72)](../manifest.json)
+[![Stations](https://img.shields.io/badge/stations-51-3A9188)](../catalog/)
+[![Streams checked](https://img.shields.io/badge/PC_stream_checks-55%2F55_pass-3A9188)](../checks/pc-stream-check-20261113.json)
 [![Validate](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml/badge.svg)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml)
 
 </div>
@@ -21,11 +21,11 @@ ADV (ESP32-S3)**. It is **not** firmware, a launcher, or an ESP32 flashing
 utility.
 
 Each station is a direct streaming URL in an extended M3U playlist. The
-current collection contains **55 jazz and jazz-adjacent stations** across
-five categories, plus **five optional backup stream URLs**.
+current collection contains **51 jazz and jazz-adjacent stations** across
+five categories, plus **four optional backup stream URLs**.
 
 The [November 13, 2026 PC report](../checks/pc-stream-check-20261113.json)
-retains **60/60 successful HTTPS / MP3-frame checks** from the 62 checked on November 13. The two Sonic Universe entries were excluded editorially, not newly retested. The original observations used the actual
+retains **55/55 successful HTTPS / MP3-frame checks** among unchanged URLs, originally checked November 13. Sonic Universe, Groove Salad and three 181.fm entries were removed editorially; the remaining streams were not re-tested during these changes. The original observations used the actual
 Arduino-ESP32 3.3.9 HTTP headers (including `Icy-MetaData: 1`) and
 certificate verification. **This is not a promise of continuous playback on
 Cardputer or of permanent availability**: broadcasters can change URLs,
@@ -36,11 +36,11 @@ geoblock streams, or go offline at any time.
 | File | Theme | Stations |
 | --- | --- | ---: |
 | [01-essentials.m3u](../catalog/01-essentials.m3u) | Jazz essentials and public radio | 15 |
-| [02-modern-jazz.m3u](../catalog/02-modern-jazz.m3u) | Modern, fusion and experimental | 13 |
-| [03-mellow-bossa.m3u](../catalog/03-mellow-bossa.m3u) | Mellow jazz, bossa and adjacent styles | 13 |
+| [02-modern-jazz.m3u](../catalog/02-modern-jazz.m3u) | Modern, fusion and experimental | 10 |
+| [03-mellow-bossa.m3u](../catalog/03-mellow-bossa.m3u) | Mellow jazz, bossa and adjacent styles | 12 |
 | [05-swing-vocals.m3u](../catalog/05-swing-vocals.m3u) | Swing, voices, manouche and soundtracks | 10 |
 | [06-latin-soul-jazz.m3u](../catalog/06-latin-soul-jazz.m3u) | Latin jazz and soul | 4 |
-| **Total** | | **55** |
+| **Total** | | **51** |
 
 **Personal stations stay personal.** The file `04-my-stations.m3u` is
 intentionally **not included**. Neither this repository nor a future updater
@@ -67,7 +67,7 @@ Older preview firmware still requires updating the default files on a PC:
    they are. Restart Pocket Jazz Radio or use its playlist reload command.
 
 **Capacity note:** the current Cardputer app supports **64 stations across
-12 playlists**. These defaults occupy 55 slots; personal stations may need
+12 playlists**. These defaults occupy 51 slots; personal stations may need
 additional capacity. The in-app updater checks this and refuses
 unsafe replacements. Do **not** flash a merged image, repartition the device,
 or replace M5Launcher to use these files.

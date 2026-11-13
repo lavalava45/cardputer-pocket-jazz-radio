@@ -5,6 +5,22 @@ These notes distinguish **software verification** from actual audio and
 display acceptance on an M5Stack Cardputer ADV. The detailed historical
 engineering journal remains in the frozen source snapshots.
 
+## Curated station catalog 2026.11.14.1 — 2026-11-14 (catalog-only)
+
+- Removed **Groove Salad | SomaFM** (primary and backup stream) from
+  `03-mellow-bossa.m3u`; retained the *separately listed* **Groove Salad
+  Classic** station pending a separate editorial decision.
+- Removed **181.fm Fusion Jazz**, **181.fm Trance Jazz**, and **181.fm
+  Acid Jazz** from `02-modern-jazz.m3u` on the owner's request. This
+  decision does not independently establish that the three streams
+  actually broadcast identical programming.
+- The curated catalog now contains **51 stations** and **4 alternate URLs**.
+  The updated PC report retains **55 positive November 13 observations**
+  for the unchanged URLs; **no new live stream checks** were performed.
+  SHA-256/size/count manifest and offline tests were regenerated.
+- This changes only the GitHub-downloadable catalog, not firmware binaries,
+  frozen source snapshots, or the user's personal SD playlists.
+
 ## Curated station catalog 2026.11.13.2 — 2026-11-13 (catalog-only)
 
 - Removed **Sonic Universe | SomaFM** (primary and backup URLs) from

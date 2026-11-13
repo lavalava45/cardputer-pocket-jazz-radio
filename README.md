@@ -8,7 +8,7 @@ An independent, keyboard-driven internet jazz radio for the **M5Stack Cardputer 
 
 [![Latest preview](https://img.shields.io/badge/latest-v0.7z12%20preview-c8a96e)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12)
 ![Hardware](https://img.shields.io/badge/device-Cardputer%20ADV-21354d)
-![MP3 stations](https://img.shields.io/badge/stations-55%20curated-3a9088)
+![MP3 stations](https://img.shields.io/badge/stations-51%20curated-3a9088)
 [![Catalog CI](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml/badge.svg)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml)
 
 **[Download v0.7z12 (preview)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12) · [Installation](docs/INSTALL.md) · [User guide](docs/USER-GUIDE.md) · [Changelog](CHANGELOG.md)**

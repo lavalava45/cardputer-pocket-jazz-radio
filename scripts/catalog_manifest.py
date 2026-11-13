@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CATALOG_VERSION = "2026.11.13.2"
+CATALOG_VERSION = "2026.11.14.1"
 REPO = "lavalava45/cardputer-pocket-jazz-radio"
 FILES = (
     "01-essentials.m3u",
