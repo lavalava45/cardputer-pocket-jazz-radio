@@ -1,0 +1,49 @@
+#EXTM3U
+# Pocket Jazz Radio - Essentials: jazz radio stations (not on-demand tracks).
+# Editorial mood tags below describe a station's broad programming, not each track.
+# Scale 0..4: energy=calm..energetic, acoustic=electronic..acoustic.
+#EXTINF:-1,Radio Swiss Jazz | Switzerland
+#PJ-MOOD:energy=2,acoustic=4
+https://stream.srg-ssr.ch/srgssr/rsj/mp3/128
+#EXTINF:-1,Jazz24 | USA
+#PJ-MOOD:energy=3,acoustic=3
+https://knkx-live-a.edge.audiocdn.com/6285_128k
+#EXTINF:-1,KNKX 88.5 | Seattle
+#PJ-MOOD:energy=3,acoustic=4
+https://knkx-live-a.edge.audiocdn.com/6284_128k
+#EXTINF:-1,WBGO Jazz 88.3 | USA
+#PJ-MOOD:energy=3,acoustic=4
+https://ais-sa8.cdnstream1.com/3629_128.mp3
+#EXTINF:-1,FIP Jazz | France
+#PJ-MOOD:energy=2,acoustic=3
+https://icecast.radiofrance.fr/fipjazz-midfi.mp3
+#EXTINF:-1,Jazz Radio | France
+#PJ-MOOD:energy=3,acoustic=3
+https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3
+#EXTINF:-1,WRTI All-Jazz | USA
+#PJ-MOOD:energy=2,acoustic=4
+https://wrti-live.streamguys1.com/jazz-mp3
+#EXTINF:-1,TSF Jazz | France
+#PJ-MOOD:energy=3,acoustic=4
+https://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3
+#EXTINF:-1,KJazz 88.1 | Los Angeles
+#PJ-MOOD:energy=3,acoustic=4
+https://streaming.live365.com/a49833
+#EXTINF:-1,181.fm Classical Jazz | USA
+#PJ-MOOD:energy=2,acoustic=4
+https://listen.181fm.com/181-classicaljazz_128k.mp3
+#EXTINF:-1,181.fm Jazz Mix | USA
+#PJ-MOOD:energy=3,acoustic=3
+https://listen.181fm.com/181-jazzmix_128k.mp3
+#EXTINF:-1,JAZZ.FM91 | Canada
+#PJ-MOOD:energy=2,acoustic=4
+https://jazzfm91.streamb.live/SB00009
+#EXTINF:-1,JazzRadio Berlin | Germany
+#PJ-MOOD:energy=2,acoustic=4
+https://streaming.radio.co/s774887f7b/listen
+#EXTINF:-1,Jazz Radio Classic Jazz | France
+#PJ-MOOD:energy=2,acoustic=4
+https://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3
+#EXTINF:-1,Jazz Radio New Orleans | France
+#PJ-MOOD:energy=3,acoustic=4
+https://jazz-wr03.ice.infomaniak.ch/jazz-wr03-128.mp3

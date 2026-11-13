@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "catalog_version": "2026.11.13.1",
+  "repository": "lavalava45/cardputer-pocket-jazz-stations",
+  "playlists": 5,
+  "stations": 56,
+  "alternate_urls": 6,
+  "files": [
+    {
+      "path": "catalog/01-essentials.m3u",
+      "sha256": "a55a59e943bd6d74e95584bc638ce82332a92d75c5af34993de8fb4c21263c5f",
+      "bytes": 1895,
+      "stations": 15
+    },
+    {
+      "path": "catalog/02-modern-jazz.m3u",
+      "sha256": "f7c2114df9899e1b4c28c10906d7c090ebc9ecee9134b20640ea959a14a16b1c",
+      "bytes": 1836,
+      "stations": 14
+    },
+    {
+      "path": "catalog/03-mellow-bossa.m3u",
+      "sha256": "0148b51470c7b42a8e829c20c07c15c67aa0e9b211df55b5ee4df80afcff0b79",
+      "bytes": 1789,
+      "stations": 13
+    },
+    {
+      "path": "catalog/05-swing-vocals.m3u",
+      "sha256": "4220a47767a1f2b8e3b232d6015a4d20dd93b1ba042b304075cbfd91256365e2",
+      "bytes": 1339,
+      "stations": 10
+    },
+    {
+      "path": "catalog/06-latin-soul-jazz.m3u",
+      "sha256": "2c3dfcbda0c508e3b57f8e117d0d52153d7b3f5dca7a0fee36a033f362a85719",
+      "bytes": 614,
+      "stations": 4
+    }
+  ],
+  "pc_verification": {
+    "observed_utc": "2026-11-13T15:51:05.074138+00:00",
+    "passed": 62,
+    "failed": 0,
+    "report": "checks/pc-stream-check-20261113.json",
+    "report_sha256": "753defc0903330e5ceb6e3bacf7146798bd3bf2197f827f706b0d7b32ad105ce",
+    "limitation": "PC network/MP3 framing only; no Cardputer playback guarantee"
+  }
+}

@@ -1,0 +1,12 @@
+# Preserve exact published M3U/report/manifest bytes across Windows and Linux.
+# Their SHA-256 checksums are of bytes, not normalized text.
+*.m3u -text
+*.json -text
+
+# Keep source and documentation readable with stable LF on all systems.
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+LICENSE text eol=lf

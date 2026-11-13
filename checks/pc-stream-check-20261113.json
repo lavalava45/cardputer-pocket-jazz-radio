@@ -1,0 +1,1253 @@
+{
+  "observed_utc": "2026-11-13T15:51:05.074138+00:00",
+  "method": "HTTPS GET, standard CA+hostname, no HTTP downgrade; Arduino-ESP32 3.3.9 HTTPClient User-Agent/Accept-Encoding/Connection, Icy-MetaData: 1; bounded ICY metadata removal; 8192 volatile MP3 audio bytes; three aligned MPEG Layer III headers. No audio retained.",
+  "limitation": "Only network+MP3 framing from this Windows host; not actual Cardputer playback.",
+  "counts": {
+    "primary": 56,
+    "backup": 6,
+    "passed": 62,
+    "failed": 0
+  },
+  "streams": [
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "Radio Swiss Jazz | Switzerland",
+      "kind": "primary",
+      "url": "https://stream.srg-ssr.ch/srgssr/rsj/mp3/128",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16384,
+      "final_url": "https://livestreaming-node-2.srg-ssr.ch/srgssr/rsj/mp3/128",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "Jazz24 | USA",
+      "kind": "primary",
+      "url": "https://knkx-live-a.edge.audiocdn.com/6285_128k",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://knkx-live-a.edge.audiocdn.com/6285_128k",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "KNKX 88.5 | Seattle",
+      "kind": "primary",
+      "url": "https://knkx-live-a.edge.audiocdn.com/6284_128k",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://knkx-live-a.edge.audiocdn.com/6284_128k",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "WBGO Jazz 88.3 | USA",
+      "kind": "primary",
+      "url": "https://ais-sa8.cdnstream1.com/3629_128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 10240,
+      "icy_interval": 1024,
+      "final_url": "https://ais-sa8.cdnstream1.com/3629_128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "FIP Jazz | France",
+      "kind": "primary",
+      "url": "https://icecast.radiofrance.fr/fipjazz-midfi.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 0,
+      "final_url": "https://icecast.radiofrance.fr/fipjazz-midfi.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "Jazz Radio | France",
+      "kind": "primary",
+      "url": "https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazzradio.ice.infomaniak.ch/jazzradio-high.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 192,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "WRTI All-Jazz | USA",
+      "kind": "primary",
+      "url": "https://wrti-live.streamguys1.com/jazz-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 10240,
+      "icy_interval": 1024,
+      "final_url": "https://wrti-live.streamguys1.com/jazz-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "TSF Jazz | France",
+      "kind": "primary",
+      "url": "https://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://tsfjazz.ice.infomaniak.ch/tsfjazz-high.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "KJazz 88.1 | Los Angeles",
+      "kind": "primary",
+      "url": "https://streaming.live365.com/a49833",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 8192,
+      "final_url": "https://das-edge14-live365-dal02.cdnstream.com/a49833",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "181.fm Classical Jazz | USA",
+      "kind": "primary",
+      "url": "https://listen.181fm.com/181-classicaljazz_128k.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://listen.181fm.com/181-classicaljazz_128k.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "181.fm Jazz Mix | USA",
+      "kind": "primary",
+      "url": "https://listen.181fm.com/181-jazzmix_128k.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://listen.181fm.com/181-jazzmix_128k.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "JAZZ.FM91 | Canada",
+      "kind": "primary",
+      "url": "https://jazzfm91.streamb.live/SB00009",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazzfm91.streamb.live/SB00009",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "JazzRadio Berlin | Germany",
+      "kind": "primary",
+      "url": "https://streaming.radio.co/s774887f7b/listen",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://streaming.radio.co/s774887f7b/listen",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 192,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "Jazz Radio Classic Jazz | France",
+      "kind": "primary",
+      "url": "https://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr01.ice.infomaniak.ch/jazz-wr01-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "01-essentials.m3u",
+      "station": "Jazz Radio New Orleans | France",
+      "kind": "primary",
+      "url": "https://jazz-wr03.ice.infomaniak.ch/jazz-wr03-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr03.ice.infomaniak.ch/jazz-wr03-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Sonic Universe | SomaFM",
+      "kind": "primary",
+      "url": "https://ice5.somafm.com/sonicuniverse-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice5.somafm.com/sonicuniverse-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Sonic Universe | SomaFM",
+      "kind": "backup",
+      "url": "https://ice2.somafm.com/sonicuniverse-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice2.somafm.com/sonicuniverse-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "WBGO Too | USA",
+      "kind": "primary",
+      "url": "https://ais-sa8.cdnstream1.com/3630_128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 10240,
+      "icy_interval": 1024,
+      "final_url": "https://ais-sa8.cdnstream1.com/3630_128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Jazz Radio Fusion | France",
+      "kind": "primary",
+      "url": "https://jazz-radio-fusion.ice.infomaniak.ch/jazz-radio-fusion.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-radio-fusion.ice.infomaniak.ch/jazz-radio-fusion.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Contemporary Jazz | France",
+      "kind": "primary",
+      "url": "https://jazz-wr05.ice.infomaniak.ch/jazz-wr05-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr05.ice.infomaniak.ch/jazz-wr05-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "181.fm Fusion Jazz | USA",
+      "kind": "primary",
+      "url": "https://listen.181fm.com/181-fusionjazz_128k.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://listen.181fm.com/181-fusionjazz_128k.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "181.fm Trance Jazz | USA",
+      "kind": "primary",
+      "url": "https://listen.181fm.com/181-trancejazz_128k.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://listen.181fm.com/181-trancejazz_128k.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "181.fm Acid Jazz | USA",
+      "kind": "primary",
+      "url": "https://listen.181fm.com/181-acidjazz_128k.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://listen.181fm.com/181-acidjazz_128k.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Jazz Radio Electro Swing | France",
+      "kind": "primary",
+      "url": "https://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr04.ice.infomaniak.ch/jazz-wr04-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Jazz Radio Funk | France",
+      "kind": "primary",
+      "url": "https://jazz-wr06.ice.infomaniak.ch/jazz-wr06-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr06.ice.infomaniak.ch/jazz-wr06-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Jazz Radio Groove | France",
+      "kind": "primary",
+      "url": "https://jazz-wr08.ice.infomaniak.ch/jazz-wr08-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr08.ice.infomaniak.ch/jazz-wr08-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "JAZZ.FM91 Fusion | Canada",
+      "kind": "primary",
+      "url": "https://jazzfm91.streamb.live/SB00466",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazzfm91.streamb.live/SB00466",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "JAZZ.FM91 Notes From Canada",
+      "kind": "primary",
+      "url": "https://jazzfm91.streamb.live/SB00137",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazzfm91.streamb.live/SB00137",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Musica Jazz Radio | Italy",
+      "kind": "primary",
+      "url": "https://ice16.fluidstream.net/mjr.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 8192,
+      "final_url": "https://ice16.fluidstream.net/mjr.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Secret Agent | SomaFM",
+      "kind": "primary",
+      "url": "https://ice5.somafm.com/secretagent-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice5.somafm.com/secretagent-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "02-modern-jazz.m3u",
+      "station": "Secret Agent | SomaFM",
+      "kind": "backup",
+      "url": "https://ice2.somafm.com/secretagent-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice2.somafm.com/secretagent-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Bossa Beyond | SomaFM",
+      "kind": "primary",
+      "url": "https://ice5.somafm.com/bossa-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice5.somafm.com/bossa-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Bossa Beyond | SomaFM",
+      "kind": "backup",
+      "url": "https://ice6.somafm.com/bossa-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice6.somafm.com/bossa-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "RelaxingJazz | Saint Lucia",
+      "kind": "primary",
+      "url": "https://443-1.autopo.st/171/stream/1/",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16384,
+      "final_url": "https://443-1.autopo.st/171/stream/1/",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "181.fm The Breeze | USA",
+      "kind": "primary",
+      "url": "https://listen.181fm.com/181-breeze_128k.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://listen.181fm.com/181-breeze_128k.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Groove Salad | SomaFM",
+      "kind": "primary",
+      "url": "https://ice5.somafm.com/groovesalad-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice5.somafm.com/groovesalad-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Groove Salad | SomaFM",
+      "kind": "backup",
+      "url": "https://ice6.somafm.com/groovesalad-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice6.somafm.com/groovesalad-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Groove Salad Classic | SomaFM",
+      "kind": "primary",
+      "url": "https://ice5.somafm.com/gsclassic-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice5.somafm.com/gsclassic-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 160,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Groove Salad Classic | SomaFM",
+      "kind": "backup",
+      "url": "https://ice6.somafm.com/gsclassic-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice6.somafm.com/gsclassic-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 160,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Fluid | SomaFM",
+      "kind": "primary",
+      "url": "https://ice5.somafm.com/fluid-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice5.somafm.com/fluid-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Fluid | SomaFM",
+      "kind": "backup",
+      "url": "https://ice2.somafm.com/fluid-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice2.somafm.com/fluid-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Jazz Radio Lounge | France",
+      "kind": "primary",
+      "url": "https://jazzlounge.ice.infomaniak.ch/jazzlounge-high.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazzlounge.ice.infomaniak.ch/jazzlounge-high.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Jazz Radio Sunset | France",
+      "kind": "primary",
+      "url": "https://jzr-sunset.ice.infomaniak.ch/jzr-sunset.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jzr-sunset.ice.infomaniak.ch/jzr-sunset.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Jazz Radio Piano Jazz | France",
+      "kind": "primary",
+      "url": "https://jzr-piano.ice.infomaniak.ch/jzr-piano.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jzr-piano.ice.infomaniak.ch/jzr-piano.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Jazz Radio Jazz & Classique | France",
+      "kind": "primary",
+      "url": "https://jazz-wr17.ice.infomaniak.ch/jazz-wr17-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr17.ice.infomaniak.ch/jazz-wr17-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "SmoothJazz Monterey | USA",
+      "kind": "primary",
+      "url": "https://smoothjazz.cdnstream1.com/2585_128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://smoothjazz.cdnstream1.com/2585_128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "SmoothLounge Monterey | USA",
+      "kind": "primary",
+      "url": "https://smoothjazz.cdnstream1.com/2586_128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://smoothjazz.cdnstream1.com/2586_128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "03-mellow-bossa.m3u",
+      "station": "Sublime Jazz | Netherlands",
+      "kind": "primary",
+      "url": "https://stream.sublime.nl/web21_mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://29023.live.streamtheworld.com/WEB21_MP3_SC",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "181.fm Vocal Jazz | USA",
+      "kind": "primary",
+      "url": "https://listen.181fm.com/181-vocals_128k.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://listen.181fm.com/181-vocals_128k.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "181.fm BeBop Jazz | USA",
+      "kind": "primary",
+      "url": "https://listen.181fm.com/181-bebop_128k.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://listen.181fm.com/181-bebop_128k.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "Jazz Radio Manouche | France",
+      "kind": "primary",
+      "url": "https://jazz-wr02.ice.infomaniak.ch/jazz-wr02-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr02.ice.infomaniak.ch/jazz-wr02-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "Jazz Radio Only Women | France",
+      "kind": "primary",
+      "url": "https://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "Jazz Radio New York | France",
+      "kind": "primary",
+      "url": "https://jazzladiescrooners.ice.infomaniak.ch/jazzladiescrooners-high.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazzladiescrooners.ice.infomaniak.ch/jazzladiescrooners-high.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "Jazz Radio Saxo Jazz | France",
+      "kind": "primary",
+      "url": "https://jazz-thema.ice.infomaniak.ch/jazz-thema.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-thema.ice.infomaniak.ch/jazz-thema.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "Jazz Radio Jazz & Cinema | France",
+      "kind": "primary",
+      "url": "https://jzr-wr20.ice.infomaniak.ch/jzr-wr20.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jzr-wr20.ice.infomaniak.ch/jzr-wr20.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "JAZZ.FM91 Oscar Peterson | Canada",
+      "kind": "primary",
+      "url": "https://jazzfm91.streamb.live/SB00023",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazzfm91.streamb.live/SB00023",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "JAZZ.FM91 RESPECT Vocal | Canada",
+      "kind": "primary",
+      "url": "https://jazzfm91.streamb.live/SB00024",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazzfm91.streamb.live/SB00024",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "05-swing-vocals.m3u",
+      "station": "Illinois Street Lounge | SomaFM",
+      "kind": "primary",
+      "url": "https://ice5.somafm.com/illstreet-128-mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 45000,
+      "final_url": "https://ice5.somafm.com/illstreet-128-mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "06-latin-soul-jazz.m3u",
+      "station": "Jazz Radio Latin Jazz | France",
+      "kind": "primary",
+      "url": "https://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr09.ice.infomaniak.ch/jazz-wr09-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "06-latin-soul-jazz.m3u",
+      "station": "Jazz Radio Soul | France",
+      "kind": "primary",
+      "url": "https://jazz-wr10.ice.infomaniak.ch/jazz-wr10-128.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://jazz-wr10.ice.infomaniak.ch/jazz-wr10-128.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 48000,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "06-latin-soul-jazz.m3u",
+      "station": "Sublime Soul Classics | Netherlands",
+      "kind": "primary",
+      "url": "https://stream.sublime.nl/web22_mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 8192,
+      "icy_interval": 16000,
+      "final_url": "https://29003.live.streamtheworld.com/WEB22_MP3_SC",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    },
+    {
+      "playlist": "06-latin-soul-jazz.m3u",
+      "station": "WWOZ New Orleans | USA",
+      "kind": "primary",
+      "url": "https://wwoz-sc.streamguys1.com/wwoz-hi.mp3",
+      "status": "PASS",
+      "http": 200,
+      "content_type": "audio/mpeg",
+      "bytes_examined": 8192,
+      "raw_bytes_received": 10240,
+      "icy_interval": 1024,
+      "final_url": "https://wwoz-sc.streamguys1.com/wwoz-hi.mp3",
+      "mp3": {
+        "mpeg": "1",
+        "sample_rate_hz": 44100,
+        "bitrate_kbps_first_frame": 128,
+        "first_frame_offset": 0
+      },
+      "attempts": 1
+    }
+  ]
+}
