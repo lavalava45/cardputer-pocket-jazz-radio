@@ -1,0 +1,5 @@
+#EXTM3U
+# Personal playlist. Any genre is welcome: Pocket Jazz limits only the defaults.
+# Add entries in pairs (example only; remove the leading # to activate):
+#EXTINF:-1,My station
+#https://example.org/live.mp3

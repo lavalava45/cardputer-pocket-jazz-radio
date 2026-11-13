@@ -10,3 +10,8 @@
 .gitattributes text eol=lf
 .gitignore text eol=lf
 LICENSE text eol=lf
+
+# `firmware/` is the exact, immutable source snapshot from v0.7z9.
+# Keep its original bytes: SHA256-SOURCES.txt must remain verifiable even
+# when cloning this repository on a different operating system.
+firmware/** -text

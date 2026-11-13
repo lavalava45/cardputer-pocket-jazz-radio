@@ -1,4 +1,4 @@
-name: Validate station catalog
+name: Validate Pocket Jazz source and station catalog
 
 on:
   push:
@@ -22,3 +22,10 @@ jobs:
         run: python scripts/catalog_manifest.py --check
       - name: Unit tests (offline, no radio stream requests)
         run: python -m unittest discover -s tests -v
+      - name: Verify firmware source snapshot layout
+        run: |
+          test -f firmware/PocketJazzRadio/PocketJazzRadioApp.cpp
+          test -f firmware/LICENSE
+          test -f firmware/SHA256-SOURCES.txt
+          test -f firmware/arduino-cli.yaml
+          test -f firmware/tools/build.ps1

@@ -1,0 +1,33 @@
+#EXTM3U
+# Swing, jazz voices, manouche, saxophone and jazz soundtrack channels.
+# Editorial energy/acoustic tags are approximate station-level labels.
+#EXTINF:-1,181.fm Vocal Jazz | USA
+#PJ-MOOD:energy=2,acoustic=4
+https://listen.181fm.com/181-vocals_128k.mp3
+#EXTINF:-1,181.fm BeBop Jazz | USA
+#PJ-MOOD:energy=4,acoustic=4
+https://listen.181fm.com/181-bebop_128k.mp3
+#EXTINF:-1,Jazz Radio Manouche | France
+#PJ-MOOD:energy=3,acoustic=4
+https://jazz-wr02.ice.infomaniak.ch/jazz-wr02-128.mp3
+#EXTINF:-1,Jazz Radio Only Women | France
+#PJ-MOOD:energy=2,acoustic=4
+https://jazz-wr16.ice.infomaniak.ch/jazz-wr16-128.mp3
+#EXTINF:-1,Jazz Radio New York | France
+#PJ-MOOD:energy=2,acoustic=4
+https://jazzladiescrooners.ice.infomaniak.ch/jazzladiescrooners-high.mp3
+#EXTINF:-1,Jazz Radio Saxo Jazz | France
+#PJ-MOOD:energy=3,acoustic=4
+https://jazz-thema.ice.infomaniak.ch/jazz-thema.mp3
+#EXTINF:-1,Jazz Radio Jazz & Cinema | France
+#PJ-MOOD:energy=2,acoustic=3
+https://jzr-wr20.ice.infomaniak.ch/jzr-wr20.mp3
+#EXTINF:-1,JAZZ.FM91 Oscar Peterson | Canada
+#PJ-MOOD:energy=3,acoustic=4
+https://jazzfm91.streamb.live/SB00023
+#EXTINF:-1,JAZZ.FM91 RESPECT Vocal | Canada
+#PJ-MOOD:energy=2,acoustic=4
+https://jazzfm91.streamb.live/SB00024
+#EXTINF:-1,Illinois Street Lounge | SomaFM
+#PJ-MOOD:energy=2,acoustic=3
+https://ice5.somafm.com/illstreet-128-mp3

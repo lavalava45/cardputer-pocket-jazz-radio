@@ -1,0 +1,15 @@
+# DESIGN EXAMPLE ONLY. Home Assistant MQTT is disabled by default.
+# This file is NOT read by the current firmware. No secrets belong on SD.
+enabled=false
+device_id=cardputer_1
+# Transport must independently provide authenticated TLS with verified server
+# chain AND hostname, credential storage outside logs/SD, broker topic ACLs,
+# bounded MQTT packets <= 256 bytes, reconnect deadlines and keepalive.
+# Only after verified connect: subscribe pocketjazz/cardputer_1/cmd QoS0.
+# Commands: play | pause | stop | next | previous | volume:0..100
+# Reject retained commands and QoS1/2. Publish state JSON QoS0 non-retained.
+# State: {"state":"playing","volume":42,"title":"Song"}
+# States: playing, paused, idle, unavailable.
+# Notification topic: pocketjazz/cardputer_1/notice (<=120 UTF-8 bytes).
+# Inbound HA notification topic: pocketjazz/cardputer_1/notify (<=120 UTF-8
+# bytes, QoS0, not retained, authenticated/ACL restricted, rendered as plain text).

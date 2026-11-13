@@ -1,0 +1,46 @@
+#EXTM3U
+# Softer, Brazilian, spiritual and adjacent jazz styles.
+# Subjective labels for the broad playlist, not an assertion about every song.
+#EXTINF:-1,Bossa Beyond | SomaFM
+#PJ-ALT:https://ice6.somafm.com/bossa-128-mp3
+#PJ-MOOD:energy=2,acoustic=4
+https://ice5.somafm.com/bossa-128-mp3
+#EXTINF:-1,RelaxingJazz | Saint Lucia
+#PJ-MOOD:energy=1,acoustic=4
+https://443-1.autopo.st/171/stream/1/
+#EXTINF:-1,181.fm The Breeze | USA
+#PJ-MOOD:energy=1,acoustic=3
+https://listen.181fm.com/181-breeze_128k.mp3
+#EXTINF:-1,Groove Salad | SomaFM
+#PJ-ALT:https://ice6.somafm.com/groovesalad-128-mp3
+#PJ-MOOD:energy=1,acoustic=1
+https://ice5.somafm.com/groovesalad-128-mp3
+#EXTINF:-1,Groove Salad Classic | SomaFM
+#PJ-ALT:https://ice6.somafm.com/gsclassic-128-mp3
+#PJ-MOOD:energy=1,acoustic=1
+https://ice5.somafm.com/gsclassic-128-mp3
+#EXTINF:-1,Fluid | SomaFM
+#PJ-ALT:https://ice2.somafm.com/fluid-128-mp3
+#PJ-MOOD:energy=2,acoustic=1
+https://ice5.somafm.com/fluid-128-mp3
+#EXTINF:-1,Jazz Radio Lounge | France
+#PJ-MOOD:energy=1,acoustic=3
+https://jazzlounge.ice.infomaniak.ch/jazzlounge-high.mp3
+#EXTINF:-1,Jazz Radio Sunset | France
+#PJ-MOOD:energy=1,acoustic=3
+https://jzr-sunset.ice.infomaniak.ch/jzr-sunset.mp3
+#EXTINF:-1,Jazz Radio Piano Jazz | France
+#PJ-MOOD:energy=1,acoustic=4
+https://jzr-piano.ice.infomaniak.ch/jzr-piano.mp3
+#EXTINF:-1,Jazz Radio Jazz & Classique | France
+#PJ-MOOD:energy=1,acoustic=4
+https://jazz-wr17.ice.infomaniak.ch/jazz-wr17-128.mp3
+#EXTINF:-1,SmoothJazz Monterey | USA
+#PJ-MOOD:energy=1,acoustic=3
+https://smoothjazz.cdnstream1.com/2585_128.mp3
+#EXTINF:-1,SmoothLounge Monterey | USA
+#PJ-MOOD:energy=1,acoustic=2
+https://smoothjazz.cdnstream1.com/2586_128.mp3
+#EXTINF:-1,Sublime Jazz | Netherlands
+#PJ-MOOD:energy=2,acoustic=3
+https://stream.sublime.nl/web21_mp3

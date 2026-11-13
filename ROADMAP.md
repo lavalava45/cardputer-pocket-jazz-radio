@@ -1,56 +1,59 @@
-# Catalog roadmap
+# Pocket Jazz Radio — unified roadmap
 
-This is a station-data project; **firmware lives elsewhere**. No bootloader,
-partition table, NVS settings, launcher files or user-owned SD playlists are
-published or managed here.
+This repository includes firmware and curated station data. **firmware/**
+contains an immutable source snapshot of v0.7z9. Changes in the
+development working tree are not a published release until validated.
 
-## Done — 2026-11-13
+## P0: audio stability and heap profiling
 
-- [x] Publish a separate, public Cardputer-specific repository with curated
-  playlists and contribution instructions.
-- [x] Publish the first set: **56 primary MP3 stations plus 6 fallback URLs**,
-  five M3U files with no personal stations.
-- [x] Add a deterministic manifest with SHA-256 and exact byte sizes.
-- [x] Run a PC TLS+MPEG/ICY verification with the actual Cardputer headers,
-  preserving the dated report (62/62 at the observation time).
-- [x] Add offline validation tests and GitHub Actions. Network verification
-  intentionally runs only when explicitly requested by the maintainer.
+- Measure free and largest contiguous **internal 8-bit and DMA heap**
+  at STOPPED, pre-ring allocation, pre/post verified TLS, prefill,
+  codec allocation, first PCM, lowest free RAM and first BUFFERING.
+- Analyze lifetimes of UI notes/search/encyclopedia data. Most areas
+  are currently **static** and cannot simply be freed: evaluate safe
+  lazy allocation or reuse between mutually exclusive screens.
+- Do not unconditionally restore the 32-KiB MP3 ring without hardware
+  evidence. The adaptive policy is 16 KiB below 180000 bytes of free
+  heap at allocation, 32 KiB above. v0.7z6 reached only 8608 bytes free
+  / 1332 bytes largest during playback, and mbedTLS once returned -32512.
+- In 16-KiB mode prefill targets 8192 bytes; in 32-KiB mode only
+  2048 bytes. Measure comparable prefill levels and their impact on
+  underruns before attributing buffering solely to ring capacity.
+- Continue 10–20 minute on-device acceptance, retries and first-stall
+  journal captures. Never relax HTTPS certificate and hostname checks.
 
-## Next — high priority in Pocket Jazz Radio
+## P1: one full-width radio interface and clear clock
 
-- [ ] **Create a manual in-device `Check/update default catalog` action.**
-  Only while playback is stopped. It must fetch this repository's versioned
-  manifest and default M3U files through certificate- and hostname-verified
-  HTTPS (no insecure mode, no HTTPS→HTTP redirect fallback).
-- [ ] Validate manifest version, file list, per-file lengths, SHA-256, M3U
-  schema, primary/alternate URLs, total size and the radio's **64 stations /
-  12 playlists** limits *before activating anything*.
-- [ ] Stage into temporary SD files, read back all bytes, and implement
-  an explicitly testable two-phase swap/rollback. A reset or removed SD
-  card must never leave a half-installed default catalog.
-- [ ] **Never edit or delete `04-my-stations.m3u` or any other personal
-  playlist.** If default+personal station counts exceed firmware capacity,
-  fail safely and explain why rather than silently dropping stations.
-- [ ] Keep an offline usable default set bundled with the app for missing
-  network/SD and never require a catalog update to play existing stations.
-- [ ] Test failure injection: partial download, corrupt manifest/hash,
-  unsafe redirect, invalid station formats, full SD, cold reboot midway
-  through replacement, multiple personal playlists and unavailable GitHub.
-- [ ] Show the installed catalog version and last successful local update
-  in Settings/Diagnostics. No autonomous background network operations
-  while playing a stream.
+- Finish a single radio UI with full-width station/artist/track text,
+  a permanent compact VU meter and a compact **VOL 27%** label.
+  No blank left panel and no VU/TEXT toggle. Check actual LCD clipping
+  and UTF-8 wrap on Cardputer.
+- Simplify the sole Blue Note clock: large correct time, date, one
+  timezone indicator and clear **DEL BACK** hint, with NTP status
+  retained in Diagnostics. Correct time was confirmed by the user
+  on v0.7z9; new UI has not yet been released.
+- Keep M5Launcher 3, Wi-Fi profiles, backup, offline MP3 and alarm
+  functional while refining UI.
+
+## P1: update editorial stations from this same GitHub repo
+
+- **Done:** publish the combined public repo, verified station data,
+  SHA-256 manifest, tests and CI.
+- **Next:** user-invoked update of **default playlists only** while
+  radio is stopped. Fetch over verified HTTPS, validate bounded file
+  sizes/schema and hashes, stage on SD and implement power-safe rollback.
+- Never modify personal SD stations or silently drop them when default
+  and user station counts exceed 64 (12 playlists total).
+- Test invalid hashes, incomplete downloads, missing network/SD,
+  power loss during activation and unchanged personal files.
 
 ## Later
 
-- [ ] Record real Cardputer playback observations separately from PC
-  transport/MP3-header verification; neither one guarantees availability
-  tomorrow or on other networks.
-- [ ] Evaluate a paged catalog index that does not keep every station URL
-  permanently in ESP32 internal RAM.
-- [ ] Consider opt-in manual search via Radio Browser, as a *separate*
-  workflow for adding **personal** stations. Never conflate that with
-  curated default catalog updates.
+- Radio Browser search with manual import of individual personal stations.
+- Larger paged catalogs without holding every URL permanently in RAM.
+- PC display simulator using shared UI code; not a substitute for audio
+  acceptance on the actual ESP32-S3.
 
-Publication rules: version and report date must change with each verified
-catalog release; run `python scripts/catalog_manifest.py --check` and
-`python -m unittest discover -s tests -v` before pushing.
+For historic details see the archived
+[firmware roadmap](firmware/ROADMAP.md) and
+[firmware diagnostics](firmware/docs/).

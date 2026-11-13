@@ -1,0 +1,6 @@
+directories:
+  data: 'E:\Downloads\devspace-test\toolchains\arduino-data'
+  user: 'E:\Downloads\devspace-test\cardputer-adv\apps\pocket-jazz-radio\arduino-sketchbook'
+board_manager:
+  additional_urls:
+    - https://static-cdn.m5stack.com/resource/arduino/package_m5stack_index.json
