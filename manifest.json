@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "catalog_version": "2026.11.13.1",
+  "catalog_version": "2026.11.13.2",
   "repository": "lavalava45/cardputer-pocket-jazz-radio",
   "playlists": 5,
-  "stations": 56,
-  "alternate_urls": 6,
+  "stations": 55,
+  "alternate_urls": 5,
   "files": [
     {
       "path": "catalog/01-essentials.m3u",
@@ -14,9 +14,9 @@
     },
     {
       "path": "catalog/02-modern-jazz.m3u",
-      "sha256": "f7c2114df9899e1b4c28c10906d7c090ebc9ecee9134b20640ea959a14a16b1c",
-      "bytes": 1836,
-      "stations": 14
+      "sha256": "2e56a9b5796835938a71095b736fadae1a5fd1624a7e04d17c9bb04732d2fc1e",
+      "bytes": 1672,
+      "stations": 13
     },
     {
       "path": "catalog/03-mellow-bossa.m3u",
@@ -39,10 +39,10 @@
   ],
   "pc_verification": {
     "observed_utc": "2026-11-13T15:51:05.074138+00:00",
-    "passed": 62,
+    "passed": 60,
     "failed": 0,
     "report": "checks/pc-stream-check-20261113.json",
-    "report_sha256": "753defc0903330e5ceb6e3bacf7146798bd3bf2197f827f706b0d7b32ad105ce",
+    "report_sha256": "2aba050fd3dc8f9af3c172124bfe6c90c845fe0f88f1844cdc3309a4e043d1b8",
     "limitation": "PC network/MP3 framing only; no Cardputer playback guarantee"
   }
 }

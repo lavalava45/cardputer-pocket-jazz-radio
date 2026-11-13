@@ -5,6 +5,20 @@ These notes distinguish **software verification** from actual audio and
 display acceptance on an M5Stack Cardputer ADV. The detailed historical
 engineering journal remains in the frozen source snapshots.
 
+## Curated station catalog 2026.11.13.2 — 2026-11-13 (catalog-only)
+
+- Removed **Sonic Universe | SomaFM** (primary and backup URLs) from
+  `catalog/02-modern-jazz.m3u` by editorial request: its programming does
+  not fit the intended jazz focus. Other playlists and user-owned files
+  are not modified.
+- Updated the verified downloadable manifest and checksums to **55**
+  stations and **5** backup URLs. The verification report retains **60**
+  passing November 13 PC observations for the unchanged URLs; these streams
+  were **not re-tested** for this editorial removal.
+- This updates the remote catalog used by **D → Enter** at STOP. It is
+  **not a firmware release**; existing firmware snapshots and release
+  binaries are unchanged.
+
 ## [v0.7z12] — 2026-11-13 (software-verified preview)
 
 **Manually verified catalog activation with stronger SD recovery, global

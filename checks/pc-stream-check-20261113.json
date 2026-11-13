@@ -3,9 +3,9 @@
   "method": "HTTPS GET, standard CA+hostname, no HTTP downgrade; Arduino-ESP32 3.3.9 HTTPClient User-Agent/Accept-Encoding/Connection, Icy-MetaData: 1; bounded ICY metadata removal; 8192 volatile MP3 audio bytes; three aligned MPEG Layer III headers. No audio retained.",
   "limitation": "Only network+MP3 framing from this Windows host; not actual Cardputer playback.",
   "counts": {
-    "primary": 56,
-    "backup": 6,
-    "passed": 62,
+    "primary": 55,
+    "backup": 5,
+    "passed": 60,
     "failed": 0
   },
   "streams": [
@@ -304,46 +304,6 @@
       "mp3": {
         "mpeg": "1",
         "sample_rate_hz": 48000,
-        "bitrate_kbps_first_frame": 128,
-        "first_frame_offset": 0
-      },
-      "attempts": 1
-    },
-    {
-      "playlist": "02-modern-jazz.m3u",
-      "station": "Sonic Universe | SomaFM",
-      "kind": "primary",
-      "url": "https://ice5.somafm.com/sonicuniverse-128-mp3",
-      "status": "PASS",
-      "http": 200,
-      "content_type": "audio/mpeg",
-      "bytes_examined": 8192,
-      "raw_bytes_received": 8192,
-      "icy_interval": 45000,
-      "final_url": "https://ice5.somafm.com/sonicuniverse-128-mp3",
-      "mp3": {
-        "mpeg": "1",
-        "sample_rate_hz": 44100,
-        "bitrate_kbps_first_frame": 128,
-        "first_frame_offset": 0
-      },
-      "attempts": 1
-    },
-    {
-      "playlist": "02-modern-jazz.m3u",
-      "station": "Sonic Universe | SomaFM",
-      "kind": "backup",
-      "url": "https://ice2.somafm.com/sonicuniverse-128-mp3",
-      "status": "PASS",
-      "http": 200,
-      "content_type": "audio/mpeg",
-      "bytes_examined": 8192,
-      "raw_bytes_received": 8192,
-      "icy_interval": 45000,
-      "final_url": "https://ice2.somafm.com/sonicuniverse-128-mp3",
-      "mp3": {
-        "mpeg": "1",
-        "sample_rate_hz": 44100,
         "bitrate_kbps_first_frame": 128,
         "first_frame_offset": 0
       },
@@ -1249,5 +1209,6 @@
       },
       "attempts": 1
     }
-  ]
+  ],
+  "editorial_change": "Removed Sonic Universe from the curated jazz catalog; 60 unchanged URLs retain the original 2026-11-13 PC test observations. No fresh network tests were run for this removal."
 }

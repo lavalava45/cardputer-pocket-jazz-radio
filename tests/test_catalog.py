@@ -14,10 +14,10 @@ class StationCatalogTests(unittest.TestCase):
         data = json.loads((catalog.ROOT / "manifest.json").read_text("utf-8"))
         self.assertEqual(data, catalog.expected_manifest())
         self.assertEqual(data["catalog_version"], catalog.CATALOG_VERSION)
-        self.assertEqual(data["stations"], 56)
-        self.assertEqual(data["alternate_urls"], 6)
+        self.assertEqual(data["stations"], 55)
+        self.assertEqual(data["alternate_urls"], 5)
         self.assertEqual(data["playlists"], 5)
-        self.assertEqual(data["pc_verification"]["passed"], 62)
+        self.assertEqual(data["pc_verification"]["passed"], 60)
         self.assertEqual(data["pc_verification"]["failed"], 0)
 
     def test_no_personal_playlist_or_private_material_in_distribution(self):
@@ -29,11 +29,12 @@ class StationCatalogTests(unittest.TestCase):
     def test_m3u_is_bounded_for_cardputer_and_alt_urls_are_sparse(self):
         stations = sum((catalog.parse_playlist(catalog.ROOT / "catalog" / name)
                         for name in catalog.FILES), [])
-        self.assertEqual(len(stations), 56)
-        self.assertEqual(sum(bool(s["alternate"]) for s in stations), 6)
+        self.assertEqual(len(stations), 55)
+        self.assertEqual(sum(bool(s["alternate"]) for s in stations), 5)
         self.assertLessEqual(len(stations), 64)
-        self.assertEqual(len({s["url"] for s in stations}), 56)
+        self.assertEqual(len({s["url"] for s in stations}), 55)
         self.assertTrue(all(s["url"].startswith("https://") for s in stations))
+        self.assertFalse(any("sonicuniverse" in s["url"] for s in stations))
 
     def test_rejects_untrusted_url_and_bad_m3u_structures(self):
         for bad in ("http://example.org/radio.mp3", "https://user:pass@example.org/x",

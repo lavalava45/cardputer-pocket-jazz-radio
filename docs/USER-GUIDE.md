@@ -42,7 +42,7 @@ station into that slot. **L** displays recently selected stations.
 recent liked track; the lookups are searches, **not Spotify integration**
 or an automatic playlist add.
 
-The five default jazz groups contain **56 curated stations**.
+The five default jazz groups contain **55 curated stations**.
 Add your own stations to `04-my-stations.m3u` without touching the
 default lists. Current firmware supports **64 stations / 12 playlists**
 total. Press **D** from the radio and then **Enter** to manually check

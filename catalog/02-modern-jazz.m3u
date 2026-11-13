@@ -1,10 +1,6 @@
 #EXTM3U
 # Modern, experimental and contemporary jazz radio.
 # Subjective editorial mood labels; stations can play different moods over time.
-#EXTINF:-1,Sonic Universe | SomaFM
-#PJ-ALT:https://ice2.somafm.com/sonicuniverse-128-mp3
-#PJ-MOOD:energy=4,acoustic=2
-https://ice5.somafm.com/sonicuniverse-128-mp3
 #EXTINF:-1,WBGO Too | USA
 #PJ-MOOD:energy=3,acoustic=3
 https://ais-sa8.cdnstream1.com/3630_128.mp3

@@ -16,7 +16,7 @@ from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CATALOG_VERSION = "2026.11.13.1"
+CATALOG_VERSION = "2026.11.13.2"
 REPO = "lavalava45/cardputer-pocket-jazz-radio"
 FILES = (
     "01-essentials.m3u",
@@ -163,7 +163,7 @@ def main() -> int:
     elif not path.exists() or path.read_text(encoding="utf-8") != expected:
         raise SystemExit("manifest.json does not match curated playlists/report; regenerate with --write")
     else:
-        print("PASS manifest, checksums, playlist capacity and 62 PC observations")
+        print(f"PASS manifest, checksums, playlist capacity and {expected_manifest()['pc_verification']['passed']} PC observations")
     return 0
 
 
