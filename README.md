@@ -107,6 +107,10 @@ playlists.
 - We do not host, record, relay or redistribute any station's audio.
 
 To suggest a fix or new stream, see [CONTRIBUTING.md](CONTRIBUTING.md).
+For the upcoming safe in-app catalog downloader, see
+[ROADMAP.md](ROADMAP.md). **Downloading from GitHub inside the radio is not
+available in the current Pocket Jazz firmware**; do not mistake this catalog
+repository for an ESP32 update service.
 
 **License:** original scripts and curated metadata in this repository are
 MIT-licensed; stream content, station marks and third-party websites are
