@@ -23,6 +23,10 @@ def extract_pages(source: str) -> list[dict[str, object]]:
     )
     if not match:
         raise ValueError("HelpPage table missing or relocated")
+    page_count = re.search(r"constexpr uint8_t HELP_PAGE_COUNT\s*=\s*(\d+);", source)
+    if not page_count:
+        raise ValueError("Help page count missing")
+    declared_count = int(page_count.group(1))
     result = []
     for category, raw in re.findall(
         r'\{"([^"]+)",\s*\{(.*?)\}\}', match.group(1), re.S
@@ -30,17 +34,16 @@ def extract_pages(source: str) -> list[dict[str, object]]:
         rows = re.findall(r'"([^"]+)"', raw)
         if len(rows) != 4 or any(len(s) > 18 for s in rows):
             raise ValueError(f"Invalid four-row Help layout in {category!r}")
-        heading = f"HELP {len(result)+1}/17  {category}"
+        heading = f"HELP {len(result)+1}/{declared_count}  {category}"
         if 8 + len(heading) * 6 > 232:
             raise ValueError(f"Heading overflows native 240px LCD: {heading}")
         result.append({"section": category, "rows": rows})
-    page_count = re.search(r"constexpr uint8_t HELP_PAGE_COUNT\s*=\s*(\d+);", source)
-    if not page_count or len(result) != int(page_count.group(1)):
+    if len(result) != declared_count:
         raise ValueError("Help page count disagrees with firmware")
     return result
 
 
-def render() -> Path:
+def render(output: Path | None = None) -> Path:
     pages = extract_pages(APP.read_text(encoding="utf-8"))
     dataset = json.dumps(pages, ensure_ascii=True, separators=(",", ":"))
     source_note = html.escape(APP.name)
@@ -129,12 +132,15 @@ draw();
     if any("</" in value for page in pages for value in
            [page["section"], *page["rows"]]):
         raise ValueError("Unexpected HTML/script delimiter in Help pages")
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text(
-        content.replace("__SOURCE__", source_note).replace("__PAGES__", dataset),
+    destination = output if output is not None else OUTPUT
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    destination.write_text(
+        content.replace("__SOURCE__", source_note)
+               .replace("__PAGES__", dataset)
+               .replace("The 17 pages", f"The {len(pages)} pages"),
         encoding="utf-8",
     )
-    return OUTPUT
+    return destination
 
 
 if __name__ == "__main__":

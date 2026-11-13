@@ -2,16 +2,29 @@
 
 ## Source layout
 
-`firmware/` is the **immutable source snapshot** corresponding to
-the published v0.7z10 app-only release. The root-level `catalog/`,
+`firmware/` is the **source snapshot** corresponding to the latest
+software-preview candidate (v0.7z12). The root-level `catalog/`,
 `scripts/` and `tests/` provide separately versioned station data
 and its desktop verification.
 
 The project targets **M5Stack Cardputer ADV, ESP32-S3, no PSRAM**.
 The reference build used a pinned M5Stack Arduino-ESP32 package
 (3.3.9), M5Unified and a modified ESP8266Audio/libmad stack.
-The frozen `firmware/arduino-sketchbook/` tree contains the project's
-adapted library sources and license notices.
+The archived `firmware/arduino-sketchbook/` subset contains selected
+adapted library sources and license notices. Reproducing the exact
+Arduino build on another machine requires the pinned toolchain and
+full installed dependencies, not just the firmware source tree.
+
+The public repository includes **host-test-only compatibility files**
+under `firmware/tests/runtime-stubs/` and
+`firmware/tests/fixtures/`. The latter contains a SHA-checked,
+authentic M5Cardputer 1.1.1 upstream keyboard header. These are
+for portable CI test compilation and keymap assertions, **not used
+in the ESP32 application binary**. The public host keyboard test
+references this fixture instead of the developer PC's external
+Arduino sketchbook; it is a test-only portability adaptation relative
+to the immutable release source archive. The public historical
+`firmware/ROADMAP.md` is not the developer's current local roadmap.
 
 ## Reproduce the software verification
 
@@ -26,8 +39,8 @@ flash partition scheme on an existing Launcher device.
 The verified release script performed:
 
 - Arduino ESP32-S3 compilation and build-input validation.
-- Python unit/contract tests (**246 PASS** for v0.7z10).
-- C++ host tests (**50 PASS** for v0.7z10).
+- Python unit/contract tests (**284 PASS** for v0.7z12).
+- C++ host tests (**53 PASS** for v0.7z12).
 - Source snapshot, BIN, ZIP and SHA-256 manifest checks.
 
 These gates cannot prove speaker output, radio-server uptime,

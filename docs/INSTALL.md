@@ -7,16 +7,17 @@
 
 | Method | What you install | M5Launcher preserved? | Recommended? |
 | --- | --- | --- | --- |
-| **M5Launcher 3 → SD** | `PocketJazzRadio-v0.7z10-app-only.bin` | **Yes** | **Yes** |
-| **M5Burner / direct USB full flash** | Separate 8-MiB merged firmware image | **No**; also replaces partitions and other flash content | Only for an intentionally standalone device |
+| **M5Launcher 3 → SD** | `PocketJazzRadio-v0.7z12-app-only.bin` | **Yes** | **Yes, preview** |
+| **M5Burner / direct USB full flash** | Older v0.7z10 8-MiB merged image | **No**; also replaces partitions and other flash content | Only for an intentionally standalone device |
 
-Both files contain the **same v0.7z10 application**. The second is *not*
-an upgrade for a device whose Launcher and data you want to keep.
+These are **different firmware versions**. v0.7z12 is distributed
+**app-only**; the old optional full-flash image is v0.7z10. Full-flash
+is *not* an upgrade for a device whose Launcher and data you want to keep.
 
 ## Recommended: M5Launcher 3
 
-1. Open [v0.7z10 on GitHub Releases](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z10).
-2. Download **`PocketJazzRadio-v0.7z10-app-only.bin`**. Do not choose an
+1. Open [v0.7z12 preview on GitHub Releases](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12).
+2. Download **`PocketJazzRadio-v0.7z12-app-only.bin`**. Do not choose an
    8-MiB merged image.
 3. Power down the Cardputer. Copy the BIN to a microSD card using a card
    reader, or your existing M5Launcher file-transfer method.
@@ -39,7 +40,7 @@ also requires that the selected station's stream is still reachable.
 
 ### Optional SD assets and playlists
 
-The release also has **`PocketJazzRadio-v0.7z10-Launcher3-SD.zip`**.
+The release also has **`PocketJazzRadio-v0.7z12-Launcher3-SD.zip`**.
 You do not need to copy every file in it to run the application.
 For the full experience, put the appropriate assets under the card's
 `/PocketJazz/` folder:
@@ -64,6 +65,21 @@ contains a **blank example** of `04-my-stations.m3u`; copying it over
 your personal file destroys your saved entries. Never bulk-replace the
 folder. Use **R** on the radio to reload edited station playlists.
 
+### Optional verified catalog refresh (v0.7z12)
+
+Back up your SD card first. After Wi-Fi and NTP have connected,
+**STOP online and offline playback**, press **D** from the radio home
+screen, then **Enter** to confirm. This manually downloads exactly five
+official playlists from **the same GitHub repository**, verifies HTTPS
+certificates, SHA-256, lengths and station limits, and stages replacements
+with rollback. The new lists are committed only after the application
+successfully re-reads them from SD. Failure restores the old files where
+possible or leaves a recovery journal for the next card mount.
+
+The updater is **never automatic**, never updates firmware and never
+targets personal M3U/PLS, notes, offline MP3 or backups. FAT SD
+power-loss behavior still needs physical-device testing.
+
 When supplying the offline Notes dataset, copy
 `artist-notes.tsv` and `artist-notes.idx` **together** so their index
 matches the text. `jazz-encyclopedia.tsv` supports offline search;
@@ -85,6 +101,7 @@ until reset.
 M5Stack's [M5Burner publishing instructions](https://docs.m5stack.com/en/uiflow/m5burner/publish)
 describe sharing full firmware images. The matching optional asset is
 named **`PocketJazzRadio-v0.7z10-M5Burner-FULL-FLASH-REPLACES-LAUNCHER.bin`**.
+It is specifically **not** a v0.7z12 image.
 
 **Warning:** this image is an 8-MiB flash layout including the bootloader,
 partition table, and app. **Installing it replaces M5Launcher and can

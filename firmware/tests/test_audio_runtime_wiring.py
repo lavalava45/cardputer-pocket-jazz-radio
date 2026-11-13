@@ -20,8 +20,8 @@ class RuntimeWiring(unittest.TestCase):
         self.assertIn('constexpr int STREAM_BYTES = 32768;',APP)
         # A low-memory Cardputer now needs a larger prefill reserve for its
         # deliberately smaller ring, while normal RAM retains the 2-KiB goal.
-        self.assertIn('ringCapacity == STREAM_BYTES_CONSTRAINED',APP)
-        self.assertIn('? 8192u : 2048u',APP)
+        self.assertIn('pocketjazz::initialMp3PrefillGoal(ringCapacity)', APP)
+        self.assertNotIn('? 8192u : 2048u', APP)
         self.assertIn('buffer->getFillLevel(), prefillGoal',APP)
         self.assertIn('SetCooperativeSourceRead(true)',APP)
 

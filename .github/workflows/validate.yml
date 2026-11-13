@@ -41,3 +41,23 @@ jobs:
           test -f CHANGELOG.md
           test -f docs/INSTALL.md
           test -f docs/USER-GUIDE.md
+          test -f docs/RELEASE-v0.7z11.md
+          test -f docs/RELEASE-v0.7z12.md
+          test -f docs/HARDWARE-ACCEPTANCE.md
+
+  firmware-host:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Firmware Python and policy regression tests
+        run: python -m unittest discover -s firmware/tests -p 'test_*.py' -v
+      - name: Configure firmware C++ host suite
+        run: cmake -S firmware/tests/pcm -B /tmp/pocketjazz-host -DCMAKE_BUILD_TYPE=Release
+      - name: Compile firmware host suite
+        run: cmake --build /tmp/pocketjazz-host --parallel 4
+      - name: Execute C++ host suite
+        run: ctest --test-dir /tmp/pocketjazz-host -C Release --output-on-failure --parallel 4

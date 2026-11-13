@@ -1,5 +1,6 @@
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from importlib.util import module_from_spec, spec_from_file_location
 
@@ -15,14 +16,16 @@ class HelpPreviewContract(unittest.TestCase):
             encoding="utf-8"
         )
         pages = MODULE.extract_pages(source)
-        self.assertEqual(len(pages), 17)
+        self.assertEqual(len(pages), 18)
         self.assertEqual(len(pages[0]["rows"]), 4)
         self.assertEqual(len(pages[-1]["rows"]), 4)
         self.assertEqual(pages[0]["section"], "RADIO")
 
     def test_offline_canvas_has_native_geometry_and_keyboard_support(self):
-        result = MODULE.render()
-        doc = result.read_text(encoding="utf-8")
+        with TemporaryDirectory() as directory:
+            result = MODULE.render(Path(directory) / "help-preview.html")
+            doc = result.read_text(encoding="utf-8")
+        self.assertIn("The 18 pages", doc)
         self.assertIn('width="240" height="135"', doc)
         self.assertIn('e.key==="ArrowUp"', doc)
         self.assertIn('e.key==="ArrowDown"', doc)

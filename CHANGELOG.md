@@ -5,6 +5,67 @@ These notes distinguish **software verification** from actual audio and
 display acceptance on an M5Stack Cardputer ADV. The detailed historical
 engineering journal remains in the frozen source snapshots.
 
+## [v0.7z12] — 2026-11-13 (software-verified preview)
+
+**Manually verified catalog activation with stronger SD recovery, global
+volume and more predictable network startup.**
+
+- Includes the global `-` / `=` volume keyboard fixes, full-width
+  UTF-8-safe radio display, compact permanent VU, single clock and
+  18-page on-device Help developed in the preceding local candidate.
+- Added manual **D → Enter** GitHub catalog refresh for five fixed
+  editorial M3U files only, over verified HTTPS with SHA-256, size,
+  station-count and 12-list/64-station validation. All personal files
+  remain outside the update target.
+- Requires successful SD reload and verified station counts *before*
+  accepting an update; keeps backup journal and supports rollback.
+  Fixed orphaned empty backup directories after failed pending-journal
+  writes and disallows ambiguous recovery of damaged commit markers
+  after partial backup cleanup.
+- Destroys temporary heap-backed manifest buffers before opening the
+  TLS playlist downloads; **no measured runtime heap saving claimed**.
+- Keeps adaptive 16/32-KiB MP3 rings and an 8-KiB startup prefill
+  goal; corrected a root-relative HTTPS redirect for host-only query
+  URLs. TLS verification and hostname checks stay enabled.
+- Moved Help preview test output to a temporary directory, corrected
+  Radio-only Tab search instructions and added source-snapshot and
+  recovery regression checks.
+- **284 Python + 53 C++ host tests and no-PSRAM ESP32-S3 build PASS**.
+  App-only BIN SHA-256:
+  `9cec36e22eaa191e6491d6f17107f6c3cdfe070f783b45acd7a24c87fcbc3de4`.
+  Static RAM **94,140 bytes**. **Physical audio, FAT recovery and
+  screen/keyboard acceptance remain open.**
+
+[Full v0.7z12 notes](docs/RELEASE-v0.7z12.md).
+
+## [v0.7z11] — 2026-11-13 (software-verified preview)
+
+**Global volume controls, rollback-safe manual GitHub station catalog refresh,
+and an HTTPS redirect fix.**
+
+- Made `-` / `=` effective from Help, Clock, Diagnostics, lists, offline
+  MP3 and on dimmed display. Retained normal punctuation input with Fn
+  volume shortcuts in password/search fields and the alarm's temporary volume.
+- Prevented UTF-8 truncation from splitting a multi-byte artist, track or
+  station-name character. Help now includes a separate catalog-update page.
+- Added **D → Enter** (only with audio STOPPED): verified HTTPS from this
+  repository, five strictly allowlisted official M3U files, SHA-256, byte
+  lengths and station-capacity checks, two-phase SD rename/rollback and
+  positive activation after reload. Personal M3U/PLS never targeted.
+- Fixed root-relative HTTPS redirects when the original authority is
+  followed by a query without a slash, keeping CA/hostname validation.
+- Increased the **initial compressed-MP3 prefill target** from 2 to 8 KiB
+  on a 32-KiB ring (16-KiB mode was already 8 KiB), without forcing a
+  larger RAM allocation. A five-second startup timeout remains.
+- **279 Python tests / 53 C++ host tests / ESP32-S3 build PASS**.
+  App-only SHA-256:
+  `eb34df21d5bcb1d8be692aeb81c87aea7e324f7ee0340dff9c3ea7128314d754`.
+  Compile-reported static RAM **94,140 bytes** (+16 vs v0.7z10).
+- **Physical sound continuity, SD power-loss recovery and new UI remain
+  unverified.** No full-flash v0.7z11 was made; v0.7z10 remains available.
+
+[Detailed v0.7z11 notes](docs/RELEASE-v0.7z11.md).
+
 ## [v0.7z10] — 2026-11-13
 
 **Full-width player, clearer clock, and a heap lifecycle diagnostic.**

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify frozen v0.7z10 source bytes against SHA256-SOURCES.txt (offline)."""
+"""Verify current firmware source bytes against SHA256-SOURCES.txt (offline)."""
 from pathlib import Path
 import hashlib
 import sys
@@ -30,10 +30,17 @@ def verify() -> int:
         actual = hashlib.sha256(path.read_bytes()).hexdigest()
         if actual.lower() != sha.lower():
             raise RuntimeError(f'Archived file altered: {name}')
+    def bytecode_cache(relative: Path) -> bool:
+        # .pyc/.pyo under Python's generated __pycache__ are never source
+        # archive content. Do NOT exempt arbitrary extra .py, C++, HTML,
+        # assets, or preview directories: those must be hashed or removed.
+        return '__pycache__' in relative.parts and relative.suffix in ('.pyc', '.pyo')
+
     extra = sorted(
         p.relative_to(SOURCE).as_posix()
         for p in SOURCE.rglob('*') if p.is_file()
         and p.name != MANIFEST.name
+        and not bytecode_cache(p.relative_to(SOURCE))
         and p.relative_to(SOURCE).as_posix() not in tracked
     )
     if extra:

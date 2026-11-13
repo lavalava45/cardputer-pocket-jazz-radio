@@ -6,12 +6,12 @@
 
 An independent, keyboard-driven internet jazz radio for the **M5Stack Cardputer ADV**.
 
-[![Latest preview](https://img.shields.io/badge/latest-v0.7z10%20preview-c8a96e)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z10)
+[![Latest preview](https://img.shields.io/badge/latest-v0.7z12%20preview-c8a96e)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12)
 ![Hardware](https://img.shields.io/badge/device-Cardputer%20ADV-21354d)
 ![MP3 stations](https://img.shields.io/badge/stations-56%20curated-3a9088)
 [![Catalog CI](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml/badge.svg)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml)
 
-**[Download v0.7z10](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z10) · [Installation](docs/INSTALL.md) · [User guide](docs/USER-GUIDE.md) · [Changelog](CHANGELOG.md)**
+**[Download v0.7z12 (preview)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12) · [Installation](docs/INSTALL.md) · [User guide](docs/USER-GUIDE.md) · [Changelog](CHANGELOG.md)**
 
 </div>
 
@@ -61,7 +61,7 @@ the latest display layout still require device testing. This is a public
 
 **Recommended: keep M5Launcher 3.**
 
-1. Download **`PocketJazzRadio-v0.7z10-app-only.bin`** from [v0.7z10 releases](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z10).
+1. Download **`PocketJazzRadio-v0.7z12-app-only.bin`** from [v0.7z12 preview](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12).
 2. Copy it to your microSD card, then launch the BIN using **M5Launcher 3 → SD**.
 3. Connect to your 2.4 GHz Wi-Fi from the radio's **W** screen.
 4. Optionally copy the curated playlists and Jazz Notes data from the SD package to `/PocketJazz/` on the card. **Back up that folder first, and never overwrite `04-my-stations.m3u`.**
@@ -69,10 +69,11 @@ the latest display layout still require device testing. This is a public
 If M5Launcher asks to replace its bootloader or repartition the device,
 **cancel**. This app does not need either change.
 
-**Want a standalone install instead?** A separate complete-flash image for
-M5Burner is documented under [Advanced installation](docs/INSTALL.md#alternative-standalone-m5burner-installation).
-It **replaces M5Launcher and may erase existing NVS/user flash data**; never
-use it as a routine app update.
+**Want a standalone install instead?** The older **v0.7z10** has an optional
+complete-flash image for M5Burner, documented under
+[Advanced installation](docs/INSTALL.md#alternative-standalone-m5burner-installation).
+It is **not v0.7z12**, replaces M5Launcher and may erase NVS/user flash
+data. The new preview is distributed **app-only**.
 
 **[Complete installation and SD guide](docs/INSTALL.md)**
 
@@ -83,7 +84,7 @@ use it as a routine app update.
 | **← / →** | Previous / next station |
 | **P** | Next playlist |
 | **Enter** | Play / stop radio |
-| **− / =** | Volume down / up |
+| **− / =** | Volume down / up on every screen; Fn+keys in text-entry fields |
 | **1–9 / Fn+1–9** | Recall / save a station preset |
 | **F / Tab** | Browse / search stations |
 | **H** | On-device help |
@@ -92,6 +93,7 @@ use it as a routine app update.
 | **S** | Optional tuning sounds (both OFF by default) |
 | **U / Z / G** | Jazz Notes / Jazz Spark / mood selector |
 | **0 / K / Y** | Offline MP3 / like current track / ICY title history |
+| **D** | Manually check/update five default playlists from GitHub, after STOP |
 
 The **V** key no longer hides the VU. It is now always visible in a small
 footer; the main text receives the full available display width.
@@ -110,21 +112,27 @@ The editorial lists live in [`catalog/`](catalog/) with a
 `04-my-stations.m3u` is **not** uploaded here. The firmware currently
 supports up to **64 stations across 12 playlists**.
 
-**Automatic catalog updates from GitHub are not implemented yet.**
-For now, update only the default files manually; see the
+In **v0.7z12**, **D → Enter** initiates a *manual* verified HTTPS check
+and update of just the five editorial M3U files, **only while audio is
+stopped**. The updater checks the manifest, sizes, SHA-256, station limits
+and real playlist activation. It keeps a rollback journal and never
+targets personal M3U/PLS, Jazz Notes, offline MP3 or backups.
+**No scheduled or automatic background updates.** See
 [catalog instructions](docs/CATALOG.md).
 
 ## For makers and developers
 
-The [`firmware/`](firmware/) directory contains the **v0.7z10 source snapshot**,
+The [`firmware/`](firmware/) directory contains the **v0.7z12 software-preview source**,
 including the pinned project dependencies, tests and build scripts. The
 firmware uses M5Unified, an adapted ESP8266Audio/libmad pipeline and
 verified HTTPS. The compressed MP3 input ring selects **16 or 32 KiB**
 according to available internal heap; no PSRAM is required.
 
-Software verification for v0.7z10: **246 Python tests, 50 C++ host
-tests and ESP32-S3 compilation passed**. Hardware audio and the redesigned
-LCD still require acceptance. See
+The new version adds an explicitly bounded 8-KiB first-stream prefill
+goal for either 16/32-KiB compressed ring, without unconditionally
+increasing the ring allocation. **This is not a proof of stable audio.**
+Hardware audio, catalog updates on actual FAT SD, and the LCD still
+require acceptance. See
 [development and verification notes](docs/DEVELOPMENT.md) and
 [release history](CHANGELOG.md).
 

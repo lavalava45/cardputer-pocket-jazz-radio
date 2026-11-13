@@ -66,7 +66,7 @@ class LCDRepaintContract(unittest.TestCase):
             "DIAGNOSTICS", "RECENTS", "SEARCH", "MOOD",
             "NOTES", "SHARE", "TEMPO", "CLOCK", "SOUND_FX", "TRACKS",
             "BROWSE", "NOTES_SEARCH", "SPARK", "SETTINGS_BACKUP", "OFFLINE_LIBRARY",
-            "DAILY_ALARM",
+            "DAILY_ALARM", "CATALOG_UPDATE",
         }
         self.assertEqual(set(dict(branches)), expected, "Each view must declare its visible dependencies")
         self.assertTrue(all("return hash;" in code for _, code in branches))

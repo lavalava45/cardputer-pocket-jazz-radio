@@ -46,10 +46,19 @@ geoblock streams, or go offline at any time.
 intentionally **not included**. Neither this repository nor a future updater
 should overwrite, import, or publish a listener's own stations.
 
-## How to use the catalog today
+## How to update the catalog
 
-The automatic update feature **has not yet been implemented in firmware**.
-Until then, updates are manual:
+The **v0.7z12 preview** supports a confirmed, **manual-only** in-app
+update: stop the radio and offline player, press **D** from the radio
+screen, review the prompt, then press **Enter**. The device fetches the
+fixed `manifest.json` and five listed editorial files from this same
+GitHub repository using certificate-verified HTTPS. SHA-256, sizes,
+contents and 64-station/12-playlist capacity are checked. The former
+files remain recoverable until the updated lists are **actually loaded
+from SD**; a failed activation rolls back or leaves a recovery journal.
+No personal files are selected for replacement.
+
+Older preview firmware still requires updating the default files on a PC:
 
 1. Back up your Cardputer SD card's `/PocketJazz/` directory.
 2. Download the five `.m3u` files from [`catalog/`](../catalog/) and replace
@@ -59,7 +68,7 @@ Until then, updates are manual:
 
 **Capacity note:** the current Cardputer app supports **64 stations across
 12 playlists**. These defaults occupy 56 slots; personal stations may need
-additional capacity. A future in-app updater must check this and refuse
+additional capacity. The in-app updater checks this and refuses
 unsafe replacements. Do **not** flash a merged image, repartition the device,
 or replace M5Launcher to use these files.
 
@@ -91,9 +100,10 @@ the committed manifest **offline**, without contacting radio stations.
 The online check is a separate, explicit editorial step.
 
 **Security:** SHA-256 detects unexpected file changes; **a hash published
-alongside a file is not by itself a digital signature**. A future
-automatic updater must download over HTTPS with certificate/hostname
-verification and validate the manifest and files before activating them.
+alongside a file is not by itself a digital signature**. The manual
+updater uses verified HTTPS with certificate/hostname checks and validates
+the manifest and files before activation. It does not auto-update, disable
+TLS verification or downgrade HTTPS to HTTP.
 No HTTP downgrade, partial installation or silent modification of personal
 playlists.
 

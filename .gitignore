@@ -11,3 +11,9 @@ __pycache__/
 # Active development roadmap is maintained locally, not published
 /ROADMAP.md
 /docs/CATALOG-ROADMAP.md
+
+# Generated browser-only Help preview: explicitly not a firmware input.
+/firmware/preview/
+
+# Reproducible host CMake builds belong in the working tree, not Git.
+/out/

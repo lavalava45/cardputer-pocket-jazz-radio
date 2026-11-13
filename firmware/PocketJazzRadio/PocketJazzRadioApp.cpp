@@ -12,6 +12,8 @@
 #include "AudioIntentPolicy.h"
 #include "AudioHotPathTiming.h"
 #include "HeapLifecycleProfile.h"
+#include "Utf8BoundedText.h"
+#include "CatalogUpdater.h"
 #include <M5Cardputer.h>
 #include <WiFi.h>
 #include <Preferences.h>
@@ -131,7 +133,7 @@ struct TrackMetadata {
   char title[96];
 };
 enum AudioState : int { STOPPED, WAIT_WIFI, WAIT_TIME, CONNECTING, BUFFERING, PLAYING, ERROR_STREAM, ERROR_MEMORY };
-enum Screen : uint8_t { RADIO, WIFI_LIST, WIFI_PASSWORD, WIFI_JOIN, HELP, DIAGNOSTICS, RECENTS, SEARCH, MOOD, NOTES, SHARE, TEMPO, CLOCK, SOUND_FX, TRACKS, BROWSE, NOTES_SEARCH, SPARK, SETTINGS_BACKUP, OFFLINE_LIBRARY, DAILY_ALARM };
+enum Screen : uint8_t { RADIO, WIFI_LIST, WIFI_PASSWORD, WIFI_JOIN, HELP, DIAGNOSTICS, RECENTS, SEARCH, MOOD, NOTES, SHARE, TEMPO, CLOCK, SOUND_FX, TRACKS, BROWSE, NOTES_SEARCH, SPARK, SETTINGS_BACKUP, OFFLINE_LIBRARY, DAILY_ALARM, CATALOG_UPDATE };
 void loadArtistNotes();
 void searchOfflineNotes();
 void pageOfflineNotes(size_t offset);
@@ -139,6 +141,7 @@ void openSelectedOfflineNote();
 bool readNotesFile(void* context, size_t offset, uint8_t* dst, size_t length);
 void showJazzSpark(int8_t direction = 0);
 void showNotice(const char* message);
+void drawCatalogUpdate();
 void invalidateStationPeek(bool playlistReload);
 
 Station stations[MAX_STATIONS]{};
@@ -149,6 +152,18 @@ int stationCount = 0;
 int currentList = 0;
 int currentOffset = 0;
 bool sdAvailable = false;
+// Captured from *the actual SD reload*, not inferred from downloaded files.
+// A mount failure or built-in fallback must never be reported as activation.
+uint8_t catalogDefaultListsLoadedMask = 0;
+uint8_t catalogDefaultStationCounts[5]{};
+// Only the first successful card mount needs boot recovery, before any
+// playlists are opened. Subsequent manual updates recover synchronously
+// under an explicit STOP guard.
+bool catalogRecoveryChecked = false;
+pocketjazz::CatalogUpdateResult catalogUpdateStatus =
+    pocketjazz::CatalogUpdateResult::NoChange;
+bool catalogUpdateAttempted = false;
+bool catalogUpdateInProgress = false;
 // Manual local-only MP3 player: no OAuth, bundled music or background failover.
 // A static bounded catalog is populated only when radio is explicitly STOPPED.
 pocketjazz::OfflineLibraryPolicy<24> offlineCatalog;
@@ -260,7 +275,7 @@ char restoredStationUrl[192] = {};
 uint8_t sleepMinutes = 0;
 uint32_t sleepStartedAt = 0;
 uint8_t helpPage = 0;
-constexpr uint8_t HELP_PAGE_COUNT = 17;
+constexpr uint8_t HELP_PAGE_COUNT = 18;
 constexpr uint8_t DIAG_PAGE_COUNT = 8;
 uint8_t diagPage = 0;
 uint8_t backupConfirmation = 0; // 0=none; 1=export; 2=import
@@ -717,6 +732,8 @@ void saveSparkAutoSetting() {
 }
 bool loadPlaylists() {
   listCount = stationCount = 0;
+  catalogDefaultListsLoadedMask = 0;
+  memset(catalogDefaultStationCounts, 0, sizeof(catalogDefaultStationCounts));
   stationAltUrls.reset();
   // Station IDs are reassigned by SD reload; don't attach stale health scores
   // to unrelated new URLs occupying the same array index.
@@ -729,6 +746,25 @@ bool loadPlaylists() {
     return false;
   }
   sdAvailable = true;
+  if (!catalogRecoveryChecked) {
+    // On first card mount from setup() the audio queue does not exist yet.
+    // If a card is inserted later during playback, refuse a potentially
+    // destructive recovery until STOP, rather than racing the audio worker.
+    if (audioQueue &&
+        (audioState.load() != STOPPED || wantPlay || offlineSourceOpen.load())) {
+      addBuiltins();
+      showNotice("Stop radio for SD recovery");
+      return false;
+    }
+    const auto recovered = pocketjazz::recoverCatalogUpdate();
+    if (recovered == pocketjazz::CatalogUpdateResult::RecoveryFailed) {
+      // Do not load half-swapped default playlists; keep built-in fallback.
+      addBuiltins();
+      showNotice("Catalog recovery failed");
+      return false;
+    }
+    catalogRecoveryChecked = true;
+  }
   File directory = SD.open("/PocketJazz");
   if (!directory || !directory.isDirectory()) {
     addBuiltins();
@@ -799,7 +835,23 @@ bool loadPlaylists() {
     }
     file.close();
     p.count = stationCount - p.first;
-    if (p.count) lists[listCount++] = p;
+    if (p.count) {
+      // Track only successfully parsed official playlists, by exact basename.
+      // Staged/backup files are in hidden directories and are never scanned.
+      const int separator = filename.lastIndexOf('/');
+      const String basename = separator >= 0 ? filename.substring(separator + 1) : filename;
+      static const char* const kDefaultNames[5] = {
+        "01-essentials.m3u", "02-modern-jazz.m3u", "03-mellow-bossa.m3u",
+        "05-swing-vocals.m3u", "06-latin-soul-jazz.m3u"
+      };
+      for (int i = 0; i < 5; ++i)
+        if (basename == kDefaultNames[i]) {
+          catalogDefaultListsLoadedMask |= static_cast<uint8_t>(1u << i);
+          catalogDefaultStationCounts[i] = static_cast<uint8_t>(p.count);
+          break;
+        }
+      lists[listCount++] = p;
+    }
   }
   directory.close();
   if (!listCount) addBuiltins();
@@ -2083,10 +2135,12 @@ void audioWorker(void*) {
           // source-buffer read: a 4-second TLS handshake must not steal the
           // 5-second MP3 arrival window.
           const uint32_t prefillStarted = millis();
-          // The smaller ring needs a meaningful starting reserve to avoid
-          // immediate starvation on ordinary network scheduling jitter.
-          const uint32_t prefillGoal = ringCapacity == STREAM_BYTES_CONSTRAINED
-                                            ? 8192u : 2048u;
+          // Same meaningful startup reserve for 16/32-KiB input rings.
+          // Previously 32 KiB started at 2 KiB (~125 ms at 128 kbps),
+          // even though a bigger ring provides no benefit before it fills.
+          // Bound the wait by the pre-existing 5-second startup budget.
+          const uint32_t prefillGoal =
+              pocketjazz::initialMp3PrefillGoal(ringCapacity);
           while (pocketjazz::shouldKeepPrefilling(millis(), prefillStarted,
                                                   buffer->getFillLevel(), prefillGoal,
                                                   MP3_PREFILL_TIMEOUT_MS) &&
@@ -2612,6 +2666,35 @@ void handleKeys(const Press& k) {
     showNotice("Alarm stopped");
     return;
   }
+  // Volume is a global playback control, independent of the current screen.
+  // Keep literal '-' and '=' available in password/search text fields; Fn
+  // with either key changes volume there instead of inserting punctuation.
+  const bool volumeDown = pressed(k, '-') || pressed(k, '_');
+  const bool volumeUp = pressed(k, '=') || pressed(k, '+');
+  const bool typingText = screen == WIFI_PASSWORD || screen == SEARCH ||
+                          (screen == NOTES_SEARCH && !notesSearchRan);
+  if (volumeDown != volumeUp && (!typingText || k.fn)) {
+    const int step = volumeUp ? 8 : -8;
+    if (dailyAlarmSounding) {
+      // A sounding alarm has a temporary target separate from normal volume.
+      dailyAlarmTargetVolume = (uint8_t)constrain(
+          (int)dailyAlarmTargetVolume + step, 0, 80);
+      if (dailyAlarmRamping) {
+        dailyAlarmOutputVolume = pocketjazz::DailyRadioAlarm::fadeVolume(
+            millis() - dailyAlarmRampAt, dailyAlarmTargetVolume);
+        sendAudio();
+      }
+      showNotice("Alarm level adjusted");
+    } else {
+      const int nextVolume = constrain(volume + step, 0, 185);
+      if (nextVolume != volume) {
+        volume = nextVolume;
+        markPrefs();
+        sendAudio(); // volume-only mailbox update; no change of stream intent
+      }
+    }
+    return;
+  }
   if (screen == DAILY_ALARM) {
     if (pressed(k, 'x') || (k.del && (futureNvsSchema || dailyAlarmFutureFormat))) {
       // Explicit escape from an unwritable future NVS schema. Never trap the
@@ -2699,6 +2782,62 @@ void handleKeys(const Press& k) {
     if (k.del) screen = RADIO;
     return;
   }
+  if (screen == CATALOG_UPDATE) {
+    if (k.del) { screen = RADIO; return; }
+    if (k.enter && !catalogUpdateInProgress) {
+      // No other task may hold the SD source or streaming TLS buffers. A
+      // manual update is an explicit STOP-only foreground operation.
+      const bool stopped = !wantPlay && audioState.load() == STOPPED &&
+                           !offlineMode && !offlineLeaving &&
+                           !offlineSourceOpen.load(std::memory_order_acquire) &&
+                           !stationPeek.busy();
+      catalogUpdateInProgress = true;
+      drawCatalogUpdate(); // feedback before synchronous network/SD work
+      catalogUpdateStatus = pocketjazz::updateCatalogManually(stopped, sdAvailable);
+      catalogUpdateAttempted = true;
+      catalogUpdateInProgress = false;
+      if (catalogUpdateStatus == pocketjazz::CatalogUpdateResult::ReadyToActivate) {
+        // Invalidate ID-tied metadata before station IDs are reallocated.
+        // Retain the selected station by URL if it is still in the new list.
+        char selectedUrl[192]{};
+        const int selected = stationIndex();
+        if (selected >= 0) strlcpy(selectedUrl, stations[selected].url,
+                                  sizeof(selectedUrl));
+        invalidateStationPeek(true);
+        const bool reloaded = loadPlaylists();
+        // Distinguish successfully downloaded+verified SD bytes from genuine
+        // activation in the UI: missing SD, builtin fallback and incomplete
+        // parsing all fail this gate. Pending transaction is still reversible.
+        const bool activated = reloaded && catalogDefaultListsLoadedMask == 0x1fu &&
+            pocketjazz::catalogActivationMatches(catalogDefaultStationCounts);
+        catalogUpdateStatus = pocketjazz::finalizeCatalogUpdate(activated);
+        if (!activated || catalogUpdateStatus != pocketjazz::CatalogUpdateResult::Ok) {
+          // On an activation failure the updater rolls back the five originals
+          // if SD is accessible. If it is not, pending recovery is retried on
+          // next successful SD mount, BEFORE scanning playlists.
+          if (catalogUpdateStatus == pocketjazz::CatalogUpdateResult::RecoveryFailed)
+            catalogRecoveryChecked = false;
+          loadPlaylists();
+        }
+        currentList = currentOffset = 0;
+        if (selectedUrl[0]) {
+          const int retained = findStationUrl(selectedUrl);
+          if (retained >= 0)
+            for (int i = 0; i < listCount; ++i)
+              if (retained >= lists[i].first &&
+                  retained < lists[i].first + lists[i].count) {
+                currentList = i;
+                currentOffset = retained - lists[i].first;
+                break;
+              }
+        }
+        if (catalogUpdateStatus == pocketjazz::CatalogUpdateResult::Ok)
+          markPrefs(); // never rewrite user playlists or presets
+      }
+      uiPainted = false;
+    }
+    return;
+  }
   if (screen == DIAGNOSTICS) {
     if (pressed(k, 'e')) { if (diagPage == 7) exportAudioRuntime(); else exportDiagnostics(); return; }
     if (pressed(k, 'm') && diagPage == 6) { exportHeapLifecycle(); return; }
@@ -2754,14 +2893,6 @@ void handleKeys(const Press& k) {
     if (offlineLeaving) return;
     if (k.up) offlineSelected = max(0, offlineSelected - 1);
     if (k.down) offlineSelected = min((int)offlineCatalog.count() - 1, offlineSelected + 1);
-    if (pressed(k, '-') || pressed(k, '_')) {
-      volume = max(0, volume - 8); markPrefs(); sendAudio();
-      return;
-    }
-    if (pressed(k, '=') || pressed(k, '+')) {
-      volume = min(185, volume + 8); markPrefs(); sendAudio();
-      return;
-    }
     if (k.enter) {
       const auto* item = offlineCatalog.at((size_t)offlineSelected);
       char proposed[192]{};
@@ -2964,6 +3095,12 @@ void handleKeys(const Press& k) {
   // The compact radio footer points to help; always open the first page,
   // where station navigation, playback and volume are explained.
   if (pressed(k, 'h')) { helpPage = 0; screen = HELP; return; }
+  if (pressed(k, 'd')) {
+    catalogUpdateAttempted = false;
+    catalogUpdateStatus = pocketjazz::CatalogUpdateResult::NoChange;
+    screen = CATALOG_UPDATE;
+    return;
+  }
   if (pressed(k, 's')) { screen = SOUND_FX; return; }
   if (pressed(k, 'z')) { jazzSparkAutoVisible = false; showJazzSpark(0); return; }
   if (pressed(k, 'i')) { diagPage = 0; screen = DIAGNOSTICS; return; }
@@ -3084,28 +3221,6 @@ void handleKeys(const Press& k) {
   if (k.right) {
     const int count = lists[currentList].count;
     if (count) currentOffset = (currentOffset + 1) % count;
-    markPrefs(); sendAudio();
-  }
-  if (dailyAlarmSounding &&
-      (pressed(k, '-') || pressed(k, '_') ||
-       pressed(k, '=') || pressed(k, '+'))) {
-    const bool louder = pressed(k, '=') || pressed(k, '+');
-    const int newTarget = (int)dailyAlarmTargetVolume + (louder ? 8 : -8);
-    dailyAlarmTargetVolume = (uint8_t)constrain(newTarget, 0, 80);
-    if (dailyAlarmRamping) {
-      dailyAlarmOutputVolume = pocketjazz::DailyRadioAlarm::fadeVolume(
-          millis() - dailyAlarmRampAt, dailyAlarmTargetVolume);
-      sendAudio();
-    }
-    showNotice("Alarm level adjusted");
-    return;
-  }
-  if (pressed(k, '-') || pressed(k, '_')) {
-    volume = max(0, volume - 8);
-    markPrefs(); sendAudio();
-  }
-  if (pressed(k, '=') || pressed(k, '+')) {
-    volume = min(185, volume + 8);
     markPrefs(); sendAudio();
   }
   if (k.enter) {
@@ -3511,9 +3626,14 @@ void serviceJazzSpark(uint32_t now) {
 }
 
 String shortName(const char* name, size_t limit) {
-  String s(name);
-  if (s.length() > limit) return s.substring(0, limit - 2) + "..";
-  return s;
+  if (!name) return "";
+  const size_t nameBytes = strlen(name);
+  if (nameBytes <= limit) return String(name);
+  if (limit <= 2) return "";
+  // String.substring() accepts byte offsets, not UTF-8 code point indices.
+  // Avoid leaving a torn multibyte glyph before the ellipsis.
+  const size_t prefix = pocketjazz::utf8SafePrefix(name, nameBytes, limit - 2);
+  return String(name).substring(0, prefix) + "..";
 }
 void text(int x, int y, const String& str, uint16_t color, int scale = 1) {
   auto& d = M5Cardputer.Display;
@@ -3589,14 +3709,13 @@ void splitRadioMetadata(const char* metadata, char* artist, size_t artistSize,
   if (!metadata || !*metadata) return;
   const char* delimiter = strstr(metadata, " - ");
   if (!delimiter || delimiter == metadata || !delimiter[3]) {
-    strlcpy(title, metadata, titleSize);
+    pocketjazz::copyUtf8Bounded(title, titleSize, metadata, strlen(metadata));
     return;
   }
   const size_t length = static_cast<size_t>(delimiter - metadata);
-  const size_t copyBytes = min(length, artistSize - 1);
-  memcpy(artist, metadata, copyBytes);
-  artist[copyBytes] = 0;
-  strlcpy(title, delimiter + 3, titleSize);
+  pocketjazz::copyUtf8Bounded(artist, artistSize, metadata, length);
+  pocketjazz::copyUtf8Bounded(title, titleSize, delimiter + 3,
+                             strlen(delimiter + 3));
 }
 void drawVu(uint8_t level) {
   auto& d = M5Cardputer.Display;
@@ -3994,7 +4113,7 @@ void drawHelp() {
       "LEFT/RIGHT TUNE",
       "P NEXT PLAYLIST",
       "ENTER PLAY/STOP",
-      "- / = VOLUME"
+      "- / = VOL ANYWHERE"
     }},
     {"PLAYBACK", {
       "M MUTE / UNMUTE",
@@ -4091,6 +4210,12 @@ void drawHelp() {
       "K SAVES LIKED.TXT",
       "E SAVES TSV LOGS",
       "ICY PEEK SD OPT-IN"
+    }},
+    {"CATALOG UPDATE", {
+      "D OPEN FROM RADIO",
+      "ENTER DOWNLOAD",
+      "DEL BACK",
+      "PRIVATE M3U SAFE"
     }}
   };
   static_assert(sizeof(pages) / sizeof(pages[0]) == HELP_PAGE_COUNT,
@@ -4353,6 +4478,27 @@ void drawSettingsBackup() {
   if (uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0)
     text(8, 123, uiNotice, C_GOLD);
 }
+void drawCatalogUpdate() {
+  auto& d = M5Cardputer.Display;
+  d.fillScreen(C_BG);
+  text(8, 6, "STATION CATALOG", C_GOLD, 2);
+  d.drawFastHLine(8, 27, 224, C_PANEL2);
+  text(9, 34, "Verified Pocket Jazz GitHub", C_WHITE);
+  text(9, 49, "5 standard MP3 playlists", C_MUTED);
+  text(9, 64, "Personal stations untouched", C_GREEN);
+  if (catalogUpdateInProgress) {
+    text(9, 85, "Downloading and checking...", C_GOLD);
+    text(9, 101, "Do not remove microSD", C_MUTED);
+  } else if (catalogUpdateAttempted) {
+    text(9, 84, shortName(pocketjazz::catalogUpdateResultText(catalogUpdateStatus), 35),
+         catalogUpdateStatus == pocketjazz::CatalogUpdateResult::Ok ? C_GREEN : C_GOLD);
+    text(9, 104, "Only after radio STOP", C_MUTED);
+  } else {
+    text(9, 86, "Only after radio STOP", C_GOLD);
+    text(9, 104, "Checks HTTPS / SHA256 / limits", C_MUTED);
+  }
+  text(9, 122, "ENTER update  DEL back", C_WHITE);
+}
 void drawOfflineLibrary() {
   auto& d = M5Cardputer.Display;
   d.fillScreen(C_BG);
@@ -4417,6 +4563,7 @@ void drawScreen() {
     case HELP: drawHelp(); break;
     case DIAGNOSTICS: drawDiagnostics(); break;
     case SETTINGS_BACKUP: drawSettingsBackup(); break;
+    case CATALOG_UPDATE: drawCatalogUpdate(); break;
     case OFFLINE_LIBRARY: drawOfflineLibrary(); break;
     case DAILY_ALARM: drawDailyAlarm(); break;
     case RECENTS: drawRecents(); break;
@@ -4459,6 +4606,11 @@ uint32_t uiSignature(uint32_t now) {
       mix(backupConfirmation);
       mix(uiNoticeUntil);
       mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
+      return hash;
+    case CATALOG_UPDATE:
+      mix(catalogUpdateAttempted);
+      mix(catalogUpdateInProgress);
+      mix(static_cast<uint32_t>(catalogUpdateStatus));
       return hash;
     case HELP:
       mix(helpPage);
@@ -4651,7 +4803,13 @@ void loop() {
     if (screenDimmed) {
       screenDimmed = false;
       M5Cardputer.Display.setBrightness(135);
-      // Wake only; do not turn a wake-up key into a station change.
+      // A dimmed screen still honors a volume press on the first key stroke.
+      // Never turn the wake-up key into a station change or text insertion.
+      const bool isVolumeKey = pressed(input, '-') || pressed(input, '_') ||
+                               pressed(input, '=') || pressed(input, '+');
+      const bool typingText = screen == WIFI_PASSWORD || screen == SEARCH ||
+                              (screen == NOTES_SEARCH && !notesSearchRan);
+      if (isVolumeKey && (!typingText || input.fn)) handleKeys(input);
     } else {
       handleKeys(input);
     }

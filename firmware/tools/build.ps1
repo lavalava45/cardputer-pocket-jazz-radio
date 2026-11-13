@@ -671,6 +671,9 @@ Two Wi-Fi profiles: W scans, Enter reconnects a saved network, Fn+Enter edits
 its password. A new profile is committed only after stable IP >= 2 seconds.
 See source/docs/SETTINGS-BACKUP-AND-WIFI-PROFILES.md for limitations.
 RADIO Left/Right tunes the previous/next station; P changes playlist.
+The - and = volume keys work on every screen (including Help, Clock,
+Diagnostics and offline MP3). In Wi-Fi password and text search fields,
+type - or = normally; use Fn+- / Fn+= to adjust volume without typing.
 F opens station browsing (Up/Down select, P playlist, Enter tunes,
 Del closes). Optional verified HTTPS ICY station title previews are OFF
 unless /PocketJazz/peek.cfg is created manually with exact line PEEK=1;

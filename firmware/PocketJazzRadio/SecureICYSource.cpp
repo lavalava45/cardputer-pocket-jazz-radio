@@ -102,8 +102,14 @@ bool SecureICYSource::resolveRedirect(const String &base, const String &location
   if (target.startsWith("https://")) {
     next = target;
   } else if (target.startsWith("/") && !target.startsWith("//")) {
+    // Authority ends at the first path OR query delimiter. With an origin
+    // such as https://radio.example?key=x there is no path slash; appending
+    // /stream to the entire original URL would corrupt the redirect host.
     const int slash = base.indexOf('/', 8);
-    next = (slash >= 0 ? base.substring(0, slash) : base) + target;
+    const int query = base.indexOf('?', 8);
+    const int end = slash < 0 ? (query < 0 ? base.length() : query)
+        : (query < 0 ? slash : std::min(slash, query));
+    next = base.substring(0, end) + target;
   } else {
     return false;  // Reject HTTP, protocol-relative, non-root-relative, malformed redirects.
   }

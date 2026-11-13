@@ -42,7 +42,8 @@ Our important invariants:
 - Include regression tests and discuss the actual memory impact.
 
 The archived v0.7z10 reference gate passed **246 Python, 50 C++**
-tests and an Arduino-ESP32-S3 build. Consult
+tests and an Arduino-ESP32-S3 build. Later gates are documented with
+their separate preview release notes. Consult
 [development notes](docs/DEVELOPMENT.md) before changing the
 audio/network internals.
 

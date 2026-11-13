@@ -1,6 +1,6 @@
 # Pocket Jazz Radio — User Guide
 
-This guide describes the **v0.7z10 software-tested preview**. Features
+This guide describes the **v0.7z12 software-tested preview**. Features
 marked *optional* may require SD assets. The display pictures below are
 **layout previews**, not guaranteed pixel-perfect hardware captures.
 
@@ -17,7 +17,12 @@ A small VU indicator is always visible near the bottom, alongside
 **Left/Right** changes stations within the current playlist; **P** moves
 to the next playlist. **Enter** plays or stops the current stream.
 This is live radio, **not** a pause/rewind recorder. **− / =** changes
-the volume, and **M** mutes/unmutes.
+the volume **from every screen** (including Help, Clock, Diagnostics,
+offline MP3, and a dimmed display). In Wi-Fi password, station search,
+and Jazz Notes search fields, type `-` and `=` normally; use
+**Fn+− / Fn+=** to adjust volume without inserting punctuation.
+A sounding daily alarm has its own temporary volume target.
+**M** mutes/unmutes from the radio.
 
 ## 2. Choose stations and keep favourites
 
@@ -25,7 +30,8 @@ the volume, and **M** mutes/unmutes.
 
 **F** opens the station browser: **Up/Down** selects an entry, **P**
 changes the list being browsed, and **Enter** tunes the highlighted
-station. **Tab** opens station name search.
+station. To search for a station by name, return to the **Radio** screen
+with **Del**, then press **Tab**. Tab does not open search from Browse.
 
 **1–9** recalls a station preset, while **Fn+1–9** saves the current
 station into that slot. **L** displays recently selected stations.
@@ -39,7 +45,14 @@ or an automatic playlist add.
 The five default jazz groups contain **56 curated stations**.
 Add your own stations to `04-my-stations.m3u` without touching the
 default lists. Current firmware supports **64 stations / 12 playlists**
-total. Default stream checks were performed on a PC, not a guarantee
+total. Press **D** from the radio and then **Enter** to manually check
+for updated official playlists over certificate-verified HTTPS, while
+radio and offline audio are **fully stopped**. Downloads are validated
+against a SHA-256 manifest and activated only after successful SD reload;
+otherwise the previous defaults are restored when possible. Nothing
+automatically changes the private `04-my-stations.m3u` or other user files.
+Back up your SD directory before testing this new feature. Default stream
+checks were performed on a PC, not a guarantee
 that every server is always available.
 
 ## 3. Blue Note clock, timers and alarm
@@ -122,7 +135,7 @@ ESP32-S3 audio path is stable.
 | **Up / Down** | — | Navigate lists, pages or adjust clock offset |
 | **P** | Next playlist | Browse another playlist |
 | **Enter** | Play / stop | Select or confirm |
-| **− / =** | Volume −/+ | Volume when applicable |
+| **− / =** | Volume −/+ | Volume everywhere; Fn+− / Fn+= while entering text |
 | **M** | Mute/unmute | Memory export on Diagnostics 7/8 (after STOP) |
 | **H** | Help (always first page) | — |
 | **1–9** | Recall preset | Toggle FX 1/2 when S menu is open |
@@ -134,6 +147,7 @@ ESP32-S3 audio path is stable.
 | **U / N / Z / G** | Notes search / current artist / Spark / moods | — |
 | **L / Y / K / Q** | Recent stations / track history / like / QR lookups | — |
 | **0** | Offline MP3 | Reset timezone override inside Clock |
+| **D** | Manual official catalog update confirmation | Enter updates only after audio STOP; Del cancels |
 | **Del** | — | Back / cancel |
 | **V** | No action | VU stays visible by design |
 
