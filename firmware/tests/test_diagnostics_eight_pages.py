@@ -64,7 +64,7 @@ class DiagnosticsEightPageLayout(unittest.TestCase):
         self.assertIn("d.setTextFont(1);", UI)
         self.assertIn("d.setTextSize(kDiagFontScale);", UI)
         self.assertNotIn("diagRowScale(", APP)
-        self.assertNotIn("textWidth(line)", APP)
+        self.assertNotIn("textWidth(line)", UI)
         self.assertIn('boundMs == UINT32_MAX ? String(">5120ms/?")', APP)
         self.assertIn("String(titles[diagPage])", UI)
         self.assertIn("C_GOLD", UI)

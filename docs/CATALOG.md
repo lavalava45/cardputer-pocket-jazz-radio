@@ -108,7 +108,7 @@ playlists.
 
 To suggest a fix or new stream, see [CONTRIBUTING.md](../CONTRIBUTING.md).
 For the upcoming safe in-app catalog downloader, see
-[ROADMAP.md](../ROADMAP.md). **Downloading from GitHub inside the radio is not
+the development plan (maintained locally). **Downloading from GitHub inside the radio is not
 available in the current Pocket Jazz firmware**; do not mistake this catalog
 repository for an ESP32 update service.
 

@@ -49,7 +49,7 @@ class ReviewerRegressions(unittest.TestCase):
         ending = APP.index("void drawNight(bool partial", beginning)
         player = APP[beginning:ending]
         self.assertIn('text(123, 6, String(batteryLevel) + "%"', player)
-        partial = player[player.index("} else {"):player.index("if (redrawPanel)")]
+        partial = player[player.index("} else {"):player.index('text(161, 6, wifiReady.load()')]
         self.assertNotIn("fillScreen", partial)
         rectangles = [
             tuple(map(int, m.groups()))

@@ -29,3 +29,15 @@ jobs:
           test -f firmware/SHA256-SOURCES.txt
           test -f firmware/arduino-cli.yaml
           test -f firmware/tools/build.ps1
+      - name: Verify frozen firmware source SHA-256 checksums
+        run: python scripts/verify_firmware_snapshot.py
+      - name: Confirm documentation illustrations and release notes exist
+        run: |
+          test -f docs/images/radio-preview.png
+          test -f docs/images/clock-preview.png
+          test -f docs/images/browse-preview.png
+          test -f docs/images/diagnostics-preview.png
+          test -f docs/images/help-preview.png
+          test -f CHANGELOG.md
+          test -f docs/INSTALL.md
+          test -f docs/USER-GUIDE.md

@@ -7,3 +7,7 @@ __pycache__/
 .vscode/
 *.log
 *.tmp
+
+# Active development roadmap is maintained locally, not published
+/ROADMAP.md
+/docs/CATALOG-ROADMAP.md

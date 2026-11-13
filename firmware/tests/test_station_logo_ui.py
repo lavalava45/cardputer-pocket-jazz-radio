@@ -17,30 +17,29 @@ class StationLogoUIContract(unittest.TestCase):
         audio = APP.split('void audioWorker(void*)', 1)[1].split('struct Press {', 1)[0]
         self.assertNotIn('drawVu(', audio)
 
-    def test_vu_default_and_visibility_only_toggle(self):
-        self.assertIn('bool vuMode = true;', APP)
-        self.assertIn('if (pressed(k, \'v\')) {', APP)
-        self.assertIn('vuMode = !vuMode;', APP)
-        self.assertIn('"V VU SHOW/HIDE"', APP)
+    def test_vu_is_always_visible_without_wasting_the_side_panel(self):
+        self.assertNotIn('bool vuMode', APP)
+        self.assertNotIn('if (pressed(k, \'v\')) {', APP)
+        self.assertIn('"VU ALWAYS ON"', APP)
         player = APP.split('void drawPlayer(bool partial', 1)[1].split('void drawNight(', 1)[0]
-        self.assertIn('const bool redrawPanel = !partial', player)
-        self.assertIn('if (redrawPanel)', player)
-        self.assertIn('if (vuMode)', player)
+        self.assertIn('drawWrappedRadioText(station, 28, C_WHITE, 2)', player)
         self.assertIn('drawVu(shownVu);', player)
-        self.assertIn('"VU OFF"', player)
+        self.assertIn('"VOL %u%%"', player)
+        self.assertNotIn('"VU OFF"', player)
+        self.assertNotIn('fillRoundRect(9, 29, 75, 76', player)
         self.assertNotIn('iconRadio(', player)
         self.assertNotIn('SD.open(', player)
-        key = APP.split("if (pressed(k, 'v')) {", 1)[1].split('return;', 1)[0]
-        self.assertNotIn('sendAudio(', key)
-        self.assertNotIn('wantPlay', key)
-        self.assertNotIn('muted', key)
+        vu = APP.split('void drawVu(uint8_t level)', 1)[1].split('void drawPlayer(', 1)[0]
+        self.assertIn('fillRect(30, 94, 62, 15', vu)
 
     def test_single_clock_partial_updates_remain_bounded(self):
         night = APP.split('void drawNight(bool partial', 1)[1].split('void drawMood(', 1)[0]
         self.assertIn('if (!partial)', night)
-        self.assertIn('fillRect(10, 26, 224, 88', night)
+        self.assertIn('fillRect(9, 26, 225, 90', night)
         self.assertIn('drawNight(true)', APP)
-        self.assertIn('"UP/DN TZ 30m  0 RESET  DEL"', night)
+        self.assertIn('"UP/DN TZ 30m   0 RESET   DEL BACK"', night)
+        self.assertNotIn('text(177, 31, ntpSynced.load()', night)
+        self.assertNotIn('text(181, 48, shortName(zone', night)
         self.assertNotIn('void drawClock(', APP)
         self.assertNotIn('void drawSignal(', APP)
 

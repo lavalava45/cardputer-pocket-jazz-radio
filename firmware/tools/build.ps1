@@ -646,8 +646,9 @@ N opens the current artist when ICY has 'Artist - Track'. Z opens Jazz Spark:
 W/S or Enter next fact, T toggles automatic 10-second Spark cards every
 12 minutes (NVS; default on), Z/Del back. Source URLs are deliberately NOT shown
 on the small device screen (full provenance is in release/source/data/).
-RADIO displays the PCM VU by default, without 64x64 station logos or their
-8-KiB static RAM cache. V toggles the VU display; it never mutes/stops audio.
+RADIO uses full-width station / artist / track text with a small permanent
+PCM VU in the footer and a compact VOL xx% label. No large logo cache,
+VU sidebar, or V show/hide toggle remains.
 H opens Help at page 1. The footer no longer duplicates navigation keys.
 S opens TUNING SOUND FX: 1 toggles quiet vinyl crackle; 2 toggles very quiet
 white noise; Del returns. Both are OFF by default and saved separately in

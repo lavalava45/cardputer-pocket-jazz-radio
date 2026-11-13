@@ -15,7 +15,7 @@ not been rewritten.
   assets. Back up the SD card and preserve all personal playlists.
 - Detailed toolchain, hashes, test reports and frozen source:
   see the original [firmware source snapshot](../firmware/)
-  and [clock-fix analysis](../firmware/docs/CLOCK-TZ-RESET-FIX-20261113.md).
+  and [clock configuration notes](../firmware/docs/CLOCK-SETUP.md).
 
 ## What's included
 
@@ -37,8 +37,8 @@ not been rewritten.
   time on physical v0.7z9. This **does not** establish full audio or UI
   acceptance.
 - **The new always-full-width radio display and simplified clock labels
-  are NOT included in v0.7z9**; they are under development for a later
-  candidate. See [root roadmap](../ROADMAP.md).
+  are NOT included in v0.7z9**; they were added in the later v0.7z10
+  software-verified preview. See the [English changelog](../CHANGELOG.md).
 
 **Installation:** use only app-only BIN through existing M5Launcher 3.
 Do not flash a merged full-chip image or alter bootloader, partition

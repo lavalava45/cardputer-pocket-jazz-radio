@@ -11,6 +11,7 @@
 #include "RadioBufferLevelPolicy.h"
 #include "AudioIntentPolicy.h"
 #include "AudioHotPathTiming.h"
+#include "HeapLifecycleProfile.h"
 #include <M5Cardputer.h>
 #include <WiFi.h>
 #include <Preferences.h>
@@ -231,9 +232,7 @@ std::atomic<uint8_t> requestedOutputVolume{0};
 // The single radio visualization is the live PCM VU meter. Unlike the
 // former 64x64 RGB565 logo it needs no dedicated 8192-byte pixel cache.
 // V toggles its visibility, never playback or MUTE (Enter/M own those).
-bool vuMode = true;
-int lastPanelStationIndex = -2;
-int lastPanelSleepRemaining = -2;
+// VU is permanently shown in the radio footer. Full-width text above it.
 char currentTitle[96] = {};
 // Session-only cache, updated ONLY after a successful K append to liked.txt.
 // We never claim to have read the user's historical favorites from SD.
@@ -343,6 +342,7 @@ std::atomic<uint32_t> audioReopens{0};
 std::atomic<uint32_t> audioUnderruns{0};
 std::atomic<uint32_t> audioStackWatermark{0};
 pocketjazz::AudioPlayoutTelemetry audioPlayout;
+pocketjazz::HeapLifecycleProfile heapLifecycle; // ~0.5 KiB, audio writer, UI reader
 pocketjazz::DiagnosticAudioCounterWindow diagAudioWindow; // UI task only
 pocketjazz::StationHealth<MAX_STATIONS> stationHealth;
 // Written only by the audio task; pcmMonitor is invoked synchronously by that
@@ -722,7 +722,6 @@ bool loadPlaylists() {
   // to unrelated new URLs occupying the same array index.
   stationHealth.reset();
   sdAvailable = false;
-  lastPanelStationIndex = -2;
   // Official ADV microSD pins: SCK=40, MISO=39, MOSI=14, CS=12.
   SPI.begin(40, 39, 14, SD_CS);
   if (!SD.begin(SD_CS, SPI, 10000000)) {
@@ -982,6 +981,45 @@ void exportAudioRuntime() {
     if (result != EXPORT_WRITTEN) { showExportStatus(result, ""); return; }
   }
   showNotice("Runtime events saved");
+}
+void exportHeapLifecycle() {
+  // SD I/O competes with live audio. The snapshots were taken in RAM during
+  // network/decode stages; export ONLY after STOP has released the stream.
+  if (audioState.load() != STOPPED) {
+    showNotice("STOP radio before RAM export");
+    return;
+  }
+  if (!heapLifecycle.attempt()) { showNotice("No RAM samples yet"); return; }
+  char row[320];
+  size_t countExported = 0;
+  for (size_t i = 0; i < pocketjazz::HeapLifecycleProfile::kCount + 1; ++i) {
+    pocketjazz::HeapCheckpoint snap;
+    const bool firstEver = i == pocketjazz::HeapLifecycleProfile::kCount;
+    const bool found = firstEver
+        ? heapLifecycle.firstStallEver(snap)
+        : heapLifecycle.read(static_cast<pocketjazz::HeapMoment>(i), snap);
+    if (!found) continue;
+    const char* name = firstEver ? "FIRST_STALL_EVER"
+        : pocketjazz::heapMomentName(static_cast<pocketjazz::HeapMoment>(i));
+    const int written = snprintf(row, sizeof(row),
+        "attempt=%lu\tms=%lu\tphase=%s\tfree8=%lu\tlargest8=%lu\tdma_free=%lu\tdma_largest=%lu\tring=%lu\tbuffer=%lu\n",
+        (unsigned long)snap.attempt, (unsigned long)snap.atMs, name,
+        (unsigned long)snap.free8, (unsigned long)snap.largest8,
+        (unsigned long)snap.freeDma, (unsigned long)snap.largestDma,
+        (unsigned long)snap.ringBytes, (unsigned long)snap.bufferedBytes);
+    if (written < 0 || (size_t)written >= sizeof(row)) {
+      showNotice("RAM row too large");
+      return;
+    }
+    const auto result = appendUiExport("/PocketJazz/heap-lifecycle.tsv",
+                                       row, (size_t)written);
+    if (result != EXPORT_WRITTEN) {
+      showExportStatus(result, "");
+      return;
+    }
+    ++countExported;
+  }
+  showNotice(countExported ? "RAM stages saved to SD" : "No RAM stages");
 }
 
 void exportDiagnostics() {
@@ -1657,11 +1695,29 @@ void audioWorker(void*) {
   // The FX starts AFTER synchronous TLS succeeds, never while the worker is
   // blocked in DNS/handshake. No activity on retries or offline MP3.
   bool initialTunePending = false;
+  bool profilingStream = false;
+  bool firstPcmProfiled = false;
+  bool firstStallProfiled = false;
+  uint32_t lastHeapPoll = 0;
   bool fxActive = false;
   bool fxFading = false;
   uint32_t fxInitialFrames = 0;
   uint32_t fxFadeStarted = 0;
   uint8_t fxLastVolume = 0;
+  const auto sampleHeap = [&](pocketjazz::HeapMoment phase) {
+    // Memory queries and locking are done at lifecycle transitions (and at
+    // most once every 2 seconds during playback), never in PCM callbacks.
+    pocketjazz::HeapCheckpoint snap;
+    snap.attempt = audioReopens.load(std::memory_order_relaxed);
+    snap.atMs = millis();
+    snap.free8 = heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+    snap.largest8 = heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);
+    snap.freeDma = heap_caps_get_free_size(MALLOC_CAP_INTERNAL | MALLOC_CAP_DMA);
+    snap.largestDma = heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL | MALLOC_CAP_DMA);
+    snap.ringBytes = ring ? ringCapacity : 0;
+    snap.bufferedBytes = buffer ? buffer->getFillLevel() : 0;
+    heapLifecycle.capture(phase, snap);
+  };
   const auto stopTuningFx = [&]() {
     if (fxActive) M5.Speaker.stop(pocketjazz::tuning::kChannel);
     fxActive = false;
@@ -1676,6 +1732,7 @@ void audioWorker(void*) {
     audioBufferMinAtMs.store(bufferLevels.minAtMs(), std::memory_order_relaxed);
   };
   auto cleanup = [&]() {
+    if (profilingStream) sampleHeap(pocketjazz::HeapMoment::BEFORE_FREE);
     stopTuningFx(); // also STOP, station change, failed TLS and decode EOF
     pocketjazz::AudioRuntimeProbe::Scope stage(&audioRuntime, pocketjazz::AudioStage::STOP, millis());
     if (decoder) { decoder->stop(); delete decoder; decoder = nullptr; }
@@ -1685,6 +1742,10 @@ void audioWorker(void*) {
     // Release these also on failed opens/station changes, before the NEXT TLS.
     codec.release();
     if (ring) { free(ring); ring = nullptr; }
+    if (profilingStream) {
+      sampleHeap(pocketjazz::HeapMoment::AFTER_FREE);
+      profilingStream = false;
+    }
     ringCapacity = STREAM_BYTES;
     audioRingCapacity.store(STREAM_BYTES, std::memory_order_relaxed);
     // Clear even on STOP and failed opens; never show a deleted buffer's 32767.
@@ -1861,6 +1922,11 @@ void audioWorker(void*) {
       initialTunePending = false; // no new noise on automatic retries
       audioReopens.fetch_add(1);
       audioRuntime.beginAttempt(audioReopens.load(), millis());
+      heapLifecycle.begin(audioReopens.load(std::memory_order_relaxed));
+      profilingStream = true;
+      firstPcmProfiled = false;
+      firstStallProfiled = false;
+      lastHeapPoll = millis();
       audioFailureStage.store(0);
       audioSourceStatusCode.store(0);
       audioTlsErrorCode.store(0);
@@ -1884,6 +1950,7 @@ void audioWorker(void*) {
       // additional 16 KiB to process incoming encrypted records. The full
       // ring remains the default for sufficiently provisioned devices.
       const uint32_t freeBeforeRing = ESP.getFreeHeap();
+      sampleHeap(pocketjazz::HeapMoment::PRE_RING);
       ringCapacity = freeBeforeRing < STREAM_FULL_RING_MIN_HEAP
                          ? STREAM_BYTES_CONSTRAINED : STREAM_BYTES;
       ring = static_cast<uint8_t*>(malloc(ringCapacity));
@@ -1893,6 +1960,7 @@ void audioWorker(void*) {
         ring = static_cast<uint8_t*>(malloc(ringCapacity));
       }
       if (ring) audioRingCapacity.store(ringCapacity, std::memory_order_relaxed);
+      sampleHeap(pocketjazz::HeapMoment::RING_HELD);
       if (!ring) {
         audioFailureStage.store(5);  // CONTIGUOUS MP3 RING ALLOCATION FAILED
         audioRuntime.fault(millis(), 5, 0, 0, ESP.getFreeHeap(),
@@ -1924,6 +1992,7 @@ void audioWorker(void*) {
       vTaskPrioritySet(nullptr, 1);
       if (secureSrc) secureSrc->setRuntimeProbe(&audioRuntime);
       audioRuntime.enter(pocketjazz::AudioStage::OPEN, millis());
+      sampleHeap(pocketjazz::HeapMoment::PRE_OPEN);
       bool opened = src && src->open(endpoint);
       if (!opened && plainSrc && plainSrc->httpsUpgrade()[0] &&
           !superseded()) {
@@ -1947,6 +2016,7 @@ void audioWorker(void*) {
         }
       }
       const bool alive = opened && src->isOpen();
+      sampleHeap(pocketjazz::HeapMoment::OPEN_RESULT);
       if (!alive && !secureSrc) audioRuntime.fault(millis(), 1, audioSourceStatusCode.load(),
           secureSrc ? secureSrc->lastTlsError() : 0, ESP.getFreeHeap(),
           heap_caps_get_largest_free_block(MALLOC_CAP_8BIT));
@@ -2025,6 +2095,7 @@ void audioWorker(void*) {
             buffer->loop();
             vTaskDelay(pdMS_TO_TICKS(15));
           }
+          sampleHeap(pocketjazz::HeapMoment::PREFILL_DONE);
           serviceTuningFx();
           if (superseded()) {
             // STOP or new station arrived during the prefill; never begin
@@ -2050,6 +2121,7 @@ void audioWorker(void*) {
             // SecureICYSource's HTTP I/O timeout avoids unending silence.
             if (decoder) decoder->SetLiveStallTimeoutMs(4000);
             const bool decoderReady = decoder && decoder->begin(buffer, &output);
+            sampleHeap(pocketjazz::HeapMoment::CODEC_RESULT);
             if (superseded()) {
               // begin() configures MAD/output but produces no PCM; recheck
               // after it to avoid publishing stale PLAYING and PCM work.
@@ -2118,6 +2190,23 @@ void audioWorker(void*) {
     pocketjazz::observeMaxMicros(audioDecodeLoopMaxUs,
                                  pocketjazz::elapsedMicros(decodeLoopStarted, micros()));
     publishBuffer(); // measure drain AFTER decoder->loop, before any cleanup
+    if (profilingStream) {
+      if (!firstPcmProfiled &&
+          audioFrames.load(std::memory_order_relaxed) != stableFrameCount) {
+        firstPcmProfiled = true;
+        sampleHeap(pocketjazz::HeapMoment::FIRST_PCM);
+      }
+      if (!firstStallProfiled && decoder->IsWaitingForLiveInput()) {
+        firstStallProfiled = true;
+        sampleHeap(pocketjazz::HeapMoment::FIRST_STALL);
+      }
+      const uint32_t nowHeap = millis();
+      if ((uint32_t)(nowHeap - lastHeapPoll) >= 2000u) {
+        sampleHeap(pocketjazz::HeapMoment::LOW_FREE);
+        sampleHeap(pocketjazz::HeapMoment::LOW_BLOCK);
+        lastHeapPoll = nowHeap;
+      }
+    }
     decodedMp3FrameBps.store(decoder->GetDecodedFrameBitrateBps(), std::memory_order_relaxed);
     decodedMp3ObservedVbr.store(decoder->HasObservedVariableBitrate(), std::memory_order_relaxed);
     if (!decoderHealthy) {
@@ -2612,6 +2701,7 @@ void handleKeys(const Press& k) {
   }
   if (screen == DIAGNOSTICS) {
     if (pressed(k, 'e')) { if (diagPage == 7) exportAudioRuntime(); else exportDiagnostics(); return; }
+    if (pressed(k, 'm') && diagPage == 6) { exportHeapLifecycle(); return; }
     if (pressed(k, 'x')) {
       // X resets the entire *displayed audio history*, not just PCM gaps.
       // Keep the raw atomics monotonic for audio/peek/Serial control paths;
@@ -2877,12 +2967,6 @@ void handleKeys(const Press& k) {
   if (pressed(k, 's')) { screen = SOUND_FX; return; }
   if (pressed(k, 'z')) { jazzSparkAutoVisible = false; showJazzSpark(0); return; }
   if (pressed(k, 'i')) { diagPage = 0; screen = DIAGNOSTICS; return; }
-  if (pressed(k, 'v')) {
-    vuMode = !vuMode;
-    previousVu = -1;
-    uiPainted = false;  // show/hide VU, never touch the audio stream
-    return;
-  }
   if (pressed(k, 'l')) { recentSelected = 0; screen = RECENTS; return; }
   if (pressed(k, 'f')) {
     invalidateStationPeek(false); // never adopt a reply from an earlier visit
@@ -3437,18 +3521,66 @@ void text(int x, int y, const String& str, uint16_t color, int scale = 1) {
   d.setTextSize(scale);
   d.drawString(str, x, y);
 }
-constexpr int kRadioTextX = 95;
-constexpr int kRadioTextWidth = 137;
-// Single paint per station / ICY change. No periodic heap-backed String
-// temporaries and no redraws solely to animate a marquee.
-void drawStaticRadioLine(const char* value, int y, uint16_t color) {
+constexpr int kRadioTextX = 9;
+constexpr int kRadioTextWidth = 222;
+// Two pixel-bounded UTF-8-safe text lines with no String, sprite or scrolling
+// timer. A glyph is never cut across a multibyte UTF-8 code point.
+void drawWrappedRadioText(const char* value, int y, uint16_t color,
+                          int maxRows = 2) {
   auto& d = M5Cardputer.Display;
-  d.setClipRect(kRadioTextX, y, kRadioTextWidth, 11);
-  d.fillRect(kRadioTextX, y, kRadioTextWidth, 11, C_BG);
-  d.setTextColor(color);
   d.setTextSize(1);
-  d.drawString(value ? value : "", kRadioTextX, y);
-  d.clearClipRect();
+  if (!value || !value[0]) return;
+  size_t pos = 0;
+  for (int row = 0; row < maxRows && value[pos]; ++row) {
+    char line[128]{};
+    size_t out = 0;
+    size_t lastSpaceBytes = 0;
+    while (value[pos + out] && out < sizeof(line) - 5) {
+      const uint8_t lead = static_cast<uint8_t>(value[pos + out]);
+      size_t cpBytes = (lead & 0x80) == 0 ? 1 :
+                       (lead & 0xE0) == 0xC0 ? 2 :
+                       (lead & 0xF0) == 0xE0 ? 3 :
+                       (lead & 0xF8) == 0xF0 ? 4 : 1;
+      bool valid = true;
+      for (size_t b = 1; b < cpBytes; ++b)
+        if (!value[pos + out + b] ||
+            (static_cast<uint8_t>(value[pos + out + b]) & 0xC0) != 0x80)
+          valid = false;
+      if (!valid) cpBytes = 1;
+      if (out + cpBytes >= sizeof(line)) break;
+      memcpy(line + out, value + pos + out, cpBytes);
+      line[out + cpBytes] = '\0';
+      if (d.textWidth(line) > kRadioTextWidth) {
+        line[out] = '\0';
+        break;
+      }
+      out += cpBytes;
+      if (cpBytes == 1 && line[out - 1] == ' ') lastSpaceBytes = out;
+    }
+    if (!out) break;
+    const bool more = value[pos + out] != '\0';
+    size_t consumed = out;
+    if (more && lastSpaceBytes > out / 2 && row + 1 < maxRows) {
+      out = lastSpaceBytes;
+      consumed = out;
+      while (out && line[out - 1] == ' ') --out;
+      line[out] = '\0';
+    } else if (more && row + 1 == maxRows) {
+      while (out > 0) {
+        line[out] = '\0';
+        if (d.textWidth(line) + d.textWidth("..") <= kRadioTextWidth) break;
+        do { --out; } while (out && (static_cast<uint8_t>(line[out]) & 0xC0) == 0x80);
+      }
+      line[out] = '\0';
+      strlcat(line, "..", sizeof(line));
+    }
+    d.setClipRect(kRadioTextX, y + row * 10, kRadioTextWidth, 10);
+    d.setTextColor(color);
+    d.drawString(line, kRadioTextX, y + row * 10);
+    d.clearClipRect();
+    pos += consumed;
+    while (value[pos] == ' ') ++pos;
+  }
 }
 void splitRadioMetadata(const char* metadata, char* artist, size_t artistSize,
                         char* title, size_t titleSize) {
@@ -3468,14 +3600,14 @@ void splitRadioMetadata(const char* metadata, char* artist, size_t artistSize,
 }
 void drawVu(uint8_t level) {
   auto& d = M5Cardputer.Display;
-  d.fillRect(17, 53, 60, 39, C_PANEL);
-  d.drawFastHLine(22, 84, 50, C_MUTED);
-  d.drawFastVLine(22, 81, 5, C_MUTED);
-  d.drawFastVLine(46, 79, 7, C_MUTED);
-  d.drawFastVLine(72, 81, 5, C_MUTED);
-  const int needleX = 22 + (level * 50) / 100;
-  d.drawLine(46, 86, needleX, 57, C_GOLD);
-  d.fillCircle(46, 86, 2, C_GOLD);
+  d.fillRect(30, 94, 62, 15, C_BG);
+  d.drawFastHLine(34, 107, 56, C_MUTED);
+  d.drawFastVLine(34, 104, 4, C_MUTED);
+  d.drawFastVLine(62, 103, 5, C_MUTED);
+  d.drawFastVLine(90, 104, 4, C_MUTED);
+  const int needleX = 34 + (level * 56) / 100;
+  d.drawLine(62, 107, needleX, 96, C_GOLD);
+  d.fillCircle(62, 107, 1, C_GOLD);
 }
 void drawPlayer(bool partial = false) {
   auto& d = M5Cardputer.Display;
@@ -3485,56 +3617,40 @@ void drawPlayer(bool partial = false) {
     const uint32_t elapsed = (uint32_t)(millis() - sleepStartedAt) / 60000u;
     remainingSleep = elapsed < sleepMinutes ? sleepMinutes - elapsed : 0;
   }
-  const bool redrawPanel = !partial || idx != lastPanelStationIndex ||
-                           remainingSleep != lastPanelSleepRemaining;
   if (!partial) {
     d.fillScreen(C_BG);
     text(9, 6, "POCKET JAZZ", C_GOLD);
     d.drawFastHLine(9, 22, 222, C_PANEL2);
     d.drawFastHLine(9, 111, 222, C_PANEL2);
   } else {
-    // Only erase changing regions; no full-screen clear on audio/Wi-Fi ticks.
-    // Battery is drawn at x=123; clearing only the Wi-Fi box (x>=160)
-    // leaves remnants when e.g. 100% becomes 99%.
+    // Clear only changed regions, not the full screen.
     d.fillRect(116, 4, 122, 17, C_BG);
-    d.fillRect(91, 27, 147, 80, C_BG);
+    d.fillRect(8, 27, 225, 83, C_BG);
     d.fillRect(8, 114, 226, 18, C_BG);
-  }
-  if (redrawPanel) {
-    d.fillRoundRect(9, 29, 75, 76, 7, C_PANEL);
-    if (vuMode) {
-      text(35, 34, "VU", C_GOLD);
-      drawVu(shownVu);
-    } else {
-      // Intentionally blank: V hides the visualization, not the sound.
-      text(19, 63, "VU OFF", C_MUTED);
-    }
-    if (remainingSleep >= 0) {
-      // Opaque countdown label is readable with VU on or off.
-      d.fillRect(13, 90, 69, 13, C_PANEL);
-      text(17, 91, "T-" + String(remainingSleep) + "m", C_GOLD);
-    }
-    lastPanelStationIndex = idx;
-    lastPanelSleepRemaining = remainingSleep;
   }
   text(161, 6, wifiReady.load() ? "WiFi ON" : (wifiHasIp() ? "WiFi ..." : "WiFi --"),
        wifiReady.load() ? C_GREEN : C_RED);
   if (batteryLevel >= 0) text(123, 6, String(batteryLevel) + "%", C_MUTED);
-  // This panel has only 137 physical pixels of text width. The "01 / 12"
-  // counter consumed a whole row and truncated real station names. Prefer
-  // a 1-2-line station title; Left/Right and P provide navigation context.
+  // Every text field now uses 222px instead of the old 137px sidebar width.
   const char* station = idx >= 0 ? stations[idx].name : "No stations";
-  if (strlen(station) <= 11) text(95, 37, station, C_WHITE, 2);
-  else drawStaticRadioLine(station, 39, C_WHITE);
+  drawWrappedRadioText(station, 28, C_WHITE, 2);
   char artist[96], song[96];
   splitRadioMetadata(currentTitle, artist, sizeof(artist), song, sizeof(song));
-  drawStaticRadioLine(artist[0] ? artist : "Artist: --", 69, C_MUTED);
-  drawStaticRadioLine(song[0] ? song : "Track: --", 81, C_GOLD);
-  const int barX = 113, barY = 96, barW = 112;
-  text(95, 91, "V", C_GOLD);
-  d.fillRoundRect(barX, barY, barW, 6, 2, C_PANEL2);
+  if (artist[0]) {
+    drawWrappedRadioText(artist, 49, C_MUTED, 2);
+    drawWrappedRadioText(song, 70, C_GOLD, 2);
+  } else if (song[0]) {
+    drawWrappedRadioText(song, 52, C_GOLD, 3);
+  }
+  text(9, 97, "VU", C_MUTED);
+  drawVu(shownVu);
   const int visibleVolume = dailyAlarmSounding ? dailyAlarmOutputVolume : volume;
-  if (visibleVolume) d.fillRoundRect(barX, barY, barW * visibleVolume / 185, 6, 2, C_GOLD);
+  char volumeLabel[16]{};
+  snprintf(volumeLabel, sizeof(volumeLabel), "VOL %u%%",
+           (unsigned)((visibleVolume * 100 + 92) / 185));
+  text(107, 97, volumeLabel, C_WHITE);
+  if (remainingSleep >= 0)
+    text(179, 97, "T-" + String(remainingSleep) + "m", C_GOLD);
   const char* label = "STOP";
   switch (audioState.load()) {
     case WAIT_WIFI: label = wifiHasIp() ? "WIFI WAIT" : "WIFI OFFLINE"; break;
@@ -3557,12 +3673,13 @@ void drawNight(bool partial = false) {
   auto& d = M5Cardputer.Display;
   if (!partial) {
     d.fillScreen(0x0000);
-    text(10, 7, "BLUE NOTE / CLOCK", C_GOLD);
+    text(10, 7, "BLUE NOTE CLOCK", C_GOLD);
     text(173, 7, audioState.load() == PLAYING ? "ON AIR" : "PAUSED", C_MUTED);
-    text(11, 117, "UP/DN TZ 30m  0 RESET  DEL", C_WHITE);
+    text(9, 121, "UP/DN TZ 30m   0 RESET   DEL BACK", C_WHITE);
   } else {
-    // Keep the static frame intact; audio/Wi-Fi changes must not flash LCD.
-    d.fillRect(10, 26, 224, 88, 0x0000);
+    // Clock face and its metadata only: never paint over the static help
+    // line, and never leave old titles or offsets when their length shrinks.
+    d.fillRect(9, 26, 225, 90, 0x0000);
     d.fillRect(170, 5, 68, 13, 0x0000);
     text(173, 7, audioState.load() == PLAYING ? "ON AIR" : "PAUSED", C_MUTED);
   }
@@ -3577,16 +3694,18 @@ void drawNight(bool partial = false) {
     strftime(zone, sizeof(zone), "%Z", &clockTm);
     strftime(date, sizeof(date), "%a %d %b", &clockTm);
   }
-  text(63, 28, String(clock), C_WHITE, 3);
-  text(181, 48, shortName(zone, 8), C_MUTED);
-  text(177, 31, ntpSynced.load() ? "NTP" : "UNSYNC", C_MUTED);
-  text(11, 61, date[0] ? date : "TIME NOT SET", C_MUTED);
+  // Time is the only large element. NTP status lives in Diagnostics:
+  // showing both libc %Z and saved UTC offset was redundant/confusing.
+  text(75, 26, String(clock), C_WHITE, 3);
+  text(75, 60, date[0] ? date : "TIME NOT SET", C_MUTED);
   const int idx = stationIndex();
-  text(11, 75, idx >= 0 ? shortName(stations[idx].name, 34) : "No stations", C_GOLD);
+  text(11, 77, idx >= 0 ? shortName(stations[idx].name, 34) : "No stations", C_GOLD);
   if (currentTitle[0]) text(11, 90, shortName(currentTitle, 36), C_WHITE);
-  text(11, 103, clockUserOverride ? clockOffsetText() :
-       (clockConfigLoaded ? String("SD TZ: ") + shortName(clockTz, 23)
-                          : String("TZ: UTC0")), C_MUTED);
+  // One timezone label only, reflecting the *active* manual offset or the
+  // SD POSIX TZ abbreviation. Controls are always visible at the bottom.
+  text(11, 105, clockUserOverride ? String("TZ ") + clockOffsetText() :
+       (clockConfigLoaded ? String("TZ ") + shortName(zone, 10) + " (AUTO)" :
+                            String("TZ UTC+0")), C_MUTED);
 }
 void drawSoundFx() {
   auto& d = M5Cardputer.Display;
@@ -3818,7 +3937,7 @@ void drawTempo() {
   text(8, 121, "J TAP   C CLEAR   DEL BACK", C_GOLD);
 }
 void serviceVu(uint32_t now) {
-  if (!vuMode || screen != RADIO || now - lastVuAt < 90) return;
+  if (screen != RADIO || now - lastVuAt < 90) return;
   lastVuAt = now;
   const int target = pcmPeak.load();
   if (shownVu < target) shownVu = (uint8_t)target;
@@ -3881,7 +4000,7 @@ void drawHelp() {
       "M MUTE / UNMUTE",
       "O AUTOPLAY",
       "T SLEEP 30/45/60",
-      "V VU SHOW/HIDE"
+      "VU ALWAYS ON"
     }},
     {"PRESETS & VIEWS", {
       "1-9 RECALL PRESET",
@@ -4215,7 +4334,9 @@ void drawDiagnostics(bool partial = false) {
   }
   if (uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0)
     text(8, 120, uiNotice, C_GOLD);
-  else text(8, 120, diagPage == 7 ? "E events X counters UP/DOWN" : "E save X reset  UP/DOWN  DEL", C_WHITE);
+  else text(8, 120, diagPage == 7 ? "E events X counters UP/DOWN" :
+       diagPage == 6 ? "M RAM(STOP) E status X reset" :
+       "E save X reset  UP/DOWN  DEL", C_WHITE);
 }
 void drawSettingsBackup() {
   auto& d = M5Cardputer.Display;
@@ -4444,7 +4565,6 @@ uint32_t uiSignature(uint32_t now) {
       mix(volume);
       mix(dailyAlarmSounding);
       if (dailyAlarmSounding) mix(dailyAlarmOutputVolume / 8);
-      mix(vuMode);
       mix(sleepMinutes);
       if (sleepMinutes) mix((now - sleepStartedAt) / 60000);
       mix(uiNoticeUntil);

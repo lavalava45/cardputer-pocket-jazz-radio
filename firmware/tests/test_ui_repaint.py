@@ -117,21 +117,26 @@ class LCDRepaintContract(unittest.TestCase):
         self.assertIn("if (k.right)", controls)
         self.assertIn("if (pressed(k, 'p') && listCount > 1)", controls)
 
-    def test_radio_static_station_artist_track_lines_and_no_scroll_task(self):
+    def test_radio_full_width_station_artist_track_with_compact_vu(self):
         body = function_body("drawPlayer")
         self.assertIn('const char* station = idx >= 0 ? stations[idx].name', body)
-        self.assertIn("drawStaticRadioLine(station, 39, C_WHITE)", body)
+        self.assertIn("drawWrappedRadioText(station, 28, C_WHITE, 2)", body)
         self.assertNotRegex(body, r'%02d\s*/\s*%02d')
         self.assertNotIn("snprintf(number,", body)
         self.assertIn("splitRadioMetadata(currentTitle, artist", body)
-        self.assertIn('drawStaticRadioLine(artist[0] ? artist : "Artist: --", 69', body)
-        self.assertIn('drawStaticRadioLine(song[0] ? song : "Track: --", 81', body)
+        self.assertIn('drawWrappedRadioText(artist, 49, C_MUTED, 2)', body)
+        self.assertIn('drawWrappedRadioText(song, 70, C_GOLD, 2)', body)
+        self.assertIn('drawWrappedRadioText(song, 52, C_GOLD, 3)', body)
+        self.assertIn('drawVu(shownVu)', body)
+        self.assertIn('"VOL %u%%"', body)
         self.assertNotIn("serviceRadioMarquee", SOURCE)
-        helper = SOURCE.split("void drawStaticRadioLine(", 1)[1].split(
+        helper = SOURCE.split("void drawWrappedRadioText(", 1)[1].split(
             "void splitRadioMetadata(", 1
         )[0]
-        self.assertIn("setClipRect(kRadioTextX, y, kRadioTextWidth, 11)", helper)
+        self.assertIn("setClipRect(kRadioTextX, y + row * 10, kRadioTextWidth, 10)", helper)
         self.assertIn("clearClipRect()", helper)
+        self.assertIn("constexpr int kRadioTextWidth = 222", SOURCE)
+        self.assertNotIn("VU OFF", SOURCE)
 
     def test_all_curated_station_names_are_bounded_and_marquee_can_show_all(self):
         root = Path(__file__).resolve().parents[1] / "playlists"
