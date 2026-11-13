@@ -85,12 +85,14 @@ audio-runtime report. Do not infer a hardware fix from software-only tests.
 
 ## Emulator images and preview assets
 
-[Velxio](EMULATOR.md) can load a merged ESP32-S3 image to examine boot
-and some display/key paths. Its Wi-Fi and speaker environment differs
-from a physical Cardputer. The README's illustrated LCD views are
-**clearly labelled mock layout previews**, not emulator or device
-screenshots. They can be regenerated without connecting to the user's
-hardware or modifying an immutable release.
+[Velxio](EMULATOR.md) can boot merged ESP32-S3 firmware to examine
+its LCD and keyboard paths. The README and [Feature Tour](FEATURE-TOUR.md)
+now use **actual 240x135 captures from the local v0.7z13 candidate**,
+shown as compact 360x203 PNGs instead of stretched design mockups.
+Their source app segment matches the local v0.7z13 app-only BIN by SHA-256
+and byte comparison. They do **not** prove audio, Wi-Fi or SD on real
+hardware; the current public download remains v0.7z12. Former illustrative
+layout previews are preserved as historical assets.
 
 ## Licensing and safety
 

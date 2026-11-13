@@ -1,145 +1,122 @@
 <div align="center">
 
+<img src="docs/images/emulator-v07z13-cover.png" alt="Pocket Jazz Radio — real v0.7z13 emulator screens in an editorial cover" width="850">
+
 # Pocket Jazz Radio
 
-**Jazz, wherever the Wi-Fi reaches.**
+### A little radio. A wider world of jazz.
 
-An independent, keyboard-driven internet jazz radio for the **M5Stack Cardputer ADV**.
+**Turn your M5Stack Cardputer ADV into a tiny, personal jazz companion.**
 
-[![Latest preview](https://img.shields.io/badge/latest-v0.7z12%20preview-c8a96e)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12)
-![Hardware](https://img.shields.io/badge/device-Cardputer%20ADV-21354d)
-![MP3 stations](https://img.shields.io/badge/stations-51%20curated-3a9088)
-[![Catalog CI](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml/badge.svg)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml)
+Listen. Discover. Remember. No streaming account, phone app or subscription required.
 
-**[Download v0.7z12 (preview)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12) · [Installation](docs/INSTALL.md) · [User guide](docs/USER-GUIDE.md) · [Changelog](CHANGELOG.md)**
+[**Get the preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12) · [**Explore all features**](docs/FEATURE-TOUR.md) · [**Install safely**](docs/INSTALL.md) · [**User guide**](docs/USER-GUIDE.md)
+
+![Device](https://img.shields.io/badge/for-Cardputer%20ADV-243b4a)
+![Stations](https://img.shields.io/badge/51%20curated-stations-c8a66d)
+![Catalog](https://img.shields.io/badge/catalog-2026.11.14.1-63998e)
+[![Checks](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml/badge.svg)](https://github.com/lavalava45/cardputer-pocket-jazz-radio/actions/workflows/validate.yml)
 
 </div>
 
 ---
 
-Pocket Jazz turns a tiny ESP32-S3 computer into a little radio companion: tune
-into jazz stations around the world, browse what's playing, save your favourites,
-and explore the music behind the names. No phone, cloud account or subscription
-is required for the radio itself.
+## A radio made for listening, not scrolling
 
-It is a **work in progress**. The firmware passes software tests and runs on
-the Cardputer ADV, but prolonged audio stability, optional sound effects and
-the latest display layout still require device testing. This is a public
-**preview**, not a finished commercial radio.
+Pocket Jazz feels like having a small jazz station on your desk. Pick a favourite with one key, explore a new sound, look up the musician you are hearing, or keep a track in your listening diary. The tiny screen stays readable, and nearly everything is a keypress away.
 
-## A small screen, a lot of jazz
+It is an **independent, open-source project** designed specifically for the Cardputer ADV. Radio uses freely accessible broadcaster streams over **2.4 GHz Wi-Fi**; extra reading and offline listening features can be kept on a microSD card.
 
-<div align="center">
-  <img src="docs/images/radio-preview.png" alt="Pocket Jazz full-width radio display layout preview" width="700" />
-  <br />
-  <sub>Full-width player layout preview based on the v0.7z10 screen code; not a photograph or verified hardware capture.</sub>
-</div>
-
-| Listen | Explore | Make it yours |
+| **Listen** | **Explore** | **Make it yours** |
 | :--- | :--- | :--- |
-| Direct MP3/ICY streams over Wi-Fi | Station search, history and curated groups | Nine quick presets |
-| ICY artist/track titles when provided | Jazz Notes and an offline music encyclopedia | Personal M3U playlists on microSD |
-| Compact VU, clock and sleep timer | Jazz Spark facts and mood browsing | Likes, optional QR lookups and settings backup |
-| Buffering/reconnect diagnostics | Offline MP3s on microSD | Two Wi-Fi profiles and an optional radio alarm |
+| 51 hand-picked stations in five jazz collections | Jazz Notes artist biographies and Jazz Spark facts | Nine instant station presets |
+| Direct station search and browsing | Mood Tuner and manual Tap Tempo | Your own stations, likes and offline MP3s |
+| Track titles when broadcasters provide them | Recent tracks and QR lookups | Clock, sleep timer and daily radio alarm |
 
-### Four views
+## Real screens, from real firmware in an emulator
+
+The frames below come directly from the **240 × 135 LCD of the v0.7z13 firmware running in Velxio**. The images are deliberately kept **compact (360 px wide)** instead of being stretched across the page. They are not drawings or photographs of the physical Cardputer. The emulator had no personal SD library or Wi-Fi connection, so some screens show offline or empty states.
 
 <table>
-  <tr>
-    <td width="50%"><img src="docs/images/clock-preview.png" alt="Blue Note clock layout preview" /><br /><b>Blue Note clock</b><br />Local time, date and timezone controls.</td>
-    <td width="50%"><img src="docs/images/diagnostics-preview.png" alt="Diagnostics layout preview" /><br /><b>Diagnostics</b><br />Connection, memory and audio metrics.</td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="docs/images/browse-preview.png" alt="Station browser layout preview" /><br /><b>Station browser</b><br />Move between curated lists and tune in.</td>
-    <td width="50%"><img src="docs/images/help-preview.png" alt="Help page layout preview" /><br /><b>On-device help</b><br />Key commands without a phone.</td>
-  </tr>
+<tr>
+<td align="center" width="50%"><img src="docs/images/emulator-v07z13-browse.png" width="360" height="203" alt="Pocket Jazz station browser captured from the v0.7z13 emulator"><br><b>Station browser</b><br>Discover another station without interrupting the one you are listening to until you press Enter.</td>
+<td align="center" width="50%"><img src="docs/images/emulator-v07z13-qr.png" width="360" height="203" alt="Pocket Jazz station QR display captured from the v0.7z13 emulator"><br><b>Share by QR</b><br>Scan a public station link with your phone, or open a song search after saving a like.</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/images/emulator-v07z13-clock.png" width="360" height="203" alt="Blue Note clock captured from the v0.7z13 emulator before time synchronization"><br><b>Blue Note clock</b><br>A quieter screen for time, with sleep and alarm options close at hand.</td>
+<td align="center"><img src="docs/images/emulator-v07z13-help.png" width="360" height="203" alt="Pocket Jazz on-device help captured from the v0.7z13 emulator"><br><b>Built-in help</b><br>18 pages of controls available right on the keyboard.</td>
+</tr>
+<tr>
+<td align="center"><img src="docs/images/emulator-v07z13-mood.png" width="360" height="203" alt="Mood Tuner captured from the v0.7z13 emulator without the optional SD mood tags"><br><b>Mood Tuner</b><br>Move between gentle and energetic, acoustic and electric, and pick a matching tagged station.</td>
+<td align="center"><img src="docs/images/emulator-v07z13-fx.png" width="360" height="203" alt="Optional tuning sound effects captured from the v0.7z13 emulator"><br><b>Tuning ambience</b><br>Optional vinyl crackle and soft hiss while a station starts — off by default.</td>
+</tr>
 </table>
 
-<sub>Images in this gallery are illustrative **240×135 LCD layout previews**, made from the application's design and labels. They are not photographs or proof of hardware rendering. The [Velxio emulator test](docs/EMULATOR.md) is documented separately.</sub>
+[**See more actual emulator screens and the full guided tour →**](docs/FEATURE-TOUR.md)
 
-## Install in a few steps
+## What you can do
 
-**Recommended: keep M5Launcher 3.**
+### 01. Travel through jazz
 
-1. Download **`PocketJazzRadio-v0.7z12-app-only.bin`** from [v0.7z12 preview](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12).
-2. Copy it to your microSD card, then launch the BIN using **M5Launcher 3 → SD**.
-3. Connect to your 2.4 GHz Wi-Fi from the radio's **W** screen.
-4. Optionally copy the curated playlists and Jazz Notes data from the SD package to `/PocketJazz/` on the card. **Back up that folder first, and never overwrite `04-my-stations.m3u`.**
+Explore **five curated collections**: Essentials, Modern Jazz, Mellow & Bossa, Swing & Vocals, and Latin & Soul Jazz. Move between stations, search by name or browse freely. Save nine favourite stations and recall them without a menu.
 
-If M5Launcher asks to replace its bootloader or repartition the device,
-**cancel**. This app does not need either change.
+The editorial catalog is updated separately from the firmware. You can request a **verified, manual refresh directly from GitHub** when playback is stopped. Want something different? Add your own compatible radio stations on microSD.
 
-**Want a standalone install instead?** The older **v0.7z10** has an optional
-complete-flash image for M5Burner, documented under
-[Advanced installation](docs/INSTALL.md#alternative-standalone-m5burner-installation).
-It is **not v0.7z12**, replaces M5Launcher and may erase NVS/user flash
-data. The new preview is distributed **app-only**.
+### 02. Remember the music
 
-**[Complete installation and SD guide](docs/INSTALL.md)**
+When a broadcaster supplies a song title, Pocket Jazz shows it on the radio screen. Keep a short history of recent track announcements, press **K** to save a discovery in your own listening diary, or bring up a QR code to search for it using Spotify or Google.
 
-## Controls at a glance
+The QR code **starts a web search**; it does not automatically recognise a recording, control Spotify or edit your playlists.
 
-| Keys | Action |
-| --- | --- |
-| **← / →** | Previous / next station |
-| **P** | Next playlist |
-| **Enter** | Play / stop radio |
-| **− / =** | Volume down / up on every screen; Fn+keys in text-entry fields |
-| **1–9 / Fn+1–9** | Recall / save a station preset |
-| **F / Tab** | Browse / search stations |
-| **H** | On-device help |
-| **C / T / Fn+T** | Clock / sleep timer / alarm |
-| **I / W / B** | Diagnostics / Wi-Fi / settings backup |
-| **S** | Optional tuning sounds (both OFF by default) |
-| **U / Z / G** | Jazz Notes / Jazz Spark / mood selector |
-| **0 / K / Y** | Offline MP3 / like current track / ICY title history |
-| **D** | Manually check/update five default playlists from GitHub, after STOP |
+### 03. Discover the people behind the records
 
-The **V** key no longer hides the VU. It is now always visible in a small
-footer; the main text receives the full available display width.
-For context-sensitive commands and safe-boot controls, see the
-[full key reference](docs/USER-GUIDE.md#keyboard-reference).
+A surprisingly deep offline listening companion fits inside this little machine. Search an **artist directory of approximately 1,498 entries**, with expanded editorial notes for 63 musicians. Read **150 jazz facts and five attributed quotations** in Jazz Spark. Try the **Mood Tuner** for a different listening direction, or tap out a rhythm to estimate its BPM.
 
-## A catalog you can inspect
+The reading library is available when the accompanying microSD data files are installed. The mood descriptions are editorial, not automatic AI genre detection.
 
-Five curated playlists contain **56 primary MP3 stations** and
-**six alternate URLs**. A [dated PC verification report](checks/pc-stream-check-20261113.json)
-recorded 62 successful HTTPS/MP3 checks on 13 November 2026. These checks
-**do not guarantee** every stream will keep playing on real hardware.
+### 04. Make an everyday ritual
 
-The editorial lists live in [`catalog/`](catalog/) with a
-[versioned SHA-256 manifest](manifest.json). Your private
-`04-my-stations.m3u` is **not** uploaded here. The firmware currently
-supports up to **64 stations across 12 playlists**.
+The **Blue Note clock**, **30/45/60-minute sleep timer**, gentle **daily radio alarm**, automatic screen dimming and always-accessible volume keys make Pocket Jazz useful beyond a quick demonstration. The alarm needs the Cardputer **left powered on**; it cannot turn on a switched-off device.
 
-In **v0.7z12**, **D → Enter** initiates a *manual* verified HTTPS check
-and update of just the five editorial M3U files, **only while audio is
-stopped**. The updater checks the manifest, sizes, SHA-256, station limits
-and real playlist activation. It keeps a rollback journal and never
-targets personal M3U/PLS, Jazz Notes, offline MP3 or backups.
-**No scheduled or automatic background updates.** See
-[catalog instructions](docs/CATALOG.md).
+### 05. Keep control of your own collection
 
-## For makers and developers
+Bring up to **24 local MP3 files** from a microSD folder, remember up to **two Wi-Fi profiles**, maintain your own stations, and export or restore selected settings manually. Personal playlists and likes belong to you; the official online catalog updater deliberately does not replace them.
 
-The [`firmware/`](firmware/) directory contains the **v0.7z12 software-preview source**,
-including the pinned project dependencies, tests and build scripts. The
-firmware uses M5Unified, an adapted ESP8266Audio/libmad pipeline and
-verified HTTPS. The compressed MP3 input ring selects **16 or 32 KiB**
-according to available internal heap; no PSRAM is required.
+[**The complete feature tour — listening, library, favourites, clock, controls, offline music and more →**](docs/FEATURE-TOUR.md)
 
-The new version adds an explicitly bounded 8-KiB first-stream prefill
-goal for either 16/32-KiB compressed ring, without unconditionally
-increasing the ring allocation. **This is not a proof of stable audio.**
-Hardware audio, catalog updates on actual FAT SD, and the LCD still
-require acceptance. See
-[development and verification notes](docs/DEVELOPMENT.md) and
-[release history](CHANGELOG.md).
+## Getting started
 
-Original firmware code is **GPL-3.0-or-later**, with additional licenses
-for bundled dependencies; original catalog tools and metadata use MIT.
-See [license and copyright notes](firmware/COPYRIGHT-NOTICES.md).
-The project is not affiliated with M5Stack or any broadcaster.
+**Recommended: keep M5Launcher 3 and install an app-only BIN.**
 
-**Contributions:** station fixes, playback traces and reproducible bug
-reports are welcome. [Read the contribution guide](CONTRIBUTING.md).
+1. Download the [**public v0.7z12 preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12). Select the **app-only** BIN, not an 8 MB full-flash image.
+2. Copy it onto your microSD card and open it from **M5Launcher 3 → SD**. Do not replace the launcher, bootloader or partitions.
+3. Press **W** to connect to your **2.4 GHz Wi-Fi**.
+4. For the full Notes, Spark and curated playlist experience, copy the optional files to **/PocketJazz/** after making a backup. **Never overwrite your personal 04-my-stations.m3u.**
+5. Once connected, stop playback, then select **D → Enter** to request the current verified editorial catalog from this GitHub repository. This operation does **not** install a new firmware version.
+
+[**Step-by-step installation and SD safety guide →**](docs/INSTALL.md)
+
+### Your first shortcuts
+
+| Key | What it does |
+| :--- | :--- |
+| **← / → · Enter · P** | Tune stations, play/stop, switch collections |
+| **F · Tab · G** | Browse stations, search by name, choose by mood |
+| **1–9 · Fn+1–9** | Recall or save a favourite station |
+| **Y · K · Q** | Recent track titles, save a like, open QR choices |
+| **U · N · Z · J** | Search Jazz Notes, current artist, Jazz Spark, Tap Tempo |
+| **C · T · Fn+T** | Blue Note clock, sleep timer, daily alarm |
+| **0 · W · I · H** | Offline MP3s, Wi-Fi, diagnostics, on-device Help |
+| **− / =** | Volume down/up on most screens; **Fn** in text-entry fields |
+
+[**Every shortcut and screen explained →**](docs/USER-GUIDE.md#keyboard-reference)
+
+## An evolving preview
+
+**The publicly available firmware is v0.7z12.** The screenshots on this page show a **local v0.7z13 candidate** verified to boot in Velxio; they are not presented as pictures of the public download. In an actual Cardputer trial, v0.7z13 restored keyboard responsiveness and sounded more reliable, but at least one **BUFFERING audio interruption** remained. We do **not** claim uninterrupted sound on every station, or that simulated Wi-Fi/audio equals real hardware.
+
+The emulator provides evidence of **display output and navigation**, not of physical Wi-Fi, certificate handling, SD-card timing, or speaker performance. Read [image provenance](docs/EMULATOR.md), follow the [audio reliability issue](https://github.com/lavalava45/cardputer-pocket-jazz-radio/issues/1), or inspect the [changelog](CHANGELOG.md).
+
+For makers: contributions, verified stream suggestions and reproducible fixes are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) and [development notes](docs/DEVELOPMENT.md). Firmware licensing is GPL-3.0-or-later with bundled notices; catalog tools and metadata are MIT. This independent project is not affiliated with M5Stack, Spotify or any broadcaster.
+
+<div align="center"><strong>Small radio. Big listening.</strong></div>

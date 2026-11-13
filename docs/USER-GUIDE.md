@@ -1,12 +1,16 @@
 # Pocket Jazz Radio — User Guide
 
-This guide describes the **v0.7z12 software-tested preview**. Features
-marked *optional* may require SD assets. The display pictures below are
-**layout previews**, not guaranteed pixel-perfect hardware captures.
+This guide covers the publicly available **v0.7z12 software preview**. Some
+features require optional microSD assets. Its compact illustrations are **real
+v0.7z13 emulator captures** (not photographs of hardware and not screenshots
+of the v0.7z12 download). The newer local candidate is still being tested;
+see the [Feature Tour](FEATURE-TOUR.md) and [image provenance](EMULATOR.md).
 
 ## 1. The radio
 
-![Radio layout preview](images/radio-preview.png)
+<img src="images/emulator-v07z13-radio.png" width="360" height="203" alt="Real v0.7z13 emulator view of the radio screen in offline mode">
+
+*Actual v0.7z13 emulator LCD. The simulator has no connected Wi-Fi.*
 
 The main player uses the full screen width for the **station name** and,
 when the broadcaster provides ICY metadata, the **artist** and **track**.
@@ -26,7 +30,9 @@ A sounding daily alarm has its own temporary volume target.
 
 ## 2. Choose stations and keep favourites
 
-![Station browsing preview](images/browse-preview.png)
+<img src="images/emulator-v07z13-browse.png" width="360" height="203" alt="Real v0.7z13 emulator view of the station browser">
+
+*Actual v0.7z13 emulator LCD showing the built-in fallback stations.*
 
 **F** opens the station browser: **Up/Down** selects an entry, **P**
 changes the list being browsed, and **Enter** tunes the highlighted
@@ -57,7 +63,9 @@ that every server is always available.
 
 ## 3. Blue Note clock, timers and alarm
 
-![Clock layout preview](images/clock-preview.png)
+<img src="images/emulator-v07z13-clock.png" width="360" height="203" alt="Real v0.7z13 emulator view of Blue Note Clock before NTP time sync">
+
+*Actual v0.7z13 emulator LCD. Time is deliberately unset without NTP.*
 
 **C** opens the single clock screen. It shows large local time, date,
 a timezone label and radio information. **Up/Down** changes a manual
@@ -109,7 +117,9 @@ Store and share backups accordingly.
 
 ## 7. Diagnostics and reports
 
-![Diagnostics layout preview](images/diagnostics-preview.png)
+<img src="images/emulator-v07z13-diagnostics.png" width="360" height="203" alt="Real v0.7z13 emulator view of diagnostics">
+
+*Actual v0.7z13 emulator LCD: Wi-Fi is offline, as expected.*
 
 **I** opens eight diagnostic pages. **Up/Down** changes pages; **Del**
 returns. They cover Wi-Fi status/stability, HTTPS stages, compressed

@@ -1,32 +1,49 @@
-# Emulator and image provenance
+# Emulator screenshots: origin and limitations
 
-The application has been booted as an **actual compiled ESP32-S3 BIN**
-in the web-based **Velxio Cardputer ADV simulator**. Its UART log showed
-the ESP-ROM boot sequence and `[PocketJazz][Clock] TZ loaded=0 rule=UTC0`.
-The simulator reported that the uploaded merged firmware was 8 MiB.
+## Current documentation gallery: firmware v0.7z13
 
-![Actual Velxio boot capture for v0.7z10](images/velxio-boot.png)
+The screenshots on the [README](../README.md) and [Feature Tour](FEATURE-TOUR.md) are **actual display frames emitted by an ESP32-S3 binary running in Velxio**, not speculative layouts.
 
-*A documented crop/composite of the actual v0.7z10 Velxio browser
-session, showing the virtual Cardputer and its UART output. Unlike the
-five README previews, this image comes from an actual emulator run.
-It is not a photograph of a physical device.*
+For this documentation pass, the simulator ran **the locally tested v0.7z13 firmware candidate** in an isolated, **headless browser session**. No real Cardputer, user SD files, Wi-Fi passwords, M5Launcher instance or physical flash were accessed.
 
-This is useful for checking certain screen and keyboard paths, but:
+The input was an **8,388,608-byte emulator-only merged image** constructed from the local build. Its application segment at offset 0x10000 was compared byte-for-byte with the immutable v0.7z13 app-only release candidate:
 
-- The simulator had no matching Wi-Fi credentials for the radio.
-- Internet streams, verified TLS on real Wi-Fi and ES8311 speaker
-  timing were **not** accepted by this test.
-- An 8-MiB merged image was used **only inside the emulator**. Do not
-  flash it over a Cardputer running M5Launcher 3.
-- The simulator's 3D camera scales the LCD down; a generic cropped
-  screenshot from it is not suitable as a legible primary feature image.
+| Capture fact | Verified value |
+| :--- | :--- |
+| Device in Velxio | M5Stack Cardputer ADV, ESP32-S3 |
+| Firmware | Local v0.7z13, **not the public v0.7z12 download** |
+| App-only SHA-256 | e4048df599d06019e2d6abf22ce92cebe805eb286317b5176ed2008576f97516 |
+| Emulator-only merged SHA-256 | 11214c1a9a0498878242e1315af6f3fe8c42668aee22783a125001dd648c3654 |
+| Raw LCD source | 240 × 135-pixel Velxio canvas |
+| Gallery display size | 360 × 203 pixels, saved at that size |
+| Scaling technique | One nearest-neighbour resampling pass, **no HTML stretch to 700 px or full-page width** |
+| Captured views | Radio, station browser, QR, Blue Note clock, Mood Tuner, tuning sounds, Help and Diagnostics |
 
-The README's four images use **source-derived 240×135 layout previews**
-for readability. They show the intended geometry and labels, but do
-not claim exact M5GFX glyph metrics or physical LCD acceptance.
-This distinction is important because the new full-width player
-in v0.7z10 has passed host/layout checks but still needs a real screen
-inspection.
+The simulator loaded the image as a binary, booted the virtual ESP32-S3, and the serial log contained the **[PocketJazz][Clock]** startup event. The Help screen itself displays **v0.7z13**. The screen content was taken directly from the simulator's LCD canvas. The descriptive cover image on the README is an **editorial composite of the actual Help and QR captures**, with surrounding typography and decoration added separately; it is not itself a single screenshot.
 
-Reference: [Velxio Cardputer ADV example](https://velxio.dev/example/cardputer-adv-m5-display).
+### What the screenshots show
+
+<table>
+<tr><td><img src="images/emulator-v07z13-radio.png" width="360" height="203" alt="Actual emulator radio screen"></td><td>Radio in the emulator's offline Wi-Fi state. Player layout, volume and VU area are visible.</td></tr>
+<tr><td><img src="images/emulator-v07z13-help.png" width="360" height="203" alt="Actual emulator help screen"></td><td>On-device Help 1/18 with the current candidate firmware label.</td></tr>
+<tr><td><img src="images/emulator-v07z13-qr.png" width="360" height="203" alt="Actual emulator QR screen"></td><td>Public stream URL sharing for the built-in Radio Swiss Jazz entry.</td></tr>
+<tr><td><img src="images/emulator-v07z13-mood.png" width="360" height="203" alt="Actual emulator Mood Tuner"></td><td>Mood grid without the optional SD tags; it correctly reports the missing dataset.</td></tr>
+</table>
+
+More individual captures appear in the [Feature Tour gallery](FEATURE-TOUR.md#screens-from-the-real-emulator).
+
+### What they do not prove
+
+Velxio in this session had **no matching Wi-Fi profile and no personal SD assets**. Radio Swiss Jazz on the display is an entry from the built-in fallback list, **not evidence of its successful audio playback**. An unset clock, missing Jazz Spark data or no tagged Mood Tuner stations are expected for that test environment.
+
+Neither these screenshots nor host unit tests establish verified TLS over the actual home Wi-Fi network, broadcaster uptime, physical microSD reliability, ES8311 speaker behaviour, headphone output, or uninterrupted audio. A physical v0.7z13 trial restored keyboard responsiveness and showed improved audible playback, but a **BUFFERING interruption remains** under investigation.
+
+**Never flash the emulator-only merged image** onto a physical Cardputer, M5Launcher or PMan. It includes test bootloader/partition data and is for emulation only. Normal use retains M5Launcher 3 and uses an **app-only BIN**.
+
+## Earlier visual references
+
+The repository also retains older **source-derived layout previews** and the [v0.7z10 Velxio browser capture](images/velxio-boot.png), as historical development material. The older preview PNG files (radio-preview.png, clock-preview.png, diagnostics-preview.png, browse-preview.png and help-preview.png) are **not used as the current README gallery**. Their content was a design/layout illustration, not the current v0.7z13 emulated screen.
+
+The public feature tour distinguishes these actual emulator frames from hardware photographs, UI design mockups and real audio acceptance.
+
+Velxio simulator reference: [Cardputer ADV M5 display example](https://velxio.dev/example/cardputer-adv-m5-display).

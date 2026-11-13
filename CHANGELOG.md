@@ -5,6 +5,24 @@ These notes distinguish **software verification** from actual audio and
 display acceptance on an M5Stack Cardputer ADV. The detailed historical
 engineering journal remains in the frozen source snapshots.
 
+## Documentation showcase — 2026-11-14 (no firmware change)
+
+- Reworked the public README and added an accessible, detailed
+  [Feature Tour](docs/FEATURE-TOUR.md) covering listening, artist notes,
+  favorites, clock/alarm, offline music, personalization and diagnostics.
+- Captured eight real LCD views from the local v0.7z13 BIN running in
+  a headless Velxio Cardputer ADV simulator. The application segment was
+  independently compared with the immutable app-only candidate.
+- Replaced giant/upscaled mock screenshot embeds with **compact 360x203
+  nearest-neighbour PNGs displayed at their native file dimensions**.
+  The new cover uses a labelled editorial composite of real captures.
+- Updated [User Guide](docs/USER-GUIDE.md),
+  [Emulator provenance](docs/EMULATOR.md) and
+  [Development notes](docs/DEVELOPMENT.md) to distinguish actual emulator
+  frames from older design previews and physical-device acceptance.
+- No firmware binaries, archived source snapshots, release tags, station
+  playlists, private SD assets or user settings were changed.
+
 ## Curated station catalog 2026.11.14.1 — 2026-11-14 (catalog-only)
 
 - Removed **Groove Salad | SomaFM** (primary and backup stream) from
