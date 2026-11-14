@@ -91,7 +91,7 @@ now use **actual 240x135 captures from the local v0.7z13 candidate**,
 shown as compact 360x203 PNGs instead of stretched design mockups.
 Their source app segment matches the local v0.7z13 app-only BIN by SHA-256
 and byte comparison. They do **not** prove audio, Wi-Fi or SD on real
-hardware; the current public download remains v0.7z12. Former illustrative
+hardware; the current public diagnostic preview is v0.7z14. Former illustrative
 layout previews are preserved as historical assets.
 
 ## Licensing and safety

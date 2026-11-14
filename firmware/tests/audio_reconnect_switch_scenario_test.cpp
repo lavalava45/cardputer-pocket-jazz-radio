@@ -81,5 +81,30 @@ int main() {
   assert(!audioIntentSuperseded(latest, latest));
   telemetry.pcmEnqueued(latest, 1146, 512, 44100);
   assert(telemetry.snapshot().pcmGapEpisodes == 1);
+
+  // Repeat STOP -> full resource release -> new PLAY -> first PCM without
+  // reinitializing the simulated device. This checks lifecycle bookkeeping,
+  // not actual network sockets, mbedTLS allocations or speaker fidelity.
+  for (uint32_t cycle = 0; cycle < 100; ++cycle) {
+    const uint32_t previous = latest;
+    const uint32_t stopped = ++latest;
+    const uint32_t at = 2000 + cycle * 120;
+    telemetry.request(stopped, at, false);
+    assert(audioIntentSuperseded(previous, stopped));
+    resources.cleanup();
+    assert(resources.empty());
+    telemetry.command(stopped);
+    telemetry.stopped(stopped, at + 20);
+    const uint32_t started = ++latest;
+    telemetry.request(started, at + 40, true);
+    telemetry.command(started);
+    resources.opened();
+    telemetry.pcmEnqueued(previous, at + 60, 512, 44100);
+    telemetry.pcmEnqueued(started, at + 80, 512, 44100);
+    assert(!resources.empty());
+    assert(resources.closeCount == 4u * (cycle + 2u));
+  }
+  resources.cleanup();
+  assert(resources.empty() && resources.closeCount == 408u);
   return 0;
 }

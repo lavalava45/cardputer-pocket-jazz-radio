@@ -41,14 +41,24 @@ int main() {
   profile.capture(HeapMoment::LOW_BLOCK, point(21, 12500, 4900));
   assert(profile.read(HeapMoment::LOW_FREE, read) && read.free8 == 12500);
   assert(profile.read(HeapMoment::LOW_BLOCK, read) && read.largest8 == 4300);
-  profile.capture(HeapMoment::FIRST_STALL, point(21, 8500, 1320));
+  // The first starving attempt's source position and idle time must survive
+  // automatic retries, just like its memory and ring occupancy snapshot.
+  HeapCheckpoint progress = point(21, 8500, 1320);
+  progress.sourceBytes = 9120;
+  progress.sourceIdleMs = 1580;
+  progress.sourceMaxGapMs = 400;
+  profile.capture(HeapMoment::FIRST_STALL, progress);
   profile.capture(HeapMoment::FIRST_STALL, point(21, 7000, 800));
   assert(profile.read(HeapMoment::FIRST_STALL, read) && read.free8 == 8500);
+  assert(read.sourceBytes == 9120 && read.sourceIdleMs == 1580 &&
+         read.sourceMaxGapMs == 400);
   assert(profile.firstStallEver(read) && read.attempt == 21);
   profile.begin(22);
   assert(!profile.read(HeapMoment::PRE_RING, read));
   assert(!profile.read(HeapMoment::FIRST_STALL, read));
   assert(profile.firstStallEver(read) && read.attempt == 21);
+  assert(read.sourceBytes == 9120 && read.sourceIdleMs == 1580 &&
+         read.sourceMaxGapMs == 400);
   profile.capture(HeapMoment::FIRST_STALL, point(22, 6000, 700));
   assert(profile.firstStallEver(read) && read.attempt == 21);
   assert(profile.read(HeapMoment::FIRST_STALL, read) && read.attempt == 22);

@@ -45,8 +45,12 @@ class HttpsUpgradeContracts(unittest.TestCase):
         d = w.index('opened = src->open(upgradedUrl);', c)
         self.assertTrue(a < b < c < d)
         self.assertIn('!superseded()', w)
-        self.assertIn('vTaskPrioritySet(nullptr, 1);', w)
-        self.assertIn('vTaskPrioritySet(nullptr, 2);', w)
+        # The audio task now stays at Arduino loopTask's priority 1 during
+        # both verified HTTPS open and decoding. Otherwise a continuous
+        # source can starve keyboard and screen servicing on core 1.
+        self.assertIn('xTaskCreatePinnedToCore(audioWorker, "pocketjazz_audio", 8192, nullptr, 1, nullptr, 1)', APP)
+        self.assertNotIn('vTaskPrioritySet(nullptr, 2);', w)
+        self.assertNotIn('vTaskPrioritySet(nullptr, 1);', w)
         self.assertIn('if (superseded())', w)
         self.assertIn('cleanup();\n        vTaskDelay(1);\n        continue;', w)
         self.assertIn('const bool decoderReady = decoder && decoder->begin(buffer, &output);', w)

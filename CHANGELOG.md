@@ -5,6 +5,26 @@ These notes distinguish **software verification** from actual audio and
 display acceptance on an M5Stack Cardputer ADV. The detailed historical
 engineering journal remains in the frozen source snapshots.
 
+## v0.7z14 — diagnostic preview: RAM & MP3 source visibility (2026-11-14)
+
+- **New app-only preview** for M5Launcher 3, with the v0.7z13 scheduler
+  priority and playback/retry behavior preserved.
+- One fixed Notes search workspace replaces two permanently allocated result
+  arrays. Measured **92,460 B static RAM**, down from **94,140 B** on v0.7z13
+  (net saving **1,680 B** including new telemetry).
+- Input source-progress observations now accompany the first recorded MP3
+  shortage in a **manual, post-STOP** heap-lifecycle TSV: source byte count,
+  idle time and longest completed gap.
+- Actual release packaging and source SHA-256 verified. **289/289 Python**
+  and **54/54 host C++ tests PASS**, plus ESP32-S3 no-PSRAM compile and three
+  optional compilation checks. Physical speaker audio on v0.7z14 remains
+  **untested**; the rare BUFFERING interruption is an open issue.
+- The v0.7z13 gallery is intentionally retained as a historically accurate
+  emulator capture and is **not** labelled as a screenshot of v0.7z14.
+- No launcher, flash partition, device NVS or private SD content was touched.
+
+[Full release details and guarded install instructions](docs/RELEASE-v0.7z14.md).
+
 ## Documentation showcase — 2026-11-14 (no firmware change)
 
 - Reworked the public README and added an accessible, detailed

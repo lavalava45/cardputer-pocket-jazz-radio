@@ -3,7 +3,6 @@
 #endif
 #include "../PocketJazzRadio/AudioRuntimeDiagnostics.h"
 #include <cassert>
-#include <atomic>
 #include <thread>
 using namespace pocketjazz;
 int main() {

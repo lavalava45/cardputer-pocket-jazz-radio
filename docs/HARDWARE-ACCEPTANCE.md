@@ -1,7 +1,7 @@
 # Hardware acceptance — next Pocket Jazz preview
 
 Software gates cannot verify physical audio. Use only the new app-only BIN
-through an existing M5Launcher 3. Keep v0.7z9/v0.7z10 for rollback. Never
+through an existing M5Launcher 3. Keep the actually tested v0.7z13 app-only BIN for rollback. Never
 overwrite bootloader, partitions, NVS or personal SD files.
 
 ## 1. Keyboard and LCD

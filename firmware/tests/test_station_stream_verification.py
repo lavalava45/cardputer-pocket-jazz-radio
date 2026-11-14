@@ -123,9 +123,9 @@ class Mp3StationProbeTests(unittest.TestCase):
         items = VERIFY.playlist_items(MODULE.parents[1] / "playlists")
         primary = [x for x in items if x["kind"] == "primary"]
         backup = [x for x in items if x["kind"] == "backup"]
-        self.assertEqual(len(primary), 56)
-        self.assertEqual(len(backup), 6)
-        self.assertEqual(len(set(x["url"] for x in primary)), 56)
+        self.assertEqual(len(primary), 51)
+        self.assertEqual(len(backup), 4)
+        self.assertEqual(len(set(x["url"] for x in primary)), 51)
         self.assertTrue(all(x["url"].startswith("https://") for x in items))
         self.assertTrue(all(len(x["url"].encode()) <= 191 for x in items))
 
@@ -172,7 +172,7 @@ class Mp3StationProbeTests(unittest.TestCase):
             self.assertTrue(item["final_url"].startswith("https://"))
             self.assertIn(item["mp3"]["sample_rate_hz"], (44100, 48000))
 
-    def test_current_56_catalog_matches_44_snapshot_minus_blues_plus_14_probed(self):
+    def test_current_51_catalog_matches_56_snapshot_minus_editorial_exclusions(self):
         root = MODULE.parents[1]
         prior = json.loads((root / "docs/STATION-STREAM-CHECK-20261110.json").read_text("utf-8"))
         old_primaries = {item["url"] for item in prior["streams"] if item["kind"] == "primary"}
@@ -195,9 +195,22 @@ class Mp3StationProbeTests(unittest.TestCase):
         current = VERIFY.playlist_items(root / "playlists")
         primary_urls = {item["url"] for item in current if item["kind"] == "primary"}
         backup_urls = {item["url"] for item in current if item["kind"] == "backup"}
-        self.assertEqual(primary_urls, (old_primaries - banned) | new_urls)
-        self.assertEqual(backup_urls, old_backups)
-        self.assertEqual(len(current), 62)
+        # Historical reports stay immutable. User-directed genre filtering is
+        # separate from validation of technical MP3/HTTPS compatibility.
+        removed_primaries = {
+            "https://ice5.somafm.com/sonicuniverse-128-mp3",
+            "https://ice5.somafm.com/groovesalad-128-mp3",
+            "https://listen.181fm.com/181-fusionjazz_128k.mp3",
+            "https://listen.181fm.com/181-trancejazz_128k.mp3",
+            "https://listen.181fm.com/181-acidjazz_128k.mp3",
+        }
+        removed_backups = {
+            "https://ice2.somafm.com/sonicuniverse-128-mp3",
+            "https://ice6.somafm.com/groovesalad-128-mp3",
+        }
+        self.assertEqual(primary_urls, ((old_primaries - banned) | new_urls) - removed_primaries)
+        self.assertEqual(backup_urls, old_backups - removed_backups)
+        self.assertEqual(len(current), 55)
 
 
 if __name__ == "__main__":

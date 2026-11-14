@@ -39,9 +39,9 @@ def interpreted_pls_urls(lines: list[str]) -> int:
 
 class PlsCapacityParity(unittest.TestCase):
     def test_prefix_numbered_personal_pls_must_be_counted_before_catalog_update(self):
-        personal = [f"File{i}extra=https://personal.example/{i}.mp3" for i in range(1, 10)]
-        self.assertEqual(interpreted_pls_urls(personal), 9)
-        self.assertGreater(56 + interpreted_pls_urls(personal), 64)
+        personal = [f"File{i}extra=https://personal.example/{i}.mp3" for i in range(1, 15)]
+        self.assertEqual(interpreted_pls_urls(personal), 14)
+        self.assertGreater(51 + interpreted_pls_urls(personal), 64)
         app = RADIO.split("// PLS entries may place TitleN before or after FileN.", 1)[1]
         updater = UPDATER.split("if (name.endsWith(\".pls\")", 1)[1].split(
             "total += __builtin_popcount(seen);", 1

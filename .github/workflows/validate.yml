@@ -43,6 +43,9 @@ jobs:
           test -f docs/USER-GUIDE.md
           test -f docs/RELEASE-v0.7z11.md
           test -f docs/RELEASE-v0.7z12.md
+          test -f docs/RELEASE-v0.7z14.md
+          test -f firmware/PocketJazzRadio/AudioSourceProgress.h
+          test -f firmware/PocketJazzRadio/NotesResultWorkspace.h
           test -f docs/HARDWARE-ACCEPTANCE.md
 
   firmware-host:

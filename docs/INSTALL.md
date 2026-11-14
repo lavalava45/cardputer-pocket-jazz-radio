@@ -7,17 +7,17 @@
 
 | Method | What you install | M5Launcher preserved? | Recommended? |
 | --- | --- | --- | --- |
-| **M5Launcher 3 → SD** | `PocketJazzRadio-v0.7z12-app-only.bin` | **Yes** | **Yes, preview** |
+| **M5Launcher 3 → SD** | `PocketJazzRadio-v0.7z14-app-only.bin` | **Yes** | **Yes, preview** |
 | **M5Burner / direct USB full flash** | Older v0.7z10 8-MiB merged image | **No**; also replaces partitions and other flash content | Only for an intentionally standalone device |
 
-These are **different firmware versions**. v0.7z12 is distributed
+These are **different firmware versions**. v0.7z14 is distributed
 **app-only**; the old optional full-flash image is v0.7z10. Full-flash
 is *not* an upgrade for a device whose Launcher and data you want to keep.
 
 ## Recommended: M5Launcher 3
 
-1. Open [v0.7z12 preview on GitHub Releases](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z12).
-2. Download **`PocketJazzRadio-v0.7z12-app-only.bin`**. Do not choose an
+1. Open [v0.7z14 diagnostic preview on GitHub Releases](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z14).
+2. Download **`PocketJazzRadio-v0.7z14-app-only.bin`**. Do not choose an
    8-MiB merged image.
 3. Power down the Cardputer. Copy the BIN to a microSD card using a card
    reader, or your existing M5Launcher file-transfer method.
@@ -40,7 +40,7 @@ also requires that the selected station's stream is still reachable.
 
 ### Optional SD assets and playlists
 
-The release also has **`PocketJazzRadio-v0.7z12-Launcher3-SD.zip`**.
+The release also has **`PocketJazzRadio-v0.7z14-Launcher3-SD.zip`**.
 You do not need to copy every file in it to run the application.
 For the full experience, put the appropriate assets under the card's
 `/PocketJazz/` folder:
@@ -65,7 +65,7 @@ contains a **blank example** of `04-my-stations.m3u`; copying it over
 your personal file destroys your saved entries. Never bulk-replace the
 folder. Use **R** on the radio to reload edited station playlists.
 
-### Optional verified catalog refresh (v0.7z12)
+### Optional verified catalog refresh (v0.7z14)
 
 Back up your SD card first. After Wi-Fi and NTP have connected,
 **STOP online and offline playback**, press **D** from the radio home

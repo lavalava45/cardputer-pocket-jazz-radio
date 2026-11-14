@@ -153,7 +153,7 @@ class LCDRepaintContract(unittest.TestCase):
                 name, pending_name = pending_name, None
                 self.assertLessEqual(len(name.encode("utf-8")), 96)
                 count += 1
-        self.assertEqual(count, 56)
+        self.assertEqual(count, 51)
 
 
 if __name__ == "__main__":

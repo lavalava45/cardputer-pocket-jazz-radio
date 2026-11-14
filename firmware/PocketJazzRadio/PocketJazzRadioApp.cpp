@@ -11,6 +11,7 @@
 #include "RadioBufferLevelPolicy.h"
 #include "AudioIntentPolicy.h"
 #include "AudioHotPathTiming.h"
+#include "AudioSourceProgress.h"
 #include "HeapLifecycleProfile.h"
 #include "Utf8BoundedText.h"
 #include "CatalogUpdater.h"
@@ -44,6 +45,7 @@
 #include "TuningSoundBed.h"
 #include "JazzNotesSearch.h"
 #include "JazzEncyclopedia.h"
+#include "NotesResultWorkspace.h"
 #include "JazzFacts.h"
 #include "PreferenceGuards.h"
 #include "WifiProfilePolicy.h"
@@ -199,8 +201,9 @@ String notesAlbum;
 String notesSource;
 bool notesFound = false;
 String notesSearchQuery;
-pocketjazz::JazzNote notesSearchResults[3]{};
-pocketjazz::JazzBiography encyclopediaResults[3]{};
+// Only one of these result formats is displayed at a time. Share one
+// fixed page to avoid retaining two large SD-search buffers during TLS.
+pocketjazz::NotesResultWorkspace notesSearchPage;
 bool notesSearchEncyclopedia = false;
 size_t notesSearchOffset = 0;
 int notesDetailPage = 0;
@@ -1054,11 +1057,13 @@ void exportHeapLifecycle() {
     const char* name = firstEver ? "FIRST_STALL_EVER"
         : pocketjazz::heapMomentName(static_cast<pocketjazz::HeapMoment>(i));
     const int written = snprintf(row, sizeof(row),
-        "attempt=%lu\tms=%lu\tphase=%s\tfree8=%lu\tlargest8=%lu\tdma_free=%lu\tdma_largest=%lu\tring=%lu\tbuffer=%lu\n",
+        "attempt=%lu\tms=%lu\tphase=%s\tfree8=%lu\tlargest8=%lu\tdma_free=%lu\tdma_largest=%lu\tring=%lu\tbuffer=%lu\tsource_bytes=%lu\tsource_idle_ms=%lu\tsource_gap_max_ms=%lu\n",
         (unsigned long)snap.attempt, (unsigned long)snap.atMs, name,
         (unsigned long)snap.free8, (unsigned long)snap.largest8,
         (unsigned long)snap.freeDma, (unsigned long)snap.largestDma,
-        (unsigned long)snap.ringBytes, (unsigned long)snap.bufferedBytes);
+        (unsigned long)snap.ringBytes, (unsigned long)snap.bufferedBytes,
+        (unsigned long)snap.sourceBytes, (unsigned long)snap.sourceIdleMs,
+        (unsigned long)snap.sourceMaxGapMs);
     if (written < 0 || (size_t)written >= sizeof(row)) {
       showNotice("RAM row too large");
       return;
@@ -1742,6 +1747,9 @@ void audioWorker(void*) {
   uint32_t stablePlaybackAt = 0;
   uint32_t stableFrameCount = 0;
   uint32_t retryAt = 0;
+  // Audio-worker-only, allocation-free input progress observer. It reads a
+  // source byte POSITION; it does not call recv(), change buffering or retry.
+  pocketjazz::AudioSourceProgress sourceProgress;
   // Optional station-tuning ambience. M5.Speaker still has exactly one
   // application owner (this FreeRTOS task): channel 0=radio, channel 1=FX.
   // The FX starts AFTER synchronous TLS succeeds, never while the worker is
@@ -1768,6 +1776,9 @@ void audioWorker(void*) {
     snap.largestDma = heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL | MALLOC_CAP_DMA);
     snap.ringBytes = ring ? ringCapacity : 0;
     snap.bufferedBytes = buffer ? buffer->getFillLevel() : 0;
+    snap.sourceBytes = sourceOffline ? 0 : sourceProgress.bytes();
+    snap.sourceIdleMs = sourceOffline || !src ? 0 : sourceProgress.idleMs(snap.atMs);
+    snap.sourceMaxGapMs = sourceOffline ? 0 : sourceProgress.maximumGapMs();
     heapLifecycle.capture(phase, snap);
   };
   const auto stopTuningFx = [&]() {
@@ -1798,6 +1809,7 @@ void audioWorker(void*) {
       sampleHeap(pocketjazz::HeapMoment::AFTER_FREE);
       profilingStream = false;
     }
+    sourceProgress.reset(millis());
     ringCapacity = STREAM_BYTES;
     audioRingCapacity.store(STREAM_BYTES, std::memory_order_relaxed);
     // Clear even on STOP and failed opens; never show a deleted buffer's 32767.
@@ -1974,6 +1986,7 @@ void audioWorker(void*) {
       initialTunePending = false; // no new noise on automatic retries
       audioReopens.fetch_add(1);
       audioRuntime.beginAttempt(audioReopens.load(), millis());
+      sourceProgress.reset(millis());
       heapLifecycle.begin(audioReopens.load(std::memory_order_relaxed));
       profilingStream = true;
       firstPcmProfiled = false;
@@ -2038,10 +2051,11 @@ void audioWorker(void*) {
         src = plainSrc = new (std::nothrow) AudioFileSourceICYStream();
       if (src) src->RegisterStatusCB(audioStatusCB, nullptr);
       if (src) src->RegisterMetadataCB(icyMetadataCB, &stationId);
-      // DNS/TLS/HTTP may occupy a CPU for seconds. During reconnect there is
-      // no active decoder to protect; give the Arduino UI loop (priority 1 on
-      // this same core) its fair timeslices rather than starving the marquee.
-      vTaskPrioritySet(nullptr, 1);
+      // Stay at the Arduino loopTask's priority (1) throughout connection,
+      // prefill and playback. On this board both tasks run on core 1.
+      // Raising audio to 2 after TLS used to give a continuously-fed decoder
+      // precedence over every keyboard/LCD pass, potentially making all
+      // controls unresponsive on stations that never stop supplying MP3.
       if (secureSrc) secureSrc->setRuntimeProbe(&audioRuntime);
       audioRuntime.enter(pocketjazz::AudioStage::OPEN, millis());
       sampleHeap(pocketjazz::HeapMoment::PRE_OPEN);
@@ -2072,7 +2086,9 @@ void audioWorker(void*) {
       if (!alive && !secureSrc) audioRuntime.fault(millis(), 1, audioSourceStatusCode.load(),
           secureSrc ? secureSrc->lastTlsError() : 0, ESP.getFreeHeap(),
           heap_caps_get_largest_free_block(MALLOC_CAP_8BIT));
-      vTaskPrioritySet(nullptr, 2);
+      // Do NOT elevate the decoder above loopTask after a successful GET.
+      // The existing cooperative vTaskDelay(1) at the end of every decode
+      // iteration gives the same-priority UI task opportunities to scan keys.
       if (superseded()) {
         // A STOP/station switch may have arrived during synchronous GET().
         // A volume-only update is NOT a reason to discard a valid GET.
@@ -2149,6 +2165,7 @@ void audioWorker(void*) {
             buffer->loop();
             vTaskDelay(pdMS_TO_TICKS(15));
           }
+          sourceProgress.observe(millis(), src->getPos());
           sampleHeap(pocketjazz::HeapMoment::PREFILL_DONE);
           serviceTuningFx();
           if (superseded()) {
@@ -2238,6 +2255,10 @@ void audioWorker(void*) {
     const uint32_t decodeLoopStarted = micros();
     audioRuntime.enter(pocketjazz::AudioStage::DECODE, millis());
     const bool decoderHealthy = decoder->isRunning() && decoder->loop();
+    // Read only the source's already-maintained MP3 byte position. No extra
+    // network read, packet inspection, SD operation or wakeup is introduced.
+    if (src && !sourceOffline)
+      sourceProgress.observe(millis(), src->getPos());
     serviceTuningFx(); // fade after FIRST accepted real PCM, never before
     audioRuntime.beat(millis());
     audioInputWaiting.store(decoder->IsWaitingForLiveInput());
@@ -3521,7 +3542,8 @@ void pageOfflineNotes(size_t offset) {
     pocketjazz::JazzEncyclopedia db;
     size_t stored = 0, total = 0;
     const bool valid = db.open(reader) &&
-        db.search(notesSearchQuery.c_str(), encyclopediaResults, 3, offset, stored, total);
+        db.search(notesSearchQuery.c_str(), notesSearchPage.useEncyclopedia(), 3,
+                  offset, stored, total);
     encyclopedia.close();
     notesSearchEncyclopedia = true;
     if (valid) {
@@ -3541,7 +3563,7 @@ void pageOfflineNotes(size_t offset) {
   static pocketjazz::JazzNotesSearch searchIndex; // ~3KB static, not UI task stack
   if (searchIndex.open(tsvReader, idxReader))
     notesSearchCount = searchIndex.search(notesSearchQuery.c_str(),
-        notesSearchResults, 3, &notesSearchTotal, offset);
+        notesSearchPage.useLegacy(), 3, &notesSearchTotal, offset);
   idx.close();
   tsv.close();
 }
@@ -3556,7 +3578,7 @@ void openSelectedOfflineNote() {
       static_cast<size_t>(notesSearchSelected) >= notesSearchOffset + notesSearchCount) return;
   const size_t row = static_cast<size_t>(notesSearchSelected) - notesSearchOffset;
   if (notesSearchEncyclopedia) {
-    const pocketjazz::JazzBiography& entry = encyclopediaResults[row];
+    const pocketjazz::JazzBiography& entry = notesSearchPage.encyclopedia(row);
     notesArtist = entry.name;
     notesDetail = entry.summary;
     notesAlbum = entry.album[0] == '-' ? "" : String(entry.album);
@@ -3567,7 +3589,7 @@ void openSelectedOfflineNote() {
     screen = NOTES;
     return;
   }
-  const pocketjazz::JazzNote& result = notesSearchResults[row];
+  const pocketjazz::JazzNote& result = notesSearchPage.legacy(row);
   notesArtist = String(result.key);
   notesArtist.replace('-', ' ');
   notesDetail = result.description;
@@ -3915,12 +3937,12 @@ void drawNotesSearch() {
       String name;
       String album;
       if (notesSearchEncyclopedia) {
-        name = encyclopediaResults[i].name;
-        album = encyclopediaResults[i].album;
+        name = notesSearchPage.encyclopedia(i).name;
+        album = notesSearchPage.encyclopedia(i).album;
       } else {
-        name = notesSearchResults[i].key;
+        name = notesSearchPage.legacy(i).key;
         name.replace('-', ' ');
-        album = notesSearchResults[i].album;
+        album = notesSearchPage.legacy(i).album;
       }
       text(9, y, shortName(name.c_str(), 21), chosen ? C_GOLD : C_WHITE);
       if (album != "-") text(133, y, shortName(album.c_str(), 16), C_MUTED);
@@ -4768,7 +4790,7 @@ void setup() {
   if (!audioQueue || !metadataQueue) audioState.store(ERROR_MEMORY);
   else {
     // Separate decoding from LCD/keyboard/Wi-Fi screens.
-    if (xTaskCreatePinnedToCore(audioWorker, "pocketjazz_audio", 8192, nullptr, 2, nullptr, 1) != pdPASS)
+    if (xTaskCreatePinnedToCore(audioWorker, "pocketjazz_audio", 8192, nullptr, 1, nullptr, 1) != pdPASS)
       audioState.store(ERROR_MEMORY);
   }
   if (peekOptIn) {

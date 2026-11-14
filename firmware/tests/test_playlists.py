@@ -38,7 +38,7 @@ for filename in FILES:
         assert stations >= 2, filename
     print(f"PASS {filename.name}: {stations} stations")
 assert total > 8 and total <= MAX_STATIONS, total
-assert total == 56, f"Curated release catalog drifted: {total} != 56"
+assert total == 51, f"Current editable curated catalog drifted: {total} != 51"
 assert MAX_STATIONS - total >= 8, "Keep at least eight station slots free for personal additions"
 assert not any("blues" in u.lower() for u in seen_urls), "Dedicated hard-blues stations belong outside curated jazz"
 assert not (ROOT / "playlists" / "06-latin-soul-blues.m3u").exists(), "Legacy SD playlist must not ship in current archive"

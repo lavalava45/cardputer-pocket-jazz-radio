@@ -53,6 +53,9 @@ struct HeapCheckpoint {
   uint32_t free8 = 0, largest8 = 0;
   uint32_t freeDma = 0, largestDma = 0;
   uint32_t ringBytes = 0, bufferedBytes = 0;
+  // Passive input-source position, not socket bytes or Wi-Fi packet count.
+  // Useful for correlating a drained MP3 ring with upstream progress.
+  uint32_t sourceBytes = 0, sourceIdleMs = 0, sourceMaxGapMs = 0;
   bool valid = false;
 };
 
@@ -132,6 +135,6 @@ class HeapLifecycleProfile {
   HeapCheckpoint firstStallEver_{}; // survives automatic retries
 };
 
-static_assert(sizeof(HeapCheckpoint) <= 36, "heap checkpoint must remain compact");
-static_assert(sizeof(HeapLifecycleProfile) <= 560, "no large telemetry cache in DRAM");
+static_assert(sizeof(HeapCheckpoint) <= 48, "heap checkpoint must remain compact");
+static_assert(sizeof(HeapLifecycleProfile) <= 752, "no large telemetry cache in DRAM");
 } // namespace pocketjazz

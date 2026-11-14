@@ -1,9 +1,9 @@
 # Pocket Jazz Radio — User Guide
 
-This guide covers the publicly available **v0.7z12 software preview**. Some
+This guide covers the publicly available **v0.7z14 diagnostic preview**. Some
 features require optional microSD assets. Its compact illustrations are **real
 v0.7z13 emulator captures** (not photographs of hardware and not screenshots
-of the v0.7z12 download). The newer local candidate is still being tested;
+of the v0.7z12 download). The v0.7z13 screens are historical emulator evidence, not v0.7z14 captures;
 see the [Feature Tour](FEATURE-TOUR.md) and [image provenance](EMULATOR.md).
 
 ## 1. The radio

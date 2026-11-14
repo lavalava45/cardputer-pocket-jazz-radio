@@ -70,12 +70,15 @@ class IcyNonBlockingContracts(unittest.TestCase):
         self.assertIn('pullSource(&buffer[writePtr], bytesAvailMid, true)', buffer)
         self.assertIn('pullSource(&buffer[writePtr], bytesAvailEnd, true)', buffer)
         self.assertIn('pullSource(&buffer[writePtr], bytesAvailStart, true)', buffer)
-        self.assertIn('vTaskPrioritySet(nullptr, 1);', worker)
-        self.assertIn('vTaskPrioritySet(nullptr, 2);', worker)
-        self.assertLess(worker.index('vTaskPrioritySet(nullptr, 1);'),
-                        worker.index('bool opened = src && src->open(endpoint);'))
-        self.assertLess(worker.index('const bool alive = opened && src->isOpen();'),
-                        worker.index('vTaskPrioritySet(nullptr, 2);'))
+        # Previously the worker was lowered to priority 1 for TLS, then
+        # elevated to 2 during continuous MP3 decoding. That could starve
+        # loopTask (keyboard/LCD) at priority 1 on the same core. Both phases
+        # now stay at priority 1, with the original cooperative I/O intact.
+        self.assertIn('xTaskCreatePinnedToCore(audioWorker, "pocketjazz_audio", 8192, nullptr, 1, nullptr, 1)', APP)
+        self.assertNotIn('vTaskPrioritySet(nullptr, 2);', worker)
+        self.assertNotIn('vTaskPrioritySet(nullptr, 1);', worker)
+        self.assertLess(worker.index('buffer->SetCooperativeSourceRead(true);'),
+                        worker.index('decoder->SetLiveStallTimeoutMs(4000)'))
 
     def test_secure_icy_also_caps_nonblocking_metadata_drain(self):
         self.assertIn('uint32_t pollBudget = nonBlocking ? 256u', SECURE)

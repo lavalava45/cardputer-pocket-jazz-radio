@@ -4,7 +4,7 @@
 
 Pocket Jazz Radio brings the familiar pleasure of tuning a radio into a tiny open-source companion for the **M5Stack Cardputer ADV**. A real keyboard, a small colour screen and a speaker are enough to explore jazz, save discoveries and learn more about the music — without turning the experience into another phone app.
 
-This is a guided tour of **features implemented in the application**, not a promise that every feature has completed long-duration hardware acceptance. The publicly downloadable firmware is **v0.7z12**; the real emulator screenshots were taken from the local **v0.7z13** candidate. The curated catalog described here is version **2026.11.14.1** and currently contains **51 stations**.
+This is a guided tour of **features implemented in the application**, not a promise that every feature has completed long-duration hardware acceptance. The publicly downloadable diagnostic preview is **v0.7z14**; the real emulator screenshots remain from the previously tested local **v0.7z13** candidate. The curated catalog described here is version **2026.11.14.1** and currently contains **51 stations**.
 
 [**Home**](../README.md) · [**Installation**](INSTALL.md) · [**Full controls**](USER-GUIDE.md) · [**Image provenance**](EMULATOR.md)
 
@@ -170,7 +170,7 @@ All of the following screenshots were captured from the **actual running v0.7z13
 | On-device Help | <img src="images/emulator-v07z13-help.png" width="360" height="203" alt="Help"> |
 | Diagnostics | <img src="images/emulator-v07z13-diagnostics.png" width="360" height="203" alt="Diagnostics"> |
 
-**Evidence boundary:** Velxio lets us inspect display and keyboard paths but does not establish real Wi-Fi certificate verification, broadcaster availability, SD timing, ES8311 speaker output or uninterrupted audio on the physical Cardputer. Read [the capture provenance and limitations](EMULATOR.md) for details. The local v0.7z13 firmware is not the public v0.7z12 download.
+**Evidence boundary:** Velxio lets us inspect display and keyboard paths but does not establish real Wi-Fi certificate verification, broadcaster availability, SD timing, ES8311 speaker output or uninterrupted audio on the physical Cardputer. Read [the capture provenance and limitations](EMULATOR.md) for details. The v0.7z13 emulator capture is not a screenshot of the current v0.7z14 public preview.
 
 ## The shortest route through the keyboard
 
