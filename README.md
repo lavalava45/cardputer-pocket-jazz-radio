@@ -4,7 +4,9 @@
 
 # Pocket Jazz Radio
 
-### A little radio. A wider world of jazz.
+### Not just another internet radio. A pocket-sized journey through jazz.
+
+*A little radio. A wider world of jazz.*
 
 **Turn your M5Stack Cardputer ADV into a tiny, personal jazz companion.**
 

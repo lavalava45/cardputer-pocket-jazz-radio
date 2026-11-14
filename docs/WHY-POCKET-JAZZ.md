@@ -1,6 +1,8 @@
 # Why Pocket Jazz?
 
-### A little radio. A wider world of jazz.
+### Not just another internet radio. A pocket-sized journey through jazz.
+
+*A little radio. A wider world of jazz.*
 
 There is a different feeling to turning on a radio.
 
@@ -30,6 +32,12 @@ But the radio is also a companion for *what happens after an unfamiliar track ca
 - Your own **nine station presets**, local **MP3 files**, **Blue Note clock**, sleep timer and daily radio alarm give the project room to become part of a listening routine.
 
 All of this is designed around the Cardputer's *actual keyboard and tiny display*. Most actions take a single key. No account is required to use the radio; streaming needs Wi-Fi, while the optional reading library lives on microSD.
+
+## The destination: a connected jazz-learning companion
+
+The next design direction links **Jazz Notes**, **Jazz Spark**, and the radio into a small **interactive history-of-jazz course**. Learn to Listen cards invite you to hear musical ideas; Jazz Trails follow historical connections; a personal Jazz Diary remembers discoveries; a local Jazz Passport tracks the styles you have actually explored. When a station supplies unambiguous **Artist - Track** metadata, Now Playing, Explained aims to connect the current artist to a verified offline note.
+
+**Project vision, not yet shipped:** these connected lessons, notebook tags, quiz screens and passport progress are being developed. The public v0.7z16 release above remains a radio with its existing Notes, Spark and likes functions. No subscription or audio recognition is planned; lessons work from offline, attributable SD data, and broadcasters do not promise a particular track.
 
 ## Why build for such a small machine?
 
