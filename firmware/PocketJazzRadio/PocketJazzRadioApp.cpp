@@ -1126,6 +1126,163 @@ void exportDiagnostics() {
   showExportStatus(appendUiExport("/PocketJazz/diagnostics.tsv", row, (size_t)count),
                    "Diagnostics saved to SD");
 }
+void exportIncidentReport() {
+  // One manual, *post-STOP* report: station context, all diagnostic pages,
+  // bounded runtime events and heap/source checkpoints. No audio-task SD IO.
+  // Create a NEW file instead of appending to or overwriting personal logs.
+  if (audioState.load() != STOPPED || wantPlay) {
+    showNotice("STOP radio before report");
+    return;
+  }
+  if (!sdAvailable) { showNotice("SD unavailable"); return; }
+  char path[64]{};
+  const uint32_t snapshotAt = millis();
+  bool unique = false;
+  for (unsigned suffix = 0; suffix < 100; ++suffix) {
+    snprintf(path, sizeof(path), "/PocketJazz/incident-%010lu-%02u.tsv",
+             (unsigned long)snapshotAt, suffix);
+    if (!SD.exists(path)) { unique = true; break; }
+  }
+  if (!unique) { showNotice("Report filenames exhausted"); return; }
+
+  char row[768];
+  ExportWriteStatus writeStatus = EXPORT_WRITTEN;
+  const auto writeRow = [&](int length) -> bool {
+    if (length <= 0 || static_cast<size_t>(length) >= sizeof(row)) {
+      writeStatus = EXPORT_FAILED;
+      return false;
+    }
+    writeStatus = appendUiExport(path, row, static_cast<size_t>(length));
+    return writeStatus == EXPORT_WRITTEN;
+  };
+  char station[56]{}, title[96]{}, collection[36]{};
+  const int idx = offlineMode ? -1 : stationIndex();
+  pocketjazz::log::cleanTsvField(
+      idx >= 0 ? stations[idx].name : (offlineMode ? "offline MP3" : "unknown"),
+      station, sizeof(station));
+  pocketjazz::log::cleanTsvField(currentTitle, title, sizeof(title));
+  pocketjazz::log::cleanTsvField(listCount ? lists[currentList].name : "",
+                                 collection, sizeof(collection));
+  char timeStamp[26]{};
+  const time_t currentTime = time(nullptr);
+  if (ntpSynced.load() && currentTime >= MIN_TLS_TIME) {
+    tm utc{};
+    gmtime_r(&currentTime, &utc);
+    strftime(timeStamp, sizeof(timeStamp), "%Y-%m-%dT%H:%M:%SZ", &utc);
+  } else {
+    snprintf(timeStamp, sizeof(timeStamp), "uptime:%lus",
+             (unsigned long)(snapshotAt / 1000u));
+  }
+  const auto pcm = audioPlayout.snapshot();
+  bool complete = false;
+  do {
+    if (!writeRow(snprintf(row, sizeof(row),
+          "BEGIN\tversion=%s\tutc_or_uptime=%s\tsnapshot_ms=%lu\tpost_stop=1\n",
+          POCKETJAZZ_FIRMWARE_VERSION, timeStamp, (unsigned long)snapshotAt))) break;
+    if (!writeRow(snprintf(row, sizeof(row),
+          "STATION\tindex=%d\tcollection=%s\tname=%s\ticy_title=%s\n",
+          idx, collection, station, title))) break;
+    if (!writeRow(snprintf(row, sizeof(row),
+          "WIFI\tready=%u\tip_assigned=%u\trssi_dbm=%ld\tgot_ip=%lu\tdrops=%lu\treason=%d\tlast_drop_ms=%lu\tntp=%u\n",
+          (unsigned)wifiReady.load(), (unsigned)wifiHasIp(),
+          (long)(wifiHasIp() ? WiFi.RSSI() : -127),
+          (unsigned long)wifiGotIpEvents.load(),
+          (unsigned long)wifiDisconnectEvents.load(), wifiDisconnectReason.load(),
+          (unsigned long)wifiDisconnectAt.load(), (unsigned)ntpSynced.load()))) break;
+    if (!writeRow(snprintf(row, sizeof(row),
+          "HTTPS\tphase=%lu\thop=%lu\tdns_ok=%d\tdns_ms=%lu\ttls_ok=%d\ttls_ms=%lu\trequest_ms=%lu\ttls_raw=%ld\tfree_before=%lu\tlargest_before=%lu\tfree_after=%lu\tlargest_after=%lu\n",
+          (unsigned long)audioHttpsPhase.load(), (unsigned long)audioHttpsHop.load(),
+          audioHttpsDnsOk.load(), (unsigned long)audioHttpsDnsMs.load(),
+          audioHttpsSecureOk.load(), (unsigned long)audioHttpsSecureMs.load(),
+          (unsigned long)audioHttpsRequestMs.load(), (long)audioTlsErrorCode.load(),
+          (unsigned long)audioHttpsFreeBefore.load(),
+          (unsigned long)audioHttpsLargestBefore.load(),
+          (unsigned long)audioHttpsFreeAfter.load(),
+          (unsigned long)audioHttpsLargestAfter.load()))) break;
+    if (!writeRow(snprintf(row, sizeof(row),
+          "STREAM\tstate_after_stop=%d\tlast_http=%ld\tfailure=%ld\tring_capacity=%lu\tbuffer_after_stop=%lu\tmin_buffer=%lu\tmin_at_ms=%lu\tunderruns=%lu\topens=%lu\tfailed_streak=%u\tlast_open_ms=%lu\n",
+          (int)audioState.load(), (long)audioSourceStatusCode.load(),
+          (long)audioFailureStage.load(), (unsigned long)audioRingCapacity.load(),
+          (unsigned long)audioBufferedBytes.load(), (unsigned long)audioBufferMinimum.load(),
+          (unsigned long)audioBufferMinAtMs.load(),
+          (unsigned long)diagAudioWindow.under(audioUnderruns.load()),
+          (unsigned long)diagAudioWindow.opens(audioReopens.load()),
+          (unsigned)(idx >= 0 ? stationHealth.streak(idx) : 0),
+          (unsigned long)audioLastOpenDurationMs.load()))) break;
+    if (!writeRow(snprintf(row, sizeof(row),
+          "DECODE\tnet_read_max_us=%lu\tmp3_decode_max_us=%lu\tspeaker_write_max_us=%lu\tframes=%lu\tpcm_hz=%lu\tmp3_bps=%lu\tvbr_seen=%u\n",
+          (unsigned long)audioSourcePullMaxUs.load(),
+          (unsigned long)audioDecodeLoopMaxUs.load(),
+          (unsigned long)audioPcmFlushMaxUs.load(),
+          (unsigned long)diagAudioWindow.frames(audioFrames.load()),
+          (unsigned long)decodedPcmRateHz.load(),
+          (unsigned long)decodedMp3FrameBps.load(),
+          (unsigned)decodedMp3ObservedVbr.load()))) break;
+    if (!writeRow(snprintf(row, sizeof(row),
+          "PCM\tgaps=%lu\tgap_max_ms=%lu\tgap_total_ms=%lu\trejects=%lu\tstop_count=%lu\tstop_last_ms=%lu\tstop_p50_upper_ms=%lu\tstop_p95_upper_ms=%lu\tstop_max_ms=%lu\tswitch_count=%lu\tswitch_last_ms=%lu\tswitch_p50_upper_ms=%lu\tswitch_p95_upper_ms=%lu\tswitch_max_ms=%lu\n",
+          (unsigned long)pcm.pcmGapEpisodes, (unsigned long)pcm.pcmGapMaxMs,
+          (unsigned long)pcm.pcmGapTotalMs, (unsigned long)pcm.pcmHandoffFailures,
+          (unsigned long)pcm.stopCount, (unsigned long)pcm.stopLastMs,
+          (unsigned long)pcm.stopP50UpperMs, (unsigned long)pcm.stopP95UpperMs,
+          (unsigned long)pcm.stopMaxMs, (unsigned long)pcm.switchCount,
+          (unsigned long)pcm.switchLastMs, (unsigned long)pcm.switchP50UpperMs,
+          (unsigned long)pcm.switchP95UpperMs, (unsigned long)pcm.switchMaxMs))) break;
+    if (!writeRow(snprintf(row, sizeof(row),
+          "MEMORY\tfree8=%lu\tlargest8=%lu\tminfree8=%lu\tstack_free=%lu\tbattery_mv=%d\treset_reason=%d\tui_max_gap_ms=%lu\tuptime_ms=%lu\tcoalesced_faults=%lu\n",
+          (unsigned long)ESP.getFreeHeap(),
+          (unsigned long)heap_caps_get_largest_free_block(MALLOC_CAP_8BIT),
+          (unsigned long)heap_caps_get_minimum_free_size(MALLOC_CAP_8BIT),
+          (unsigned long)audioStackWatermark.load(), batteryMillivolts,
+          (int)esp_reset_reason(), (unsigned long)uiLoopMaxGapMs.load(),
+          (unsigned long)snapshotAt, (unsigned long)audioFaultCoalesced))) break;
+    bool failed = false;
+    // Journal records the historical MP3 buffer and state BEFORE STOP; the
+    // instantaneous STREAM state above is expected to be STOPPED / zero.
+    for (size_t n = audioJournal.count(); n > 0; --n) {
+      const auto& e = *audioJournal.newest(n - 1);
+      if (!writeRow(snprintf(row, sizeof(row),
+            "EVENT\tms=%lu\tstage=%u\tstate=%ld\tbuffer=%lu\tunder=%lu\twifi=%u\trssi=%ld\tdrops=%lu\tpcm_age_ms=%lu\twaiting=%u\tframes=%lu\tfree8=%lu\tlargest8=%lu\topen=%lu\tattempt=%lu\thop=%lu\tfail=%ld\thttp=%ld\ttls=%ld\tstage_age_ms=%lu\theartbeat_age_ms=%lu\tnet_detail=%lu\tpcm_reject=%lu\n",
+            (unsigned long)e.at, (unsigned)e.stage, (long)e.state,
+            (unsigned long)e.buffer, (unsigned long)e.under, (unsigned)e.wifi,
+            (long)e.rssi, (unsigned long)e.drops, (unsigned long)e.pcmAgeMs,
+            (unsigned)e.inputWaiting, (unsigned long)e.frames,
+            (unsigned long)e.freeHeap, (unsigned long)e.largest,
+            (unsigned long)e.opens, (unsigned long)e.attempt,
+            (unsigned long)e.hop, (long)e.failure, (long)e.http, (long)e.tls,
+            (unsigned long)e.stageMs, (unsigned long)e.heartbeatMs,
+            (unsigned long)e.detail, (unsigned long)e.rejects))) {
+        failed = true;
+        break;
+      }
+    }
+    if (failed) break;
+    for (size_t i = 0; i < pocketjazz::HeapLifecycleProfile::kCount + 1; ++i) {
+      pocketjazz::HeapCheckpoint point;
+      const bool first = i == pocketjazz::HeapLifecycleProfile::kCount;
+      if (!(first ? heapLifecycle.firstStallEver(point)
+                 : heapLifecycle.read(static_cast<pocketjazz::HeapMoment>(i), point)))
+        continue;
+      if (!writeRow(snprintf(row, sizeof(row),
+            "HEAP\tphase=%s\tattempt=%lu\tms=%lu\tfree8=%lu\tlargest8=%lu\tdma_free=%lu\tdma_largest=%lu\tring=%lu\tbuffer=%lu\tsource_bytes=%lu\tsource_idle_ms=%lu\tsource_gap_max_ms=%lu\n",
+            first ? "FIRST_STALL_EVER" :
+              pocketjazz::heapMomentName(static_cast<pocketjazz::HeapMoment>(i)),
+            (unsigned long)point.attempt, (unsigned long)point.atMs,
+            (unsigned long)point.free8, (unsigned long)point.largest8,
+            (unsigned long)point.freeDma, (unsigned long)point.largestDma,
+            (unsigned long)point.ringBytes, (unsigned long)point.bufferedBytes,
+            (unsigned long)point.sourceBytes, (unsigned long)point.sourceIdleMs,
+            (unsigned long)point.sourceMaxGapMs))) {
+        failed = true;
+        break;
+      }
+    }
+    if (failed) break;
+    if (!writeRow(snprintf(row, sizeof(row), "END\tcomplete=1\n"))) break;
+    complete = true;
+  } while (false);
+  if (!complete) { showExportStatus(writeStatus, ""); return; }
+  showNotice("Report saved: incident-*.tsv");
+}
 void exportIcyHistory() {
   if (!trackHistory.size()) { showNotice("No ICY titles to save"); return; }
   // Export each complete TSV *row* as a separate bounded append. A short SD
@@ -2873,6 +3030,7 @@ void handleKeys(const Press& k) {
     return;
   }
   if (screen == DIAGNOSTICS) {
+    if (pressed(k, 'r')) { exportIncidentReport(); return; }
     if (pressed(k, 'e')) { if (diagPage == 7) exportAudioRuntime(); else exportDiagnostics(); return; }
     if (pressed(k, 'm') && diagPage == 6) { exportHeapLifecycle(); return; }
     if (pressed(k, 'x')) {
@@ -4264,8 +4422,8 @@ void drawHelp() {
     }},
     {"DIAGNOSTICS", {
       "UP/DOWN PAGES",
-      "E SAVE STATUS",
       "X RESET COUNTERS",
+      "R REPORT (STOP)",
       "DEL BACK TO RADIO"
     }},
     {"TEMPO & MOOD", {
@@ -4528,9 +4686,9 @@ void drawDiagnostics(bool partial = false) {
   }
   if (uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0)
     text(8, 120, uiNotice, C_GOLD);
-  else text(8, 120, diagPage == 7 ? "E events X counters UP/DOWN" :
-       diagPage == 6 ? "M RAM(STOP) E status X reset" :
-       "E save X reset  UP/DOWN  DEL", C_WHITE);
+  else text(8, 120, diagPage == 7 ? "R report(STOP) E events X reset" :
+       diagPage == 6 ? "R report(STOP) M RAM E status" :
+       "R report(STOP) E save X reset", C_WHITE);
 }
 void drawSettingsBackup() {
   auto& d = M5Cardputer.Display;

@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.7z16 — single-file post-STOP incident export (2026-11-14)
+
+- Added one-key `I → R` (only after STOP) on any Diagnostics page: creates a new `/PocketJazz/incident-*.tsv` with station identity, latest ICY, Wi-Fi/HTTPS, buffer/decode/PCM/heap, at most 16 recent runtime events, and heap/source progress checkpoints. The report must end with `END complete=1`; partial results are explicitly invalid.
+- No automatic SD writes, second audio task, password/SSID/IP/URL storage or extra audio hot-path work. Existing `E/M/X` are unchanged, and home-screen `R` still reloads playlists. The report does not fix rare BUFFERING; user/device issue remains open.
+- ESP32-S3 build (no PSRAM): **92,468 B static RAM**, 1,632,768-byte app-only BIN; **297 Python** and **54 Windows CTest** checks passed. **Physical Cardputer SD/FAT/speaker acceptance pending.**
+- [v0.7z16 details](docs/RELEASE-v0.7z16.md). Earlier release assets remain immutable.
+
+
 ## v0.7z15 — interface and Jazz Spark preview (2026-11-14)
 
 - Fixed Notes search result `Enter` and added `Enter` to leave a biography.

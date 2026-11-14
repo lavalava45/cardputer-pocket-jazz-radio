@@ -1,9 +1,9 @@
 # Pocket Jazz Radio — User Guide
 
-This guide covers the publicly available **v0.7z15 diagnostic preview**. Some
+This guide covers the publicly available **v0.7z16 diagnostic preview**. Some
 features require optional microSD assets. Its compact illustrations are **real
 v0.7z13 emulator captures** (not photographs of hardware and not screenshots
-of the v0.7z15 download). The v0.7z13 screens are historical emulator evidence, not v0.7z15 captures;
+of the v0.7z16 download). The v0.7z13 screens are historical emulator evidence, not v0.7z16 captures;
 see the [Feature Tour](FEATURE-TOUR.md) and [image provenance](EMULATOR.md).
 
 ## 1. The radio
@@ -60,6 +60,12 @@ automatically changes the private `04-my-stations.m3u` or other user files.
 Back up your SD directory before testing this new feature. Default stream
 checks were performed on a PC, not a guarantee
 that every server is always available.
+
+### When the radio buffers: one-file diagnostics
+
+On **v0.7z16**, let the interruption occur, then press **Enter** on the radio to stop playback. Press **I** for Diagnostics and **R** on any of the eight pages. One new `/PocketJazz/incident-*.tsv` is written to microSD, including station identity, the latest ICY title, Wi-Fi/HTTPS state, MP3 ring, PCM, heap, 16 recorded audio events and source progress snapshots. A complete record ends with `END complete=1`. If this marker is missing, the recording was incomplete (e.g. SD full). Do not press **X** to reset audio counters before exporting. **E/M** still provide the old individual exports. No logging occurs during audio playback.
+
+This function is **not in v0.7z15** and has only software tests; physical SD latency and speaker acceptance are still open. Numeric files replace photos for buffer diagnostics, though actual UI defects may still need a picture.
 
 ## 3. Blue Note clock, timers and alarm
 

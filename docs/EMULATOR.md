@@ -11,7 +11,7 @@ The input was an **8,388,608-byte emulator-only merged image** constructed from 
 | Capture fact | Verified value |
 | :--- | :--- |
 | Device in Velxio | M5Stack Cardputer ADV, ESP32-S3 |
-| Firmware | Historical local v0.7z13, **not the newer public v0.7z15 download** |
+| Firmware | Historical local v0.7z13, **not the newer public v0.7z16 download** |
 | App-only SHA-256 | e4048df599d06019e2d6abf22ce92cebe805eb286317b5176ed2008576f97516 |
 | Emulator-only merged SHA-256 | 11214c1a9a0498878242e1315af6f3fe8c42668aee22783a125001dd648c3654 |
 | Raw LCD source | 240 × 135-pixel Velxio canvas |

@@ -32,7 +32,7 @@ class SDExportContracts(unittest.TestCase):
         self.assertIn('F BROWSE STATIONS', help_screen)
         self.assertIn('U NOTES SEARCH', help_screen)
         self.assertIn('E SAVES TSV LOGS', help_screen)
-        self.assertIn('E save X reset  UP/DOWN  DEL', APP)
+        self.assertIn('R report(STOP) E save X reset', APP)
         self.assertIn('UP/DOWN ENTER full  E save DEL', APP)
 
     def test_export_uses_no_new_network_or_decoder_io(self):

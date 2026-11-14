@@ -67,7 +67,10 @@ class PeekIntegrationContracts(unittest.TestCase):
         self.assertIn('if (peekRequestCurrent(command)) xQueueOverwrite(peekResultQueue, &result);', APP)
         self.assertIn('completed.playlistGeneration, completed.requestId', APP)
         self.assertIn('stationPeek.start(candidate, now, request.playlistGeneration,', APP)
-        reload = APP.split("if (pressed(k, 'r')) {", 1)[1].split("if (pressed(k, 'p')", 1)[0]
+        # Diagnostics has its own R (post-STOP incident export), while R on
+        # RADIO still means reload the user's SD catalog. Inspect the LAST
+        # matching handler rather than accidentally selecting Diagnostics.
+        reload = APP.rsplit("if (pressed(k, 'r')) {", 1)[1].split("if (pressed(k, 'p')", 1)[0]
         self.assertLess(reload.index('invalidateStationPeek(true)'), reload.index('loadPlaylists()'))
         self.assertIn('peekLiveGeneration.store(generation);', APP)
         self.assertIn('peekLiveRequest.store(0);', APP)
