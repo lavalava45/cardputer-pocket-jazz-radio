@@ -10,7 +10,7 @@
 
 Listen. Discover. Remember. No streaming account, phone app or subscription required.
 
-[**Get the preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z14) · [**Explore all features**](docs/FEATURE-TOUR.md) · [**Install safely**](docs/INSTALL.md) · [**User guide**](docs/USER-GUIDE.md)
+[**Start in 3 steps**](docs/QUICK-START.md) · [**Why Pocket Jazz?**](docs/WHY-POCKET-JAZZ.md) · [**Explore the features**](docs/FEATURE-TOUR.md) · [**Download the preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z14)
 
 ![Device](https://img.shields.io/badge/for-Cardputer%20ADV-243b4a)
 ![Stations](https://img.shields.io/badge/51%20curated-stations-c8a66d)
@@ -26,6 +26,8 @@ Listen. Discover. Remember. No streaming account, phone app or subscription requ
 Pocket Jazz feels like having a small jazz station on your desk. Pick a favourite with one key, explore a new sound, look up the musician you are hearing, or keep a track in your listening diary. The tiny screen stays readable, and nearly everything is a keypress away.
 
 It is an **independent, open-source project** designed specifically for the Cardputer ADV. Radio uses freely accessible broadcaster streams over **2.4 GHz Wi-Fi**; extra reading and offline listening features can be kept on a microSD card.
+
+**New to Pocket Jazz?** [Download one ready-to-run BIN, copy it to microSD, and launch from M5Launcher 3](docs/QUICK-START.md). The radio can be tried without installing the optional Jazz Notes library. For the idea behind this little music companion, read [Why Pocket Jazz?](docs/WHY-POCKET-JAZZ.md).
 
 | **Listen** | **Explore** | **Make it yours** |
 | :--- | :--- | :--- |
@@ -87,6 +89,8 @@ Bring up to **24 local MP3 files** from a microSD folder, remember up to **two W
 ## Getting started
 
 **Recommended: keep M5Launcher 3 and install an app-only BIN.**
+
+For the shortest installation, follow the **[three-step quick start](docs/QUICK-START.md)**. The optional offline Jazz Notes and Spark files are explained there too.
 
 1. Download the [**public v0.7z14 diagnostic preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z14). Select the **app-only** BIN, not an 8 MB full-flash image.
 2. Copy it onto your microSD card and open it from **M5Launcher 3 → SD**. Do not replace the launcher, bootloader or partitions.

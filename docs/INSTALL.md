@@ -3,6 +3,8 @@
 > **Hardware:** M5Stack Cardputer ADV (ESP32-S3). This is a preview release.
 > For the ordinary installation, **keep M5Launcher 3** and use the app-only BIN.
 
+In a hurry? Use the [three-step quick start](QUICK-START.md). Curious about the project? Read [Why Pocket Jazz?](WHY-POCKET-JAZZ.md).
+
 ## Choose your installation method
 
 | Method | What you install | M5Launcher preserved? | Recommended? |

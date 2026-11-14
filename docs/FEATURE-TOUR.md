@@ -6,7 +6,7 @@ Pocket Jazz Radio brings the familiar pleasure of tuning a radio into a tiny ope
 
 This is a guided tour of **features implemented in the application**, not a promise that every feature has completed long-duration hardware acceptance. The publicly downloadable diagnostic preview is **v0.7z14**; the real emulator screenshots remain from the previously tested local **v0.7z13** candidate. The curated catalog described here is version **2026.11.14.1** and currently contains **51 stations**.
 
-[**Home**](../README.md) · [**Installation**](INSTALL.md) · [**Full controls**](USER-GUIDE.md) · [**Image provenance**](EMULATOR.md)
+[**Home**](../README.md) · [**Start in 3 steps**](QUICK-START.md) · [**Why Pocket Jazz?**](WHY-POCKET-JAZZ.md) · [**Full controls**](USER-GUIDE.md) · [**Image provenance**](EMULATOR.md)
 
 ---
 

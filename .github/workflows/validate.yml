@@ -40,6 +40,8 @@ jobs:
           test -f docs/images/help-preview.png
           test -f CHANGELOG.md
           test -f docs/INSTALL.md
+          test -f docs/QUICK-START.md
+          test -f docs/WHY-POCKET-JAZZ.md
           test -f docs/USER-GUIDE.md
           test -f docs/RELEASE-v0.7z11.md
           test -f docs/RELEASE-v0.7z12.md

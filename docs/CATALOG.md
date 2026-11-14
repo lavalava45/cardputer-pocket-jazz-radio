@@ -48,7 +48,7 @@ should overwrite, import, or publish a listener's own stations.
 
 ## How to update the catalog
 
-The **v0.7z12 preview** supports a confirmed, **manual-only** in-app
+The **v0.7z14 diagnostic preview** includes a **manual-only** in-app
 update: stop the radio and offline player, press **D** from the radio
 screen, review the prompt, then press **Enter**. The device fetches the
 fixed `manifest.json` and five listed editorial files from this same

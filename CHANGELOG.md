@@ -1,5 +1,19 @@
 # Changelog
 
+## First-time visitor guide and community introduction — 2026-11-14 (documentation only)
+
+- Added the [three-step quick start](docs/QUICK-START.md), with a direct
+  app-only BIN link, first-run Wi-Fi, and a precise list of optional
+  microSD files for Jazz Notes and Jazz Spark. The personal
+  `04-my-stations.m3u` overwrite warning is prominent.
+- Added [Why Pocket Jazz?](docs/WHY-POCKET-JAZZ.md): a narrative about the
+  listening and discovery experience, the reasons for a dedicated
+  Cardputer interface, and a reusable draft for a community showcase.
+- Linked both from the README, installation and feature tour, with an
+  unchanged disclaimer about v0.7z14 hardware acceptance and the
+  v0.7z13 emulator screenshots. No firmware, playlists or release
+  assets were changed.
+
 All notable public preview releases are summarized in English here.
 These notes distinguish **software verification** from actual audio and
 display acceptance on an M5Stack Cardputer ADV. The detailed historical
