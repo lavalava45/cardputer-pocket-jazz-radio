@@ -15,6 +15,8 @@ class NotesUI(unittest.TestCase):
         self.assertIn('notesSearchPage.useEncyclopedia(), 3,', SOURCE)
         self.assertIn('static pocketjazz::JazzNotesSearch searchIndex', SOURCE)
         self.assertIn('notesOpenedFromSearch ? NOTES_SEARCH : RADIO', SOURCE)
+        notes = SOURCE.split('if (screen == NOTES) {', 1)[1].split('if (screen == NOTES_SEARCH)', 1)[0]
+        self.assertIn('if (k.del || k.enter)', notes)
         self.assertNotIn('searchOfflineNotes()', SOURCE.split('void audioWorker(void*)', 1)[1].split('void loadPeekConfig()', 1)[0])
         self.assertNotIn('SD.open(', SOURCE.split('void drawNotesSearch()', 1)[1].split('void drawTracks()', 1)[0])
 
@@ -32,6 +34,13 @@ class NotesUI(unittest.TestCase):
         self.assertIn('k.up', search)
         self.assertIn('k.down', search)
         self.assertIn('pageOfflineNotes(', search)
+        # Regression v0.7z14: an unconditional results-mode early return in
+        # text input swallowed Enter, making every search hit impossible
+        # to open even though the LCD told users to press Enter.
+        self.assertIn('else if (!k.fn && !k.enter)', search)
+        self.assertIn('else if (notesSearchCount) openSelectedOfflineNote();', search)
+        self.assertLess(search.index('else if (!k.fn && !k.enter)'),
+                        search.index('if (k.enter) {'))
         drawn = SOURCE.split("void drawNotes() {", 1)[1].split("void drawNotesSearch() {", 1)[0]
         self.assertNotIn('Source: MusicBrainz', drawn)
         self.assertIn('jazz-encyclopedia.tsv', drawn)

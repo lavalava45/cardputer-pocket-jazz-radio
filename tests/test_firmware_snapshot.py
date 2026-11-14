@@ -16,9 +16,9 @@ class FrozenFirmwareSource(unittest.TestCase):
     def test_source_manifest_sha256(self):
         self.assertGreater(snapshot.verify(), 200)
 
-    def test_current_firmware_is_v0_7z14(self):
+    def test_current_firmware_is_v0_7z15(self):
         header = (ROOT / 'firmware/PocketJazzRadio/BuildVersion.h').read_text('utf-8')
-        self.assertIn('#define POCKETJAZZ_FIRMWARE_VERSION "v0.7z14"', header)
+        self.assertIn('#define POCKETJAZZ_FIRMWARE_VERSION "v0.7z15"', header)
 
     def test_unknown_source_must_be_hashed_even_if_bytecode_exists(self):
         # The exact integrity gate remains strict for all non-generated files.

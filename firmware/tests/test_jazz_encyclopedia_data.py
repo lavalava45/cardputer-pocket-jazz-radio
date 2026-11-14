@@ -50,7 +50,7 @@ class VerifiedJazzDataset(unittest.TestCase):
     def test_facts_and_attributed_quotes_are_different_types(self):
         self.assertGreaterEqual(len(self.facts), 150)
         self.assertLessEqual(len(self.facts_raw), 512 * 1024)
-        self.assertGreaterEqual(sum(r[0] == "QUOTE" for r in self.facts), 4)
+        self.assertGreaterEqual(sum(r[0] == "QUOTE" for r in self.facts), 25)
         self.assertGreater(sum(r[0] == "FACT" for r in self.facts), 100)
         for row in self.facts:
             self.assertEqual(len(row), 4)
@@ -84,7 +84,7 @@ class VerifiedJazzDataset(unittest.TestCase):
         self.assertGreaterEqual(len(curated), 100)
         self.assertEqual(len(set(curated)), len(curated))
         self.assertTrue(all(len(line.split("\t")) == 3 for line in curated))
-        self.assertEqual(len(self.facts), len(curated) + 15 + 5)
+        self.assertEqual(len(self.facts), len(curated) + 15 + 25)
         source = (ROOT / "PocketJazzRadio/PocketJazzRadioApp.cpp").read_text("utf-8")
         for expected in ("SPARK_AUTO_INTERVAL_MS = 12u * 60u * 1000u",
                          "SPARK_AUTO_VISIBLE_MS = 10000u",

@@ -10,7 +10,7 @@
 
 Listen. Discover. Remember. No streaming account, phone app or subscription required.
 
-[**Start in 3 steps**](docs/QUICK-START.md) · [**Why Pocket Jazz?**](docs/WHY-POCKET-JAZZ.md) · [**Explore the features**](docs/FEATURE-TOUR.md) · [**Download the preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z14)
+[**Start in 3 steps**](docs/QUICK-START.md) · [**Why Pocket Jazz?**](docs/WHY-POCKET-JAZZ.md) · [**Explore the features**](docs/FEATURE-TOUR.md) · [**Download the preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z15)
 
 ![Device](https://img.shields.io/badge/for-Cardputer%20ADV-243b4a)
 ![Stations](https://img.shields.io/badge/51%20curated-stations-c8a66d)
@@ -72,7 +72,7 @@ The QR code **starts a web search**; it does not automatically recognise a recor
 
 ### 03. Discover the people behind the records
 
-A surprisingly deep offline listening companion fits inside this little machine. Search an **artist directory of approximately 1,498 entries**, with expanded editorial notes for 63 musicians. Read **150 jazz facts and five attributed quotations** in Jazz Spark. Try the **Mood Tuner** for a different listening direction, or tap out a rhythm to estimate its BPM.
+A surprisingly deep offline listening companion fits inside this little machine. Search an **artist directory of approximately 1,498 entries**, with expanded editorial notes for 63 musicians. Read **150 jazz facts and 25 attributed quotations** in Jazz Spark. Try the **Mood Tuner** for a different listening direction, or tap out a rhythm to estimate its BPM.
 
 The reading library is available when the accompanying microSD data files are installed. The mood descriptions are editorial, not automatic AI genre detection.
 
@@ -92,7 +92,7 @@ Bring up to **24 local MP3 files** from a microSD folder, remember up to **two W
 
 For the shortest installation, follow the **[three-step quick start](docs/QUICK-START.md)**. The optional offline Jazz Notes and Spark files are explained there too.
 
-1. Download the [**public v0.7z14 diagnostic preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z14). Select the **app-only** BIN, not an 8 MB full-flash image.
+1. Download the [**public v0.7z15 diagnostic preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z15). Select the **app-only** BIN, not an 8 MB full-flash image.
 2. Copy it onto your microSD card and open it from **M5Launcher 3 → SD**. Do not replace the launcher, bootloader or partitions.
 3. Press **W** to connect to your **2.4 GHz Wi-Fi**.
 4. For the full Notes, Spark and curated playlist experience, copy the optional files to **/PocketJazz/** after making a backup. **Never overwrite your personal 04-my-stations.m3u.**
@@ -117,7 +117,7 @@ For the shortest installation, follow the **[three-step quick start](docs/QUICK-
 
 ## An evolving preview
 
-**The newest public diagnostic preview is v0.7z14.** It retains the v0.7z13 keyboard fix, uses **1,680 fewer bytes of static RAM** on the no-PSRAM ESP32-S3 build, and can record source-byte progress before an MP3 input stall. **The gallery is still from an actual v0.7z13 emulator run, not the newly released firmware.** On a physical Cardputer, v0.7z13 restored keyboard responsiveness and sounded more reliable, but at least one **BUFFERING interruption** remained. **v0.7z14 has not undergone physical speaker acceptance** and is not advertised as a cure for that interruption. Keep your v0.7z13 BIN for rollback. See the [v0.7z14 release notes](docs/RELEASE-v0.7z14.md).
+**The newest public diagnostic preview is v0.7z15.** It retains the v0.7z13 keyboard fix, uses **1,672 fewer bytes of static RAM** on the no-PSRAM ESP32-S3 build, and can record source-byte progress before an MP3 input stall. **The gallery is still from an actual v0.7z13 emulator run, not the newly released firmware.** On a physical Cardputer, v0.7z13 restored keyboard responsiveness and sounded more reliable, but at least one **BUFFERING interruption** remained. **v0.7z15 has not undergone physical speaker acceptance** and is not advertised as a cure for that interruption. Keep your v0.7z13 BIN for rollback. See the [v0.7z15 release notes](docs/RELEASE-v0.7z15.md).
 
 The emulator provides evidence of **display output and navigation**, not of physical Wi-Fi, certificate handling, SD-card timing, or speaker performance. Read [image provenance](docs/EMULATOR.md), follow the [audio reliability issue](https://github.com/lavalava45/cardputer-pocket-jazz-radio/issues/1), or inspect the [changelog](CHANGELOG.md).
 

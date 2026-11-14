@@ -13,7 +13,21 @@ namespace tuning {
 static constexpr uint32_t kRateHz = 8000;
 static constexpr size_t kSamples = 8192; // 1.024 s mono; repeats via M5 speaker
 static constexpr uint8_t kChannel = 1;   // channel 0 belongs to the MP3 decoder
-static constexpr uint8_t kQuietChannelVolume = 42;
+// The previous fixed channel level 42 was reported as painfully loud on the
+// physical ADV, despite the small signed 8-bit waveform. Keep the FX far
+// below the music channel: this is only a faint tuning hiss, not background
+// noise mixed over a playing track. Actual speaker gain is nonlinear; the
+// conservative cap must still be accepted by ear on a real device.
+static constexpr uint8_t kQuietChannelVolume = 8;
+static constexpr uint8_t kReferenceMasterVolume = 185;
+constexpr uint8_t channelVolumeForMaster(uint8_t master) {
+  if (!master) return 0;
+  const uint16_t level =
+      (static_cast<uint16_t>(master) * kQuietChannelVolume +
+       kReferenceMasterVolume - 1) / kReferenceMasterVolume;
+  return static_cast<uint8_t>(level > kQuietChannelVolume
+                                  ? kQuietChannelVolume : level);
+}
 static constexpr uint32_t kFadeMs = 90;
 // Leave headroom for the still-unallocated split libmad workspace (29,192 B)
 // AND for the existing TLS/Wi-Fi connection. Do not trade reliable jazz for

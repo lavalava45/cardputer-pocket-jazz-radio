@@ -44,7 +44,9 @@ class TuningSoundFxIntegration(unittest.TestCase):
 
     def test_never_changes_decoder_or_music_channel(self):
         self.assertIn('kChannel = 1', FX)
-        self.assertIn('kQuietChannelVolume = 42', FX)
+        self.assertIn('kQuietChannelVolume = 8', FX)
+        self.assertIn('channelVolumeForMaster(speakerVolume)', WORKER)
+        self.assertIn('channelVolumeForMaster(', FX)
         self.assertIn('kFadeMs = 90', FX)
         self.assertIn('M5.Speaker.setVolume(speakerVolume)', WORKER)
         self.assertIn('output.setMonitor(pcmMonitor, &output)', WORKER)

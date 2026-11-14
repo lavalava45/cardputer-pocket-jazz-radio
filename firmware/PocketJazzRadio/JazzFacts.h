@@ -21,16 +21,17 @@ class JazzFacts {
   static constexpr size_t MaxRows = 2048;
 
   bool open(NotesFile file) {
-    count_ = 0;
+    count_ = quoteCount_ = 0;
     file_ = file;
     if (!file_.read || !file_.size || file_.size > MaxFileBytes) return false;
     size_t count = 0;
     JazzFact tmp = {};
-    if (!walk(-1, tmp, count)) return false;
+    if (!walk(-1, tmp, count, &quoteCount_)) return false;
     count_ = count;
     return count_ > 0;
   }
   size_t size() const { return count_; }
+  size_t quoteCount() const { return quoteCount_; }
   bool at(size_t index, JazzFact& fact) const {
     if (index >= count_) return false;
     size_t visited = 0;
@@ -40,8 +41,18 @@ class JazzFacts {
     return count_ && at(entropy % count_, fact);
   }
 
+  // Quote order may be anywhere in the TSV, not just five hard-coded final
+  // rows. Search by ordinal on demand without caching row offsets in RAM.
+  bool quoteAt(size_t ordinal, JazzFact& out, size_t& absoluteIndex) const {
+    if (ordinal >= quoteCount_) return false;
+    size_t seen = 0, count = 0;
+    return walk(-1, out, count, &seen, ordinal, &absoluteIndex);
+  }
+
  private:
-  bool walk(int want, JazzFact& out, size_t& count) const {
+  bool walk(int want, JazzFact& out, size_t& count,
+            size_t* quotes = nullptr, size_t quoteTarget = size_t(-1),
+            size_t* absoluteIndex = nullptr) const {
     count = 0;
     size_t offset = 0, last = 0, pos = 0, available = 0;
     uint8_t cache[512] = {};
@@ -61,6 +72,14 @@ class JazzFacts {
         line[length] = 0;
         JazzFact current = {};
         if (!decode(line, current)) return false;
+        if (quotes && strcmp(current.type, "QUOTE") == 0) {
+          if (*quotes == quoteTarget && absoluteIndex) {
+            out = current;
+            *absoluteIndex = count;
+            return true;
+          }
+          ++*quotes;
+        }
         if (want == static_cast<int>(count)) {
           out = current;
           return true;
@@ -99,5 +118,6 @@ class JazzFacts {
   }
   NotesFile file_ = {};
   size_t count_ = 0;
+  size_t quoteCount_ = 0;
 };
 } // namespace pocketjazz

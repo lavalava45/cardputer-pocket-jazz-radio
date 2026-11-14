@@ -81,6 +81,22 @@ int main(int argc, char** argv) {
   assert(!strcmp(fact.type, "FACT"));
   assert(factDb.choose(210, fact));
   assert(!factDb.at(210, fact));
+  Store interleaved = {
+      "QUOTE\tFirst quote\tA\thttps://en.wikiquote.org/wiki/A\n"
+      "FACT\tA fact\tSubject\thttps://en.wikipedia.org/wiki/Jazz\n"
+      "QUOTE\tSecond quote\tB\thttps://en.wikiquote.org/wiki/B\n"
+      "QUOTE\tThird quote\tC\thttps://en.wikiquote.org/wiki/C\n"
+      "FACT\tAnother fact\tSubject\thttps://en.wikipedia.org/wiki/Jazz\n"};
+  assert(factDb.open(file(interleaved)));
+  assert(factDb.quoteCount() == 3 && factDb.size() == 5);
+  size_t absolute = 999;
+  assert(factDb.quoteAt(0, fact, absolute) && absolute == 0);
+  assert(!strcmp(fact.text, "First quote"));
+  assert(factDb.quoteAt(1, fact, absolute) && absolute == 2);
+  assert(!strcmp(fact.text, "Second quote"));
+  assert(factDb.quoteAt(2, fact, absolute) && absolute == 3);
+  assert(!strcmp(fact.text, "Third quote"));
+  assert(!factDb.quoteAt(3, fact, absolute));
   Store badFact = {"QUOTE\tWrong\tAlice\thttp://nonsecure\n"};
   assert(!factDb.open(file(badFact)));
 
@@ -100,6 +116,7 @@ int main(int argc, char** argv) {
   assert(db.find("miles-davis", rows[0]));
   assert(!strcmp(rows[0].album, "Kind of Blue"));
   assert(factDb.open(file(sourcedFacts)) && factDb.size() >= 150);
+  assert(factDb.quoteCount() >= 25);
   for (size_t i = 0; i < factDb.size(); ++i) {
     assert(factDb.at(i, fact));
     assert(!strncmp(fact.source, "https://", 8));

@@ -28,6 +28,29 @@ QUOTES = (
     ("The piano ain't got no wrong notes.", "Thelonious Monk", "https://en.wikiquote.org/wiki/Thelonious_Monk"),
     ("My ego only needs a good rhythm section.", "Miles Davis", "https://en.wikiquote.org/wiki/Miles_Davis"),
     ("So go on and play, and if you make a mistake, make it loud so you won't make it next time.", "Art Blakey", "https://en.wikiquote.org/wiki/Art_Blakey"),
+    # Brief excerpts only; listed Wikiquote pages cite memoirs, interviews or
+    # contemporaneous reporting. These do not include song lyrics. The page
+    # references establish an attribution trail, not an original recording.
+    ("If you still have to ask, shame on you", "Louis Armstrong", "https://en.wikiquote.org/wiki/Louis_Armstrong"),
+    ('Playing "Bop" is like playing Scrabble with all the vowels missing.', "Duke Ellington", "https://en.wikiquote.org/wiki/Duke_Ellington"),
+    ("In my music, I'm trying to play the truth of what I am.", "Charles Mingus", "https://en.wikiquote.org/wiki/Charles_Mingus"),
+    ("I always wanted to be a spontaneous composer.", "Charles Mingus", "https://en.wikiquote.org/wiki/Charles_Mingus"),
+    ("As the painter needs his framework of parchment, the improvising musical group needs its framework in time.", "Bill Evans", "https://en.wikiquote.org/wiki/Bill_Evans"),
+    ("Jazz is about being in the moment, at every moment.", "Herbie Hancock", "https://en.wikiquote.org/wiki/Herbie_Hancock"),
+    ("Jazz is about trusting yourself to respond on the fly.", "Herbie Hancock", "https://en.wikiquote.org/wiki/Herbie_Hancock"),
+    ("To be a musician is really something. It goes very, very deep.", "John Coltrane", "https://en.wikiquote.org/wiki/John_Coltrane"),
+    ("My music is the spiritual expression of what I am", "John Coltrane", "https://en.wikiquote.org/wiki/John_Coltrane"),
+    ("I'm always making a comeback but nobody ever tells me where I've been.", "Billie Holiday", "https://en.wikiquote.org/wiki/Billie_Holiday"),
+    ("Let's play the music and not the background!", "Ornette Coleman", "https://en.wikiquote.org/wiki/Ornette_Coleman"),
+    ("I wanted to be heard. That's why I'm broke.", "Ornette Coleman", "https://en.wikiquote.org/wiki/Ornette_Coleman"),
+    ("Play like you play. Play like you think, and then you got it, if you're going to get it.", "Count Basie", "https://en.wikiquote.org/wiki/Count_Basie"),
+    ("I write music to celebrate life.", "Chick Corea", "https://en.wikiquote.org/wiki/Chick_Corea"),
+    ("It's the joy of creating. It's a way of life.", "Chick Corea", "https://en.wikiquote.org/wiki/Chick_Corea"),
+    ("I think that virtuosity is the first sign of morality in a musician.", "Wynton Marsalis", "https://en.wikiquote.org/wiki/Wynton_Marsalis"),
+    ("Calling me a jazz singer was a way of ignoring my musical background", "Nina Simone", "https://en.wikiquote.org/wiki/Nina_Simone"),
+    ("The only thing I'm interested in is the music and the musicians.", "Miles Davis", "https://en.wikiquote.org/wiki/Miles_Davis"),
+    ("jazz should have the right to take big chances", "Dave Brubeck", "https://en.wikiquote.org/wiki/Dave_Brubeck"),
+    ("the whole idea of jazz is that if you think of a phrase, you should be able to play it", "Oscar Peterson", "https://en.wikiquote.org/wiki/Oscar_Peterson"),
 )
 HISTORY = (
     ("Jazz emerged from African-American musical communities in New Orleans around the turn of the 20th century.", "Origins", "https://en.wikipedia.org/wiki/Jazz"),

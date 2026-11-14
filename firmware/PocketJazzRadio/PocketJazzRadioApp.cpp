@@ -256,6 +256,8 @@ char currentTitle[96] = {};
 // We never claim to have read the user's historical favorites from SD.
 char lastLikedTitle[96] = {};
 pocketjazz::TrackHistory<5> trackHistory;
+uint8_t icySelected = 0;  // Which of the five in-RAM titles is highlighted.
+bool icyDetailOpen = false; // Full-title reading; never opens SD automatically.
 // Off-channel ICY titles never enter the playing station's history. Fixed RAM,
 // no network polling until the user explicitly opts in via a local SD config.
 pocketjazz::StationPeekPolicy<6> stationPeek;
@@ -1843,14 +1845,25 @@ void audioWorker(void*) {
       fxFading = true;
       fxFadeStarted = millis();
     }
-    if (!fxFading) return;
+    // No new station PCM is present while this sound is playing. Match the
+    // user's actual speaker-volume setting instead of guessing loudness from
+    // the old station or attempting a new RMS pass in the audio hot path.
+    const uint8_t quietLevel = pocketjazz::tuning::channelVolumeForMaster(
+        requestedOutputVolume.load(std::memory_order_acquire));
+    if (!fxFading) {
+      if (fxLastVolume != quietLevel) {
+        M5.Speaker.setChannelVolume(pocketjazz::tuning::kChannel, quietLevel);
+        fxLastVolume = quietLevel;
+      }
+      return;
+    }
     const uint32_t elapsed = millis() - fxFadeStarted;
     if (elapsed >= pocketjazz::tuning::kFadeMs) {
       stopTuningFx();
       return;
     }
     const uint8_t volume = static_cast<uint8_t>(
-        (static_cast<uint32_t>(pocketjazz::tuning::kQuietChannelVolume) *
+        (static_cast<uint32_t>(quietLevel) *
          (pocketjazz::tuning::kFadeMs - elapsed)) /
         pocketjazz::tuning::kFadeMs);
     if (volume != fxLastVolume) {
@@ -2127,7 +2140,7 @@ void audioWorker(void*) {
               heap_caps_get_largest_free_block(MALLOC_CAP_8BIT) >=
                   pocketjazz::tuning::kMinimumLargestBlock) {
             fxInitialFrames = audioFrames.load(std::memory_order_relaxed);
-            fxLastVolume = pocketjazz::tuning::kQuietChannelVolume;
+            fxLastVolume = pocketjazz::tuning::channelVolumeForMaster(speakerVolume);
             M5.Speaker.setChannelVolume(pocketjazz::tuning::kChannel, fxLastVolume);
             fxActive = M5.Speaker.playRaw(clip, pocketjazz::tuning::kSamples,
                 pocketjazz::tuning::kRateHz, false, 0,
@@ -3012,7 +3025,9 @@ void handleKeys(const Press& k) {
     if (k.up) notesDetailPage = 0;
     if (k.down)
       notesDetailPage = notesDetail.length() > 126 ? 1 : 0;
-    if (k.del)
+    // A note opened from the search list returns there on either Enter or
+    // Del, as described by the offline help. N (current artist) goes home.
+    if (k.del || k.enter)
       screen = notesOpenedFromSearch ? NOTES_SEARCH : RADIO;
     return;
   }
@@ -3041,7 +3056,9 @@ void handleKeys(const Press& k) {
       if (static_cast<size_t>(notesSearchSelected) >= notesSearchOffset + notesSearchCount)
         pageOfflineNotes((static_cast<size_t>(notesSearchSelected) / 3) * 3);
     }
-    else if (!k.fn) {
+    else if (!k.fn && !k.enter) {
+      // Enter is an action, not text input. In results mode the old early
+      // return swallowed Enter before openSelectedOfflineNote() could run.
       if (notesSearchRan) return; // Results mode: W/S navigate, DEL edit.
       for (const char c : k.chars) {
         // Index is intentionally ASCII-only. Reject misleading Unicode or
@@ -3073,12 +3090,19 @@ void handleKeys(const Press& k) {
       return;
     }
     if (k.up) showJazzSpark(-1);
-    if (k.down) showJazzSpark(1);
+    if (k.down || k.enter) showJazzSpark(1);
     return;
   }
   if (screen == TRACKS) {
     if (pressed(k, 'e')) { exportIcyHistory(); return; }
-    if (k.del) screen = RADIO;
+    if (k.del) {
+      if (icyDetailOpen) icyDetailOpen = false;
+      else screen = RADIO;
+      return;
+    }
+    if (k.enter && trackHistory.size()) { icyDetailOpen = !icyDetailOpen; return; }
+    if (k.up && !icyDetailOpen && icySelected > 0) --icySelected;
+    if (k.down && !icyDetailOpen && icySelected + 1 < trackHistory.size()) ++icySelected;
     return;
   }
   if (screen == SHARE) {
@@ -3113,9 +3137,8 @@ void handleKeys(const Press& k) {
     if (pressed(k, '2')) { saveTuningEffect(false); return; }
     return;
   }
-  // The compact radio footer points to help; always open the first page,
-  // where station navigation, playback and volume are explained.
-  if (pressed(k, 'h')) { helpPage = 0; screen = HELP; return; }
+  // Open Help at the last page the user visited during this session.
+  if (pressed(k, 'h')) { screen = HELP; return; } // Resume last Help page.
   if (pressed(k, 'd')) {
     catalogUpdateAttempted = false;
     catalogUpdateStatus = pocketjazz::CatalogUpdateResult::NoChange;
@@ -3146,7 +3169,7 @@ void handleKeys(const Press& k) {
     screen = NOTES_SEARCH;
     return;
   }
-  if (pressed(k, 'y')) { screen = TRACKS; return; }
+  if (pressed(k, 'y')) { icySelected = 0; icyDetailOpen = false; screen = TRACKS; return; }
   if (pressed(k, 'q')) { shareQrPage = 0; screen = SHARE; return; }
   if (pressed(k, 'j')) {
     manualTempo.reset();
@@ -3610,15 +3633,19 @@ void showJazzSpark(int8_t direction) {
   if (corpus.open(reader) && corpus.size()) {
     jazzSparkTotal = corpus.size();
     if (direction == 0) {
-      // Quotes are in the final 5 validated rows of the bundled corpus.
-      // Choose one around 25% of the time rather than almost never.
+      // Quotes can be anywhere in the SD file and their number may grow.
+      // Choose a validated quote ~25% of the time, without a RAM index.
       const uint32_t entropy = esp_random();
-      jazzSparkIndex = (jazzSparkTotal > 5 && entropy % 4 == 0)
-          ? jazzSparkTotal - 5 + ((entropy >> 2) % 5)
-          : ((entropy >> 2) % jazzSparkTotal);
+      if (corpus.quoteCount() && entropy % 4 == 0)
+        jazzSparkReady = corpus.quoteAt(
+            (entropy >> 2) % corpus.quoteCount(), jazzSpark, jazzSparkIndex);
+      else {
+        jazzSparkIndex = (entropy >> 2) % jazzSparkTotal;
+        jazzSparkReady = corpus.at(jazzSparkIndex, jazzSpark);
+      }
     } else if (direction > 0) jazzSparkIndex = (jazzSparkIndex + 1) % jazzSparkTotal;
     else jazzSparkIndex = (jazzSparkIndex + jazzSparkTotal - 1) % jazzSparkTotal;
-    jazzSparkReady = corpus.at(jazzSparkIndex, jazzSpark);
+    if (direction != 0) jazzSparkReady = corpus.at(jazzSparkIndex, jazzSpark);
   }
   file.close();
   if (!jazzSparkReady) showNotice("Jazz facts SD invalid");
@@ -3982,17 +4009,37 @@ void drawTracks() {
   if (!trackHistory.size()) {
     text(9, 42, "No titles received yet", C_WHITE);
     text(9, 61, "Station must send ICY data", C_MUTED);
+  } else if (icyDetailOpen) {
+    const size_t chosen = min(static_cast<size_t>(icySelected), trackHistory.size() - 1);
+    const auto* entry = trackHistory.newest(chosen);
+    text(9, 29, String(chosen + 1) + " / " + String(trackHistory.size()), C_GOLD);
+    text(9, 43, shortName(entry->station, 37), C_MUTED);
+    // The full 95-byte stored title is available across several lines;
+    // split only on complete UTF-8 characters, with no SD/network access.
+    const size_t length = strlen(entry->title);
+    size_t offset = 0;
+    for (int row = 0; row < 4 && offset < length; ++row) {
+      const size_t bytes = pocketjazz::utf8SafePrefix(
+          entry->title + offset, length - offset, 36);
+      if (!bytes) break;
+      char line[37]{};
+      memcpy(line, entry->title + offset, bytes);
+      text(9, 60 + row * 13, line, C_WHITE);
+      offset += bytes;
+    }
+    text(8, 119, "DEL list  ENTER list  E export", C_MUTED);
   } else {
     for (size_t i = 0; i < trackHistory.size(); ++i) {
       const auto* entry = trackHistory.newest(i);
       const int y = 29 + (int)i * 17;
+      if (i == icySelected) d.fillRoundRect(6, y - 2, 228, 16, 3, C_PANEL2);
       text(8, y, shortName(entry->station, 9), C_MUTED);
-      text(73, y, shortName(entry->title, 26), i == 0 ? C_GOLD : C_WHITE);
+      text(73, y, shortName(entry->title, 26), i == icySelected ? C_GOLD : C_WHITE);
     }
   }
-  if (uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0)
+  if (!icyDetailOpen && uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0)
     text(8, 119, uiNotice, C_GOLD);
-  else text(8, 119, "E export ICY log   DEL back", C_MUTED);
+  else if (!icyDetailOpen) text(8, 119, "UP/DOWN ENTER full  E save DEL", C_MUTED);
 }
 void drawBrowse() {
   auto& d = M5Cardputer.Display;
@@ -4700,6 +4747,8 @@ uint32_t uiSignature(uint32_t now) {
       return hash;
     case TRACKS:
       mix(trackHistory.revision());
+      mix(icySelected);
+      mix(icyDetailOpen);
       mix(uiNoticeUntil);
       mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
       return hash;

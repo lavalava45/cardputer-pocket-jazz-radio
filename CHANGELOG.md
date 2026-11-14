@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.7z15 — interface and Jazz Spark preview (2026-11-14)
+
+- Fixed Notes search result `Enter` and added `Enter` to leave a biography.
+- ICY history now lets you browse the existing **five** recent announcements with Up/Down and read a selected full title on Enter. No automatic SD writing was added.
+- Help reopens on its last session page.
+- Tuning sound effect maximum channel volume reduced **42 → 8** and scales with the user volume, including MUTE. Actual perceived loudness needs testing on a speaker.
+- Optional SD Jazz Spark library now includes **150 facts + 25 attributed quotes**; source-backed, bounded SD reads without a bulk RAM cache. Spark `Enter` advances to the next card. The station catalog is unchanged.
+- Full v0.7z15 app-only ESP32-S3 build and 294 Python / 54 Windows host C++ checks passed. Physical user acceptance pending. Rare BUFFERING is an acknowledged non-blocking limitation, not a proven eliminated bug.
+- Release: [v0.7z15 preview details](docs/RELEASE-v0.7z15.md). Immutable earlier releases and private user SD files were not changed.
+
+
 ## First-time visitor guide and community introduction — 2026-11-14 (documentation only)
 
 - Added the [three-step quick start](docs/QUICK-START.md), with a direct

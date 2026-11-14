@@ -5,9 +5,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 APP = (ROOT / "PocketJazzRadio" / "PocketJazzRadioApp.cpp").read_text(encoding="utf-8")
-# A public source checkout does not vendor the full upstream M5Cardputer
-# distribution. Use the separately hashed, licensed v1.1.1 keyboard fixture
-# when the Arduino library is not installed alongside the checkout.
 keyboard = ROOT / "arduino-sketchbook/libraries/M5Cardputer/src/utility/Keyboard/Keyboard.h"
 if not keyboard.is_file():
     keyboard = ROOT / "tests/fixtures/M5Cardputer-1.1.1-Keyboard.h"
@@ -59,8 +56,7 @@ class HelpLayoutTests(unittest.TestCase):
         keys = APP.split("void handleKeys(const Press& k) {", 1)[1].split("void serviceSleepTimer", 1)[0]
         spark = keys.split("if (screen == SPARK) {", 1)[1].split("if (screen == TRACKS)", 1)[0]
         self.assertIn("if (k.up) showJazzSpark(-1)", spark)
-        self.assertIn("if (k.down) showJazzSpark(1)", spark)
-        self.assertNotIn("k.enter", spark)
+        self.assertIn("if (k.down || k.enter) showJazzSpark(1)", spark)
         clock = keys.split("if (screen == CLOCK) {", 1)[1].split("if (screen == SOUND_FX)", 1)[0]
         self.assertIn("if (k.up) adjustClockOffset(30)", clock)
         self.assertIn("if (k.down) adjustClockOffset(-30)", clock)

@@ -41,7 +41,7 @@ class DocsGalleryTests(unittest.TestCase):
             self.assertNotIn(old, readme)
         self.assertIn("actual", readme.lower())
         self.assertIn("360 px wide", readme)
-        self.assertIn("v0.7z14", readme)
+        self.assertIn("v0.7z15", readme)
         self.assertIn("v0.7z13", readme)
         self.assertIn("51", readme)
 
@@ -63,7 +63,7 @@ class DocsGalleryTests(unittest.TestCase):
         self.assertIn("11214c1a9a0498878242e1315af6f3fe8c42668aee22783a125001dd648c3654", provenance)
         self.assertIn("e4048df599d06019e2d6abf22ce92cebe805eb286317b5176ed2008576f97516", provenance)
         self.assertIn("headless", provenance)
-        self.assertIn("not the newer public v0.7z14 download", provenance)
+        self.assertIn("not the newer public v0.7z15 download", provenance)
 
 
 if __name__ == "__main__":

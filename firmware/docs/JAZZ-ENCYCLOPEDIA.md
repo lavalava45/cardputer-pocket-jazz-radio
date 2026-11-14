@@ -2,11 +2,14 @@
 
 ## Copy data to SD
 
-The v0.7h SD ZIP includes 1498 performer directory cards and 155 curated Jazz Spark cards.
+The current editable SD corpus includes 1498 performer directory cards and
+175 Jazz Spark cards. The older, immutable v0.7h/v0.7z14 ZIPs still contain
+their original 155 cards; copying an old ZIP does not add new quotations.
 Copy all four data files into **/PocketJazz/** on microSD:
 
 - jazz-encyclopedia.tsv — musician directory, including 63 enhanced editorial biographies, plus 36 verified album suggestions. Many other summaries are still short catalog labels.
-- jazz-facts.tsv — 150 editorial historical/theory/listening facts and five attributed quotes
+- jazz-facts.tsv — 150 editorial historical/theory/listening facts and
+  25 attributed short quotes; no catalog is cached in permanent RAM
 - artist-notes.tsv and artist-notes.idx — legacy MusicBrainz compatibility pair
 
 The app never downloads these itself; app-only BIN alone has no encyclopedia.
@@ -23,7 +26,7 @@ returns to results, Del again switches to query editing, Tab exits.
 as Artist - Track. No artist is guessed from a generic station name.
 
 **Z**: Jazz Spark. A sourced historical fact, a listening tip, or occasionally a
-short attributed quote. W/S or Enter advances; Z/Del returns. **T on the Spark
+short attributed quote. W/S browses; Enter moves forward; Z/Del returns. **T on the Spark
 screen** enables/disables automatic Spark reminders, saved in NVS (default ON).
 Every 12 minutes the radio may automatically display a card for 10 seconds
 and return to RADIO, but only when idle, with microSD available and audio
@@ -45,8 +48,10 @@ The source URL is stored in each TSV row and in
 data/JAZZ-ENCYCLOPEDIA-PROVENANCE.md. It is deliberately NOT displayed
 on the 240 x 135 LCD: screen space belongs to the biography, fact or quote.
 Facts are new short summaries of source material, not purported quotations.
-Quotes are included only when an attributed source was found; their precise
-evidential status varies. The Monk "wrong notes" quotation has secondary
+Quotes are included only when an attribution trail was found, with a
+person-specific Wikiquote page and bibliographic information where available;
+some are excerpts from longer interviews, not newly authored slogans. Their
+precise evidential status varies. The Monk "wrong notes" quotation has secondary
 attribution rather than a verified first-person recording. See provenance.
 
 The original 1487-entry imported catalog used Wikidata's jazz-musician
