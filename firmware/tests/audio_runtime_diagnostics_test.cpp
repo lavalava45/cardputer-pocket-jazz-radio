@@ -2,6 +2,7 @@
 #undef NDEBUG
 #endif
 #include "../PocketJazzRadio/AudioRuntimeDiagnostics.h"
+#include <atomic>
 #include <cassert>
 #include <thread>
 using namespace pocketjazz;

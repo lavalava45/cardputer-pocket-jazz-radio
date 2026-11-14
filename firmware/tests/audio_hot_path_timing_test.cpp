@@ -2,6 +2,7 @@
 #undef NDEBUG // MSVC Release must actually run the negative-case assertions.
 #endif
 #include "../PocketJazzRadio/AudioHotPathTiming.h"
+#include <atomic>
 #include <cassert>
 #include <cstdint>
 
