@@ -1040,6 +1040,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Female jazz trombonist crossing big-band, jazz-dance and independent ensembles"
   },
+  "anselmo-sacasas": {
+    "evidence": [
+      {
+        "claim": "Florida International University's Diaz-Ayala discography identifies Sacasas as a Cuban pianist, composer and arranger who helped form Casino de la Playa with Miguelito Valdes in 1937.",
+        "id": "ev01",
+        "source_url": "https://latinpop.fiu.edu/SECCION06S.pdf"
+      },
+      {
+        "claim": "FIU lists a 1945-47 Victor recording series by Anselmo Sacasas y su Orquesta reissued as Tumbao CD-057 Poco Loco in 1995.",
+        "id": "ev02",
+        "source_url": "https://latinpop.fiu.edu/SECCION06S.pdf"
+      },
+      {
+        "claim": "FIU lists Sacasas orchestra recordings from 1945-49 later gathered on Tumbao CD-079 Sol Tropical and identifies New York rumba in its June 2, 1949 sessions.",
+        "id": "ev03",
+        "source_url": "https://latinpop.fiu.edu/SECCION06S.pdf"
+      }
+    ],
+    "key": "anselmo-sacasas",
+    "limitations": "The FIU encyclopedic discography documents Cuban son, mambo and guaracha orchestras; the word jazz is used for the historical big-band format, not a claim that all sessions are improvisational jazz.",
+    "primary_source_url": "https://latinpop.fiu.edu/SECCION06S.pdf",
+    "summary": "Cuban pianist and arranger Anselmo Sacasas co-founded Casino de la Playa in 1937 and later recorded his own orchestra's dance music for Victor.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Florida International University holds a researched discography identifying both his band history and specific surviving Victor recordings."
+  },
   "anthony-braxton": {
     "evidence": [
       {
@@ -6595,6 +6620,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His later recordings restored a bebop voice after a long interrupted career."
   },
+  "frank-rehak": {
+    "evidence": [
+      {
+        "claim": "Miles Davis's official Miles Ahead album credits name Frank Rehak as a trombonist in the Gil Evans orchestra alongside Jimmy Cleveland and Joe Bennett.",
+        "id": "ev01",
+        "source_url": "https://www.milesdavis.com/albums/miles-ahead/"
+      },
+      {
+        "claim": "Miles Davis session discography lists Frank Rehak in the ensemble recorded at Columbia 30th Street Studio on May 6 and May 27, 1957.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/miles-davis/discography/"
+      },
+      {
+        "claim": "The professional Jazz Trombone biography identifies Rehak as a former Gene Krupa and Woody Herman orchestra member before his Gil Evans studio work.",
+        "id": "ev03",
+        "source_url": "https://www.trombone-usa.com/rehak_frank_bio.htm"
+      }
+    ],
+    "key": "frank-rehak",
+    "limitations": "The album's named trombone credit is precise, but the secondary early-band association does not establish all exact dates or solos for Rehak.",
+    "primary_source_url": "https://www.milesdavis.com/albums/miles-ahead/",
+    "summary": "Jazz trombonist Frank Rehak played in Gil Evans's studio orchestra on Miles Davis's 1957 Miles Ahead and worked in Gene Krupa's and Woody Herman's bands.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Miles Davis estate names Rehak in the original Gil Evans personnel, corroborated by period session documentation."
+  },
   "frank-ricotti": {
     "evidence": [
       {
@@ -6759,6 +6809,31 @@
     "summary": "Saxophonist and multi-reed player Frank Tiberi took the Woody Herman Orchestra's lead tenor chair in 1969 and became leader of the Herd in 1987.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Preserves an enduring big-band saxophone and leadership tradition."
+  },
+  "frank-tusa": {
+    "evidence": [
+      {
+        "claim": "ECM credits Frank Tusa on double bass with pianist Richard Beirach and drummer Jeff Williams on Eon, recorded in New York in November 1974.",
+        "id": "ev01",
+        "source_url": "https://ecmrecords.com/product/eon-richard-beirach-frank-tusa-jeff-williams/"
+      },
+      {
+        "claim": "ECM gives the release date of Eon as June 1, 1975, catalog number ECM 1054.",
+        "id": "ev02",
+        "source_url": "https://ecmrecords.com/product/eon-richard-beirach-frank-tusa-jeff-williams/"
+      },
+      {
+        "claim": "ECM lists Seeing You as a track co-composed by Frank Tusa and Richard Beirach for Eon.",
+        "id": "ev03",
+        "source_url": "https://ecmrecords.com/product/eon-richard-beirach-frank-tusa-jeff-williams/"
+      }
+    ],
+    "key": "frank-tusa",
+    "limitations": "These facts concern the ECM Eon trio album, not every sideman appearance on the musician's broader self-maintained discography.",
+    "primary_source_url": "https://ecmrecords.com/product/eon-richard-beirach-frank-tusa-jeff-williams/",
+    "summary": "Jazz bassist Frank Tusa recorded Richard Beirach's Eon for ECM in November 1974, contributing bass and co-writing Seeing You on the album.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original ECM label states exact trio instruments, location, date and composition credits on a landmark modern-jazz session."
   },
   "frank-vignola": {
     "evidence": [
@@ -7309,6 +7384,36 @@
     "summary": "Alto saxophonist Gary Bartz played with McCoy Tyner and Miles Davis, then formed Ntu Troop in 1970 to blend free jazz with soul, funk and African music.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Bartz built a bridge from post-bop and modal groups to politically alert jazz-funk."
+  },
+  "gary-boyle": {
+    "evidence": [
+      {
+        "claim": "Cherry Red's Isotope reissue states that guitarist Gary Boyle formed Isotope in 1973 with Jeff Clyne, Brian Miller and Nigel Morris.",
+        "id": "ev01",
+        "source_url": "https://www.cherryred.co.uk/genres/jazz/isotope-upward-curve-the-recordings-1973-1976-3cd-box-set"
+      },
+      {
+        "claim": "The label dates Isotope's self-titled jazz-rock debut album to 1974.",
+        "id": "ev02",
+        "source_url": "https://www.cherryred.co.uk/genres/jazz/isotope-upward-curve-the-recordings-1973-1976-3cd-box-set"
+      },
+      {
+        "claim": "Cherry Red describes Boyle's first solo album The Dancer as released in 1978 and credits colleagues Robin Lumley, Rod Argent, Dave MacRae, Morris Pert and Simon Phillips.",
+        "id": "ev03",
+        "source_url": "https://www.cherryred.co.uk/label/esoteric/the-dancer"
+      },
+      {
+        "claim": "Cherry Red's Light Again collection identifies Electric Glide as Boyle's follow-up to The Dancer with guest guitarist Gary Moore.",
+        "id": "ev04",
+        "source_url": "https://www.cherryred.co.uk/format/cd/gary-boyle-light-again-the-recordings-1977-1978-2cd-edition"
+      }
+    ],
+    "key": "gary-boyle",
+    "limitations": "Release descriptions refer to original album chronology; reissue product release dates are not treated as dates of original 1970s recording sessions.",
+    "primary_source_url": "https://www.cherryred.co.uk/genres/jazz/isotope-upward-curve-the-recordings-1973-1976-3cd-box-set",
+    "summary": "Guitarist Gary Boyle formed British jazz-rock group Isotope in 1973 and later recorded The Dancer and Electric Glide with prominent fusion musicians.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An original catalog-reissue label documents the founding musicians, 1974 debut and personnel of Boyle's subsequent jazz-rock recordings."
   },
   "gary-crosby": {
     "evidence": [
@@ -9349,6 +9454,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Preserves British bebop and jazz education lineage."
   },
+  "ian-underwood": {
+    "evidence": [
+      {
+        "claim": "The Zappa estate's Carnegie Hall live recording identifies Ian Underwood as the band's keyboards and alto saxophone player on October 11, 1971.",
+        "id": "ev01",
+        "source_url": "https://www.zappa.com/releases-archive/carnegie-hall/"
+      },
+      {
+        "claim": "The same official release credits Aynsley Dunbar on drums and Jim Pons on bass alongside Ian Underwood at Carnegie Hall.",
+        "id": "ev02",
+        "source_url": "https://www.zappa.com/releases-archive/carnegie-hall/"
+      },
+      {
+        "claim": "The official Hot Rats Sessions archive recognizes Ian Underwood's multi-instrumental collaboration on the 1969 Frank Zappa recording project.",
+        "id": "ev03",
+        "source_url": "https://www.zappa.com/releases-archive/hot-ratssessions/"
+      }
+    ],
+    "key": "ian-underwood",
+    "limitations": "This documents the 1971 live lineup and Hot Rats archive; it does not claim that Underwood played saxophone on every Zappa recording.",
+    "primary_source_url": "https://www.zappa.com/releases-archive/carnegie-hall/",
+    "summary": "Multi-instrumentalist Ian Underwood played keyboards and alto saxophone with Frank Zappa's Mothers, including their October 1971 Carnegie Hall concert.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Zappa's own releases contain firsthand, date-specific concert personnel and credit Underwood's essential multi-instrumental contribution."
+  },
   "imelda-may": {
     "evidence": [
       {
@@ -9967,6 +10097,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Connects jazz vocal repertory to small-group trumpeter collaborations."
   },
+  "jeff-clyne": {
+    "evidence": [
+      {
+        "claim": "Cherry Red identifies Jeff Clyne as the bassist in the original 1973 Isotope quartet founded by guitarist Gary Boyle.",
+        "id": "ev01",
+        "source_url": "https://www.cherryred.co.uk/genres/jazz/isotope-upward-curve-the-recordings-1973-1976-3cd-box-set"
+      },
+      {
+        "claim": "The Isotope reissue notes that Jeff Clyne played previously in Ian Carr's Nucleus before working with Gary Boyle.",
+        "id": "ev02",
+        "source_url": "https://www.cherryred.co.uk/genres/jazz/isotope-upward-curve-the-recordings-1973-1976-3cd-box-set"
+      },
+      {
+        "claim": "Cherry Red dates Isotope's self-titled debut to 1974, a follow-up to the quartet's 1973 founding.",
+        "id": "ev03",
+        "source_url": "https://www.cherryred.co.uk/genres/jazz/isotope-upward-curve-the-recordings-1973-1976-3cd-box-set"
+      }
+    ],
+    "key": "jeff-clyne",
+    "limitations": "An original-lineup credit does not prove Clyne played on every later Isotope album or concert.",
+    "primary_source_url": "https://www.cherryred.co.uk/genres/jazz/isotope-upward-curve-the-recordings-1973-1976-3cd-box-set",
+    "summary": "British bassist Jeff Clyne played with Ian Carr's Nucleus before co-founding Gary Boyle's Isotope in 1973, blending electric jazz and rock.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The band's reissue label identifies exact instrument and original lineup, providing a concrete fusion connection."
+  },
   "jeff-parker": {
     "evidence": [
       {
@@ -10352,6 +10507,56 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His original artist biography provides a named leader album and collaborators; university records document 40-year teaching and bandleading tenure."
   },
+  "john-eaton": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Institution Archives lists John Eaton IV - Jazz Improvisation as a recorded presentation on April 21, 1985.",
+        "id": "ev01",
+        "source_url": "https://siarchives.si.edu/collections/siris_arc_217154"
+      },
+      {
+        "claim": "The Smithsonian inventory identifies John Eaton concerts on the music of George Gershwin dated April 1, 1984, and Cole Porter dated January 22, 1984.",
+        "id": "ev02",
+        "source_url": "https://siarchives.si.edu/collections/siris_arc_217154"
+      },
+      {
+        "claim": "Smithsonian's original program record describes pianist John Eaton comparing pre-1960 music with more recent music in Old and New.",
+        "id": "ev03",
+        "source_url": "https://www.si.edu/object/archives/components/sova-sia-faru0589-refidd1e4168"
+      }
+    ],
+    "key": "john-eaton",
+    "limitations": "Archival inventory is evidence that performances were preserved, not proof of a commercial record release or of every tune played.",
+    "primary_source_url": "https://siarchives.si.edu/collections/siris_arc_217154",
+    "summary": "Jazz pianist John Eaton demonstrated American songbook improvisation in Smithsonian concerts, including a 1985 program devoted to jazz technique.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Smithsonian's original recording archive identifies individual educational performances and their actual dates."
+  },
+  "john-guerin": {
+    "evidence": [
+      {
+        "claim": "Joni Mitchell's official Court and Spark album notes list John Guerin on drums and percussion with Max Bennett, Joe Sample and Tom Scott among the credited performers.",
+        "id": "ev01",
+        "source_url": "https://jonimitchell.com/music/album.cfm?id=7"
+      },
+      {
+        "claim": "Mitchell's official Hejira credits John Guerin on drums for Furry Sings the Blues, Song for Sharon and Refuge of the Roads.",
+        "id": "ev02",
+        "source_url": "https://jonimitchell.com/music/album.cfm?id=10&o=1"
+      },
+      {
+        "claim": "The Hejira credits identify Guerin, Max Bennett and Victor Feldman as musicians appearing courtesy of Caribou Records and the L.A. Express.",
+        "id": "ev03",
+        "source_url": "https://jonimitchell.com/music/album.cfm?id=10&o=1"
+      }
+    ],
+    "key": "john-guerin",
+    "limitations": "Credit is limited to cited Joni Mitchell albums and named tracks, not every recording produced by the L.A. Express.",
+    "primary_source_url": "https://jonimitchell.com/music/album.cfm?id=7",
+    "summary": "Session drummer John Guerin played on Joni Mitchell's 1974 Court and Spark and 1976 Hejira, alongside jazz players from the L.A. Express.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The composer's personal album catalog preserves specific instrument credits and avoids ungrounded session generalizations."
+  },
   "john-hollenbeck": {
     "evidence": [
       {
@@ -10651,6 +10856,31 @@
     "summary": "American jazz singer Judy Niemack developed adventurous vocal improvisation and recorded Straight Up with a varied acoustic jazz ensemble.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents concrete genre, performance and recording contributions to a diverse jazz catalog."
+  },
+  "juju": {
+    "evidence": [
+      {
+        "claim": "Blue Note Tokyo's original artist page lists JUJU as vocalist and includes her Delicious jazz-album series and the JUJU Big Band Jazz Live release.",
+        "id": "ev01",
+        "source_url": "https://www.bluenote.co.jp/jp/artists/juju/"
+      },
+      {
+        "claim": "The venue announced JUJU Jazz Live 2026 performances for November 12, 13, 14, 16, 17 and 18, 2026, with jazz quintet personnel specified.",
+        "id": "ev02",
+        "source_url": "https://www.bluenote.co.jp/jp/artists/juju/"
+      },
+      {
+        "claim": "Blue Note Tokyo's archived concert history lists JUJU jazz live runs in 2015, 2016 and 2017, accompanied in those seasons by Takuya Kuroda Quintet.",
+        "id": "ev03",
+        "source_url": "https://www.bluenote.co.jp/jp/reports/juju/"
+      }
+    ],
+    "key": "juju",
+    "limitations": "November 2026 listings are scheduled dates and may not all have taken place at research time; neither every pop release nor future performances are counted as confirmed jazz concerts.",
+    "primary_source_url": "https://www.bluenote.co.jp/jp/artists/juju/",
+    "summary": "Japanese vocalist JUJU recorded the Delicious jazz-album series and presented annual live jazz shows at Blue Note Tokyo, including a 2026 residency.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Blue Note Tokyo's original artist and concert listings establish JUJU's jazz repertoire and dates without assigning a jazz label to all her pop recordings."
   },
   "jukka-linkola": {
     "evidence": [
@@ -11563,6 +11793,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A free improvising vocalist whose tap rhythm and piano reshape small-ensemble performance."
   },
+  "major-holley": {
+    "evidence": [
+      {
+        "claim": "Jazz historian Scott Yanow's Major Holley biography describes his unison voice-and-bowed-bass solo technique as distinct from Slam Stewart's octave-above singing.",
+        "id": "ev01",
+        "source_url": "https://www.allmusic.com/artist/p8767/biography"
+      },
+      {
+        "claim": "The Los Angeles Times contemporary review of Shut Yo' Mouth identifies Slam Stewart and Major Holley as bowed bass-and-vocal duet partners, backed by Dick Hyman and Oliver Jackson.",
+        "id": "ev02",
+        "source_url": "https://www.latimes.com/archives/la-xpm-1987-11-29-ca-25184-story.html"
+      },
+      {
+        "claim": "The AllMusic biography records Major Holley's Duke Ellington band appearance in 1964 and teaching at Berklee from 1967 to 1970.",
+        "id": "ev03",
+        "source_url": "https://www.allmusic.com/artist/p8767/biography"
+      }
+    ],
+    "key": "major-holley",
+    "limitations": "Major Holley and Slam Stewart sang at different intervals above their bowed instruments; their styles are not assumed identical, and no exact original take date is claimed.",
+    "primary_source_url": "https://www.allmusic.com/artist/p8767/biography",
+    "summary": "Jazz bassist Major Holley developed a bowed-bass singing style and recorded the duet Close Your Eyes (Shut Yo' Mouth) with fellow bassist Slam Stewart.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A specialist jazz historian documents a specific bass-vocal technique while the Smithsonian catalogs a recording by the actual duo."
+  },
   "malcolm-arnold": {
     "evidence": [
       {
@@ -12127,6 +12382,31 @@
     "summary": "Jazz organist Marlowe Morris appeared in Jammin' the Blues in 1944 and later led organ trios. He recorded with tenor saxophonist Buddy Tate and trombonist Matthew Gee.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "An early organ specialist appears in archival organ discographies and a filmed jazz performance."
+  },
+  "marshal-royal": {
+    "evidence": [
+      {
+        "claim": "Rutgers' Institute of Jazz Studies Count Basie family papers name Marshal Royal as the orchestra's deputy music director, alto saxophonist and clarinetist in mid-1952.",
+        "id": "ev01",
+        "source_url": "https://archives.libraries.rutgers.edu/repositories/6/resources/523"
+      },
+      {
+        "claim": "The Rutgers finding aid documents Royal in Basie's reed section alongside Paul Quinichette, Eddie Lockjaw Davis, Ernie Wilkins and Charlie Fowlkes.",
+        "id": "ev02",
+        "source_url": "https://archives.libraries.rutgers.edu/repositories/6/resources/523"
+      },
+      {
+        "claim": "The Royal Albert Hall archival authority record identifies Marshal Royal as a clarinetist and lead alto saxophonist who remained with the Basie band until 1970.",
+        "id": "ev03",
+        "source_url": "https://catalogue.royalalberthall.com/Record.aspx?id=DS%2FUK%2F9859&src=CalmView.Persons"
+      }
+    ],
+    "key": "marshal-royal",
+    "limitations": "The archive documents a 1952 orchestra role and duties, not every later Basie session or Royal solo credit.",
+    "primary_source_url": "https://archives.libraries.rutgers.edu/repositories/6/resources/523",
+    "summary": "Clarinetist and lead alto saxophonist Marshal Royal became Count Basie's deputy musical director in the 1952 big-band lineup, shaping its reed sound.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Institute of Jazz Studies archival finding aid specifically preserves Royal's position in Basie's reconstructed ensemble."
   },
   "marshall-brown": {
     "evidence": [
@@ -12968,6 +13248,31 @@
     "summary": "Bassist Mick Hutton played on Martin Speake's Change of Heart with Bobo Stenson and Paul Motian, recorded at Rainbow Studio in Oslo in April 2002.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His acoustic playing anchors the spacious modern jazz quartet."
+  },
+  "mickey-tucker": {
+    "evidence": [
+      {
+        "claim": "Indiana University's Mickey Tucker collection describes him as an American jazz pianist and organist with manuscripts and recordings preserved in its African American Music and Culture archive.",
+        "id": "ev01",
+        "source_url": "https://archives.iu.edu/html/VAE3147.html"
+      },
+      {
+        "claim": "The Indiana archive lists a June 20, 1985 Mickey Tucker Quartet video performance at Newark Museum.",
+        "id": "ev02",
+        "source_url": "https://archives.iu.edu/html/VAE3147.html"
+      },
+      {
+        "claim": "The Indiana University finding aid lists a 1994 Mickey Tucker concert recording from Montsalvat Jazz in Melbourne, Australia.",
+        "id": "ev03",
+        "source_url": "https://archives.iu.edu/html/VAE3147.html"
+      }
+    ],
+    "key": "mickey-tucker",
+    "limitations": "Archive entries establish that recordings, programs and compositions exist, not automatic endorsement of a particular performance's quality.",
+    "primary_source_url": "https://archives.iu.edu/html/VAE3147.html",
+    "summary": "Pianist and organist Mickey Tucker's career is preserved in Indiana University's archive of scores, performance recordings, and his Australian jazz concerts.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original creator papers and performance reels provide a rare primary historical documentation trail for an active jazz pianist."
   },
   "mike-barone": {
     "evidence": [
@@ -17815,6 +18120,31 @@
     "summary": "Classical violinist Yehudi Menuhin recorded swing standards with jazz violinist Stephane Grappelli, including Jealousy at Abbey Road in 1973.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "University catalog and original Warner Classics label data identify two individual violinists on dated collaboration sessions."
+  },
+  "yolande-bavan": {
+    "evidence": [
+      {
+        "claim": "University of the Pacific's Holt-Atherton Special Collections preserves a 2012 interview with Yolande Bavan identifying her as vocalist in The Real Ambassadors at the 1962 Monterey Jazz Festival.",
+        "id": "ev01",
+        "source_url": "https://scholarlycommons.pacific.edu/trai/3/"
+      },
+      {
+        "claim": "The University of the Pacific history describes The Real Ambassadors as a Dave and Iola Brubeck jazz musical recorded in 1961 and performed live once.",
+        "id": "ev02",
+        "source_url": "https://scholarlycommons.pacific.edu/trai/"
+      },
+      {
+        "claim": "A contemporary July 1962 DownBeat interview reported Yolande Bavan joining Dave Lambert and Jon Hendricks after Annie Ross left the vocal group.",
+        "id": "ev03",
+        "source_url": "https://www.worldradiohistory.com/Archive-All-Music/DownBeat/60s/62/Downbeat-1962-07-05.pdf"
+      }
+    ],
+    "key": "yolande-bavan",
+    "limitations": "Original archival descriptions document the Monterey performance; later retrospective dates of every Lambert, Hendricks and Bavan engagement are not inferred.",
+    "primary_source_url": "https://scholarlycommons.pacific.edu/trai/3/",
+    "summary": "Ceylon-born jazz singer Yolande Bavan succeeded Annie Ross in the Lambert and Hendricks vocal trio and sang in The Real Ambassadors at Monterey in 1962.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The University of the Pacific holds first-person interviews documenting the 1962 Brubeck stage production, while period reporting confirms her group transition."
   },
   "younha": {
     "evidence": [
