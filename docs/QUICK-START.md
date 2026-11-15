@@ -47,7 +47,7 @@ On **v0.8.0**, note the problematic station, **stop playback**, press **I** to o
 ## Three things to know before trying the preview
 
 - **Hardware:** designed for the **M5Stack Cardputer ADV**. Compatibility with earlier Cardputer models is not established.
-- **Preview status:** the owner reports testing on a physical Cardputer ADV, and the software passed the release gates. **Sustained v0.8.0 speaker/audio reliability is not documented as fully resolved**; some stations can buffer or become unavailable. [Audio issue #1](https://github.com/lavalava45/cardputer-pocket-jazz-radio/issues/1) remains open. See [current status](PROJECT-STATUS.md).
+- **Preview status:** software build and host checks passed. **Sustained audio reliability remains an open issue**; some stations can buffer or become unavailable. [Audio issue #1](https://github.com/lavalava45/cardputer-pocket-jazz-radio/issues/1) remains open. See [current status](PROJECT-STATUS.md).
 - **Safe rollback:** keep your previous working app-only BIN (for the developer, v0.7z13), and select it again through M5Launcher 3 if the new version is worse. Do not use an 8 MB merged emulator image, reflash M5Launcher, change partitions or erase NVS.
 
 For questions about Wi-Fi, timezones, file locations or errors, see the [full installation instructions](INSTALL.md). For the story behind the project, see [Why Pocket Jazz?](WHY-POCKET-JAZZ.md), or take the [feature tour](FEATURE-TOUR.md).

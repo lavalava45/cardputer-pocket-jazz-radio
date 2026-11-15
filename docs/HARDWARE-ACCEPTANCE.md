@@ -1,6 +1,6 @@
-# Hardware acceptance — owner test acknowledged; detailed regression checklist remains open
+# Hardware acceptance — detailed regression checklist
 
-**2026-11-15 update:** The owner confirmed Pocket Jazz Radio has been tested on a physical Cardputer ADV. This document is a **remaining reproducible test checklist**, not a statement that no device test took place. The exact v0.8.0 scenario-by-scenario results and sustained stability were not recorded in this log. Do not mark every item PASS by inference. [Current project status](PROJECT-STATUS.md).
+**Scope:** This is a **reproducible regression checklist** for the Cardputer ADV, not an endorsement of v0.8.0 hardware reliability. Long-running audio and input behavior remain open issues. Mark PASS only for actual scenario-specific results recorded here. [Current project status](PROJECT-STATUS.md).
 
 Software gates cannot verify physical audio. Use only the new app-only BIN
 through an existing M5Launcher 3. Keep the actually tested v0.7z13 app-only BIN for rollback. Never

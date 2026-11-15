@@ -20,7 +20,7 @@ The first public software preview to ship the expanded offline **Jazz Journey** 
 
 The v0.8.0 release pipeline compiles the exact ESP32-S3 application and three additional compile-only hardware-code probes, executes host Python and C++/CTest suites, hashes archived source and assets, and validates ZIP CRC. Individual counts and SHA-256 are frozen in `SHA256-MANIFEST.txt` and `TEST-REPORT.txt` / `HOST-CTEST-REPORT.txt` in the complete local release provenance and are also summarized in this GitHub release description.
 
-**Hardware testing updated after release:** the owner has confirmed real Cardputer ADV testing. The exact scenarios and long-duration HTTPS playback/keyboard/SD stability of v0.8.0 have not been documented in a reproducible checklist. Earlier BUFFERING and unresponsive-controls cases remain tracked in GitHub issues #1 and #2 until they are shown resolved; screenshots from v0.7z13 are still correctly labelled emulator captures. Downloading this app-only release does not automatically flash a device, change the launcher/partitions or overwrite personal SD files. See [current status](PROJECT-STATUS.md).
+**Preview limitations:** Earlier BUFFERING and unresponsive-controls cases remain tracked in GitHub issues #1 and #2; this release is not advertised as a fix for them. A complete long-duration audio/keyboard/SD acceptance report is not available; screenshots from v0.7z13 are still correctly labelled emulator captures. Downloading this app-only release does not automatically flash a device, change the launcher/partitions or overwrite personal SD files. See [current status](PROJECT-STATUS.md).
 
 ## Research transparency
 

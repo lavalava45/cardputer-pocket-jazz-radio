@@ -1,6 +1,6 @@
 # Feature Tour
 
-**Status correction (15 November 2026):** Owner-confirmed Cardputer ADV hardware testing supersedes previous claims that no physical check occurred. Exact v0.8.0 long-run stability is not documented; see [project status](PROJECT-STATUS.md). Photos below are **older v0.7z13 emulator captures**, not new hardware photographs.
+**Preview scope:** This tour describes implemented features, not confirmed long-run audio or keyboard reliability; see [project status](PROJECT-STATUS.md). Photos below are **older v0.7z13 emulator captures**, not new hardware photographs.
 
 ## A pocket-sized radio with room for curiosity
 
