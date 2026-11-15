@@ -49,7 +49,7 @@ It is an **independent, open-source project** designed specifically for the Card
 
 ## Real screens, from real firmware in an emulator
 
-The frames below come directly from the **240 × 135 LCD of the v0.7z13 firmware running in Velxio**. The images are deliberately kept **compact (360 px wide)** instead of being stretched across the page. They are not drawings or photographs of the physical Cardputer. The emulator had no personal SD library or Wi-Fi connection, so some screens show offline or empty states.
+The frames below come directly from the **240 × 135 LCD of the v0.7z13 firmware running in [Velxio](https://velxio.dev/example/cardputer-adv-m5-display)**. The images are deliberately kept **compact (360 px wide)** instead of being stretched across the page. They are not drawings or photographs of the physical Cardputer. The emulator had no personal SD library or Wi-Fi connection, so some screens show offline or empty states.
 
 <table>
 <tr>
@@ -130,14 +130,14 @@ For the shortest installation, follow the **[three-step quick start](docs/QUICK-
 
 When a broadcaster stalls or `BUFFERING` recurs, remember the station and let playback stop before recording diagnostics. On **v0.8.0**, press **I → R** (from any Diagnostics page) after **STOP**. Pocket Jazz saves a new `/PocketJazz/incident-*.tsv` containing the station name, recent ICY metadata, Wi-Fi/HTTPS and audio measurements, the last 16 runtime events, and heap/source checkpoints. **No background SD writes** occur during playback. Check for `END complete=1`; incomplete files cannot be trusted as full incident records. The SD write itself still needs real Cardputer testing.
 
-This is a **reporting improvement**, not a fix for upstream stalls. Keep the v0.7z15 or your earlier physically tested app-only BIN on the same card for rollback. Photos are useful for visual UI bugs, but numerical debugging should not require screenshots.
+This is a **reporting improvement**, not a fix for upstream stalls. Keep the v0.7z15 or your earlier known-working app-only BIN on the same card for rollback. Photos are useful for visual UI bugs, but numerical debugging should not require screenshots.
 
 
 ## An evolving preview
 
-**Current preview: v0.8.0.** The old v0.7z16 diagnostics improvements are preserved, while the wider Jazz Journey and the expanded offline encyclopedia are new. The image gallery shows actual **v0.7z13 emulator captures**, not the new v0.8.0 running on a physical Cardputer. The old v0.7z13 device sound/keyboard observations do not count as v0.8.0 acceptance. Keep your working BIN as a fallback, and see the [v0.8.0 release notes](docs/RELEASE-v0.8.0.md).
+**Current preview: v0.8.0.** The old v0.7z16 diagnostics improvements are preserved, while the wider Jazz Journey and the expanded offline encyclopedia are new. The image gallery shows actual **v0.7z13 emulator captures**, not the new v0.8.0 running on a physical Cardputer. Known BUFFERING and intermittent input issues are tracked in GitHub issues #1 and #2. Keep your working BIN as a fallback, and see the [v0.8.0 release notes](docs/RELEASE-v0.8.0.md).
 
-The emulator provides evidence of **display output and navigation**, not of physical Wi-Fi, certificate handling, SD-card timing, or speaker performance. Read [image provenance](docs/EMULATOR.md), follow the [audio reliability issue](https://github.com/lavalava45/cardputer-pocket-jazz-radio/issues/1), or inspect the [changelog](CHANGELOG.md).
+The [Velxio Cardputer ADV emulator](https://velxio.dev/example/cardputer-adv-m5-display) was used to inspect earlier display layouts and navigation; the gallery is labelled v0.7z13 rather than v0.8.0. Read [image provenance](docs/EMULATOR.md), follow the [audio reliability issue](https://github.com/lavalava45/cardputer-pocket-jazz-radio/issues/1), or inspect the [changelog](CHANGELOG.md).
 
 For makers: contributions, verified stream suggestions and reproducible fixes are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) and [development notes](docs/DEVELOPMENT.md). Firmware licensing is GPL-3.0-or-later with bundled notices; catalog tools and metadata are MIT. This independent project is not affiliated with M5Stack, Spotify or any broadcaster.
 

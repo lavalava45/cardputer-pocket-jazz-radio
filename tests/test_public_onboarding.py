@@ -32,8 +32,8 @@ class OnboardingDocs(unittest.TestCase):
         self.assertIn("Never overwrite your own file", contents)
         self.assertIn("do *not* need", contents)
         self.assertIn("stop radio/offline playback", contents)
-        self.assertIn("software build and host checks passed", contents)
-        self.assertIn("Sustained audio reliability remains an open issue", contents)
+        self.assertIn("some stations can buffer or become unavailable", contents)
+        self.assertIn("the project tracks these cases openly", contents)
 
     def test_story_is_cautious_and_accessible(self):
         contents = STORY.read_text(encoding="utf-8")
@@ -44,7 +44,7 @@ class OnboardingDocs(unittest.TestCase):
             "Mood Tuner",
             "BUFFERING",
             "v0.7z16",
-            "not yet confirmed",
+            "BUFFERING remains tracked as an open issue",
             "Suggested title",
             "actual v0.8.0 publication",
         ):
