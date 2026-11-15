@@ -19,3 +19,8 @@ firmware/** -text
 # The authentic upstream M5Cardputer keyboard mapping fixture is verbatim
 # CRLF; preserve its known SHA-256 without treating CR bytes as whitespace.
 firmware/tests/fixtures/M5Cardputer-1.1.1-Keyboard.h -text whitespace=cr-at-eol
+
+# The SD TSV/IDX pair has a byte-level CRC, and every editorial source file
+# is SHA-256 pinned by editorial/jazz-notes/manifest.json. Never perform
+# CRLF conversion on checkout, including on Windows (core.autocrlf=true).
+editorial/jazz-notes/** -text
