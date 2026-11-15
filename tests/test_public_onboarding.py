@@ -44,7 +44,7 @@ class OnboardingDocs(unittest.TestCase):
             "Mood Tuner",
             "BUFFERING",
             "v0.7z16",
-            "BUFFERING remains tracked as an open issue",
+            "intermittent input responsiveness remain tracked as open issues",
             "Suggested title",
             "actual v0.8.0 publication",
         ):
