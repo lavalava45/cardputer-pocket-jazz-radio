@@ -14,8 +14,8 @@ class OnboardingDocs(unittest.TestCase):
         contents = QUICK.read_text(encoding="utf-8")
         steps = re.findall(r"(?m)^([1-9])\. \*\*(Download|Copy|Launch)\*\*", contents)
         self.assertEqual(steps, [("1", "Download"), ("2", "Copy"), ("3", "Launch")])
-        self.assertIn("PocketJazzRadio-v0.7z16-app-only.bin", contents)
-        self.assertIn("releases/download/v0.7z16/", contents)
+        self.assertIn("PocketJazzRadio-v0.8.0-app-only.bin", contents)
+        self.assertIn("releases/download/v0.8.0/", contents)
         self.assertIn("M5Launcher 3 → SD", contents)
         self.assertIn("2.4 GHz Wi-Fi", contents)
 
