@@ -2724,6 +2724,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Lead-brass precision in Kenton's modern big-band sound"
   },
+  "buddy-deppenschmidt": {
+    "evidence": [
+      {
+        "claim": "Concord's reissue notes list Buddy Deppenschmidt in Charlie Byrd's working trio alongside bassist Keter Betts for The Guitar Artistry of Charlie Byrd, recorded in 1960.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/the-guitar-artistry-of-charlie-byrd/"
+      },
+      {
+        "claim": "Concord's Blues Sonata original notes identify drummer Buddy Deppenschmidt and bassist Keter Betts as the rhythm section of the Charlie Byrd Trio.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/blues-sonata/"
+      },
+      {
+        "claim": "Concord also credits Buddy Deppenschmidt among the players for Charlie Byrd's Latin Byrd, recorded in 1962 and 1963.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/latin-byrd-2/"
+      }
+    ],
+    "key": "buddy-deppenschmidt",
+    "limitations": "The same sessions also have additional guest musicians; a trio credit is not assumed to cover every instrument of every arrangement.",
+    "primary_source_url": "https://concord.com/concord-albums/the-guitar-artistry-of-charlie-byrd/",
+    "summary": "Drummer Buddy Deppenschmidt played in Charlie Byrd's jazz trio with bassist Keter Betts on Blues Sonata and the 1960 Guitar Artistry sessions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Riverside jazz album descriptions establish the exact drum chair in Byrd's trio across several contrasting releases."
+  },
   "buddy-morrow": {
     "evidence": [
       {
@@ -6010,6 +6035,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "European trumpet crossing jazz improvisation and electronic rhythms."
   },
+  "ernie-wilkins": {
+    "evidence": [
+      {
+        "claim": "Concord's Count Basie On the Road liner summary identifies Ernie Wilkins among the band's arrangers whose work appears on a 1979 Montreux recording.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/on-the-road/"
+      },
+      {
+        "claim": "Concord's Osie's Oasis reissue credits Ernie Wilkins among the players in Osie Johnson's 1955 Period-label jazz sessions.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/osies-oasis/"
+      },
+      {
+        "claim": "The On the Road release was recorded in Montreux, Switzerland in 1979 with the Count Basie orchestra and compositions by multiple named arrangers.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/on-the-road/"
+      }
+    ],
+    "key": "ernie-wilkins",
+    "limitations": "The 1979 Basie album narrative says Wilkins contributed to its body of arrangements without identifying each track arranged by him; none is inferred.",
+    "primary_source_url": "https://concord.com/concord-albums/on-the-road/",
+    "summary": "Jazz saxophonist and arranger Ernie Wilkins contributed to Count Basie's orchestral repertory and played on Osie Johnson's 1955 Osie's Oasis.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The label's own reissue documentation names Wilkins among Basie's arrangers and as a specifically credited player in a 1955 jazz session."
+  },
   "erwin-lehn": {
     "evidence": [
       {
@@ -7746,6 +7796,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents concrete genre, performance and recording contributions to a diverse jazz catalog."
   },
+  "george-bohanon": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's Boss: Bossa Nova reissue credits George Bohanon on trombone with Kirk Lightsey on piano, Joe Messina on guitar and Cecil McBee on bass.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/george-bohanon-albums/46956-boss-bossa-nova.html"
+      },
+      {
+        "claim": "The original Workshop Jazz Boss: Bossa Nova LP was recorded in Detroit in 1962, as specified by the label's historical reissue notes.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/george-bohanon-albums/46956-boss-bossa-nova.html"
+      },
+      {
+        "claim": "The Boss: Bossa Nova label tracklist credits George Bohanon as composer of El Rio, Conmigo and Simpatica.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/george-bohanon-albums/46956-boss-bossa-nova.html"
+      }
+    ],
+    "key": "george-bohanon",
+    "limitations": "This source supports Bohanon's 1962 Detroit studio quartet, not assumptions about his later Motown and Hollywood session instrumentation.",
+    "primary_source_url": "https://www.freshsoundrecords.com/george-bohanon-albums/46956-boss-bossa-nova.html",
+    "summary": "Detroit trombonist George Bohanon led the 1962 Boss: Bossa Nova session with Kirk Lightsey, Joe Messina and Cecil McBee.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Workshop Jazz LP reissue gives the recording year, personnel and composition credits for a specific early-career jazz quartet."
+  },
   "george-braith": {
     "evidence": [
       {
@@ -9279,6 +9354,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His singular compositions shaped later adventurous jazz."
   },
+  "hermeto-pascoal": {
+    "evidence": [
+      {
+        "claim": "Far Out Recordings' reissue notes state that Hermeto Pascoal's self-titled debut under his own name was recorded at A&R Studios in New York in 1970.",
+        "id": "ev01",
+        "source_url": "https://www.faroutrecordings.com/release/471027-hermeto-pascoal-hermeto?lang=pt"
+      },
+      {
+        "claim": "The original Hermeto album notes credit collaborators including Ron Carter, Hubert Laws, Joe Farrell, Airto Moreira and Flora Purim.",
+        "id": "ev02",
+        "source_url": "https://www.faroutrecordings.com/release/471027-hermeto-pascoal-hermeto?lang=pt"
+      },
+      {
+        "claim": "Far Out lists a 2017 archival release Viajando Com O Som documenting Pascoal's previously unheard 1976 Vice-Versa studio sessions.",
+        "id": "ev03",
+        "source_url": "https://www.faroutrecordings.com/artist/398667-hermeto-pascoal?lang=en_US"
+      }
+    ],
+    "key": "hermeto-pascoal",
+    "limitations": "Far Out's current reissue date (2023) is not treated as the original recording date (1970); recording and reissue dates must remain separate.",
+    "primary_source_url": "https://www.faroutrecordings.com/release/471027-hermeto-pascoal-hermeto?lang=pt",
+    "summary": "Brazilian multi-instrumentalist Hermeto Pascoal recorded his self-titled debut in New York in 1970 with Airto Moreira, Flora Purim and Ron Carter.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The reissuing label's original session research identifies both dated recordings and the unusual instrumentation of Pascoal's early Brazilian jazz."
+  },
   "hilton-jefferson": {
     "evidence": [
       {
@@ -9303,6 +9403,31 @@
     "summary": "Saxophonist Hilton Jefferson appears on 1944 and 1945 Davis-label jazz sides. Smithsonian credits him on Sir Walter Thomas's Dee-Tees and Black Maria's Blues.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The museum's physical shellac-disc catalogue documents wartime collaborations with Walter Thomas and other players."
+  },
+  "hilton-ruiz": {
+    "evidence": [
+      {
+        "claim": "Concord identifies jazz pianist Hilton Ruiz as the leader of Heroes, with Andy Gonzalez on bass, Ignacio Berroa on drums and Giovanni Hidalgo on percussion.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/heroes/"
+      },
+      {
+        "claim": "Concord's original Contemporary Records note credits Ruiz with Chico Freeman and Elvin Jones on the 1977 Beyond the Rain sessions.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/beyond-the-rain/"
+      },
+      {
+        "claim": "Concord credits Hilton Ruiz among the personnel on Mongo Santamaria's Mongo Returns, recorded June 28-29, 1998.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/mongo-returns-2/"
+      }
+    ],
+    "key": "hilton-ruiz",
+    "limitations": "The named credits are from specific recorded albums, not evidence for all alleged collaborations or every track of Ruiz's career.",
+    "primary_source_url": "https://concord.com/concord-albums/heroes/",
+    "summary": "New York jazz pianist Hilton Ruiz played with Chico Freeman and Mongo Santamaria and led the Latin-jazz tribute album Heroes with Andy Gonzalez.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Concord original album descriptions identify Ruiz's own jazz group and distinct dated roles with other leading jazz musicians."
   },
   "hiromi-uehara": {
     "evidence": [
@@ -11468,6 +11593,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Bridges Hong Kong and Canadian experimental music through open piano and voice improvisation."
   },
+  "lennie-tristano": {
+    "evidence": [
+      {
+        "claim": "The National Endowment for the Arts says alto saxophonist Lee Konitz studied under pianist Lennie Tristano beginning in the early 1940s.",
+        "id": "ev01",
+        "source_url": "https://www.arts.gov/honors/jazz/lee-konitz"
+      },
+      {
+        "claim": "The National Endowment for the Arts identifies the 1949 Tristano and Konitz recordings Intuition and Digression as antecedents to later free jazz.",
+        "id": "ev02",
+        "source_url": "https://www.arts.gov/honors/jazz/lee-konitz"
+      },
+      {
+        "claim": "The NEA's oral history with Lee Konitz describes how Tristano taught him to study jazz solos and invent his own music.",
+        "id": "ev03",
+        "source_url": "https://www.arts.gov/honors/jazz/lee-konitz"
+      }
+    ],
+    "key": "lennie-tristano",
+    "limitations": "Descriptions of Intuition and Digression as precursors to 1960s free jazz come from NEA historical interpretation, not a claim that Tristano invented the entire genre.",
+    "primary_source_url": "https://www.arts.gov/honors/jazz/lee-konitz",
+    "summary": "Jazz pianist and teacher Lennie Tristano guided Lee Konitz and recorded the 1949 free-improvisation experiments Intuition and Digression.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The US arts agency preserved Lee Konitz's direct testimony of Tristano's teaching and documented the pioneering 1949 recordings."
+  },
   "leon-thomas": {
     "evidence": [
       {
@@ -13364,6 +13514,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His own estate documents his move from Florida jazz clubs to Dizzy Gillespie and concert teaching."
   },
+  "mike-melvoin": {
+    "evidence": [
+      {
+        "claim": "Concord's In the Pocket notes specify that Mike Melvoin replaced George Duke on the studio set Hot Tracks with Herb Ellis and Ray Brown.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/herb-ellis-the-ray-brown-sextet-in-the-pocket/"
+      },
+      {
+        "claim": "Concord credits Mike Melvoin on piano and keyboards in the collective Ray Brown and Herb Ellis sextet personnel alongside Plas Johnson and Jake Hanna.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/herb-ellis-the-ray-brown-sextet-in-the-pocket/"
+      },
+      {
+        "claim": "Concord lists Mike Melvoin among the pianists for Leroy Vinnegar's jazz quintet album Leroy Walks Again! alongside Victor Feldman.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/leroy-walks-again/"
+      }
+    ],
+    "key": "mike-melvoin",
+    "limitations": "The Ray Brown set combines two albums with different pianists; Melvoin replaced George Duke only for Hot Tracks, not the whole double set.",
+    "primary_source_url": "https://concord.com/concord-albums/herb-ellis-the-ray-brown-sextet-in-the-pocket/",
+    "summary": "Pianist and keyboardist Mike Melvoin recorded with Herb Ellis and Ray Brown on Hot Tracks and appeared on Leroy Vinnegar's Leroy Walks Again!.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two original Concord label descriptions identify a working pianist and differentiate particular instrumental session credits."
+  },
   "mike-nock": {
     "evidence": [
       {
@@ -13880,6 +14055,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Keeps traditional jazz piano and ragtime active in contemporary Scandinavian ensembles."
   },
+  "morten-qvenild": {
+    "evidence": [
+      {
+        "claim": "Morten Qvenild's official project page identifies the piano trio In the Country as Qvenild with bassist Roger Arntzen and drummer Pal Hausken.",
+        "id": "ev01",
+        "source_url": "https://www.mortyq.com/projects"
+      },
+      {
+        "claim": "The musician's discography lists In the Country's This Was the Pace of My Heart on Rune Grammofon in 2005 and Whiteout in 2009.",
+        "id": "ev02",
+        "source_url": "https://www.mortyq.com/discography"
+      },
+      {
+        "claim": "Qvenild's official biography describes his HyPer(sonal) Piano project as extending the grand piano through live electronics and lists Personal Piano in 2016.",
+        "id": "ev03",
+        "source_url": "https://www.mortyq.com/what-we-do"
+      }
+    ],
+    "key": "morten-qvenild",
+    "limitations": "Personal Piano's 2016 nomination is described by the artist, not independently treated as proof of an award win. His varied pop collaborations are not all described as jazz performances.",
+    "primary_source_url": "https://www.mortyq.com/projects",
+    "summary": "Norwegian pianist Morten Qvenild leads In the Country with Roger Arntzen and Pal Hausken and developed a keyboard-electronics project called Personal Piano.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Qvenild's own project descriptions and detailed discography identify named ensembles, original albums and his hybrid acoustic-electronic approach."
+  },
   "motoharu-yoshizawa": {
     "evidence": [
       {
@@ -14265,6 +14465,31 @@
     "summary": "Canadian jazz bassist Neil Swainson worked with trumpeter Woody Shaw and pianist George Shearing. His own 49th Parallel featured Shaw and Joe Henderson.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents Canadian links to American post-bop small groups."
+  },
+  "nick-brignola": {
+    "evidence": [
+      {
+        "claim": "The Fresh Sound reissue of This Is It! identifies Nick Brignola as the original album leader playing baritone and alto saxophones, saxello, flute and bass.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/nick-brignola-albums/56562-this-is-it.html"
+      },
+      {
+        "claim": "The same reissue credits Reese Markewich on piano and flute, Glenn Moore on bass and Dick Berk on drums for the Brignola quartet.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/nick-brignola-albums/56562-this-is-it.html"
+      },
+      {
+        "claim": "Fresh Sound identifies This Is It! as originally released by Nick Brignola on Priam 101 LP and notes Brignola's composition The Mace.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/nick-brignola-albums/56562-this-is-it.html"
+      }
+    ],
+    "key": "nick-brignola",
+    "limitations": "Fresh Sound's notes disagree internally on the original recording year, listing 1967 in the album details but late 1968 in the descriptive history. The biographical summary does not date the recording.",
+    "primary_source_url": "https://www.freshsoundrecords.com/nick-brignola-albums/56562-this-is-it.html",
+    "summary": "Baritone saxophonist Nick Brignola led the quartet recording This Is It!, switching among saxello, alto, baritone, flute and bass on the session.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The restored record's original Priam catalog number and credits document a specific group and Brignola's multiple instruments."
   },
   "nicole-mitchell": {
     "evidence": [
@@ -16877,6 +17102,31 @@
     "summary": "Bandleader Teddy Hill led a successful 1930s swing orchestra and later managed Harlem's Minton's Playhouse, where after-hours jam sessions fostered early bebop.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His nightclub leadership supported the experimental culture of bebop."
+  },
+  "teo-macero": {
+    "evidence": [
+      {
+        "claim": "Miles Davis's official estate site credits Teo Macero as a Columbia staff producer who began working with Davis in 1959.",
+        "id": "ev01",
+        "source_url": "https://www.milesdavis.com/person/teo-macero/"
+      },
+      {
+        "claim": "The Miles Davis estate describes Macero's cutting, looping, mixing and editing of Davis sessions as crucial to the final Columbia albums.",
+        "id": "ev02",
+        "source_url": "https://www.milesdavis.com/person/teo-macero/"
+      },
+      {
+        "claim": "Concord identifies Teo Macero as composer and tenor saxophonist on the Third Stream project Teo, with Mal Waldron and Teddy Charles in the Prestige Jazz Quartet.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/teo/"
+      }
+    ],
+    "key": "teo-macero",
+    "limitations": "The official Miles Davis site describes his broader production period, while the Prestige quartet credits refer to a specific Macero-led album, not a Miles Davis band.",
+    "primary_source_url": "https://www.milesdavis.com/person/teo-macero/",
+    "summary": "Producer and tenor saxophonist Teo Macero shaped Miles Davis's Columbia albums through studio editing and recorded the Third Stream album Teo.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Miles Davis's estate confirms the creative role of Macero's studio edits and Concord identifies his own instrumental work outside record production."
   },
   "terence-blanchard": {
     "evidence": [
