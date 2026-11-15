@@ -1,0 +1,41 @@
+{
+  "catalog_entries": 1498,
+  "claims_individually_attributed": 1820,
+  "files": {
+    "sd/jazz-encyclopedia.idx": {
+      "bytes": 30714,
+      "sha256": "c951022bb48b609d2bcd436089982077aafdd1f3ac1185dffdddfa6100c64ec2"
+    },
+    "sd/jazz-encyclopedia.tsv": {
+      "bytes": 337281,
+      "sha256": "e8006f943453662d906ab837702328dbba152edafe4632705fa1ddd5fc15a896"
+    },
+    "source/JAZZ-ENCYCLOPEDIA-PROVENANCE.md": {
+      "bytes": 4975,
+      "sha256": "a1f45bccd6963157e68699faf6187f3b67bb4e711595571fc61f83a9f00bf20b"
+    },
+    "source/JazzNowPlaying.h": {
+      "bytes": 56709,
+      "sha256": "033b51832e8155e548956514bd170f9d5a261a237bb0654a9e50a91bf5ed9291"
+    },
+    "source/jazz-editorial-dossiers.json": {
+      "bytes": 939424,
+      "sha256": "6054e89140d7836fd1d42da65584b564d39f2a592f01d67fa7784ff09f633a3d"
+    },
+    "source/jazz-researched-context.tsv": {
+      "bytes": 203204,
+      "sha256": "d27889de4766614ccb02635e6efd53224e4dce96aa45b13c5b797d8e28c376f1"
+    }
+  },
+  "immutability": "Existing firmware/ SHA manifest, v0.8.0 assets, and release tag are NOT modified",
+  "individually_source_reviewed": 983,
+  "initial_editorials": 63,
+  "pending_not_source_reviewed": 515,
+  "research_stage_sha256": "4764e96f8fece633a49c859554ff31efaeb622049ad506bd9ff65759000e8971",
+  "researched_extra": 920,
+  "schema": 1,
+  "snapshot": "2026-11-15-wave21-sourced",
+  "source_dossiers": 833,
+  "spark_unchanged": 150,
+  "versioning": "standalone_editorial_data_on_main_no_firmware_build"
+}
