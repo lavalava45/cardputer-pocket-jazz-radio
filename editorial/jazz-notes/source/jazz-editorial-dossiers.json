@@ -165,6 +165,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A swing clarinet specialist who later became a studio mainstay."
   },
+  "abram-wilson": {
+    "evidence": [
+      {
+        "claim": "The musician's family foundation identifies Abram Wilson as a New Orleans-raised jazz trumpeter, composer and educator who died in London on June 9, 2012.",
+        "id": "ev01",
+        "source_url": "https://abramwilson.posthaven.com/pages/the-abram-wilson-foundation"
+      },
+      {
+        "claim": "The foundation documents an unreleased April 2012 Abram Wilson Quartet recording of music from his Philippa project, about pianist Philippa Schuyler.",
+        "id": "ev02",
+        "source_url": "https://abramwilson.posthaven.com/pages/the-abram-wilson-foundation"
+      },
+      {
+        "claim": "Abram Wilson's archived final-projects page describes the Trumpet Kings concert project paying tribute to Freddie Hubbard, Lee Morgan and Woody Shaw.",
+        "id": "ev03",
+        "source_url": "https://abramwilson.posthaven.com/pages/current-projects"
+      }
+    ],
+    "key": "abram-wilson",
+    "limitations": "The family describes an April 2012 live quartet recording and planned posthumous release, not a confirmed commercially issued Philippa album.",
+    "primary_source_url": "https://abramwilson.posthaven.com/pages/the-abram-wilson-foundation",
+    "summary": "New Orleans-raised trumpeter Abram Wilson blended jazz, blues and storytelling. His final Philippa project traced the life of pianist Philippa Schuyler.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Family foundation documents a late jazz-theatre project and an unreleased quartet performance rather than assuming an album was issued."
+  },
   "achim-kaufmann": {
     "evidence": [
       {
@@ -1144,6 +1169,31 @@
     "summary": "Jazz guitarist Anthony Wilson accompanied Diana Krall at Paris's Olympia on Nov. 29-Dec. 2, 2001, on Live in Paris, issued by Verve in 2002.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The precise live session credits distinguish Wilson's guitar performance from the arranging and composition roles of other musicians."
+  },
+  "antoine-roney": {
+    "evidence": [
+      {
+        "claim": "The National Jazz Museum in Harlem identifies Antoine Roney as a Philadelphia-born saxophonist who studied with Jackie McLean at the Hartt School of Music.",
+        "id": "ev01",
+        "source_url": "https://jmih.org/past_event/live-from-harlem-jfa-presents-antoine-roney/"
+      },
+      {
+        "claim": "The museum's performance biography states that Roney worked with Clifford Jordan, Donald Byrd, Rashied Ali, Elvin Jones and Wallace Roney.",
+        "id": "ev02",
+        "source_url": "https://jmih.org/past_event/live-from-harlem-jfa-presents-antoine-roney/"
+      },
+      {
+        "claim": "The same National Jazz Museum event page describes Antoine Roney as a bandleader whose trio often features his son Kojo Roney.",
+        "id": "ev03",
+        "source_url": "https://jmih.org/past_event/live-from-harlem-jfa-presents-antoine-roney/"
+      }
+    ],
+    "key": "antoine-roney",
+    "limitations": "The museum event biography documents collaborations and a trio relationship, not exact recording dates, sessions or album personnel.",
+    "primary_source_url": "https://jmih.org/past_event/live-from-harlem-jfa-presents-antoine-roney/",
+    "summary": "Saxophonist Antoine Roney studied with Jackie McLean and played with Clifford Jordan, Donald Byrd and Elvin Jones. His trio also featured his son Kojo.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The National Jazz Museum in Harlem identifies Roney's studied instrument, historical sideman work and his own family-led trio context."
   },
   "antti-hytti": {
     "evidence": [
@@ -3400,6 +3450,56 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "An underheard guitarist whose pulse supported major swing-era groups."
   },
+  "caro-emerald": {
+    "evidence": [
+      {
+        "claim": "The project's own music catalog dates Deleted Scenes from the Cutting Room Floor to January 29, 2010, and The Shocking Miss Emerald to May 3, 2013.",
+        "id": "ev01",
+        "source_url": "https://www.caroemerald.com/our-music/"
+      },
+      {
+        "claim": "The official Caro Emerald song catalog credits Caroline van der Leeuw as vocalist on That Man and Back It Up, with David Schreurs and Jan van Wieringen as producers.",
+        "id": "ev02",
+        "source_url": "https://www.caroemerald.com/our-songs/"
+      },
+      {
+        "claim": "The official project documentation distinguishes the collectively created Caro Emerald music project from Caroline van der Leeuw's separate Caro solo project.",
+        "id": "ev03",
+        "source_url": "https://www.caroemerald.com/our-songs/"
+      }
+    ],
+    "key": "caro-emerald",
+    "limitations": "The official project says Caro Emerald is a collective creation, not simply Caroline van der Leeuw's solo name; her separate Caro solo project began in 2026. Described as pop-jazz rather than pure acoustic jazz.",
+    "primary_source_url": "https://www.caroemerald.com/our-music/",
+    "summary": "Caro Emerald is a Dutch pop-jazz recording project fronted by Caroline van der Leeuw, combining vintage big-band and Latin sounds with sampled beats.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Official creative-team catalogs confirm a 2010 debut, 2013 follow-up, song performance credits and the project's collective structure."
+  },
+  "carol-welsman": {
+    "evidence": [
+      {
+        "claim": "Carol Welsman's official biography identifies her as a jazz vocalist and pianist with six Canadian Juno Award nominations.",
+        "id": "ev01",
+        "source_url": "https://carolwelsman.com/bio/"
+      },
+      {
+        "claim": "The artist's biography credits her 2020 Latin jazz project Dance with Me with a recorded duet featuring Juan Luis Guerra.",
+        "id": "ev02",
+        "source_url": "https://carolwelsman.com/bio/"
+      },
+      {
+        "claim": "Carol Welsman's official biography describes her 2019 Japanese trio release This is Carol Jazz Beauties.",
+        "id": "ev03",
+        "source_url": "https://carolwelsman.com/bio/"
+      }
+    ],
+    "key": "carol-welsman",
+    "limitations": "Official artist material is promotional and uses historical album-count claims; this card does not assume those totals remain current.",
+    "primary_source_url": "https://carolwelsman.com/bio/",
+    "summary": "Canadian jazz vocalist and pianist Carol Welsman performs multilingual standards and Latin jazz; her 2020 Dance with Me project features Juan Luis Guerra.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Her official discography specifies an album, collaboration and keyboard-vocal performance context."
+  },
   "carolyn-breuer": {
     "evidence": [
       {
@@ -3464,6 +3564,26 @@
     "summary": "Bassist Carson Smith joined the pianoless Gerry Mulligan quartet with Chet Baker in 1952, later playing in small groups led by Russ Freeman and Chico Hamilton.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His bass helped shape the transparent counterpoint of early West Coast cool jazz."
+  },
+  "carsten-daerr": {
+    "evidence": [
+      {
+        "claim": "Carsten Daerr Trio's artist Bandcamp lists its Insomniac Wonderworld recording as released on October 26, 2007, via Traumton Records.",
+        "id": "ev01",
+        "source_url": "https://carstendaerrtrio.bandcamp.com/album/insomniac-wonderworld"
+      },
+      {
+        "claim": "The Carsten Daerr Trio artist discography lists a later Wide Angle album in March 2010 and earlier Bantha Food in September 2005.",
+        "id": "ev02",
+        "source_url": "https://carstendaerrtrio.bandcamp.com/album/insomniac-wonderworld"
+      }
+    ],
+    "key": "carsten-daerr",
+    "limitations": "Album page supports its own dates and artistic description; it does not prove all collaborations listed in third-party biographies.",
+    "primary_source_url": "https://carstendaerrtrio.bandcamp.com/album/insomniac-wonderworld",
+    "summary": "Berlin pianist Carsten Daerr led the Carsten Daerr Trio, whose 2007 Insomniac Wonderworld and 2010 Wide Angle mixed modern jazz with rock energy.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The trio's own issued album dates and track listing document a particular Berlin modern-jazz project."
   },
   "carsten-dahl": {
     "evidence": [
@@ -4829,6 +4949,26 @@
     "summary": "Berlin jazz guitarist Coco Schumann joined the Ghetto Swingers in Theresienstadt in 1943, survived Auschwitz and continued performing jazz after the war.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A remarkable witness to jazz performance under Nazi persecution."
+  },
+  "colin-hodgkinson": {
+    "evidence": [
+      {
+        "claim": "Gearbox Records credits bassist and vocalist Colin Hodgkinson, horns and keyboards player Ron Aspery, and drummer Tony Hicks on Back Door's BBC concert.",
+        "id": "ev01",
+        "source_url": "https://store.gearboxrecords.com/products/back-door"
+      },
+      {
+        "claim": "Gearbox Records states that the Back Door BBC In Concert show was broadcast in July 1973, after the trio recorded its second album in New York.",
+        "id": "ev02",
+        "source_url": "https://store.gearboxrecords.com/products/back-door"
+      }
+    ],
+    "key": "colin-hodgkinson",
+    "limitations": "The reissue credits apply to Back Door's BBC concert and cannot be extrapolated to all later group sessions or unrelated recordings.",
+    "primary_source_url": "https://store.gearboxrecords.com/products/back-door",
+    "summary": "British bassist and vocalist Colin Hodgkinson played in the trio Back Door with reed player Ron Aspery and drummer Tony Hicks, mixing blues and jazz.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Record label reissue documents exact instrumental credits and a broadcast date for a jazz-blues trio beyond catalog-derived genre tags."
   },
   "connee-boswell": {
     "evidence": [
@@ -6955,6 +7095,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "He expanded hard-bop organ with restrained dynamics and tonal color."
   },
+  "freddie-waits": {
+    "evidence": [
+      {
+        "claim": "Blue Note Records' Freddie Waits biography identifies him as a drummer who worked with Sonny Rollins, McCoy Tyner and Cedar Walton in New York.",
+        "id": "ev01",
+        "source_url": "https://www.bluenote.com/artist/freddie-waits/"
+      },
+      {
+        "claim": "Blue Note's artist archive states that Waits played with Max Roach's M'Boom percussion ensemble from the 1970s and appeared on its 1979 Columbia recording.",
+        "id": "ev02",
+        "source_url": "https://www.bluenote.com/artist/freddie-waits/"
+      },
+      {
+        "claim": "The Blue Note biography states that Waits belonged to Billy Taylor's trio and later taught at Rutgers University during the 1980s.",
+        "id": "ev03",
+        "source_url": "https://www.bluenote.com/artist/freddie-waits/"
+      }
+    ],
+    "key": "freddie-waits",
+    "limitations": "The label's artist biography confirms associations, not personnel for every recording by each named bandleader.",
+    "primary_source_url": "https://www.bluenote.com/artist/freddie-waits/",
+    "summary": "Drummer Freddie Waits accompanied Sonny Rollins, McCoy Tyner and Cedar Walton and joined Max Roach's percussion group M'Boom in the 1970s.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Blue Note's musician archive gives concrete ensemble affiliations and places a multi-genre jazz drummer within M'Boom's percussion movement."
+  },
   "freddy-cole": {
     "evidence": [
       {
@@ -7350,6 +7515,26 @@
     "summary": "Arranger-guitarist Gene Gifford joined the Orange Blossoms in 1929 and gave the renamed Casa Loma Orchestra its distinctive early swing charts.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His arrangements helped define pre-Goodman big-band swing."
+  },
+  "gene-ludwig": {
+    "evidence": [
+      {
+        "claim": "International Archives for the Jazz Organ credits the 1964 Organ Out Loud sessions to Gene Ludwig on organ, Jerry Byrd on guitar and Randy Gelispie on drums.",
+        "id": "ev01",
+        "source_url": "https://www.iajo.org/iajo04/usa/ludwig.htm"
+      },
+      {
+        "claim": "The organ archive's discography dates Sonny Stitt's Night Letter session to October 1969 and credits Gene Ludwig on organ alongside Pat Martino and Randy Gelispie.",
+        "id": "ev02",
+        "source_url": "https://www.iajo.org/iajo04/usa/ludwig.htm"
+      }
+    ],
+    "key": "gene-ludwig",
+    "limitations": "International Archives for the Jazz Organ is a specialist compiled discography; its credited sessions are not independent original tape-box confirmations.",
+    "primary_source_url": "https://www.iajo.org/iajo04/usa/ludwig.htm",
+    "summary": "Hammond organist Gene Ludwig recorded Organ Out Loud in 1964 with Jerry Byrd and Randy Gelispie, then joined Sonny Stitt's 1969 Night Letter session.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A specialist jazz-organ discography lists exact players, instruments, albums and recording dates for Ludwig's organ-combo history."
   },
   "gene-perla": {
     "evidence": [
@@ -7843,6 +8028,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Preserves documented jazz recording or instrumental context for this named performer."
   },
+  "gerardo-velez": {
+    "evidence": [
+      {
+        "claim": "Bethel Woods Center for the Arts identifies percussionist Gerardo Velez as a member of Jimi Hendrix's Gypsy Sun and Rainbows ensemble at Woodstock.",
+        "id": "ev01",
+        "source_url": "https://www.bethelwoodscenter.org/news/detail/jimi-hendrix-50-years-of-peace-music"
+      },
+      {
+        "claim": "Spyro Gyra's official Access All Areas credits Gerardo Velez on percussion for performances recorded live in Florida on November 17-19, 1983.",
+        "id": "ev02",
+        "source_url": "https://spyrogyra.com/access-all-areas/"
+      },
+      {
+        "claim": "Spyro Gyra's Access All Areas credits Gerardo Velez and Jorge D'Alto as composers of Latin Streets and lists congas and timbales among Velez's instruments.",
+        "id": "ev03",
+        "source_url": "https://spyrogyra.com/access-all-areas/"
+      }
+    ],
+    "key": "gerardo-velez",
+    "limitations": "Bethel Woods directly corroborates his Woodstock percussion role; the official Spyro Gyra album documents only the specific 1983 live sessions.",
+    "primary_source_url": "https://spyrogyra.com/access-all-areas/",
+    "summary": "Percussionist Gerardo Velez played at Woodstock with Jimi Hendrix in 1969 and later recorded Latin percussion with jazz-fusion group Spyro Gyra.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Artist account and original band album credit separately confirm rock history and a documented 1983 fusion concert with specific instruments."
+  },
   "gerry-hemingway": {
     "evidence": [
       {
@@ -7862,6 +8072,31 @@
     "summary": "Drummer Gerry Hemingway formed BassDrumBone with Ray Anderson and Mark Helias; their trio recorded 'Oahspe' in November 1978 (released 1979).",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Unusual trombone-bass-drums trio focused on collective rhythmic free improvisation"
+  },
+  "gerry-niewood": {
+    "evidence": [
+      {
+        "claim": "Eastman School of Music documents that Gerry Niewood earned a music education bachelor's degree with a saxophone emphasis in 1970.",
+        "id": "ev01",
+        "source_url": "https://www.esm.rochester.edu/news/2009/02/516/"
+      },
+      {
+        "claim": "Eastman's 2009 memorial states Niewood performed with the Chuck Mangione Quartet for almost 14 years and played saxophones, flutes, piccolo and clarinet.",
+        "id": "ev02",
+        "source_url": "https://www.esm.rochester.edu/news/2009/02/516/"
+      },
+      {
+        "claim": "Eastman confirms that Niewood joined a 2007 recreation of Chuck Mangione's 1970 Friends and Love concert with the Rochester Philharmonic.",
+        "id": "ev03",
+        "source_url": "https://www.esm.rochester.edu/news/2009/02/516/"
+      }
+    ],
+    "key": "gerry-niewood",
+    "limitations": "The Eastman memorial concerns career relationships and an actual concert, not a track-by-track discography.",
+    "primary_source_url": "https://www.esm.rochester.edu/news/2009/02/516/",
+    "summary": "Multi-reed jazz player Gerry Niewood spent nearly fourteen years with Chuck Mangione's group and took part in a 2007 Friends and Love reunion concert.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "His own conservatory records the band's long collaboration, reed instruments and reunion performance."
   },
   "giacomo-gates": {
     "evidence": [
@@ -8282,6 +8517,31 @@
     "summary": "American drummer Greg Errico helped build the rhythmic sound of Sly and the Family Stone and later toured in jazz-rock and pop settings.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Adds a documented performer or composer and a specific musical contribution to the catalog."
+  },
+  "greg-gisbert": {
+    "evidence": [
+      {
+        "claim": "University of Colorado Boulder's College of Music lists Gregory Gisbert as a jazz studies trumpet lecturer.",
+        "id": "ev01",
+        "source_url": "https://www.colorado.edu/music/gregory-gisbert"
+      },
+      {
+        "claim": "The university reports that Gisbert was a featured soloist or co-principal in ensembles of Maria Schneider and Roy Hargrove.",
+        "id": "ev02",
+        "source_url": "https://www.colorado.edu/music/gregory-gisbert"
+      },
+      {
+        "claim": "Colorado Music Hall of Fame records the October 29, 2024 induction of jazz trumpeter Greg Gisbert.",
+        "id": "ev03",
+        "source_url": "https://cmhof.org/inductees/greg-gisbert"
+      }
+    ],
+    "key": "greg-gisbert",
+    "limitations": "University biography lists associations, not a full album sessionography or proof of each unlisted live performance.",
+    "primary_source_url": "https://www.colorado.edu/music/gregory-gisbert",
+    "summary": "Jazz trumpeter and educator Greg Gisbert has appeared as a featured soloist in both Maria Schneider and Roy Hargrove ensembles and teaches in Colorado.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A university appointment and documented ensemble roles identify the exact musician and style."
   },
   "gregg-bendian": {
     "evidence": [
@@ -10152,6 +10412,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Brought chamber-like precision and small-group arrangements to swing"
   },
+  "john-marshall": {
+    "evidence": [
+      {
+        "claim": "Soft Machine's official band history states that John Marshall replaced Phil Howard on drums in 1971 after working in Ian Carr's Nucleus.",
+        "id": "ev01",
+        "source_url": "https://softmachine.org/history"
+      },
+      {
+        "claim": "The band's official history links drummer John Marshall and Karl Jenkins to the 1973 Six release and a move toward jazz fusion.",
+        "id": "ev02",
+        "source_url": "https://softmachine.org/history"
+      },
+      {
+        "claim": "Soft Machine's history names John Marshall among the four members who launched Soft Machine Legacy in October 2004.",
+        "id": "ev03",
+        "source_url": "https://softmachine.org/history"
+      }
+    ],
+    "key": "john-marshall",
+    "limitations": "The band chronology documents group membership and release sequence, not a claim Marshall plays on every Soft Machine reissue.",
+    "primary_source_url": "https://softmachine.org/history",
+    "summary": "British drummer John Marshall moved from Ian Carr's Nucleus to Soft Machine in 1971 and helped shape the band's more jazz-fusion-oriented 1973 Six.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Soft Machine's own career chronology separates the 1971 change of drummer from its 1973 album."
+  },
   "john-pisano": {
     "evidence": [
       {
@@ -11628,6 +11913,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A free-jazz pioneer contributed reeds and voice to Italian collective improvisation."
   },
+  "marion-montgomery": {
+    "evidence": [
+      {
+        "claim": "The National Jazz Archive states that singer Marion Montgomery performed with Johnny Dankworth's band in 1965 and met pianist Laurie Holloway.",
+        "id": "ev01",
+        "source_url": "https://nationaljazzarchive.org.uk/explore/interviews/1633517-marion-montgomery-interview-1"
+      },
+      {
+        "claim": "The Jazz Archive biography says Montgomery performed regularly at Ronnie Scott's in the 1970s and toured with pianist Richard Rodney Bennett.",
+        "id": "ev02",
+        "source_url": "https://nationaljazzarchive.org.uk/explore/interviews/1633517-marion-montgomery-interview-1"
+      },
+      {
+        "claim": "The archive hosts a 1988 Marion Montgomery interview conducted by journalist Les Tomkins.",
+        "id": "ev03",
+        "source_url": "https://nationaljazzarchive.org.uk/explore/interviews/1633517-marion-montgomery-interview-1"
+      }
+    ],
+    "key": "marion-montgomery",
+    "limitations": "The archive documents performance venues and career intersections, not the personnel of every club or television appearance.",
+    "primary_source_url": "https://nationaljazzarchive.org.uk/explore/interviews/1633517-marion-montgomery-interview-1",
+    "summary": "American-born jazz singer Marion Montgomery settled in Britain, worked with Johnny Dankworth in 1965 and later performed at Ronnie Scott's and on television.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "National Jazz Archive preserves a first-person interview and explicit jazz performance chronology."
+  },
   "mark-charig": {
     "evidence": [
       {
@@ -12449,6 +12759,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Represents exploratory European jazz vocal practice."
   },
+  "michael-snow": {
+    "evidence": [
+      {
+        "claim": "Art Canada Institute's Snow biography states he supported himself by playing nightly with Mike White Imperial Jazz Band from 1958 to 1962.",
+        "id": "ev01",
+        "source_url": "https://artbooks.artcanada.com/michael-snow/biography"
+      },
+      {
+        "claim": "The Art Canada Institute biography places Michael Snow among the founders of the Canadian Creative Music Collective around 1974.",
+        "id": "ev02",
+        "source_url": "https://artbooks.artcanada.com/michael-snow/biography"
+      },
+      {
+        "claim": "The Music Gallery's own founding history says its creative-music venue was established by CCMC in Toronto in 1976.",
+        "id": "ev03",
+        "source_url": "https://musicgallery.org/about/our-history/"
+      }
+    ],
+    "key": "michael-snow",
+    "limitations": "Art Canada traces CCMC to 1974, while the Music Gallery itself dates its venue founding to 1976; these are separate events, not conflicting dates of a single concert.",
+    "primary_source_url": "https://artbooks.artcanada.com/michael-snow/biography",
+    "summary": "Toronto pianist Michael Snow played with Mike White's Imperial Jazz Band in 1958-62 and helped form free-improvising collective CCMC in the 1970s.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An art-history institute traces Snow's jazz piano career, while a music institution confirms his experimental collective's venue legacy."
+  },
   "michael-weiss": {
     "evidence": [
       {
@@ -12633,6 +12968,31 @@
     "summary": "Bassist Mick Hutton played on Martin Speake's Change of Heart with Bobo Stenson and Paul Motian, recorded at Rainbow Studio in Oslo in April 2002.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His acoustic playing anchors the spacious modern jazz quartet."
+  },
+  "mike-barone": {
+    "evidence": [
+      {
+        "claim": "Trombonist Mike Barone's own biography says he formed a big band in 1964 that played at Donte's jazz club during 1966-69.",
+        "id": "ev01",
+        "source_url": "https://mikebaronemusic.com/bio"
+      },
+      {
+        "claim": "Mike Barone's official biography states that he supplied compositions and arrangements to the Johnny Carson Tonight Show Band from 1968 to 1992.",
+        "id": "ev02",
+        "source_url": "https://mikebaronemusic.com/bio"
+      },
+      {
+        "claim": "The official Mike Barone Big Band personnel page identifies Barone as its leader, composer and arranger.",
+        "id": "ev03",
+        "source_url": "https://mikebaronemusic.com/mike-barone-big-band"
+      }
+    ],
+    "key": "mike-barone",
+    "limitations": "Self-authored career estimates and large arrangement counts are not independent session ledgers; no exact track credits are inferred.",
+    "primary_source_url": "https://mikebaronemusic.com/bio",
+    "summary": "Jazz trombonist and arranger Mike Barone formed a Los Angeles big band in 1964 and wrote extensive arrangements for Johnny Carson's Tonight Show band.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The musician's original professional biography documents Los Angeles jazz orchestration and stage work."
   },
   "mike-block": {
     "evidence": [
@@ -12905,6 +13265,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Finnish large-ensemble composing and free saxophone improvisation."
   },
+  "mildred-bailey": {
+    "evidence": [
+      {
+        "claim": "Smithsonian National Postal Museum's Mildred Bailey biography identifies her as a 1930s jazz and swing vocalist who joined Paul Whiteman's orchestra.",
+        "id": "ev01",
+        "source_url": "https://postalmuseum.si.edu/exhibition/women-on-stamps-part-4-prominent-female-singers/a-swingin-time-mildred-bailey"
+      },
+      {
+        "claim": "The Smithsonian says that Mildred Bailey and vibraphonist Red Norvo, her husband, hosted their own radio show later in her career.",
+        "id": "ev02",
+        "source_url": "https://postalmuseum.si.edu/exhibition/women-on-stamps-part-4-prominent-female-singers/a-swingin-time-mildred-bailey"
+      },
+      {
+        "claim": "The National Postal Museum records that a United States commemorative postage stamp honoring Mildred Bailey was issued on September 17, 1994.",
+        "id": "ev03",
+        "source_url": "https://postalmuseum.si.edu/exhibition/women-on-stamps-part-4-prominent-female-singers/a-swingin-time-mildred-bailey"
+      }
+    ],
+    "key": "mildred-bailey",
+    "limitations": "Museum copy offers a broad career account, not a verified earliest-ever claim about women touring or detailed discographical personnel.",
+    "primary_source_url": "https://postalmuseum.si.edu/exhibition/women-on-stamps-part-4-prominent-female-singers/a-swingin-time-mildred-bailey",
+    "summary": "Swing vocalist Mildred Bailey performed with Paul Whiteman's orchestra and later co-led radio shows with vibraphonist Red Norvo, her husband.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Smithsonian National Postal Museum connects the exact singer, jazz orchestra and radio career."
+  },
   "milton-delugg": {
     "evidence": [
       {
@@ -13074,6 +13459,56 @@
     "summary": "South African trumpeter Mongezi Feza played in the Blue Notes' final 1964 homeland concerts with Chris McGregor and Dudu Pukwana, later issued as Legacy.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The Blue Notes carried South African improvisation into Britain's radical jazz scene."
+  },
+  "monica-zetterlund": {
+    "evidence": [
+      {
+        "claim": "Monica Zetterlund's official heritage site records the donation of her personal jazz-song materials, performance scripts and recordings to Svenskt visarkiv in 2018.",
+        "id": "ev01",
+        "source_url": "https://monicazetterlund.se/donation/"
+      },
+      {
+        "claim": "The Universal Music-owned Waltz For Debby recording lists Monica Zetterlund as vocalist and Bill Evans as co-artist on the 1964 track Come Rain Or Come Shine.",
+        "id": "ev02",
+        "source_url": "https://www.qobuz.com/us-en/album/waltz-for-debby-monica-zetterlund-bill-evans/n1iacthrlo91a"
+      },
+      {
+        "claim": "The Universal Music album credits name Monica Zetterlund and Bill Evans together on the 1964 Waltz for Debby program including Jag Vet En Dejlig Rosa.",
+        "id": "ev03",
+        "source_url": "https://www.qobuz.com/us-en/album/waltz-for-debby-monica-zetterlund-bill-evans/n1iacthrlo91a"
+      }
+    ],
+    "key": "monica-zetterlund",
+    "limitations": "The archive donation article confirms personal recordings and lyrics, whereas the original 1964 Waltz for Debby collaboration is grounded separately in label metadata.",
+    "primary_source_url": "https://monicazetterlund.se/donation/",
+    "summary": "Swedish jazz vocalist Monica Zetterlund sang on the 1964 Waltz for Debby collaboration with Bill Evans's trio and helped popularize jazz sung in Swedish.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An estate archive and record-label track credits document her jazz career beyond generalized descriptions of a television singer."
+  },
+  "monnette-sudler": {
+    "evidence": [
+      {
+        "claim": "The Pew Center for Arts and Heritage memorial identifies Monnette Sudler as an early member of the 1970s Sounds of Liberation jazz collective.",
+        "id": "ev01",
+        "source_url": "https://www.pewcenterarts.org/news/memoriam-monnette-sudler-composer-and-musician"
+      },
+      {
+        "claim": "The Pew Center states that Sudler founded the Philadelphia Guitar Summit in 2009 and continued it until 2019.",
+        "id": "ev02",
+        "source_url": "https://www.pewcenterarts.org/news/memoriam-monnette-sudler-composer-and-musician"
+      },
+      {
+        "claim": "The Pew Center records Sudler as a 2022 Pew Fellow and documents performances with Archie Shepp and Reggie Workman.",
+        "id": "ev03",
+        "source_url": "https://www.pewcenterarts.org/news/memoriam-monnette-sudler-composer-and-musician"
+      }
+    ],
+    "key": "monnette-sudler",
+    "limitations": "The institutional memorial reports band associations and a city music initiative, not precise recording personnel for individual tracks.",
+    "primary_source_url": "https://www.pewcenterarts.org/news/memoriam-monnette-sudler-composer-and-musician",
+    "summary": "Philadelphia jazz guitarist Monnette Sudler belonged to the 1970s Sounds of Liberation collective and later founded the Philadelphia Guitar Summit.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Pew cultural-arts institution provides dates, a documented early free-jazz group and educational outreach."
   },
   "monty-sunshine": {
     "evidence": [
@@ -16028,6 +16463,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Session matrix and original 1965 Fontana issue document a precise transatlantic small-group album."
   },
+  "ted-heath": {
+    "evidence": [
+      {
+        "claim": "The National Portrait Gallery identifies Ted Heath as a trombonist who worked with Jack Hylton, Bert Ambrose and Geraldo before leading his own orchestra.",
+        "id": "ev01",
+        "source_url": "https://www.npg.org.uk/collections/search/person/mp62346/george-edward-ted-heath"
+      },
+      {
+        "claim": "The National Portrait Gallery associates Heath's swing orchestra with London Palladium Sunday Night Swing sessions and the 1946 film London Town.",
+        "id": "ev02",
+        "source_url": "https://www.npg.org.uk/collections/search/person/mp62346/george-edward-ted-heath"
+      },
+      {
+        "claim": "The same National Portrait Gallery biography records 27 consecutive Ted Heath broadcasts on the radio program Top Ten.",
+        "id": "ev03",
+        "source_url": "https://www.npg.org.uk/collections/search/person/mp62346/george-edward-ted-heath"
+      }
+    ],
+    "key": "ted-heath",
+    "limitations": "The gallery's overview describes the band's multi-year activity, not specific personnel or recording credits for each film.",
+    "primary_source_url": "https://www.npg.org.uk/collections/search/person/mp62346/george-edward-ted-heath",
+    "summary": "British trombonist and bandleader Ted Heath led a swing orchestra associated with London Palladium performances and films from 1946 through 1960.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The National Portrait Gallery preserves Heath's professional band history and performance venues."
+  },
   "teddi-king": {
     "evidence": [
       {
@@ -16067,6 +16527,31 @@
     "summary": "American vibraphonist Teddy Charles explored bebop and Third Stream jazz, leading Prestige sessions and working with Charles Mingus.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents specific recordings, ensembles or performance roles and their place in jazz or adjacent genres."
+  },
+  "teddy-edwards": {
+    "evidence": [
+      {
+        "claim": "Concord's Teddy Edwards artist biography says he switched to tenor saxophone while working with Howard McGhee after moving to Los Angeles.",
+        "id": "ev01",
+        "source_url": "https://concord.com/artist/teddy-edwards/"
+      },
+      {
+        "claim": "Concord lists Edwards' Contemporary Records albums Teddy's Ready and a reunion with McGhee titled Together Again! among his 1960-62 recordings.",
+        "id": "ev02",
+        "source_url": "https://concord.com/artist/teddy-edwards/"
+      },
+      {
+        "claim": "Concord identifies Sunset Eyes as an original composition of tenor saxophonist Teddy Edwards.",
+        "id": "ev03",
+        "source_url": "https://concord.com/artist/teddy-edwards/"
+      }
+    ],
+    "key": "teddy-edwards",
+    "limitations": "The record-label biography documents general group work and album titles but not personnel or recording dates for every track.",
+    "primary_source_url": "https://concord.com/artist/teddy-edwards/",
+    "summary": "Los Angeles tenor saxophonist Teddy Edwards worked with Howard McGhee and recorded the Contemporary albums Teddy's Ready and Together Again! in the 1960s.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The label responsible for original Contemporary releases gives identifiable session series and musician associations."
   },
   "teddy-hill": {
     "evidence": [
@@ -16333,6 +16818,31 @@
     "summary": "British jazz singer Tina May studied classical singing at Cardiff and was awarded a jazz education honor in 2003.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents this musician's distinctive role in jazz and related music."
+  },
+  "tom-browne": {
+    "evidence": [
+      {
+        "claim": "Trumpeter Tom Browne's official artist biography identifies him as an early signee to GRP Records after an introduction to producers Dave Grusin and Larry Rosen.",
+        "id": "ev01",
+        "source_url": "https://www.tombrowne.org/bio"
+      },
+      {
+        "claim": "The artist's official bio names Funkin' For Jamaica and Thighs High among his GRP jazz-funk recordings.",
+        "id": "ev02",
+        "source_url": "https://www.tombrowne.org/bio"
+      },
+      {
+        "claim": "Innervision Records' 2020 announcement confirms it signed jazz trumpeter Tom Browne and describes his decades of crossover releases.",
+        "id": "ev03",
+        "source_url": "https://www.innervisionrecords.com/news/2020/7/8/innervision-records-welcomes-legendary-trumpeter-tom-browne"
+      }
+    ],
+    "key": "tom-browne",
+    "limitations": "The artist's general biography mentions numerous projects but not their exact session lineups or original release dates.",
+    "primary_source_url": "https://www.tombrowne.org/bio",
+    "summary": "Trumpeter Tom Browne joined the emerging GRP Records roster and mixed jazz improvisation with funk on hits such as Funkin' for Jamaica and Thighs High.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A first-person artist biography and label release connect Browne's instrument, recorded crossover projects and GRP."
   },
   "tom-gaebel": {
     "evidence": [
@@ -16873,6 +17383,31 @@
     "summary": "Pianist Wade Legge joined Dizzy Gillespie after being heard as a bassist by Milt Jackson; he later recorded with Sonny Rollins and Charles Mingus.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A short-lived but flexible modern-jazz sideman heard on key 1950s small-group recordings."
+  },
+  "wallace-roney": {
+    "evidence": [
+      {
+        "claim": "The official Miles Davis collaborator page identifies Wallace Roney as a trumpet player who performed with Miles at Montreux in 1991.",
+        "id": "ev01",
+        "source_url": "https://www.milesdavis.com/person/wallace-roney-jr/"
+      },
+      {
+        "claim": "The Miles Davis estate states that Wallace Roney played with Art Blakey and the Jazz Messengers and in drummer Tony Williams' band.",
+        "id": "ev02",
+        "source_url": "https://www.milesdavis.com/person/wallace-roney-jr/"
+      },
+      {
+        "claim": "The official Miles Davis concert film page names Wallace Roney among the featured soloists in the July 1991 Quincy Jones Montreux concert.",
+        "id": "ev03",
+        "source_url": "https://www.milesdavis.com/film/miles-davis-in-montreux-1991/"
+      }
+    ],
+    "key": "wallace-roney",
+    "limitations": "The Miles Davis estate identifies the Montreux collaboration but does not justify treating all of Roney's own albums as Miles Davis recordings.",
+    "primary_source_url": "https://www.milesdavis.com/person/wallace-roney-jr/",
+    "summary": "Trumpeter Wallace Roney played with Art Blakey and Tony Williams and appeared alongside Miles Davis at Montreux in 1991 for music arranged by Gil Evans.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Miles Davis estate catalog gives a specific 1991 concert and associates the trumpeter with two major jazz ensembles."
   },
   "walt-weiskopf": {
     "evidence": [
