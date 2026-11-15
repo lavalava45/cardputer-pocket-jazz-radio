@@ -1,80 +1,237 @@
-# Jazz Notes and Jazz Spark — offline guide
+# Jazz Notes: офлайн-мини-энциклопедия и Jazz Spark
 
-## Copy data to SD
+## Финальный охват корпуса для preview v0.8.0 — wave13 (15.11.2026)
 
-The current editable SD corpus includes 1498 performer directory cards and
-175 Jazz Spark cards. The older, immutable v0.7h/v0.7z14 ZIPs still contain
-their original 155 cards; copying an old ZIP does not add new quotations.
-Copy all four data files into **/PocketJazz/** on microSD:
+Все **1 498** карточек находятся в offline TSV/SD-index, но степень исторической проверки различается: **63 оригинальные**, **532 дополнительных с индивидуальной первичной/профильной доказательной базой**, **903 без такой экспертизы**. Всего опубликованы **445 доказательных досье, 897 проверяемых claims, 595 точных Now Playing/Explained, 150 Spark, 24 урока, 36 альбомов**. Wave13 содержит 11 новых биографий (Bruce Barth, Bruce Forman, Barney McAll, Chad Wackerman, Axel Zwingenberger, Candy Dulfer, Dave Stryker, Jacky Terrasson, Holly Cole, Champian Fulton, Greg Abate), по два доказательства. У Holly Cole снята неподтверждённая привязка к составу концерта 2019 года, вместо неё официальная информация об альбоме *Dark Moon* и пианисте Aaron Davis. Исходные 468 wave10 и все последующие исторические SHA защищены. Текущий источник `data/jazz-researched-context.tsv` публиковался как единая транзакция с `data/jazz-editorial-dossiers.json`, TSV/IDX, точными заголовками и тремя новыми wave13 SHA-pins.
 
-- jazz-encyclopedia.tsv — musician directory, including 63 enhanced editorial biographies, plus 36 verified album suggestions. Many other summaries are still short catalog labels.
-- jazz-facts.tsv — 150 editorial historical/theory/listening facts and
-  25 attributed short quotes; no catalog is cached in permanent RAM
-- artist-notes.tsv and artist-notes.idx — legacy MusicBrainz compatibility pair
+Для всех **903** непринятых выполнен сквозной, но **только предварительный** машинный отбор: **748** имеют ссылки-кандидаты, **103** недостаточно информации, **52** неоднозначные идентичности. Полный реестр с объяснениями: `out/editorial-next-20261115/research-final-audit/remaining-903-closeout.json`. Наличие ссылки-кандидата не равно исторической проверке. В этих 903 случаях используются уже существовавшие базовые/автоматические карточки; новые фактические подробности не выдумывались. Поиск всех 1498 и раскрытие личности/источника в интерфейсе остаются доступны; отсутствие 595-ой отдельной подписи для остальных — намеренное правило точного вывода.
 
-The app never downloads these itself; app-only BIN alone has no encyclopedia.
-Preserve 04-my-stations.m3u, clock.txt, liked.txt and personal export logs.
 
-## Controls
+## Актуальное продолжение после wave12 research01 — research02 (15.11.2026)
 
-**U**: type a musician, album, style or topic; Enter searches. In the resulting
-list **W/S** (or A/D) moves among ALL matches, three shown per SD page.
-Enter opens the highlighted card. W/S turns biography pages. Enter/Del
-returns to results, Del again switches to query editing, Tab exits.
+После уже закрытых wave11 и wave12 research01 отдельной защищённой транзакцией опубликованы ещё **3 персональные музыкально-исторические карточки**, по две адресные записи evidence: Chris Pyne (ECM: *The Brass Project*, сессия 1992; Kenny Wheeler, 1990 — кредит тромбона только на уровне альбома), Bruce Ditmas (оригинальный Postcards *What If*, 1995; барабаны и композиторские кредиты отдельно; позднее цифровое переиздание не принимается за оригинал), Bert Boeren (O.A.P. Records, *Four Others*, 21.06.2024 в Гааге — гость-тромбонист; состав и членство Dutch Swing College Band проверены независимо). Издательские и ансамблевые сайты непосредственно содержат имена, инструменты и даты. Взаимный MBID/QID подтверждает личность, но **не** записи или авторство. Данные внесены в TSV/IDX и 584-подписный заголовок с проверкой строгого совпадения C++ host.
 
-**N**: look up the current artist if ICY stream title is explicitly formatted
-as Artist - Track. No artist is guessed from a generic station name.
+**Текущее canonical:** 1 498 карточек = 63 исходные + **521** дополнительно персонально исследованная + **914** ещё без персональной экспертизы; **434** досье, **875** адресных исторических утверждений, **584** Now Playing/Explained, неизменные 150 Spark, 24 урока и 36 рекомендаций. Из 914 остающихся **741** малоинформативная. Публикация — самостоятельная OS-held 11-файловая транзакция; три новые полные SHA-baseline `data/*-wave12-research02.sha256.tsv` и отдельный `out/editorial-next-20261115/wave12-research02-final-sha256.json`. Все пять прежних SHA-снимков (wave10, wave11 initial/audited/source-QA и wave12 research01) неизменны.
 
-**Z**: Jazz Spark. A sourced historical fact, a listening tip, or occasionally a
-short attributed quote. W/S browses; Enter moves forward; Z/Del returns. **T on the Spark
-screen** enables/disables automatic Spark reminders, saved in NVS (default ON).
-Every 12 minutes the radio may automatically display a card for 10 seconds
-and return to RADIO, but only when idle, with microSD available and audio
-buffer at least half full if playing. This still needs a real-device test for
-SD latency, dropped audio and screen rendering.
+Спорные даты: Guy Warren — достоверны год 1956 и Чикаго, точный день спорен у трёх профильных авторов; Chris Pyne — ECM не гарантирует участие на каждой композиции; неизученная часть базы автоматически обогащена из Wikidata/MusicBrainz и не считается проверенной по студийным данным. Физического теста устройства не выполнялось.
 
-**H**: keyboard help, four consistently formatted pages. W/S or A/D works
-in both directions.
 
-All data is read from SD in bounded read-only chunks on the UI task, not by
-the FreeRTOS audio worker. Searches are initiated by a key; auto Spark
-is the only scheduled SD scan. The entire database is never loaded into
-RAM. Slow microSD scans can cause a visible delay and potentially affect
-audio throughput; test before leaving auto Spark on during live playback.
+## Новая контрольная точка после wave11 — wave12 research01 (15.11.2026)
 
-## Sources, licensing, quality
+Все завершённые редакции wave11 оставлены неизменными: первоначальная (38 новых, 506 суммарно дополнительных), audited (+Nathan Davis, 507) и source-QA (+Fred Guy, George Tucker, Othello Molineaux, 510). В отдельной защищённой транзакции приняты **8 персонально исследованных записей:** Al Lucas (сессия Savoy/J.J. Johnson 1947, не неподтверждённая Zodiac Suite 1945), Castor McCord (даты и матрицы OKeh/Armstrong 1930; не путать с Ted McCord), Chris White (бас Atlantic/Owens/Barron 1967), Carl Morten Iversen (Oslo Trio '87), Peter Beets (Criss Cross, запись 2002 / выпуск 2003), Bing Crosby (Rhythm Boys/Whiteman на Victor *Mississippi Mud* 1928), China Forbes (авторство и вокал Pink Martini *Sympathique*), Anthony Wilson (гитара на Verve/Diana Krall *Live in Paris*). Роли композитора, исполнителя, члена группы, концертного участника и место записи не объединяются без доказательств. Все восемь MBID взаимно согласованы с Wikidata QID, но исторические сведения проверены по лейблам/архивам/сессионным каталогам отдельно.
 
-The source URL is stored in each TSV row and in
-data/JAZZ-ENCYCLOPEDIA-PROVENANCE.md. It is deliberately NOT displayed
-on the 240 x 135 LCD: screen space belongs to the biography, fact or quote.
-Facts are new short summaries of source material, not purported quotations.
-Quotes are included only when an attribution trail was found, with a
-person-specific Wikiquote page and bibliographic information where available;
-some are excerpts from longer interviews, not newly authored slogans. Their
-precise evidential status varies. The Monk "wrong notes" quotation has secondary
-attribution rather than a verified first-person recording. See provenance.
+Уточнены **Nathan Davis** (MPS подтверждает запись *Happy Girl* в 1965-м, не дату первого выпуска) и **Fred Guy** (спорное место сессии 1927 года удалено). Без изменений остались 63 исходные, 468 предыдущих wave10, все прежние досье и Spark, 36 альбомных рекомендаций, 24 темы Journey, seed и MusicBrainz JSON. Текущий результат: **1498 карточек, 518 дополнительных индивидуально исследованных биографий, 431 досье, 869 доказательств, 581 точная подпись Now Playing/Explained и 150 Spark**. Из 1498 ещё **917** без индивидуального исследования; **744** малоинформативны согласно triage. Текст каждой новой карточки — ASCII, 80–180 символов; PDF/сайты доступны через сохранённые evidence ID и HTTPS URL, но автоматический валидатор проверяет целостность, а не историческую истинность самих сайтов. Новые baselines `data/*-wave12-research01.sha256.tsv`, манифест `out/editorial-next-20261115/wave12-research01-final-sha256.json`; исходный wave11, audited и source-QA SHA не переписаны. Прямой C++ host-поиск использует реальные TSV и IDX, устройство не перепрошивалось.
 
-The original 1487-entry imported catalog used Wikidata's jazz-musician
-occupation Q15981151. The editorial layer enhances 52 of those entries and
-adds 11 absent musicians (1498 total). This is a community-maintained
-catalog, **not** an assurance that all listed people were major performers.
-Descriptions vary in depth; 63 editor-written entries have linked article
-references, but they are short summaries, not full-length biographies.
-The original 36 album suggestions retain independent MusicBrainz verification;
-all other profiles display no album rather than fabricating one.
 
-Data formats, each LF-terminated and ASCII-only:
+## Актуальная источниковая контрольная точка wave11 (третья редакция, 15.11.2026)
 
-- Encyclopedia: artist-key TAB artist-name TAB biography TAB album-or-minus TAB URL
-- Spark: FACT-or-QUOTE TAB text TAB subject TAB URL
+Исходная wave11 с 38 новыми досье и первая исправленная редакция с Nathan Davis сохранены без переписывания SHA-манифестов. Дополнительная проверка первичных источников выявила ошибку в составе квартета Stan Tracey на *Under Milk Wood*: барабанщик — **Jackie Dougan**, а не Jackie Douglas. Сведения подтверждены архивом семьи Tracey и публикацией, посвящённой сорокалетию записи. Для Carlo Krahmer композиционный Jazz Spark разделён на две отдельно подтверждаемые записи evidence: сведения о январской сессии 1948 года из JazzDisco и история основания Esquire Records из архивной статьи Jazz Journal. Spark связан только с первой, непосредственно относящейся к раннему джазу.
 
-The complete corpus is frozen for each release. Regenerate deliberately via
-`python tools/build_jazz_encyclopedia.py` (requires internet), or to retain
-the exact artist snapshot and update curated facts/quotes use
-`python tools/build_jazz_encyclopedia.py --facts-only` (offline). Curated
-source text is in `data/jazz-curated-facts.tsv` and
-`data/jazz-editorial-bios.tsv`, preserved in the source snapshot.
-Run the host tests before archiving. Sources never consume LCD pixels.
+Приняты ещё три персональные ASCII-биографии по конкретным, а не автоматически предположенным записям: **Fred Guy** — банджо в датированных сессиях Duke Ellington 1927 года (Ellingtonia и архив MacEwan University); **George Tucker** — контрабас на *Us Three* и *Speakin' My Piece* у Horace Parlan (1960; Blue Note/Van Gelder; JazzDisco); **Othello Molineaux** — стил-пэн в конкретных записях Jaco Pastorius *Opus Pocus* и *Liberty City* (официальный архив музыканта и дискография). Для всех трёх ключей MBID совпадает с взаимной ссылкой Wikidata, но исторические утверждения подтверждаются отдельно по музыкальным источникам.
 
-These are host-tested data and screen contracts; playback performance and
-microSD timing on the physical Cardputer ADV remain to be accepted.
+**Фактический состав:** 1498 карточек, включая **63 неизменные первоначальные + 510 дополнительно исследованных + 925 ещё не исследованных индивидуально**; **423 досье**, **853 адресных evidence**, **573 точных Now Playing/Explained**, **150 доказательно связанных Jazz Spark**, **24 урока Jazz Journey**, **36** исходных рекомендаций. Среди 925 не исследованных индивидуально **752** остаются малоинформативными. Новый слой опубликован через отдельную межпроцессно блокируемую и восстановимую транзакцию из 12 файлов. Его контроль: `data/*-wave11-source-qa.sha256.tsv` и `out/editorial-next-20261115/wave11-source-qa-final-sha256.json`. Исходные `wave11-final-sha256.json`, `wave11-audited-final-sha256.json` и baseline волн 1–10 не переписаны. Новые материалы доступны в C++ host через настоящий TSV/SD-индекс, но ещё не проверены на физическом устройстве.
+
+Ниже приведены **исторические снимки предыдущих этапов**, в том числе их прежние числа 506/507 и 569/570, а не текущая статистика.
+
+## Проверенная редакционная поправка wave11
+
+Второй источниковый аудит 38 первоначально принятых биографий выявил существенные ошибки атрибуции: первое издание Ann Burton *Blue Burton* (Artone, не Epic) и смешанные составы сессий Monk 1947/1951 в карточке Sahib Shihab. Исправлено 9 индивидуальных досье, включая точность дат Joris Teepe, состав студии и семплы Guem, сведения о Carlos Lyra, Guy Warren и другие. Благодаря документам первичного лейбла MPS добавлен ранее отложенный Nathan Davis (*Happy Girl*, 1965; без спорного точного дня). Сохранены прежние досье и Spark, 63 оригинальных биографии, 36 альбомных рекомендаций и исходный MusicBrainz-кеш.
+
+**Итог после проверенной поправки:** 1498 карточек, 507 дополнительных исследованных ASCII-биографий, 420 индивидуальных досье, 845 адресных доказательств, 570 точных подсказок Now Playing / Explained и 150 привязанных к 24 темам Jazz Journey редакционных фактов Spark. Без индивидуальной экспертизы **928**, из них **755** малоинформативны. Все старые pin/SHA сохранены, дополнительные базовые файлы `data/*-wave11-audited.sha256.tsv` и новый независимый итоговый SHA закрепляют исправленную редакцию. SD-индекс и C++ host lookup проверяются на настоящих производных данных; работы с прошивкой и SD пользователя не проводились.
+
+
+> **Локальные исходники после v0.7z16, пока без прошивки.**
+> Опубликованная v0.7z16 содержит прежнюю базу и прежний интерфейс.
+> Эти изменения не подтверждены физически на Cardputer ADV.
+
+## Редакционная волна 11 (15.11.2026, локально)
+
+Из 50 изученных карточек приняты 38 индивидуальных биографий с 76 адресными доказательствами, ещё 12 отложены; причины доступны в `out/editorial-next-20261115/editorial-wave11-deferred.json`. Теперь в базе 1498 карточек, из них 63 исходные защищённые + 506 отдельно исследованных; индивидуальных досье 419, точных Now Playing 569, evidence-связанных Jazz Spark 150. Без индивидуальной экспертизы остаётся 929, в том числе 756 малоинформативных. 36 альбомных рекомендаций не менялись.
+
+Утверждения отделяют исполнение от авторства и ансамблевого участия. Подтверждённые примеры: Calvin Newborn — Atlantic *Here Is Phineas* (1956), Carlo Krahmer — Esquire-сессия 1948, Cecil Scott — Teddy Wilson/Billie Holiday (1937), Thomas T. Dahl — ECM *Rubicon* (2015). Не подтверждённые надёжной независимой сессионной атрибуцией примеры, в частности Al Lucas, отложены. TSV и SD-индекс созданы заново; C++ host проверяет реальный индексированный поиск, точный Now Playing и неповреждённую раскладку всех 1498 карточек.
+
+Три независимые SHA-256 таблицы `data/*wave11.sha256.tsv` закрепляют источники, досье и Spark. Старые baseline и seed не переписывались. Физическая проверка на Cardputer ADV, новая прошивка и публикация не выполнялись.
+
+## Что есть в рабочем дереве
+
+| Показатель | Фактическое состояние |
+| --- | ---: |
+| Карточек музыкантов в `jazz-encyclopedia.tsv` | **1498** |
+| Снимков Wikidata с QID/ID исходных утверждений | **1432** |
+| Изменённых относительно неизменного исходного корпуса описаний | **1435** |
+| Редакционных биографий, сохранённых без переписывания | **63** |
+| Дополнительных индивидуально исследованных музыкальных справок | **521** |
+| Now Playing, Explained: точные подписи | **584** |
+| Отдельно отобранных альбомов из MusicBrainz | **36** |
+| Описаний длиной не менее 70 символов | **1489** |
+| Описаний короче 60 символов | **0** |
+| Исполнителей с проверенными связями MusicBrainz | **1404** |
+| С конкретными исполнительскими записями в кеше | **1289** |
+| С подтверждённым участием в коллективах | **1023** |
+| С коллегами на общих записях | **262** |
+| С однозначными связями с площадками | **155** |
+| Фактов Jazz Spark и коротких атрибутированных цитат | **300 + 25** |
+
+Снимок Wikidata содержит **1421** утверждение о годе рождения, **791** о
+смерти, **1368** об инструменте, **1393** о месте рождения, **1431** о
+гражданстве и **41** о значимых произведениях. Поля добавляются только
+из доступных source-backed statements. Пропущенные поля остаются
+пропущенными — система не создаёт предполагаемых дат или коллег.
+
+На 15.11.2026 итоговая проверка MusicBrainz сохранила ещё
+**4 повторяемых API-сбоя** как `pending_mb`, 54 неоднозначные P434,
+30 отсутствующих P434 и 3 конфликта идентичности — они не превращены
+в якобы подтверждённые записи. Данные на SD представляют собой короткие
+выжимки; не все подтверждённые отношения могут поместиться в 180 символов.
+В итоговом TSV фактически видны **780** строк с `Recorded on`,
+**548** с `Member of`, **116** с `Co-recorded with` и **50** с
+`Played at`. Это число отображённых фраз, а не количество
+независимых исторических биографий.
+
+**Ограничение качества:** этот большой прирост покрытия ещё не означает,
+что все 1498 карточек стали полноценными биографиями. Годы, инструменты
+и место рождения не являются сведениями о конкретных записях,
+сотрудничествах или местах концертов. `P800 notable work` не равно
+записи/альбому. Для этого остаётся отдельная работа с редакционными
+источниками, проверенными credits и географией выступлений.
+У некоторых артистов джаз был лишь частью карьеры, что тоже требуется
+редакторски пометить. Длина описания не является критерием музыкальной
+компетентности.
+
+## Установка SD-данных (только в будущем релизе)
+
+В рабочей директории исходных данных лежат:
+
+- `jazz-encyclopedia.tsv` — ASCII-карточки, по одной на строку,
+  ключ / имя / краткая справка / проверенный альбом или `-` / HTTPS-источник;
+- `jazz-encyclopedia.idx` — отсортированные ключи и точные байтовые
+  смещения в TSV. Он создаётся **строго из тех же байтов** что и TSV;
+- `jazz-facts.tsv` — Jazz Spark факты/цитаты;
+- `artist-notes.tsv` и `artist-notes.idx` — прежняя совместимая
+  коллекция 36 MusicBrainz альбомов.
+
+Эти пять файлов будущий SD-пакет кладёт под `/PocketJazz/`.
+Не заменяйте личные `04-my-stations.m3u`, `liked.txt`,
+`jazz-progress.tsv`, `jazz-diary.tsv`, настройки и собственные MP3.
+`jazz-structured-facts.json` и `jazz-encyclopedia-seed.tsv` являются
+**исходниками на ПК**, не нужны в файловой системе Cardputer.
+Ни SD-карта, ни установленный M5Launcher не изменялись.
+
+## Интерфейс
+
+**N** в радио открывает известного по `Artist - Track` исполнителя,
+если ICY-метаданные получены в текущей аудиосессии. Для 531 именованных
+исполнителей/ансамблей с предметными биографиями радио показывает строку **Now Playing,
+Explained** без SD-чтения при перерисовке. Неизвестное имя не подменяется
+похожим; аудиофингерпринтинга нет.
+
+**U** — поиск по имени, инструменту, теме или альбому. `Enter`
+открывает выбор, `Up/Down` листает результаты, `Enter` показывает
+карточку, `Del` возвращает. Заметка отображается на одном экране
+240×135: максимум семь строк по фактической пиксельной ширине,
+альбом отдельно (если подтверждён), а URL остаётся невидимым полем
+происхождения. Объём до 180 ASCII-символов не означает обрезку по 7
+строкам: дополнительный текст доступен через DOWN/UP с пиксельным переносом,
+а длинные имена/названия альбомов — через T.
+
+Точный `find(key)` при наличии валидного индекса делает
+`O(log N)` SD-проб вместо полного чтения 1498 строк. Само найденное
+имя сверяется по ключу/границе строки в исходном TSV. При
+отсутствующем/повреждённом индексе остаётся проверяемый линейный
+поиск. Общий текстовый поиск `U` пока проходит TSV потоково:
+целиком каталог в RAM **не загружается**. SD latency/underrun на железе
+не измерялась — читать на Cardputer во время эфира следует осторожно.
+
+**Z** открывает Jazz Spark, которому доступны 297 коротких проверяемых
+фактов и 25 источниковых цитат. 20 страниц `H` объясняют горячие
+клавиши и курс Jazz Journey. Сами занятия объединены в
+[инструкции Jazz Journey](JAZZ-JOURNEY.md).
+
+## Доказательства, воспроизводимость и честные ограничения
+
+`data/JAZZ-ENCYCLOPEDIA-PROVENANCE.md` хранит SHA-256 корпуса,
+индекса, Jazz Spark и снимка Wikidata, описание исходного запроса и
+типов свойств. `data/jazz-structured-facts.json` содержит
+исходные QID, statement IDs и английские метки, пригодные для
+независимой проверки. Источники в TSV — ссылки Wikipedia, Wikidata,
+MusicBrainz — не делают сетевой запрос при чтении радио.
+
+- **Без сети, без изменений файлов:** `python tools/build_jazz_encyclopedia.py --check`
+  заново формирует ожидаемые байты в памяти и сверяет четыре выхода.
+- **Явно пересобрать из зафиксированных источников:**
+  `python tools/build_jazz_encyclopedia.py --facts-only`.
+  Берётся исходный проверенный `jazz-encyclopedia-seed.tsv`, а не
+  собственный предыдущий результат — это предотвращает повторное
+  дописывание инструментов/дат.
+- **Явно обновить снимок источников (требует сети):**
+  `python tools/enrich_jazz_bios.py --fetch`; после ревью нового
+  снимка выполнить офлайн-генерацию и повторить `--check`.
+
+Wikidata — полезный аудируемый вторичный каталог, **но его утверждения
+не являются автоматически независимым первичным доказательством**.
+63 старые редакционные мини-биографии и 36 рекомендаций MusicBrainz
+сохранены дословно. Слой
+`data/jazz-researched-context.tsv` содержит 468 индивидуально написанных
+справок с прямыми ссылками на источники (музыкальные архивы, лейблы,
+профессиональные организации); его текст и источники проверяются вместе
+с итоговым TSV и набором Now Playing.
+
+В 381 новых индивидуальных досье
+(`data/jazz-editorial-dossiers.json`) сохранены 762 музыкальных
+утверждения с их точными HTTPS-источниками, внутренними идентификаторами
+`ev01`/`ev02` и объяснением музыкального вклада. Ещё 87 прежних
+исследованных справок закреплены построчными SHA-256. Проверка
+`tools/verify_jazz_editorial_dossiers.py` охраняет 63 исходных,
+161 уже подготовленную ранее справку, 74 досье предыдущего
+редакционного прохода и 14 прежних фактов Spark.
+
+Для 147 новых редакционных FACT в
+`data/jazz-editorial-spark.tsv` формат строго
+`artist-key<TAB>evidence-id<TAB>exact-claim<TAB>Journey-topic<TAB>source-url`.
+Факт попадает в `jazz-facts.tsv` **только при совпадении ID,
+исходного текста и URL одной конкретной записи evidence**. Наличие
+такого же URL в другом элементе досье больше не подходит.
+Остальные факты Spark и 25 цитат сохранены без изменения контракта.
+
+Отдельное [редакционное ревью 20 разнородных карточек](JAZZ-NOTES-EDITORIAL-REVIEW-20261115.md)
+показывает границы жанра: например, Brand X у Фила Коллинза — это
+джаз-рок, а музыкальное творчество Мишель Докери относится прежде всего
+к фолк/Americana. Механический фильтр также не показывает на LCD семь
+заведомо немузыкальных `P800`-произведений (книги/кино/телесериал), но
+сохраняет сами утверждения в архивном источнике.
+
+### Проверяемые музыкальные факты
+
+`data/jazz-music-evidence.json` — отдельный кеш подтверждённых по QID и
+MusicBrainz MBID отношений. Он не устанавливается на SD: конечные краткие
+факты автоматически собираются из него в TSV офлайн. Название записи можно
+показывать как **Recorded on** только при явном отношении performer,
+instrument или vocal к конкретному MusicBrainz recording. Участие в
+ансамбле (**Member of**) требует member-of-band; конкретный коллега
+(**Co-recorded with**) — двух исполнительских связей с одной записью.
+**Played at** требует отношения артиста с событием и единственного
+подтверждённого места события. Авторство и album artist credit не равны
+исполнительскому участию; место рождения не равно концертной площадке.
+
+Первая по алфавиту подтверждённая запись — это **пример**, а не обязательно
+художественно важнейшая работа музыканта. Историческая значимость,
+музыкальные нововведения и выбор характеристических записей по-прежнему
+нуждаются в редакционном источнике. Заявления о «полной биографии» на
+основании длинного текста, инструмента и дат некорректны.
+
+Для ручного обслуживания: `python tools/build_jazz_music_evidence.py --validate`
+(офлайн, без записи файлов); дополнительные запросы из
+MusicBrainz запускаются только явно через `--fetch-musicbrainz`,
+`--fetch-coperformers`, `--fetch-venues`. После ревью JSON воспроизводимый
+пересчёт делается через `python tools/build_jazz_encyclopedia.py --facts-only`,
+затем обязательная read-only проверка `--check`.
+Неудачные/ограниченные запросы остаются в pending, а неоднозначные ID
+и конфликтующие Wikidata backlinks не получают придуманных связей.
+
+Более полное освещение истории выступлений, художественной значимости и
+музыкального окружения всех 1498 исполнителей остаётся задачей редактора,
+а не только автоматического извлечения метаданных.
+
+**Валидация:** это host-only содержание/контракты. Публикация нового
+BIN, ESP32-компиляция, аппаратный LCD/RAM/SD/BUFFERING gate и
+распространение на microSD ещё **не выполнялись**.

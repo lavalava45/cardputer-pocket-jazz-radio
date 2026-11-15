@@ -49,7 +49,8 @@ class ReliabilityIntegration(unittest.TestCase):
         self.assertIn('stop_p50_upper_ms=', APP)
         self.assertIn('switch_p50_upper_ms=', APP)
         self.assertIn('pcm_enqueue_reject=', APP)
-        self.assertIn('appendUiExport("/PocketJazz/diagnostics.tsv"', APP)
+        self.assertIn('appendUiExport(path, row', APP)
+        self.assertIn('"/PocketJazz/incident-%010lu-%02u.tsv"', APP)
 
     def test_wifi_keeps_legacy_and_commits_only_stable_profiles(self):
         self.assertIn('p.getString("ssid", "")', APP)

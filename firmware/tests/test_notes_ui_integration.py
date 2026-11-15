@@ -14,7 +14,8 @@ class NotesUI(unittest.TestCase):
         self.assertIn('notesSearchPage.useLegacy(), 3, &notesSearchTotal', SOURCE)
         self.assertIn('notesSearchPage.useEncyclopedia(), 3,', SOURCE)
         self.assertIn('static pocketjazz::JazzNotesSearch searchIndex', SOURCE)
-        self.assertIn('notesOpenedFromSearch ? NOTES_SEARCH : RADIO', SOURCE)
+        self.assertIn('notesOpenedFromSearch ? NOTES_SEARCH :', SOURCE)
+        self.assertIn('notesOpenedFromJourney ? JAZZ_LESSON : RADIO', SOURCE)
         notes = SOURCE.split('if (screen == NOTES) {', 1)[1].split('if (screen == NOTES_SEARCH)', 1)[0]
         self.assertIn('if (k.del || k.enter)', notes)
         self.assertNotIn('searchOfflineNotes()', SOURCE.split('void audioWorker(void*)', 1)[1].split('void loadPeekConfig()', 1)[0])

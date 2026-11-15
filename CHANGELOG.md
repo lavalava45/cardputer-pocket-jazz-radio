@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.8.0 — Jazz Journey and source-attributed offline encyclopedia (2026-11-15)
+
+- Adds 24 offline Jazz Journey lessons and 30 Learn to Listen exercises, with integrated Explained / Now Playing music notes and existing Jazz Spark.
+- All 1,498 offline musician entries remain indexed. **595** have exact individually sourced Now Playing/Explained hints (63 original + 532 additional). **445** source dossiers and **897** concrete evidence claims are linked to the additional editorial set; **903** fallback/machine-enriched entries lack individual historical verification. All 903 were categorized without claiming false sources.
+- Retains the 51-station catalog, 150 Jazz Spark claims, 36 album recommendations, Wi-Fi presets, local playback, alarm, diagnostics and existing file safety restrictions.
+- Released as **Cardputer ADV app-only BIN** plus optional SD data ZIP, not a merged device image. Software tests and checksum provenance in [release notes](docs/RELEASE-v0.8.0.md); **physical audio and input acceptance pending**.
+
+
 ## v0.7z16 — single-file post-STOP incident export (2026-11-14)
 
 - Added one-key `I → R` (only after STOP) on any Diagnostics page: creates a new `/PocketJazz/incident-*.tsv` with station identity, latest ICY, Wi-Fi/HTTPS, buffer/decode/PCM/heap, at most 16 recent runtime events, and heap/source progress checkpoints. The report must end with `END complete=1`; partial results are explicitly invalid.

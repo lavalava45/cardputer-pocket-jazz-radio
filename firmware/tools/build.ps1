@@ -358,7 +358,8 @@ try {
     if (Test-Path -LiteralPath $notesDir -PathType Container) {
         $notesFiles = @(Get-ChildItem -LiteralPath $notesDir -File |
             Where-Object { $_.Name -in 'artist-notes.tsv', 'artist-notes.idx',
-                'jazz-encyclopedia.tsv', 'jazz-facts.tsv' })
+                'jazz-encyclopedia.tsv', 'jazz-encyclopedia.idx', 'jazz-facts.tsv',
+                'jazz-journey.tsv', 'jazz-listen.tsv' })
         foreach ($note in $notesFiles) {
             Copy-Item -LiteralPath $note.FullName -Destination $playlists
         }
@@ -387,7 +388,7 @@ try {
         ((Get-Content -LiteralPath $requiredLicense -TotalCount 3 | Out-String) -notmatch 'GNU GENERAL PUBLIC LICENSE')) {
         throw 'Required full original GPL-3 license text missing or incomplete.'
     }
-    foreach ($optional in @('arduino-cli.yaml', 'docs/ROOT-CAUSE-CODEC-HEAP-20261112.md', 'docs/DIAGNOSTICS-GUIDE.md', 'docs/RELEASE-V07Z5-VERIFICATION.md', 'docs/EMULATOR-VALIDATION-20261112.md', 'docs/RELEASE-V07Z4-VERIFICATION.md', 'docs/WIFI-CREDENTIAL-SECURITY.md', 'docs/RELEASE-V07Z3-VERIFICATION.md', 'docs/LIVE-AUDIO-DIAGNOSTICS-20261112.md', 'docs/AUDIO-ACCEPTANCE-V07Z2.md', 'docs/RELEASE-V07Z1-VERIFICATION.md', 'docs/RELEASE-V07Z-VERIFICATION.md', 'docs/RELEASE-V07Y-VERIFICATION.md', 'docs/HTTPS-TRACE-V07X.md', 'docs/DAILY-RADIO-ALARM.md', 'docs/SD-OFFLINE-LIBRARY.md', 'docs/CURRENT-FEATURES-20261110.md', 'docs/HARDWARE-OBSERVATIONS-20261110.md', 'docs/SETTINGS-BACKUP-AND-WIFI-PROFILES.md', 'docs/AUDIO-FIVE-STATION-PCM-ACCEPTANCE.md', 'docs/V07C-RELEASE-GATE.md', 'docs/V07D-RELEASE-GATE.md', 'docs/AUDIO-ROUTER-PCM-INTEGRATION.md', 'docs/STATION-STREAM-VERIFICATION.md', 'docs/STATION-CATALOG-56-20261111.md', 'docs/STATION-STREAM-CHECK-20261110.json', 'docs/STATION-THROUGHPUT-20261110.json', 'docs/STATION-THROUGHPUT-SOMAFM-20261110.json', 'docs/AUDIO-SOMAFM-CLASS-20261110.md', 'docs/V07L-AUDIO-FIX-REVIEW.md', 'docs/V07M-DECODER-EDGE-CASES.md', 'docs/VELXIO-V07L-RUNTIME.md', 'docs/VELXIO-V07M-RUNTIME.md', 'docs/LIKES-QR.md', 'docs/LIKES-PC-BRIDGE.md', 'docs/PMAN-READONLY-V07L.md', 'docs/PMAN-READONLY-V07K.md', 'docs/AUDIO-FOUR-STATION-DIAGNOSTIC.md', 'docs/jazz-notes-data.md', 'docs/JAZZ-ENCYCLOPEDIA.md', 'docs/SD-TIMESHIFT-FEASIBILITY.md', 'docs/JAZZ-NOTES-SEARCH-TECHNICAL.md', 'docs/ICY-PEEK.md', 'docs/ESP-NOW-STATION.md', 'docs/CLOCK-SETUP.md', 'docs/STATION-LOGOS.md', 'docs/SD-EXPORTS.md', 'docs/ICY-METADATA.md', 'tests/HA_MQTT_TRANSPORT.md', 'tests/ESP-NOW-SECURITY-TESTS.md')) {
+    foreach ($optional in @('arduino-cli.yaml', 'docs/ROOT-CAUSE-CODEC-HEAP-20261112.md', 'docs/DIAGNOSTICS-GUIDE.md', 'docs/RELEASE-V07Z5-VERIFICATION.md', 'docs/EMULATOR-VALIDATION-20261112.md', 'docs/RELEASE-V07Z4-VERIFICATION.md', 'docs/WIFI-CREDENTIAL-SECURITY.md', 'docs/RELEASE-V07Z3-VERIFICATION.md', 'docs/LIVE-AUDIO-DIAGNOSTICS-20261112.md', 'docs/AUDIO-ACCEPTANCE-V07Z2.md', 'docs/RELEASE-V07Z1-VERIFICATION.md', 'docs/RELEASE-V07Z-VERIFICATION.md', 'docs/RELEASE-V07Y-VERIFICATION.md', 'docs/HTTPS-TRACE-V07X.md', 'docs/DAILY-RADIO-ALARM.md', 'docs/SD-OFFLINE-LIBRARY.md', 'docs/CURRENT-FEATURES-20261110.md', 'docs/HARDWARE-OBSERVATIONS-20261110.md', 'docs/SETTINGS-BACKUP-AND-WIFI-PROFILES.md', 'docs/AUDIO-FIVE-STATION-PCM-ACCEPTANCE.md', 'docs/V07C-RELEASE-GATE.md', 'docs/V07D-RELEASE-GATE.md', 'docs/AUDIO-ROUTER-PCM-INTEGRATION.md', 'docs/STATION-STREAM-VERIFICATION.md', 'docs/STATION-CATALOG-56-20261111.md', 'docs/STATION-STREAM-CHECK-20261110.json', 'docs/STATION-THROUGHPUT-20261110.json', 'docs/STATION-THROUGHPUT-SOMAFM-20261110.json', 'docs/AUDIO-SOMAFM-CLASS-20261110.md', 'docs/V07L-AUDIO-FIX-REVIEW.md', 'docs/V07M-DECODER-EDGE-CASES.md', 'docs/VELXIO-V07L-RUNTIME.md', 'docs/VELXIO-V07M-RUNTIME.md', 'docs/LIKES-QR.md', 'docs/LIKES-PC-BRIDGE.md', 'docs/PMAN-READONLY-V07L.md', 'docs/PMAN-READONLY-V07K.md', 'docs/AUDIO-FOUR-STATION-DIAGNOSTIC.md', 'docs/jazz-notes-data.md', 'docs/JAZZ-ENCYCLOPEDIA.md', 'docs/JAZZ-JOURNEY.md', 'docs/SD-TIMESHIFT-FEASIBILITY.md', 'docs/JAZZ-NOTES-SEARCH-TECHNICAL.md', 'docs/ICY-PEEK.md', 'docs/ESP-NOW-STATION.md', 'docs/CLOCK-SETUP.md', 'docs/STATION-LOGOS.md', 'docs/SD-EXPORTS.md', 'docs/ICY-METADATA.md', 'tests/HA_MQTT_TRANSPORT.md', 'tests/ESP-NOW-SECURITY-TESTS.md')) {
         if (Test-Path -LiteralPath (Join-Path $root $optional) -PathType Leaf) {
             $sourcePaths += $optional
         }
@@ -642,6 +643,15 @@ Copy PocketJazz/jazz-encyclopedia.tsv (1400+ musicians) and
 PocketJazz/jazz-facts.tsv (Jazz Spark facts + checked brief quotes) to the
 same SD directory. U searches the large SD encyclopedia: type query, Enter
 search, W/S move through ALL results, Enter opens, Del returns to editing.
+For the optional learning companion also copy PocketJazz/jazz-journey.tsv
+and PocketJazz/jazz-listen.tsv to the same SD directory. On RADIO,
+E opens Jazz Journey: Trails (4 chapters, 24 lessons + quizzes), Learn to
+Listen (30 cards), Jazz Passport and Jazz Diary. N on a lesson opens its
+linked offline musician; Z opens a topic-linked Jazz Spark; F browses
+stations without promising a particular track. V marks HEARD only at
+user request; a correct quiz marks LEARNED. P explicitly saves progress
+and up to four diary drafts after STOP. No account, telemetry or cloud.
+FN+K from RADIO opens a tagged diary; plain K still adds liked.txt.
 N opens the current artist when ICY has 'Artist - Track'. Z opens Jazz Spark:
 W/S or Enter next fact, T toggles automatic 10-second Spark cards every
 12 minutes (NVS; default on), Z/Del back. Source URLs are deliberately NOT shown
@@ -649,18 +659,20 @@ on the small device screen (full provenance is in release/source/data/).
 RADIO uses full-width station / artist / track text with a small permanent
 PCM VU in the footer and a compact VOL xx% label. No large logo cache,
 VU sidebar, or V show/hide toggle remains.
-H opens Help at page 1. The footer no longer duplicates navigation keys.
+H opens Help at the last page viewed in the current powered-on session.
 S opens TUNING SOUND FX: 1 toggles quiet vinyl crackle; 2 toggles very quiet
 white noise; Del returns. Both are OFF by default and saved separately in
 NVS. FX can be skipped under memory pressure; no sound on automatic retries.
 Holding S *during boot* still disables autoplay (SAFE START).
-From v0.7a: E while viewing I/Diagnostics or Y/ICY history explicitly saves
-bounded app-owned TSV logs under /PocketJazz/ (max 16 KiB per file). No
-automatic logs, and no deletion/rotation; source/docs/SD-EXPORTS.md explains.
+Diagnostics: after STOP, I then R writes one full incident-*.tsv with
+Wi-Fi, HTTPS, MP3/PCM, ICY, source/heap history. X resets audio counters;
+E/M no longer create partial diagnostic files. Y then E still exports
+the separate user ICY history, and B E E still exports settings backup.
+There are no automatic diagnostic or learning-progress SD writes.
 Newer builds: Diagnostics page 2 shows PCM-queue gap estimates (>=100 ms),
 STOP drain latency and latency to first PCM for a selected stream. This is
 NOT a microphone or analog DAC measurement. I then X resets these counters;
-I then E exports a numeric snapshot to the existing bounded TSV.
+I then R exports the complete numeric report after STOP.
 At RADIO, B opens SETTINGS BACKUP (C remains the sole clock entry). Stop the
 stream first; B E E manually exports settings.bak, B I I manually imports.
 The CRC32/whitelist file excludes Wi-Fi credentials, but station URLs are
@@ -726,7 +738,8 @@ Physical device playback: NOT TESTED by this packaging script.
         # reasonably report "Notes does not work" after installing firmware.
         # Read all packaged data from the already hash-verified source snapshot.
         foreach ($dataName in @('artist-notes.tsv', 'artist-notes.idx',
-                                'jazz-encyclopedia.tsv', 'jazz-facts.tsv',
+                                'jazz-encyclopedia.tsv', 'jazz-encyclopedia.idx', 'jazz-facts.tsv',
+                                'jazz-journey.tsv', 'jazz-listen.tsv',
                                 'clock.example.txt')) {
             $inputData = Join-Path $sourceDir ('data\' + $dataName)
             if (-not (Test-Path -LiteralPath $inputData -PathType Leaf)) {

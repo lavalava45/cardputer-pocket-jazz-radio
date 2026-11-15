@@ -17,3 +17,7 @@ __pycache__/
 
 # Reproducible host CMake builds belong in the working tree, not Git.
 /out/
+
+# Host CMake build products are local verification artefacts, never source.
+/checks/host-*/
+

@@ -1,0 +1,20 @@
+{
+  "accepted": [
+    "al-lucas",
+    "anthony-wilson",
+    "bing-crosby",
+    "carl-morten-iversen",
+    "castor-mccord",
+    "china-forbes",
+    "chris-white",
+    "peter-beets"
+  ],
+  "initial_checkpoint": "wave11-source-qa-final-sha256.json",
+  "origin": "Independent specialist original sessions/label/artist sources",
+  "protected_predecessor_snapshots_replaced": false,
+  "review_stage": "editorial-wave12-research01-staged.json",
+  "source_corrections": [
+    "fred-guy",
+    "nathan-davis"
+  ]
+}

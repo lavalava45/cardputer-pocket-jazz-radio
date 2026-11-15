@@ -1,0 +1,110 @@
+{
+  "schema": 1,
+  "previous_checkpoint": "wave11-source-qa-final-sha256.json",
+  "new": {
+    "al-lucas": {
+      "summary": "Bassist Al Lucas recorded Boneology and Down Vernon's Alley with J.J. Johnson, Leo Parker, Hank Jones and Shadow Wilson for Savoy in New York on Dec. 24, 1947.",
+      "primary_source_url": "https://www.jazzdisco.org/savoy-records/discography-1947/",
+      "now_playing_hint": "Bass / 1947 Savoy bebop sessions",
+      "why_it_matters": "His documented Savoy bass credit identifies a precise early bebop session without relying on unverified 1945 Zodiac Suite personnel.",
+      "limitations": "The earlier 1945 Zodiac Suite claim remains deferred pending an independent contemporary session source.",
+      "evidence": [
+        {"id": "ev01", "claim": "The Dec. 24, 1947 Savoy J.J. Johnson Bop Quintet session credits Al Lucas on bass, J.J. Johnson on trombone, Leo Parker on baritone sax, Hank Jones on piano and Shadow Wilson on drums.", "source_url": "https://www.jazzdisco.org/savoy-records/discography-1947/"},
+        {"id": "ev02", "claim": "Savoy matrices S3519 Boneology, S3520 Down Vernon's Alley, S3521 Yesterdays and S3522 Riffette share Al Lucas's explicitly listed Dec. 24, 1947 bassist credit.", "source_url": "https://www.jazzdisco.org/savoy-records/discography-1947/"}
+      ]
+    },
+    "castor-mccord": {
+      "summary": "Clarinetist and tenor saxophonist Castor McCord recorded Dinah and Tiger Rag with Louis Armstrong's orchestra for OKeh in New York on May 4, 1930.",
+      "primary_source_url": "https://michaelminn.net/discographies/armstrong/stardom/index.html",
+      "now_playing_hint": "Reeds / Armstrong OKeh 1930",
+      "why_it_matters": "Discography identifies his clarinet and tenor sax roles and distinguishes Castor from saxophonist Theodore McCord in an early swing recording.",
+      "evidence": [
+        {"id": "ev01", "claim": "Armstrong's May 4, 1930 OKeh orchestra session lists Castor McCord on clarinet and tenor sax and Theodore McCord on alto sax; Dinah is matrix W404001-C and Tiger Rag W404002-B.", "source_url": "https://michaelminn.net/discographies/armstrong/stardom/index.html"},
+        {"id": "ev02", "claim": "The Armstrong Chronological Classics reissue lists Castor McCord specifically on tenor sax for the May 4, 1930 Dinah recording, separate from Ted McCord's alto sax.", "source_url": "https://musicbrainz.org/release/8b498629-8688-46eb-9319-52c5a225a64e"}
+      ]
+    },
+    "chris-white": {
+      "summary": "Bassist Chris White played on the 1967 New York sessions for Jimmy Owens and Kenny Barron's Atlantic quintet album You Had Better Listen, with Benny Maupin on reeds.",
+      "primary_source_url": "https://www.jazzdisco.org/atlantic-records/discography-1967/",
+      "now_playing_hint": "Bass / Owens-Barron Atlantic",
+      "why_it_matters": "The precise Atlantic session dates distinguish Christopher White's bass performance from later album issue and changing drummers.",
+      "evidence": [
+        {"id": "ev01", "claim": "The January 16 and 18, 1967 Atlantic Jimmy Owens-Kenny Barron Quintet sessions credit Christopher White on bass, Benny Maupin on tenor and flute, Barron on piano, Owens on brass and Rudy Collins on drums.", "source_url": "https://www.jazzdisco.org/atlantic-records/discography-1967/"},
+        {"id": "ev02", "claim": "Kenny Barron's official discography confirms Christopher White on bass for You Had Better Listen and lists Rudy Collins and Freddie Waits as drummers; it dates the original Atlantic issue to 1968.", "source_url": "https://kennybarron.com/recordings/you-had-better-listen/"}
+      ]
+    },
+    "carl-morten-iversen": {
+      "summary": "Norwegian bassist Carl Morten Iversen recorded Trio '87 with pianist Armen Donelian and drummer Audun Kleive in Oslo on July 11, 1987; all three co-wrote Song With No Name.",
+      "primary_source_url": "https://www.armendonelian.com/releases-as-leader/2015/9/12/trio-87",
+      "now_playing_hint": "Bass / Oslo Trio '87",
+      "why_it_matters": "The session and co-composition document Iversen's improvising role in Norway's acoustic jazz trio scene rather than an inferred general partnership.",
+      "limitations": "The artist site lists January 1988 while another discography lists 1987 issue; only the July 11, 1987 recording day is asserted.",
+      "evidence": [
+        {"id": "ev01", "claim": "Armen Donelian's official Trio '87 liner gives July 11, 1987 at Rainbow Studio in Oslo, with Carl Morten Iversen on bass, Donelian on piano and Audun Kleive on drums.", "source_url": "https://www.armendonelian.com/releases-as-leader/2015/9/12/trio-87"},
+        {"id": "ev02", "claim": "The original Odin NJ 4024 track credits list Song With No Name as jointly composed by Armen Donelian, Carl Morten Iversen and Audun Kleive; the website also quotes contemporary Norwegian reviews.", "source_url": "https://www.armendonelian.com/releases-as-leader/2015/9/12/trio-87"}
+      ]
+    },
+    "peter-beets": {
+      "summary": "Dutch pianist Peter Beets recorded New York Trio - Page Two in Brooklyn on Dec. 16, 2002 with bassist Larry Grenadier and drummer Willie Jones III; released in 2003.",
+      "primary_source_url": "https://crisscrossjazz.com/album/1237.html",
+      "now_playing_hint": "Piano / Criss Cross trio",
+      "why_it_matters": "Original Criss Cross documentation gives the precise piano-trio lineup and distinguishes Beets's compositions from Rollins and Jamal standards.",
+      "evidence": [
+        {"id": "ev01", "claim": "Criss Cross Jazz 1237 lists Peter Beets on piano, Larry Grenadier on bass and Willie Jones III on drums for New York Trio - Page Two, recorded in Brooklyn on December 16, 2002.", "source_url": "https://crisscrossjazz.com/album/1237.html"},
+        {"id": "ev02", "claim": "The Criss Cross original album page gives May 8, 2003 availability and credits For Simon, It Has Happened and In A Hazy Mood to Peter Beets, but Paradox to Sonny Rollins.", "source_url": "https://crisscrossjazz.com/album/1237.html"}
+      ]
+    },
+    "bing-crosby": {
+      "summary": "Singer Bing Crosby was one of Paul Whiteman's Rhythm Boys singing on the Feb. 18, 1928 Victor 21274 recording of Mississippi Mud with the jazz-age orchestra.",
+      "primary_source_url": "https://nwr-site-liner-notes.s3.amazonaws.com/80279.pdf",
+      "now_playing_hint": "Vocals / Whiteman Rhythm Boys",
+      "why_it_matters": "An original-label reissue provides a precise recording date and separates the vocal group credit from the songwriters and orchestra.",
+      "evidence": [
+        {"id": "ev01", "claim": "New World Records liner notes credit the Rhythm Boys with Paul Whiteman's orchestra on Mississippi Mud, recorded Feb. 18, 1928 for Victor 21274, matrix 41696-4.", "source_url": "https://nwr-site-liner-notes.s3.amazonaws.com/80279.pdf"},
+        {"id": "ev02", "claim": "The same New World Records historical liner identifies Bing Crosby, Al Rinker and Harry Barris as the Rhythm Boys, and separately credits Cavanaugh and Barris for the song itself.", "source_url": "https://nwr-site-liner-notes.s3.amazonaws.com/80279.pdf"}
+      ]
+    },
+    "china-forbes": {
+      "summary": "Vocalist China Forbes joined Pink Martini in 1995 and co-wrote and sang Sympathique with pianist Thomas Lauderdale on their 1997 Heinz Records debut album.",
+      "primary_source_url": "https://pinkmartini.com/member/china-forbes/",
+      "now_playing_hint": "Vocals / Pink Martini 1997",
+      "why_it_matters": "Direct band and label information distinguishes her lead singing and songwriting from the orchestra's stylistic influences and touring venues.",
+      "evidence": [
+        {"id": "ev01", "claim": "Pink Martini's official China Forbes biography dates her entry into the group to 1995 and credits her and Thomas Lauderdale with writing Sympathique and other songs.", "source_url": "https://pinkmartini.com/member/china-forbes/"},
+        {"id": "ev02", "claim": "Pink Martini's official discography identifies Sympathique as the band's 1997 Heinz Records debut album and separately lists its title song among the tracks.", "source_url": "https://pinkmartini.com/discography/sympathique/"}
+      ]
+    },
+    "anthony-wilson": {
+      "summary": "Jazz guitarist Anthony Wilson accompanied Diana Krall at Paris's Olympia on Nov. 29-Dec. 2, 2001, on Live in Paris, issued by Verve in 2002.",
+      "primary_source_url": "https://www.jazzdisco.org/diana-krall/discography/",
+      "now_playing_hint": "Guitar / Krall Live in Paris",
+      "why_it_matters": "The precise live session credits distinguish Wilson's guitar performance from the arranging and composition roles of other musicians.",
+      "evidence": [
+        {"id": "ev01", "claim": "Diana Krall's Paris Olympia concerts of Nov. 29 through Dec. 2, 2001 credit Anthony Wilson on guitar, John Clayton on bass, Jeff Hamilton on drums and Krall on piano and vocals.", "source_url": "https://www.jazzdisco.org/diana-krall/discography/"},
+        {"id": "ev02", "claim": "The Saint-Etienne public media library catalog lists Anthony Wilson as the guitarist on Verve's 2002 Live in Paris and confirms the concert dates from November 29 to December 2.", "source_url": "https://mediatheques.saint-etienne.fr/Default/doc/SYRACUSE/1097259/live-in-paris-diana-krall?_lg=fr-FR"}
+      ]
+    }
+  },
+  "revised": {
+    "nathan-davis": {
+      "summary": "Saxophonist and flutist Nathan Davis recorded Happy Girl in 1965 with Woody Shaw, Larry Young, Jimmy Woode and Billy Brooks; he composed The Flute in the Blues.",
+      "reason": "MPS states recorded in 1965, not that the initial issue occurred in 1965.",
+      "evidence": {
+        "ev01": {"claim": "MPS states that Nathan Davis recorded Happy Girl in 1965, joined by Woody Shaw on trumpet, Larry Young on piano, Jimmy Woode on bass and Billy Brooks on drums.", "source_url": "https://www.mps-music.com/releases/happy-girl/"},
+        "ev03": {"claim": "The SABA SB 15025 ST Happy Girl album credits Nathan Davis on flute, Woody Shaw on trumpet, Larry Young on piano, Jimmy Woode on bass and Billy Brooks on drums; disputed exact recording days are omitted.", "source_url": "https://jazzcodex.com/albums/nathan-davis-happy-girl/"}
+      }
+    },
+    "fred-guy": {
+      "summary": "Banjoist Fred Guy played on Duke Ellington's Washingtonians' 1927 Columbia East St. Louis Toodle-O and Victor Creole Love Call studio sessions.",
+      "reason": "The October 26, 1927 Creole Love Call session has conflicting historical claims about NYC versus Camden; location removed rather than guessed.",
+      "evidence": {}
+    }
+  },
+  "deferred": {
+    "buzzy-drootin": "Artist biography and obituaries exist, but original specific drummer-session matrix still insufficiently corroborated.",
+    "safy-boutella": "First-issue sleeve and independent personnel remain unresolved.",
+    "marcel-loeffler": "Specialist session transcript was unavailable during audit; no inference from an album title.",
+    "paul-hanmer": "Known synth guest credit lies outside independently demonstrated jazz-leading project.",
+    "gene-kardos": "Original recording-session personnel remain insufficiently independently verified."
+  }
+}

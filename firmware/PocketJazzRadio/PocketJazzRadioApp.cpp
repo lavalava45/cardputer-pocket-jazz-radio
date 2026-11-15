@@ -45,8 +45,12 @@
 #include "TuningSoundBed.h"
 #include "JazzNotesSearch.h"
 #include "JazzEncyclopedia.h"
+#include "JazzNotesLayout.h"
 #include "NotesResultWorkspace.h"
 #include "JazzFacts.h"
+#include "JazzJourney.h"
+#include "JazzNowPlaying.h"
+#include "JazzIcyArtist.h"
 #include "PreferenceGuards.h"
 #include "WifiProfilePolicy.h"
 #include "SettingsBackupPolicy.h"
@@ -132,10 +136,11 @@ struct SavedStation {
 };
 struct TrackMetadata {
   uint8_t stationId;
+  uint32_t intentSequence;
   char title[96];
 };
 enum AudioState : int { STOPPED, WAIT_WIFI, WAIT_TIME, CONNECTING, BUFFERING, PLAYING, ERROR_STREAM, ERROR_MEMORY };
-enum Screen : uint8_t { RADIO, WIFI_LIST, WIFI_PASSWORD, WIFI_JOIN, HELP, DIAGNOSTICS, RECENTS, SEARCH, MOOD, NOTES, SHARE, TEMPO, CLOCK, SOUND_FX, TRACKS, BROWSE, NOTES_SEARCH, SPARK, SETTINGS_BACKUP, OFFLINE_LIBRARY, DAILY_ALARM, CATALOG_UPDATE };
+enum Screen : uint8_t { RADIO, WIFI_LIST, WIFI_PASSWORD, WIFI_JOIN, HELP, DIAGNOSTICS, RECENTS, SEARCH, MOOD, NOTES, SHARE, TEMPO, CLOCK, SOUND_FX, TRACKS, BROWSE, NOTES_SEARCH, SPARK, SETTINGS_BACKUP, OFFLINE_LIBRARY, DAILY_ALARM, CATALOG_UPDATE, JAZZ_JOURNEY, JAZZ_TRAIL, JAZZ_LESSON, JAZZ_QUIZ, JAZZ_LISTEN, JAZZ_PASSPORT, JAZZ_DIARY };
 void loadArtistNotes();
 void searchOfflineNotes();
 void pageOfflineNotes(size_t offset);
@@ -145,6 +150,16 @@ void showJazzSpark(int8_t direction = 0);
 void showNotice(const char* message);
 void drawCatalogUpdate();
 void invalidateStationPeek(bool playlistReload);
+bool loadJourneyLesson(uint8_t id);
+bool loadJourneyTip(uint8_t id);
+void loadJourneyProgress(bool beforeAudioStartup = false);
+void saveJazzJourney();
+void queueJazzDiary();
+void openJourneyArtist();
+void openJourneySpark();
+bool canReadJourneyData();
+void verifyJazzNotesIndexAtStop();
+bool notesIndexPairTrusted(File& corpus, File& index);
 
 Station stations[MAX_STATIONS]{};
 pocketjazz::StationAltUrlPool stationAltUrls;
@@ -154,6 +169,9 @@ int stationCount = 0;
 int currentList = 0;
 int currentOffset = 0;
 bool sdAvailable = false;
+bool jazzEncyclopediaIndexTrusted = false;
+size_t jazzTrustedCorpusBytes = 0;
+size_t jazzTrustedIndexBytes = 0;
 // Captured from *the actual SD reload*, not inferred from downloaded files.
 // A mount failure or built-in fallback must never be reported as activation.
 uint8_t catalogDefaultListsLoadedMask = 0;
@@ -207,6 +225,7 @@ pocketjazz::NotesResultWorkspace notesSearchPage;
 bool notesSearchEncyclopedia = false;
 size_t notesSearchOffset = 0;
 int notesDetailPage = 0;
+bool notesShowFullName = false;
 bool jazzSparkReady = false;
 pocketjazz::JazzFact jazzSpark{};
 size_t jazzSparkIndex = 0;
@@ -220,6 +239,31 @@ size_t notesSearchTotal = 0;
 int notesSearchSelected = 0;
 bool notesSearchRan = false;
 bool notesOpenedFromSearch = false;
+bool notesOpenedFromJourney = false;
+Screen sparkReturnScreen = RADIO;
+Screen browseReturnScreen = RADIO;
+uint8_t journeyHubSelected = 0;
+uint8_t journeyTrailSelected = 0;
+uint8_t journeyLessonId = 0;
+uint8_t journeyTipId = 0;
+uint8_t journeyPassportStyle = 0;
+uint8_t journeyDiaryTag = 0;
+Screen journeyDiaryReturnScreen = JAZZ_JOURNEY;
+bool journeyLessonListenView = false;
+Screen journeyLessonReturnScreen = JAZZ_TRAIL;
+bool journeyProgressLoaded = false;
+bool journeyQuizWrong = false;
+pocketjazz::JazzJourneyLesson journeyLesson{};
+pocketjazz::JazzListeningTip journeyTip{};
+pocketjazz::JazzJourneyProgress journeyProgress{};
+struct PendingJazzDiary {
+  char time[26]{};
+  char station[56]{};
+  char title[96]{};
+  uint8_t tag = 0;
+};
+PendingJazzDiary journeyDiaryPending[4]{};
+uint8_t journeyDiaryPendingCount = 0;
 uint8_t moodEnergyCursor = 2;
 uint8_t moodAcousticCursor = 2;
 pocketjazz::TapTempo manualTempo;
@@ -280,7 +324,7 @@ char restoredStationUrl[192] = {};
 uint8_t sleepMinutes = 0;
 uint32_t sleepStartedAt = 0;
 uint8_t helpPage = 0;
-constexpr uint8_t HELP_PAGE_COUNT = 18;
+constexpr uint8_t HELP_PAGE_COUNT = 20;
 constexpr uint8_t DIAG_PAGE_COUNT = 8;
 uint8_t diagPage = 0;
 uint8_t backupConfirmation = 0; // 0=none; 1=export; 2=import
@@ -560,6 +604,7 @@ void icyMetadataCB(void* ctx, const char* type, bool, const char* value) {
   if (!metadataQueue || !ctx || !type || strcmp(type, "StreamTitle") || !value) return;
   TrackMetadata event{};
   event.stationId = *static_cast<uint8_t*>(ctx);
+  event.intentSequence = audioAcceptedSequence;
   // Shared callback is also used by upstream plain-HTTP ICY. It must not
   // split UTF-8 at byte 95 or pass metadata controls to UI/TSV exports.
   pocketjazz::log::cleanTsvField(value, event.title, sizeof(event.title));
@@ -736,6 +781,9 @@ void saveSparkAutoSetting() {
   p.end();
 }
 bool loadPlaylists() {
+  // Remounts (including a replacement SD card) invalidate previous index proof.
+  jazzEncyclopediaIndexTrusted = false;
+  jazzTrustedCorpusBytes = jazzTrustedIndexBytes = 0;
   listCount = stationCount = 0;
   catalogDefaultListsLoadedMask = 0;
   memset(catalogDefaultStationCounts, 0, sizeof(catalogDefaultStationCounts));
@@ -928,6 +976,10 @@ void sendAudio() {
                           strcmp(cmd.url, lastRequestedAudioUrl) != 0 ||
                           strcmp(cmd.altUrl, lastRequestedAudioAltUrl) != 0);
   if (newIntent) {
+    // Every fresh stream generation must receive fresh ICY data. The same
+    // station can restart after STOP, and retaining its old title would let
+    // Diary attribute a stale track to the new session.
+    currentTitle[0] = 0;
     ++telemetryNextSequence;
     if (!telemetryNextSequence) ++telemetryNextSequence;
     lastRequestedAudioPlay = cmd.play;
@@ -1018,117 +1070,10 @@ void showExportStatus(ExportWriteStatus status, const char* success) {
   }
 }
 
-void exportAudioRuntime() {
-  char row[768];
-  for (size_t n = audioJournal.count(); n > 0; --n) {
-    const auto& e = *audioJournal.newest(n - 1);
-    const int count = snprintf(row, sizeof(row),
-      "%lu\tstage=%u\tage=%lu\thb=%lu\tdetail=%lu\tbuf=%lu\tfree=%lu\tlargest=%lu\topens=%lu\tframes=%lu\treject=%lu\tdrops=%lu\tunder=%lu\tstop=%lu\trssi=%ld\twifi=%u\tstate=%ld\tfail=%ld\thttp=%ld\ttls=%ld\tcoalesced=%lu\tpcm_age=%lu\twaiting=%u\tobserved=%lu\tattempt=%lu\thop=%lu\tretry_at=%lu\toutstanding=%lu\tfree_before=%lu\tlargest_before=%lu\n",
-      (unsigned long)e.at, (unsigned)e.stage, (unsigned long)e.stageMs,
-      (unsigned long)e.heartbeatMs, (unsigned long)e.detail, (unsigned long)e.buffer,
-      (unsigned long)e.freeHeap, (unsigned long)e.largest, (unsigned long)e.opens,
-      (unsigned long)e.frames, (unsigned long)e.rejects, (unsigned long)e.drops,
-      (unsigned long)e.under, (unsigned long)e.stopMs, (long)e.rssi, (unsigned)e.wifi,
-      (long)e.state, (long)e.failure, (long)e.http, (long)e.tls, (unsigned long)audioFaultCoalesced,
-      (unsigned long)e.pcmAgeMs, (unsigned)e.inputWaiting, (unsigned long)e.observedAt,
-      (unsigned long)e.attempt, (unsigned long)e.hop, (unsigned long)e.retryAt,
-      (unsigned long)e.outstanding, (unsigned long)e.freeBefore, (unsigned long)e.largestBefore);
-    if (count < 0 || (size_t)count >= sizeof(row)) { showNotice("Runtime row too large"); return; }
-    const auto result = appendUiExport("/PocketJazz/audio-runtime.tsv", row, (size_t)count);
-    if (result != EXPORT_WRITTEN) { showExportStatus(result, ""); return; }
-  }
-  showNotice("Runtime events saved");
-}
-void exportHeapLifecycle() {
-  // SD I/O competes with live audio. The snapshots were taken in RAM during
-  // network/decode stages; export ONLY after STOP has released the stream.
-  if (audioState.load() != STOPPED) {
-    showNotice("STOP radio before RAM export");
-    return;
-  }
-  if (!heapLifecycle.attempt()) { showNotice("No RAM samples yet"); return; }
-  char row[320];
-  size_t countExported = 0;
-  for (size_t i = 0; i < pocketjazz::HeapLifecycleProfile::kCount + 1; ++i) {
-    pocketjazz::HeapCheckpoint snap;
-    const bool firstEver = i == pocketjazz::HeapLifecycleProfile::kCount;
-    const bool found = firstEver
-        ? heapLifecycle.firstStallEver(snap)
-        : heapLifecycle.read(static_cast<pocketjazz::HeapMoment>(i), snap);
-    if (!found) continue;
-    const char* name = firstEver ? "FIRST_STALL_EVER"
-        : pocketjazz::heapMomentName(static_cast<pocketjazz::HeapMoment>(i));
-    const int written = snprintf(row, sizeof(row),
-        "attempt=%lu\tms=%lu\tphase=%s\tfree8=%lu\tlargest8=%lu\tdma_free=%lu\tdma_largest=%lu\tring=%lu\tbuffer=%lu\tsource_bytes=%lu\tsource_idle_ms=%lu\tsource_gap_max_ms=%lu\n",
-        (unsigned long)snap.attempt, (unsigned long)snap.atMs, name,
-        (unsigned long)snap.free8, (unsigned long)snap.largest8,
-        (unsigned long)snap.freeDma, (unsigned long)snap.largestDma,
-        (unsigned long)snap.ringBytes, (unsigned long)snap.bufferedBytes,
-        (unsigned long)snap.sourceBytes, (unsigned long)snap.sourceIdleMs,
-        (unsigned long)snap.sourceMaxGapMs);
-    if (written < 0 || (size_t)written >= sizeof(row)) {
-      showNotice("RAM row too large");
-      return;
-    }
-    const auto result = appendUiExport("/PocketJazz/heap-lifecycle.tsv",
-                                       row, (size_t)written);
-    if (result != EXPORT_WRITTEN) {
-      showExportStatus(result, "");
-      return;
-    }
-    ++countExported;
-  }
-  showNotice(countExported ? "RAM stages saved to SD" : "No RAM stages");
-}
-
-void exportDiagnostics() {
-  // Numeric operating counters only. Do NOT log Wi-Fi credentials, SSID,
-  // direct stream URLs, IP addresses or potentially private QR links.
-  char timestamp[26] = {};
-  const time_t t = time(nullptr);
-  if (ntpSynced.load() && t >= MIN_TLS_TIME) {
-    tm utc{};
-    gmtime_r(&t, &utc);
-    strftime(timestamp, sizeof(timestamp), "%Y-%m-%dT%H:%M:%SZ", &utc);
-  } else {
-    snprintf(timestamp, sizeof(timestamp), "uptime:%lus", (unsigned long)(millis() / 1000UL));
-  }
-  const auto pcm = audioPlayout.snapshot();
-  char row[832];
-  const int count = snprintf(row, sizeof(row),
-    "%s\twifi=%u\trssi=%d\tip=%u\tdrops=%lu\treason=%d\tstate=%d\tbuffer=%lu\tunderrun=%lu\treopen=%lu\tframes=%lu\theap=%lu\tlargest=%lu\tminheap=%lu\tstack=%lu\tbattery_mv=%d\treset=%d"
-    "\tpcm_gap_count=%lu\tpcm_gap_max_ms=%lu\tpcm_gap_total_ms=%lu\tpcm_enqueue_reject=%lu\tpcm_rate_hz=%lu\tstop_count=%lu\tstop_last_ms=%lu\tstop_p50_upper_ms=%lu\tstop_p95_upper_ms=%lu\tstop_max_ms=%lu\tswitch_count=%lu\tswitch_last_ms=%lu\tswitch_p50_upper_ms=%lu\tswitch_p95_upper_ms=%lu\tswitch_max_ms=%lu\n",
-    timestamp, (unsigned)wifiReady.load(), wifiHasIp() ? WiFi.RSSI() : -127,
-    (unsigned)wifiHasIp(), (unsigned long)wifiDisconnectEvents.load(),
-    wifiDisconnectReason.load(), audioState.load(),
-    (unsigned long)audioBufferedBytes.load(),
-    (unsigned long)diagAudioWindow.under(audioUnderruns.load()),
-    (unsigned long)diagAudioWindow.opens(audioReopens.load()),
-    (unsigned long)diagAudioWindow.frames(audioFrames.load()),
-    (unsigned long)ESP.getFreeHeap(),
-    (unsigned long)heap_caps_get_largest_free_block(MALLOC_CAP_8BIT),
-    (unsigned long)heap_caps_get_minimum_free_size(MALLOC_CAP_8BIT),
-    (unsigned long)audioStackWatermark.load(), batteryMillivolts,
-    (int)esp_reset_reason(),
-    (unsigned long)pcm.pcmGapEpisodes, (unsigned long)pcm.pcmGapMaxMs,
-    (unsigned long)pcm.pcmGapTotalMs, (unsigned long)pcm.pcmHandoffFailures,
-    (unsigned long)decodedPcmRateHz.load(), (unsigned long)pcm.stopCount,
-    (unsigned long)pcm.stopLastMs, (unsigned long)pcm.stopP50UpperMs,
-    (unsigned long)pcm.stopP95UpperMs,
-    (unsigned long)pcm.stopMaxMs, (unsigned long)pcm.switchCount,
-    (unsigned long)pcm.switchLastMs, (unsigned long)pcm.switchP50UpperMs,
-    (unsigned long)pcm.switchP95UpperMs,
-    (unsigned long)pcm.switchMaxMs);
-  if (count < 0 || (size_t)count >= sizeof(row)) {
-    showNotice("Diag export too large");
-    return;
-  }
-  showExportStatus(appendUiExport("/PocketJazz/diagnostics.tsv", row, (size_t)count),
-                   "Diagnostics saved to SD");
-}
 void exportIncidentReport() {
-  // One manual, *post-STOP* report: station context, all diagnostic pages,
-  // bounded runtime events and heap/source checkpoints. No audio-task SD IO.
+  // The ONLY Diagnostics export: station and ICY context, all screen
+  // counters, complete old runtime-event fields, and heap/source checkpoints.
+  // Only after STOP; no network or filesystem I/O in the audio worker.
   // Create a NEW file instead of appending to or overwriting personal logs.
   if (audioState.load() != STOPPED || wantPlay) {
     showNotice("STOP radio before report");
@@ -1180,7 +1125,7 @@ void exportIncidentReport() {
           "BEGIN\tversion=%s\tutc_or_uptime=%s\tsnapshot_ms=%lu\tpost_stop=1\n",
           POCKETJAZZ_FIRMWARE_VERSION, timeStamp, (unsigned long)snapshotAt))) break;
     if (!writeRow(snprintf(row, sizeof(row),
-          "STATION\tindex=%d\tcollection=%s\tname=%s\ticy_title=%s\n",
+          "STATION\tselected_at_report=1\tindex=%d\tcollection=%s\tname=%s\ticy_title=%s\n",
           idx, collection, station, title))) break;
     if (!writeRow(snprintf(row, sizeof(row),
           "WIFI\tready=%u\tip_assigned=%u\trssi_dbm=%ld\tgot_ip=%lu\tdrops=%lu\treason=%d\tlast_drop_ms=%lu\tntp=%u\n",
@@ -1219,9 +1164,10 @@ void exportIncidentReport() {
           (unsigned long)decodedMp3FrameBps.load(),
           (unsigned)decodedMp3ObservedVbr.load()))) break;
     if (!writeRow(snprintf(row, sizeof(row),
-          "PCM\tgaps=%lu\tgap_max_ms=%lu\tgap_total_ms=%lu\trejects=%lu\tstop_count=%lu\tstop_last_ms=%lu\tstop_p50_upper_ms=%lu\tstop_p95_upper_ms=%lu\tstop_max_ms=%lu\tswitch_count=%lu\tswitch_last_ms=%lu\tswitch_p50_upper_ms=%lu\tswitch_p95_upper_ms=%lu\tswitch_max_ms=%lu\n",
+          "PCM\tpcm_gap_count=%lu\tpcm_gap_max_ms=%lu\tpcm_gap_total_ms=%lu\tpcm_enqueue_reject=%lu\tpcm_rate_hz=%lu\tstop_count=%lu\tstop_last_ms=%lu\tstop_p50_upper_ms=%lu\tstop_p95_upper_ms=%lu\tstop_max_ms=%lu\tswitch_count=%lu\tswitch_last_ms=%lu\tswitch_p50_upper_ms=%lu\tswitch_p95_upper_ms=%lu\tswitch_max_ms=%lu\n",
           (unsigned long)pcm.pcmGapEpisodes, (unsigned long)pcm.pcmGapMaxMs,
           (unsigned long)pcm.pcmGapTotalMs, (unsigned long)pcm.pcmHandoffFailures,
+          (unsigned long)decodedPcmRateHz.load(),
           (unsigned long)pcm.stopCount, (unsigned long)pcm.stopLastMs,
           (unsigned long)pcm.stopP50UpperMs, (unsigned long)pcm.stopP95UpperMs,
           (unsigned long)pcm.stopMaxMs, (unsigned long)pcm.switchCount,
@@ -1235,14 +1181,25 @@ void exportIncidentReport() {
           (unsigned long)audioStackWatermark.load(), batteryMillivolts,
           (int)esp_reset_reason(), (unsigned long)uiLoopMaxGapMs.load(),
           (unsigned long)snapshotAt, (unsigned long)audioFaultCoalesced))) break;
+    if (!writeRow(snprintf(row, sizeof(row),
+          "RUNTIME\tstage_after_stop=%u\tstage_since_ms=%lu\theartbeat_at_ms=%lu\theartbeat_age_ms=%lu\tattempt=%lu\thop=%lu\tretry_at_ms=%lu\tspeaker_outstanding=%lu\tdetail=%lu\tjournal_count=%lu\theap_attempt=%lu\n",
+          (unsigned)audioLive.stage, (unsigned long)audioLive.since,
+          (unsigned long)audioLive.heartbeat,
+          (unsigned long)(snapshotAt - audioLive.heartbeat),
+          (unsigned long)audioLive.attempt, (unsigned long)audioLive.hop,
+          (unsigned long)audioLive.retryAt,
+          (unsigned long)audioLive.outstanding,
+          (unsigned long)audioLive.detail,
+          (unsigned long)audioJournal.count(),
+          (unsigned long)heapLifecycle.attempt()))) break;
     bool failed = false;
     // Journal records the historical MP3 buffer and state BEFORE STOP; the
     // instantaneous STREAM state above is expected to be STOPPED / zero.
     for (size_t n = audioJournal.count(); n > 0; --n) {
       const auto& e = *audioJournal.newest(n - 1);
       if (!writeRow(snprintf(row, sizeof(row),
-            "EVENT\tms=%lu\tstage=%u\tstate=%ld\tbuffer=%lu\tunder=%lu\twifi=%u\trssi=%ld\tdrops=%lu\tpcm_age_ms=%lu\twaiting=%u\tframes=%lu\tfree8=%lu\tlargest8=%lu\topen=%lu\tattempt=%lu\thop=%lu\tfail=%ld\thttp=%ld\ttls=%ld\tstage_age_ms=%lu\theartbeat_age_ms=%lu\tnet_detail=%lu\tpcm_reject=%lu\n",
-            (unsigned long)e.at, (unsigned)e.stage, (long)e.state,
+            "EVENT\tms=%lu\tobserved_ms=%lu\tstage=%u\tstate=%ld\tbuffer=%lu\tunder=%lu\twifi=%u\trssi=%ld\tdrops=%lu\tpcm_age_ms=%lu\twaiting=%u\tframes=%lu\tfree8=%lu\tlargest8=%lu\topen=%lu\tattempt=%lu\thop=%lu\tfail=%ld\thttp=%ld\ttls=%ld\tstage_age_ms=%lu\theartbeat_age_ms=%lu\tnet_detail=%lu\tpcm_reject=%lu\tstop_ms=%lu\tretry_at_ms=%lu\tspeaker_outstanding=%lu\tfree_before=%lu\tlargest_before=%lu\tcoalesced_faults=%lu\n",
+            (unsigned long)e.at, (unsigned long)e.observedAt, (unsigned)e.stage, (long)e.state,
             (unsigned long)e.buffer, (unsigned long)e.under, (unsigned)e.wifi,
             (long)e.rssi, (unsigned long)e.drops, (unsigned long)e.pcmAgeMs,
             (unsigned)e.inputWaiting, (unsigned long)e.frames,
@@ -1250,7 +1207,26 @@ void exportIncidentReport() {
             (unsigned long)e.opens, (unsigned long)e.attempt,
             (unsigned long)e.hop, (long)e.failure, (long)e.http, (long)e.tls,
             (unsigned long)e.stageMs, (unsigned long)e.heartbeatMs,
-            (unsigned long)e.detail, (unsigned long)e.rejects))) {
+            (unsigned long)e.detail, (unsigned long)e.rejects,
+            (unsigned long)e.stopMs, (unsigned long)e.retryAt,
+            (unsigned long)e.outstanding, (unsigned long)e.freeBefore,
+            (unsigned long)e.largestBefore,
+            (unsigned long)audioFaultCoalesced))) {
+        failed = true;
+        break;
+      }
+    }
+    if (failed) break;
+    // Keep all five currently held ICY announcements in the unified report.
+    // No reads of the older personal icy-history.tsv, no secret URL fields.
+    for (size_t n = trackHistory.size(); n > 0; --n) {
+      const auto* item = trackHistory.newest(n - 1);
+      char icyStation[56]{}, icyTitle[96]{};
+      pocketjazz::log::cleanTsvField(item->station, icyStation, sizeof(icyStation));
+      pocketjazz::log::cleanTsvField(item->title, icyTitle, sizeof(icyTitle));
+      if (!writeRow(snprintf(row, sizeof(row),
+            "ICY_HISTORY\tms=%lu\tstation=%s\ttitle=%s\n",
+            (unsigned long)item->observedAtMs, icyStation, icyTitle))) {
         failed = true;
         break;
       }
@@ -2973,6 +2949,136 @@ void handleKeys(const Press& k) {
     if (k.del) screen = RADIO;
     return;
   }
+  if (screen == JAZZ_JOURNEY) {
+    if (pressed(k, 'p')) { saveJazzJourney(); return; }
+    if (k.del) { screen = RADIO; return; }
+    if (k.up) journeyHubSelected = (journeyHubSelected + 3) % 4;
+    if (k.down) journeyHubSelected = (journeyHubSelected + 1) % 4;
+    if (k.enter) {
+      switch (journeyHubSelected) {
+        case 0: screen = JAZZ_TRAIL; break;
+        case 1:
+          if (loadJourneyTip(journeyTipId)) screen = JAZZ_LISTEN;
+          break;
+        case 2: screen = JAZZ_PASSPORT; break;
+        case 3: journeyDiaryReturnScreen = JAZZ_JOURNEY; screen = JAZZ_DIARY; break;
+      }
+    }
+    return;
+  }
+  if (screen == JAZZ_TRAIL) {
+    if (pressed(k, 'p')) { saveJazzJourney(); return; }
+    if (k.del) { screen = JAZZ_JOURNEY; return; }
+    if (k.up) journeyTrailSelected = (journeyTrailSelected + 3) % 4;
+    if (k.down) journeyTrailSelected = (journeyTrailSelected + 1) % 4;
+    if (k.enter && loadJourneyLesson(journeyTrailSelected * 6)) {
+      journeyLessonReturnScreen = JAZZ_TRAIL;
+      journeyLessonListenView = false;
+      screen = JAZZ_LESSON;
+    }
+    return;
+  }
+  if (screen == JAZZ_LESSON) {
+    if (pressed(k, 'p')) { saveJazzJourney(); return; }
+    if (k.del) { screen = journeyLessonReturnScreen; return; }
+    const uint8_t chapter = journeyLessonId / 6;
+    if (k.up) {
+      const uint8_t next = journeyLessonId % 6 == 0 ?
+          chapter * 6 + 5 : journeyLessonId - 1;
+      if (loadJourneyLesson(next)) journeyLessonListenView = false;
+      return;
+    }
+    if (k.down) {
+      const uint8_t next = chapter * 6 + (journeyLessonId + 1) % 6;
+      if (loadJourneyLesson(next)) journeyLessonListenView = false;
+      return;
+    }
+    if (pressed(k, 't')) {
+      journeyLessonListenView = !journeyLessonListenView;
+      return;
+    }
+    if (pressed(k, 'n')) { openJourneyArtist(); return; }
+    if (pressed(k, 'z')) { openJourneySpark(); return; }
+    if (pressed(k, 'v')) {
+      if (!journeyProgressLoaded) {
+        showNotice("STOP to load progress");
+      } else {
+        const bool marked = journeyProgress.markHeard(journeyLessonId);
+        showNotice(marked ? "Marked HEARD (manual)" : "Already marked HEARD");
+      }
+      return;
+    }
+    if (pressed(k, 'f')) {
+      invalidateStationPeek(false);
+      browseList = currentList;
+      browseSelected = currentOffset;
+      browseReturnScreen = JAZZ_LESSON;
+      screen = BROWSE;
+      return;
+    }
+    if (k.enter) { journeyQuizWrong = false; screen = JAZZ_QUIZ; }
+    return;
+  }
+  if (screen == JAZZ_QUIZ) {
+    if (pressed(k, 'p')) { saveJazzJourney(); return; }
+    if (k.del) { screen = JAZZ_LESSON; return; }
+    for (uint8_t answer = 1; answer <= 3; ++answer) {
+      if (!pressed(k, char('0' + answer))) continue;
+      if (answer == journeyLesson.correct) {
+        if (journeyProgressLoaded) journeyProgress.markLearned(journeyLessonId);
+        else showNotice("STOP to load Passport");
+        journeyQuizWrong = false;
+        screen = JAZZ_LESSON;
+        if (journeyProgressLoaded) showNotice("Correct! P save after STOP");
+      } else {
+        journeyQuizWrong = true;
+        showNotice("Not quite; try again");
+      }
+      return;
+    }
+    return;
+  }
+  if (screen == JAZZ_LISTEN) {
+    if (pressed(k, 'p')) { saveJazzJourney(); return; }
+    if (k.del) { screen = JAZZ_JOURNEY; return; }
+    if (k.up) loadJourneyTip((journeyTipId + 29) % 30);
+    if (k.down) loadJourneyTip((journeyTipId + 1) % 30);
+    if (k.enter && loadJourneyLesson(journeyTip.lesson)) {
+      journeyLessonReturnScreen = JAZZ_LISTEN;
+      journeyLessonListenView = false;
+      screen = JAZZ_LESSON;
+    }
+    return;
+  }
+  if (screen == JAZZ_PASSPORT) {
+    if (pressed(k, 'p')) { saveJazzJourney(); return; }
+    if (k.del) { screen = JAZZ_JOURNEY; return; }
+    if (k.up) journeyPassportStyle =
+        (journeyPassportStyle + pocketjazz::JazzJourneyCatalog::kStyles - 1) %
+        pocketjazz::JazzJourneyCatalog::kStyles;
+    if (k.down) journeyPassportStyle =
+        (journeyPassportStyle + 1) % pocketjazz::JazzJourneyCatalog::kStyles;
+    if (k.enter) {
+      for (uint8_t i = 0; i < 24; ++i)
+        if (pocketjazz::JazzJourneyCatalog::styleForLesson(i) == journeyPassportStyle) {
+          if (loadJourneyLesson(i)) {
+            journeyLessonReturnScreen = JAZZ_PASSPORT;
+            journeyLessonListenView = false;
+            screen = JAZZ_LESSON;
+          }
+          break;
+        }
+    }
+    return;
+  }
+  if (screen == JAZZ_DIARY) {
+    if (pressed(k, 'p')) { saveJazzJourney(); return; }
+    if (k.del) { screen = journeyDiaryReturnScreen; return; }
+    if (k.up) journeyDiaryTag = (journeyDiaryTag + 2) % 3;
+    if (k.down) journeyDiaryTag = (journeyDiaryTag + 1) % 3;
+    if (k.enter) queueJazzDiary();
+    return;
+  }
   if (screen == CATALOG_UPDATE) {
     if (k.del) { screen = RADIO; return; }
     if (k.enter && !catalogUpdateInProgress) {
@@ -2996,6 +3102,7 @@ void handleKeys(const Press& k) {
                                   sizeof(selectedUrl));
         invalidateStationPeek(true);
         const bool reloaded = loadPlaylists();
+        if (reloaded) verifyJazzNotesIndexAtStop();
         // Distinguish successfully downloaded+verified SD bytes from genuine
         // activation in the UI: missing SD, builtin fallback and incomplete
         // parsing all fail this gate. Pending transaction is still reversible.
@@ -3009,6 +3116,7 @@ void handleKeys(const Press& k) {
           if (catalogUpdateStatus == pocketjazz::CatalogUpdateResult::RecoveryFailed)
             catalogRecoveryChecked = false;
           loadPlaylists();
+          verifyJazzNotesIndexAtStop();
         }
         currentList = currentOffset = 0;
         if (selectedUrl[0]) {
@@ -3031,8 +3139,6 @@ void handleKeys(const Press& k) {
   }
   if (screen == DIAGNOSTICS) {
     if (pressed(k, 'r')) { exportIncidentReport(); return; }
-    if (pressed(k, 'e')) { if (diagPage == 7) exportAudioRuntime(); else exportDiagnostics(); return; }
-    if (pressed(k, 'm') && diagPage == 6) { exportHeapLifecycle(); return; }
     if (pressed(k, 'x')) {
       // X resets the entire *displayed audio history*, not just PCM gaps.
       // Keep the raw atomics monotonic for audio/peek/Serial control paths;
@@ -3117,7 +3223,8 @@ void handleKeys(const Press& k) {
   if (screen == BROWSE) {
     if (k.del) {
       invalidateStationPeek(false);
-      screen = RADIO;
+      screen = browseReturnScreen;
+      browseReturnScreen = RADIO;
       return;
     }
     if (pressed(k, 'p') && listCount > 1) {
@@ -3180,13 +3287,31 @@ void handleKeys(const Press& k) {
     return;
   }
   if (screen == NOTES) {
-    if (k.up) notesDetailPage = 0;
-    if (k.down)
-      notesDetailPage = notesDetail.length() > 126 ? 1 : 0;
+    if (pressed(k, 't')) { notesShowFullName = !notesShowFullName; return; }
+    if (k.up) {
+      if (notesDetailPage > 0) --notesDetailPage;
+      // UP is previous page only. T explicitly opens the long-name view;
+      // an UP press on the first page must not unexpectedly change mode.
+      return;
+    }
+    if (k.down) {
+      if (notesShowFullName) { notesShowFullName = false; return; }
+      auto& display = M5Cardputer.Display;
+      display.setTextSize(1); // Key may arrive before drawNotes sets the font.
+      const auto measure = [&](const char* line) { return (int)display.textWidth(line); };
+      const size_t bodyRows = notesAlbum.length() && notesAlbum != "-" ? 6u : 7u;
+      const auto page = pocketjazz::layoutNotes(notesDetail.c_str(),
+          static_cast<size_t>(notesDetailPage), 222, measure, bodyRows);
+      if (page.more && notesDetailPage < 12) ++notesDetailPage;
+      return;
+    }
     // A note opened from the search list returns there on either Enter or
     // Del, as described by the offline help. N (current artist) goes home.
-    if (k.del || k.enter)
-      screen = notesOpenedFromSearch ? NOTES_SEARCH : RADIO;
+    if (k.del || k.enter) {
+      screen = notesOpenedFromSearch ? NOTES_SEARCH :
+               notesOpenedFromJourney ? JAZZ_LESSON : RADIO;
+      notesOpenedFromJourney = false;
+    }
     return;
   }
   if (screen == NOTES_SEARCH) {
@@ -3239,7 +3364,7 @@ void handleKeys(const Press& k) {
   }
   if (screen == SPARK) {
     jazzSparkAutoVisible = false; // A user interaction takes control of the view.
-    if (k.del) { screen = RADIO; return; }
+    if (k.del) { screen = sparkReturnScreen; sparkReturnScreen = RADIO; return; }
     if (pressed(k, 't')) {
       if (!futureNvsSchema) {
         jazzSparkAutoEnabled = !jazzSparkAutoEnabled;
@@ -3297,6 +3422,11 @@ void handleKeys(const Press& k) {
   }
   // Open Help at the last page the user visited during this session.
   if (pressed(k, 'h')) { screen = HELP; return; } // Resume last Help page.
+  if (pressed(k, 'e')) {
+    journeyHubSelected = 0;
+    screen = JAZZ_JOURNEY;
+    return;
+  }
   if (pressed(k, 'd')) {
     catalogUpdateAttempted = false;
     catalogUpdateStatus = pocketjazz::CatalogUpdateResult::NoChange;
@@ -3304,10 +3434,16 @@ void handleKeys(const Press& k) {
     return;
   }
   if (pressed(k, 's')) { screen = SOUND_FX; return; }
-  if (pressed(k, 'z')) { jazzSparkAutoVisible = false; showJazzSpark(0); return; }
+  if (pressed(k, 'z')) {
+    jazzSparkAutoVisible = false;
+    sparkReturnScreen = RADIO;
+    showJazzSpark(0);
+    return;
+  }
   if (pressed(k, 'i')) { diagPage = 0; screen = DIAGNOSTICS; return; }
   if (pressed(k, 'l')) { recentSelected = 0; screen = RECENTS; return; }
   if (pressed(k, 'f')) {
+    browseReturnScreen = RADIO;
     invalidateStationPeek(false); // never adopt a reply from an earlier visit
     browseList = currentList;
     browseSelected = currentOffset;
@@ -3316,8 +3452,18 @@ void handleKeys(const Press& k) {
     return;
   }
   if (pressed(k, 'g')) { screen = MOOD; return; }
+  if (pressed(k, 'k') && k.fn) {
+    journeyHubSelected = 3;
+    journeyDiaryReturnScreen = RADIO;
+    screen = JAZZ_DIARY;
+    return;
+  }
   if (pressed(k, 'k')) { likeCurrentTrack(); return; }
-  if (pressed(k, 'n')) { notesOpenedFromSearch = false; loadArtistNotes(); screen = NOTES; return; }
+  if (pressed(k, 'n')) {
+    notesOpenedFromSearch = false;
+    notesOpenedFromJourney = false;
+    loadArtistNotes(); notesShowFullName = false; screen = NOTES; return;
+  }
   if (pressed(k, 'u')) {
     notesOpenedFromSearch = false;
     notesSearchQuery = "";
@@ -3395,6 +3541,8 @@ void handleKeys(const Press& k) {
     sendAudio();
     invalidateStationPeek(true); // advance generation BEFORE station ID reuse
     loadPlaylists();
+    // A future revalidation may run only after the audio worker reaches STOP.
+    if (audioState.load() == STOPPED) verifyJazzNotesIndexAtStop();
     currentList = currentOffset = 0;
     if (previousUrl[0]) {
       const int restored = findStationUrl(previousUrl);
@@ -3538,7 +3686,9 @@ void serviceMetadata() {
   if (!metadataQueue) return;
   TrackMetadata incoming{};
   if (xQueueReceive(metadataQueue, &incoming, 0) != pdTRUE) return;
-  if (incoming.stationId != stationIndex()) return;
+  if (incoming.stationId != stationIndex() ||
+      incoming.intentSequence != telemetryNextSequence ||
+      !wantPlay || audioState.load() != PLAYING) return;
   strlcpy(currentTitle, incoming.title, sizeof(currentTitle));
   const int idx = stationIndex();
   if (idx >= 0 && audioState.load() == PLAYING)
@@ -3627,15 +3777,21 @@ bool artistIndexOffset(File& file, const String& key, uint32_t& offset) {
 void loadArtistNotes() {
   notesFound = false;
   notesDetailPage = 0;
+  notesShowFullName = false;
   notesArtist = ""; notesDetail = ""; notesAlbum = ""; notesSource = "";
+  if (!canReadJourneyData()) return;
+  if (!jazzEncyclopediaIndexTrusted &&
+      (wantPlay || audioState.load() != STOPPED)) {
+    showNotice("STOP: verify Jazz index");
+    return; // Avoid a 263KB fallback scan during network playback.
+  }
   if (!sdAvailable || !currentTitle[0]) return;
-  String title(currentTitle);
-  // Only a sufficiently explicit "Artist - Track" ICY pattern may be used;
-  // do not infer an artist from a bare program title or station name.
-  const int dash = title.indexOf(" - ");
-  if (dash <= 0 || dash > 96) return;
-  notesArtist = title.substring(0, dash);
-  notesArtist.trim();
+  size_t artistBytes = 0;
+  const char* song = nullptr;
+  // Shared with radio preview: never attribute an ambiguous multi-separator
+  // ICY title to the first named musician.
+  if (!pocketjazz::strictIcyArtistTrack(currentTitle, artistBytes, song)) return;
+  notesArtist = String(currentTitle).substring(0, artistBytes);
   const String key = normalizeArtistKey(notesArtist);
   if (key.isEmpty()) return;
   File file = SD.open("/PocketJazz/artist-notes.tsv", FILE_READ);
@@ -3647,13 +3803,24 @@ void loadArtistNotes() {
     pocketjazz::NotesFile reader = {&rich, static_cast<size_t>(rich.size()), readNotesFile};
     pocketjazz::JazzEncyclopedia db;
     pocketjazz::JazzBiography hit{};
-    if (db.open(reader) && db.find(key.c_str(), hit)) {
+    File index = SD.open("/PocketJazz/jazz-encyclopedia.idx", FILE_READ);
+    pocketjazz::NotesFile indexed = {&index, index ? static_cast<size_t>(index.size()) : 0,
+                                    index ? readNotesFile : nullptr};
+    if (!notesIndexPairTrusted(rich, index) &&
+        (wantPlay || audioState.load() != STOPPED)) {
+      index.close(); rich.close();
+      showNotice("STOP: Jazz index changed");
+      return;
+    }
+    if (db.open(reader) && db.find(key.c_str(), hit, indexed,
+                                   jazzEncyclopediaIndexTrusted)) {
       notesArtist = hit.name;
       notesDetail = hit.summary;
       notesAlbum = hit.album[0] == '-' ? "" : String(hit.album);
       notesSource = hit.source;
       notesFound = true;
     }
+    index.close();
     rich.close();
     return;
   }
@@ -3695,13 +3862,24 @@ void loadArtistNotes() {
     pocketjazz::NotesFile reader = {&rich, static_cast<size_t>(rich.size()), readNotesFile};
     pocketjazz::JazzEncyclopedia db;
     pocketjazz::JazzBiography hit{};
-    if (db.open(reader) && db.find(key.c_str(), hit)) {
+    File index = SD.open("/PocketJazz/jazz-encyclopedia.idx", FILE_READ);
+    pocketjazz::NotesFile indexed = {&index, index ? static_cast<size_t>(index.size()) : 0,
+                                    index ? readNotesFile : nullptr};
+    if (!notesIndexPairTrusted(rich, index) &&
+        (wantPlay || audioState.load() != STOPPED)) {
+      index.close(); rich.close();
+      showNotice("STOP: Jazz index changed");
+      return;
+    }
+    if (db.open(reader) && db.find(key.c_str(), hit, indexed,
+                                   jazzEncyclopediaIndexTrusted)) {
       notesArtist = hit.name;
       notesDetail = hit.summary;
       if (hit.album[0] != '-') notesAlbum = hit.album;
       notesSource = hit.source;
       notesFound = true;
     }
+    index.close();
     rich.close();
   }
 }
@@ -3711,9 +3889,263 @@ bool readNotesFile(void* context, size_t offset, uint8_t* dst, size_t length) {
       length > file->size() - offset || !file->seek(offset)) return false;
   return file->read(dst, length) == length;
 }
+void verifyJazzNotesIndexAtStop() {
+  jazzEncyclopediaIndexTrusted = false;
+  jazzTrustedCorpusBytes = jazzTrustedIndexBytes = 0;
+  // Called before starting the audio task, or after explicit STOP/remount.
+  if (!sdAvailable || (wantPlay && audioQueue) ||
+      audioState.load() != STOPPED || offlineMode || offlineSourceOpen.load())
+    return;
+  File corpus = SD.open("/PocketJazz/jazz-encyclopedia.tsv", FILE_READ);
+  if (!corpus) return;
+  File index = SD.open("/PocketJazz/jazz-encyclopedia.idx", FILE_READ);
+  if (index) {
+    pocketjazz::NotesFile raw = {&corpus, static_cast<size_t>(corpus.size()), readNotesFile};
+    pocketjazz::NotesFile indexed = {&index, static_cast<size_t>(index.size()), readNotesFile};
+    pocketjazz::JazzEncyclopedia db;
+    jazzEncyclopediaIndexTrusted = db.open(raw) && db.verifyIndex(indexed);
+    if (jazzEncyclopediaIndexTrusted) {
+      jazzTrustedCorpusBytes = corpus.size();
+      jazzTrustedIndexBytes = index.size();
+    }
+  }
+  index.close();
+  corpus.close();
+}
+bool notesIndexPairTrusted(File& corpus, File& index) {
+  if (!jazzEncyclopediaIndexTrusted || !corpus || !index ||
+      corpus.size() != jazzTrustedCorpusBytes ||
+      index.size() != jazzTrustedIndexBytes) {
+    jazzEncyclopediaIndexTrusted = false;
+    return false;
+  }
+  // FAT does not provide a reliable generation ID. Same-size in-place changes
+  // require an app restart so the boot-time CRC proof is recomputed.
+  return true;
+}
+bool canReadJourneyData() {
+  // Never read SD in the MP3 worker. User-invoked scans still compete for
+  // the UI/SD bus; avoid them while opening/buffering and unless the
+  // playing ring has substantial headroom. Offline MP3 uses the SD itself.
+  if (!sdAvailable) { showNotice("Insert Jazz Journey SD"); return false; }
+  if (offlineMode || offlineSourceOpen.load()) {
+    showNotice("Exit local MP3 before lessons");
+    return false;
+  }
+  const AudioState state = static_cast<AudioState>(audioState.load());
+  const bool stopped = state == STOPPED && !wantPlay;
+  const bool buffered = state == PLAYING && wantPlay &&
+      audioBufferedBytes.load() >= (audioRingCapacity.load() * 3u) / 4u;
+  if (!stopped && !buffered) {
+    showNotice("Stream busy; retry lesson");
+    return false;
+  }
+  return true;
+}
+bool loadJourneyLesson(uint8_t id) {
+  if (!canReadJourneyData()) return false;
+  File file = SD.open("/PocketJazz/jazz-journey.tsv", FILE_READ);
+  if (!file) { showNotice("Missing jazz-journey.tsv"); return false; }
+  pocketjazz::NotesFile reader = {&file, (size_t)file.size(), readNotesFile};
+  pocketjazz::JazzJourneyLesson next{};
+  // One verified bounded scan, not a full validation plus a second reread.
+  const bool ok = pocketjazz::JazzJourneyCatalog::readLesson(reader, id, next);
+  file.close();
+  if (!ok) { showNotice("Journey SD data invalid"); return false; }
+  journeyLesson = next;
+  journeyLessonId = id;
+  return true;
+}
+bool loadJourneyTip(uint8_t id) {
+  if (!canReadJourneyData()) return false;
+  File file = SD.open("/PocketJazz/jazz-listen.tsv", FILE_READ);
+  if (!file) { showNotice("Missing jazz-listen.tsv"); return false; }
+  pocketjazz::NotesFile reader = {&file, (size_t)file.size(), readNotesFile};
+  pocketjazz::JazzListeningTip next{};
+  const bool ok = pocketjazz::JazzJourneyCatalog::readTip(reader, id, next);
+  file.close();
+  if (!ok) { showNotice("Listening SD data invalid"); return false; }
+  journeyTip = next;
+  journeyTipId = id;
+  return true;
+}
+void loadJourneyProgress(bool beforeAudioStartup) {
+  if (journeyProgressLoaded || !sdAvailable) return;
+  // setup() runs before the audio task exists. wantPlay defaults to true,
+  // regardless of the user's eventual Autoplay setting; allow that one
+  // explicit pre-audio read so Passport is available while radio plays.
+  // All later calls (including P/save) still require a true full STOP.
+  if ((wantPlay && !beforeAudioStartup) || audioState.load() != STOPPED || offlineMode ||
+      offlineLeaving || offlineSourceOpen.load()) {
+    showNotice("STOP to load Passport");
+    return;
+  }
+  File file = SD.open("/PocketJazz/jazz-progress.tsv", FILE_READ);
+  if (!file) {
+    if (SD.exists("/PocketJazz/jazz-progress.tsv")) {
+      showNotice("Passport SD read failed");
+      return;
+    }
+    journeyProgressLoaded = true;  // No file means a new, empty passport.
+    return;
+  }
+  if (file.size() == 0 || file.size() > 16384u) {
+    file.close(); showNotice("Passport file size invalid"); return;
+  }
+  // Fixed 32-byte checksummed records; never read unbounded Strings or
+  // attempt to repair/truncate potentially personal files.
+  char row[33]{};
+  bool validRecords = true;
+  pocketjazz::JazzJourneyProgress recovered{};
+  while (file.available() >= 32) {
+    if (file.readBytes(row, 32) != 32) {
+      validRecords = false;
+      break;
+    }
+    row[32] = 0;
+    pocketjazz::JazzJourneyProgress candidate{};
+    if (!candidate.parse(row)) {
+      validRecords = false;
+      break;
+    }
+    recovered = candidate;
+  }
+  const bool cleanTail = validRecords && !file.available();
+  file.close();
+  if (!cleanTail) { showNotice("Passport file incomplete"); return; }
+  journeyProgress = recovered; // Publish only after validating the entire journal.
+  journeyProgressLoaded = true;
+}
+void saveJazzJourney() {
+  if (!sdAvailable || wantPlay || audioState.load() != STOPPED ||
+      offlineMode || offlineLeaving || offlineSourceOpen.load()) {
+    showNotice("STOP before saving diary");
+    return;
+  }
+  if (!journeyProgressLoaded) loadJourneyProgress();
+  if (!journeyProgressLoaded) return;
+  if (journeyProgress.dirty) {
+    char wire[40]{};
+    if (!journeyProgress.serialize(wire, sizeof(wire))) {
+      showNotice("Passport format invalid"); return;
+    }
+    const ExportWriteStatus status = appendUiExport(
+        "/PocketJazz/jazz-progress.tsv", wire, strlen(wire));
+    if (status != EXPORT_WRITTEN) { showExportStatus(status, ""); return; }
+    journeyProgress.dirty = false;
+  }
+  static const char* tags[] = {"Explore later", "Beautiful solo", "New favourite"};
+  while (journeyDiaryPendingCount) {
+    const auto& item = journeyDiaryPending[0];
+    char row[256]{};
+    const int n = snprintf(row, sizeof(row), "%s\t%s\t%s\t%s\n",
+                           item.time, item.station, item.title, tags[item.tag]);
+    if (n <= 0 || static_cast<size_t>(n) >= sizeof(row)) {
+      showNotice("Diary row too long"); return;
+    }
+    const ExportWriteStatus status = appendUiExport(
+        "/PocketJazz/jazz-diary.tsv", row, static_cast<size_t>(n), 65536);
+    if (status != EXPORT_WRITTEN) { showExportStatus(status, ""); return; }
+    // Only remove entries successfully written AND verified on SD.
+    for (uint8_t j = 1; j < journeyDiaryPendingCount; ++j)
+      journeyDiaryPending[j-1] = journeyDiaryPending[j];
+    --journeyDiaryPendingCount;
+  }
+  showNotice("Passport & Diary saved");
+}
+void queueJazzDiary() {
+  if (journeyDiaryPendingCount >= 4) {
+    showNotice("4 drafts; STOP then P"); return;
+  }
+  const int idx = stationIndex();
+  if (idx < 0 || offlineMode) { showNotice("Choose a radio station"); return; }
+  // Metadata can remain on the screen after STOP or while changing stations.
+  // Queue only titles received for the currently playing network stream.
+  if (!wantPlay || audioState.load() != PLAYING) {
+    showNotice("Play radio before tagging"); return;
+  }
+  if (!currentTitle[0]) {
+    showNotice("Station has no ICY title");
+    return;  // Do not invent a specific music discovery.
+  }
+  PendingJazzDiary item{};
+  item.tag = journeyDiaryTag;
+  const time_t t = time(nullptr);
+  if (ntpSynced.load() && t >= MIN_TLS_TIME) {
+    tm utc{};
+    gmtime_r(&t, &utc);
+    strftime(item.time, sizeof(item.time), "%Y-%m-%dT%H:%M:%SZ", &utc);
+  } else {
+    snprintf(item.time, sizeof(item.time), "uptime:%lus",
+             (unsigned long)(millis() / 1000u));
+  }
+  pocketjazz::log::cleanTsvField(stations[idx].name,
+                                  item.station, sizeof(item.station));
+  pocketjazz::log::cleanTsvField(currentTitle[0] ? currentTitle : "track-unknown",
+                                  item.title, sizeof(item.title));
+  journeyDiaryPending[journeyDiaryPendingCount++] = item;
+  showNotice("Diary draft queued; P save");
+}
+void openJourneyArtist() {
+  if (!canReadJourneyData()) return;
+  if (!jazzEncyclopediaIndexTrusted &&
+      (wantPlay || audioState.load() != STOPPED)) {
+    showNotice("STOP: verify Jazz index");
+    return;
+  }
+  File file = SD.open("/PocketJazz/jazz-encyclopedia.tsv", FILE_READ);
+  if (!file) { showNotice("Missing Jazz Notes SD"); return; }
+  pocketjazz::NotesFile reader = {&file, (size_t)file.size(), readNotesFile};
+  pocketjazz::JazzEncyclopedia db;
+  pocketjazz::JazzBiography artist{};
+  File indexFile = SD.open("/PocketJazz/jazz-encyclopedia.idx", FILE_READ);
+  pocketjazz::NotesFile index = {&indexFile,
+      indexFile ? static_cast<size_t>(indexFile.size()) : 0,
+      indexFile ? readNotesFile : nullptr};
+  if (!notesIndexPairTrusted(file, indexFile) &&
+      (wantPlay || audioState.load() != STOPPED)) {
+    indexFile.close(); file.close();
+    showNotice("STOP: Jazz index changed");
+    return;
+  }
+  const bool ok = db.open(reader) && db.find(journeyLesson.artist, artist, index,
+                                             jazzEncyclopediaIndexTrusted);
+  indexFile.close();
+  file.close();
+  if (!ok) { showNotice("Artist not in Jazz Notes"); return; }
+  notesArtist = artist.name;
+  notesDetail = artist.summary;
+  notesAlbum = artist.album[0] == '-' ? "" : String(artist.album);
+  notesSource = artist.source;
+  notesFound = true;
+  notesOpenedFromSearch = false;
+  notesOpenedFromJourney = true;
+  notesDetailPage = 0;
+  notesShowFullName = false;
+  screen = NOTES;
+}
+void openJourneySpark() {
+  if (!canReadJourneyData()) return;
+  File file = SD.open("/PocketJazz/jazz-facts.tsv", FILE_READ);
+  if (!file) { showNotice("Missing Jazz Spark SD"); return; }
+  pocketjazz::NotesFile reader = {&file, (size_t)file.size(), readNotesFile};
+  pocketjazz::JazzFacts db;
+  size_t index = 0;
+  const bool ok = db.open(reader) &&
+      db.findSubject(journeyLesson.sparkTopic, jazzSpark, index);
+  file.close();
+  if (!ok) { showNotice("No Spark for this topic"); return; }
+  jazzSparkTotal = db.size();
+  jazzSparkIndex = index;
+  jazzSparkReady = true;
+  jazzSparkAutoVisible = false;
+  sparkReturnScreen = JAZZ_LESSON;
+  screen = SPARK;
+}
 // SD operations are allowed ONLY in explicit user-directed Notes searches,
 // never on the radio/ICY/audio worker or as part of periodic display drawing.
 void pageOfflineNotes(size_t offset) {
+  if (!canReadJourneyData()) return;
   notesSearchCount = notesSearchTotal = 0;
   notesSearchOffset = offset;
   if (!sdAvailable || !notesSearchQuery.length()) return;
@@ -3767,6 +4199,7 @@ void openSelectedOfflineNote() {
     notesFound = true;
     notesOpenedFromSearch = true;
     notesDetailPage = 0;
+    notesShowFullName = false;
     screen = NOTES;
     return;
   }
@@ -3779,9 +4212,11 @@ void openSelectedOfflineNote() {
   notesFound = true;
   notesOpenedFromSearch = true;
   notesDetailPage = 0;
+  notesShowFullName = false;
   screen = NOTES;
 }
 void showJazzSpark(int8_t direction) {
+  if (!canReadJourneyData()) return;
   jazzSparkReady = false;
   if (!sdAvailable) { showNotice("Insert jazz-facts SD file"); return; }
   File file = SD.open("/PocketJazz/jazz-facts.tsv", FILE_READ);
@@ -3914,15 +4349,17 @@ void splitRadioMetadata(const char* metadata, char* artist, size_t artistSize,
   if (!artistSize || !titleSize) return;
   artist[0] = title[0] = 0;
   if (!metadata || !*metadata) return;
-  const char* delimiter = strstr(metadata, " - ");
-  if (!delimiter || delimiter == metadata || !delimiter[3]) {
+  size_t artistBytes = 0;
+  const char* song = nullptr;
+  if (!pocketjazz::strictIcyArtistTrack(metadata, artistBytes, song) ||
+      artistBytes >= artistSize || strlen(song) >= titleSize) {
+    // Still display the complete raw ICY text as a track-like message;
+    // no artist or Jazz Notes attribution is inferred from it.
     pocketjazz::copyUtf8Bounded(title, titleSize, metadata, strlen(metadata));
     return;
   }
-  const size_t length = static_cast<size_t>(delimiter - metadata);
-  pocketjazz::copyUtf8Bounded(artist, artistSize, metadata, length);
-  pocketjazz::copyUtf8Bounded(title, titleSize, delimiter + 3,
-                             strlen(delimiter + 3));
+  pocketjazz::copyUtf8Bounded(artist, artistSize, metadata, artistBytes);
+  pocketjazz::copyUtf8Bounded(title, titleSize, song, strlen(song));
 }
 void drawVu(uint8_t level) {
   auto& d = M5Cardputer.Display;
@@ -3962,8 +4399,15 @@ void drawPlayer(bool partial = false) {
   drawWrappedRadioText(station, 28, C_WHITE, 2);
   char artist[96], song[96];
   splitRadioMetadata(currentTitle, artist, sizeof(artist), song, sizeof(song));
+  const char* preview = artist[0] ?
+      pocketjazz::JazzNowPlaying::hint(artist) : nullptr;
   if (artist[0]) {
     drawWrappedRadioText(artist, 49, C_MUTED, 2);
+    // A short, vetted "explained" caption when an unambiguous ICY artist
+    // matches a curated Jazz Notes entry. Zero SD scans on periodic repaint.
+    // Only use the second artist line if the name fits on its first line.
+    if (strlen(artist) <= 32 && preview)
+      drawWrappedRadioText(preview, 60, C_GOLD, 1);
     drawWrappedRadioText(song, 70, C_GOLD, 2);
   } else if (song[0]) {
     drawWrappedRadioText(song, 52, C_GOLD, 3);
@@ -3993,7 +4437,8 @@ void drawPlayer(bool partial = false) {
   if (uiNoticeUntil != 0 && (int32_t)(uiNoticeUntil - millis()) > 0)
     text(94, 116, uiNotice, C_GOLD);
   else text(94, 116, dailyAlarmSounding ? "ENTER stops alarm" :
-            "H - Help", dailyAlarmSounding ? C_GOLD : C_MUTED);
+            preview ? "N NOTE  E JOURNEY" : "E JOURNEY  H - Help",
+            dailyAlarmSounding ? C_GOLD : C_MUTED);
 }
 void drawNight(bool partial = false) {
   auto& d = M5Cardputer.Display;
@@ -4074,7 +4519,10 @@ void drawMood() {
 void drawNotes() {
   auto& d = M5Cardputer.Display;
   d.fillScreen(C_BG);
-  text(8, 7, "JAZZ NOTES", C_GOLD, 2);
+  // RADIO N is the contextual "Now Playing, Explained" entry. U and Trails N
+  // continue to open the same offline source-backed Jazz Notes records.
+  text(8, 7, !notesOpenedFromSearch && !notesOpenedFromJourney
+       ? "NOW PLAYING" : "JAZZ NOTES", C_GOLD, 2);
   if (!currentTitle[0] && !notesFound) {
     text(9, 37, "No ICY track metadata", C_WHITE);
     text(9, 53, "This station may not send it", C_MUTED);
@@ -4085,26 +4533,49 @@ void drawNotes() {
     text(9, 77, "SD: /PocketJazz/", C_MUTED);
     text(9, 90, "jazz-encyclopedia.tsv", C_MUTED);
   } else {
-    text(9, 28, shortName(notesArtist.c_str(), 38), C_WHITE);
-    // Four readable biography lines per page. Full details remain accessible
-    // via W/S; the former "Source:" line never consumes LCD pixels.
-    String rest = notesDetail;
-    for (int line = 0; line < 8 && rest.length(); ++line) {
-      int split = rest.length() > 36 ? rest.lastIndexOf(' ', 36) : -1;
-      if (rest.length() > 36 && split < 12) split = 36;
-      String part = split < 0 ? rest : rest.substring(0, split);
-      if (line >= notesDetailPage * 4 && line < notesDetailPage * 4 + 4)
-        text(9, 44 + (line - notesDetailPage * 4) * 13,
-             shortName(part.c_str(), 38), C_WHITE);
-      rest = split < 0 ? "" : rest.substring(split);
-      rest.trim();
+    d.setTextSize(1);
+    const auto measure = [&](const char* line) { return (int)d.textWidth(line); };
+    const bool longName = measure(notesArtist.c_str()) > 222;
+    const bool hasAlbum = notesAlbum.length() && notesAlbum != "-";
+    if (notesShowFullName) {
+      text(9, 27, "FULL NAME / RECORD", C_GOLD);
+      // Dedicated detail view makes shortened recording titles accessible.
+      // Each field has three independent measured rows, with no shared buffer.
+      const auto name = pocketjazz::layoutNotes(notesArtist.c_str(),
+          0, 222, measure, 3);
+      for (uint8_t i = 0; i < name.count; ++i)
+        text(9, 39 + i * 10, name.lines[i], C_WHITE);
+      if (hasAlbum) {
+        text(9, 75, "RECORD", C_GOLD);
+        const auto record = pocketjazz::layoutNotes(notesAlbum.c_str(),
+            0, 222, measure, 3);
+        for (uint8_t i = 0; i < record.count; ++i)
+          text(9, 86 + i * 10, record.lines[i], C_WHITE);
+        if (name.more || record.more) text(130, 124, "DETAIL OVERFLOW", C_GOLD);
+        else text(170, 124, "T BIO", C_GOLD);
+      } else if (name.more) text(130, 124, "DETAIL OVERFLOW", C_GOLD);
+      else text(170, 124, "T BIO", C_GOLD);
+    } else {
+      // Byte limits alone do not imply LCD pixel limits for wide glyphs.
+      const auto name = pocketjazz::layoutNotes(notesArtist.c_str(),
+          0, 222, measure, 1);
+      text(9, 28, name.lines[0], C_WHITE);
+      // Credited recording, when present, is shown BEFORE biographical dates
+      // and geography. The other 1462 cards retain all seven body rows.
+      if (hasAlbum)
+        text(9, 39, "Record: " + shortName(notesAlbum.c_str(), 28), C_GOLD);
+      const auto page = pocketjazz::layoutNotes(notesDetail.c_str(),
+          static_cast<size_t>(notesDetailPage), 222, measure,
+          hasAlbum ? 6u : 7u);
+      for (uint8_t i = 0; i < page.count; ++i)
+        text(9, (hasAlbum ? 49 : 38) + i * 10, page.lines[i], C_WHITE);
+      if (page.more) text(147, 124, "DOWN MORE", C_GOLD);
+      else if (notesDetailPage) text(147, 124, "UP PREV", C_GOLD);
+      else if (longName || name.more || hasAlbum) text(147, 124, "T DETAILS", C_GOLD);
     }
-    if (notesAlbum.length() && notesAlbum != "-")
-      text(9, 102, "Album: " + shortName(notesAlbum.c_str(), 31), C_GOLD);
     // Sources are retained in TSV/provenance files, NEVER shown in this view.
   }
-  text(8, 121, notesFound ? "UP/DOWN page   DEL back" :
-       "DEL back", C_MUTED);
+  text(8, 125, "ENTER/DEL back", C_MUTED);
 }
 void drawNotesSearch() {
   auto& d = M5Cardputer.Display;
@@ -4159,6 +4630,127 @@ void drawSpark() {
   }
   text(8, 112, jazzSparkAutoEnabled ? "T auto: ON" : "T auto: OFF", C_MUTED);
   text(8, 125, "UP/DOWN facts    DEL back", C_MUTED);
+}
+void drawJazzJourney() {
+  auto& d = M5Cardputer.Display;
+  d.fillScreen(C_BG);
+  text(8, 6, "JAZZ JOURNEY", C_GOLD, 2);
+  static const char* const names[4] = {
+    "JAZZ TRAILS / HISTORY", "LEARN TO LISTEN",
+    "MY JAZZ PASSPORT", "MY JAZZ DIARY"
+  };
+  for (int i = 0; i < 4; ++i) {
+    const int y = 34 + i * 20;
+    if (i == journeyHubSelected)
+      d.fillRoundRect(6, y - 2, 228, 18, 3, C_PANEL2);
+    text(10, y, String(i == journeyHubSelected ? "> " : "  ") + names[i],
+         i == journeyHubSelected ? C_GOLD : C_WHITE);
+  }
+  text(8, 120, "UP/DOWN ENTER  P SAVE(STOP) DEL", C_MUTED);
+}
+void drawJazzTrails() {
+  auto& d = M5Cardputer.Display;
+  d.fillScreen(C_BG);
+  text(8, 6, "JAZZ TRAILS", C_GOLD, 2);
+  for (int i = 0; i < 4; ++i) {
+    const int y = 33 + i * 21;
+    if (i == journeyTrailSelected) d.fillRoundRect(6, y-2, 228, 19, 3, C_PANEL2);
+    text(10, y,
+         String(i == journeyTrailSelected ? "> " : "  ") +
+         pocketjazz::JazzJourneyCatalog::trailName(i),
+         i == journeyTrailSelected ? C_GOLD : C_WHITE);
+  }
+  text(8, 123, "4 trails / 24 lessons   ENTER", C_MUTED);
+}
+void drawJazzLesson() {
+  auto& d = M5Cardputer.Display;
+  d.fillScreen(C_BG);
+  text(8, 5, "TRAIL " + String(journeyLesson.trail + 1) +
+       "/4   LESSON " + String(journeyLessonId % 6 + 1) + "/6", C_GOLD);
+  text(8, 19, shortName(journeyLesson.title, 18), C_WHITE, 2);
+  if (journeyLessonListenView) {
+    text(9, 38, "LISTEN FOR: " + String(journeyLesson.era), C_GOLD);
+    // The listening task can use the full space instead of truncating
+    // its most useful half in the two-line chapter summary.
+    drawWrappedRadioText(journeyLesson.listen, 52, C_WHITE, 5);
+  } else {
+    drawWrappedRadioText(journeyLesson.story, 40, C_WHITE, 4);
+    text(9, 82, "LISTEN FOR: (T to read all)", C_GOLD);
+    drawWrappedRadioText(journeyLesson.listen, 94, C_WHITE, 2);
+  }
+  text(8, 114, journeyProgress.learnedLesson(journeyLessonId)
+       ? "LEARNED  T LISTEN  ENTER QUIZ"
+       : "T LISTEN  ENTER QUIZ  P SAVE", C_MUTED);
+  text(8, 126, "N NOTE Z SPARK F RADIO V HEARD", C_MUTED);
+  if (uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0)
+    text(8, 114, uiNotice, C_GOLD);
+}
+void drawJazzQuiz() {
+  auto& d = M5Cardputer.Display;
+  d.fillScreen(C_BG);
+  text(8, 6, "JAZZ QUIZ " + String(journeyLessonId + 1) + "/24", C_GOLD, 2);
+  drawWrappedRadioText(journeyLesson.question, 33, C_WHITE, 2);
+  for (int i = 0; i < 3; ++i) {
+    text(9, 61 + i * 17,
+         String(i + 1) + ". " + shortName(journeyLesson.choice[i], 35), C_WHITE);
+  }
+  text(9, 113, journeyQuizWrong ? "Not quite. Try again." :
+       "Choose 1 / 2 / 3", journeyQuizWrong ? C_GOLD : C_MUTED);
+  text(9, 126, "DEL BACK   P SAVE (STOP)", C_MUTED);
+}
+void drawJazzListen() {
+  auto& d = M5Cardputer.Display;
+  d.fillScreen(C_BG);
+  text(8, 6, "LEARN TO LISTEN " + String(journeyTipId + 1) + "/30", C_GOLD);
+  text(8, 28, shortName(journeyTip.title, 18), C_WHITE, 2);
+  drawWrappedRadioText(journeyTip.prompt, 56, C_WHITE, 5);
+  text(8, 119, "UP/DOWN  ENTER LESSON  DEL", C_MUTED);
+}
+void drawJazzPassport() {
+  auto& d = M5Cardputer.Display;
+  d.fillScreen(C_BG);
+  text(8, 5, "MY JAZZ PASSPORT", C_GOLD, 2);
+  if (!journeyProgressLoaded)
+    text(9, 24, "STOP to load progress", C_GOLD);
+  else
+    text(9, 24, "Quizzes: " + String(journeyProgress.completedCount()) +
+         "/24   Manual listening", C_MUTED);
+  const uint16_t learned = journeyProgress.styles(journeyProgress.learned);
+  const uint16_t heard = journeyProgress.styles(journeyProgress.heard);
+  // Six visible rows: 11 genres cannot fit simultaneously on the LCD.
+  const uint8_t first = (journeyPassportStyle / 6) * 6;
+  for (uint8_t row = 0; row < 6 && first + row <
+       pocketjazz::JazzJourneyCatalog::kStyles; ++row) {
+    const uint8_t i = first + row;
+    const int y = 40 + row * 12;
+    const uint16_t flag = uint16_t(1u << i);
+    text(10, y, String(i == journeyPassportStyle ? "> " : "  ") +
+      pocketjazz::JazzJourneyCatalog::styleName(i) + "   Q:" +
+      ((learned & flag) ? "*" : "-") + "  H:" +
+      ((heard & flag) ? "*" : "-"),
+      i == journeyPassportStyle ? C_GOLD : C_WHITE);
+  }
+  text(8, 123, "Q quiz  H heard  ENTER lesson", C_MUTED);
+}
+void drawJazzDiary() {
+  auto& d = M5Cardputer.Display;
+  d.fillScreen(C_BG);
+  text(8, 6, "MY JAZZ DIARY", C_GOLD, 2);
+  static const char* const tags[3] = {
+    "Explore later", "Beautiful solo", "New favourite"
+  };
+  for (int i = 0; i < 3; ++i) {
+    const int y = 35 + i * 19;
+    if (i == journeyDiaryTag) d.fillRoundRect(6, y-2, 228, 18, 3, C_PANEL2);
+    text(10, y, String(i == journeyDiaryTag ? "> " : "  ") + tags[i],
+         i == journeyDiaryTag ? C_GOLD : C_WHITE);
+  }
+  text(9, 92, "Queued: " + String(journeyDiaryPendingCount) + "/4", C_GOLD);
+  text(9, 105, shortName(currentTitle[0] ? currentTitle : "track-unknown", 35),
+       C_MUTED);
+  text(8, 122, "ENTER TAG  P SAVE(STOP) DEL", C_MUTED);
+  if (uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0)
+    text(8, 105, uiNotice, C_GOLD);
 }
 void drawTracks() {
   auto& d = M5Cardputer.Display;
@@ -4366,6 +4958,18 @@ void drawHelp() {
       "K LIKE TO SD",
       "Y ICY HISTORY"
     }},
+    {"JAZZ JOURNEY", {
+      "E OPEN LEARNING",
+      "UP/DOWN SELECT",
+      "ENTER STUDY",
+      "DEL BACK"
+    }},
+    {"COURSE & PASSPORT", {
+      "1-3 QUIZ ANSWERS",
+      "N ARTIST Z SPARK",
+      "T LISTEN V HEARD",
+      "P SAVE WHEN STOP"
+    }},
     {"OTHER TOOLS", {
       "Q SHARE QR",
       "J TAP TEMPO",
@@ -4435,7 +5039,7 @@ void drawHelp() {
     {"SD AND SAFETY", {
       "HOLD S SAFE BOOT",
       "K SAVES LIKED.TXT",
-      "E SAVES TSV LOGS",
+      "I R FULL REPORT",
       "ICY PEEK SD OPT-IN"
     }},
     {"CATALOG UPDATE", {
@@ -4686,9 +5290,7 @@ void drawDiagnostics(bool partial = false) {
   }
   if (uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0)
     text(8, 120, uiNotice, C_GOLD);
-  else text(8, 120, diagPage == 7 ? "R report(STOP) E events X reset" :
-       diagPage == 6 ? "R report(STOP) M RAM E status" :
-       "R report(STOP) E save X reset", C_WHITE);
+  else text(8, 120, "R FULL REPORT(STOP)  X RESET", C_WHITE);
 }
 void drawSettingsBackup() {
   auto& d = M5Cardputer.Display;
@@ -4795,6 +5397,20 @@ void drawScreen() {
     case DAILY_ALARM: drawDailyAlarm(); break;
     case RECENTS: drawRecents(); break;
     case SEARCH: drawSearch(); break;
+    case JAZZ_JOURNEY: drawJazzJourney(); break;
+    case JAZZ_TRAIL: drawJazzTrails(); break;
+    case JAZZ_LESSON: drawJazzLesson(); break;
+    case JAZZ_QUIZ: drawJazzQuiz(); break;
+    case JAZZ_LISTEN: drawJazzListen(); break;
+    case JAZZ_PASSPORT: drawJazzPassport(); break;
+    case JAZZ_DIARY: drawJazzDiary(); break;
+  }
+  // All course screens must visibly acknowledge export failures and quiz
+  // results, then remove the toast when it expires without requiring a key.
+  if (screen >= JAZZ_JOURNEY && screen <= JAZZ_DIARY &&
+      uiNoticeUntil && (int32_t)(uiNoticeUntil - millis()) > 0) {
+    M5Cardputer.Display.fillRect(8, 111, 224, 13, C_PANEL2);
+    text(9, 112, shortName(uiNotice, 36), C_GOLD);
   }
 }
 uint32_t uiSignature(uint32_t now) {
@@ -4811,6 +5427,54 @@ uint32_t uiSignature(uint32_t now) {
   // hidden password fields on ALL screens. For example, HELP's fillScreen()
   // ran repeatedly during Wi-Fi association even though Help was unchanged.
   switch (screen) {
+    case JAZZ_JOURNEY:
+      mix(journeyHubSelected);
+      mix(journeyProgressLoaded);
+      mix(journeyDiaryPendingCount);
+      mix(journeyProgress.dirty);
+      mix(uiNoticeUntil);
+      mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
+      return hash;
+    case JAZZ_TRAIL:
+      mix(journeyTrailSelected);
+      mix(journeyProgress.learned);
+      mix(uiNoticeUntil);
+      mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
+      return hash;
+    case JAZZ_LESSON:
+      mix(journeyLessonId);
+      mix(journeyLessonListenView);
+      mix(journeyProgress.learned);
+      mix(journeyProgress.heard);
+      mix(uiNoticeUntil);
+      mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
+      return hash;
+    case JAZZ_QUIZ:
+      mix(journeyLessonId);
+      mix(journeyQuizWrong);
+      mix(uiNoticeUntil);
+      mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
+      return hash;
+    case JAZZ_LISTEN:
+      mix(journeyTipId);
+      mix(uiNoticeUntil);
+      mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
+      return hash;
+    case JAZZ_PASSPORT:
+      mix(journeyPassportStyle);
+      mix(journeyProgress.learned);
+      mix(journeyProgress.heard);
+      mix(journeyProgressLoaded);
+      mix(uiNoticeUntil);
+      mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
+      return hash;
+    case JAZZ_DIARY:
+      mix(journeyDiaryTag);
+      mix(journeyDiaryPendingCount);
+      mixText(currentTitle);
+      mix(uiNoticeUntil);
+      mix(uiNoticeUntil && (int32_t)(uiNoticeUntil - now) > 0);
+      return hash;
     case DAILY_ALARM:
       mix(dailyAlarmEdit.hour);
       mix(dailyAlarmEdit.minute);
@@ -4872,6 +5536,9 @@ uint32_t uiSignature(uint32_t now) {
     case NOTES:
       mixText(currentTitle);
       mix(notesDetailPage);
+      mix(notesShowFullName);
+      mixText(notesArtist.c_str());
+      mixText(notesDetail.c_str());
       return hash;
     case NOTES_SEARCH:
       mixText(notesSearchQuery.c_str());
@@ -4979,6 +5646,9 @@ void setup() {
   text(10, 15, "POCKET JAZZ", C_GOLD, 2);
   text(10, 45, "Loading stations...", C_WHITE);
   loadPlaylists();
+  verifyJazzNotesIndexAtStop();
+  // Read at boot before any audio task starts. No new NVS keys or SD writes.
+  loadJourneyProgress(true);
   loadPeekConfig();
   restorePrefs();
   restoreDailyRadioAlarm();

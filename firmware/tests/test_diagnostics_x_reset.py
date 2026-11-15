@@ -20,7 +20,7 @@ class DiagnosticsResetContract(unittest.TestCase):
 
     def test_visible_and_exported_counters_use_identical_window(self):
         diag = APP.split('void drawDiagnostics(bool partial = false)', 1)[1].split('void drawSettingsBackup()', 1)[0]
-        export = APP.split('void exportDiagnostics() {', 1)[1].split('void exportIcyHistory()', 1)[0]
+        export = APP.split('void exportIncidentReport() {', 1)[1].split('void exportIcyHistory()', 1)[0]
         for name, raw in [('under', 'audioUnderruns'), ('opens', 'audioReopens'), ('frames', 'audioFrames')]:
             expr = f'diagAudioWindow.{name}({raw}.load())'
             self.assertIn(expr, diag)

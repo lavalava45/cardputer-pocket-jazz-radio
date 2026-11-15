@@ -5,10 +5,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 APP = (ROOT / "PocketJazzRadio" / "PocketJazzRadioApp.cpp").read_text(encoding="utf-8")
-keyboard = ROOT / "arduino-sketchbook/libraries/M5Cardputer/src/utility/Keyboard/Keyboard.h"
-if not keyboard.is_file():
-    keyboard = ROOT / "tests/fixtures/M5Cardputer-1.1.1-Keyboard.h"
-KEYBOARD_H = keyboard.read_text(encoding="utf-8")
+KEYBOARD_H = (ROOT / "arduino-sketchbook/libraries/M5Cardputer/src/utility/Keyboard/Keyboard.h").read_text(encoding="utf-8")
 
 
 class HelpLayoutTests(unittest.TestCase):
@@ -17,7 +14,7 @@ class HelpLayoutTests(unittest.TestCase):
             "static_assert(sizeof(pages)", 1
         )[0]
         pages = re.findall(r'\{"([^"]+)", \{(.*?)\}\}', table, flags=re.S)
-        self.assertEqual(len(pages), 18)
+        self.assertEqual(len(pages), 20)
         for section, raw_rows in pages:
             with self.subTest(section=section):
                 rows = re.findall(r'"([^"]+)"', raw_rows)
@@ -34,7 +31,7 @@ class HelpLayoutTests(unittest.TestCase):
         self.assertLess(29 + 3 * 20 + 16, 110)
 
     def test_physical_keycap_arrows_and_single_back(self):
-        self.assertIn("constexpr uint8_t HELP_PAGE_COUNT = 18;", APP)
+        self.assertIn("constexpr uint8_t HELP_PAGE_COUNT = 20;", APP)
         self.assertIn("sizeof(pages) / sizeof(pages[0]) == HELP_PAGE_COUNT", APP)
         read = APP.split("Press readKeys() {", 1)[1].split("bool pressed(", 1)[0]
         for key, glyph in (("arrowUp", ";"), ("arrowDown", "."), ("arrowLeft", ","), ("arrowRight", "/")):
@@ -43,7 +40,7 @@ class HelpLayoutTests(unittest.TestCase):
         # The pinned keyboard library provides the punctuation keycaps, not KeysState.up.
         self.assertIn("std::vector<char> word;", KEYBOARD_H)
         self.assertNotIn("bool up", KEYBOARD_H)
-        help_keys = APP.split("if (screen == HELP) {", 1)[1].split("if (screen == CATALOG_UPDATE)", 1)[0]
+        help_keys = APP.split("if (screen == HELP) {", 1)[1].split("if (screen == JAZZ_JOURNEY)", 1)[0]
         self.assertIn("if (k.up)", help_keys)
         self.assertIn("else if (k.down)", help_keys)
         self.assertIn("(helpPage + HELP_PAGE_COUNT - 1) % HELP_PAGE_COUNT", help_keys)
@@ -65,7 +62,7 @@ class HelpLayoutTests(unittest.TestCase):
         self.assertNotIn("if (k.tab || pressed(k, '/'))", keys)
         help_text = APP.split("void drawHelp() {", 1)[1].split("void drawRecents()", 1)[0]
         for row in ("F BROWSE STATIONS", "U NOTES SEARCH", "K LIKE TO SD",
-                    "E SAVES TSV LOGS", "ICY PEEK SD OPT-IN", "NVS SAVES OFFSET",
+                    "I R FULL REPORT", "ICY PEEK SD OPT-IN", "NVS SAVES OFFSET",
                     "D OPEN FROM RADIO", "PRIVATE M3U SAFE"):
             self.assertIn('"' + row + '"', help_text)
 

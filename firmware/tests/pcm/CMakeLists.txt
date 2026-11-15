@@ -145,8 +145,23 @@ target_compile_features(pocketjazz_jazz_notes_search PRIVATE cxx_std_11)
 add_test(NAME jazz_notes_search_36_authentic_records COMMAND pocketjazz_jazz_notes_search
   "${CMAKE_CURRENT_SOURCE_DIR}/../../data/artist-notes.tsv"
   "${CMAKE_CURRENT_SOURCE_DIR}/../../data/artist-notes.idx")
+add_executable(pocketjazz_jazz_journey ../jazz_journey_test.cpp)
+target_compile_features(pocketjazz_jazz_journey PRIVATE cxx_std_11)
+add_test(NAME jazz_journey_24_lessons_30_tips_11_passport_styles_checksum COMMAND pocketjazz_jazz_journey
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../data/jazz-journey.tsv"
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../data/jazz-listen.tsv")
+add_executable(pocketjazz_jazz_now_playing ../jazz_now_playing_test.cpp)
+add_executable(pocketjazz_jazz_icy_artist ../jazz_icy_artist_test.cpp)
+target_compile_features(pocketjazz_jazz_icy_artist PRIVATE cxx_std_11)
+add_test(NAME jazz_icy_strict_single_artist_separator_no_false_attribution COMMAND pocketjazz_jazz_icy_artist)
+target_compile_features(pocketjazz_jazz_now_playing PRIVATE cxx_std_11)
+add_test(NAME jazz_now_playing_curated_exact_artist_nonfuzzy COMMAND pocketjazz_jazz_now_playing)
 add_executable(pocketjazz_ha_mqtt_protocol ../ha_mqtt_protocol.cpp)
 add_executable(pocketjazz_jazz_encyclopedia ../jazz_encyclopedia_test.cpp)
+add_executable(pocketjazz_jazz_notes_layout ../jazz_notes_layout_test.cpp)
+target_compile_features(pocketjazz_jazz_notes_layout PRIVATE cxx_std_11)
+add_test(NAME jazz_notes_all_1498_biographies_bounded_nontruncating_layout COMMAND pocketjazz_jazz_notes_layout
+  "${CMAKE_CURRENT_SOURCE_DIR}/../../data/jazz-encyclopedia.tsv")
 target_compile_features(pocketjazz_jazz_encyclopedia PRIVATE cxx_std_11)
 add_test(NAME jazz_encyclopedia_800_streamed_rows_and_facts COMMAND pocketjazz_jazz_encyclopedia
   "${CMAKE_CURRENT_SOURCE_DIR}/../../data/jazz-encyclopedia.tsv"

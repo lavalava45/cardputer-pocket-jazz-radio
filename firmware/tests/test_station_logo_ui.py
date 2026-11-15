@@ -19,7 +19,12 @@ class StationLogoUIContract(unittest.TestCase):
 
     def test_vu_is_always_visible_without_wasting_the_side_panel(self):
         self.assertNotIn('bool vuMode', APP)
-        self.assertNotIn('if (pressed(k, \'v\')) {', APP)
+        # V now marks a *manual hearing task* inside Jazz Journey; it still
+        # must not hide the always-on radio VU meter.
+        controls = APP.split('void handleKeys(const Press& k) {', 1)[1].split(
+            'if (screen == JAZZ_LESSON) {', 1
+        )[0]
+        self.assertNotIn("if (pressed(k, 'v')) {", controls)
         self.assertIn('"VU ALWAYS ON"', APP)
         player = APP.split('void drawPlayer(bool partial', 1)[1].split('void drawNight(', 1)[0]
         self.assertIn('drawWrappedRadioText(station, 28, C_WHITE, 2)', player)

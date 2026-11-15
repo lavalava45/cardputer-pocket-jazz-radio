@@ -1,0 +1,219 @@
+{
+  "deferred": {},
+  "new": {
+    "axel-zwingenberger": {
+      "evidence": [
+        {
+          "claim": "Zwingenberger's official chronology gives his birth as May 7, 1955 in Hamburg and lists his first Boogie Woogie Breakdown and Boogie Woogie Session '76 recordings in May 1976.",
+          "id": "ev01",
+          "source_url": "https://www.boogiewoogie.net/42/en/0/a/0/biography.html"
+        },
+        {
+          "claim": "The chronology records a May 1978 Los Angeles session with Big Joe Turner at Johnny Otis's studio and an April-May 1980 European tour with Lionel Hampton.",
+          "id": "ev02",
+          "source_url": "https://www.boogiewoogie.net/42/en/0/a/0/biography.html"
+        }
+      ],
+      "limitations": "The artist chronology provides months and titles, not full personnel matrices or individual track dates.",
+      "now_playing_hint": "Piano / boogie-woogie",
+      "primary_source_url": "https://www.boogiewoogie.net/42/en/0/a/0/biography.html",
+      "summary": "Hamburg-born boogie-woogie pianist Axel Zwingenberger began recording in 1976 and recorded with Big Joe Turner in Los Angeles in May 1978.",
+      "why_it_matters": "His dated artist chronology gives traceable early sessions and international collaborations."
+    },
+    "barney-mcall": {
+      "evidence": [
+        {
+          "claim": "McAll's official biography says he studied at Victorian College of the Arts with Paul Grabowsky and Mike Nock, moved to New York during the 1990s, and co-founded Groove Collective.",
+          "id": "ev01",
+          "source_url": "https://barneymcall.com/biography/"
+        },
+        {
+          "claim": "His leader discography lists Mooroolbark (ABC Jazz, 2015) and Hearing The Blood (Extra Celestial Arts, 2017).",
+          "id": "ev02",
+          "source_url": "https://barneymcall.com/biography/"
+        }
+      ],
+      "limitations": "The page's large discography includes later reissues and collaborations; no single recording-session personnel are inferred.",
+      "now_playing_hint": "Piano / Australian modern jazz",
+      "primary_source_url": "https://barneymcall.com/biography/",
+      "summary": "Australian pianist Barney McAll co-founded Groove Collective after moving to New York in the 1990s and released the leader albums Mooroolbark and Hearing the Blood.",
+      "why_it_matters": "Artist-authored career chronology directly connects his New York ensemble work with independently dated recordings."
+    },
+    "bruce-barth": {
+      "evidence": [
+        {
+          "claim": "Barth's official biography says that after arriving in New York in 1988 he began playing in the bands of Stanley Turrentine and Terence Blanchard.",
+          "id": "ev01",
+          "source_url": "https://www.brucebarthmusic.com/bio"
+        },
+        {
+          "claim": "His official biography reports that his trio recorded live at New York's Village Vanguard, and lists the 2022 Origin Records trio album Dedication with Montez Coleman and Vicente Archer.",
+          "id": "ev02",
+          "source_url": "https://www.brucebarthmusic.com/bio"
+        }
+      ],
+      "limitations": "The artist biography does not specify the trio's Village Vanguard recording dates or personnel.",
+      "now_playing_hint": "Piano / modern jazz trio",
+      "primary_source_url": "https://www.brucebarthmusic.com/bio",
+      "summary": "Jazz pianist Bruce Barth worked with Stanley Turrentine and Terence Blanchard after moving to New York in 1988; his trio recorded live at the Village Vanguard.",
+      "why_it_matters": "Barth's own biography names his formative band jobs and a documented live trio recording instead of generic jazz credentials."
+    },
+    "bruce-forman": {
+      "evidence": [
+        {
+          "claim": "Forman's official biography identifies Cow Bop as his western-bebop band and names its albums Swingin' Out West, Route 66, Too Hick for the Room, and Cowlifornia Swing.",
+          "id": "ev01",
+          "source_url": "https://www.bruceforman.com/bio"
+        },
+        {
+          "claim": "The same biography credits Forman with soundtrack performances in three Clint Eastwood films and specifically names Million Dollar Baby.",
+          "id": "ev02",
+          "source_url": "https://www.bruceforman.com/bio"
+        }
+      ],
+      "limitations": "The source does not establish specific soundtrack cues played by Forman.",
+      "now_playing_hint": "Guitar / Cow Bop western swing",
+      "primary_source_url": "https://www.bruceforman.com/bio",
+      "summary": "Jazz guitarist Bruce Forman leads the western-bebop band Cow Bop and recorded soundtrack performances for three Clint Eastwood films, including Million Dollar Baby.",
+      "why_it_matters": "The musician's original account identifies a specific style-crossing ensemble and film-session career."
+    },
+    "candy-dulfer": {
+      "evidence": [
+        {
+          "claim": "Dulfer's official biography states that she founded her own band at age 13 and that her first solo album Saxuality received a Grammy nomination.",
+          "id": "ev01",
+          "source_url": "https://www.candydulfer.nl/biography"
+        },
+        {
+          "claim": "Her official discography dates Saxuality to 1990, Sax-A-Go-Go to 1993 and Big Girl to 1995.",
+          "id": "ev02",
+          "source_url": "https://www.candydulfer.nl/discography"
+        }
+      ],
+      "limitations": "The Grammy reference is a nomination, not a win; no exact award category is asserted.",
+      "now_playing_hint": "Saxophone / jazz-funk",
+      "primary_source_url": "https://www.candydulfer.nl/biography",
+      "summary": "Dutch saxophonist Candy Dulfer began leading a band at 13; her 1990 solo debut Saxuality received a Grammy nomination.",
+      "why_it_matters": "Official biography and catalog identify the early leadership and pivotal debut without guessing specific track performers."
+    },
+    "chad-wackerman": {
+      "evidence": [
+        {
+          "claim": "Wackerman's official biography says he joined the Bill Watrous Refuge West Big Band in 1978 and spent seven years working with Frank Zappa.",
+          "id": "ev01",
+          "source_url": "https://chadwackerman.com/biography/"
+        },
+        {
+          "claim": "His biography credits eight recorded albums with Allan Holdsworth and identifies his leader album Forty Reasons as featuring Holdsworth, Jimmy Johnson and Jim Cox.",
+          "id": "ev02",
+          "source_url": "https://chadwackerman.com/biography/"
+        }
+      ],
+      "limitations": "The site's total album counts are the artist's own claims and do not resolve alternate release editions.",
+      "now_playing_hint": "Drums / jazz-rock fusion",
+      "primary_source_url": "https://chadwackerman.com/biography/",
+      "summary": "Drummer Chad Wackerman toured and recorded with Frank Zappa for seven years and worked extensively with guitarist Allan Holdsworth, including eight albums.",
+      "why_it_matters": "Official first-person discography establishes two sustained fusion/rock collaborations and named solo albums."
+    },
+    "champian-fulton": {
+      "evidence": [
+        {
+          "claim": "Fulton's official album credits state Meet Me at Birdland was recorded September 2-4, 2022 at Birdland Theater in New York, with Fulton on piano and vocals, Hide Tanaka on bass and Fukushi Tainaka on drums.",
+          "id": "ev01",
+          "source_url": "https://www.champian.net/fyc-champian-fulton"
+        },
+        {
+          "claim": "The pianist's official discography describes Sometimes I'm Happy as recorded April 10-11, 2008 at Avatar Studio in New York, with Neal Miner on bass and Fukushi Tainaka on drums.",
+          "id": "ev02",
+          "source_url": "https://www.champian.net/sometimes-im-happy"
+        }
+      ],
+      "limitations": "The album promotion also cites awards; none are needed to substantiate the recording credit.",
+      "now_playing_hint": "Piano and voice / straight-ahead",
+      "primary_source_url": "https://www.champian.net/fyc-champian-fulton",
+      "summary": "Jazz pianist and singer Champian Fulton recorded Meet Me at Birdland live in September 2022 with Hide Tanaka and Fukushi Tainaka.",
+      "why_it_matters": "First-party album credits document the dates, room, and rhythm-section personnel of a specific live recording."
+    },
+    "dave-stryker": {
+      "evidence": [
+        {
+          "claim": "Stryker's official biography identifies him as a sideman with Stanley Turrentine and Jack McDuff.",
+          "id": "ev01",
+          "source_url": "https://www.davestryker.com/"
+        },
+        {
+          "claim": "His Strikezone Records discography lists Groove Street (2024) featuring Bob Mintzer and Stryker's working trio with organist Jared Gold and drummer McClenty Hunter.",
+          "id": "ev02",
+          "source_url": "https://www.davestryker.com/"
+        }
+      ],
+      "limitations": "Homepage promotional claims about radio-chart success are omitted; album/year and named ensemble are explicit.",
+      "now_playing_hint": "Guitar / organ-trio jazz",
+      "primary_source_url": "https://www.davestryker.com/",
+      "summary": "Jazz guitarist Dave Stryker played with Stanley Turrentine and Jack McDuff; his 2024 Groove Street paired his organ trio with saxophonist Bob Mintzer.",
+      "why_it_matters": "Stryker's own label catalog links long sideman experience to a specifically identified 2024 quartet recording."
+    },
+    "greg-abate": {
+      "evidence": [
+        {
+          "claim": "Abate's official biography states he played lead alto saxophone in Ray Charles's orchestra for two years during the mid-1970s and tenor saxophone in the revived Artie Shaw Orchestra in 1986-87.",
+          "id": "ev01",
+          "source_url": "https://www.gregabate.com/"
+        },
+        {
+          "claim": "The biography identifies Live at Birdland NYC (1991, Candid Jazz) as his first CD and names James Williams, Rufus Reid and Kenny Washington as its trio.",
+          "id": "ev02",
+          "source_url": "https://www.gregabate.com/"
+        }
+      ],
+      "limitations": "The account provides year spans, not exact session dates; no precise recording date is claimed.",
+      "now_playing_hint": "Alto saxophone / hard bop",
+      "primary_source_url": "https://www.gregabate.com/",
+      "summary": "Saxophonist Greg Abate played lead alto in Ray Charles's orchestra and tenor sax in the revived Artie Shaw Orchestra before recording as a leader.",
+      "why_it_matters": "Official artist biography names his instrumental roles, bandleader tenures and first leader-session personnel."
+    },
+    "holly-cole": {
+      "evidence": [
+        {
+          "claim": "Cole's official biography describes Temptation as an album consisting exclusively of material written by Tom Waits.",
+          "id": "ev01",
+          "source_url": "https://www.hollycole.com/bio/"
+        },
+        {
+          "claim": "Cole's official biography identifies Aaron Davis on piano, George Koller bass, Davide Direnzo drums and John Johnson saxophone among the ensemble recording Dark Moon.",
+          "id": "ev02",
+          "source_url": "https://www.hollycole.com/bio/"
+        }
+      ],
+      "limitations": "The current official biography supports Dark Moon ensemble membership; it does not confirm a 2019 Montreal original-trio session.",
+      "now_playing_hint": "Voice / jazz standards",
+      "primary_source_url": "https://www.hollycole.com/bio/",
+      "summary": "Canadian jazz vocalist Holly Cole recorded the Tom Waits songbook Temptation and teamed with pianist Aaron Davis on Dark Moon.",
+      "why_it_matters": "The singer's own published biography distinguishes her Tom Waits repertoire concept from specific pianist and ensemble performance credits on Dark Moon."
+    },
+    "jacky-terrasson": {
+      "evidence": [
+        {
+          "claim": "Terrasson's official biography says he was born in Berlin in 1965, grew up in Paris and went to Berklee College of Music.",
+          "id": "ev01",
+          "source_url": "https://jackyterrasson.com/bio/bio.html"
+        },
+        {
+          "claim": "His official biography states he won the 1993 Thelonious Monk competition, then toured with Betty Carter and signed to Blue Note the following year.",
+          "id": "ev02",
+          "source_url": "https://jackyterrasson.com/bio/bio.html"
+        }
+      ],
+      "limitations": "The biography gives a competition year but no exact contest date; it is not used to assign specific recording sessions.",
+      "now_playing_hint": "Piano / post-bop trio",
+      "primary_source_url": "https://jackyterrasson.com/bio/bio.html",
+      "summary": "Paris-raised jazz pianist Jacky Terrasson won the 1993 Thelonious Monk piano competition, toured with Betty Carter and subsequently signed to Blue Note.",
+      "why_it_matters": "His published bilingual biography supplies a precise career turning point and label transition."
+    }
+  },
+  "origin": "Worker 11: source-content-checked official artist biographies, discographies and original recording credits, 2026-11-15",
+  "previous_checkpoint": "wave12-research02-final-sha256.json",
+  "revised": {},
+  "schema": 1,
+  "source_review": "Original artist source contents checked; Holly Cole music evidence corrected against the active official site, excludes unsupported 2019 Montreal trio assertion."
+}

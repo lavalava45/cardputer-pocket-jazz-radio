@@ -1,0 +1,70 @@
+{
+  "schema": 1,
+  "previous_checkpoint": "wave12-research01-final-sha256.json",
+  "new": {
+    "chris-pyne": {
+      "summary": "British trombonist Chris Pyne recorded John Surman's The Brass Project in London in April 1992 and appears on Kenny Wheeler's 1990 ECM large-ensemble album.",
+      "primary_source_url": "https://ecmrecords.com/product/the-brass-project-john-surman-john-warren/",
+      "now_playing_hint": "Trombone / Surman brass ensemble",
+      "why_it_matters": "ECM's original recording credits document Pyne's role in British large-ensemble jazz while preserving the distinction between the instrumentalists and composers.",
+      "limitations": "ECM's album-level player credits do not establish that Pyne performed on every track.",
+      "evidence": [
+        {
+          "id": "ev01",
+          "claim": "ECM credits Chris Pyne with trombone on John Surman and John Warren's The Brass Project, recorded at Angel Studios in London in April 1992 and originally issued April 1993.",
+          "source_url": "https://ecmrecords.com/product/the-brass-project-john-surman-john-warren/"
+        },
+        {
+          "id": "ev02",
+          "claim": "ECM separately lists Chris Pyne on trombone for Kenny Wheeler's Music for Large & Small Ensembles, recorded January-February 1990; Wheeler and Norma Winstone receive the listed composition credits.",
+          "source_url": "https://ecmrecords.com/product/music-for-large-small-ensembles-kenny-wheeler/"
+        }
+      ]
+    },
+    "bruce-ditmas": {
+      "summary": "Jazz drummer Bruce Ditmas led the 1995 Postcards album What If with John Abercrombie, Paul Bley, Dominic Richards and Sam Rivers; he wrote its title track.",
+      "primary_source_url": "https://arkadiarecords.com/product/what-if/",
+      "now_playing_hint": "Drums / Postcards avant-jazz",
+      "why_it_matters": "Original-label owner Arkadia records a specific ensemble and distinguishes Ditmas's drumming, leadership, and song-composition credits.",
+      "limitations": "The online 2021 digital release is a reissue of the original 1995 Postcards recording; no unsupported exact recording day is asserted.",
+      "evidence": [
+        {
+          "id": "ev01",
+          "claim": "Arkadia identifies Bruce Ditmas's What If as originally released in 1995 on Postcards, with Ditmas drums, John Abercrombie guitars, Paul Bley piano and synthesizers, Dominic Richards bass, and Sam Rivers saxophones.",
+          "source_url": "https://arkadiarecords.com/product/what-if/"
+        },
+        {
+          "id": "ev02",
+          "claim": "Arkadia's track credits attribute Island Seven and the title What If to composer Bruce Ditmas, while Clever Conversation is jointly credited to Ditmas and Paul Bley and Power Surge to Ditmas and Sam Rivers.",
+          "source_url": "https://arkadiarecords.com/product/what-if/"
+        }
+      ]
+    },
+    "bert-boeren": {
+      "summary": "Dutch trombonist Bert Boeren recorded live in The Hague on June 21, 2024 with Four Others and previously played in the Dutch Swing College Band from 1985 to 1999.",
+      "primary_source_url": "https://oaprecords.com/music/four-others-with-bert-boeren/",
+      "now_playing_hint": "Trombone / Dutch swing jazz",
+      "why_it_matters": "A dated label session establishes his guest soloist role separately from long-term membership of the Dutch Swing College Band.",
+      "limitations": "A band's general list of collaborators is not treated as a recording-session credit.",
+      "evidence": [
+        {
+          "id": "ev01",
+          "claim": "O.A.P. Records credits Bert Boeren as guest trombonist on Four Others, recorded live June 21, 2024 at Leonardo Royal Hotel, The Hague, with Jacco Griekspoor, Vincent Koning, Andy Valkenburg, and Barry Olthof.",
+          "source_url": "https://oaprecords.com/music/four-others-with-bert-boeren/"
+        },
+        {
+          "id": "ev02",
+          "claim": "The Dutch Swing College Band's own biography states that Bert Boeren played trombone in the group from 1985 through 1999, recorded thirteen albums with it, and returned in 2021.",
+          "source_url": "https://dsc.nl/en/bert-boeren/"
+        }
+      ]
+    }
+  },
+  "revised": {},
+  "deferred": {
+    "bob-french": "Exact original-label session matrix and personnel are not yet corroborated by a suitable primary recording document.",
+    "safy-boutella": "Mejnoun original label sleeve and personnel remain unverified.",
+    "marcel-loeffler": "Original Around Gus recording personnel are not independently verifiable from the current label pages.",
+    "buzzy-drootin": "The claimed 1953 Bechet session still needs original date and matrix evidence."
+  }
+}

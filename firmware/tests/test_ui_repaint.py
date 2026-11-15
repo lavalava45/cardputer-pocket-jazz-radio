@@ -67,6 +67,8 @@ class LCDRepaintContract(unittest.TestCase):
             "NOTES", "SHARE", "TEMPO", "CLOCK", "SOUND_FX", "TRACKS",
             "BROWSE", "NOTES_SEARCH", "SPARK", "SETTINGS_BACKUP", "OFFLINE_LIBRARY",
             "DAILY_ALARM", "CATALOG_UPDATE",
+            "JAZZ_JOURNEY", "JAZZ_TRAIL", "JAZZ_LESSON", "JAZZ_QUIZ",
+            "JAZZ_LISTEN", "JAZZ_PASSPORT", "JAZZ_DIARY",
         }
         self.assertEqual(set(dict(branches)), expected, "Each view must declare its visible dependencies")
         self.assertTrue(all("return hash;" in code for _, code in branches))
@@ -106,7 +108,8 @@ class LCDRepaintContract(unittest.TestCase):
         radio = function_body("drawPlayer")
         browse = function_body("drawBrowse")
         controls = function_body("handleKeys")
-        self.assertIn('"H - Help"', radio)
+        self.assertIn('H - Help', radio)
+        self.assertIn('E JOURNEY', radio)
         self.assertNotIn('"A/D tune  P list"', radio)
         self.assertIn("if (pressed(k, 'h')) { screen = HELP; return; }", controls)
         self.assertNotIn("helpPage = 0; screen = HELP", controls)

@@ -1,5 +1,16 @@
 # Pocket Jazz Radio — Cardputer ADV
 
+## Новый исходный кандидат preview v0.8.0 — Jazz Journey, Jazz Notes, Spark (15.11.2026)
+
+После последней публичной v0.7z16 подготовлена **ещё не опубликованная** кодовая и редакционная версия: 24 урока Jazz Journey, 30 Learn to Listen, Jazz Notes с 1 498 карточками, 595 точными подписями Now Playing/Explained, 150 Spark, 36 альбомными рекомендациями, дневником, поиском по офлайн-индексу. Из 1 498 биографий **63 исходные + 532 дополнительные получили индивидуальную редакционную базу**, ещё **903 остаются с исходными/автоматически обогащёнными данными без персонального источникового подтверждения**. Их предварительный массовый отбор документирован отдельно (748 ссылок-зацепок, 103 недостаточных, 52 неоднозначных) и **не называется доказательством**. Новые функции должны быть проверены свежей сборкой ESP32-S3 и host-регрессией; физический звук и работа клавиатуры Cardputer ADV ещё не прошли новую приёмку. Публикация GitHub и каталоги не подразумевают перепрошивку устройства, изменения M5Launcher/NVS или личной microSD.
+
+
+## Актуальный статус на 14.11.2026
+
+Последний **публичный app-only preview — v0.7z16**, [GitHub Releases](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.7z16). Рабочее дерево содержит **НЕ собранные** изменения после этого релиза: объединённый `R`-отчёт диагностики, Jazz Journey (4×6 уроков), 30 Learn to Listen, личный паспорт/дневник и связанные переходы Jazz Notes / Spark. Содержимое SD и установленный M5Launcher не менялись. **Не устанавливать рабочее дерево как прошивку:** новая ESP32-компиляция, RAM и физические проверки ещё не выполнялись по требованию владельца. См. `ROADMAP.md`, `docs/CHANGELOG.md` и `docs/JAZZ-JOURNEY.md`. Публичный GitHub уже обновлён концепцией «Not just another internet radio. A pocket-sized journey through jazz.»; функции в публикуемом описании обозначены как будущее.
+
+---
+
 ## Последний immutable software release — v0.7z5 (12 ноября 2026)
 
 **Для физической проверки звука и диагностики:** `dist/releases/0.7z5/firmware/PocketJazzRadio-v0.7z5-app-only.bin` — **1 591 488 Б**, SHA-256 `6983c0d82ba14ecf87a0544adb006a3828f2048756b18069a299bc2f9a715ba4`. ZIP `PocketJazzRadio-v0.7z5-Launcher3-SD.zip`, SHA-256 `7f26e8f64042ac54bec9dc58a99bb16325ea09319a0f128c3e70bf86a24fd9ca`. Software gate **233/233 Python, 47/47 MSVC Release CTest, ESP32-S3 main + 3 compile-only PASS**; все манифесты и архивы прошли независимую SHA/CRC проверку. [Отчёт v0.7z5](docs/RELEASE-V07Z5-VERIFICATION.md), [руководство по 8 страницам Diagnostics](docs/DIAGNOSTICS-GUIDE.md) и [актуальные задачи](ROADMAP.md).

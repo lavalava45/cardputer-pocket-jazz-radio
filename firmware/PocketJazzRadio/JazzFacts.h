@@ -49,10 +49,21 @@ class JazzFacts {
     return walk(-1, out, count, &seen, ordinal, &absoluteIndex);
   }
 
+  // Let Jazz Trails open a relevant Spark fact with one bounded SD scan.
+  // Source text never becomes a supposed live-track identification.
+  bool findSubject(const char* subject, JazzFact& out, size_t& index) const {
+    if (!subject || !*subject || !count_) return false;
+    index = size_t(-1);
+    size_t scanned = 0;
+    return walk(-1, out, scanned, nullptr, size_t(-1), &index, subject) &&
+           index != size_t(-1);
+  }
+
  private:
   bool walk(int want, JazzFact& out, size_t& count,
             size_t* quotes = nullptr, size_t quoteTarget = size_t(-1),
-            size_t* absoluteIndex = nullptr) const {
+            size_t* absoluteIndex = nullptr,
+            const char* subjectTarget = nullptr) const {
     count = 0;
     size_t offset = 0, last = 0, pos = 0, available = 0;
     uint8_t cache[512] = {};
@@ -72,6 +83,12 @@ class JazzFacts {
         line[length] = 0;
         JazzFact current = {};
         if (!decode(line, current)) return false;
+        if (subjectTarget && !strcmp(current.type, "FACT") &&
+            !strcmp(current.subject, subjectTarget)) {
+          out = current;
+          if (absoluteIndex) *absoluteIndex = count;
+          return true;
+        }
         if (quotes && strcmp(current.type, "QUOTE") == 0) {
           if (*quotes == quoteTarget && absoluteIndex) {
             out = current;

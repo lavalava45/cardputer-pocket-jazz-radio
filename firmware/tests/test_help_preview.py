@@ -16,7 +16,7 @@ class HelpPreviewContract(unittest.TestCase):
             encoding="utf-8"
         )
         pages = MODULE.extract_pages(source)
-        self.assertEqual(len(pages), 18)
+        self.assertEqual(len(pages), 20)
         self.assertEqual(len(pages[0]["rows"]), 4)
         self.assertEqual(len(pages[-1]["rows"]), 4)
         self.assertEqual(pages[0]["section"], "RADIO")
@@ -25,7 +25,7 @@ class HelpPreviewContract(unittest.TestCase):
         with TemporaryDirectory() as directory:
             result = MODULE.render(Path(directory) / "help-preview.html")
             doc = result.read_text(encoding="utf-8")
-        self.assertIn("The 18 pages", doc)
+        self.assertIn("The 20 pages", doc)
         self.assertIn('width="240" height="135"', doc)
         self.assertIn('e.key==="ArrowUp"', doc)
         self.assertIn('e.key==="ArrowDown"', doc)

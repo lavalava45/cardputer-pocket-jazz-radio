@@ -11,8 +11,8 @@ class RuntimeWiring(unittest.TestCase):
         for forbidden in ('appendUiExport(', 'Serial.printf(', 'observeAudioRuntime('):
             self.assertNotIn(forbidden, worker)
         self.assertIn('observeAudioRuntime(now);', APP.split('void loop() {',1)[1])
-        self.assertIn('if (diagPage == 7) exportAudioRuntime();', APP)
-        self.assertIn('"/PocketJazz/audio-runtime.tsv"', APP)
+        self.assertIn("if (pressed(k, 'r')) { exportIncidentReport(); return; }", APP)
+        self.assertIn('"/PocketJazz/incident-%010lu-%02u.tsv"', APP)
 
     def test_single_audio_owner_and_unchanged_tuning(self):
         self.assertEqual(APP.count('secureSrc->setRuntimeProbe(&audioRuntime);'),2)

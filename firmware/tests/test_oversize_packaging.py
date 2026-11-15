@@ -28,7 +28,7 @@ class OversizePackaging(unittest.TestCase):
             "arduino-sketchbook/libraries/ESP8266Audio/LICENSE",
             "arduino-sketchbook/libraries/M5Unified/LICENSE",
             "arduino-sketchbook/libraries/M5GFX/LICENSE",
-            "README.md",
+            "README.md", "ROADMAP.md",
             "docs/KEYS.md", "docs/CHANGELOG.md", "docs/build-release-notes.md",
             "PocketJazzRadio/PocketJazzRadioApp.cpp",
             "PocketJazzRadio/PocketJazzRadioApp.h",
@@ -43,13 +43,6 @@ class OversizePackaging(unittest.TestCase):
             dest = self.root / relative
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(ROOT / relative, dest)
-        # The developer's live ROADMAP is intentionally not published.
-        # The isolated synthetic package still needs a harmless placeholder,
-        # because the real packager includes a ROADMAP in local source archives.
-        (self.root / "ROADMAP.md").write_text(
-            "# Synthetic test fixture; no private project plan.\n",
-            encoding="utf-8",
-        )
         self.bin = self.root / "dist" / "build" / "PocketJazzRadio.ino.bin"
         self.bin.parent.mkdir(parents=True)
 

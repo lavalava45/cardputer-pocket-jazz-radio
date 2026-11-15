@@ -145,7 +145,8 @@ class DiagnosticsEightPageLayout(unittest.TestCase):
         keys = APP.split("if (screen == DIAGNOSTICS)", 1)[1].split(
             "if (screen == SETTINGS_BACKUP)", 1
         )[0]
-        self.assertIn("exportDiagnostics()", keys)
+        self.assertIn("exportIncidentReport()", keys)
+        self.assertNotIn("exportDiagnostics()", keys)
         self.assertIn("diagAudioWindow.reset(", keys)
         self.assertIn("audioPlayout.resetCounters()", keys)
         self.assertIn("if (k.del) screen = RADIO", keys)

@@ -16,23 +16,26 @@ def section(first, last):
 
 
 class SDExportContracts(unittest.TestCase):
-    def test_e_only_on_diagnostics_and_tracks_and_not_wifi(self):
+    def test_only_r_exports_diagnostics_while_e_remains_for_personal_icy_and_backup(self):
         keys = section('void handleKeys(const Press& k)', 'void serviceSleepTimer(')
         diagnostics = section('if (screen == DIAGNOSTICS)', 'if (screen == SETTINGS_BACKUP)')
         backup = section('if (screen == SETTINGS_BACKUP)', 'if (screen == RECENTS)')
         tracks = section('if (screen == TRACKS)', 'if (screen == SHARE)')
-        # Page 8 exports only the bounded runtime journal; pages 1–7 still
-        # export the existing diagnostics.tsv. E remains a manual UI action.
-        self.assertIn("if (pressed(k, 'e')) { if (diagPage == 7) exportAudioRuntime(); else exportDiagnostics(); return; }", diagnostics)
+        self.assertIn("if (pressed(k, 'r')) { exportIncidentReport(); return; }", diagnostics)
+        self.assertNotIn("pressed(k, 'e')", diagnostics)
+        self.assertNotIn("pressed(k, 'm')", diagnostics)
+        self.assertIn("if (pressed(k, 'x'))", diagnostics)
         self.assertIn("if (pressed(k, 'e')) { exportIcyHistory(); return; }", tracks)
         self.assertIn("if (pressed(k, 'e'))", backup)
         self.assertIn("backupConfirmation == 1", backup)
+        # New E entry to Jazz Journey adds a third context; the Diagnostics
+        # handler still must not contain E or M.
         self.assertEqual(keys.count("pressed(k, 'e')"), 3)
         help_screen = section('void drawHelp() {', 'void drawRecents()')
         self.assertIn('F BROWSE STATIONS', help_screen)
         self.assertIn('U NOTES SEARCH', help_screen)
-        self.assertIn('E SAVES TSV LOGS', help_screen)
-        self.assertIn('R report(STOP) E save X reset', APP)
+        self.assertIn('I R FULL REPORT', help_screen)
+        self.assertIn('R FULL REPORT(STOP)  X RESET', APP)
         self.assertIn('UP/DOWN ENTER full  E save DEL', APP)
 
     def test_export_uses_no_new_network_or_decoder_io(self):
@@ -55,12 +58,12 @@ class SDExportContracts(unittest.TestCase):
         worker = section('void audioWorker(void*)', 'void loadPeekConfig()')
         self.assertNotIn('appendUiExport(', worker)
         self.assertNotIn('exportIcyHistory(', worker)
-        self.assertNotIn('exportDiagnostics(', worker)
+        self.assertNotIn('exportIncidentReport(', worker)
         self.assertNotIn('SD.open(', worker)
 
     def test_diagnostics_excludes_sensitive_values(self):
-        diagnostic = section('void exportDiagnostics()', 'void exportIcyHistory()')
-        self.assertIn('/PocketJazz/diagnostics.tsv', diagnostic)
+        diagnostic = section('void exportIncidentReport()', 'void exportIcyHistory()')
+        self.assertIn('/PocketJazz/incident-', diagnostic)
         self.assertIn('ntpSynced.load()', diagnostic)
         for secret in ('savedPassword', 'savedSsid', 'wifiPassword',
                        'wifiSsid', 'stations[idx].url', 'lastSelectedUrl',
@@ -68,6 +71,9 @@ class SDExportContracts(unittest.TestCase):
             self.assertNotIn(secret, diagnostic, secret)
         self.assertIn('SSID', DOC)
         self.assertIn('16 КиБ', DOC)
+        self.assertNotIn('void exportAudioRuntime()', APP)
+        self.assertNotIn('void exportDiagnostics()', APP)
+        self.assertNotIn('void exportHeapLifecycle()', APP)
 
     def test_track_exports_only_observed_ram_history_with_safe_tsv(self):
         track = section('void exportIcyHistory()', 'void likeCurrentTrack()')

@@ -1,0 +1,71 @@
+{
+  "accepted": [
+    "ann-burton",
+    "bruno-tommaso",
+    "calvin-newborn",
+    "cameron-brown",
+    "carlo-krahmer",
+    "carlos-lyra",
+    "cecil-scott",
+    "chris-biscoe",
+    "diederik-wissels",
+    "elin-rosseland",
+    "geoffrey-keezer",
+    "guem",
+    "guy-warren",
+    "hannes-zerbe",
+    "jason-rebello",
+    "joe-farrell",
+    "joki-freund",
+    "joris-teepe",
+    "judi-silvano",
+    "kai-eckhardt",
+    "kermit-driscoll",
+    "mario-schiano",
+    "mark-tokar",
+    "matthieu-michel",
+    "melvin-gibbs",
+    "mike-richmond",
+    "philippe-deschepper",
+    "ronald-shannon-jackson",
+    "roy-paci",
+    "sahib-shihab",
+    "sebi-tramontana",
+    "silje-nergaard",
+    "stan-tracey",
+    "thomas-t-dahl",
+    "tim-garland",
+    "tommy-turrentine",
+    "volker-kriegel",
+    "zbigniew-seifert"
+  ],
+  "deferred": {
+    "al-lucas": "The primary dated Taurus personnel attribution is MusicBrainz metadata; independent label/session-level evidence for this specific 1945 recording is not yet established.",
+    "buddy-catlett": "Employment and association are documented but no dated specific session with unambiguous instrument credits in the staged evidence.",
+    "eddie-bert": "The 1942 Jersey Bounce anecdote needs an independent matrix/session source linking Bert to the claimed solo.",
+    "frank-capp": "Orchestra membership and Previn tenure are documented without a specific sourced track/date/personnel lineup.",
+    "gus-johnson": "Band membership and dates are general; no specific sourced title with personnel roles.",
+    "jimmy-gourley": "Paris and Chicago collaboration notes need a precise independently supported track/session and instrument credits.",
+    "lou-bennett": "Migration and instrument history are insufficient as recording-specific evidence.",
+    "moe-koffman": "The breakthrough tune is mentioned, but evidence lacks reliable recording personnel/session specificity.",
+    "nathan-davis": "The second recording credit source could not be independently validated; the Peace Treaty personnel and composition claim requires a stronger original reissue or session source.",
+    "nick-travis": "A 1954 Victor session is mentioned without specific track or independently corroborated personnel/date for the claimed performance.",
+    "pete-candoli": "Big-band membership and brother-led group history do not establish a specific verifiable track/session.",
+    "teddy-charles": "Broad workshop membership and producing history are not linked to a sufficiently verified particular recording."
+  },
+  "preferred_duplicate_stage": {},
+  "spark": {
+    "calvin-newborn": [
+      "ev01",
+      "Hard bop"
+    ],
+    "carlo-krahmer": [
+      "ev02",
+      "New Orleans jazz"
+    ],
+    "cecil-scott": [
+      "ev02",
+      "Swing"
+    ]
+  }
+}

@@ -13,8 +13,11 @@ class IncidentReportContract(unittest.TestCase):
             "if (screen == SETTINGS_BACKUP)", 1
         )[0]
         self.assertIn("if (pressed(k, 'r')) { exportIncidentReport(); return; }", keys)
-        self.assertIn("if (pressed(k, 'e')) { if (diagPage == 7) exportAudioRuntime(); else exportDiagnostics(); return; }", keys)
-        self.assertIn("if (pressed(k, 'm') && diagPage == 6) { exportHeapLifecycle(); return; }", keys)
+        self.assertNotIn("pressed(k, 'e')", keys)
+        self.assertNotIn("pressed(k, 'm')", keys)
+        self.assertNotIn("exportAudioRuntime(", APP)
+        self.assertNotIn("exportHeapLifecycle(", APP)
+        self.assertNotIn("exportDiagnostics(", APP)
         self.assertIn("if (pressed(k, 'x'))", keys)
         report = APP.split("void exportIncidentReport() {", 1)[1].split(
             "void exportIcyHistory() {", 1
@@ -32,7 +35,8 @@ class IncidentReportContract(unittest.TestCase):
             "void exportIcyHistory() {", 1
         )[0]
         for label in ("BEGIN", "STATION", "WIFI", "HTTPS", "STREAM",
-                      "DECODE", "PCM", "MEMORY", "EVENT", "HEAP", "END"):
+                      "DECODE", "PCM", "MEMORY", "RUNTIME", "EVENT",
+                      "ICY_HISTORY", "HEAP", "END"):
             self.assertIn(f'"{label}\\t', report, label)
         for important in ("POCKETJAZZ_FIRMWARE_VERSION", "stations[idx].name",
                           "currentTitle", "cleanTsvField", "audioBufferedBytes.load()",
@@ -44,6 +48,19 @@ class IncidentReportContract(unittest.TestCase):
                           "heapLifecycle.firstStallEver", "point.sourceIdleMs",
                           "heap_caps_get_largest_free_block", "WiFi.RSSI()"):
             self.assertIn(important, report, important)
+        # Every field from the retired audio-runtime.tsv export must still
+        # appear, including the ones previously omitted from v0.7z16's
+        # incident report.
+        for legacy_event_field in (
+            "observed_ms", "stage_age_ms", "heartbeat_age_ms", "net_detail",
+            "stop_ms", "retry_at_ms", "speaker_outstanding", "free_before",
+            "largest_before", "coalesced_faults", "pcm_reject", "waiting",
+            "pcm_age_ms", "attempt", "hop", "fail", "http", "tls",
+        ):
+            self.assertIn(legacy_event_field + "=", report)
+        self.assertIn("trackHistory.newest(n - 1)", report)
+        self.assertIn("cleanTsvField(item->title", report)
+        self.assertIn("heapLifecycle.read(", report)
         self.assertNotIn("WiFi.begin(", report)
         self.assertNotIn("http.GET(", report)
         self.assertNotIn("NVS", report)
@@ -60,7 +77,7 @@ class IncidentReportContract(unittest.TestCase):
         self.assertNotIn("exportIncidentReport(", worker)
         self.assertNotIn("appendUiExport(", worker)
         self.assertIn("R REPORT (STOP)", APP)
-        self.assertIn("R report(STOP)", APP)
+        self.assertIn("R FULL REPORT(STOP)  X RESET", APP)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,12 @@
+{
+  "accepted": [
+    "bert-boeren",
+    "bruce-ditmas",
+    "chris-pyne"
+  ],
+  "initial_checkpoint": "wave12-research01-final-sha256.json",
+  "origin": "Independent specialist original sessions/label/artist sources",
+  "protected_predecessor_snapshots_replaced": false,
+  "review_stage": "editorial-wave12-research02-staged.json",
+  "source_corrections": []
+}

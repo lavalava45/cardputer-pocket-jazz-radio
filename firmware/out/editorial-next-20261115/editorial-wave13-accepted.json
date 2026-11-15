@@ -1,0 +1,20 @@
+{
+  "accepted": [
+    "axel-zwingenberger",
+    "barney-mcall",
+    "bruce-barth",
+    "bruce-forman",
+    "candy-dulfer",
+    "chad-wackerman",
+    "champian-fulton",
+    "dave-stryker",
+    "greg-abate",
+    "holly-cole",
+    "jacky-terrasson"
+  ],
+  "initial_checkpoint": "wave12-research02-final-sha256.json",
+  "origin": "Independent specialist original sessions/label/artist sources",
+  "protected_predecessor_snapshots_replaced": false,
+  "review_stage": "editorial-wave13-staged.json",
+  "source_corrections": []
+}
