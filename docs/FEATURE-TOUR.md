@@ -1,5 +1,7 @@
 # Feature Tour
 
+**Status correction (15 November 2026):** Owner-confirmed Cardputer ADV hardware testing supersedes previous claims that no physical check occurred. Exact v0.8.0 long-run stability is not documented; see [project status](PROJECT-STATUS.md). Photos below are **older v0.7z13 emulator captures**, not new hardware photographs.
+
 ## A pocket-sized radio with room for curiosity
 
 Pocket Jazz Radio brings the familiar pleasure of tuning a radio into a tiny open-source companion for the **M5Stack Cardputer ADV**. A real keyboard, a small colour screen and a speaker are enough to explore jazz, save discoveries and learn more about the music — without turning the experience into another phone app.

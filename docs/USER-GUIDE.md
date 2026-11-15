@@ -65,7 +65,7 @@ that every server is always available.
 
 On **v0.8.0**, let the interruption occur, then press **Enter** on the radio to stop playback. Press **I** for Diagnostics and **R** on any of the eight pages. One new `/PocketJazz/incident-*.tsv` is written to microSD, including station identity, the latest ICY title, Wi-Fi/HTTPS state, MP3 ring, PCM, heap, 16 recorded audio events and source progress snapshots. A complete record ends with `END complete=1`. If this marker is missing, the recording was incomplete (e.g. SD full). Do not press **X** to reset audio counters before exporting. **E/M** still provide the old individual exports. No logging occurs during audio playback.
 
-This function is **not in v0.7z15** and has only software tests; physical SD latency and speaker acceptance are still open. Numeric files replace photos for buffer diagnostics, though actual UI defects may still need a picture.
+This function is **not in v0.7z15**. The owner confirmed physical Cardputer ADV testing; detailed measured acceptance of this particular export path, SD latency and uninterrupted speaker audio remains open until results are recorded. Numeric files replace photos for buffer diagnostics, though actual UI defects may still need a picture.
 
 ## 3. Blue Note clock, timers and alarm
 

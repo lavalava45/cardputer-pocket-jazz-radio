@@ -1,5 +1,7 @@
 # Changelog
 
+**2026-11-15 status update:** owner-confirmed real Cardputer ADV testing; exact sustained v0.8.0 audio/keyboard/SD acceptance pending detailed evidence. M5Ware correction for pending submission #8 accepted by contact form (ref `9e908dfa-6897-497d-b473-8e320e753a2a`), listing not yet approved. No firmware change; [current status](docs/PROJECT-STATUS.md).
+
 ## v0.8.0 — Jazz Journey and source-attributed offline encyclopedia (2026-11-15)
 
 - Adds 24 offline Jazz Journey lessons and 30 Learn to Listen exercises, with integrated Explained / Now Playing music notes and existing Jazz Spark.

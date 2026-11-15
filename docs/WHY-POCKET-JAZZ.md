@@ -14,7 +14,7 @@ You don't have to decide which album to play, build a queue, or reach for a phon
 
 <img src="images/emulator-v07z13-qr.png" width="360" height="203" alt="Pocket Jazz Radio displaying a station's QR code in the v0.7z13 emulator">
 
-<sub>Actual v0.7z13 emulator screen. The current public v0.8.0 preview has not yet completed physical audio acceptance.</sub>
+<sub>Actual v0.7z13 emulator screen. The owner later confirmed Cardputer ADV hardware testing; the exact v0.8.0 long-play acceptance scenarios have not been documented.</sub>
 
 </div>
 
@@ -37,7 +37,7 @@ All of this is designed around the Cardputer's *actual keyboard and tiny display
 
 The v0.8.0 preview now links **Jazz Notes**, **Jazz Spark**, and the radio into a small **interactive history-of-jazz course**. Learn to Listen cards invite you to hear musical ideas; Jazz Trails follow historical connections; a personal Jazz Diary remembers discoveries; a local Jazz Passport tracks the styles you have actually explored. When a station supplies unambiguous **Artist - Track** metadata, Now Playing, Explained aims to connect the current artist to a verified offline note.
 
-**Included in the v0.8.0 software preview:** 24 Jazz Journey lessons, 30 listening tips, local diary/passport screens and 595 exact Now Playing/Explained hints, with 150 provenance-backed Spark facts. Physical speaker, SD and keyboard acceptance of these new screens is still pending; they are not advertised as field-tested. No subscription or audio recognition is planned, and broadcasters do not promise a particular track.
+**Included in the v0.8.0 software preview:** 24 Jazz Journey lessons, 30 listening tips, local diary/passport screens and 595 exact Now Playing/Explained hints, with 150 provenance-backed Spark facts. The owner has confirmed a Cardputer ADV test, while detailed results for every v0.8.0 screen and prolonged speaker/SD/keyboard operation are not yet recorded. No subscription or audio recognition is planned, and broadcasters do not promise a particular track.
 
 ## Why build for such a small machine?
 
@@ -59,7 +59,7 @@ Those observations are more valuable than a view count. Reports with the firmwar
 
 ## Short introduction for a community post
 
-This is a **draft for a project-showcase post**, not a claim that v0.8.0 has passed a physical audio test. Add your own real Cardputer photo or short demonstration video before posting, and check each community's current rules.
+This is an **archived early draft**; the actual [r/CardPuter post](https://www.reddit.com/r/CardPuter/comments/1xwqkah/pocket_jazz_radio_v080_for_cardputer_adv_51/) has already been published. A fuller feature-description draft is available in the project conversation but has **not automatically replaced the existing post**. The owner confirmed physical Cardputer testing; include a real current photo/video only if available.
 
 **Suggested title:** I built a pocket-sized jazz radio for the Cardputer ADV — with 51 stations and an offline artist library
 
@@ -75,4 +75,4 @@ This is a **draft for a project-showcase post**, not a claim that v0.8.0 has pas
 >
 > I'd be interested in hearing what other Cardputer ADV owners think — especially whether station switching, responsiveness and audio continuity work well for you.
 
-**Before sharing:** if you have personally tested v0.7z16 on the Cardputer by then, replace the untested sentence with your *actual observation*, not a generic success claim. The existing screenshots are authentic **v0.7z13 emulator** images and should be labelled as such; a filmed physical device is a separate piece of evidence.
+**Historical draft only:** the v0.7z16-era example above is superseded by the actual v0.8.0 publication. Its untested wording must not be copied as current fact. The owner confirmed real device testing, but exact test scope/duration is not recorded. The screenshots above are authentic **v0.7z13 emulator** images and must remain labelled as such.

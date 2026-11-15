@@ -23,11 +23,13 @@ Listen. Discover. Remember. No streaming account, phone app or subscription requ
 
 ## Current public preview — v0.8.0 (15 November 2026)
 
+**Release/dev status:** active development sprint closed; owner-confirmed physical testing, independent long-run bug checks outstanding. GitHub release and Reddit post are live; **M5Ware submission #8 awaits moderation**, and the full-feature correction was received by its contact form. [Current status and next action](docs/PROJECT-STATUS.md).
+
 **A pocket-sized jazz companion for M5Stack Cardputer ADV.** This release brings the full offline **Jazz Journey (24 lessons)**, **Learn to Listen (30 exercises)**, **Jazz Notes** for **1,498 artists**, source-attributed **Jazz Spark (150 facts)**, **595 exact Now Playing/Explained artist hints**, 36 album recommendations and the current radio, alarm, diagnostics and personal listening features. The curated online catalog remains **51 free-stream stations**.
 
 **Research transparency:** of the 1,498 offline entries, 63 are protected original editorial biographies, 532 more have individual source-checked notes, and 903 still carry the baseline/automatically enriched text without individual historical review. All 903 were triaged: 748 with *source leads* (not verified), 103 with insufficient evidence and 52 ambiguous identity matches. The offline catalog's coverage is complete; historical biography validation is not. No invented claims are attached to those 903.
 
-**Preview, not physical acceptance:** the new code is compiled and host-tested, but the **v0.8.0 speaker, SD, Wi-Fi, TLS stability and controls have not yet been checked on a real Cardputer ADV**. Keep a known-working app-only binary for rollback. Neither the download nor this publication flashes your device, alters its partitions/NVS, or touches your private SD files. See [v0.8.0 release notes](docs/RELEASE-v0.8.0.md) and the [three-step guide](docs/QUICK-START.md).
+**Physical Cardputer ADV testing has been confirmed by the owner.** The full v0.8.0 test scenarios and long-duration stream stability are not documented in a reproducible acceptance report. Previously observed buffering and occasional unresponsive controls must not be declared permanently fixed without evidence. Keep a known-working app-only binary for rollback. Neither the download nor this publication flashes your device, alters its partitions/NVS, or touches your private SD files. See [v0.8.0 release notes](docs/RELEASE-v0.8.0.md) and the [three-step guide](docs/QUICK-START.md).
 
 ---
 

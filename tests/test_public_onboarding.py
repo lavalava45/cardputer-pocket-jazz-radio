@@ -32,7 +32,8 @@ class OnboardingDocs(unittest.TestCase):
         self.assertIn("Never overwrite your own file", contents)
         self.assertIn("do *not* need", contents)
         self.assertIn("stop radio/offline playback", contents)
-        self.assertIn("physical speaker/audio stability is still awaiting testing", contents)
+        self.assertIn("owner reports testing on a physical Cardputer ADV", contents)
+        self.assertIn("Sustained v0.8.0 speaker/audio reliability is not documented", contents)
 
     def test_story_is_cautious_and_accessible(self):
         contents = STORY.read_text(encoding="utf-8")
@@ -45,10 +46,11 @@ class OnboardingDocs(unittest.TestCase):
             "v0.7z16",
             "not yet confirmed",
             "Suggested title",
-            "community's current rules",
+            "actual v0.8.0 publication",
         ):
             self.assertIn(phrase, contents)
         self.assertIn("v0.7z13 emulator", contents)
+        self.assertIn("The owner confirmed real device testing", contents)
 
     def test_navigation_and_local_links(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
