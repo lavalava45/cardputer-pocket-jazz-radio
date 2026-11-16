@@ -840,6 +840,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Exact track credits distinguish Summers solo jazz collaborations from his rock work with The Police."
   },
+  "angela-frontera": {
+    "evidence": [
+      {
+        "claim": "The original Enja product sheet for Zelia Fonseca Impar, ENJ-9553 2, credits Angela Frontera on drums and percussion.",
+        "id": "ev01",
+        "source_url": "https://www.zeliafonseca.com/wp-content/uploads/2019/05/2013-01-07-17-01-04_enja_records_about_zelia.pdf"
+      },
+      {
+        "claim": "Caro Trischler credits Frontera on drums for tracks 4 and 9 and percussion for tracks 1, 2, 4, 6, 7, 9, 10 and 12.",
+        "id": "ev02",
+        "source_url": "https://carotrischler.bandcamp.com/album/when-you-know-you-know"
+      },
+      {
+        "claim": "Trischler also credits Frontera with additional vocals on track 4 and lists recording sessions in 2024.",
+        "id": "ev03",
+        "source_url": "https://carotrischler.bandcamp.com/album/when-you-know-you-know"
+      }
+    ],
+    "key": "angela-frontera",
+    "limitations": "The Enja product sheet does not establish an exact recording date for Impar; Trischler recorded her album in 2024 and issued it in 2025.",
+    "primary_source_url": "https://www.zeliafonseca.com/wp-content/uploads/2019/05/2013-01-07-17-01-04_enja_records_about_zelia.pdf",
+    "summary": "Percussionist Angela Frontera played drums on Zelia Fonseca's Impar and on Caro Trischler's When You Know You Know.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two independent artist and label personnel lists document the drummer and separate instrument credits."
+  },
   "angelika-niescier": {
     "evidence": [
       {
@@ -4860,6 +4885,31 @@
     "summary": "Pianist and bandleader Charlie Johnson recorded New York Harlem jazz in 1927-1929. A French national-library catalogue credits his piano and orchestra direction.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original archive cataloguing establishes instrument and period sessions."
+  },
+  "charlie-kunz": {
+    "evidence": [
+      {
+        "claim": "The Royal Library of Belgium catalogs Kunz piano medley D.91 coupled with D.74 on Decca 20.804, with matrices CA DR 13738-2 and CA DR 13739-3.",
+        "id": "ev01",
+        "source_url": "https://qa-data.kbr.be/?facet=&filters%5B%5D=008music24_GeneralInformation_accompanyingMatter_ss%3A%2A&filters%5B%5D=700a_AddedPersonalName_personalName_ss%3A%22Danval%2C+Marc%22&filters%5B%5D=700d_AddedPersonalName_dates_ss%3A%221906-1974%22&filters%5B%5D=710a_AddedCorporateName_ss%3A%22The+Decca+Record+Company%22&query=%2A%3A%2A&rows=50&searchform=simple&start=0&tab=data&type=solr"
+      },
+      {
+        "claim": "Decca F.6440 is cataloged as the 1937 Charlie Kunz Piano Medley No. D.5 with matrices R-2303 and R-2304.",
+        "id": "ev02",
+        "source_url": "https://www.45cat.com/78rpm/record/f6440"
+      },
+      {
+        "claim": "Mainspring discography catalogs Kunz playing piano in a 1948 London Decca medley session, matrix DR.12273 for No. D.87.",
+        "id": "ev03",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/05/RAGTIME_ed5-v2.pdf"
+      }
+    ],
+    "key": "charlie-kunz",
+    "limitations": "The KBR catalog dates the original physical artifact incompletely. No exact session date for D.91 is inferred; 45cat is a collectors catalog.",
+    "primary_source_url": "https://www.45cat.com/78rpm/record/f6440",
+    "summary": "Pianist Charlie Kunz recorded Decca piano medleys, including No. D.5 in 1937 and No. D.91, held in a Belgian royal collection.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original 78-rpm disc catalog descriptions and documented Decca matrices establish his recording work."
   },
   "charlie-rouse": {
     "evidence": [
@@ -10450,6 +10500,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A university appointment and documented ensemble roles identify the exact musician and style."
   },
+  "greg-howe": {
+    "evidence": [
+      {
+        "claim": "Shrapnel issued Greg Howe self-titled debut in 1988, crediting Billy Sheehan on bass and Atma Anur on drums.",
+        "id": "ev01",
+        "source_url": "https://www.shrapnelrecords.com/greg-howe/greg-howe"
+      },
+      {
+        "claim": "Shrapnel lists Howe Introspection as a separate instrumental fusion album with the tracks Jump Start and Direct Injection.",
+        "id": "ev02",
+        "source_url": "https://www.shrapnelrecords.com/greg-howe/introspection"
+      },
+      {
+        "claim": "Shrapnel catalog lists the later Uncertain Terms album and identifies Faulty Outlet and Song For Rachelle in its track list.",
+        "id": "ev03",
+        "source_url": "https://www.shrapnelrecords.com/greg-howe/uncertain-terms"
+      }
+    ],
+    "key": "greg-howe",
+    "limitations": "The cited years are release years, not exact session dates; style classification does not establish individual instrumental solos.",
+    "primary_source_url": "https://www.shrapnelrecords.com/greg-howe/greg-howe",
+    "summary": "Guitarist Greg Howe debuted on Shrapnel in 1988 with Billy Sheehan and Atma Anur and released jazz-fusion album Introspection in 1993.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The issuing label independently attributes three named dated releases to the guitarist."
+  },
   "gregg-bendian": {
     "evidence": [
       {
@@ -10800,6 +10875,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Preserves documented jazz recording or instrumental context for this named performer."
   },
+  "hans-reichel": {
+    "evidence": [
+      {
+        "claim": "Original FMP notes credit Hans Reichel playing a homemade 11-string guitar on Wichlinghauser Blues, recorded April to June 1973 in Hagen.",
+        "id": "ev01",
+        "source_url": "https://destination-out.bandcamp.com/album/wichlinghauser-blues"
+      },
+      {
+        "claim": "Original FMP notes credit Reichel on guitars for Coco Bolo Nights, recorded December 1988 at FMP Studio in Berlin.",
+        "id": "ev02",
+        "source_url": "https://destination-out.bandcamp.com/album/coco-bolo-nights"
+      },
+      {
+        "claim": "Original FMP notes credit Reichel on daxophone for Shanghaied on Tor Road, recorded February to March 1992 in Wuppertal.",
+        "id": "ev03",
+        "source_url": "https://destination-out.bandcamp.com/album/shanghaied-on-tor-road"
+      }
+    ],
+    "key": "hans-reichel",
+    "limitations": "The online recordings are digital reissues; historical session and original issue dates are not assumed to be digital publication dates.",
+    "primary_source_url": "https://destination-out.bandcamp.com/album/wichlinghauser-blues",
+    "summary": "Hans Reichel recorded modified-guitar pieces for FMP in 1973, played guitars on Coco Bolo Nights in 1988 and recorded daxophone in 1992.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original FMP label metadata names Reichel and his instruments on three separately dated sessions."
+  },
   "harold-lopez-nussa": {
     "evidence": [
       {
@@ -10994,6 +11094,31 @@
     "summary": "German double bassist and guitarist Hartmut Kracht recorded the solo album Kontrabass pur and played in exploratory ensembles with Jan Klare.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents a distinct instrumental or vocal contribution and its musical context."
+  },
+  "harvey-brooks": {
+    "evidence": [
+      {
+        "claim": "Miles Davis official track credits Harvey Brooks on electric bass for Bitches Brew, recorded August 19, 1969 at Columbia Studio B, New York.",
+        "id": "ev01",
+        "source_url": "https://www.milesdavis.com/track/bitches-brew-feat-john-mclaughlin-wayne-shorter-chick-corea-joe-zawinul/"
+      },
+      {
+        "claim": "Miles Davis official track credits Brooks on electric bass for Great Expectations, recorded November 19, 1969 at Columbia Studio E, New York.",
+        "id": "ev02",
+        "source_url": "https://www.milesdavis.com/track/great-expectations/"
+      },
+      {
+        "claim": "Official Miles Davis musician biography identifies Harvey Brooks as an electric bassist who recorded with Davis during 1969.",
+        "id": "ev03",
+        "source_url": "https://www.milesdavis.com/person/harvey-brooks/"
+      }
+    ],
+    "key": "harvey-brooks",
+    "limitations": "Bitches Brew was issued in 1970 and Big Fun in 1974; the two cited track sessions occurred in 1969.",
+    "primary_source_url": "https://www.milesdavis.com/person/harvey-brooks/",
+    "summary": "Electric bassist Harvey Brooks recorded with Miles Davis in August 1969 on Bitches Brew and in November on Great Expectations.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Official artist and track credits document the bassist and distinguish studio sessions from LP release dates."
   },
   "helen-humes": {
     "evidence": [
@@ -11651,6 +11776,40 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her own website documents rockabilly, blues and pop collaborations without misclassifying her as pure jazz."
   },
+  "ina-ray-hutton": {
+    "evidence": [
+      {
+        "claim": "Oxford American National Biography describes Ina Ray Hutton, born Odessa Cowan, and the formation of the all-female Melodears in 1934.",
+        "id": "ev01",
+        "source_url": "https://academic.oup.com/american-national-biography/reference/63042/reference-article-abstract/570417124"
+      },
+      {
+        "claim": "Smithsonian archives an Okeh disc coupling At Last with Stewart Foster vocals and Whats the Good of Moonlight with Ina Ray Hutton vocals and orchestra.",
+        "id": "ev02",
+        "source_url": "https://americanhistory.si.edu/pt/collections/archival-item/sova-nmah-ac-0750-ref2131"
+      },
+      {
+        "claim": "Smithsonian Female Band Leaders collection includes Ina Ray Hutton and Her Melodears in its archival holdings.",
+        "id": "ev03",
+        "source_url": "https://americanhistory.si.edu/pt/collections/archival-collection/sova-nmah-ac-0300-s11?edan_fq%5B0%5D=date%3A%221940s%22&page=7"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://academic.oup.com/american-national-biography/reference/63042/reference-article-abstract/570417124",
+        "https://www.si.edu/object/archives/components/sova-nmah-ac-0750-ref2131",
+        "https://www.ijc.uidaho.edu/feather_leonard/items/ijc_leonard_feather_045.html"
+      ],
+      "method": "Independent biographical and institutional musical-archive cross-identification",
+      "note": "Encyclopedia seed Ina Ray Hutton (Q531823, singer and bandleader 1916-1984) aligns with Oxford American National Biography (born Odessa Cowan, Melodears founder), Smithsonian Okeh recording under Ina Ray Hutton and Her Orchestra, and University of Idaho Leonard Feather archives photograph identifying Ina Ray Hutton and Her Melodears. The source record lacks Wikidata P434, rather than presenting conflicting MBIDs. This is independently corroborated identity, not a fabricated MusicBrainz link."
+    },
+    "key": "ina-ray-hutton",
+    "limitations": "Smithsonian records include one Stewart Foster vocal, not an Ina Ray Hutton vocal; original physical label not independently inspected. Nonreciprocal identifier requires identity review.",
+    "primary_source_url": "https://americanhistory.si.edu/pt/collections/archival-item/sova-nmah-ac-0750-ref2131",
+    "summary": "Bandleader Ina Ray Hutton led the Melodears in the 1930s and was credited with her orchestra on an archival Okeh swing record.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Oxford biography and Smithsonian archival Okeh disc description document a female swing bandleader."
+  },
   "ingrid-jensen": {
     "evidence": [
       {
@@ -12238,6 +12397,31 @@
     "summary": "Pianist Jason Rebello plays selected tracks on Tim Garland's 2014 Songs to the North Sky, sharing the keyboard role with John Turville and Geoffrey Keezer.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His piano contributes to a contemporary British project joining jazz improvisation with strings."
+  },
+  "jay-cameron": {
+    "evidence": [
+      {
+        "claim": "Jazzdisco Van Gelder register credits Jay Cameron on baritone saxophone, clarinet and bass clarinet for Andre Hodeir March 5, 1957 session.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/van-gelder-studio/discography-1957/"
+      },
+      {
+        "claim": "Jazzdisco Bill Barron register credits Cameron on baritone saxophone for the June 5, 1961 sextet session recording Men at Work and Tone Colors.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/bill-barron/discography/"
+      },
+      {
+        "claim": "The June 1961 Barron recordings appeared on Savoy MG-12163 Modern Windows in 1962; Light Fantastic in the register is marked unissued.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/bill-barron/discography/"
+      }
+    ],
+    "key": "jay-cameron",
+    "limitations": "Jazzdisco is specialist session reconstruction, not direct master labels; the 1961 date is recording, Savoy album appeared 1962 and one track was unissued.",
+    "primary_source_url": "https://www.jazzdisco.org/van-gelder-studio/discography-1957/",
+    "summary": "Baritone saxophonist Jay Cameron recorded with Andre Hodeir in March 1957 and Bill Barron in June 1961, later issued on Savoy.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original-session discographies link Cameron to dated recordings, instruments and separate bandleaders."
   },
   "jay-hoggard": {
     "evidence": [
@@ -13162,6 +13346,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A first-hand big-band history and a Library of Congress portrait link an identifiable saxophonist to a distinct bandleading career."
   },
+  "johnny-claes": {
+    "evidence": [
+      {
+        "claim": "Rust discography credits Johnny Claes and Nat Gonella on trumpets on July 12, 1941 London Columbia sides How Am I to Know and Stomping at the Savoy.",
+        "id": "ev01",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Rust attributes trumpet to Claes on October 18, 1941 Columbia sides Do I Worry and Fascinating Rhythm.",
+        "id": "ev02",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Rust lists Claes on trumpet and vocal for January 15, 1942 Columbia recording Nobody Knows de Trouble Ive Seen.",
+        "id": "ev03",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      }
+    ],
+    "key": "johnny-claes",
+    "limitations": "Brian Rust sixth-edition session personnel are secondary reconstructions and have known errors; original Columbia labels were not personally inspected.",
+    "primary_source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf",
+    "summary": "Trumpeter Johnny Claes played with Nat Gonella on London Columbia sessions in 1941 and sang with his own swing group in 1942.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical matrix discography documents separate wartime London sessions and personal trumpet and vocal credits."
+  },
   "johnny-dunn": {
     "evidence": [
       {
@@ -13797,6 +14006,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Represents the popular smooth-jazz crossover sound."
   },
+  "kenny-hagood": {
+    "evidence": [
+      {
+        "claim": "Library of Congress Gottlieb photo exhibit pictures Dizzy Gillespie with singer Kenny Pancho Hagood during 1946-1948.",
+        "id": "ev01",
+        "source_url": "https://www.loc.gov/exhibits/jazz-singers/online-exhibition.html"
+      },
+      {
+        "claim": "Library of Congress 1947 Gillespie concert film catalog credits Kenny Hagood singing I Waited for You.",
+        "id": "ev02",
+        "source_url": "https://wwws.loc.gov/rr/mopic/findaid/jazz/g-j.html"
+      },
+      {
+        "claim": "Miles Davis nonet discography credits Kenny Hagood on vocals for Darn That Dream at the September 18, 1948 Royal Roost broadcast.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/miles-davis/discography/"
+      }
+    ],
+    "key": "kenny-hagood",
+    "limitations": "The 1947 film, 1948 broadcast and 1950 studio session are distinct documents; no unsupported studio date is assigned to broadcast.",
+    "primary_source_url": "https://www.loc.gov/exhibits/jazz-singers/online-exhibition.html",
+    "summary": "Bebop vocalist Kenny Pancho Hagood sang with Dizzy Gillespie and was heard on Miles Davis nonet recordings in the late 1940s.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Library of Congress holdings and historic sessionography identify Hagood and specific vocal performances."
+  },
   "kenny-rankin": {
     "evidence": [
       {
@@ -14222,6 +14456,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The US arts agency preserved Lee Konitz's direct testimony of Tristano's teaching and documented the pioneering 1949 recordings."
   },
+  "leo-watson": {
+    "evidence": [
+      {
+        "claim": "Smithsonian catalog of Gene Krupa Brunswick record Jeepers Creepers identifies Leo Watson as the credited vocalist.",
+        "id": "ev01",
+        "source_url": "https://americanhistory.si.edu/ar/collections/archival-item/sova-nmah-ac-0750-ref1988"
+      },
+      {
+        "claim": "New World Records archival liner notes credit Leo Watson and His Orchestra Ja-Da on Decca 2959, matrix 66169-A, recorded August 22, 1939.",
+        "id": "ev02",
+        "source_url": "https://nwr-site-liner-notes.s3.amazonaws.com/80295.pdf"
+      },
+      {
+        "claim": "The same original 1939 session lists Watson vocals for Its the Tune That Counts, Decca master matrix 66170-A.",
+        "id": "ev03",
+        "source_url": "https://nwr-site-liner-notes.s3.amazonaws.com/80295.pdf"
+      }
+    ],
+    "key": "leo-watson",
+    "limitations": "One archived Brunswick shellac identifies Watson as vocalist without precise recording day; 1939 Decca recording is dated separately by original liner notes.",
+    "primary_source_url": "https://americanhistory.si.edu/ar/collections/archival-item/sova-nmah-ac-0750-ref1988",
+    "summary": "Scat vocalist Leo Watson sang on a Gene Krupa Brunswick record and led two original Decca sides in August 1939.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Smithsonian record and liner-note matrix archive document personally named vocal credits on several records."
+  },
   "leo-wright": {
     "evidence": [
       {
@@ -14271,6 +14530,31 @@
     "summary": "Jazz singer Leon Thomas worked with Count Basie and Pharoah Sanders on The Creator Has a Master Plan. His Flying Dutchman album used five horns and extra percussion.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His distinctive vocals link blues singing with spiritual jazz and expanded ensembles."
+  },
+  "leonard-ware": {
+    "evidence": [
+      {
+        "claim": "The Sidney Bechet Society sessionography credits Leonard Ware with electric guitar on the November 1938 What a Dream Vocalion master M-924.",
+        "id": "ev01",
+        "source_url": "https://www.sidneybechet.org/trosb.html"
+      },
+      {
+        "claim": "The same Sidney Bechet sessionography credits Ware on electric guitar for Hold Tight master M-925 and Chant in the Night master M-927.",
+        "id": "ev02",
+        "source_url": "https://www.sidneybechet.org/trosb.html"
+      },
+      {
+        "claim": "The Syncopated Times historical entry independently lists Ware in the Sidney Bechet Orchestra lineup with 1938 Vocalion session recordings.",
+        "id": "ev03",
+        "source_url": "https://syncopatedtimes.com/sidney-bechet-and-his-orchestra/"
+      }
+    ],
+    "key": "leonard-ware",
+    "limitations": "The exact 1938 date conflicts: Bechet specialist material says November 6 and Rust or other discographies say November 16; retain month only, no solo inferred.",
+    "primary_source_url": "https://www.sidneybechet.org/trosb.html",
+    "summary": "Electric guitarist Leonard Ware played on Sidney Bechet Vocalion sides in November 1938, including What a Dream and Hold Tight.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two specialist session discographies establish a named instrumental credit on multiple original Vocalion matrices."
   },
   "leonid-utyosov": {
     "evidence": [
@@ -15166,6 +15450,31 @@
     "summary": "Neapolitan vocalist Maria Pia De Vito translated Pergolesi's Stabat Mater into Neapolitan for Il Pergolese, an ECM quartet recording issued in 2013.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Transforms Baroque Neapolitan material through jazz improvisation and electronic textures."
+  },
+  "marianne-racine": {
+    "evidence": [
+      {
+        "claim": "Jazzhaus profile identifies Marianne Racine as a Swedish singer, pianist and composer who settled in Switzerland in 1984.",
+        "id": "ev01",
+        "source_url": "https://jazzhaus.ch/en/medien/today-with-marianne-racine/"
+      },
+      {
+        "claim": "Jazzhaus says Racine helped establish jazz singing at the former Zurich Jazz School and taught at Zurich University of the Arts.",
+        "id": "ev02",
+        "source_url": "https://jazzhaus.ch/en/medien/today-with-marianne-racine/"
+      },
+      {
+        "claim": "The Swiss SRF December 1, 2024 interview names Racine Rhythm and Horns rendition of Mose Allison Modest Proposal.",
+        "id": "ev03",
+        "source_url": "https://www.srf.ch/audio/musik-fuer-einen-gast/marianne-racine-jazzsaengerin?id=AUDI20241201_NR_0028"
+      }
+    ],
+    "key": "marianne-racine",
+    "limitations": "The Swiss radio date is a broadcast/interview date, not recording date for her song; any original track day remains unverified.",
+    "primary_source_url": "https://jazzhaus.ch/en/medien/today-with-marianne-racine/",
+    "summary": "Swedish jazz singer and pianist Marianne Racine moved to Zurich in 1984 and became a vocal-jazz teacher and bandleader.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "First-person Jazzhaus profile and independent Swiss public-radio interview establish her career and teaching work."
   },
   "marilyn-scott": {
     "evidence": [

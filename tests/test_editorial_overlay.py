@@ -52,18 +52,23 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
  def test_manifests_cover_six_independent_source_files(self):
   m=self.manifest
   self.assertEqual(m['catalog_entries'],1498)
-  self.assertEqual(m['individually_source_reviewed'],1277)
-  self.assertEqual(m['researched_extra'],1214)
-  self.assertEqual(m['source_dossiers'],1127)
-  self.assertEqual(m['claims_individually_attributed'],2701)
-  self.assertEqual(m['pending_not_source_reviewed'],221)
+  self.assertEqual(m['individually_source_reviewed'],1289)
+  self.assertEqual(m['researched_extra'],1226)
+  self.assertEqual(m['source_dossiers'],1139)
+  self.assertEqual(m['claims_individually_attributed'],2737)
+  self.assertEqual(m['pending_not_source_reviewed'],209)
   self.assertEqual(m['wave35_new_individual'],19)
   self.assertEqual(m['wave35_new_claims'],56)
+  self.assertEqual(m['wave36_new_individual'],12)
+  self.assertEqual(m['wave36_new_claims'],36)
+  self.assertEqual(m['wave36_promotions_by_previous_category'],
+                   {'evidence_candidate':11,'insufficient_evidence':1,'ambiguous':0})
+  self.assertEqual(m['local_wave36_checkpoint_sha256'],'fb6ffe6b9f5971c22503b8b0d8d835f09549f72b7f1608d09a25c84e69e83196')
   self.assertEqual(m['remaining_by_category'],
-                   {'evidence_candidate':102,'insufficient_evidence':73,'ambiguous':46})
+                   {'evidence_candidate':91,'insufficient_evidence':72,'ambiguous':46})
   self.assertEqual(m['wave35_promotions_by_previous_category'],
                    {'evidence_candidate':18,'insufficient_evidence':1,'ambiguous':0})
-  self.assertEqual(m['research_stage_sha256'],'cc79c0d389fee87bdf258194cd9f490b1032e6e08977aaae38f4aad7a7883ace')
+  self.assertEqual(m['research_stage_sha256'],'06cbb2bb108a49632ee0b0f1a58f2747f1c22804709a96132754427abac473db')
   self.assertEqual(m['local_wave35_checkpoint_sha256'],'67130c8eb9116a541806b9205328f40c5baae84e4c9eea2e5fb25ff82b97645c')
   self.assertEqual(m['wave34_new_individual'],20)
   self.assertEqual(m['wave34_new_claims'],62)
@@ -85,7 +90,7 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   catalog={p[0]:p for line in lines if len(p:=line.split('\t'))==5}
   self.assertEqual(len(catalog),1498)
   raw=(OVERLAY/'source/jazz-researched-context.tsv').read_text('ascii').splitlines()
-  self.assertEqual(len(raw),1214)
+  self.assertEqual(len(raw),1226)
   for row in raw:
    key,short,source=row.split('\t')
    self.assertIn(key,catalog)
@@ -93,9 +98,9 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
    self.assertTrue(80<=len(short)<=180 and short.isascii())
    self.assertTrue(source.startswith('https://'))
 
- def test_all_1127_individual_dossiers_link_to_specific_claims(self):
+ def test_all_1139_individual_dossiers_link_to_specific_claims(self):
   docs=json.loads((OVERLAY/'source/jazz-editorial-dossiers.json').read_text('ascii'))
-  self.assertEqual(len(docs),1127)
+  self.assertEqual(len(docs),1139)
   claim_sum=0
   for key,doc in docs.items():
    with self.subTest(key=key):
@@ -107,7 +112,7 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
     self.assertTrue(all(isinstance(r['claim'],str) and
                       len(r['claim'])>=20 and r['source_url'].startswith('https://') for r in proof))
     claim_sum+=len(proof)
-  self.assertEqual(claim_sum,2701)
+  self.assertEqual(claim_sum,2737)
 
  def test_wave35_nineteen_individual_histories_and_ambiguous_deferrals(self):
   docs=json.loads((OVERLAY/'source/jazz-editorial-dossiers.json').read_text('ascii'))
@@ -360,9 +365,9 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   self.assertEqual(docs['gerardo-velez']['evidence'][0]['source_url'],
                    'https://www.bethelwoodscenter.org/news/detail/jimi-hendrix-50-years-of-peace-music')
 
- def test_generated_future_source_has_1277_exact_hints(self):
+ def test_generated_future_source_has_1289_exact_hints(self):
   header=(OVERLAY/'source/JazzNowPlaying.h').read_text('ascii')
-  self.assertIn('static constexpr size_t kCuratedCount = 1277;',header)
+  self.assertIn('static constexpr size_t kCuratedCount = 1289;',header)
   self.assertIn('Exact ICY matches only.',header)
   self.assertIn('static bool sameName',header)
   self.assertIn('return !*a && !*b',header)
