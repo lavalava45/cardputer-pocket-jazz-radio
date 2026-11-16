@@ -51,18 +51,18 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
  def test_manifests_cover_six_independent_source_files(self):
   m=self.manifest
   self.assertEqual(m['catalog_entries'],1498)
-  self.assertEqual(m['individually_source_reviewed'],1079)
-  self.assertEqual(m['researched_extra'],1016)
-  self.assertEqual(m['source_dossiers'],929)
-  self.assertEqual(m['claims_individually_attributed'],2105)
-  self.assertEqual(m['pending_not_source_reviewed'],419)
-  self.assertEqual(m['wave25_new_individual'],51)
-  self.assertEqual(m['wave25_new_claims'],152)
+  self.assertEqual(m['individually_source_reviewed'],1107)
+  self.assertEqual(m['researched_extra'],1044)
+  self.assertEqual(m['source_dossiers'],957)
+  self.assertEqual(m['claims_individually_attributed'],2188)
+  self.assertEqual(m['pending_not_source_reviewed'],391)
+  self.assertEqual(m['wave26_new_individual'],28)
+  self.assertEqual(m['wave26_new_claims'],83)
   self.assertEqual(m['remaining_by_category'],
-                   {'evidence_candidate':286,'insufficient_evidence':82,'ambiguous':51})
-  self.assertEqual(m['wave25_promotions_by_previous_category'],
-                   {'evidence_candidate':32,'insufficient_evidence':18,'ambiguous':1})
-  self.assertEqual(m['research_stage_sha256'],'c420f39b0bb6b71c28458dfa6a853a081bd8c3adbef6e4164584d02939dff4bd')
+                   {'evidence_candidate':260,'insufficient_evidence':81,'ambiguous':50})
+  self.assertEqual(m['wave26_promotions_by_previous_category'],
+                   {'evidence_candidate':26,'insufficient_evidence':1,'ambiguous':1})
+  self.assertEqual(m['research_stage_sha256'],'c5868f6abd31ec716351934b2f87f241871df015d1b4636443a7a855ab21168d')
   self.assertEqual(len(m['files']),6)
   self.assertEqual(sum(r['bytes'] for r in m['files'].values()),
     sum((OVERLAY/k).stat().st_size for k in m['files']))
@@ -81,7 +81,7 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   catalog={p[0]:p for line in lines if len(p:=line.split('\t'))==5}
   self.assertEqual(len(catalog),1498)
   raw=(OVERLAY/'source/jazz-researched-context.tsv').read_text('ascii').splitlines()
-  self.assertEqual(len(raw),1016)
+  self.assertEqual(len(raw),1044)
   for row in raw:
    key,short,source=row.split('\t')
    self.assertIn(key,catalog)
@@ -89,9 +89,9 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
    self.assertTrue(80<=len(short)<=180 and short.isascii())
    self.assertTrue(source.startswith('https://'))
 
- def test_all_929_individual_dossiers_link_to_specific_claims(self):
+ def test_all_957_individual_dossiers_link_to_specific_claims(self):
   docs=json.loads((OVERLAY/'source/jazz-editorial-dossiers.json').read_text('ascii'))
-  self.assertEqual(len(docs),929)
+  self.assertEqual(len(docs),957)
   claim_sum=0
   for key,doc in docs.items():
    with self.subTest(key=key):
@@ -103,7 +103,25 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
     self.assertTrue(all(isinstance(r['claim'],str) and
                       len(r['claim'])>=20 and r['source_url'].startswith('https://') for r in proof))
     claim_sum+=len(proof)
-  self.assertEqual(claim_sum,2105)
+  self.assertEqual(claim_sum,2188)
+
+ def test_wave26_28_exact_source_histories_and_disambiguated_trumpeter(self):
+  docs=json.loads((OVERLAY/'source/jazz-editorial-dossiers.json').read_text('ascii'))
+  new=('buddy-catlett','christian-chevallier','frank-gant','gene-taylor',
+       'georg-riedel','harry-arnold','harry-james','hod-obrien',
+       'johnny-dunn','preston-jackson','mark-soskin','jim-robinson',
+       'papa-celestin','kippie-moeketsi','john-young','larry-kohut',
+       'jimmy-dorsey','kenny-rankin','si-zentner','tarus-mateen',
+       'roger-cicero','randy-crawford','zachary-breaux','skitch-henderson',
+       'shunzo-ohno','thomas-lang','renee-olstead','stoyan-yankulov')
+  self.assertEqual(len(set(new)),28)
+  self.assertTrue(set(new)<=set(docs))
+  self.assertEqual(sum(len(docs[k]['evidence']) for k in new),83)
+  self.assertIn('MBID',docs['shunzo-ohno']['identity_resolution']['note'])
+  self.assertNotIn('1973',docs['shunzo-ohno']['summary'])
+  self.assertNotIn('1974',docs['shunzo-ohno']['summary'])
+  self.assertEqual(docs['georg-riedel']['primary_source_url'],
+                   'https://www.digmusic.se/SvenskJazzhistoria.JanAllan.GeorgRiedel.html')
 
  def test_wave25_all_51_specific_dossiers_and_nonreciprocal_identity_authorities(self):
   docs=json.loads((OVERLAY/'source/jazz-editorial-dossiers.json').read_text('ascii'))
@@ -168,9 +186,9 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   self.assertEqual(docs['gerardo-velez']['evidence'][0]['source_url'],
                    'https://www.bethelwoodscenter.org/news/detail/jimi-hendrix-50-years-of-peace-music')
 
- def test_generated_future_source_has_1079_exact_hints(self):
+ def test_generated_future_source_has_1107_exact_hints(self):
   header=(OVERLAY/'source/JazzNowPlaying.h').read_text('ascii')
-  self.assertIn('static constexpr size_t kCuratedCount = 1079;',header)
+  self.assertIn('static constexpr size_t kCuratedCount = 1107;',header)
   self.assertIn('Exact ICY matches only.',header)
   self.assertIn('static bool sameName',header)
   self.assertIn('return !*a && !*b',header)
@@ -182,6 +200,8 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   self.assertIn('Yolande Bavan',header)
   self.assertIn('Teo Macero',header)
   self.assertIn('George Bohanon',header)
+  self.assertIn('Harry James',header)
+  self.assertIn('Shunzo Ohno',header)
   self.assertIn('Sadao Watanabe',header)
   self.assertIn('Sammy Nestico',header)
   self.assertIn('Masha Bijlsma',header)

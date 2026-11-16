@@ -2754,6 +2754,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents orchestral arrangement in midcentury popular entertainment."
   },
+  "buddy-catlett": {
+    "evidence": [
+      {
+        "claim": "Concord's previously unissued Pisces credits bassist Buddy Catlett with Johnny Griffin, Eddie Lockjaw Davis, pianist Horace Parlan and drummer Art Taylor.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/pisces/"
+      },
+      {
+        "claim": "Concord names Buddy Catlett among the credited players on Eddie Lockjaw Davis's Goin' to the Meetin', a collection of 1960 and 1962 Prestige sessions.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/goin-to-the-meetin-2/"
+      },
+      {
+        "claim": "The Pisces historical liner notes describe the Griffin and Davis performances as mainly ballads, alternating the two tenors rather than their usual saxophone battles.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/pisces/"
+      }
+    ],
+    "key": "buddy-catlett",
+    "limitations": "The Pisces session was previously unreleased and the Goin' to the Meetin' issue gathers more than one recording group, so the evidence does not establish individual Catlett track solos.",
+    "primary_source_url": "https://concord.com/concord-albums/pisces/",
+    "summary": "Jazz bassist Buddy Catlett accompanied Johnny Griffin and Eddie Lockjaw Davis on Pisces and appears among the players on Goin' to the Meetin'.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The record label credits an identifiable bassist in two distinct documented tenor-saxophone sessions."
+  },
   "buddy-childers": {
     "evidence": [
       {
@@ -4873,6 +4898,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her award-winning R&B performances draw from jazz singing traditions."
   },
+  "christian-chevallier": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound identifies Christian Chevallier as arranger for Kenny Clarke Plays Christian Chevallier, recorded at Pathe Marconi Boulogne on November 12, 1957.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/kenny-clarke-albums/6288-plays-the-arrangements-of-andre-hodeir-pierre-michelot-christian-chevallier-francy-boland.html"
+      },
+      {
+        "claim": "Fresh Sound's Roger Guerin Paris Meetings notes identify Christian Chevallier on piano with trumpeter Roger Guerin, bassist Pierre Michelot and drummer Christian Garros, recorded November 13, 1956.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/roger-guerin-albums/6630-le-formidable-roger-guerin-paris-meetings.html"
+      },
+      {
+        "claim": "Fresh Sound's Le Prince du Jazz Francais gathers Chevallier's small-group and orchestral jazz work from 1955 to 1961.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/christian-chevallier-albums/6417-le-prince-du-jazz-francais-his-orchestra-small-groups-1955-1961-2-cd.html"
+      }
+    ],
+    "key": "christian-chevallier",
+    "limitations": "The 1955-61 anthology is a historical reissue, not a single recording session or an award chronology for every composition.",
+    "primary_source_url": "https://www.freshsoundrecords.com/kenny-clarke-albums/6288-plays-the-arrangements-of-andre-hodeir-pierre-michelot-christian-chevallier-francy-boland.html",
+    "summary": "French jazz pianist and arranger Christian Chevallier led 1950s small groups and orchestrated Kenny Clarke's 1957 Paris studio recordings.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Philips/Columbia session personnel and reissue dates document Chevallier's roles as player and arranger on distinct Paris projects."
+  },
   "christian-kellens": {
     "evidence": [
       {
@@ -6748,6 +6798,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "University of Louisiana's original recorded interview catalog gives first-person career context beyond commercial session databases."
   },
+  "frank-gant": {
+    "evidence": [
+      {
+        "claim": "Concord lists drummer Frank Gant in the personnel for Red Garland's Solar alongside bassist Sam Jones and multi-instrumentalist Les Spann.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/solar/"
+      },
+      {
+        "claim": "Concord's Red Garland anthology The Nearness of You identifies Frank Gant and bassist Larry Ridley among its piano-trio musicians.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/the-nearness-of-you/"
+      },
+      {
+        "claim": "The Concord issue In Tokyo documents Monty Alexander's first Japanese jazz tour with bassist Andy Simpkins and drummer Frank Gant.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/in-tokyo/"
+      }
+    ],
+    "key": "frank-gant",
+    "limitations": "Compilation credits do not guarantee he played on every track from the associated original session releases.",
+    "primary_source_url": "https://concord.com/concord-albums/solar/",
+    "summary": "Jazz drummer Frank Gant played with Red Garland on Solar and The Nearness of You and accompanied Monty Alexander in Tokyo with bassist Andy Simpkins.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three original Concord label accounts support specific recurring piano-trio recording credits rather than generic session associations."
+  },
   "frank-haunschild": {
     "evidence": [
       {
@@ -7919,6 +7994,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His orchestral writing links swing arranging to experimental postwar big bands."
   },
+  "gene-taylor": {
+    "evidence": [
+      {
+        "claim": "Concord identifies Gene Taylor as bassist in the Cedar Walton and Roy Brooks rhythm section of Blue Mitchell's The Cup Bearers.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/the-cup-bearers/"
+      },
+      {
+        "claim": "Concord names Gene Taylor alongside Junior Cook, Blue Mitchell, Ronnie Mathews, Dolo Coker and Roy Brooks on Junior's Cookin'.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/juniors-cookin/"
+      },
+      {
+        "claim": "Concord includes Gene Taylor among players on Eddie Jefferson's vocalese recording Come Along With Me alongside Barry Harris and Bill Hardman.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/come-along-with-me/"
+      }
+    ],
+    "key": "gene-taylor",
+    "limitations": "The retrospective Plays for Lovers is compiled from multiple sessions and is not used to attribute every track to Taylor.",
+    "primary_source_url": "https://concord.com/concord-albums/the-cup-bearers/",
+    "summary": "Jazz bassist Gene Taylor played with Cedar Walton and Roy Brooks on Blue Mitchell's The Cup Bearers and appeared on Junior Cook's Junior's Cookin'.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Jazzland/Riverside reissues document two distinct, personnel-identified jazz ensemble recordings."
+  },
   "geoffrey-keezer": {
     "evidence": [
       {
@@ -7958,6 +8058,31 @@
     "summary": "Austrian bassist Georg Breinschmid co-led the 2022 Berlin Philharmonic Mingus centenary concert and arranged Jelly Roll and Boogie Stop Shuffle.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Connects orchestral virtuosity, Viennese musical idioms and modern improvised bass."
+  },
+  "georg-riedel": {
+    "evidence": [
+      {
+        "claim": "In the original Caprice Records interview Georg Riedel states that he and Rune Ofwerman's trio won the 1950 AT-jazzen competition.",
+        "id": "ev01",
+        "source_url": "https://www.digmusic.se/SvenskJazzhistoria.JanAllan.GeorgRiedel.html"
+      },
+      {
+        "claim": "Riedel's original interview says he participated in a Lars Gullin recording during March 1953 and went on tour with Gullin's newly formed quintet that summer.",
+        "id": "ev02",
+        "source_url": "https://www.digmusic.se/SvenskJazzhistoria.JanAllan.GeorgRiedel.html"
+      },
+      {
+        "claim": "The Caprice interview identifies Georg Riedel as a bassist with Arne Domnerus's orchestra at Stockholm's Nalen venue during his conservatory studies.",
+        "id": "ev03",
+        "source_url": "https://www.digmusic.se/SvenskJazzhistoria.JanAllan.GeorgRiedel.html"
+      }
+    ],
+    "key": "georg-riedel",
+    "limitations": "Interview recollections are preserved as the musician's testimony rather than exact dates for every undocumented session.",
+    "primary_source_url": "https://www.digmusic.se/SvenskJazzhistoria.JanAllan.GeorgRiedel.html",
+    "summary": "Swedish jazz bassist Georg Riedel played with Lars Gullin's 1953 quintet after winning a 1950 Swedish jazz contest in Rune Ofwerman's trio.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Caprice Svensk Jazzhistoria interview is Riedel's first-person account of the bands, recordings and Swedish postwar jazz community."
   },
   "georg-ruby": {
     "evidence": [
@@ -9266,6 +9391,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Roma jazz guitar bridging swing, blues and modern world-music idioms"
   },
+  "harry-arnold": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's Mercury MG36139 reissue identifies Harry Arnold's orchestra conducted and arranged by Quincy Jones in Stockholm across February, March, April and June 1958.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/quincy-jones-harry-arnold-albums/4571-quincy-jones-harry-arnold-big-band-jazz.html"
+      },
+      {
+        "claim": "The historical reissue lists Harry Arnold's Orchestra Featuring Benny Bailey from a Stockholm session on November 19, 1958.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/quincy-jones-harry-arnold-albums/4571-quincy-jones-harry-arnold-big-band-jazz.html"
+      },
+      {
+        "claim": "The Mercury historical track origins separate 1958 Harry Arnold material from Quincy Jones orchestra material taped in Stockholm on November 10, 1953.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/quincy-jones-harry-arnold-albums/4571-quincy-jones-harry-arnold-big-band-jazz.html"
+      }
+    ],
+    "key": "harry-arnold",
+    "limitations": "Quincy Jones arranged and conducted part of the repertoire; Harry Arnold is credited as orchestra leader rather than assumed sole composer of all tracks.",
+    "primary_source_url": "https://www.freshsoundrecords.com/quincy-jones-harry-arnold-albums/4571-quincy-jones-harry-arnold-big-band-jazz.html",
+    "summary": "Swedish bandleader Harry Arnold led the orchestra on 1958 Stockholm sessions arranged by Quincy Jones and also recorded with trumpeter Benny Bailey.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The historical Mercury big-band record is traced to specific studio dates and original instrumental and arranging credits."
+  },
   "harry-betts": {
     "evidence": [
       {
@@ -9330,6 +9480,31 @@
     "summary": "Trumpeter Harry Sweets Edison played in Jeter-Pillars in 1933-1935, joined Count Basie in 1937 and later recorded behind singers Frank Sinatra and Billie Holiday.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His economical trumpet soloing complemented swing and vocal jazz."
+  },
+  "harry-james": {
+    "evidence": [
+      {
+        "claim": "Library of Congress catalogs Harry James as trumpeter and his orchestra as performers in original 1940 New York World's Fair live broadcasts.",
+        "id": "ev01",
+        "source_url": "https://www.loc.gov/item/2015625696"
+      },
+      {
+        "claim": "The Library of Congress catalog dates Harry James and Dick Haymes's Hotel Lincoln Blue Room live broadcasts to May and June 1941.",
+        "id": "ev02",
+        "source_url": "https://www.loc.gov/item/2015625696"
+      },
+      {
+        "claim": "Library of Congress recording registry documentation states that swing-era bandleader Harry James recorded Memphis Blues in 1942.",
+        "id": "ev03",
+        "source_url": "https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/descriptions-and-essays/"
+      }
+    ],
+    "key": "harry-james",
+    "limitations": "The 1940 and 1941 broadcast recordings were reissued in 2009; the reissue date is not treated as an original studio session year.",
+    "primary_source_url": "https://www.loc.gov/item/2015625696",
+    "summary": "Swing trumpeter Harry James led broadcasts at the 1940 New York World's Fair and 1941 Hotel Lincoln and recorded Memphis Blues in 1942.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Library of Congress archival records identify actual broadcast performances and contemporary photographs of James as trumpeter and bandleader."
   },
   "hartmut-kracht": {
     "evidence": [
@@ -9656,6 +9831,31 @@
     "summary": "Jazz pianist Hiromi Uehara led Sonicbloom on 'Time Control' (2007), mixing dazzling keyboard improvisations with Dave Fiuczynski's electric guitar.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Electric modern jazz built on unusual time patterns and high-velocity group interaction"
+  },
+  "hod-obrien": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound credits Hod O'Brien on piano, Tom Warrington on double bass and Paul Kreibich on drums for Have Piano... Will Swing, recorded December 17-18, 1999.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/hod-o-brien-albums/1142-have-piano-will-swing.html"
+      },
+      {
+        "claim": "The Fresh Sound Fine and Dandy booklet credits the same pianist, bassist and drummer at Entourage Studios, Hollywood, on December 19-20, 2000.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/hod-o-brien-albums/2162-fine-and-dandy.html"
+      },
+      {
+        "claim": "A historical Jazzland reissue credits Hod O'Brien on piano for Rene Thomas's Guitar Groove with JR Monterose, Teddy Kotick and Tootie Heath.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/rene-thomas-albums/5780-guitar-groove-audiophile-180gr-hq-vinyl.html"
+      }
+    ],
+    "key": "hod-obrien",
+    "limitations": "The date of Fresh Sound CD publication is not assumed identical to the 1999 or 2000 recording dates.",
+    "primary_source_url": "https://www.freshsoundrecords.com/hod-o-brien-albums/1142-have-piano-will-swing.html",
+    "summary": "Bebop pianist Hod O'Brien recorded Have Piano... Will Swing in 1999 and Fine and Dandy in 2000 with Tom Warrington and Paul Kreibich.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The reissuing label preserves original recorded dates, trio instruments and pianist-composer work in two specific studio albums."
   },
   "holly-cole": {
     "evidence": [
@@ -10700,6 +10900,56 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Smithsonian collections tie his music to native melodies and jazz fusion."
   },
+  "jim-robinson": {
+    "evidence": [
+      {
+        "claim": "Smithsonian's archival Bogalusa Strut credits Jim Robinson on trombone in Sam Morgan's Jazz Band alongside cornetist Isiah Morgan.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/sam-morgans-jazz-band/bogalusa-strut-2/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian credits Robinson on trombone in Bunk's Brass Band's In Gloryland alongside Bunk Johnson and George Lewis.",
+        "id": "ev02",
+        "source_url": "https://folkways.si.edu/bunks-brass-band/in-gloryland/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Concord's original reissue notes identify Robinson in Sweet Emma Barrett's 1961 septet with Percy and Willie Humphrey.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/new-orleans-the-living-legends-5/"
+      }
+    ],
+    "key": "jim-robinson",
+    "limitations": "Several cited Smithsonian dates are retrospective anthology release years, not original session dates.",
+    "primary_source_url": "https://folkways.si.edu/sam-morgans-jazz-band/bogalusa-strut-2/jazz-ragtime/music/track/smithsonian",
+    "summary": "New Orleans trombonist Jim Robinson recorded with Sam Morgan's Jazz Band and Bunk Johnson's brass band, then joined Sweet Emma Barrett's 1961 septet.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Smithsonian archive documents original instrumental credits and Concord identifies Robinson's later Preservation Hall-associated collaboration."
+  },
+  "jimmy-dorsey": {
+    "evidence": [
+      {
+        "claim": "Smithsonian credits Jimmy Dorsey on clarinet, Tommy Dorsey on trombone and Red Nichols on cornet for the Sam Lanin Orchestra's Doll Dance.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/the-sam-lanin-orchestra/doll-dance/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Concord's Stan Getz artist history says the tenor saxophonist played briefly in Jimmy Dorsey's touring orchestra during 1944-46.",
+        "id": "ev02",
+        "source_url": "https://concord.com/artist/stan-getz/"
+      },
+      {
+        "claim": "Johnny Mandel's first-person NEA oral history recalls playing first trombone in Jimmy Dorsey's orchestra after leaving Boyd Raeburn.",
+        "id": "ev03",
+        "source_url": "https://www.arts.gov/honors/jazz/johnny-mandel"
+      }
+    ],
+    "key": "jimmy-dorsey",
+    "limitations": "The 1979 Folkways issue date for Doll Dance is a retrospective release, not its recording year.",
+    "primary_source_url": "https://folkways.si.edu/the-sam-lanin-orchestra/doll-dance/jazz-ragtime/music/track/smithsonian",
+    "summary": "Clarinetist Jimmy Dorsey recorded with Sam Lanin's Orchestra alongside Red Nichols and Tommy Dorsey and later led a touring big band employing Stan Getz.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian's preserved early jazz recording personnel and Concord's historical artist notes support distinct episodes of his performing career."
+  },
   "jimmy-gourley": {
     "evidence": [
       {
@@ -11164,6 +11414,56 @@
     "summary": "Guitarist John Tropea played with Deodato and released solo albums Tropea, Short Trip to Space and To Touch You Again, blending jazz with studio funk.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Highlights guitar in 1970s jazz-funk and New York studio recording."
+  },
+  "john-young": {
+    "evidence": [
+      {
+        "claim": "The 1970 live Dexter Gordon and Gene Ammons The Chase! is credited to Chicago rhythm sections led by pianists John Young and Jodie Christian.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/the-chase-2/"
+      },
+      {
+        "claim": "Prestige's The Chase! edition adds an expanded Wee Dot and a previously unissued ballad medley to the club recording featuring John Young.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/the-chase-2/"
+      },
+      {
+        "claim": "Concord's original Bluesville reissue of Arbee Stidham's Tired of Wandering identifies Chicago jazz pianist John Young in the 1960 session.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/tired-of-wandering/"
+      }
+    ],
+    "key": "john-young",
+    "limitations": "The Chase! employed two pianists; individual solo and track assignments are not inferred.",
+    "primary_source_url": "https://concord.com/concord-albums/the-chase-2/",
+    "summary": "Chicago pianist John Young backed Dexter Gordon and Gene Ammons in their 1970 live tenor meeting The Chase! and played for Arbee Stidham's 1960 Bluesville session.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Prestige and Bluesville liner notes document two different rhythm-section engagements spanning jazz and blues."
+  },
+  "johnny-dunn": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Folkways credits Johnny Dunn on cornet for Mamie Smith's Jazz Hounds' Old Time Blues, alongside clarinetist Buster Bailey.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/mamie-smiths-jazz-hounds/old-time-blues/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian credits Dunn on cornet with Buster Bailey, Phil Worde and Chink Johnson on Perry Bradford's That Thing Called Love.",
+        "id": "ev02",
+        "source_url": "https://folkways.si.edu/perry-bradford/that-thing-called-love"
+      },
+      {
+        "claim": "The Smithsonian Jazz: Some Cities and Towns anthology includes Buffalo Blues under the original group credit Johnny Dunn And His Band.",
+        "id": "ev03",
+        "source_url": "https://folkways.si.edu/jazz-some-cities-and-towns/ragtime/music/album/smithsonian"
+      }
+    ],
+    "key": "johnny-dunn",
+    "limitations": "Smithsonian's reissue dates do not specify recording dates; one Perry Bradford track's instruments are inconsistently transcribed and omitted.",
+    "primary_source_url": "https://folkways.si.edu/mamie-smiths-jazz-hounds/old-time-blues/jazz-ragtime/music/track/smithsonian",
+    "summary": "Early jazz cornetist Johnny Dunn played with Mamie Smith's Jazz Hounds, appeared in Perry Bradford's recorded ensembles and led his own band.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Smithsonian Folkways archive documents his work as both a band member and a named leader in original early-jazz recording reissues."
   },
   "joki-freund": {
     "evidence": [
@@ -11666,6 +11966,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Represents the popular smooth-jazz crossover sound."
   },
+  "kenny-rankin": {
+    "evidence": [
+      {
+        "claim": "Telarc's This Christmas explicitly credits Kenny Rankin in a duet with Ann Hampton Callaway on Baby, It's Cold Outside.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/this-christmas/"
+      },
+      {
+        "claim": "Concord's Ultimate Mancini identifies Rankin among featured guest musicians joining Monica Mancini's Henry Mancini tribute.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/monica-mancini-ultimate-mancini/"
+      },
+      {
+        "claim": "Concord dates Callaway's This Christmas to September 23, 2008 and credits Joel Moss as producer.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/this-christmas/"
+      }
+    ],
+    "key": "kenny-rankin",
+    "limitations": "The Ultimate Mancini album page lists Rankin among guests without specifying his exact tracks or instruments.",
+    "primary_source_url": "https://concord.com/concord-albums/this-christmas/",
+    "summary": "Singer Kenny Rankin recorded a duet with Ann Hampton Callaway on the 2008 Telarc album This Christmas and appeared on Monica Mancini's Ultimate Mancini.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original label releases document two specific guest vocal projects, including a named duet and a tribute to Henry Mancini."
+  },
   "kenny-washington": {
     "evidence": [
       {
@@ -11801,6 +12126,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His career reflects a crossover of jazz, funk and hip-hop groove."
   },
+  "kippie-moeketsi": {
+    "evidence": [
+      {
+        "claim": "In his NEA interview, Abdullah Ibrahim calls Kippie Moeketsi an inspirational force who encouraged him to study South African traditional music.",
+        "id": "ev01",
+        "source_url": "https://www.arts.gov/stories/podcast/abdullah-ibrahim"
+      },
+      {
+        "claim": "Ibrahim describes meeting Moeketsi and recruiting additional musicians to form the Jazz Epistles.",
+        "id": "ev02",
+        "source_url": "https://www.arts.gov/stories/podcast/abdullah-ibrahim"
+      },
+      {
+        "claim": "Ibrahim recalls the Jazz Epistles' recording breakthrough in the context of white-controlled recording studios under apartheid.",
+        "id": "ev03",
+        "source_url": "https://www.arts.gov/stories/podcast/abdullah-ibrahim"
+      }
+    ],
+    "key": "kippie-moeketsi",
+    "limitations": "The NEA interviewer calls the Jazz Epistles record South Africa's first jazz album; this broad claim is not repeated without catalog verification.",
+    "primary_source_url": "https://www.arts.gov/stories/podcast/abdullah-ibrahim",
+    "summary": "South African saxophonist Kippie Moeketsi inspired Abdullah Ibrahim to explore indigenous musical traditions and helped form the pioneering Jazz Epistles.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Abdullah Ibrahim's own oral-history testimony preserved by the NEA gives both the personal musical influence and the Jazz Epistles' origin."
+  },
   "kirk-lightsey": {
     "evidence": [
       {
@@ -11930,6 +12280,26 @@
     "summary": "Argentine jazz pianist and composer Lalo Schifrin wrote The Cat and Jazz Suite on the Mass Texts before his Mission: Impossible television theme.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The Recording Academy documents original jazz composition honors and the distinct later instrumental television theme award."
+  },
+  "larry-kohut": {
+    "evidence": [
+      {
+        "claim": "Concord credits Larry Kohut on bass as a member of Patricia Barber's Chicago quartet for Smash.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/patricia-barber-smash/"
+      },
+      {
+        "claim": "Concord states that Barber's Smash consists of twelve new compositions recorded with Kohut, drummer Jon Deitemyer and guitarist John Kregor.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/patricia-barber-smash/"
+      }
+    ],
+    "key": "larry-kohut",
+    "limitations": "A full second independent album or session has not been established; the two detailed claims concern one documented ensemble and album.",
+    "primary_source_url": "https://concord.com/concord-albums/patricia-barber-smash/",
+    "summary": "Chicago jazz bassist Larry Kohut formed the rhythm section of Patricia Barber's Concord album Smash alongside drummer Jon Deitemyer and guitarist John Kregor.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The artist's original label notes specify Kohut's instrument and band role in an original-compositions project."
   },
   "laura-nyro": {
     "evidence": [
@@ -12945,6 +13315,31 @@
     "summary": "Jamaican-born tenor saxophonist Mark Shim toured with Betty Carter and Elvin Jones and released three Blue Note albums, including Turbulent Flow.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Connects Betty Carter's ensembles, Elvin Jones and late-1990s Blue Note jazz."
+  },
+  "mark-soskin": {
+    "evidence": [
+      {
+        "claim": "Milestone's Sunny Days, Starry Nights identifies Mark Soskin among Sonny Rollins's band, recorded January 1984.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/sunny-days-starry-nights-2/"
+      },
+      {
+        "claim": "Milestone's G-Man documents Soskin in Rollins's quartet on the August 16, 1986 recording.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/g-man-2/"
+      },
+      {
+        "claim": "Craft's original master-tape reissue history credits Soskin on keyboards for Roger Glenn's 1977 Reachin'.",
+        "id": "ev03",
+        "source_url": "https://concord.com/news/jazz-dispensarys-top-shelf-series-returns-with-unearthed-gem-from-the-golden-age-of-jazz-funk-fusion-roger-glenns-reachin/"
+      }
+    ],
+    "key": "mark-soskin",
+    "limitations": "Personnel credits establish participation in named albums, without assigning him to every track on multi-session anthologies.",
+    "primary_source_url": "https://concord.com/concord-albums/sunny-days-starry-nights-2/",
+    "summary": "Keyboardist Mark Soskin recorded with Sonny Rollins in 1984, 1986 and 1991, and played keyboards on Roger Glenn's 1977 jazz-funk album Reachin'.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Milestone recording catalog and Craft master-tape notes identify his role across both acoustic and electric jazz."
   },
   "mark-tokar": {
     "evidence": [
@@ -15778,6 +16173,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Conte's official artist biography documents his early jazz playing, writing for other singers and dated recordings under his own name."
   },
+  "papa-celestin": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Folkways documents Celestin's Original Tuxedo Orchestra, first recordings in 1925 and postwar weekly radio broadcasts.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/oscar-papa-celestin/the-1950s-radio-broadcasts/jazz-ragtime/music/album/smithsonian"
+      },
+      {
+        "claim": "Original Arhoolie track credits identify Celestin singing and playing trumpet on Panama with trombonist Bill Mathews and clarinetist Alphonse Picou.",
+        "id": "ev02",
+        "source_url": "https://folkways.si.edu/oscar-papa-celestin/panama/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian credits Celestin's French-language Eh, La Bas in the same band and identifies the full sextet.",
+        "id": "ev03",
+        "source_url": "https://folkways.si.edu/oscar-papa-celestin/eh-la-bas/jazz-ragtime/music/song/smithsonian"
+      }
+    ],
+    "key": "papa-celestin",
+    "limitations": "The 1996 Arhoolie release date is a reissue; the radio performances are from the early 1950s.",
+    "primary_source_url": "https://folkways.si.edu/oscar-papa-celestin/the-1950s-radio-broadcasts/jazz-ragtime/music/album/smithsonian",
+    "summary": "New Orleans trumpeter and singer Papa Celestin led the Tuxedo Jazz Band, first recorded in 1925 and returned to nationally broadcast performances after World War II.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian's Arhoolie archive preserves original band recordings and identifies individual trumpeter-vocalist and collaborator credits."
+  },
   "pat-labarbera": {
     "evidence": [
       {
@@ -16502,6 +16922,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original record-company credits document collaboration across traditional-jazz ensembles."
   },
+  "preston-jackson": {
+    "evidence": [
+      {
+        "claim": "Smithsonian credits Preston Jackson on trombone on Richard M. Jones' New Orleans Hop Scop Blues, with Darnell Howard on clarinet and Baby Dodds on drums.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/richard-m-jones-jazzmen/new-orleans-hop-scop-blues/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian identifies Jackson as the trombonist in Jones' 29th and Dearborn, backed by pianist Jones, bassist John Lindsay and trumpeter Bob Schoffner.",
+        "id": "ev02",
+        "source_url": "https://folkways.si.edu/richard-m-jones-jazzmen/29th-and-dearborn/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Concord's Chicago: The Living Legends reissue lists Preston Jackson in Lil Hardin Armstrong's all-star ensemble, alongside Darnell Howard and Pops Foster.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/chicago-the-living-legends-5/"
+      }
+    ],
+    "key": "preston-jackson",
+    "limitations": "Smithsonian anthology release dates are not the same as original 1940s recording dates; no specific session day asserted.",
+    "primary_source_url": "https://folkways.si.edu/richard-m-jones-jazzmen/new-orleans-hop-scop-blues/jazz-ragtime/music/track/smithsonian",
+    "summary": "Chicago trombonist Preston Jackson recorded Richard M. Jones' traditional jazz with Darnell Howard and Baby Dodds and later played with Lil Hardin Armstrong.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian original track credits document the precise Jones band, while Concord identifies Jackson in Lil Hardin Armstrong's later Chicago all-star group."
+  },
   "putte-wickman": {
     "evidence": [
       {
@@ -16619,6 +17064,31 @@
     "summary": "Pianist and composer Ran Blake brings film noir, gospel and Third Stream ideas to jazz improvisation. He founded a Third Stream program at New England Conservatory.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Explores jazz-classical fusion and improvisational music education."
+  },
+  "randy-crawford": {
+    "evidence": [
+      {
+        "claim": "Original MCA/Verve credit on the Crusaders' 1979 Street Life identifies Randy Crawford as the vocalist of its title track.",
+        "id": "ev01",
+        "source_url": "https://www.qobuz.com/us-en/album/street-life-the-crusaders/0060254717433"
+      },
+      {
+        "claim": "The Recording Academy credits Randy Crawford and Joe Sample with the 2008 traditional R&B vocal nomination All Night Long.",
+        "id": "ev02",
+        "source_url": "https://www.grammy.com/artists/randy-crawford/10974/"
+      },
+      {
+        "claim": "The Recording Academy lists her album No Regrets as a 2010 Best Jazz Vocal Album nominee.",
+        "id": "ev03",
+        "source_url": "https://www.grammy.com/awards/categories/best-jazz-vocal-album/2010/"
+      }
+    ],
+    "key": "randy-crawford",
+    "limitations": "Her Grammy entries describe nominations, not award victories; the original Street Life year is not a CD reissue year.",
+    "primary_source_url": "https://www.qobuz.com/us-en/album/street-life-the-crusaders/0060254717433",
+    "summary": "Singer Randy Crawford performed the Crusaders' 1979 Street Life and later recorded All Night Long with Joe Sample and No Regrets.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An original MCA/Verve recording credit and the Recording Academy establish two independent performance projects."
   },
   "ray-charles": {
     "evidence": [
@@ -16804,6 +17274,31 @@
     "summary": "German trumpeter Reiner Winterschladen joined the NDR Big Band in 1995 after work in jazz, rock and funk groups.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents this musician's distinctive role in jazz and related music."
+  },
+  "renee-olstead": {
+    "evidence": [
+      {
+        "claim": "The Los Angeles Times' June 2003 eyewitness concert review records Renee Olstead performing At Last, Cry Me a River and Sentimental Journey at Pasadena Jazz Institute.",
+        "id": "ev01",
+        "source_url": "https://www.latimes.com/archives/la-xpm-2003-jun-02-et-heckman2-story.html"
+      },
+      {
+        "claim": "Warner's original phonographic credit for What a Difference a Day Makes identifies Olstead on vocals, Alan Broadbent on piano and David Foster as producer.",
+        "id": "ev02",
+        "source_url": "https://www.qobuz.com/dk-en/album/jazz-masterclass-various-artists/c14w3yvyg1xaa"
+      },
+      {
+        "claim": "The 143 Records/Warner Bros album Renee Olstead is cataloged as a 2004 recording with Hollywood and Los Angeles studios.",
+        "id": "ev03",
+        "source_url": "https://www.allmusic.com/album/release/rene%C3%A9-olstead-mr0000126488"
+      }
+    ],
+    "key": "renee-olstead",
+    "limitations": "The artist also works in pop and television; no claim is made that all recordings are jazz.",
+    "primary_source_url": "https://www.latimes.com/archives/la-xpm-2003-jun-02-et-heckman2-story.html",
+    "summary": "Vocalist Renee Olstead sang jazz standards at the Pasadena Jazz Institute in 2003 and recorded with pianist Alan Broadbent on Warner.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A witnessed period performance and Warner's original recording-credit metadata document specific musicianship."
   },
   "renee-rosnes": {
     "evidence": [
@@ -17055,6 +17550,31 @@
     "summary": "Trombonist Robin Eubanks recorded Dave Holland Quintet's The Razor's Edge in February 1987 with Steve Coleman, Kenny Wheeler and Marvin Smith.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His trombone adds counterpoint and a flexible brass voice to modern jazz."
+  },
+  "roger-cicero": {
+    "evidence": [
+      {
+        "claim": "Warner Music states that Roger Cicero studied jazz voice at the Amsterdam Academy of Arts and formed the Roger Cicero Quartet.",
+        "id": "ev01",
+        "source_url": "https://www.wmg.com/news/rip-roger-cicero-21216"
+      },
+      {
+        "claim": "Warner dates Cicero's label debut Maennersachen to 2006 and lists his 2015 Cicero Sings Sinatra.",
+        "id": "ev02",
+        "source_url": "https://www.wmg.com/news/rip-roger-cicero-21216"
+      },
+      {
+        "claim": "The official Eurovision contestant page records Germany's Roger Cicero singing Frauen Regieren Die Welt in 2007, finishing 19th.",
+        "id": "ev03",
+        "source_url": "https://www.eurovision.com/eurovision-song-contest/helsinki-2007/participants/roger-cicero/"
+      }
+    ],
+    "key": "roger-cicero",
+    "limitations": "Maennersachen is transliterated only to satisfy ASCII; Eurovision placement is a pop contest result, not a jazz award.",
+    "primary_source_url": "https://www.wmg.com/news/rip-roger-cicero-21216",
+    "summary": "German swing vocalist Roger Cicero formed a jazz quartet, released Maennersachen on Warner in 2006 and sang Germany's Eurovision entry in 2007.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Warner label history and the contest's original official entry confirm separate musical projects."
   },
   "ronald-shannon-jackson": {
     "evidence": [
@@ -17511,6 +18031,65 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her spare phrasing joined intimate singing with subtle piano accompaniment."
   },
+  "shunzo-ohno": {
+    "evidence": [
+      {
+        "claim": "Shunzo Ohno's official biography describes his tours with Art Blakey and move to New York at Blakey's suggestion.",
+        "id": "ev01",
+        "source_url": "https://www.shunzoohno.com/bio"
+      },
+      {
+        "claim": "Ohno's official album discography credits Bubbles with Roy Haynes on drums, Reggie Lucas on guitar and Ohno on trumpet.",
+        "id": "ev02",
+        "source_url": "https://www.shunzoohno.com/music"
+      },
+      {
+        "claim": "The Recording Academy independently records a 1983 Latin Recording award for Machito & His Salsa Big Band '82, for which Ohno's artist biography identifies him as solo trumpeter.",
+        "id": "ev03",
+        "source_url": "https://www.grammy.com/songs/machito-his-salsa-big-band-82/"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://www.shunzoohno.com/bio",
+        "https://www.allmusic.com/artist/shunzo-ohno-mn0000029519",
+        "https://jazzin.nyc/artist/shunzo-ohno"
+      ],
+      "method": "artist_original_discography_independent_jazz_biography_recording_academy",
+      "note": "Shunzo Ohno is independently identified as the Japanese Gifu-born trumpeter and leader of Falter Out, Bubbles and 1970s recording dates, and as a member of Machito and Gil Evans groups. Several conflicting MBID candidate links remain unresolved: no MBID is silently selected or used as factual evidence. His original own albums, an independent AllMusic biography and a New York jazz musician directory all refer to this exact artist."
+    },
+    "key": "shunzo-ohno",
+    "limitations": "Previously ambiguous: identity anchored to the Japanese-born trumpeter's own recorded Bubbles and Machito work; Grammy award is for Machito's record, not a solo Ohno prize. The independently published Jazz.com history differs on 1973 versus 1974 relocation, so no exact move year is included in the accepted biography or the source claim.",
+    "primary_source_url": "https://www.shunzoohno.com/bio",
+    "summary": "Japanese trumpeter Shunzo Ohno moved to New York after working with Art Blakey, played on Machito's acclaimed big-band album and led Bubbles.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The musician's own original album credits identify his sessions; the Recording Academy independently certifies the Machito album."
+  },
+  "si-zentner": {
+    "evidence": [
+      {
+        "claim": "UNLV's collection biography says Zentner joined Les Brown's band in 1940 and later worked with Harry James and Jimmy Dorsey.",
+        "id": "ev01",
+        "source_url": "https://special.library.unlv.edu/ark%3A/62930/f1wp4k"
+      },
+      {
+        "claim": "The UNLV music-score archive includes Zentner's original scores dated 1957-1996 and a 1959 Liberty Records contract.",
+        "id": "ev02",
+        "source_url": "https://special.library.unlv.edu/ark%3A/62930/f1wp4k"
+      },
+      {
+        "claim": "The Recording Academy identifies Zentner's Up a Lazy River as winner of its orchestra-for-dancing Grammy in 1962.",
+        "id": "ev03",
+        "source_url": "https://www.grammy.com/awards/categories/best-performance-by-an-orchestra-for-dancing/1962/"
+      }
+    ],
+    "key": "si-zentner",
+    "limitations": "These institutional sources establish exact credits; film-studio involvement is not equated with composing film scores.",
+    "primary_source_url": "https://special.library.unlv.edu/ark%3A/62930/f1wp4k",
+    "summary": "Trombonist Si Zentner joined Les Brown in 1940, formed a Liberty Records swing orchestra in 1959 and won a Grammy for Up a Lazy River.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "UNLV's physical archive and the Recording Academy independently document his bandleader career."
+  },
   "sibongile-khumalo": {
     "evidence": [
       {
@@ -17610,6 +18189,31 @@
     "summary": "Brazilian accordionist Sivuca worked with Miriam Makeba as guitarist and bandleader and recorded a 1984 accordion duo with Chiquinho do Acordeom.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Brazilian accordion jazz reaches across choro, forro and international popular music."
+  },
+  "skitch-henderson": {
+    "evidence": [
+      {
+        "claim": "Carnegie Hall's official institutional history identifies Skitch Henderson as founder of the New York Pops, resident from 1983.",
+        "id": "ev01",
+        "source_url": "https://www.carnegiehall.org/uploadedFiles/Resources_and_Components/PDF/Press/Carnegie_Hall_Media_Kit.pdf"
+      },
+      {
+        "claim": "A Carnegie Hall primary concert record credits Henderson as conductor of the New York Pops in a 1991 program including My Funny Valentine.",
+        "id": "ev02",
+        "source_url": "https://data.carnegiehall.org/events/14269/about"
+      },
+      {
+        "claim": "In a National Endowment for the Arts oral history, drummer Sherrie Maricle recalls Henderson recruiting her to the New York Pops in 1990.",
+        "id": "ev03",
+        "source_url": "https://www.arts.gov/stories/podcast/sherrie-maricle"
+      }
+    ],
+    "key": "skitch-henderson",
+    "limitations": "His orchestral and popular-music repertoire should not be generalized as entirely jazz.",
+    "primary_source_url": "https://www.carnegiehall.org/uploadedFiles/Resources_and_Components/PDF/Press/Carnegie_Hall_Media_Kit.pdf",
+    "summary": "Pianist-conductor Skitch Henderson founded the New York Pops in 1983 and conducted a Carnegie Hall program featuring My Funny Valentine.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Carnegie Hall's performance database and the NEA's direct interview corroborate the orchestra's history."
   },
   "snooky-young": {
     "evidence": [
@@ -17952,6 +18556,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents this musician's distinctive role in jazz and related music."
   },
+  "stoyan-yankulov": {
+    "evidence": [
+      {
+        "claim": "Sofia Philharmonic's performer biography says Yankulov spent seven years in the Bulgarian National Radio Big Band and graduated from the Pancho Vladigerov academy.",
+        "id": "ev01",
+        "source_url": "https://sofiaphilharmonic.com/en/artists/stoyan-yankulov-stundzhi"
+      },
+      {
+        "claim": "Stoyan Yankulov's own biography names jazz collaborations with Milcho Leviev and Ivo Papazov and his drumming on tupan.",
+        "id": "ev02",
+        "source_url": "https://www.stoyankoulov.com/new/public/biography/"
+      },
+      {
+        "claim": "Bulgarian News Agency's September 2026 interview identifies his concerts with GloBalkan and the Vladigerov Brothers.",
+        "id": "ev03",
+        "source_url": "https://www.bta.bg/bg/news/lik/1201240-i-v-rabotata-i-zhivota-sam-chovek-orkestar-kaza-pred-bta-dneshniyat-rozhdenik-"
+      }
+    ],
+    "key": "stoyan-yankulov",
+    "limitations": "Formerly insufficient_evidence: the full name and stage name Stundzhi match across first-party profiles; no birthplace assertion is made.",
+    "primary_source_url": "https://sofiaphilharmonic.com/en/artists/stoyan-yankulov-stundzhi",
+    "summary": "Bulgarian drummer Stoyan Yankulov spent seven years in the national radio big band and combined jazz drumming with Bulgarian folk percussion.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Sofia Philharmonic's original performer profile and the artist's primary biography document separate ensemble and training details."
+  },
   "sunny-murray": {
     "evidence": [
       {
@@ -18076,6 +18705,31 @@
     "summary": "French guitarist Sylvain Luc released Piaia in 1993 and later recorded duo albums with Louis Winsberg and Bireli Lagrene.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents this musician's distinctive role in jazz and related music."
+  },
+  "tarus-mateen": {
+    "evidence": [
+      {
+        "claim": "Blue Note's Tarus Mateen biography identifies his New York relocation in 1988 and subsequent appointment in Betty Carter's band.",
+        "id": "ev01",
+        "source_url": "https://www.bluenote.com/artist/tarus-mateen/"
+      },
+      {
+        "claim": "Blue Note identifies Mateen and drummer Nasheet Waits as the trio on Jason Moran's 2000 album Facing Left.",
+        "id": "ev02",
+        "source_url": "https://www.bluenote.com/artist/jason-moran/"
+      },
+      {
+        "claim": "Blue Note's 2013 tour announcement bills Mateen with Jason Moran's Bandwagon at SFJAZZ on May 4 and 5.",
+        "id": "ev03",
+        "source_url": "https://www.bluenote.com/jason-moran-kicks-off-west-coast-tour-with-4/"
+      }
+    ],
+    "key": "tarus-mateen",
+    "limitations": "The trio album Ten dates from 2010; the later 2024 vinyl release is a reissue.",
+    "primary_source_url": "https://www.bluenote.com/artist/tarus-mateen/",
+    "summary": "Bassist Tarus Mateen worked in Betty Carter's band and formed Jason Moran's Bandwagon trio with drummer Nasheet Waits on Facing Left and Ten.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Blue Note biographies, album credits and a tour announcement document distinct professional activities."
   },
   "ted-curson": {
     "evidence": [
@@ -18340,6 +18994,31 @@
     "summary": "Bulgarian kaval virtuoso Theodosii Spassov integrates folk flute, jazz and classical music in original compositions and collaborations.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents concrete genre, performance and recording contributions to a diverse jazz catalog."
+  },
+  "thomas-lang": {
+    "evidence": [
+      {
+        "claim": "Vic Firth's original artist profile credits Thomas Lang with the Vienna Art Orchestra and his 1995 solo release Mediator.",
+        "id": "ev01",
+        "source_url": "https://vicfirth.com/blogs/artist/thomas-lang-vf"
+      },
+      {
+        "claim": "Vic Firth's original studio interview profile says Lang began drums aged five and studied at the Vienna Conservatory.",
+        "id": "ev02",
+        "source_url": "https://ae.vicfirth.com/education/recording-tips-from-the-pros/recording-tips-from-the-pros-thomas-lang-episode-2/"
+      },
+      {
+        "claim": "Meinl Cymbals' artist interview documents Lang's classical musical training and Los Angeles studio practice.",
+        "id": "ev03",
+        "source_url": "https://meinlcymbals.com/en/blog/meinl-radio-podcast"
+      }
+    ],
+    "key": "thomas-lang",
+    "limitations": "His career includes pop and rock, so those collaborators are not mislabeled as jazz projects.",
+    "primary_source_url": "https://vicfirth.com/blogs/artist/thomas-lang-vf",
+    "summary": "Austrian drummer Thomas Lang studied at the Vienna Conservatory, worked with the Vienna Art Orchestra and released the solo album Mediator.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Vic Firth artist credits and a separate Meinl studio interview identify the working drummer."
   },
   "thomas-quasthoff": {
     "evidence": [
@@ -19735,6 +20414,31 @@
     "summary": "Jazz violinist Zach Brock played in Snarky Puppy on Culcha Vulcha (2016) and Empire Central (2022), then joined Oberlin faculty in 2026.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Oberlin conservatory professional biography provides recording credits and jazz-improvisation faculty appointment."
+  },
+  "zachary-breaux": {
+    "evidence": [
+      {
+        "claim": "Mike Mainieri's original NYC Records catalog lists Zachary Breaux on guitar and vocals for Laidback and credits Toots Thielemans on harmonica.",
+        "id": "ev01",
+        "source_url": "https://www.mikemainierimusic.com/nyc-catalog"
+      },
+      {
+        "claim": "Japan's NII scholarly library catalog identifies the 1994 Laidback CD and its recording at River Sound Studios, New York.",
+        "id": "ev02",
+        "source_url": "https://ci.nii.ac.jp/ncid/BB11553341"
+      },
+      {
+        "claim": "Texas State Historical Association identifies Breaux as a guitarist with Roy Ayers Ubiquity and documents his leader releases Groovin', Laidback and Uptown Groove.",
+        "id": "ev03",
+        "source_url": "https://www.tshaonline.org/handbook/entries/breaux-zachary-charles"
+      }
+    ],
+    "key": "zachary-breaux",
+    "limitations": "Conflicting reports of his death date are not repeated; 1994 refers to the original album.",
+    "primary_source_url": "https://www.mikemainierimusic.com/nyc-catalog",
+    "summary": "Guitarist Zachary Breaux performed with Roy Ayers and released his NYC Records album Laidback in 1994, featuring harmonica guest Toots Thielemans.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The musician's original record label, university record catalog and Texas historical archive establish specific work."
   },
   "zakir-hussain": {
     "evidence": [
