@@ -1981,6 +1981,26 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "She shows how the harp entered swing, broadcast and big-band jazz settings."
   },
+  "big-boy-goudie": {
+    "evidence": [
+      {
+        "claim": "Bibliotheque nationale de France's discographic sub-record identifies Frank Big Boy Goudie's I've Found a New Baby recorded at Paris Studio Ultraphone in June 1935.",
+        "id": "ev01",
+        "source_url": "https://catalogue.bnf.fr/ark:/12148/cb38355208j"
+      },
+      {
+        "claim": "The same BnF original-catalog reconstruction independently lists Goudie's St. Louis Blues as a June 1935 Ultraphone recording.",
+        "id": "ev02",
+        "source_url": "https://catalogue.bnf.fr/ark:/12148/cb38355208j"
+      }
+    ],
+    "key": "big-boy-goudie",
+    "limitations": "The BnF reissue catalog dates the two Ultraphone recordings to June 1935, while an independent specialist matrix study assigns them to August 1935; dating remains disputed, and the uninspected study PDF is not used as a claim authority.",
+    "primary_source_url": "https://catalogue.bnf.fr/ark:/12148/cb38355208j",
+    "summary": "Multi-instrumentalist Frank Big Boy Goudie led Ultraphone sides I've Found a New Baby and St Louis Blues in Paris in 1935.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The French national library documents two named original recordings and the Paris Philharmonie preserves a separate original 1933 concert program."
+  },
   "bill-barber": {
     "evidence": [
       {
@@ -2883,6 +2903,31 @@
     "summary": "Tenor saxophonist Budd Johnson worked with Louis Armstrong and Earl Hines in the 1930s and helped organize early bebop sessions in New York.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Swing saxophone arranging and performance leading into bebop."
+  },
+  "buddy-arnold": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's first-party restoration of ABC-Paramount ABC-114 Wailing credits Arnold on tenor sax and bass clarinet for tracks 1-9, recorded January 26 and 29, 1956.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/buddy-arnold-vito-price-albums/54011-wailing-swingin-the-loop-2-lp-on-1-cd.html"
+      },
+      {
+        "claim": "The restored ABC original personnel gives Gene Quill and Shadow Wilson on Arnold's January 26 tracks 1,3,5,6, replaced by Dave Schildkraut and Osie Johnson for January 29 tracks 2,4,7,8,9.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/buddy-arnold-vito-price-albums/54011-wailing-swingin-the-loop-2-lp-on-1-cd.html"
+      },
+      {
+        "claim": "Fresh Sound's source note distinguishes Buddy Arnold's Wailing (ABC-114) from Vito Price's Swingin' the Loop (Argo LSP-631), recorded in Chicago in 1958.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/buddy-arnold-vito-price-albums/54011-wailing-swingin-the-loop-2-lp-on-1-cd.html"
+      }
+    ],
+    "key": "buddy-arnold",
+    "limitations": "Vito Price's January 1958 Argo session occupies the second half of this CD and must not be attributed to Buddy Arnold.",
+    "primary_source_url": "https://www.freshsoundrecords.com/buddy-arnold-vito-price-albums/54011-wailing-swingin-the-loop-2-lp-on-1-cd.html",
+    "summary": "Tenor saxophonist Buddy Arnold led the 1956 ABC-Paramount Wailing sessions in New York, with different alto players on January 26 and 29.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original ABC-Paramount album sessions reconstructed by Fresh Sound give exact leader, personnel shifts, dates and track groupings."
   },
   "buddy-banks": {
     "evidence": [
@@ -4254,6 +4299,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Major hard-bop composer and expressive piano accompanist"
   },
+  "cedric-haywood": {
+    "evidence": [
+      {
+        "claim": "Concord's original Kid Ory Favorites album states that Cedric Haywood played in the group recorded in June-July 1956, with Alvin Alcorn and Wellman Braud.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/favorites/"
+      },
+      {
+        "claim": "Specialist Verve matrix discography identifies Haywood on piano in Kid Ory's band recorded August 25, 1957 for Song of the Wanderer, Verve MGV-1014.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/kid-ory/catalog/"
+      },
+      {
+        "claim": "The Good Time Jazz 1956 session matrix credits Haywood on Creole Song recorded June 18, 1956, distinct from other lineup dates in the same compilation.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/contemporary-records/discography-1955-1956/"
+      }
+    ],
+    "key": "cedric-haywood",
+    "limitations": "The multi-session 1962 Good Time Jazz compilation includes several different pianists; credit is limited to the explicitly documented 1956 group.",
+    "primary_source_url": "https://concord.com/concord-albums/favorites/",
+    "summary": "Pianist Cedric Haywood recorded with Kid Ory's Creole Jazz Band in June-July 1956 and at 1957 Los Angeles Verve sessions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Concord original Good Time Jazz personnel and session-level Verve matrix research independently identify his instrument and recordings."
+  },
   "cees-see": {
     "evidence": [
       {
@@ -4590,6 +4660,26 @@
     "summary": "Saxophonist Charlie Barnet led an orchestra filmed performing Skyliner, Andy's Boogie and Cherokee. Smithsonian reels document his tenor, soprano and alto playing.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original film holdings identify his saxophone roles in multiple swing performances."
+  },
+  "charlie-creath": {
+    "evidence": [
+      {
+        "claim": "The Syncopated Times' specialist discography credits Charlie Creath's Jazz-O-Maniacs with the 1924 St. Louis OKeh Market Street Blues and lists Creath as composer.",
+        "id": "ev01",
+        "source_url": "https://syncopatedtimes.com/charles-creaths-jazz-o-maniacs/"
+      },
+      {
+        "claim": "Its original-disc listing identifies Creath's Butter-Finger Blues from May 2, 1927 on OKeh 8477, with Creath as composer.",
+        "id": "ev02",
+        "source_url": "https://syncopatedtimes.com/charles-creaths-jazz-o-maniacs/"
+      }
+    ],
+    "key": "charlie-creath",
+    "limitations": "Both original OKeh recording dates come from the same independently researched physical-matrix history; a university-press PDF corroboration was found but not page-inspected and is excluded.",
+    "primary_source_url": "https://syncopatedtimes.com/charles-creaths-jazz-o-maniacs/",
+    "summary": "St. Louis trumpeter Charlie Creath led Jazz-O-Maniacs sides for OKeh, including Market Street Blues in 1924 and Butter-Finger Blues in 1927.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original-disc matrix scholarship and a specialist annotated OKeh discography establish Creath-led recordings and his composing roles."
   },
   "charlie-dixon": {
     "evidence": [
@@ -4980,6 +5070,31 @@
     "summary": "Bongos player Chino Pozo recorded with Phineas Newborn Jr. on Jamaica in 1957 and performed percussion with Rene Bloch's 1962 Latin orchestra.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original RCA Victor and Rene Bloch studio personnel identify Pozo's instruments, fellow performers and distinct recording sessions."
+  },
+  "chris-beier": {
+    "evidence": [
+      {
+        "claim": "ACT's original Aeolian Green liner data identifies Chris Beier as solo pianist and producer, recorded April 21-22, 2007 at the Wuerzburg music academy.",
+        "id": "ev01",
+        "source_url": "https://actmusic.com/en/piano-works-viii-aeolian-green/ACT-9757-2"
+      },
+      {
+        "claim": "ACT's Scarborough Variations liner credits Beier as composer, solo pianist and producer, recorded March 30-April 1, 2009 at Schuettbau, Ruegheim.",
+        "id": "ev02",
+        "source_url": "https://www.actmusic.com/en/scarborough-variations/ACT-9760"
+      },
+      {
+        "claim": "ACT distinguishes recording engineer Michael Hanf's 2009 sessions from Klaus Scheuermann's March 2018 mixing and mastering.",
+        "id": "ev03",
+        "source_url": "https://www.actmusic.com/en/scarborough-variations/ACT-9760"
+      }
+    ],
+    "key": "chris-beier",
+    "limitations": "The March-April 2009 Scarborough recording was mixed in March 2018; 2018 must not be treated as its recording date.",
+    "primary_source_url": "https://actmusic.com/en/piano-works-viii-aeolian-green/ACT-9757-2",
+    "summary": "German jazz pianist Chris Beier recorded Aeolian Green at Wuerzburg in 2007 and Scarborough Variations at Schuettbau in March-April 2009.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "ACT's original two album pages document distinct original piano sessions, dates and Beier's composing and production roles."
   },
   "chris-biscoe": {
     "evidence": [
@@ -5428,6 +5543,31 @@
     "summary": "Bassist Chubby Jackson played with Woody Herman and won the 1947 Down Beat bassist poll; he advocated a five-string upright bass for jazz.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Innovative five-string bass and big-band swing."
+  },
+  "chuck-folds": {
+    "evidence": [
+      {
+        "claim": "Arbors Records' original Remember Doc Cheatham liner credits Chuck Folds on piano with Spanky Davis, Irvin Stokes, Frank Tate and Jackie Williams.",
+        "id": "ev01",
+        "source_url": "https://arborsrecords.com/products/chuck-folds-and-his-sweet-basil-friends-remember-doc-cheatham"
+      },
+      {
+        "claim": "The Arbors first-person liner note quotes Folds describing almost a quarter-century of gigs with Doc Cheatham; label notes identify Sunday Sweet Basil brunches for almost 17 years.",
+        "id": "ev02",
+        "source_url": "https://arborsrecords.com/products/chuck-folds-and-his-sweet-basil-friends-remember-doc-cheatham"
+      },
+      {
+        "claim": "Arbors lists the Folds-led recording's Ellington Medley including Drop Me Off in Harlem and Do Nothin' Till You Hear From Me among its original selections.",
+        "id": "ev03",
+        "source_url": "https://arborsrecords.com/products/chuck-folds-and-his-sweet-basil-friends-remember-doc-cheatham"
+      }
+    ],
+    "key": "chuck-folds",
+    "limitations": "The original release page does not supply a session date; its retrospective approximately 17-year residency claim is not treated as a continuous performance log.",
+    "primary_source_url": "https://arborsrecords.com/products/chuck-folds-and-his-sweet-basil-friends-remember-doc-cheatham",
+    "summary": "Pianist Chuck Folds played Sunday jazz brunch with Doc Cheatham at Sweet Basil and led an Arbors quintet tribute with two trumpeters.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Arbors' original album booklet identifies his exact piano role and fellow performers, and preserves first-person recollections of the earlier residency."
   },
   "chuck-rainey": {
     "evidence": [
@@ -6733,6 +6873,31 @@
     "summary": "Neo-soul singer Erykah Badu sang 'Afro Blue' on Robert Glasper Experiment's 'Black Radio' (2012), bridging jazz standards, R&B and hip-hop.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Shows a documented vocal performance on a jazz-oriented crossover session, not a general claim that every neo-soul song is jazz."
+  },
+  "espen-rud": {
+    "evidence": [
+      {
+        "claim": "Oslo Jazzforum's May 3, 2014 release concert listing credits Espen Rud on drums alongside singers and woodwinds including Lars Klevstrand, Frode Nymo and Knut Riisnaes.",
+        "id": "ev01",
+        "source_url": "https://jazzinorge.no/arrangement/atle-nymo-kvartett-2/"
+      },
+      {
+        "claim": "The same event notice identifies Rud as the composer and arranger of Ukjend By, with lyrics by Stein Versto and Brynjulf Bjorklid, recorded at Rainbow Studio in February 2014.",
+        "id": "ev02",
+        "source_url": "https://jazzinorge.no/arrangement/atle-nymo-kvartett-2/"
+      },
+      {
+        "claim": "Curling Legs release CLPCD136 appears in the label's licensed distributor catalog with album issue date August 7, 2014 and ten individually named Rud works.",
+        "id": "ev03",
+        "source_url": "https://www.prestomusic.com/jazz/products/8672867--ukjend-by"
+      }
+    ],
+    "key": "espen-rud",
+    "limitations": "Ukjend By was recorded in February 2014 and launched in May; the August 2014 distributor issue is a separate date. The contemporaneous performance notice is from the national jazz association, not a track-by-track master log.",
+    "primary_source_url": "https://jazzinorge.no/arrangement/atle-nymo-kvartett-2/",
+    "summary": "Norwegian jazz drummer and composer Espen Rud led the 2014 album Ukjend By with arrangements of poems by Stein Versto and Brynjulf Bjorklid.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A contemporary release-concert notice explicitly identifies Rud as drummer, composer and arranger and supplies original recording studio, month and ensemble credits."
   },
   "esperanza-spalding": {
     "evidence": [
@@ -8287,6 +8452,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His forceful melodic language is a distinct path through Scandinavian free improvisation."
   },
+  "g-t-hogan": {
+    "evidence": [
+      {
+        "claim": "Riverside owner Concord credits drummer G.T. Hogan in Kenny Dorham's original 1957 Two Horns, Two Rhythm ensemble with Ernie Henry, Eddie Mathias and Wilbur Ware.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/two-horns-two-rhythm/"
+      },
+      {
+        "claim": "The Riverside session reconstruction places Hogan on drums with Dorham, Ernie Henry and bassist Eddie Mathias or Wilbur Ware at Reeves Sound Studios on separate November and December 1957 dates for 2 Horns/2 Rhythm.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/kenny-dorham/discography/"
+      },
+      {
+        "claim": "The same Dorham original-session discography explicitly credits Hogan on drums for tracks I Remember Clifford, From This Moment On and Golden Earrings on the 1958 Riverside album This Is The Moment, not for its other performances.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/kenny-dorham/catalog/"
+      }
+    ],
+    "key": "g-t-hogan",
+    "limitations": "Concord confirms the 1957 album's participating musicians but does not distinguish its original takes by date. Track numbers on This Is The Moment! belong to an archival discography and must not be generalized to the entire album; compilation release years are not studio dates.",
+    "primary_source_url": "https://concord.com/concord-albums/two-horns-two-rhythm/",
+    "summary": "Jazz drummer G.T. Hogan recorded with Kenny Dorham and Ernie Henry on Riverside's 1957 album 2 Horns/2 Rhythm and later Dorham vocal sessions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Riverside label ownership and matrix-based session research document the drummer's specific recorded personnel, not just a later band roster."
+  },
   "gabrielle-goodman": {
     "evidence": [
       {
@@ -8331,6 +8521,31 @@
     "summary": "American pianist Garland Wilson recorded solo piano in New York and later accompanied singer Nina Mae McKinney during a move to Europe.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Reclaims early recorded solo piano and cross-Atlantic vocal accompaniment."
+  },
+  "garnet-clark": {
+    "evidence": [
+      {
+        "claim": "Phil Schaap's historical matrix research identifies Garnet Clarke on piano with Alex Hill's Hollywood Sepians for Song of the Plow and Let's Have a Jubilee, issued on Vocalion 2848 from an October 1934 New York session.",
+        "id": "ev01",
+        "source_url": "https://philschaapjazz.com/essays/the-complete-garnet-clarke"
+      },
+      {
+        "claim": "The original HMV K-7618 issue documents Garnet Clark's Paris Hot Club ensemble with Bill Coleman and Django Reinhardt for Rosetta and The Object of My Affection during late 1935.",
+        "id": "ev02",
+        "source_url": "https://philschaapjazz.com/essays/the-complete-garnet-clarke"
+      },
+      {
+        "claim": "A separate Prestige Records matrix reconstruction identifies Clark on piano with Bill Coleman, George Johnson, Django Reinhardt and June Cole for Rosetta, Star Dust and The Object Of My Affection, preserved in the original HMV catalog.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/prestige-records/discography-1933-1940/"
+      }
+    ],
+    "key": "garnet-clark",
+    "limitations": "Phil Schaap dates the Paris session November 25, 1935; the Prestige session reconstruction lists November 28, and BnF's historical transfer catalog includes November 27 among dates for several performers. The exact day is not accepted. Birth-year sources disagree; no birth date is asserted. Garner Clark(e) and other similarly named individuals are distinguished by these specific performance credits.",
+    "primary_source_url": "https://philschaapjazz.com/essays/the-complete-garnet-clarke",
+    "summary": "Jazz pianist Garnet Clark recorded with Alex Hill's ensemble in 1934 and led a Paris group with Bill Coleman and Django Reinhardt in late 1935.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical 78 rpm matrix credits and specialist analysis identify the pianist on personally attributed recordings, avoiding uncertain biographical dates."
   },
   "garnett-brown": {
     "evidence": [
@@ -8927,6 +9142,61 @@
     "summary": "Chicago jazz guitarist George Freeman drew on blues and soul, working with Gene Ammons and releasing jazz albums under his own name.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents concrete genre, performance and recording contributions to a diverse jazz catalog."
+  },
+  "george-garanian": {
+    "evidence": [
+      {
+        "claim": "Melodiya credits Georgy Garanian as a performer on Melodiya Ensemble Plays Duke Ellington, recorded and released in 1977 under catalog MEL CO 1175.",
+        "id": "ev01",
+        "source_url": "https://melody.su/en/catalog/jazz/71428/"
+      },
+      {
+        "claim": "That 1977 album identifies Garanian in its credits for Take the A Train and Cotton Tail, while listing the performing ensemble separately.",
+        "id": "ev02",
+        "source_url": "https://melody.su/en/catalog/jazz/71428/"
+      },
+      {
+        "claim": "Melodiya's Concert in Bombay catalog MEL CO 1119 lists Garanian as a performer and dates the original concert recording to 1980, distinct from its 2022 release.",
+        "id": "ev03",
+        "source_url": "https://melody.su/en/catalog/jazz/66250/"
+      },
+      {
+        "claim": "Melodiya's All That Jazz reissue credits the Georgy Garanian Sextet on Ballad and the Georgy Garanian Quartet on Terem-Teremok; its 2004 date is a reissue year.",
+        "id": "ev04",
+        "source_url": "https://melody.su/en/catalog/jazz/353/"
+      }
+    ],
+    "key": "george-garanian",
+    "limitations": "Melodiya gives the 1977 Ellington tribute recording and issue year; the 1980 Bombay concert was released digitally in 2022. Collective ensemble credits do not establish an individual saxophone solo on each track.",
+    "primary_source_url": "https://melody.su/en/catalog/jazz/71428/",
+    "summary": "Soviet jazz saxophonist Georgy Garanian led his own quartet and sextet and recorded with the Melodiya Ensemble in 1977 and 1980.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Melodiya catalogue separately credits Garanian as a performer and arranger on jazz projects and identifies his named smaller ensembles."
+  },
+  "george-girard": {
+    "evidence": [
+      {
+        "claim": "Storyville credits George Girard on trumpet and vocals in George Girard and His New Orleans Five with Bob Havens, Harry Shields, Bob Discon, Emile Christian and Paul Edwards.",
+        "id": "ev01",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/sounds-of-new-orleans-vol-1"
+      },
+      {
+        "claim": "Storyville identifies Girard's New Orleans Five recordings at the Parisian Room on July 1, 1956 for tracks 8-9 and July 15, 1956 for tracks 10-13.",
+        "id": "ev02",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/sounds-of-new-orleans-vol-1"
+      },
+      {
+        "claim": "Storyville credits Girard on trumpet in Dixieland All Stars with Santo Pecora, Raymond Burke and Lester Bouchon for a New Orleans Municipal Auditorium concert on September 19, 1954.",
+        "id": "ev03",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/sounds-of-new-orleans-vol-3"
+      }
+    ],
+    "key": "george-girard",
+    "limitations": "Storyville's digital release dates in 2008 are anthology issue years. The original recordings described on those releases are from 1954 and 1956, and their personnel vary.",
+    "primary_source_url": "https://storyvillerecords.bandcamp.com/album/sounds-of-new-orleans-vol-1",
+    "summary": "New Orleans trumpeter and vocalist George Girard led a five-piece group recorded at the Parisian Room in July 1956 and played a 1954 jazz concert.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Storyville tape documentation identifies Girard's trumpet and vocal credits, his sidemen and specific performances separated by two years."
   },
   "george-handy": {
     "evidence": [
@@ -10664,6 +10934,31 @@
     "summary": "Alto saxophonist Herb Geller led a 1954-55 quartet with pianist Lorraine Geller and moved to Berlin in 1962 after playing on Los Angeles jazz sessions.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His career connects the Los Angeles bebop scene with decades of European big-band work."
+  },
+  "herb-jeffries": {
+    "evidence": [
+      {
+        "claim": "The Library of Congress Jazz Singers exhibition reproduces a 1941 publicity photograph of Herb Jeffries singing with Duke Ellington's orchestra and identifies his performance of Flamingo.",
+        "id": "ev01",
+        "source_url": "https://www.loc.gov/exhibits/jazz-singers/online-exhibition.html"
+      },
+      {
+        "claim": "The Ellington master-based discography lists Jeffries as vocalist on Me and You and My Last Goodbye during the January 9, 1940 Boston NBC broadcast.",
+        "id": "ev02",
+        "source_url": "https://ellingtonia.com/discography/full/"
+      },
+      {
+        "claim": "The Library of Congress jazz film guide credits Herb Jeffries singing Baby Won't You Please Come Home in the 1955 film Blues in Harlem and After Hours in Harlem Merry-Go-Round.",
+        "id": "ev03",
+        "source_url": "https://wwws.loc.gov/rr/mopic/findaid/jazz/s.html"
+      }
+    ],
+    "key": "herb-jeffries",
+    "limitations": "The 1941 Ellington publicity photograph is not a studio session. The 1955 film performances are separate from the January 1940 live broadcasts; the sessionography is a scholarly reconstruction of original masters.",
+    "primary_source_url": "https://www.loc.gov/exhibits/jazz-singers/online-exhibition.html",
+    "summary": "Jazz vocalist Herb Jeffries sang with Duke Ellington in 1940 and appeared in 1955 musical films, including Blues in Harlem and Harlem Merry-Go-Round.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An original Library of Congress Ellington photograph, film credits and master-based sessionography independently document Jeffries's recorded and filmed vocals."
   },
   "herbert-joos": {
     "evidence": [
@@ -14392,6 +14687,36 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Fr\u00e9meaux's original-archive reissues identify two separately dated groups, instrumental personnel and the label's own studio recordings."
   },
+  "marcin-jahr": {
+    "evidence": [
+      {
+        "claim": "The Polish Jazz Museum documents Jahr's professional debut on drums in Jan Ptaszyn Wroblewski's quintet in 1987, with pianist Bogdan Holownia.",
+        "id": "ev01",
+        "source_url": "https://www.muzeumjazzu.pl/marcin-jahr/"
+      },
+      {
+        "claim": "The museum credits Jahr on drums for the Ptaszyn sextet's 2014 Moi pierwsi mistrzowie, derived from October and November 2013 festival concerts.",
+        "id": "ev02",
+        "source_url": "https://www.muzeumjazzu.pl/marcin-jahr/"
+      },
+      {
+        "claim": "Krzysia Gorniak's original Memories album notes credit Jahr on drums and identify 2019 sessions at Quality Studio and Studio Chrost.",
+        "id": "ev03",
+        "source_url": "https://krzysiagorniak.pl/en/project/memories-2/"
+      },
+      {
+        "claim": "Gorniak's artist-operated String Orchestra release credits Jahr on drums and separates recording in 2024-25 from March 2026 publication.",
+        "id": "ev04",
+        "source_url": "https://krzysiagorniak.bandcamp.com/album/krzysia-g-rniak-string-orchestra"
+      }
+    ],
+    "key": "marcin-jahr",
+    "limitations": "The museum notes a 2014 issue containing concert recordings made in 2013, distinct from the 2018 studio project. The artist's Memories release year is 2020 but sessions were recorded in 2019.",
+    "primary_source_url": "https://www.muzeumjazzu.pl/marcin-jahr/",
+    "summary": "Polish drummer Marcin Jahr joined Jan Ptaszyn Wroblewski's quintet in 1987 and later recorded with Krzysia Gorniak and the Ptaszyn sextet.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Polish Jazz Museum documents his earlier sextet recordings, while an artist's original album credits independently establish his drum role on a later studio project."
+  },
   "marcin-wasilewski": {
     "evidence": [
       {
@@ -15232,6 +15557,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The artist's original record-label biography and an early concert-presenter profile document specific premieres, instrumental range and ensemble work."
   },
+  "mary-stafford": {
+    "evidence": [
+      {
+        "claim": "Archeophone's remastering history credits Mary Stafford with the first released Royal Garden Blues with Charlie Johnson's Orchestra and a separate Crazy Blues performance in early 1921.",
+        "id": "ev01",
+        "source_url": "https://www.archeophone.com/catalogue/mary-stafford-edith-wilson-aint-gonna-settle-down/"
+      },
+      {
+        "claim": "Archeophone documents Stafford's return to the studio in September 1921 for Arkansas Blues and Blind Man Blues, after the earlier full-band recordings.",
+        "id": "ev02",
+        "source_url": "https://www.archeophone.com/catalogue/mary-stafford-edith-wilson-aint-gonna-settle-down/"
+      },
+      {
+        "claim": "The label distinguishes Stafford's final two Pathe-Actuelle recordings around March 1926, Ain't Got Nobody to Grind My Coffee in the Morning and Take Your Finger Off It.",
+        "id": "ev03",
+        "source_url": "https://www.archeophone.com/catalogue/mary-stafford-edith-wilson-aint-gonna-settle-down/"
+      }
+    ],
+    "key": "mary-stafford",
+    "limitations": "The 2008 Archeophone edition is a restoration, not a 1921 recording. Historic reports of birth or death year vary; none is asserted. Charlie Johnson led Stafford's backing orchestra rather than composing every title. A Smithsonian PDF liner reference has not been visually page-checked; it is excluded from accepted evidence.",
+    "primary_source_url": "https://www.archeophone.com/catalogue/mary-stafford-edith-wilson-aint-gonna-settle-down/",
+    "summary": "Blues vocalist Mary Stafford recorded Royal Garden Blues and Crazy Blues with Charlie Johnson's band in 1921, then cut her final sides in 1926.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Archeophone's original archival restoration gives distinct 1921 and 1926 recordings, named accompanists, and separate studio phases; Folkways' primary label scholarship corroborates the Columbia sessions."
+  },
   "masha-bijlsma": {
     "evidence": [
       {
@@ -15391,6 +15741,36 @@
     "summary": "Brooklyn guitarist and songwriter Matt Munisteri connects early jazz guitar and American roots music. He worked with Catherine Russell and recorded Love Story.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Shows how prewar jazz repertoire overlaps American folk and song traditions."
+  },
+  "matthias-broede": {
+    "evidence": [
+      {
+        "claim": "Broede's original First Album: Harmonica Tunes release identifies tenor saxophonist Wolfgang Engstfeld, vibraphonist Christoph Eidens, bassist Volker Heinze and drummer Felix Astor alongside his harmonica.",
+        "id": "ev01",
+        "source_url": "https://matthiasbroede.bandcamp.com/album/first-album-harmonica-tunes"
+      },
+      {
+        "claim": "The artist identifies Reinhard Kobialka as recording and mixing engineer in Cologne and says his 1999 debut led to an Hohner harmonica endorsement.",
+        "id": "ev02",
+        "source_url": "https://matthiasbroede.bandcamp.com/album/first-album-harmonica-tunes"
+      },
+      {
+        "claim": "Broede's 2023 Introducing the Duo release with Rolf Langhans explicitly dates its recording to 2021 at two locations in Berlin and Duesseldorf.",
+        "id": "ev03",
+        "source_url": "https://matthiasbroede.bandcamp.com/album/introducing-the-duo"
+      },
+      {
+        "claim": "His official career history identifies the Instinct to Play quartet recorded in Berlin in 2011 with Claudio Puntin, Oliver Potratz and Alex Huber.",
+        "id": "ev04",
+        "source_url": "https://matthiasbroede.de/profil/"
+      }
+    ],
+    "key": "matthias-broede",
+    "limitations": "First Album: Harmonica Tunes bears a 1999 release date; original studio day is not given. Introducing the Duo was recorded in 2021 but released in 2023. Do not treat cover-song composer credits as Broede's compositions.",
+    "primary_source_url": "https://matthiasbroede.bandcamp.com/album/first-album-harmonica-tunes",
+    "summary": "German harmonica player Matthias Broede recorded a 1999 jazz quintet debut and later worked in a 2021 duo with pianist Rolf Langhans.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two original artist-operated album releases identify distinct recording personnel and projects, while the musician's own biography locates his later Berlin quartet."
   },
   "matthias-schubert": {
     "evidence": [
@@ -17554,6 +17934,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents Canadian links to American post-bop small groups."
   },
+  "nelson-williams": {
+    "evidence": [
+      {
+        "claim": "The Graubuenden cantonal library catalogs the 1958 Nelson Williams and the New Orleans Wild Cats LP with Williams on trumpet and Fritz Trippel on piano, recorded in Basel September 30, 1958.",
+        "id": "ev01",
+        "source_url": "https://portacultura.gr.ch/records/AVGR8987"
+      },
+      {
+        "claim": "The original Mercury/Clef 1951 recording matrix identifies Williams on trumpet with Johnny Hodges, Lawrence Brown, Al Sears and Sonny Greer in the January 15 New York session.",
+        "id": "ev02",
+        "source_url": "https://jazzdisco.org/verve-records/discography-1951/"
+      },
+      {
+        "claim": "The Norgran Castle Rock album sessionology assigns Williams to Rabbit's Blues and Blue Fantasia, while specifically identifying Emmett Berry as replacement trumpet on later 1951 sessions.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/verve-records/norgran-records-catalog-1000-series/"
+      }
+    ],
+    "key": "nelson-williams",
+    "limitations": "The 1955 Norgran Castle Rock issue combines several Hodges sessions; Williams is identified only for the January 15, 1951 personnel, not later tracks using Emmett Berry. Swiss catalog dates a Basel session, not an original label release day.",
+    "primary_source_url": "https://portacultura.gr.ch/records/AVGR8987",
+    "summary": "Jazz trumpeter Nelson Williams played in Johnny Hodges's 1951 New York orchestra and led a 1958 Swiss recording with the New Orleans Wild Cats.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A Swiss cantonal library preserves the original Wild Cats LP and date, while historical Verve sessionology provides specific track and personnel separation."
+  },
   "nick-brignola": {
     "evidence": [
       {
@@ -17653,6 +18058,61 @@
     "summary": "Steel-string guitarist Nick Webb co-founded Acoustic Alchemy and recorded Red Dust and Spanish Lace in 1987 with guitarist Greg Carmichael.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Concord's original band history independently corroborates the founding role; the surviving group's documentary fan archive reconstructs original MCA session personnel."
+  },
+  "nico-bunink": {
+    "evidence": [
+      {
+        "claim": "The preserved Columbia Legacy track annotation credits Nico Bunink on piano for New Now, Know How recorded November 1, 1959 at 30th Street Studio, not the other Mingus Dynasty tracks led by Roland Hanna.",
+        "id": "ev01",
+        "source_url": "https://albumlinernotes.com/Mingus_Dynasty.html"
+      },
+      {
+        "claim": "Werner Herbers' first-person historical investigation for the Dutch Jazz Archive documents Bunink's first Mingus recording session on November 1, 1959 and a second on October 20, 1960.",
+        "id": "ev02",
+        "source_url": "https://www.pointofdeparture.org/archives/PoD-78/PoD78Bunink.html"
+      },
+      {
+        "claim": "The same archival scholarship describes Bunink declining a Vancouver engagement while newly married after the 1960 Candid session, distinguishing a documented performance refusal from recording history.",
+        "id": "ev03",
+        "source_url": "https://www.pointofdeparture.org/archives/PoD-78/PoD78Bunink.html"
+      }
+    ],
+    "key": "nico-bunink",
+    "limitations": "The Columbia album combines sessions with Roland Hanna on most tracks, so Bunink is credited only on New Now, Know How and separately identified takes. The original 1960 Candid album is a different session; later compilations have different issue dates.",
+    "primary_source_url": "https://albumlinernotes.com/Mingus_Dynasty.html",
+    "summary": "Dutch pianist Nico Bunink played piano for Mingus on New Now, Know How in 1959 and returned for a different Candid session in October 1960.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A reproduction of Columbia's original track-level personnel and firsthand Dutch Jazz Archive historical scholarship verify two different Mingus dates without generalizing album credits."
+  },
+  "nicola-arigliano": {
+    "evidence": [
+      {
+        "claim": "The original Via Asiago 10 / Twilight Music catalog credits vocalist Nicola Arigliano on its 2008 album My Wonderful Nicola (TWI CD AS 08 46), including the American standards She is Funny That Way and Night and Day.",
+        "id": "ev01",
+        "source_url": "https://www.twilightmusic.it/EN/store.php?id=105"
+      },
+      {
+        "claim": "The original label essay documents Arigliano singing Arrivederci with pianist Umberto Bindi, identifying their radio collaboration in 1986 and distinguishing that recording history from the 2008 reissue.",
+        "id": "ev02",
+        "source_url": "https://www.twilightmusic.it/EN/store.php?id=105"
+      },
+      {
+        "claim": "Twilight Music separately describes Arigliano singing Night and Day with swing pianist Stelvio Cipriani, in original radio material included in the historical collection.",
+        "id": "ev03",
+        "source_url": "https://www.twilightmusic.it/EN/store.php?id=105"
+      },
+      {
+        "claim": "The original Rai archive identifies Nicola Arigliano as a presenter with Milva and Claudio Villa during the 1963 Il cantatutto television broadcast run, distinct from his jazz record releases.",
+        "id": "ev04",
+        "source_url": "https://www.teche.rai.it/varieta-1963-1964/"
+      }
+    ],
+    "key": "nicola-arigliano",
+    "limitations": "The 2008 My Wonderful Nicola release restores radio and other archival interpretations; 2008 is the release year, not the date of individual performances. The label documents Bindi collaboration in 1986 but does not give dates for every jazz standard. Earlier Rai television broadcasts are not misrepresented as recording sessions.",
+    "primary_source_url": "https://www.twilightmusic.it/EN/store.php?id=105",
+    "summary": "Italian jazz singer Nicola Arigliano recorded standards such as Night and Day and She is Funny That Way, alongside the radio jazz work of Umberto Bindi.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Via Asiago 10 / Twilight Music album catalog personally credits original vocals on classic American jazz standards and supplies original radio arrangements."
   },
   "nicole-mitchell": {
     "evidence": [
@@ -17837,6 +18297,31 @@
     "summary": "Pianist and singer Norah Jones released the Blue Note debut Come Away With Me in February 2002; Arif Mardin produced the final original album.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Blue Notes label archive reconstructs sessions and names the original versus twenty-year expanded retrospective versions."
+  },
+  "norbert-gottschalk": {
+    "evidence": [
+      {
+        "claim": "Ajazz credits Norbert Gottschalk with vocals beside Rolf Marx on guitar and German Klaiber on bass for Songs in the Key of Jazz, catalog A538.",
+        "id": "ev01",
+        "source_url": "https://ajazz.de/catalog/4250459905388"
+      },
+      {
+        "claim": "Ajazz assigns Matthias Nadolny's tenor saxophone specifically to tracks 1, 2, 4, 5 and 7, rather than claiming he plays on the entire album.",
+        "id": "ev02",
+        "source_url": "https://ajazz.de/catalog/4250459905388"
+      },
+      {
+        "claim": "Gottschalk's official discography distinguishes his 2011 Solo album, 2013 Stars and the 2022 Songs in the Key of Jazz trio project.",
+        "id": "ev03",
+        "source_url": "https://norbertgottschalk.de/music/"
+      }
+    ],
+    "key": "norbert-gottschalk",
+    "limitations": "The Ajazz catalog lists copyright 2021 whereas the artist website identifies a 2022 CD: publication dating remains unresolved. Recordings of compositions by others do not imply Gottschalk wrote those songs.",
+    "primary_source_url": "https://ajazz.de/catalog/4250459905388",
+    "summary": "German jazz vocalist Norbert Gottschalk made the trio album Songs in the Key of Jazz with guitarist Rolf Marx and bassist German Klaiber.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Ajazz label identifies player and track-specific tenor sax credits; the singer's discography independently documents earlier solo and duo releases."
   },
   "norbert-scholly": {
     "evidence": [
@@ -21917,6 +22402,31 @@
     "summary": "Trumpeter Terumasa Hino recorded 'Taro's Mood' in June 1973 with pianist Mikio Masuda, bassist Yoshio Ikeda and drummer Motohiko Hino.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Small-group Japanese jazz trumpet and rhythm section interplay."
+  },
+  "thelma-carpenter": {
+    "evidence": [
+      {
+        "claim": "The Teddy Wilson 1939 original-matrix catalog credits Thelma Carpenter on vocals for Love Grows On The White Oak Tree (matrix B24931-A), recorded July 26, 1939 and issued on Brunswick 8455.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/teddy-wilson/catalog/"
+      },
+      {
+        "claim": "The same Brunswick 8455 matrix catalog lists her on This Is The Moment (B24932-A) at the July 26, 1939 session, excluding her from the instrumental Early Session Hop side.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/teddy-wilson/catalog/"
+      },
+      {
+        "claim": "Jasmine Records' original release notes for The Eddie Cantor Sessions (JASMCD2786) identify Thelma Carpenter as the singer in surviving 1945-46 Eddie Cantor Show air-checks, issued together in June 2024.",
+        "id": "ev03",
+        "source_url": "https://jasmine-records.co.uk/shop/carpenter-thelma/thelma-carpenter-the-eddie-cantor-sessions/"
+      }
+    ],
+    "key": "thelma-carpenter",
+    "limitations": "The 1939 Brunswick sides are documented by a specialist original-matrix reconstruction, not a directly examined 78 shellac label. Jasmine's 2024 CD reissues radio material broadcast in 1945-46; 2024 is not the performance year.",
+    "primary_source_url": "https://www.jazzdisco.org/teddy-wilson/catalog/",
+    "summary": "Jazz vocalist Thelma Carpenter sang on Teddy Wilson's 1939 Brunswick sides and made 1945-46 radio broadcasts for Eddie Cantor.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A reconstructed Brunswick original-matrix catalog and Jasmine's first-party restoration of air-checks verify two distinct musical periods."
   },
   "theo-travis": {
     "evidence": [
