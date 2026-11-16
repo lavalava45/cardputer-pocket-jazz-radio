@@ -325,6 +325,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Helped shape Miles Davis late electronic ensembles as keyboardist and musical director"
   },
+  "adam-taubitz": {
+    "evidence": [
+      {
+        "claim": "Daniel Schnyder's original Tarantula release credits Adam Taubitz on violin for tracks five through nine alongside Alejandro Rutkauskas, a viola player and Daniel Pezzotti on cello.",
+        "id": "ev01",
+        "source_url": "https://danielschnyder.bandcamp.com/album/tarantula"
+      },
+      {
+        "claim": "Daniel Schnyder's original recording catalog identifies Adam Taubitz as a violinist on his Mythen project, recorded in May 1991 and issued by Koch-Schwann with catalog 310170.",
+        "id": "ev02",
+        "source_url": "https://www.danielschnyder.com/records.php"
+      },
+      {
+        "claim": "Eric Johnsen's original Liminality notes identify Adam Taubitz as string orchestra concertmaster and date its separate string sessions to June 8 through 11, 2021 in Winterthur.",
+        "id": "ev03",
+        "source_url": "https://ericjohnsen.bandcamp.com/album/liminality"
+      }
+    ],
+    "key": "adam-taubitz",
+    "limitations": "Tarantula's 1996 album publication is not necessarily the recording date of every track. Eric Johnsen's 2023 issue lists string sessions June 2021; original CD personnel lists have no Taubitz solo claim.",
+    "primary_source_url": "https://danielschnyder.bandcamp.com/album/tarantula",
+    "summary": "Jazz and classical violinist Adam Taubitz recorded with Daniel Schnyder in 1991 and 1996, and led the strings on Eric Johnsen's 2023 Liminality.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original album credits from collaborators verify individual violin parts in two different historical sessions and concertmaster leadership of a separate 2021 recording."
+  },
   "adele-girard": {
     "evidence": [
       {
@@ -409,6 +434,31 @@
     "summary": "Vocalist Al Jarreau won the 1982 Grammy for jazz vocal Blue Rondo a la Turk and also won pop vocal honors for Breakin Away.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Distinct 1982 Grammy jazz and pop award categories document his stylistic range without flattening the music into one genre."
+  },
+  "al-jolson": {
+    "evidence": [
+      {
+        "claim": "The Smithsonian physical Columbia A2746 78 attributes I'll Say She Does on side one to Al Jolson and dates that side's recording to 1918; side two features Billy Murray.",
+        "id": "ev01",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_680056"
+      },
+      {
+        "claim": "Smithsonian catalogs Al Jolson's Decca 23714 Avalon and Anniversary Song as performances recorded in 1946 and later included in a Souvenir Album issued in 1949.",
+        "id": "ev02",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_681408"
+      },
+      {
+        "claim": "A separate Smithsonian 1949 shellac Decca 24683 credits Al Jolson with 4 Hits and a Miss and Matty Malneck and his Orchestra on After You've Gone and Chinatown My Chinatown.",
+        "id": "ev03",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_681416"
+      }
+    ],
+    "key": "al-jolson",
+    "limitations": "These stage and popular-song recordings are not themselves proof of jazz instrumentation or membership in a jazz ensemble. Museum catalog sometimes times out. His theatrical legacy also includes blackface performance; no endorsement or genre reclassification is intended.",
+    "primary_source_url": "https://americanhistory.si.edu/collections/object/nmah_680056",
+    "summary": "Vocalist Al Jolson recorded Columbia 78 sides in 1918 and made Decca re-recordings in 1946 and 1949, preserved in Smithsonian collections.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A Smithsonian-owned sequence of original commercial 78 records independently establishes the singer's label recording history over more than three decades."
   },
   "al-killian": {
     "evidence": [
@@ -4569,6 +4619,40 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A vital organizer and rhythmic innovator in the St. Louis creative-music scene."
   },
+  "charles-delaunay": {
+    "evidence": [
+      {
+        "claim": "The French National Library's original Jazz Hot periodical catalog names Charles Delaunay editor, Hugues Panassie director and documents a run from March 1935 to July-August 1939.",
+        "id": "ev01",
+        "source_url": "https://catalogue.bnf.fr/ark:/12148/cb34422725s"
+      },
+      {
+        "claim": "BnF's original physical book record credits Charles Delaunay as author of Hot discographie 1943, a 538-page Paris reference work carrying 1943 copyright and 1944 printing deposit.",
+        "id": "ev02",
+        "source_url": "https://catalogue.bnf.fr/ark:/12148/cb451845757"
+      },
+      {
+        "claim": "The BnF's institutional exhibition documents Charles Delaunay donating archives of about 20,000 jazz records in 1979 and identifies him as founder of Swing and Vogue record labels.",
+        "id": "ev03",
+        "source_url": "https://www.bnf.fr/fr/charles-delaunay-une-vie-dediee-au-jazz"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://www.bnf.fr/fr/charles-delaunay-une-vie-dediee-au-jazz",
+        "https://www.jazzhot.net/PBCPPlayer.asp?ID=426129",
+        "https://www.loc.gov/item/2023867609/"
+      ],
+      "method": "BNF original historic periodical and donor archive connect Charles Delaunay to his 1911 birth and professional Jazz Hot role; the magazine's own publisher and original 1946 LOC portrait independently corroborate person identity.",
+      "note": "Q1064090 lists personal MBID e570d2f3-1d6a-4a26-a69b-0e9fb600611f for Charles Delaunay, while second MBID 53fe59a3-d452-4d10-8eb5-8e9464f24abf is linked by Wikidata to a pseudonym H. P. Chadel, not independently confirmed on the rate-limited second MusicBrainz page. First-party Jazz Hot founder text, BnF jazz archives and the 1946 LOC original photograph establish the historical person. We do not merge the second MBID into the individual or infer any musical instrument role."
+    },
+    "key": "charles-delaunay",
+    "limitations": "Delaunay was an editor, producer and archivist, not a documented instrumental soloist on these original records. The 1943 book copyright differs from its 1944 print deposit; the 1979 archive gift is not the foundation date of Swing or Vogue. An alternate P434 MBID appears to refer to a pseudonym and was not merged.",
+    "primary_source_url": "https://www.bnf.fr/fr/charles-delaunay-une-vie-dediee-au-jazz",
+    "summary": "French jazz discographer Charles Delaunay edited Jazz Hot, published historical Hot discographies, helped found Swing and Vogue labels and preserved major jazz archives.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "BnF original book/periodical records and a donor archive directly establish his editorial and record-label work; an original publisher and Library of Congress independently identify the historical individual."
+  },
   "charles-flores": {
     "evidence": [
       {
@@ -5521,6 +5605,31 @@
     "summary": "R&B singer Chrisette Michele won a Grammy for Be OK with will.i.am in 2009 and received a Best R&B Album nomination for Better in 2014. Her debut I Am was issued in 2007.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her award-winning R&B performances draw from jazz singing traditions."
+  },
+  "christer-boustedt": {
+    "evidence": [
+      {
+        "claim": "Dragon Records' original DRLP 38 catalog documents alto saxophonist Christer Boustedt and his quartet recording Monk pieces at Mosebacke in Stockholm on January 9 and 10, 1983.",
+        "id": "ev01",
+        "source_url": "https://dragonrecords.se/releases/christer-boustedt-christer-boustedt-plays-thelonious-monk"
+      },
+      {
+        "claim": "Dragon's separate DRLP 99 original album credits name Christer Boustedt alto saxophone and Bosse Broberg trumpet in Blues, Ballads & Bebop, recorded February 11 and 12, 1985 at Swedish Radio.",
+        "id": "ev02",
+        "source_url": "https://dragonrecords.se/releases/christer-boustedt-quintet-bosse-broberg-blues-ballads-bebop"
+      },
+      {
+        "claim": "The Swedish national folk-music archive's original Dragon Records collection identifies Christer Boustedt Quartet Plays Thelonious Monk, DRLP 38, as the jazz record honored with its 1983 gold-disc plaque.",
+        "id": "ev03",
+        "source_url": "https://katalog.visarkiv.se/lib/views/saml/ShowRecord.aspx?id=1449271"
+      }
+    ],
+    "key": "christer-boustedt",
+    "limitations": "Dragon DRLP 38 sleeve names the performer but centre labels use Christer Boustedt Quartet. DRLP 99 credits Broberg trumpet, and the Swedish National Jazz Archive lists a 1983 award for DRLP 38; no invented featured solos.",
+    "primary_source_url": "https://dragonrecords.se/releases/christer-boustedt-christer-boustedt-plays-thelonious-monk",
+    "summary": "Swedish alto saxophonist Christer Boustedt recorded Dragon's 1983 Plays Thelonious Monk and 1985 Blues, Ballads & Bebop.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two separately recorded original Dragon LPs plus the official Swedish folk music archive document named bandleader status, saxophone personnel and release identity."
   },
   "christian-chevallier": {
     "evidence": [
@@ -6524,6 +6633,31 @@
     "summary": "Austrian pianist and conductor Dieter Glawischnig conducted the NDR Hannover orchestra for John Taylor's 1987 studio suite Quintessence.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Crosses jazz performance and orchestral interpretation while maintaining accurate composer credits."
+  },
+  "dionne-bromfield": {
+    "evidence": [
+      {
+        "claim": "The Lioness and Universal-Island licensed master credits name Dionne Bromfield main artist and composer-lyricist on Good for the Soul, alongside producer and co-composer Steve Booker.",
+        "id": "ev01",
+        "source_url": "https://www.qobuz.com/us-en/album/good-for-the-soul-dionne-bromfield/0060252770525"
+      },
+      {
+        "claim": "The same licensed original album listing identifies Bromfield on Sweetest Thing as singer and composer-lyricist, with Steve Booker and Smit assigned production and engineering roles.",
+        "id": "ev02",
+        "source_url": "https://www.qobuz.com/us-en/album/good-for-the-soul-dionne-bromfield/0060252770525"
+      },
+      {
+        "claim": "The original master credits assign Bromfield songwriting to the separate track Too Soon to Call It Love, produced by Steve Booker with Audrey Riley credited for instrumental arrangements.",
+        "id": "ev03",
+        "source_url": "https://www.qobuz.com/us-en/album/good-for-the-soul-dionne-bromfield/0060252770525"
+      }
+    ],
+    "key": "dionne-bromfield",
+    "limitations": "Qobuz and Apple show January 1, 2011, as a catalog date, not necessarily a verified recording session or first physical issue. The three original credits are separate tracks from one album.",
+    "primary_source_url": "https://www.qobuz.com/us-en/album/good-for-the-soul-dionne-bromfield/0060252770525",
+    "summary": "Dionne Bromfield recorded her 2011 Lioness album Good for the Soul, singing and co-writing the title song, Sweetest Thing and Too Soon to Call It Love.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original licensed Lioness/Universal master metadata contains track-specific credits for the singer as main artist and composer rather than relying on vague biographical descriptions."
   },
   "doc-cheatham": {
     "evidence": [
@@ -8232,6 +8366,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Long-running collaborations and teaching carry modern jazz phrasing into younger ensembles."
   },
+  "frankie-laine": {
+    "evidence": [
+      {
+        "claim": "Smithsonian National Museum of American History catalogs Mercury 1179 Exactly Like You and You're Wonderful as a 1949 Frankie Laine 78 with Harry Geller and his Orchestra.",
+        "id": "ev01",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_672149"
+      },
+      {
+        "claim": "The museum separately catalogs a 1949 shellac 78 Frankie Laine Mercury 5345 with Carry Me Back To Old Virginney on one side and Mule Train on the other.",
+        "id": "ev02",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_1324537"
+      },
+      {
+        "claim": "Smithsonian identifies Columbia 39770 as a 1952 Frankie Laine shellac 78 coupling High Noon Do Not Forsake Me with Rock of Gibraltar.",
+        "id": "ev03",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_1324567"
+      }
+    ],
+    "key": "frankie-laine",
+    "limitations": "Smithsonian entries are physical sound recording catalogs; these prove vocalist/release attribution but not a jazz solo, particular performance style or an exact session date beyond collection metadata. The museum page sometimes times out; indexed object descriptions retained.",
+    "primary_source_url": "https://americanhistory.si.edu/collections/object/nmah_672149",
+    "summary": "Singer Frankie Laine recorded Mercury 78 sides with Harry Geller's orchestra in 1949, then issued Columbia's High Noon in 1952.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three physical shellac or vinyl 78 objects separately cataloged by the Smithsonian document original label, record number, side titles and the named singer."
+  },
   "frankie-masters": {
     "evidence": [
       {
@@ -8832,6 +8991,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original Riverside label ownership and matrix-based session research document the drummer's specific recorded personnel, not just a later band roster."
   },
+  "gabriel-rivano": {
+    "evidence": [
+      {
+        "claim": "Adrian Iaies's original album listing credits Gabriel Rivano on bandoneon for Las Tardecitas de Minton's alongside pianist Iaies, Paco Weht and Oscar Giunta.",
+        "id": "ev01",
+        "source_url": "https://adrianiaies.bandcamp.com/album/las-tardecitas-de-mintons-double"
+      },
+      {
+        "claim": "Tango Crash Records' own album credits name Gabriel Rivano and Pomo Tapia on bandoneon for Tango Crash, issued January 1, 2003.",
+        "id": "ev02",
+        "source_url": "https://tangocrash1.bandcamp.com/album/tango-crash-2"
+      },
+      {
+        "claim": "Tomi Lebrero's own 2005 album credits list Gabriel Rivano among invited musicians on bandoneon, without assigning specific tracks to each guest.",
+        "id": "ev03",
+        "source_url": "https://tomaslebrero.bandcamp.com/album/tomi-lebrero-y-el-puchero-misterioso"
+      }
+    ],
+    "key": "gabriel-rivano",
+    "limitations": "The 2021 Bandcamp date for Adrian Iaies is digital publication, not an original recording date. Lebrero lists a guest at album level without confirmed individual track assignments. No featured solo is inferred.",
+    "primary_source_url": "https://adrianiaies.bandcamp.com/album/las-tardecitas-de-mintons-double",
+    "summary": "Bandoneon player Gabriel Rivano recorded with Adrian Iaies on Las Tardecitas de Minton's, with Tango Crash in 2003 and as a guest for Tomi Lebrero in 2005.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three distinct original artist and label credits document bandoneon work across Argentine jazz, electronic tango and a separately released guest session."
+  },
   "gabrielle-goodman": {
     "evidence": [
       {
@@ -8921,6 +9105,31 @@
     "summary": "Jazz trombonist Garnett Brown recorded in Jack Wilson's horn section on Easterly Winds, with Jackie McLean and Lee Morgan, backed by Bob Cranshaw and Billy Higgins.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents a specific Blue Note hard-bop horn section rather than assumed session associations."
+  },
+  "gary-barone": {
+    "evidence": [
+      {
+        "claim": "The Mainstream Records artist edition of Shelly Manne's 1972 Mannekind credits Gary Barone on trumpet alongside John Gross on tenor saxophone and Mike Wofford on piano.",
+        "id": "ev01",
+        "source_url": "https://shellymanne.bandcamp.com/album/mannekind"
+      },
+      {
+        "claim": "A contemporary May 30 1968 DownBeat review of Bud Shank's World Pacific WPS-21873 Magical Mystery lists Gary Barone and Chet Baker as collective flugelhorn personnel without song-specific allocation.",
+        "id": "ev02",
+        "source_url": "https://www.worldradiohistory.com/Archive-All-Music/DownBeat/60s/68/Downbeat-1968-05-30.pdf"
+      },
+      {
+        "claim": "The specialist Contemporary Records discography credits Gary Barone on trumpet and flugelhorn for Shelly Manne's Outside, recorded December 11 and 12, 1969 in Los Angeles.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/contemporary-records/catalog-3600-7600-series/"
+      }
+    ],
+    "key": "gary-barone",
+    "limitations": "The 1968 DownBeat review has collective, not track-specific, personnel credits and cannot prove a solo on any named track. The Contemporary personnel catalog is secondary discography. No claim about which Mannekind tracks feature a solo.",
+    "primary_source_url": "https://shellymanne.bandcamp.com/album/mannekind",
+    "summary": "Trumpeter Gary Barone appears on Bud Shank's 1968 Magical Mystery LP and Shelly Manne's 1969 Outside and 1972 Mannekind sessions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A first-party Mainstream label edition, a contemporary DownBeat original review and a specialist Contemporary Records matrix catalog document three distinct recording projects."
   },
   "gary-bartz": {
     "evidence": [
@@ -10839,6 +11048,40 @@
     "summary": "American drummer Gus Johnson worked in Jay McShann's orchestra and Count Basie's band before accompanying jazz singers including Ella Fitzgerald.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Adds a documented performer or composer and a specific musical contribution to the catalog."
+  },
+  "gus-viseur": {
+    "evidence": [
+      {
+        "claim": "The French National Library's original 78-rpm catalog credits Gus Viseur on accordion with Boris Sarbek's Orchestre Victor for Bel-ami and Le caravanier, dated June 1939 by Columbia matrix analysis.",
+        "id": "ev01",
+        "source_url": "https://catalogue.bnf.fr/ark:/12148/cb38575296d"
+      },
+      {
+        "claim": "The BnF physical Columbia DF 2776 object credits Gus Viseur on accordion and Boris Sarbek directing the Victor Orchestra for Valse de minuit and L'imprevu, with matrices CL 7002 and CL 7048.",
+        "id": "ev02",
+        "source_url": "https://catalogue.bnf.fr/ark:/12148/cb45518789p"
+      },
+      {
+        "claim": "The BnF original recording catalog lists Gus Viseur with his own orchestra for Flambee montalbanaise and Swing valse and dates the recording to August 9, 1940.",
+        "id": "ev03",
+        "source_url": "https://catalogue.bnf.fr/ark:/12148/cb38342953c"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://catalogue.bnf.fr/ark:/12148/cb13900889x",
+        "https://www.fremeaux.com/en/246-accordeon-jazz-3700368480809-fa038.html",
+        "https://www.radioswissjazz.ch/en/music-database/title/10109da22eb9695f5ea76b7abb2c9de7ae273"
+      ],
+      "method": "BnF physical shellac person authority, Fremeaux primary historical edition and Swiss public radio performer metadata triangulate one Belgian accordionist distinct from his named orchestra group.",
+      "note": "Q1555337 has individual MBID d5c4d5fe-f8c0-41f5-aed5-48a3760cddbb and distinct ORCHESTRA GROUP MBID 1d47fffc-836b-4dad-acba-a67f6173eab3, separately identified as Gus Viseur et son orchestre. BnF, original Fremeaux reissue and Swiss public radio independently associate the personal stage name Gus Viseur with the same Belgian jazz accordionist born May 15, 1915 in Lessines. We do not transfer the group MBID or assert the disputed death city."
+    },
+    "key": "gus-viseur",
+    "limitations": "BnF's Columbia DF 2776 catalog has no session date; June 1939 is an archival matrix-based month, not a day. BnF and Swiss public radio disagree on Viseur's death city. The orchestra-group MBID is not the performer's personal MBID; no featured solo is invented.",
+    "primary_source_url": "https://catalogue.bnf.fr/ark:/12148/cb38575296d",
+    "summary": "Belgian jazz accordionist Gus Viseur recorded swing-musette with Boris Sarbek's Victor Orchestra and later led his own group in 1930s and 1940s.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The national library catalogs three distinct original shellac or track-level masters with individual accordion credit; Swiss public radio and an original reissue label independently resolve his personal identity."
   },
   "guy-barker": {
     "evidence": [
@@ -14365,6 +14608,56 @@
     "summary": "Norwegian drummer Kim Ofstad co-founded D'Sound after studying at Berklee. He has released seven albums with the group and worked with Jill Scott and Snoop Dogg.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His career reflects a crossover of jazz, funk and hip-hop groove."
+  },
+  "kimbra": {
+    "evidence": [
+      {
+        "claim": "Nettwerk's original album Future Falling by The Album Leaf, released May 5, 2023, credits Kimbra as vocalist on its track three, Afterglow.",
+        "id": "ev01",
+        "source_url": "https://thealbumleaf.bandcamp.com/album/future-falling"
+      },
+      {
+        "claim": "The Album Leaf's original production notes say Kimbra recorded the vocals for Afterglow while Jimmy LaValle recorded the main instrumentation at barking dog studios in Los Angeles.",
+        "id": "ev02",
+        "source_url": "https://thealbumleaf.bandcamp.com/album/future-falling"
+      },
+      {
+        "claim": "Northern Spy and Egghunt's original 2026 Toth album And The Voice Said credits Kimbra Johnson on vocals for Touching, with production by Caroline Rose and Alex Toth.",
+        "id": "ev03",
+        "source_url": "https://tothtunes.bandcamp.com/album/and-the-voice-said"
+      }
+    ],
+    "key": "kimbra",
+    "limitations": "2023 and 2026 are release dates, not established vocal recording session dates. The original Album Leaf credits identify the vocals but do not identify an exact date for her part.",
+    "primary_source_url": "https://thealbumleaf.bandcamp.com/album/future-falling",
+    "summary": "New Zealand singer Kimbra sang on The Album Leaf's 2023 track Afterglow and Toth's 2026 Touching, with personally attributed vocal recordings.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original independently published albums identify the singer by stage name and full name in specific collaborative vocal recording credits."
+  },
+  "king-garcia": {
+    "evidence": [
+      {
+        "claim": "UCSB's RCA ledger-based Bluebird discography lists matrix BS-99724-1 It's Great to Be in Love Again by Louis King Garcia and His Swing Band, recorded February 28, 1936 and issued March 11 on B-6302.",
+        "id": "ev01",
+        "source_url": "https://adp-assets.library.ucsb.edu/BoligBluebirdLabel.pdf"
+      },
+      {
+        "claim": "The same UCSB discography identifies matrix BS-99725-1 Christopher Columbus under Louis King Garcia and His Swing Band, issued on Bluebird B-6303 after the February 1936 session.",
+        "id": "ev02",
+        "source_url": "https://adp-assets.library.ucsb.edu/BoligBluebirdLabel.pdf"
+      },
+      {
+        "claim": "The RCA archival transcription lists matrix BS-99728-1 Love Is Like a Cigarette by Louis King Garcia and His Swing Band on Bluebird B-6302, with Don Darcy credited for vocals.",
+        "id": "ev03",
+        "source_url": "https://adp-assets.library.ucsb.edu/BoligBluebirdLabel.pdf"
+      }
+    ],
+    "key": "king-garcia",
+    "limitations": "Three masters came from a single February 28, 1936 session, and the ledgers confirm band attribution, not which instrument King Garcia personally soloed on. The university archival PDF text was checked, but original page screenshot returned HTTP 403.",
+    "primary_source_url": "https://adp-assets.library.ucsb.edu/BoligBluebirdLabel.pdf",
+    "summary": "Trumpeter Louis King Garcia led a swing band whose 1936 Bluebird sides included It's Great to Be in Love Again, Christopher Columbus and Love Is Like a Cigarette.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The University of California Santa Barbara American Discography Project publishes RCA-ledger-based recording matrix identifiers and issues for three Garcia-billed masters."
   },
   "kip-hanrahan": {
     "evidence": [
@@ -18868,6 +19161,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents Canadian links to American post-bop small groups."
   },
+  "nelson-symonds": {
+    "evidence": [
+      {
+        "claim": "Original Justin Time Records biography says Nelson Symonds played with the Canadian All-Stars at Milwaukee's Basin Street Club in 1960, where he met Roland Kirk.",
+        "id": "ev01",
+        "source_url": "https://justin-time.com/collections/nelson-symonds-quartet"
+      },
+      {
+        "claim": "In the first-person interview published in the original April 1984 issue of Coda, Symonds recalled playing at summer parties and picnics in Hammonds Plains before Sudbury and learning jazz guitar by ear.",
+        "id": "ev02",
+        "source_url": "https://www.worldradiohistory.com/Archive-All-Music/CODA/1984/CODA%20APR%201984%20ISS%20195.pdf"
+      },
+      {
+        "claim": "Justin Time Records' own archival 2023 compilation 40 Years of Justin Time Records identifies Getting Personal as a Nelson Symonds performance from his earlier original recordings.",
+        "id": "ev03",
+        "source_url": "https://justin-time.com/products/40-years-of-justin-time-records-1"
+      }
+    ],
+    "key": "nelson-symonds",
+    "limitations": "Justin Time describes an audition with Jack McDuff in 1962 but explicitly says Symonds did not make McDuff's recording; none is credited. The 1984 original Coda PDF text was accessible but screenshot returned 403. A 2023 compilation reuses an old performance rather than providing a new 2023 session.",
+    "primary_source_url": "https://justin-time.com/collections/nelson-symonds-quartet",
+    "summary": "Canadian guitarist Nelson Symonds played with the Canadian All-Stars in 1960, recounted his early jazz training in Coda, and recorded Getting Personal.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Justin Time label biography, a contemporary first-person interview and a later explicitly archival label compilation document the guitarist's original music career."
+  },
   "nelson-williams": {
     "evidence": [
       {
@@ -19391,6 +19709,31 @@
     "summary": "Turkish percussionist Okay Temiz played on Don Cherry's Dona Nostra, recorded in Oslo in March 1993 with Bobo Stenson and Lennart Aberg.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His percussion and co-improvisation link Turkish rhythmic practice with European free jazz."
+  },
+  "olaf-polziehn": {
+    "evidence": [
+      {
+        "claim": "Herzog Records credits Olaf Polziehn with piano on Summertime, track two of Jeff Cascaro's Broadway and Beyond released on April 24, 2026.",
+        "id": "ev01",
+        "source_url": "https://herzogrecords.bandcamp.com/album/broadway-and-beyond"
+      },
+      {
+        "claim": "The original Herzog album credits also assign Olaf Polziehn piano on I Got Rhythm, track eight, and Everytime We Say Goodbye, track nine.",
+        "id": "ev02",
+        "source_url": "https://herzogrecords.bandcamp.com/album/broadway-and-beyond"
+      },
+      {
+        "claim": "An original publisher booklet identifies Olaf Polziehn playing piano on Klaus Graf Quartet's Far and Near, recorded October 15 and 16, 2006 at Bauer Studios.",
+        "id": "ev03",
+        "source_url": "https://www.hifijapan.co.jp/Booklet_UCW-V.pdf"
+      }
+    ],
+    "key": "olaf-polziehn",
+    "limitations": "Two different song credits refer to one Herzog Records album, not separate sessions. The Klaus Graf issue was checked in indexed booklet text, but screenshot retrieval failed; do not claim direct visual verification.",
+    "primary_source_url": "https://herzogrecords.bandcamp.com/album/broadway-and-beyond",
+    "summary": "German jazz pianist Olaf Polziehn is credited on Jeff Cascaro's 2026 Broadway and Beyond and in a 2006 Klaus Graf Quartet session.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Herzog Records supplies precise track-level piano credits, corroborated by an independent historical label's original recorded-master booklet."
   },
   "olga-konkova": {
     "evidence": [
