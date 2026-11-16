@@ -275,6 +275,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Helped shape Miles Davis late electronic ensembles as keyboardist and musical director"
   },
+  "adele-girard": {
+    "evidence": [
+      {
+        "claim": "The Lea in Love sessionography credits Adele Girard on harp for track 10 with pianist Jimmy Lyon, guitarist Jimmy Raney and bassist Beverly Peer.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/barbara-lea-albums/5705-a-woman-in-love-barbara-lea-lea-in-love-3-lps-on-2-cds.html"
+      },
+      {
+        "claim": "The same anthology credits Adele Girard alone on harp for track 16; the two Girard selections were recorded May 1, 1957 at Rudy Van Gelder's Hackensack studio.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/barbara-lea-albums/5705-a-woman-in-love-barbara-lea-lea-in-love-3-lps-on-2-cds.html"
+      },
+      {
+        "claim": "The Linda Keene historical discography credits Adele Girard on harp for tracks 8-10 of Joe Marsala's orchestra session recorded in New York on November 29, 1944.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/linda-keene-albums/55313-one-more-for-the-road-the-dixie-songbirds-complete-recordings-2-cd-box-set.html"
+      }
+    ],
+    "key": "adele-girard",
+    "limitations": "Girard's Barbara Lea credits cover only tracks 10 and 16; her Joe Marsala credit covers tracks 8-10 of the separate Linda Keene anthology.",
+    "primary_source_url": "https://www.freshsoundrecords.com/barbara-lea-albums/5705-a-woman-in-love-barbara-lea-lea-in-love-3-lps-on-2-cds.html",
+    "summary": "Jazz harpist Adele Girard recorded with Joe Marsala's ensemble in 1944 and appeared on two Barbara Lea performances at Rudy Van Gelder's studio in 1957.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical Riverside and independent vocal-jazz reissues document Girard's unusual harp role in two distinct ensembles."
+  },
   "akiko-yano": {
     "evidence": [
       {
@@ -1180,6 +1205,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Concord documents Jackson's instrument, named trio partners and successive original recordings."
   },
+  "anthony-ortega": {
+    "evidence": [
+      {
+        "claim": "Jazz for Young Moderns tracks 3-7 credit Anthony Ortega on alto sax, tenor sax, clarinet and flute in a November 1956 Nat Pierce-arranged session.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/anthony-ortega-albums/1905-earth-dance.html"
+      },
+      {
+        "claim": "Tracks 8-12 credit Ortega on alto sax, clarinet and flute in a separately arranged Bob Zieff session featuring Art Farmer and Ahmed Abdul-Malik.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/anthony-ortega-albums/1905-earth-dance.html"
+      },
+      {
+        "claim": "The original Bethlehem track list credits Anthony Ortega as composer of Bat Man's Blues, Tune for Mona and No Fi.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/anthony-ortega-albums/1905-earth-dance.html"
+      }
+    ],
+    "key": "anthony-ortega",
+    "limitations": "Earth Dance compiles two Bethlehem groups recorded in November 1956 and earlier-released Coral material recorded in June 1957; the participants must not be merged.",
+    "primary_source_url": "https://www.freshsoundrecords.com/anthony-ortega-albums/1905-earth-dance.html",
+    "summary": "Alto saxophonist Anthony Ortega recorded Jazz for Young Moderns in 1956, playing saxophones, clarinet and flute in separate Nat Pierce and Bob Zieff ensembles.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Bethlehem and Coral source records distinguish Ortega's instrumental roles, original compositions and differently arranged sessions."
+  },
   "anthony-pateras": {
     "evidence": [
       {
@@ -1941,6 +1991,31 @@
     "summary": "Bassist Bill Crow joined Gerry Mulligan's sextet in 1954, playing with Zoot Sims and Bob Brookmeyer in a long association with Mulligan.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Piano-less modern jazz arrangements through Mulligan's bass voice."
+  },
+  "bill-doggett": {
+    "evidence": [
+      {
+        "claim": "The original Paul Quinichette Blow Your Horn material credits Bill Doggett on organ with Kenny Drew, Freddie Green, Jimmy Lewis and Gus Johnson for October 5, 1951.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/paul-quinichette-albums/57367-the-vice-pres-complete-sessions-1951-1954-2-cd-box-set.html"
+      },
+      {
+        "claim": "Illinois Jacquet's January 7-8, 1946 sextet recordings credit Bill Doggett on piano with Emmett Berry, Freddie Green, John Simmons and Shadow Wilson.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/illinois-jacquet-albums/306-all-stars-studio-recordings-1945-1947.html"
+      },
+      {
+        "claim": "The Columbia Oops! and Prelude to the Blues reissue identifies Bill Doggett on organ and separates the two original LP personnel groups.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/bill-doggett-albums/6533-oops-prelude-to-the-blues-2-lp-on-1-cd-digipack.html"
+      }
+    ],
+    "key": "bill-doggett",
+    "limitations": "Doggett's 1946 Illinois Jacquet instrument is piano, while the 1951 Quinichette and later Columbia recordings credit organ. These roles are not interchangeable.",
+    "primary_source_url": "https://www.freshsoundrecords.com/bill-doggett-albums/6533-oops-prelude-to-the-blues-2-lp-on-1-cd-digipack.html",
+    "summary": "Jazz organist and pianist Bill Doggett recorded with Paul Quinichette in 1951, Illinois Jacquet in 1946 and led Columbia organ-combo sessions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Decca, Columbia and early Jacquet sessionographies trace Doggett's instrumental roles in multiple independent working groups."
   },
   "bill-laswell": {
     "evidence": [
@@ -4621,6 +4696,31 @@
     "summary": "Vocalist China Forbes joined Pink Martini in 1995 and co-wrote and sang Sympathique with pianist Thomas Lauderdale on their 1997 Heinz Records debut album.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Direct band and label information distinguishes her lead singing and songwriting from the orchestra's stylistic influences and touring venues."
+  },
+  "chino-pozo": {
+    "evidence": [
+      {
+        "claim": "The RCA Victor Jamaica album credits Francisco Chino Pozo on bongos with pianist Phineas Newborn Jr., guitarist Les Spann and drummer Osie Johnson, recorded in New York September 7-9, 1957.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/phineas-newborn-jr-albums/1741-jamaica.html"
+      },
+      {
+        "claim": "Rene Bloch's previously unreleased session credits Chino Pozo on percussion at American Studios in North Hollywood in 1962.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/rene-bloch-albums/6389-let-s-dande-the-mambo-previously-unreleased-album.html"
+      },
+      {
+        "claim": "The Mr. Latin bonus sessions credit Chino Pozo on bongos at Radio Recorders in Hollywood in September 1962.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/rene-bloch-albums/6389-let-s-dande-the-mambo-previously-unreleased-album.html"
+      }
+    ],
+    "key": "chino-pozo",
+    "limitations": "The 1962 Bloch reissue contains three different recording groups. Pozo is credited on the previously unreleased 1962 session and Mr. Latin bonus tracks, not the 1960 album.",
+    "primary_source_url": "https://www.freshsoundrecords.com/phineas-newborn-jr-albums/1741-jamaica.html",
+    "summary": "Bongos player Chino Pozo recorded with Phineas Newborn Jr. on Jamaica in 1957 and performed percussion with Rene Bloch's 1962 Latin orchestra.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original RCA Victor and Rene Bloch studio personnel identify Pozo's instruments, fellow performers and distinct recording sessions."
   },
   "chris-biscoe": {
     "evidence": [
@@ -8465,6 +8565,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His responsive drumming became central to classic Chicago-style jazz ensembles."
   },
+  "george-williams": {
+    "evidence": [
+      {
+        "claim": "RCA Victor LPM-1301 Rhythm Was His Business credits George Williams as arranger and director of the Jimmie Lunceford tribute orchestra.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/george-williams-albums/1702-rhythm-was-his-business.html"
+      },
+      {
+        "claim": "The reissue documents a New York session on April 23, 1956 with Hank Jones, Charlie Shavers, Conte Candoli and Milt Hinton.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/george-williams-albums/1702-rhythm-was-his-business.html"
+      },
+      {
+        "claim": "The track listing credits Harlem Express to George Williams and documents Hollywood sessions on April 24-25, 1956.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/george-williams-albums/1702-rhythm-was-his-business.html"
+      }
+    ],
+    "key": "george-williams",
+    "limitations": "The reissue combines New York and Hollywood sessions. Williams is credited as arranger and director, not an instrumental performer.",
+    "primary_source_url": "https://www.freshsoundrecords.com/george-williams-albums/1702-rhythm-was-his-business.html",
+    "summary": "Jazz arranger George Williams directed Rhythm Was His Business, a 1956 RCA Victor tribute to Jimmie Lunceford featuring Hank Jones and Charlie Shavers.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The RCA Victor sessionography identifies Williams as arranger and director and documents his composition Harlem Express."
+  },
   "gerald-clayton": {
     "evidence": [
       {
@@ -8990,6 +9115,31 @@
     "summary": "Jazz organist Gloria Coleman led Soul Sisters with Leo Wright, Grant Green and drummer Pola Roberts and released Sings and Swings Organ in 1971.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The International Archives for the Jazz Organ connects her original studio band personnel, early bassist career and later leader releases."
+  },
+  "gloria-lynne": {
+    "evidence": [
+      {
+        "claim": "The Mellow and Swinging credits Gloria Lynne on vocals with the Ernie Wilkins Big Beat Band in New York recordings from 1960.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/gloria-lynne-albums/1578-the-mellow-and-swinging.html"
+      },
+      {
+        "claim": "Its collective personnel include Clark Terry, Zoot Sims, Kenny Burrell, Ron Carter and Charles Persip.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/gloria-lynne-albums/1578-the-mellow-and-swinging.html"
+      },
+      {
+        "claim": "Miss Gloria Lynne Sings credits Lynne on vocals with an ensemble including Harry Edison, Sam Taylor, Wild Bill Davis and Jo Jones.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/gloria-lynne-albums/1532-miss-gloria-lynne-sings.html"
+      }
+    ],
+    "key": "gloria-lynne",
+    "limitations": "The Mellow and Swinging combines two Everest albums with collective personnel credits; individual sidemen cannot be assigned to every track.",
+    "primary_source_url": "https://www.freshsoundrecords.com/gloria-lynne-albums/1578-the-mellow-and-swinging.html",
+    "summary": "Jazz vocalist Gloria Lynne recorded with Ernie Wilkins's big band in 1960 and appeared on sessions featuring Harry Edison and Wild Bill Davis.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Everest reissues document Lynne's vocal work on separate albums with named jazz ensembles."
   },
   "gordon-goodwin": {
     "evidence": [
@@ -11165,6 +11315,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Riverside, Prestige and Jazzland credits document his contributions across contrasting early-1960s sessions."
   },
+  "joe-darensbourg": {
+    "evidence": [
+      {
+        "claim": "Florida Atlantic University's Recorded Sound Archives catalogs Joe Darensbourg among the musicians on its CBS Kid Ory and His Creole Jazz Band LP, with Savoy Blues and Creole Song in the track list.",
+        "id": "ev01",
+        "source_url": "https://rsa.fau.edu/album/20598"
+      },
+      {
+        "claim": "Northwest Music Archives reproduces the Exner label catalog for the February 12, 1945 C. P. MacGregor recording, naming Joe Darensbourg with Kid Ory, Mutt Carey, Buster Wilson, Bud Scott, Ed Garland and Alton Redd.",
+        "id": "ev02",
+        "source_url": "https://nwmusicarchives.com/label/exner-records/"
+      },
+      {
+        "claim": "The Exner original 78-rpm label catalog identifies Dippermouth Blues (Sugarfoot Stomp) and Savoy Blues as the sides from that February 1945 Kid Ory Creole Jazz Band session.",
+        "id": "ev03",
+        "source_url": "https://nwmusicarchives.com/label/exner-records/"
+      }
+    ],
+    "key": "joe-darensbourg",
+    "limitations": "FAU's 1950 date and track list belong to a compiled CBS record and do not assign Darensbourg to each track. Original Exner catalog dates refer to recordings, not later compilations.",
+    "primary_source_url": "https://rsa.fau.edu/album/20598",
+    "summary": "New Orleans clarinetist Joe Darensbourg appeared with Kid Ory's Creole Jazz Band in archival recordings documenting the postwar traditional jazz revival.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Florida Atlantic University's sound collection and Northwest Music Archives' original Exner shellac catalog independently name Darensbourg and identify period recordings."
+  },
   "joe-farrell": {
     "evidence": [
       {
@@ -11876,6 +12051,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His compositions underpin an inventive saxophone-only ensemble preserved after his death."
   },
+  "june-christy": {
+    "evidence": [
+      {
+        "claim": "Chris Connor tells Concord she was inspired by June Christy's singing with Stan Kenton, and that Christy recommended Connor to Kenton after hearing her on a radio broadcast.",
+        "id": "ev01",
+        "source_url": "https://concord.com/artist/chris-connor/"
+      },
+      {
+        "claim": "Fantasy's Jazz Impressions reissue notes say Vince Guaraldi's trio with Eddie Duran and Dean Reilly accompanied June Christy at San Francisco's hungry i club.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/jazz-impressions/"
+      },
+      {
+        "claim": "Concord's Anita O'Day artist history places June Christy among the notable jazz singers directly influenced by O'Day's Kenton-era vocal approach.",
+        "id": "ev03",
+        "source_url": "https://concord.com/artist/anita-oday/"
+      }
+    ],
+    "key": "june-christy",
+    "limitations": "The Guaraldi label note does not identify exact concert dates or songs with Christy. The Chris Connor account supports mentorship and Kenton association, not precise Christy session credits.",
+    "primary_source_url": "https://concord.com/artist/chris-connor/",
+    "summary": "Jazz vocalist June Christy sang with Stan Kenton's orchestra and helped Chris Connor join that band; Vince Guaraldi's trio later backed her in San Francisco.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A first-person Chris Connor interview preserved in original label notes establishes Christy's direct intervention; Fantasy reissue documents a distinct live accompaniment."
+  },
   "kahil-el-zabar": {
     "evidence": [
       {
@@ -12075,6 +12275,40 @@
     "summary": "American pianist and arranger Kenneth Ascher moved between jazz recording, theater and film, co-writing The Rainbow Connection with Paul Williams.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Adds a documented performer or composer and a specific musical contribution to the catalog."
+  },
+  "kenneth-kapstad": {
+    "evidence": [
+      {
+        "claim": "Hubro credits Kenneth Kapstad on drums beside Kjetil Moster, Stale Storlokken and Nikolai Eilertsen for Edvard Lygre Moster, recorded live at Victoria in Oslo in December 2011.",
+        "id": "ev01",
+        "source_url": "https://grappa.no/en/albums/hubro/edvard-lygre-moster/"
+      },
+      {
+        "claim": "Hubro lists Kapstad as drummer on Inner Earth with saxophonist Kjetil Moster, guitarist Hans Magnus Ryan and bassist Nikolai Haengsle Eilertsen.",
+        "id": "ev02",
+        "source_url": "https://grappa.no/en/albums/hubro/inner-earth-cd/"
+      },
+      {
+        "claim": "Hubro credits Kenneth Kapstad with drums and percussion on Dust Breathing, a later Moster! studio project.",
+        "id": "ev03",
+        "source_url": "https://grappa.no/en/albums/hubro/dust-breathing/"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://grappa.no/en/albums/hubro/inner-earth-cd/",
+        "https://motorpsycho.no/bio-2023/",
+        "https://www.universitetsavisa.no/notiser/kenneth-kapstad-ble-ntnu-ambassador/173700"
+      ],
+      "method": "Cross-check of the same named Norwegian drummer across original Hubro label credits, the official Motorpsycho band history, and NTNU's independently edited university publication.",
+      "note": "Hubro credits Kenneth Kapstad as the drummer in Moster! and directly identifies him as a Motorpsycho member. Motorpsycho's official history independently lists Kenneth Kapstad on drums in 2007-2016, and NTNU's publication calls him a drummer with Motorpsycho and Trondheim Jazzorkester. This resolves the exact performing person across independent sources. The reciprocal MBID is still absent; no arbitrary MBID has been chosen or assigned."
+    },
+    "key": "kenneth-kapstad",
+    "limitations": "Queue has only a Wikidata P434 identity hint, not reciprocal MBID; record-label personnel across three original releases independently establish the exact performing person without resolving database identifiers.",
+    "primary_source_url": "https://grappa.no/en/albums/hubro/edvard-lygre-moster/",
+    "summary": "Norwegian drummer Kenneth Kapstad played on Moster's live debut Edvard Lygre Moster and later recorded Inner Earth and Dust Breathing with the group.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Hubro's original release notes identify instrument, exact ensemble and separate documented sessions, independently identifying the musician even without reciprocal MBID."
   },
   "kenny-g": {
     "evidence": [
@@ -12746,6 +12980,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His early fusion of Persian musical materials and modal improvisation crossed cultural idioms."
   },
+  "lonnie-donegan": {
+    "evidence": [
+      {
+        "claim": "Bear Family's historical skiffle collection covers Lonnie Donegan's original Decca and Pye career from 1954 through 1966 and supplements commercial recordings with personal demos and radio broadcasts.",
+        "id": "ev01",
+        "source_url": "https://www.bear-family.com/bear-family-features/skiffle-music-on-bear-family-records"
+      },
+      {
+        "claim": "The label's reissue of Lonnie Donegan Showcase describes a 1957 live skiffle performance of Jimmie Rodgers' Blue Yodel No. 8.",
+        "id": "ev02",
+        "source_url": "https://www.bear-family.com/donegan-lonnie-lonnie-donegan-showcase-lp-180g-vinyl.html"
+      },
+      {
+        "claim": "Bear Family identifies Donegan's adaptation of Lead Belly's Rock Island Line as the record that brought skiffle to a broad British audience.",
+        "id": "ev03",
+        "source_url": "https://www.bear-family.com/bear-family-features/skiffle-music-on-bear-family-records"
+      }
+    ],
+    "key": "lonnie-donegan",
+    "limitations": "The reissue label discusses 1954 and 1955 for Rock Island Line in different contexts; this draft deliberately avoids assigning a contested original release date.",
+    "primary_source_url": "https://www.bear-family.com/bear-family-features/skiffle-music-on-bear-family-records",
+    "summary": "Scottish-born singer and guitarist Lonnie Donegan developed British skiffle from trad-jazz roots, recorded Rock Island Line and played a 1957 concert set.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Bear Family's archival Decca/Pye editions and a specifically documented concert recording establish his musical transition and dated repertoire."
+  },
   "lotte-anker": {
     "evidence": [
       {
@@ -12855,6 +13114,31 @@
     "summary": "Avant-garde pianist Lowell Davidson led a 1965 ESP-Disk trio session with bassist Gary Peacock and percussionist Milford Graves in New York.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The original label's digital reissue supplies full session date, player credits, compositions and recording history."
+  },
+  "lucky-millinder": {
+    "evidence": [
+      {
+        "claim": "Concord's Let It Roll notes report Millinder employed Ernestine Annisteen Allen from 1945 to 1954 and gave her the stage name Annisteen.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/let-it-roll/"
+      },
+      {
+        "claim": "Ruth Brown recalls being hired for Millinder's orchestra at Detroit's Frolic Show Bar in late 1946 and dismissed after about a month.",
+        "id": "ev02",
+        "source_url": "https://concord.com/artist/ruth-brown/"
+      },
+      {
+        "claim": "Concord identifies Lucky Millinder among the big-band leaders in which tenor saxophonist Eddie Lockjaw Davis gained early experience.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/straight-blues-2/"
+      }
+    ],
+    "key": "lucky-millinder",
+    "limitations": "These are ensemble and hiring-history claims, not evidence that Millinder performed a named instrument on the cited recordings.",
+    "primary_source_url": "https://concord.com/concord-albums/let-it-roll/",
+    "summary": "Bandleader Lucky Millinder employed Annisteen Allen in his rhythm-and-blues orchestra and briefly hired Ruth Brown before her Atlantic breakthrough.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Concord artist/album histories and first-person recollections by Ruth Brown identify two separate musicians in Millinder's orchestra."
   },
   "luther-henderson": {
     "evidence": [
@@ -13766,6 +14050,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His arrangements connect the Andrew Hill legacy to contemporary freely improvised small-group jazz."
   },
+  "marty-marsala": {
+    "evidence": [
+      {
+        "claim": "Jan Evensmo's jazz archive documents Marty Marsala on trumpet in Joe Marsala and His Chicagoans for Variety's April 21, 1937 New York session.",
+        "id": "ev01",
+        "source_url": "https://www.jazzarcheology.com/artists/adele_girard.pdf"
+      },
+      {
+        "claim": "The same independent sessionography credits Marty Marsala in a four-title Vocalion recording session on March 16, 1938 with Buddy Rich on drums.",
+        "id": "ev02",
+        "source_url": "https://www.jazzarcheology.com/artists/adele_girard.pdf"
+      },
+      {
+        "claim": "It records Marty Marsala's trumpet participation in Joe Marsala's August 18, 1939 America Dances radio broadcast with Bud Freeman and Dave Tough.",
+        "id": "ev03",
+        "source_url": "https://www.jazzarcheology.com/artists/adele_girard.pdf"
+      }
+    ],
+    "key": "marty-marsala",
+    "limitations": "The document is specialist reconstructed jazz sessionography rather than a label's current site; source names Joe Marsala as the leader, and does not imply Marty was leading.",
+    "primary_source_url": "https://www.jazzarcheology.com/artists/adele_girard.pdf",
+    "summary": "Trumpeter Marty Marsala worked with clarinetist Joe Marsala on 1937 Variety and 1938 Vocalion sessions and on a 1939 America Dances broadcast.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The independently compiled archival session log gives specific recording locations, dates, instrumentation and original labels."
+  },
   "marty-morell": {
     "evidence": [
       {
@@ -14200,6 +14509,31 @@
     "summary": "Hammond organist Melvin Rhyne recorded with guitarist Wes Montgomery on Boss Guitar and in Montgomery's Indianapolis organ-trio repertoire.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Riverside's label notes establish the organ trio, Rhyne's return to Montgomery's group and the specific Boss Guitar recording."
+  },
+  "merrill-moore": {
+    "evidence": [
+      {
+        "claim": "Bear Family's Boogie My Blues Away documents 44 Capitol masters and recordings from Moore's 1952-1958 label career, including previously unissued tracks.",
+        "id": "ev01",
+        "source_url": "https://www.bear-family.com/moore-merrill-boogie-my-blues-away-2-cd.html?autoPlay=true"
+      },
+      {
+        "claim": "The label's retrospective track list features House Of Blue Lights, Big Bug Boogie, Red Light and Flyright Boogie under Merrill Moore's name.",
+        "id": "ev02",
+        "source_url": "https://www.bear-family.com/moore-merrill-boogie-my-blues-away-2-cd.html?autoPlay=true"
+      },
+      {
+        "claim": "Bear Family's historical notes describe Capitol producer Ken Nelson hearing Moore's San Diego club band and offering a recording contract.",
+        "id": "ev03",
+        "source_url": "https://www.bear-family.com/moore-merrill-the-house-of-blue-lights-cd.html"
+      }
+    ],
+    "key": "merrill-moore",
+    "limitations": "Moore's music crosses jazz, country and early rock; historical credits do not justify labeling every track as jazz. Bear Family notes disagree on exact birth day and death day; neither is used.",
+    "primary_source_url": "https://www.bear-family.com/moore-merrill-boogie-my-blues-away-2-cd.html?autoPlay=true",
+    "summary": "Boogie pianist Merrill Moore recorded for Capitol between 1952 and 1958 and led a small California club band blending swing, country and blues.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Bear Family's retrospective reissue reconstructs Capitol masters and specific original track titles, with rare previously unissued sessions."
   },
   "merritt-brunies": {
     "evidence": [
@@ -15191,6 +15525,31 @@
     "summary": "French percussionist Mino Cinelu guests on track four of Francis Jacob's Three Blind Mice album, alongside guest vocalist Melanie Dahan.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Cross-cultural jazz percussion adds rhythmic layers without conflating guest credits and authorship."
+  },
+  "minor-hall": {
+    "evidence": [
+      {
+        "claim": "Concord credits Minor Hall with Kid Ory, Wellman Braud and Alvin Alcorn on Favorites!, recorded in June and July 1956.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/favorites/"
+      },
+      {
+        "claim": "Concord's Claire Austin reissue documents the 1954 Claire Austin Sings the Blues session backed by Kid Ory's rhythm section, including Minor Hall.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/claire-austin-sings-when-your-lover-has-gone/"
+      },
+      {
+        "claim": "The Claire Austin collection distinguishes the 1954 blues tracks from a 1955 session with Barney Kessel and Shelly Manne.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/claire-austin-sings-when-your-lover-has-gone/"
+      }
+    ],
+    "key": "minor-hall",
+    "limitations": "Concord's personnel summaries do not provide per-track drum identification for the combined Claire Austin CD; the 1954 bonus sides are distinguished from her 1955 sessions.",
+    "primary_source_url": "https://concord.com/concord-albums/favorites/",
+    "summary": "New Orleans drummer Minor Hall accompanied Kid Ory's band on 1956 recordings and backed blues singer Claire Austin on a 1954 Good Time Jazz album.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two original Good Time Jazz releases reissued by Concord document distinct dates, collaborators and the same drummer in instrumental and vocal jazz."
   },
   "miya-masaoka": {
     "evidence": [
@@ -16694,6 +17053,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His writing connects post-bop forms with extended free improvisations."
   },
+  "paul-gayten": {
+    "evidence": [
+      {
+        "claim": "Route 66's Creole Gal reissue notes identify Gayten's 1947 De Luxe single True and his jazz-influenced blues piano style.",
+        "id": "ev01",
+        "source_url": "https://www.bear-family.com/gayten-paul-annie-laurie-creole-gal-lp.html"
+      },
+      {
+        "claim": "The El Toro Ain't Nothing Happenin' collection documents performances by Gayten and Annie Laurie together on I'll Never Be Free and I Ain't Gotta Let You In.",
+        "id": "ev02",
+        "source_url": "https://www.bear-family.com/gayten-paul-ain-t-nothing-happenin-cool-jump-blues-cd.html"
+      },
+      {
+        "claim": "The same reissue's original label history identifies Gayten's production work with Clarence Frogman Henry, Larry Darnell and Bobby Charles.",
+        "id": "ev03",
+        "source_url": "https://www.bear-family.com/gayten-paul-ain-t-nothing-happenin-cool-jump-blues-cd.html"
+      }
+    ],
+    "key": "paul-gayten",
+    "limitations": "These are R&B and blues recordings with jazz influences; the available album history does not establish Gayten as pianist on every assembled track.",
+    "primary_source_url": "https://www.bear-family.com/gayten-paul-annie-laurie-creole-gal-lp.html",
+    "summary": "New Orleans pianist and bandleader Paul Gayten recorded the 1947 De Luxe hit True, led Annie Laurie's band and produced later Chess-associated R&B singles.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Route 66 and El Toro retrospective label notes preserve named singles and his combined roles as pianist, bandleader and producer."
+  },
   "paul-jackson-jr": {
     "evidence": [
       {
@@ -17459,6 +17843,26 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "An original MCA/Verve recording credit and the Recording Academy establish two independent performance projects."
   },
+  "ray-anthony": {
+    "evidence": [
+      {
+        "claim": "Library of Congress film copyright finding aid catalogs Ray Anthony and His Orchestra in the Columbia Pictures Thrills of Music series in 1947.",
+        "id": "ev01",
+        "source_url": "https://blogs.loc.gov/now-see-hear/2018/01/now-playing-at-the-packard-campus-theater-jan-4-6-2018/"
+      },
+      {
+        "claim": "Library of Congress stock-arrangements catalog identifies Thunderbird and Harlem Nocturne as Ray Anthony Capitol recordings represented by 1953 printed arrangements.",
+        "id": "ev02",
+        "source_url": "https://guides.loc.gov/jazz-stock-arrangements/big-band-parts"
+      }
+    ],
+    "key": "ray-anthony",
+    "limitations": "The printed arrangements were published in 1953, which is not asserted to be the session date. A separate Billy May finding aid was inaccessible and its 1953-1954 rights claim was excluded.",
+    "primary_source_url": "https://blogs.loc.gov/now-see-hear/2018/01/now-playing-at-the-packard-campus-theater-jan-4-6-2018/",
+    "summary": "Trumpeter Ray Anthony led an orchestra filmed in 1947 and recorded Thunderbird and Harlem Nocturne for Capitol, as documented by Library of Congress archives.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two separately accessible Library of Congress archives document his 1947 orchestra film and contemporary printed arrangements linked to Capitol recordings."
+  },
   "ray-charles": {
     "evidence": [
       {
@@ -18115,6 +18519,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Specialty's catalog history places Milton among the label's original postwar jump-blues acts and preserves named recordings."
   },
+  "roy-montrell": {
+    "evidence": [
+      {
+        "claim": "Ace Records' original Gumbo Stew label notes name Roy Montrell with Harold Battiste, Melvin Lastie, Alvin Red Tyler, Chuck Badie and John Boudreaux as founders of AFO in 1961.",
+        "id": "ev01",
+        "source_url": "https://acerecords.co.uk/gumbo-stew"
+      },
+      {
+        "claim": "Ace Records' original Fats Domino Imperial Singles Vol. 4 (1959-1961) notes name Roy Montrell among the New Orleans studio guitarists alongside Walter Papoose Nelson.",
+        "id": "ev02",
+        "source_url": "https://acerecords.co.uk/the-imperial-singles-vol-4-1959-1961"
+      },
+      {
+        "claim": "Ace Records' original Baby, That Is Rock 'n' Roll reissue includes Roy Montrell as the credited performer of (Everytime I Hear) That Mellow Saxophone, track 11.",
+        "id": "ev03",
+        "source_url": "https://www.acerecords.co.uk/baby-that-is-rock-n-roll"
+      }
+    ],
+    "key": "roy-montrell",
+    "limitations": "Fats Domino's 1959-1961 compilation covers a period and multiple guitarists; the credit does not assign Montrell to any individual track. Reissue years are not recording dates.",
+    "primary_source_url": "https://acerecords.co.uk/gumbo-stew",
+    "summary": "New Orleans guitarist Roy Montrell helped found AFO Records in 1961, recorded sessions with Fats Domino and issued That Mellow Saxophone.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Ace Records' original reissue notes preserve Montrell's AFO label-founding role, Fats Domino studio credit and an original title released under his own name."
+  },
   "roy-paci": {
     "evidence": [
       {
@@ -18255,6 +18684,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Hard-bop bass support and rare melodic jazz cello leadership."
   },
+  "sam-ulano": {
+    "evidence": [
+      {
+        "claim": "NAMM's original oral-history interview was conducted November 14, 2012 and identifies Ulano as founder of World of Drums.",
+        "id": "ev01",
+        "source_url": "https://www.namm.org/library/oral-history/sam-ulano"
+      },
+      {
+        "claim": "NAMM dates Ulano's first drum-method publication to 1948 and identifies his store and teaching work in New York.",
+        "id": "ev02",
+        "source_url": "https://www.namm.org/library/oral-history/sam-ulano"
+      },
+      {
+        "claim": "Modern Drummer's 2014 obituary reproduces a direct 2011 interview, identifying his recordings with Moondog and a performance with Public Image Ltd.",
+        "id": "ev03",
+        "source_url": "https://www.moderndrummer.com/2014/01/drum-instructor-sam-ulano-passes/"
+      }
+    ],
+    "key": "sam-ulano",
+    "limitations": "NAMM and Modern Drummer disagree by one day on his death date; the summary does not state that date or extrapolate the number of publications.",
+    "primary_source_url": "https://www.namm.org/library/oral-history/sam-ulano",
+    "summary": "New York drummer Sam Ulano published his first drum-method book in 1948, taught through World of Drums and performed with Moondog and Public Image Ltd.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A first-hand NAMM oral-history archive and the contemporary drumming press document specific pedagogical and performance work."
+  },
   "sammy-nestico": {
     "evidence": [
       {
@@ -18369,6 +18823,31 @@
     "summary": "Pianist/composer Satoko Fujii led the 1997 'South Wind' big band, using intricate written passages and fiery free improvisation with trumpeter Natsuki Tamura.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Japanese jazz orchestra leader spanning modern composition and open improvisation"
+  },
+  "scheila-gonzalez": {
+    "evidence": [
+      {
+        "claim": "The original One Shot Deal group biography identifies Gonzalez as a founding Zappa Plays Zappa member on saxes, flute, keyboards and vocals.",
+        "id": "ev01",
+        "source_url": "https://oneshotdeal.rocks/about/"
+      },
+      {
+        "claim": "The Recording Academy's original award record lists Gonzalez among the 2009 Peaches En Regalia winners with Zappa Plays Zappa and Steve Vai.",
+        "id": "ev02",
+        "source_url": "https://www.grammy.com/artists/scheila-gonzalez/13377/"
+      },
+      {
+        "claim": "The One Shot Deal band biography dates her work with Colin Hay and Men at Work from 2017.",
+        "id": "ev03",
+        "source_url": "https://oneshotdeal.rocks/about/"
+      }
+    ],
+    "key": "scheila-gonzalez",
+    "limitations": "The 2009 Grammy category was Best Rock Instrumental Performance; it is not described as a jazz award or individual solo performance.",
+    "primary_source_url": "https://oneshotdeal.rocks/about/",
+    "summary": "Saxophonist Scheila Gonzalez toured with Zappa Plays Zappa, received a 2009 ensemble Grammy for Peaches en Regalia and joined Colin Hay's band.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An original band biography and the Recording Academy's artist record independently identify the performer and specific project."
   },
   "sebi-tramontana": {
     "evidence": [
@@ -19405,6 +19884,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Two label catalog records document distinct sessions and named ensembles for an otherwise sparsely biographed bassist."
   },
+  "teddy-stauffer": {
+    "evidence": [
+      {
+        "claim": "Swiss national historical dictionary describes Teddy Stauffer founding Teddy and His Band in Bern in 1928 and a 1936 Delphi engagement in Berlin.",
+        "id": "ev01",
+        "source_url": "https://hls-dhs-dss.ch/de/articles/041536/2012-11-07/"
+      },
+      {
+        "claim": "Swissinfo's archive of a Swiss Radio International jazz program identifies Teddy Stauffer and His Original Teddies recording Moeni Stomp in 1940, source Elite SJLP 6306.",
+        "id": "ev02",
+        "source_url": "https://www.swissinfo.ch/eng/the-swiss-jazz-scene-the-early-years-mh-11-1972/1129862"
+      },
+      {
+        "claim": "Deutsche Biographie documents 100-plus Telefunken recordings by Stauffer's orchestra in 1936-1939 and EliteDecca recordings in 1940-1941.",
+        "id": "ev03",
+        "source_url": "https://www.deutsche-biographie.de/gnd12364500X.html?language=de"
+      }
+    ],
+    "key": "teddy-stauffer",
+    "limitations": "The 1940 recording is dated by the Swiss broadcaster's retrospective playlist; the 2008 broadcast page is not an original issue date.",
+    "primary_source_url": "https://hls-dhs-dss.ch/de/articles/041536/2012-11-07/",
+    "summary": "Swiss saxophonist Teddy Stauffer led the Original Teddies swing orchestra in Berlin and recorded Moeni Stomp for Elite in 1940.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Swiss historical and broadcast archives preserve ensemble identity, a specific 1940 recording and contemporary swing context."
+  },
   "teo-macero": {
     "evidence": [
       {
@@ -19538,6 +20042,31 @@
     "summary": "Bulgarian kaval virtuoso Theodosii Spassov integrates folk flute, jazz and classical music in original compositions and collaborations.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents concrete genre, performance and recording contributions to a diverse jazz catalog."
+  },
+  "thomas-a-dorsey": {
+    "evidence": [
+      {
+        "claim": "Smithsonian National Museum of American History identifies Thomas A. Dorsey's blues persona Georgia Tom and his direction of the Pilgrim Baptist Church choir in Chicago.",
+        "id": "ev01",
+        "source_url": "https://www.americanhistory.si.edu/explore/exhibitions/many-voices/online/creating-community-chicago-and-los-angeles-1900%E2%80%931965/chicago/bronzeville"
+      },
+      {
+        "claim": "Library of Congress Recording Registry identifies its 1973 Precious Lord recording as featuring Thomas A. Dorsey narrating his life and performances of his gospel works.",
+        "id": "ev02",
+        "source_url": "https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/registry-by-induction-years/2002/"
+      },
+      {
+        "claim": "Library of Congress National Recording Preservation Board historical essay links Dorsey's Georgia Tom blues work with Tampa Red and his later gospel composition.",
+        "id": "ev03",
+        "source_url": "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/If%20I%20Could%20Hear%20My%20Mother%20Pray%20Again--FINAL.pdf"
+      }
+    ],
+    "key": "thomas-a-dorsey",
+    "limitations": "The Smithsonian museum's sixty-year figure describes choir leadership, not a continuously documented set of dates; 1973 belongs to the Precious Lord recording, not the Library of Congress induction year (2002).",
+    "primary_source_url": "https://www.americanhistory.si.edu/explore/exhibitions/many-voices/online/creating-community-chicago-and-los-angeles-1900%E2%80%931965/chicago/bronzeville",
+    "summary": "Pianist Thomas A. Dorsey recorded blues as Georgia Tom, directed Pilgrim Baptist Church's choir and narrated his life on 1973's Precious Lord.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian and Library of Congress sources document his blues-to-gospel transition and the 1973 Precious Lord recording preserved in the National Recording Registry."
   },
   "thomas-lang": {
     "evidence": [
@@ -20384,6 +20913,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His French horn widens the brass ensemble's register and contrapuntal color."
   },
+  "vinnie-burke": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's reissue session details credit Vinnie Burke with Eddie Costa, Jimmy Raney and Joe Morello on a New York July 22, 1956 ABC-Paramount All-Stars date.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/vinnie-burke-albums/53683-the-vinnie-burke-all-stars-string-jazz-quartet-2-lp-on-1-cd.html"
+      },
+      {
+        "claim": "The same reissue identifies Burke on bass, Dick Wetmore on violin, Calo Scott on cello and Bobby Grillo on guitar in String Jazz Quartet, recorded January 10, 1957.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/vinnie-burke-albums/53683-the-vinnie-burke-all-stars-string-jazz-quartet-2-lp-on-1-cd.html"
+      },
+      {
+        "claim": "Fresh Sound's individual Jubilee Records JLP 1025 catalog identifies Eddie Costa, Vinnie Burke and Nick Stabulas on the 1956 Eddie Costa-Vinnie Burke Trio record.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/eddie-costa-vinnie-burke-albums/57438-eddie-costa-vinnie-burke-trio-vinyl.html"
+      }
+    ],
+    "key": "vinnie-burke",
+    "limitations": "Original sessions are 1956 and 1957; the Fresh Sound CD compilation date must not be mistaken for recording dates. The short label biography reproduces AllMusic and is not used as evidence.",
+    "primary_source_url": "https://www.freshsoundrecords.com/vinnie-burke-albums/53683-the-vinnie-burke-all-stars-string-jazz-quartet-2-lp-on-1-cd.html",
+    "summary": "Double bassist Vinnie Burke recorded 1956 ABC-Paramount All-Stars sessions and a 1957 String Jazz Quartet album with Dick Wetmore and Calo Scott.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The reissuing label reconstructs original ABC-Paramount sessions by matrix groups and identifies a later distinct quartet instrumentation."
+  },
   "vinnie-colaiuta": {
     "evidence": [
       {
@@ -20403,6 +20957,31 @@
     "summary": "Drummer Vinnie Colaiuta performed on John McLaughlin's Five Peace Band Live and contributed to The Wind Cries Mary with Sting and McLaughlin, according to Grammy credits.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Verifiable jazz-to-pop crossover through recording credits."
+  },
+  "virgilio-savona": {
+    "evidence": [
+      {
+        "claim": "RAI Teche original television archive identifies Virgilio Savona as a Quartetto Cetra performer in Biblioteca Studio Uno filmed in 1964.",
+        "id": "ev01",
+        "source_url": "https://www.teche.rai.it/2013/07/virgilio-savona-in-biblioteca-studio-uno-del-1964/"
+      },
+      {
+        "claim": "RAI's 1964-1966 variety-program catalog credits Tata Giacobetti and Virgilio Savona as authors of Cetra 66 broadcast February 24, 1966.",
+        "id": "ev02",
+        "source_url": "https://www.teche.rai.it/varieta-1964-1966/"
+      },
+      {
+        "claim": "RAI Teche artist index connects Savona to its preserved 1964 Biblioteca Studio Uno segment.",
+        "id": "ev03",
+        "source_url": "https://www.teche.rai.it/personaggi/virgilio-savona/"
+      }
+    ],
+    "key": "virgilio-savona",
+    "limitations": "The accessible program details are television archival facts, not proof of specific album release dates or of every song's jazz classification.",
+    "primary_source_url": "https://www.teche.rai.it/2013/07/virgilio-savona-in-biblioteca-studio-uno-del-1964/",
+    "summary": "Italian singer and pianist Virgilio Savona performed with Quartetto Cetra in a 1964 RAI broadcast and co-wrote the 1966 television program Cetra 66.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "RAI's own television archive identifies an individual performance and a distinct writing credit within Quartetto Cetra."
   },
   "volker-kriegel": {
     "evidence": [
