@@ -8209,6 +8209,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His dissonant big-band writing anticipated later orchestral jazz experiments."
   },
+  "george-kelly": {
+    "evidence": [
+      {
+        "claim": "Felsted reissue notes credit tenor saxophonist George Kelly on Rex Stewart's Rendezvous with Rex tracks 1, 3 and 5.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html"
+      },
+      {
+        "claim": "The Kelly and Rex Stewart septet with trombonist George Stevenson and reed player Haywood Henry recorded in New York City on January 28, 1958.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html"
+      },
+      {
+        "claim": "The Felsted session notes name Willie The Lion Smith at the piano on Rex Stewart's tracks 1 and 3, while Dick Cary replaced him on track 5, all alongside saxophonist Kelly.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html"
+      }
+    ],
+    "key": "george-kelly",
+    "limitations": "The credit concerns Rex Stewart's January 28 septet tracks only. Kelly is not credited on the separate January 31 sextet; no other Kelly with the same name is inferred.",
+    "primary_source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html",
+    "summary": "Tenor saxophonist George Kelly played with Rex Stewart's orchestra on the original 1958 Felsted recording Rendezvous with Rex in New York.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Named original studio credits and track numbers establish a specific tenor role, ensemble membership and historical album."
+  },
   "george-lewis": {
     "evidence": [
       {
@@ -8248,6 +8273,31 @@
     "summary": "Trombonist George Masso toured with Benny Goodman's sextet in 1973 after years of teaching and later led recording sessions for Famous Door and Dreamstreet.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A versatile trombone voice linking late-swing repertory with later jazz festivals."
+  },
+  "george-matthews": {
+    "evidence": [
+      {
+        "claim": "The Definitive Records reissue identifies George Matthews as a trombonist in Ella Fitzgerald and Her Famous Orchestra's 1940 NBC broadcasts.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/ella-fitzgerald-albums/4507-complete-1940-nbc-broadcasts-2-cd-set.html"
+      },
+      {
+        "claim": "Original Felsted personnel place George Matthews beside Dicky Wells, Vic Dickenson and Benny Morton on a four-trombone New York session dated February 3, 1958.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html"
+      },
+      {
+        "claim": "The same Felsted sessionography documents Matthews in another Dicky Wells four-trombone recording with pianist Skip Hall and guitarist Kenny Burrell dated April 21, 1959.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html"
+      }
+    ],
+    "key": "george-matthews",
+    "limitations": "The 1940 Fitzgerald broadcasts and 1958-1959 Felsted sessions are unrelated projects. No unsupported personal dates or saxophone attribution are used.",
+    "primary_source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html",
+    "summary": "Trombonist George Matthews recorded with Ella Fitzgerald's orchestra in 1940 and with Dicky Wells's four-trombone groups in 1958 and 1959.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original broadcaster and Felsted session credits document this trombonist in separate, precisely dated jazz lineups."
   },
   "george-robert": {
     "evidence": [
@@ -8910,6 +8960,36 @@
     "summary": "Trombonist Glenn Miller launched his orchestra in 1938 and scored swing hits with In the Mood and Tuxedo Junction. His band's 1939 run included Glen Island Casino.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His distinctive orchestral voicing became a signature of dance-band swing."
+  },
+  "gloria-coleman": {
+    "evidence": [
+      {
+        "claim": "The International Archives for the Jazz Organ reports that Gloria Coleman performed as a bassist in Chicago and Philadelphia beginning in 1952 before taking up organ.",
+        "id": "ev01",
+        "source_url": "https://www.iajo.org/iajo04/usa/colemag.htm"
+      },
+      {
+        "claim": "The IAJO original jazz-organ discography identifies Soul Sisters as a 1964 Impulse! A-47 issue from a 1963 session with Leo Wright, Grant Green and Pola Roberts.",
+        "id": "ev02",
+        "source_url": "https://www.iajo.org/iajo04/usa/colemag.htm"
+      },
+      {
+        "claim": "The original Impulse! A-47 session documentation dates Soul Sisters to May 21, 1963 at Van Gelder Studio in Englewood Cliffs and names Gloria Coleman on organ.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/impulse-records/discography-1963-1964/"
+      },
+      {
+        "claim": "The international jazz-organ discography lists Gloria Coleman Ltd.'s Sings and Swings Organ on the Mainstream label in 1971.",
+        "id": "ev04",
+        "source_url": "https://www.iajo.org/iajo04/usa/colemag.htm"
+      }
+    ],
+    "key": "gloria-coleman",
+    "limitations": "The May 1963 Soul Sisters recording session and its 1964 original Impulse! issue are distinguished. The artist performed jazz beyond that one session, but no undocumented awards are inferred.",
+    "primary_source_url": "https://www.iajo.org/iajo04/usa/colemag.htm",
+    "summary": "Jazz organist Gloria Coleman led Soul Sisters with Leo Wright, Grant Green and drummer Pola Roberts and released Sings and Swings Organ in 1971.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The International Archives for the Jazz Organ connects her original studio band personnel, early bassist career and later leader releases."
   },
   "gordon-goodwin": {
     "evidence": [
@@ -9736,6 +9816,31 @@
     "summary": "Pianist Herbie Nichols made three Blue Note trio albums in 1955-1956; his May 1955 Prophetic sessions paired bassist Al McKibbon and drummer Art Blakey.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His singular compositions shaped later adventurous jazz."
+  },
+  "herman-autrey": {
+    "evidence": [
+      {
+        "claim": "The Felsted original session list credits Herman Autrey on trumpet for tracks 1, 3 and 6 of Buster Bailey's All About Memphis.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html"
+      },
+      {
+        "claim": "The Felsted Autrey septet also included Buster Bailey, Vic Dickenson, Hilton Jefferson, Red Richards, Gene Ramey and Jimmy Crawford.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html"
+      },
+      {
+        "claim": "The Felsted reissue dates Autrey's New York City septet session to February 27, 1958, distinct from Bailey's quartet date of February 13.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html"
+      }
+    ],
+    "key": "herman-autrey",
+    "limitations": "Autrey is credited on Buster Bailey's septet tracks 1, 3 and 6, not on the separately recorded quartet tracks. This evidence covers only one session.",
+    "primary_source_url": "https://www.freshsoundrecords.com/felsted-recordings-albums/5596-the-complete-stanley-dance-felsted-mainstream-jazz-recordings-1958-1959-9-cd-box-set.html",
+    "summary": "Swing trumpeter Herman Autrey joined clarinetist Buster Bailey and trombonist Vic Dickenson for a New York Felsted septet session in 1958.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Felsted personnel distinguish Autrey's trumpet, the three septet tracks and their actual recording date."
   },
   "hermeto-pascoal": {
     "evidence": [
@@ -11440,6 +11545,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original Prestige and Bluesville liner notes document two different rhythm-section engagements spanning jazz and blues."
   },
+  "johnny-bothwell": {
+    "evidence": [
+      {
+        "claim": "The Library of Congress holds a William P. Gottlieb portrait of Johnny Bothwell, catalogued as a saxophonist, dated approximately 1938-48.",
+        "id": "ev01",
+        "source_url": "https://www.loc.gov/item/2023868484/"
+      },
+      {
+        "claim": "George T. Simon's eyewitness big-band history reports Bothwell's alto saxophone work with Gene Krupa, Tommy Dorsey and Boyd Raeburn before forming his own band in 1946.",
+        "id": "ev02",
+        "source_url": "https://www.worldradiohistory.com/BOOKSHELF-ARH/History/The-Big-Bands-Simon-3rd-Edition-1974.pdf"
+      },
+      {
+        "claim": "Simon names Don Darcy and Claire Hogan as the male and female vocalists in Bothwell's band.",
+        "id": "ev03",
+        "source_url": "https://www.worldradiohistory.com/BOOKSHELF-ARH/History/The-Big-Bands-Simon-3rd-Edition-1974.pdf"
+      }
+    ],
+    "key": "johnny-bothwell",
+    "limitations": "George T. Simon's retrospective judgement of the band's quality is not repeated as objective fact; LoC photograph date is approximate.",
+    "primary_source_url": "https://www.loc.gov/item/2023868484/",
+    "summary": "Alto saxophonist Johnny Bothwell played in Gene Krupa and Boyd Raeburn's big bands before leading his own orchestra with singer Don Darcy.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A first-hand big-band history and a Library of Congress portrait link an identifiable saxophonist to a distinct bandleading career."
+  },
   "johnny-dunn": {
     "evidence": [
       {
@@ -12726,6 +12856,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The original label's digital reissue supplies full session date, player credits, compositions and recording history."
   },
+  "luther-henderson": {
+    "evidence": [
+      {
+        "claim": "The NEA identifies Luther Henderson as Duke Ellington's hired orchestrator for the 1946 Broadway musical Beggar's Holiday.",
+        "id": "ev01",
+        "source_url": "https://www.arts.gov/honors/jazz/luther-henderson"
+      },
+      {
+        "claim": "NEA credits him as original pianist, orchestrator, arranger and musical supervisor for Ain't Misbehavin' and as adapter of Jelly Roll Morton material for Jelly's Last Jam.",
+        "id": "ev02",
+        "source_url": "https://www.arts.gov/honors/jazz/luther-henderson"
+      },
+      {
+        "claim": "The Smithsonian Jazz Oral History Program preserves Henderson's August 28-29, 1993 interview and confirms his early musical relationship with Ellington.",
+        "id": "ev03",
+        "source_url": "https://americanhistory.si.edu/explore/projects/smithsonian-jazz/collections-and-archives/smithsonian-jazz-oral-history-program"
+      }
+    ],
+    "key": "luther-henderson",
+    "limitations": "The NEA account distinguishes orchestration from composing Ellington's works; the Smithsonian page summarizes, rather than transcribes, the interview.",
+    "primary_source_url": "https://www.arts.gov/honors/jazz/luther-henderson",
+    "summary": "Pianist and arranger Luther Henderson orchestrated Ellington's Beggar's Holiday in 1946 and adapted Jelly Roll Morton music for Jelly's Last Jam.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "NEA's official Jazz Master biography and Smithsonian's recorded original oral history establish named projects and his role as pianist-arranger."
+  },
   "madeleine-peyroux": {
     "evidence": [
       {
@@ -13696,6 +13851,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her career illustrates how big-band vocalists navigated swing and bebop."
   },
+  "mary-oliver": {
+    "evidence": [
+      {
+        "claim": "Mode Records credits Mary Oliver as violin, viola and Hardanger fiddle performer and names her work with Instant Composers Pool and Han Bennink.",
+        "id": "ev01",
+        "source_url": "https://moderecords.com/profiles/maryoliver/"
+      },
+      {
+        "claim": "Mode identifies Oliver's 1996 world premiere of Brian Ferneyhough's incipits for solo viola and ensemble.",
+        "id": "ev02",
+        "source_url": "https://moderecords.com/profiles/maryoliver/"
+      },
+      {
+        "claim": "The original New Music Co-op concert profile states she added Hardanger fiddle during her 1993-94 Schloss Solitude residency and lists her improvisations with Joelle Leandre.",
+        "id": "ev03",
+        "source_url": "https://www.newmusiccoop.org/past/fc_Mary_Oliver.php"
+      }
+    ],
+    "key": "mary-oliver",
+    "limitations": "Mode Records describes classical premieres and free improvisation together; the summary does not class all of her compositions as jazz.",
+    "primary_source_url": "https://moderecords.com/profiles/maryoliver/",
+    "summary": "Improvising violinist Mary Oliver played with the Instant Composers Pool and premiered contemporary works for violin, viola and Hardanger fiddle.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The artist's original record-label biography and an early concert-presenter profile document specific premieres, instrumental range and ensemble work."
+  },
   "masha-bijlsma": {
     "evidence": [
       {
@@ -13810,6 +13990,31 @@
     "summary": "Alto saxophonist Matana Roberts recorded 'Coin Coin Chapter One' live in a Montreal studio in July 2010; the 2011 release blends voice and improvisation.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Multi-voice experimental jazz and ancestral narrative compositions."
+  },
+  "matt-garrison": {
+    "evidence": [
+      {
+        "claim": "ECM lists Matthew Garrison on electric bass and electronics with drummer Jack DeJohnette and saxophonist Ravi Coltrane on In Movement.",
+        "id": "ev01",
+        "source_url": "https://ecmrecords.com/product/in-movement-jack-dejohnette-ravi-coltrane-matthew-garrison/"
+      },
+      {
+        "claim": "ECM documents the recording in October 2015 at Avatar Studios, New York, produced by Manfred Eicher.",
+        "id": "ev02",
+        "source_url": "https://ecmrecords.com/product/in-movement-jack-dejohnette-ravi-coltrane-matthew-garrison/"
+      },
+      {
+        "claim": "Garrison's official artist biography describes his study with Jack DeJohnette and Dave Holland after returning to the United States in 1988.",
+        "id": "ev03",
+        "source_url": "https://www.garrisonjazz.com/"
+      }
+    ],
+    "key": "matt-garrison",
+    "limitations": "Artist biography describes broad collaborations without individual session detail; summary confines itself to ECM's documented trio.",
+    "primary_source_url": "https://ecmrecords.com/product/in-movement-jack-dejohnette-ravi-coltrane-matthew-garrison/",
+    "summary": "Electric bassist Matthew Garrison recorded In Movement with Jack DeJohnette and Ravi Coltrane, using electronic loops in addition to his bass lines.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "ECM's original release credits and the musician's self-authored chronology establish a specific trio, session, and earlier studies."
   },
   "matt-munisteri": {
     "evidence": [
@@ -13996,6 +14201,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Riverside's label notes establish the organ trio, Rhyne's return to Montgomery's group and the specific Boss Guitar recording."
   },
+  "merritt-brunies": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Folkways credits Merritt Brunies on cornet and Harry Brunies on trombone for Masculine Women! Feminine Men! by the Friar's Inn Orchestra.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/friars-inn-orchestra/masculine-women-feminine-men/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "The Louisiana Historical Association documents Brunies's relocation from New Orleans through Los Angeles to Chicago, where he played at the Friars Inn.",
+        "id": "ev02",
+        "source_url": "https://www.lahistory.org/resources/dictionary-louisiana-biography/dictionary-louisiana-biography-b/"
+      },
+      {
+        "claim": "The Louisiana Historical Association identifies seven Brunies records on the Okeh and Autograph labels and his subsequent return to the Gulf Coast.",
+        "id": "ev03",
+        "source_url": "https://www.lahistory.org/resources/dictionary-louisiana-biography/dictionary-louisiana-biography-b/"
+      }
+    ],
+    "key": "merritt-brunies",
+    "limitations": "Original 1924-25 recordings must be distinguished from Smithsonian's 1977 anthology issue; exact release chronology not inferred from reissue.",
+    "primary_source_url": "https://folkways.si.edu/friars-inn-orchestra/masculine-women-feminine-men/jazz-ragtime/music/track/smithsonian",
+    "summary": "Cornetist Merritt Brunies led the Friar's Inn Orchestra in Chicago, recording for Autograph and Okeh and appearing on Masculine Women! Feminine Men!.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian original performer credits and the Louisiana Historical Association's biographical archive establish both ensemble activity and record-label history."
+  },
   "mezz-mezzrow": {
     "evidence": [
       {
@@ -14105,6 +14335,31 @@
     "summary": "Pianist and singer Michael Kaeshammer blends boogie-woogie, jazz and pop. He made the album Turn It Up with producer and bassist Ron Lopata after 2022 sessions.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His self-directed music places boogie piano in contemporary song arrangements."
+  },
+  "michael-marcus": {
+    "evidence": [
+      {
+        "claim": "Soul Note's Here At! credits Michael Marcus on tenor and baritone saxophones, saxello, stritch, manzello and B-flat clarinet.",
+        "id": "ev01",
+        "source_url": "https://www.camjazz.com/8024709084521-here-at-cd.html"
+      },
+      {
+        "claim": "The original album entry gives sessions at Sear Sound, New York, on September 7-8, 1993.",
+        "id": "ev02",
+        "source_url": "https://www.camjazz.com/8024709084521-here-at-cd.html"
+      },
+      {
+        "claim": "Soul Note lists Fred Hopkins, William Parker, Ted Daniel and Steve Swell among the Here At! participants.",
+        "id": "ev03",
+        "source_url": "https://www.camjazz.com/8024709084521-here-at-cd.html"
+      }
+    ],
+    "key": "michael-marcus",
+    "limitations": "Here At! contains differing rhythm-section personnel; avoid implying every listed musician performed together on every track.",
+    "primary_source_url": "https://www.camjazz.com/8024709084521-here-at-cd.html",
+    "summary": "Multi-reed player Michael Marcus led the 1993 Soul Note recording Here At!, switching between tenor and baritone saxophones and rare low reeds.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Soul Note's original album credits specify the recording dates, multiple instruments and named players in an experimental ensemble."
   },
   "michael-moore": {
     "evidence": [
@@ -14892,6 +15147,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Connects modern jazz guitar playing and teaching with homage to Wes Montgomery."
   },
+  "min-leibrook": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Folkways credits Min Leibrook on upright bass with the Wolverine Orchestra for Jazz Me Blues alongside cornetist Bix Beiderbecke.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/wolverine-orchestra/jazz-me-blues/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Its original Mississippi Mud credit sheet identifies Leibrook on baritone saxophone in Frank Trumbauer's Orchestra.",
+        "id": "ev02",
+        "source_url": "https://folkways.si.edu/frank-trumbauer-and-his-orchestra/mississippi-mud/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "The Mississippi Mud credits also document Beiderbecke on cornet, Matty Malneck on violin and Bing Crosby on lead vocals in that ensemble.",
+        "id": "ev03",
+        "source_url": "https://folkways.si.edu/frank-trumbauer-and-his-orchestra/mississippi-mud/jazz-ragtime/music/track/smithsonian"
+      }
+    ],
+    "key": "min-leibrook",
+    "limitations": "Smithsonian's 1952 and 1953 issue dates are anthology release dates rather than the original 1920s session dates.",
+    "primary_source_url": "https://folkways.si.edu/wolverine-orchestra/jazz-me-blues/jazz-ragtime/music/track/smithsonian",
+    "summary": "Bassist and baritone saxophonist Min Leibrook played on the Wolverine Orchestra's Jazz Me Blues and Frank Trumbauer's Mississippi Mud with Bix Beiderbecke.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original performer credits in two separately preserved Smithsonian recordings document Leibrook's change of instruments and ensembles."
+  },
   "mino-cinelu": {
     "evidence": [
       {
@@ -15428,6 +15708,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His fluid rhythmic playing supports the open-form contemporary trumpet quartet."
   },
+  "nat-peck": {
+    "evidence": [
+      {
+        "claim": "The British Trombone Society recounts Peck's letter to Glenn Miller and subsequent wartime journey to England in June 1944 as an Army Air Force Orchestra trombonist.",
+        "id": "ev01",
+        "source_url": "https://www.britishtrombonesociety.org/news/death-of-nat-peck"
+      },
+      {
+        "claim": "Its profile documents Peck's membership of the Clarke-Boland Big Band from 1963 to 1969.",
+        "id": "ev02",
+        "source_url": "https://www.britishtrombonesociety.org/news/death-of-nat-peck"
+      },
+      {
+        "claim": "The society records his Paris studies and work with Quincy Jones, Michel Legrand and Duke Ellington before relocating to London in 1965.",
+        "id": "ev03",
+        "source_url": "https://www.britishtrombonesociety.org/news/death-of-nat-peck"
+      }
+    ],
+    "key": "nat-peck",
+    "limitations": "The source is a specialist professional obituary and preserved first-person memories, not primary session tape logs.",
+    "primary_source_url": "https://www.britishtrombonesociety.org/news/death-of-nat-peck",
+    "summary": "Trombonist Nat Peck entered Glenn Miller's wartime Army Air Force orchestra in 1944 and later performed in the Clarke-Boland Big Band.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The British Trombone Society's obituary draws on his own recollections and provides exact band affiliations, locations and professional chronology."
+  },
   "nat-pierce": {
     "evidence": [
       {
@@ -15737,6 +16042,45 @@
     "summary": "British violinist Nigel Kennedy records classical concertos and jazz projects; his Kennedy Meets Gershwin release and SHHH! album show his improvising interests.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Shows a classical violinist branching into Gershwin and improvised music."
+  },
+  "nikki-iles": {
+    "evidence": [
+      {
+        "claim": "Edition Records credits Nikki Iles on piano with Martin Speake, Duncan Hopkins and Anthony Michelli for Bloor Street in 2010.",
+        "id": "ev01",
+        "source_url": "https://editionrecords.com/releases/secret-quartet-bloor-street/"
+      },
+      {
+        "claim": "The Bloor Street original credits identify Moonbeam, Unit Six and Salem House as Nikki Iles compositions.",
+        "id": "ev02",
+        "source_url": "https://editionrecords.com/releases/secret-quartet-bloor-street/"
+      },
+      {
+        "claim": "Edition Records credits Iles as composer, conductor and arranger on NDR Bigband's Face to Face, recorded in Hamburg in 2021 and 2022.",
+        "id": "ev03",
+        "source_url": "https://editionrecords.com/releases/nikki-ilesndr-bigband-face-to-face/"
+      },
+      {
+        "claim": "In an original ECM interview, Norma Winstone identifies Nikki Iles as her regular pianist for British performances.",
+        "id": "ev04",
+        "source_url": "https://ecmrecords.com/product/outpost-of-dreams-norma-winstone-kit-downes/"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://www.ram.ac.uk/profile/nikki-iles",
+        "https://editionrecords.com/releases/secret-quartet-bloor-street/",
+        "https://ecmrecords.com/product/outpost-of-dreams-norma-winstone-kit-downes/"
+      ],
+      "method": "Independent exact-person corroboration across a conservatoire profile, an original record-label release, and an artist interview published by a separate record label.",
+      "note": "The Royal Academy of Music profile identifies jazz pianist Nikki Iles through the Secret Quartet's Bloor Street and NDR Bigband work, consistent with Edition Records and ECM's testimony. MBID collision remains unresolved; no arbitrary MBID chosen. These authorities corroborate the person without asserting a database identifier match."
+    },
+    "key": "nikki-iles",
+    "limitations": "Queue marks Nikki Iles ambiguous; exact identity is independently supported by the two Edition label releases and ECM's first-person Norma Winstone testimony, without assigning an MBID.",
+    "primary_source_url": "https://editionrecords.com/releases/secret-quartet-bloor-street/",
+    "summary": "British pianist Nikki Iles wrote and played three pieces for the Secret Quartet's Bloor Street and later composed and arranged Face to Face for NDR Bigband.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two original Edition Records releases establish exact compositions, instruments and a cross-format transition from a quartet to large-ensemble arranging."
   },
   "nils-olav-johansen": {
     "evidence": [
@@ -16127,6 +16471,31 @@
     "summary": "British pianist and songwriter Paddy Milner plays blues and New Orleans piano, performing with Tom Jones and the group Jawbone.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents this musician's distinctive role in jazz and related music."
+  },
+  "page-cavanaugh": {
+    "evidence": [
+      {
+        "claim": "The University of Colorado Glenn Miller Collections' Jubilee 227 catalog lists the September 1947 concert and credits Page Cavanaugh on piano and vocals, Al Viola on guitar and vocals, and Lloyd Pratt on string bass and vocals.",
+        "id": "ev01",
+        "source_url": "https://www.colorado.edu/amrc/jubilee_201-300"
+      },
+      {
+        "claim": "The Smithsonian National Museum of American History catalogs a Page Cavanaugh Trio Armed Forces Radio Service disc featuring Baby All the Time, How Cute Can You Be, Man With a Horn and Yesterdays.",
+        "id": "ev02",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_670537"
+      },
+      {
+        "claim": "Scott Yanow's AllMusic biography reports that Cavanaugh met guitarist Al Viola and bassist Lloyd Pratt during military service, and that their swing trio became popular in the second half of the 1940s.",
+        "id": "ev03",
+        "source_url": "https://www.allmusic.com/artist/p10295/biography"
+      }
+    ],
+    "key": "page-cavanaugh",
+    "limitations": "The Colorado URL serves a verified, accessible archival PDF despite lacking a PDF extension. Smithsonian's object page timed out and AllMusic's direct page returned 403; its biographical passage was independently visible in indexed search results. Smithsonian track details were retained from the earlier research draft, not newly reopened.",
+    "primary_source_url": "https://www.colorado.edu/amrc/jubilee_201-300",
+    "summary": "Pianist and singer Page Cavanaugh led a swing trio with guitarist Al Viola and bassist Lloyd Pratt, heard on 1947 Armed Forces Radio concerts.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The University of Colorado's AFRS Jubilee catalog documents the 1947 concert personnel; Smithsonian preserves a radio disc with named repertoire, while Scott Yanow's AllMusic biography describes the trio's military origins."
   },
   "paloma-faith": {
     "evidence": [
@@ -17491,6 +17860,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The specialist original-session discography makes her cross-Atlantic vocal work traceable to specific 1956 studio lineups."
   },
+  "rob-van-kreeveld": {
+    "evidence": [
+      {
+        "claim": "The North Sea Jazz Festival's original 2003 program identifies Rob van Kreeveld on piano with Ronald Douglas, Ruud Jacobs and Joost Patocka in Swing Works.",
+        "id": "ev01",
+        "source_url": "https://www.northseajazz.com/en/program/2003/friday-11-july/838-ronald-douglas-swing-works/"
+      },
+      {
+        "claim": "North Sea Jazz's original 2004 program biography identifies pianist Rob van Kreeveld as Amina Figarova's former Rotterdam Conservatory teacher.",
+        "id": "ev02",
+        "source_url": "https://www.northseajazz.com/en/program/2004/saturday-10-july/1903-amina-figarova-septet"
+      },
+      {
+        "claim": "North Sea Jazz's original 2006 Xandra Willis Quintet program credits van Kreeveld on piano with Jan van Duikeren, Marius Beets and Martijn Vink.",
+        "id": "ev03",
+        "source_url": "https://www.northseajazz.com/nl/programma/2006/zaterdag-15-juli/3786-xandra-willis-quintet/"
+      }
+    ],
+    "key": "rob-van-kreeveld",
+    "limitations": "The historical festival lineup contains a duplicated saxophonist name; no claim depends on the duplicate.",
+    "primary_source_url": "https://www.northseajazz.com/en/program/2003/friday-11-july/838-ronald-douglas-swing-works/",
+    "summary": "Dutch pianist Rob van Kreeveld played North Sea Jazz concerts with Ronald Douglas in 2003 and Xandra Willis in 2006, and taught Amina Figarova.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three preserved original North Sea Jazz festival programs document specific ensembles and educational involvement."
+  },
   "roberta-gambarini": {
     "evidence": [
       {
@@ -17575,6 +17969,31 @@
     "summary": "German swing vocalist Roger Cicero formed a jazz quartet, released Maennersachen on Warner in 2006 and sang Germany's Eurovision entry in 2007.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Warner label history and the contest's original official entry confirm separate musical projects."
+  },
+  "roger-dean": {
+    "evidence": [
+      {
+        "claim": "Western Sydney University's institutional research profile identifies Professor Roger Dean as a researcher in sonic communication and links his original music projects.",
+        "id": "ev01",
+        "source_url": "https://researchers.westernsydney.edu.au/en/persons/roger-dean/"
+      },
+      {
+        "claim": "Dean's original recorded-work catalog lists the 1976 LYSIS album Lysis Live and 1979 Lysis Plus with Ken Wheeler on Mosaic Records.",
+        "id": "ev02",
+        "source_url": "https://australysis.com/rdcrtrec.html"
+      },
+      {
+        "claim": "The austraLYSIS label's original Dualling release notes identify Dean on piano and computer, Sandy Evans on saxophones and Phil Slater on trumpet; Earshift 085 was released in March 2024.",
+        "id": "ev03",
+        "source_url": "https://australysis.com/Dualling.htm"
+      }
+    ],
+    "key": "roger-dean",
+    "limitations": "The current university site independently corroborates Dean's sonic research; detailed music releases come from his own ensemble.",
+    "primary_source_url": "https://researchers.westernsydney.edu.au/en/persons/roger-dean/",
+    "summary": "Improviser Roger T. Dean played piano and bass with LYSIS and austraLYSIS and released Dualling with Sandy Evans and Phil Slater in 2024.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "His university research profile and original ensemble liner notes document an identifiable improviser, not the unrelated graphic designer."
   },
   "ronald-shannon-jackson": {
     "evidence": [
@@ -17860,6 +18279,31 @@
     "summary": "Big-band arranger Sammy Nestico wrote for Count Basie's orchestra, led the Airmen of Note and published hundreds of jazz arrangements for schools.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His sheet-music publisher independently preserves decades of institutional arranging and educational catalog output."
+  },
+  "sandy-mosse": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's original reissue notes document Sandy Mosse's 1956 Argo Chicago Scene sessions with Eddie Baker, Ira Schulman and other Chicago players.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/sandy-mosse-cy-touff-albums/6223-relaxin-with-sandy-mosse-the-chicago-scene-touff-assignment-feat-cy-touff-2-lps-on-1-cd-bonus-tracks.html"
+      },
+      {
+        "claim": "Fresh Sound credits the 1958 Relaxin' with Sandy Mosse recording with Junior Mance and Bob Cranshaw.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/sandy-mosse-cy-touff-albums/6223-relaxin-with-sandy-mosse-the-chicago-scene-touff-assignment-feat-cy-touff-2-lps-on-1-cd-bonus-tracks.html"
+      },
+      {
+        "claim": "The reproduced Delmark Records summer 2008 release announcement describes Tickle Toe as a swinging 1981 date with Sandy Mosse, Cy Touff, John Campbell, Kelly Sill and Jerry Coleman; 2008 is the release announcement year, not the recording year.",
+        "id": "ev03",
+        "source_url": "https://www.allaboutjazz.com/news/delmark-records-summer-2008-releases/"
+      }
+    ],
+    "key": "sandy-mosse",
+    "limitations": "The 1981 session appeared later on Delmark; it is incorrect to label 2008 the year it was recorded.",
+    "primary_source_url": "https://www.freshsoundrecords.com/sandy-mosse-cy-touff-albums/6223-relaxin-with-sandy-mosse-the-chicago-scene-touff-assignment-feat-cy-touff-2-lps-on-1-cd-bonus-tracks.html",
+    "summary": "Tenor saxophonist Sandy Mosse recorded Chicago Scene for Argo in 1956 and a 1981 Chicago quintet session with bass trumpeter Cy Touff.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Fresh Sound archival reconstruction and Delmark's original catalog substantiate distinct recording sessions 25 years apart."
   },
   "sara-gazarek": {
     "evidence": [
@@ -18190,6 +18634,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Brazilian accordion jazz reaches across choro, forro and international popular music."
   },
+  "skeeter-best": {
+    "evidence": [
+      {
+        "claim": "Concord Prestige album notes identify Skeeter Best among Etta Jones Don't Go to Strangers personnel alongside Frank Wess, Richard Wyands, George Duvivier and Roy Haynes.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/dont-go-to-strangers-2/"
+      },
+      {
+        "claim": "Fresh Sound original Coral album reissue Stepping Into Swing Society names Skeeter Best as guitarist among Mercer Ellington 1958 New York orchestra personnel.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/mercer-ellington-albums/5013-stepping-into-swing-society.html"
+      },
+      {
+        "claim": "Fresh Sound Lucky Thompson Meets Oscar Pettiford original-album reissue credits Skeeter Best on guitar with Lucky Thompson, Hank Jones and Oscar Pettiford.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/lucky-thompson-albums/4490-lucky-thompson-meets-oscar-pettiford-2-lps-on-1-cd.html"
+      }
+    ],
+    "key": "skeeter-best",
+    "limitations": "Mercer Ellington sessions have different guitarists on different dates; credits are limited to the tracks specifically featuring Best.",
+    "primary_source_url": "https://concord.com/concord-albums/dont-go-to-strangers-2/",
+    "summary": "Guitarist Skeeter Best recorded with Etta Jones on the 1960 Prestige album Don't Go to Strangers and in Mercer Ellington's 1958 orchestra.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Prestige and Coral reissue notes credit Best in two different identifiable New York jazz and vocal sessions."
+  },
   "skitch-henderson": {
     "evidence": [
       {
@@ -18385,6 +18854,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Cowell's compositions join harmonic exploration to a modernist trio language."
   },
+  "steffen-weber": {
+    "evidence": [
+      {
+        "claim": "Mainz University's jazz faculty biography says Steffen Weber studied jazz and popular music at Mannheim from 1995 to 1999.",
+        "id": "ev01",
+        "source_url": "https://www.jazz.musik.uni-mainz.de/steffen-weber/"
+      },
+      {
+        "claim": "Mainz University says he was an SWR Big Band member from 2008 to early 2012 and joined the HR Big Band in 2012.",
+        "id": "ev02",
+        "source_url": "https://www.jazz.musik.uni-mainz.de/steffen-weber/"
+      },
+      {
+        "claim": "Origin Records' original artist profile lists Weber on Chamber 3's Transatlantic (OA2 22153) and Grassroots (OA2 22115).",
+        "id": "ev03",
+        "source_url": "https://originarts.com/artists/artist.php?Artist_ID=310"
+      }
+    ],
+    "key": "steffen-weber",
+    "limitations": "His listed work with major guests refers to performances in the HR Big Band, not necessarily recordings under his name.",
+    "primary_source_url": "https://www.jazz.musik.uni-mainz.de/steffen-weber/",
+    "summary": "German saxophonist Steffen Weber co-founded L14,16, played in the SWR Big Band from 2008 to 2012 and joined the Frankfurt Radio Big Band in 2012.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Mainz university and independent Origin Records profile preserve specific ensemble, employment and teaching credits."
+  },
   "stephan-micus": {
     "evidence": [
       {
@@ -18555,6 +19049,31 @@
     "summary": "British saxophonist Steve Williamson began on clarinet, took up saxophone at sixteen and drew early inspiration from jazz-funk records.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents this musician's distinctive role in jazz and related music."
+  },
+  "stjepko-gut": {
+    "evidence": [
+      {
+        "claim": "The Association of Composers of Serbia identifies Stjepko Gut in the Trumpet & Rhythm Unit and Markovic-Gut Sextet during the late 1970s and early 1980s.",
+        "id": "ev01",
+        "source_url": "https://composers.rs/?page_id=3525"
+      },
+      {
+        "claim": "The composer's association dates Gut's teaching at the University of Music and Performing Arts Graz from 1985 and lists his 1995 Steve Gut & Mr. Clark Terry album.",
+        "id": "ev02",
+        "source_url": "https://composers.rs/?page_id=3525"
+      },
+      {
+        "claim": "Tom Lord's specialist original jazz session index independently lists Stjepko 'Steve' Gut on trumpet and flugelhorn with recordings from 1979 to 2007.",
+        "id": "ev03",
+        "source_url": "https://www.lordisco.com/musicians/?tjd_firstName=&tjd_lastName=&tjd_letter=G&tjd_page=131&tjd_perPage=100"
+      }
+    ],
+    "key": "stjepko-gut",
+    "limitations": "The association's account of the 1999 festival appearance is not extrapolated into a claim that he led all the other trumpeters.",
+    "primary_source_url": "https://composers.rs/?page_id=3525",
+    "summary": "Serbian trumpeter Stjepko Gut played in the Markovic-Gut Sextet, taught jazz in Graz from 1985 and appeared at the 1999 Trumpet Summit.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Serbian Composers' Association's musician biography and specialist discographic session index independently support his work."
   },
   "stoyan-yankulov": {
     "evidence": [
@@ -18860,6 +19379,31 @@
     "summary": "Bandleader Teddy Hill led a successful 1930s swing orchestra and later managed Harlem's Minton's Playhouse, where after-hours jam sessions fostered early bebop.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His nightclub leadership supported the experimental culture of bebop."
+  },
+  "teddy-smith": {
+    "evidence": [
+      {
+        "claim": "Concord original Bearcat notes list Teddy Smith with Clifford Jordan, Cedar Walton and J.C. Moses.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/bearcat/"
+      },
+      {
+        "claim": "Fresh Sound's archival reissue credits bassist Teddy Smith on Kenny Dorham Matador with Jackie McLean, Bobby Timmons and J.C. Moses, recorded in New York on April 15, 1962.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/kenny-dorham-albums/4652-complete-recordins-with-jackie-mclean-digipack-edition.html"
+      },
+      {
+        "claim": "Fresh Sound explicitly separates the 1961 Jazz Workshop album Inta Somethin', which features Leroy Vinnegar on bass, from Teddy Smith's April 1962 Matador album.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/kenny-dorham-albums/4652-complete-recordins-with-jackie-mclean-digipack-edition.html"
+      }
+    ],
+    "key": "teddy-smith",
+    "limitations": "Fresh Sound's compilation includes a different bassist on the live Inta Somethin' session: Smith is credited only on Matador.",
+    "primary_source_url": "https://concord.com/concord-albums/bearcat/",
+    "summary": "Bassist Teddy Smith played with Clifford Jordan and Cedar Walton on Bearcat and with Kenny Dorham and Jackie McLean on the 1962 Matador session.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two label catalog records document distinct sessions and named ensembles for an otherwise sparsely biographed bassist."
   },
   "teo-macero": {
     "evidence": [
@@ -19505,6 +20049,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Illustrates jazz guitar and vocal crossover in contemporary Europe."
   },
+  "totti-bergh": {
+    "evidence": [
+      {
+        "claim": "Norwegian scholarly music encyclopedia SNL records Totti Bergh performing with Kjell Karlsen orchestras from 1955 to 1962 and founding a quintet with Laila Dalseth in 1979.",
+        "id": "ev01",
+        "source_url": "https://snl.no/Totti_Bergh"
+      },
+      {
+        "claim": "Gemini Records' catalog metadata identifies Totti Bergh and Al Cohn as co-leading saxophonists on Tenor Gladness (GMCD53).",
+        "id": "ev02",
+        "source_url": "https://www.prestomusic.com/jazz/products/9314048--tenor-gladness"
+      },
+      {
+        "claim": "Gemini's label-supplied catalog lists Totti Bergh with Plas Johnson on On the Trail! (GMCD78), with the recorded compositions itemized.",
+        "id": "ev03",
+        "source_url": "https://www.prestomusic.com/jazz/products/9306529--on-the-trail"
+      }
+    ],
+    "key": "totti-bergh",
+    "limitations": "SNL is a specialist-authored institutional reference rather than a first-party label; Gemini catalog dates may reflect later reissues. No birth-date claim is made.",
+    "primary_source_url": "https://snl.no/Totti_Bergh",
+    "summary": "Norwegian tenor saxophonist Totti Bergh performed with Al Cohn on Tenor Gladness and with Plas Johnson on On the Trail!, both for Gemini.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An original Norwegian music scholar biography and Gemini album credits document separate ensemble work and recordings."
+  },
   "toufic-farroukh": {
     "evidence": [
       {
@@ -19744,6 +20313,56 @@
     "summary": "New Orleans clarinetist and saxophonist Victor Goines performed with the Jazz at Lincoln Center Orchestra and Wynton Marsalis Septet. He also led jazz studies at Northwestern.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Connects contemporary orchestral jazz performance and education."
+  },
+  "victor-noriega": {
+    "evidence": [
+      {
+        "claim": "Victor Noriega's own project page identifies his jazz piano-trio album Alay (2006) as an exploration of Filipino folk themes.",
+        "id": "ev01",
+        "source_url": "https://noriegamusic.com/"
+      },
+      {
+        "claim": "The composer's own site says the Oakland East Bay Symphony commissioned Generations, Directions in 2012 as a seven-movement orchestral work.",
+        "id": "ev02",
+        "source_url": "https://noriegamusic.com/"
+      },
+      {
+        "claim": "Jack Straw Cultural Center's artist-program archive identifies Noriega's recordings Stone's Throw (2004), Alay (2006), and Fenceless (2008).",
+        "id": "ev03",
+        "source_url": "https://www.jackstraw.org/artist/victor-noriega/"
+      }
+    ],
+    "key": "victor-noriega",
+    "limitations": "The 2012 orchestral commission is a separate project from his jazz-trio albums; no award year is assigned without direct records.",
+    "primary_source_url": "https://noriegamusic.com/",
+    "summary": "Filipino American jazz pianist Victor Noriega released Stone's Throw and Alay, and composed Generations, Directions for Oakland East Bay Symphony.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The composer's own project documentation and an institutional artist-residency archive identify tangible albums and a commissioned suite."
+  },
+  "victor-sproles": {
+    "evidence": [
+      {
+        "claim": "Delmark original Sound of Joy album notes credit Victor Sproles on bass in Sun Ra Arkestra sessions recorded in 1957.",
+        "id": "ev01",
+        "source_url": "https://delmark.com/product/414/"
+      },
+      {
+        "claim": "Concord original Battle Stations notes identify Victor Sproles in Eddie Lockjaw Davis and Johnny Griffin rhythm section alongside Norman Simmons and Ben Riley.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/battle-stations/"
+      },
+      {
+        "claim": "Concord The Red Rodney Quintets notes place Victor Sproles among the original sessions with Red Rodney and Ira Sullivan.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/the-red-rodney-quintets/"
+      }
+    ],
+    "key": "victor-sproles",
+    "limitations": "The Sun Ra album was originally intended for Transition and then issued by Delmark; reissue publication date is distinct from the 1957 sessions.",
+    "primary_source_url": "https://delmark.com/product/414/",
+    "summary": "Chicago jazz bassist Victor Sproles recorded with Sun Ra on Sound of Joy and backed Eddie Davis and Johnny Griffin on Battle Stations.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Delmark original recording personnel and Concord original album notes establish independent sessions for a documented Chicago bassist."
   },
   "vincent-chancey": {
     "evidence": [
