@@ -5,8 +5,8 @@ Reproducible offline snapshot; no generation-time timestamp.
 - 1498 musician entries; the original 1487-row catalog was imported from Wikidata occupation Q15981151.
 - 63 original editorial musician summaries, preserved verbatim.
 - 1432 non-editorial entries have matching locally archived Wikidata statement snapshots.
-- 1143 additional independently cited jazz-contribution capsules override machine descriptions; data/jazz-researched-context.tsv is the source of their exact wording and URLs.
-- Newly displayed structured music clauses (non-editorial): recording=153, co_performer=25, performance_venue=3, ensemble=75.
+- 1159 additional independently cited jazz-contribution capsules override machine descriptions; data/jazz-researched-context.tsv is the source of their exact wording and URLs.
+- Newly displayed structured music clauses (non-editorial): recording=139, co_performer=24, performance_venue=3, ensemble=70.
 - Available claim counts by field within snapshot-matched entries: P569=1421, P570=791, P19=1393, P27=1431, P1303=1368, P800=41.
 - Claim IDs, English labels, and explicit absent properties are preserved in data/jazz-structured-facts.json.
 - Properties: P569 birth, P570 death, P19 birthplace, P27 citizenship, P1303 instrument, P800 notable work.
@@ -51,10 +51,10 @@ Reproducible offline snapshot; no generation-time timestamp.
      OPTIONAL {?item schema:description ?description FILTER(LANG(?description)="en")}
     } LIMIT 1600
 
-- SHA-256 jazz-encyclopedia.tsv: bed11eb8956b9da5b51461e3b5e767a7228803fa6bf34a880e261c0046e66c26
-- SHA-256 jazz-encyclopedia.idx: 27bba3e7f6787ce935b985dd0312e0f8afcf0573e4e30452ee9ed5927d2cf878
+- SHA-256 jazz-encyclopedia.tsv: 9584276dd409c2fb7963ed79dc32453ac4020c1b4ca63b247080cbdd7cf4ff47
+- SHA-256 jazz-encyclopedia.idx: 509045e54a2df4f0aaa4ec233dcf5739763f53013b494171bb8d5bf9b32dd82b
 - SHA-256 jazz-facts.tsv: 8bc221a6afb784cb6e75a414a7a8cfb384a7d2cdc4f3a184ba947c7c104bdbf5
 - SHA-256 jazz-structured-facts.json: 59d2ade3f77038ec816bf667f9e5c82d7c508c6ddc162deb85b5642fd6dc818a
 - SHA-256 jazz-music-evidence.json: 9523f5b4581a1a1ff48de97fc71c946b15ee1737b52d807822fe8c9af75a3cc2
-- SHA-256 jazz-researched-context.tsv: 039219271c7f841019f27fef9d5e40a5713214ac9a10384b23a4f4bffc3c95a0
+- SHA-256 jazz-researched-context.tsv: 662fa0512ec47b614af17ddd268cdec6e832fe338e0f628bd61d67d81281feb4
 - SHA-256 jazz-editorial-bios.tsv: ea558fcd3a519a786d4413c4b7b6837e9a627a21012fa763e61c92ddbde1f057

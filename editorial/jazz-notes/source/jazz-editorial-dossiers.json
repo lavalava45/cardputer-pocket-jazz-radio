@@ -3989,6 +3989,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Scandinavian piano improvisation balancing standards, composition and collective interplay."
   },
+  "casey-abrams": {
+    "evidence": [
+      {
+        "claim": "Concord's May 18, 2012 announcement identifies Abrams as a classically trained upright bassist who studied jazz ensembles at Idyllwild Arts Academy.",
+        "id": "ev01",
+        "source_url": "https://concord.com/artist/casey-abrams/"
+      },
+      {
+        "claim": "Concord documents the planned June 26, 2012 release of Abrams's self-titled debut, recorded in London, including Hit the Road Jack with Haley Reinhart.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/casey-abrams-casey-abrams/"
+      },
+      {
+        "claim": "Concord credits Abrams as a featured performer on Bring the Love Back Home and Time of the Season from Haley Reinhart's What's That Sound?",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/whats-that-sound/"
+      }
+    ],
+    "key": "casey-abrams",
+    "limitations": "The 2012 debut and Reinhart's 2017 album are primarily pop and jazz crossover projects, not strictly instrumental jazz sessions. Bass playing is not attributed without individual instrumental credits.",
+    "primary_source_url": "https://concord.com/artist/casey-abrams/",
+    "summary": "Jazz-trained bassist and singer Casey Abrams recorded a 2012 Concord solo album and later sang on two tracks of Haley Reinhart's What's That Sound?",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Concord's artist and album records document Abrams's jazz training, solo recordings and specific vocal collaborations."
+  },
   "casper-reardon": {
     "evidence": [
       {
@@ -6235,6 +6260,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "She made harp a convincing lead voice in bebop and soul jazz."
   },
+  "dudley-moore": {
+    "evidence": [
+      {
+        "claim": "Cherry Red identifies Dudley Moore's trio album Today as recorded in 1971 during an Australian tour with bassist Peter Morgan and drummer Chris Karan.",
+        "id": "ev01",
+        "source_url": "https://www.cherryred.co.uk/the-dudley-moore-trio-today-cd"
+      },
+      {
+        "claim": "The label's Today track list includes Waterloo, Song for Suzy, Robin's Blues and Staircase among eight trio performances.",
+        "id": "ev02",
+        "source_url": "https://www.cherryred.co.uk/the-dudley-moore-trio-today-cd"
+      },
+      {
+        "claim": "Cherry Red's British jazz anthology Keep It Light includes the Dudley Moore Trio performances Strictly for the Birds and Duddly Dell.",
+        "id": "ev03",
+        "source_url": "https://www.cherryred.co.uk/format/keep-it-light-a-panorama-of-british-jazz-the-modernists"
+      }
+    ],
+    "key": "dudley-moore",
+    "limitations": "The reissue documents the original 1971 album but does not provide dates for each recording session. The British jazz anthology uses original track listings, not complete trio personnel.",
+    "primary_source_url": "https://www.cherryred.co.uk/the-dudley-moore-trio-today-cd",
+    "summary": "British jazz pianist Dudley Moore recorded his trio album Today during an Australian tour in 1971 with bassist Peter Morgan and drummer Chris Karan.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The label's original album history identifies Moore as jazz pianist, trio leader and composer and documents a specific touring studio project."
+  },
   "duke-robillard": {
     "evidence": [
       {
@@ -7656,6 +7706,56 @@
     "summary": "Drummer Franklin Kiermyer's 2014 quartet album Further pairs his drums with Azar Lawrence's tenor saxophone, Benito Gonzalez's piano and Juini Booth's bass.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His quartet work continues the saxophone-led spiritual and modal jazz tradition."
+  },
+  "frans-bak": {
+    "evidence": [
+      {
+        "claim": "Storyville credits Frans Bak on keyboards alongside Poul Halberg, Bo Stief, Hans Ulrik and Klaus Menzer on Santa Cruz's Roses, released May 16, 2022.",
+        "id": "ev01",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/roses"
+      },
+      {
+        "claim": "Storyville credits Bak on piano on Softer Than You Know with singer Sinne Eeg, guitarist Peter Sprague, bassist Thomas Vang and drummer Emil de Waal, released May 3, 2024.",
+        "id": "ev02",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/softer-than-you-know-2"
+      },
+      {
+        "claim": "The label credits Frans Bak as composer and Helle Hansen as lyricist for all ten songs on Softer Than You Know.",
+        "id": "ev03",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/softer-than-you-know-2"
+      }
+    ],
+    "key": "frans-bak",
+    "limitations": "The documented 2022 and 2024 dates are album release dates, not confirmed recording dates. The two albums have different personnel and styles.",
+    "primary_source_url": "https://storyvillerecords.bandcamp.com/album/softer-than-you-know-2",
+    "summary": "Danish jazz pianist Frans Bak played keyboards in Santa Cruz and recorded the vocal jazz album Softer Than You Know with Sinne Eeg.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Storyville Records gives individual instrumental, composition and ensemble credits across two independent projects."
+  },
+  "frans-elsen": {
+    "evidence": [
+      {
+        "claim": "Frans Elsen played piano with Robby Pauwels, Chris Bender and Cees See in a quartet recorded at Phonogram, Hilversum, on August 31, 1955.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/cool-jazz-from-holland-albums/55243-the-first-dutch-modern-jazz-recordings-1955-1957-2-cd-box-set.html"
+      },
+      {
+        "claim": "The 1955 quartet session appears as track 27 on disc one and tracks 1-3 on disc two of the historical anthology.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/cool-jazz-from-holland-albums/55243-the-first-dutch-modern-jazz-recordings-1955-1957-2-cd-box-set.html"
+      },
+      {
+        "claim": "On January 30, 1957 Elsen recorded a quintet with Herman Schoonderwalt, Robby Pauwels, Eddy de Has and Cees See at Phonogram's Hof van Holland Studio.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/cool-jazz-from-holland-albums/55243-the-first-dutch-modern-jazz-recordings-1955-1957-2-cd-box-set.html"
+      }
+    ],
+    "key": "frans-elsen",
+    "limitations": "The anthology contains many unrelated Dutch groups. Credits apply only to Elsen's documented quartet and quintet sessions.",
+    "primary_source_url": "https://www.freshsoundrecords.com/cool-jazz-from-holland-albums/55243-the-first-dutch-modern-jazz-recordings-1955-1957-2-cd-box-set.html",
+    "summary": "Dutch modern jazz pianist Frans Elsen led a quartet with Robby Pauwels and Cees See in 1955 and a quintet with Herman Schoonderwalt in 1957.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical Philips-era session records identify Elsen's leadership, instrument, ensemble personnel and studio dates."
   },
   "fraser-macpherson": {
     "evidence": [
@@ -9850,6 +9950,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His large ensemble reframes Argentine rhythms and jazz harmony with mirrored and inverted patterns."
   },
+  "gunnar-svensson": {
+    "evidence": [
+      {
+        "claim": "Gunnar Svensson played piano in Lars Gullin's quartet with Yngve Akerberg and Jack Noren at Radiotjanst Studio 2, Stockholm, on October 9, 1951.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/lars-gullin-albums/6364-portrait-of-the-legendary-baritone-saxophonist-complete-1951-1955-studio-recordings-4-cd-box-set.html"
+      },
+      {
+        "claim": "The Lars Gullin anthology credits Svensson on piano for October 28, 1952 octet and December 12, 1952 octet and sextet recordings.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/lars-gullin-albums/6364-portrait-of-the-legendary-baritone-saxophonist-complete-1951-1955-studio-recordings-4-cd-box-set.html"
+      },
+      {
+        "claim": "The Rita Reys reissue credits Svensson on piano with Lars Gullin, Simon Brehm and Wes Ilcken on four tracks recorded in Stockholm on March 2, 1953.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/rita-reys-albums/6264-the-cool-voice-of-rita-reys-2-cd-set.html"
+      }
+    ],
+    "key": "gunnar-svensson",
+    "limitations": "The reissues combine different Swedish ensembles. Svensson is not credited on every Lars Gullin session or Rita Reys track.",
+    "primary_source_url": "https://www.freshsoundrecords.com/lars-gullin-albums/6364-portrait-of-the-legendary-baritone-saxophonist-complete-1951-1955-studio-recordings-4-cd-box-set.html",
+    "summary": "Swedish jazz pianist Gunnar Svensson recorded with Lars Gullin in 1951-1952 and accompanied Rita Reys and Rolf Blomquist in 1953.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical Metronome session records identify Svensson's piano credits across distinct ensembles and recording dates."
+  },
   "gus-johnson": {
     "evidence": [
       {
@@ -10505,6 +10630,31 @@
     "summary": "Brazilian multi-instrumentalist Hermeto Pascoal recorded his self-titled debut in New York in 1970 with Airto Moreira, Flora Purim and Ron Carter.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The reissuing label's original session research identifies both dated recordings and the unusual instrumentation of Pascoal's early Brazilian jazz."
+  },
+  "hibari-misora": {
+    "evidence": [
+      {
+        "claim": "Nippon Columbia states that Misora's Take the A Train appeared on the B-side of the La vie en rose single released in April 1955.",
+        "id": "ev01",
+        "source_url": "https://columbia.jp/artist-info/hibari/discography/COCP-35637.html"
+      },
+      {
+        "claim": "Nippon Columbia identifies Misora's Stardust on the album Hibari Jazz wo Utau and dates its release to September 1965.",
+        "id": "ev02",
+        "source_url": "https://columbia.jp/artist-info/hibari/discography/COCP-35637.html"
+      },
+      {
+        "claim": "Columbia's archival set COCP-33254-5 documents 41 jazz and standard recordings by Misora from the 1955-1966 period, including Take the A Train and Cry Me a River.",
+        "id": "ev03",
+        "source_url": "https://columbia.jp/artist-info/hibari/discography/COCP-33254-5.html"
+      }
+    ],
+    "key": "hibari-misora",
+    "limitations": "The 1955 and 1965 dates refer to documented releases, not necessarily studio recording dates. Misora was primarily a popular-music and enka singer; these credits document her jazz-standard repertoire, not a predominantly jazz career.",
+    "primary_source_url": "https://columbia.jp/artist-info/hibari/discography/COCP-35637.html",
+    "summary": "Japanese vocalist Hibari Misora recorded the jazz standard Take the A Train for a 1955 single and issued Stardust in September 1965.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Nippon Columbia's historical release notes verify specific jazz-standard performances, original issue dates and archival collections."
   },
   "hilton-jefferson": {
     "evidence": [
@@ -13462,6 +13612,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her output crosses jazz, rock, songwriting and screen composition."
   },
+  "lin-halliday": {
+    "evidence": [
+      {
+        "claim": "The original Delmark sessionography documents Halliday on tenor sax with Ira Sullivan, Jodie Christian, Dennis Carroll and George Fludas on Delayed Exposure, recorded June 25-26, 1991.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdiscography.com/Leaders/HallidayLin-ldr.php"
+      },
+      {
+        "claim": "The same specialist archive documents Halliday's East of the Sun recording on April 22-23, 1992, with the same rhythm section and Ira Sullivan playing additional reeds and brass.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdiscography.com/Leaders/HallidayLin-ldr.php"
+      },
+      {
+        "claim": "Its Where or When entry records March 1993 sessions with Larry Gray and Robert Barry replacing the earlier bass and drum players, while warning that Halliday overdubbed later.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdiscography.com/Leaders/HallidayLin-ldr.php"
+      }
+    ],
+    "key": "lin-halliday",
+    "limitations": "East of the Sun was recorded in April 1992, whereas Delayed Exposure was recorded in June 1991. Where or When included possible later overdubs: no asserted track-by-track date for Halliday's overdubs.",
+    "primary_source_url": "https://www.jazzdiscography.com/Leaders/HallidayLin-ldr.php",
+    "summary": "Chicago tenor saxophonist Lin Halliday led Delmark's Delayed Exposure in 1991 and recorded East of the Sun and Where or When with Ira Sullivan.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Independent specialist original session research preserves precise 1991-93 Delmark recording dates and changing bass and drum partners."
+  },
   "lionel-ferbos": {
     "evidence": [
       {
@@ -14997,6 +15172,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Shows how prewar jazz repertoire overlaps American folk and song traditions."
   },
+  "matthias-schubert": {
+    "evidence": [
+      {
+        "claim": "LOFT Cologne documents Schubert on tenor sax with pianist Simon Nabatov, bassist Mark Dresser and drummer Tom Rainey for the 1994 Enja album Blue and Grey Suite.",
+        "id": "ev01",
+        "source_url": "https://www.loftkoeln.de/en/category/recording-archive/"
+      },
+      {
+        "claim": "The LOFT recording archive separately credits tenor saxophonist Matthias Schubert and pianist Simon Nabatov on Descriptions, issued on Leo Records in December 2013.",
+        "id": "ev02",
+        "source_url": "https://www.loftkoeln.de/en/category/recording-archive/"
+      },
+      {
+        "claim": "The official Roder-Griener trio site identifies Schubert on tenor sax on the August 25, 2021 live recording IL BIS at Sowieso, Berlin, with Jan Roder and Michael Griener.",
+        "id": "ev03",
+        "source_url": "https://www.grienerroder.net/"
+      }
+    ],
+    "key": "matthias-schubert",
+    "limitations": "LOFT's archival index labels album release years; it does not necessarily state session days. Schubert's 2021 concert should not be confused with the 2013 duo album.",
+    "primary_source_url": "https://www.loftkoeln.de/en/category/recording-archive/",
+    "summary": "German tenor saxophonist Matthias Schubert led a 1994 quartet on Blue and Grey Suite and recorded the 2013 duo Descriptions with Simon Nabatov.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The originating LOFT Cologne recording archive supplies separate dated releases and specific ensemble personnel; the performers' concert archive independently names a 2021 trio."
+  },
   "matthieu-michel": {
     "evidence": [
       {
@@ -15276,6 +15476,31 @@
     "summary": "Bassist Michael Bisio recorded the drummerless SKM trio album Three with tenor saxophonist Stephen Gauci and pianist Kris Davis in 2008.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His bowed and plucked bass approaches sustain the open trio's free interplay."
+  },
+  "michael-cochrane": {
+    "evidence": [
+      {
+        "claim": "CAM Jazz's Soul Note catalog credits Michael Cochrane on piano with bassist Marcus McLaurine and drummer Alan Nelson on Song Of Change, listing original catalog 121251-2 and 1993.",
+        "id": "ev01",
+        "source_url": "https://www.camjazz.com/labels/soul-note/michael-cochrane/8024709085320-song-of-change-cd.html"
+      },
+      {
+        "claim": "The composer's sheet-music publisher gives the September 23-24, 1985 Elements recording with Cochrane on piano, Tom Harrell on trumpet, Bob Malach on tenor, Dennis Irwin on bass and Jimmy Madison on drums.",
+        "id": "ev02",
+        "source_url": "https://jazzleadsheets.com/bright-samba.html"
+      },
+      {
+        "claim": "Second Floor Music identifies Cochrane's Proof Of The Pudding as another original composition recorded on the 1985 Elements quintet sessions, with contrasting A-minor and A-major sections.",
+        "id": "ev03",
+        "source_url": "https://jazzleadsheets.com/proof-of-the-pudding.html"
+      }
+    ],
+    "key": "michael-cochrane",
+    "limitations": "Elements was recorded September 1985 but issued in 1986; Soul Note's current digital catalogue may show later reissue dates. Composer credits do not prove he solos on every track.",
+    "primary_source_url": "https://www.camjazz.com/labels/soul-note/michael-cochrane/8024709085320-song-of-change-cd.html",
+    "summary": "Pianist Michael Cochrane led the 1985 Soul Note quintet Elements with Tom Harrell and returned in 1993 with the trio album Song of Change.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Soul Note label inventory and the composer's own music publisher document two distinctive ensembles and dated original works."
   },
   "michael-gregory-jackson": {
     "evidence": [
@@ -17134,6 +17359,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original Riverside and Fresh Sound-derived reissue notes explicitly identify Travis on distinct small-group and big-band recordings."
   },
+  "nick-webb": {
+    "evidence": [
+      {
+        "claim": "Concord's original Roseland label notes identify steel-string guitarist Nick Webb as Acoustic Alchemy's co-founder and say Miles Gilderdale joined after Webb's death in early 1998.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/roseland/"
+      },
+      {
+        "claim": "GRP Records' licensed Red Dust and Spanish Lace track catalog lists Nick Webb and Greg Carmichael as composers of Mr. Chow and dates its original recording to 1987 at Hansa-Haus Studios in Bonn.",
+        "id": "ev02",
+        "source_url": "https://www.prestomusic.com/jazz/products/8540713--red-dust-spanish-lace"
+      },
+      {
+        "claim": "The original GRP/Universal recording rights catalog credits Nick Webb and Greg Carmichael as songwriters of 1987 performances Mr. Chow and Red Dust and Spanish Lace, distinct from the year of the later anthology.",
+        "id": "ev03",
+        "source_url": "https://www.qobuz.com/us-en/album/the-very-best-of-acoustic-alchemy-acoustic-alchemy/0073145892382"
+      }
+    ],
+    "key": "nick-webb",
+    "limitations": "The 2007 GRP download is a later reissue of the 1987 original, not a new performance; original 1987 dates are supplied separately by the licensed track catalog. The original musician's death preceded 1998, but no claims about his playing on Positive Thinking are asserted. The unofficial Acoustic Alchemy fan site was excluded from the accepted claims.",
+    "primary_source_url": "https://concord.com/concord-albums/roseland/",
+    "summary": "Steel-string guitarist Nick Webb co-founded Acoustic Alchemy and recorded Red Dust and Spanish Lace in 1987 with guitarist Greg Carmichael.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Concord's original band history independently corroborates the founding role; the surviving group's documentary fan archive reconstructs original MCA session personnel."
+  },
   "nicole-mitchell": {
     "evidence": [
       {
@@ -18556,6 +18806,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Preserves documented jazz recording or instrumental context for this named performer."
   },
+  "pino-presti": {
+    "evidence": [
+      {
+        "claim": "The artist's original biography credits Presti as bassist on Astor Piazzolla's Libertango and identifies the bassline as his contribution to the original recording.",
+        "id": "ev01",
+        "source_url": "https://pinopresti.it/"
+      },
+      {
+        "claim": "The original artist history identifies Presti's Atlantic Records 1st Round album as a production he released in 1976, with a separate digital remaster distributed in November 2024.",
+        "id": "ev02",
+        "source_url": "https://pinopresti.it/"
+      },
+      {
+        "claim": "The artist's discography specifies that the January 13, 2026 Libertango 1974 single reproduces a version originally recorded in Milan in 1974.",
+        "id": "ev03",
+        "source_url": "https://pinopresti.it/"
+      }
+    ],
+    "key": "pino-presti",
+    "limitations": "The 2024 remaster of 1st Round is not a newly recorded album, and the 2026 Libertango single reissues a Milan 1974 performance. The page documents his bass role, not a separate instrumental solo.",
+    "primary_source_url": "https://pinopresti.it/",
+    "summary": "Italian bassist and arranger Pino Presti played on the 1974 Libertango sessions with Astor Piazzolla and produced Atlantic's funk-jazz LP 1st Round in 1976.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The musician's own estate-maintained career site identifies both distinctive original projects and explicitly distinguishes 1974 recording from a 2026 digital single."
+  },
   "pops-foster": {
     "evidence": [
       {
@@ -18788,6 +19063,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Explores jazz-classical fusion and improvisational music education."
   },
+  "randy-brooks": {
+    "evidence": [
+      {
+        "claim": "A specialist physical-record listing of Randy Brooks and His Orchestra's Decca Swing & Bop identifies him on trumpet with George Bardone, Earnie Englund and other named band musicians, in its April 12, 1946 session grouping.",
+        "id": "ev01",
+        "source_url": "https://jazzshiryokan.net/jazzDB/disc_detail.php?recordID=R4459"
+      },
+      {
+        "claim": "The Shedd Institute's historic original-disc index lists Randy Brooks and His Orchestra on Decca master 73500, dated March 22, 1946, issue 29479.",
+        "id": "ev02",
+        "source_url": "https://theshedd.org/divp/series.aspx?artwork=1391&event=6911&rec=3&series=718"
+      },
+      {
+        "claim": "The independent Fresh Sound original Vik/Riverside album reconstruction documents John Benson Brooks writing arrangements for Randy Brooks's swing orchestra in the 1940s.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/john-benson-brooks-albums/6611-fol-jazz-usa-alabama-concerto-2-lp-on-1-cd.html"
+      }
+    ],
+    "key": "randy-brooks",
+    "limitations": "The 1946 Decca matrices belong to the named band, not proof that Randy soloed on every listed track. The Fresh Sound Thornhill anthology has collective personnel and is not used to infer specific track participation.",
+    "primary_source_url": "https://jazzshiryokan.net/jazzDB/disc_detail.php?recordID=R4459",
+    "summary": "Trumpeter and bandleader Randy Brooks led a Decca swing orchestra documented on several 1946 discs and employed arranger John Benson Brooks.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Physical Decca orchestra credits and a detailed reissue's label history document an identifiable 1946 band and its arrangement work."
+  },
   "randy-crawford": {
     "evidence": [
       {
@@ -18907,6 +19207,31 @@
     "summary": "Arranger Ray Conniff played trombone with Bunny Berigan and Bob Crosby before creating wordless vocal-orchestral recordings for Columbia in the 1950s.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His arranging practices transformed swing-band experience into orchestral pop."
+  },
+  "ray-foxley": {
+    "evidence": [
+      {
+        "claim": "Ray Foxley's own biography from the June 14, 1947 Jazz at Birmingham Town Hall original concert program identifies his early piano training and initial study of Cow-Cow Boogie.",
+        "id": "ev01",
+        "source_url": "https://www.sandybrownjazz.co.uk/JazzRemembered/RayFoxley.html"
+      },
+      {
+        "claim": "The historical concert archive identifies Foxley performing with the Original Levee Ramblers and playing Deadman Blues on the BBC Jazz Club recording.",
+        "id": "ev02",
+        "source_url": "https://www.sandybrownjazz.co.uk/JazzRemembered/RayFoxley.html"
+      },
+      {
+        "claim": "A photographed Jeton 1003301 physical LP catalog records Ray Foxley playing solo Steinway piano on Prof. Foxley's Sporting House Music, direct-to-disc sessions March 21 and 22, 1979.",
+        "id": "ev03",
+        "source_url": "https://www.musik-sammler.de/release/ray-foxley-prof-foxleys-sporting-house-music-lp-447858/"
+      }
+    ],
+    "key": "ray-foxley",
+    "limitations": "The artist autobiography is preserved as a reproduction of original 1947 program notes. The Jeton LP cover labels sessions March 21-22, 1979 and should not be confused with a 1951 Riverside recording.",
+    "primary_source_url": "https://www.sandybrownjazz.co.uk/JazzRemembered/RayFoxley.html",
+    "summary": "British ragtime pianist Ray Foxley wrote his own 1947 Birmingham concert biography and recorded solo piano on a 1979 Jeton direct-to-disc LP.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A contemporary artist-authored concert program and a collector's original physical LP documentation confirm two separate, personally attributable performances."
   },
   "ray-lema": {
     "evidence": [
@@ -22113,6 +22438,45 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her percussive solo approach connects folk, jazz and world-music guitar."
   },
+  "victor-conte": {
+    "evidence": [
+      {
+        "claim": "Tower of Power's official discography names Victor Conte as the bassist on its original 1978 We Came to Play! album.",
+        "id": "ev01",
+        "source_url": "https://www.towerofpower.com/discography/we-came-to-play/"
+      },
+      {
+        "claim": "Sony Music's licensed 1978 recording credits identify Victor Conte playing bass and V. Conte among composers on Let Me Touch You from We Came to Play!.",
+        "id": "ev02",
+        "source_url": "https://www.qobuz.com/us-en/album/we-came-to-play-tower-of-power/0074643490627"
+      },
+      {
+        "claim": "The same 1978 original Sony catalog identifies Conte as bassist and co-composer of Love Bug, sung by drummer Ronnie Beck.",
+        "id": "ev03",
+        "source_url": "https://www.qobuz.com/us-en/album/we-came-to-play-tower-of-power/0074643490627"
+      },
+      {
+        "claim": "In a first-person career interview, Victor Conte recalls performing bass with Tower of Power in the 1970s and later working with Herbie Hancock in the early 1980s.",
+        "id": "ev04",
+        "source_url": "https://www.weikfitness.com/interview-balco-founder-victor-conte/"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://www.towerofpower.com/discography/we-came-to-play/",
+        "https://www.qobuz.com/us-en/album/we-came-to-play-tower-of-power/0074643490627",
+        "https://www.weikfitness.com/interview-balco-founder-victor-conte/"
+      ],
+      "method": "Compared Tower of Power's own original 1978 line-up and Sony track-level rights credits with a first-person interview of bassist Victor Conte.",
+      "note": "The Tower of Power original lineup names Victor Conte on bass for We Came to Play, licensed Sony music credits separately identify the bassist and co-writer on two pieces, and Victor Conte's own interview recalls his 1970s Tower of Power bass work. They refer to the same person, distinct from other musicians with overlapping names; the evidence database has missing_p434 rather than a reciprocal MBID. No unverified MBID was arbitrarily selected."
+    },
+    "key": "victor-conte",
+    "limitations": "This is the Victor Conte of Tower of Power, not an unrelated bassist: the band's named personnel and his own first-person interview connect the identities. The record is funk and R&B, not an original jazz band session.",
+    "primary_source_url": "https://www.towerofpower.com/discography/we-came-to-play/",
+    "summary": "Bassist Victor Conte performed on Tower of Power's 1978 Columbia album We Came to Play! and co-wrote Let Me Touch You and Love Bug.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The band's own discography and Sony's licensed original track credits identify two titles with Conte as both bassist and co-writer."
+  },
   "victor-goines": {
     "evidence": [
       {
@@ -22202,6 +22566,36 @@
     "summary": "French horn player Vincent Chancey joined Lester Bowie's nine-piece Brass Fantasy for Avant Pop, recorded at Tonstudio Bauer in March 1986.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His French horn widens the brass ensemble's register and contrapuntal color."
+  },
+  "vincent-klink": {
+    "evidence": [
+      {
+        "claim": "Original dml-records artist shop credits Vincent Klink on bass trumpet with Patrick Bebelaar on piano, Michel Godard, Gavino Murgia and Carlo Rizzo for Stupor Mundi, catalog CD 034, year 2014.",
+        "id": "ev01",
+        "source_url": "https://holvi.com/shop/dml-records/products/"
+      },
+      {
+        "claim": "Patrick Bebelaar's own discography lists the 2014 Stupor Mundi instrumental lineup, including Vincent Klink playing bass trumpet.",
+        "id": "ev02",
+        "source_url": "https://bebelaar.de/discographie/"
+      },
+      {
+        "claim": "Bayerischer Rundfunk's July 29, 2016 broadcast page identifies Klink as a bass-trumpet player whose jazz performances it recorded for a radio feature.",
+        "id": "ev03",
+        "source_url": "https://www.br-klassik.de/themen/jazz-und-weltmusik/vincent-klink-jazztime-100.html"
+      },
+      {
+        "claim": "The German Record Critics Award's original 2015/1 list awards Stupor Mundi with named performers Klink, Bebelaar, Godard, Murgia and Rizzo on DML Records 033.",
+        "id": "ev04",
+        "source_url": "https://www.schallplattenkritik.de/bestenlisten/2015/01"
+      }
+    ],
+    "key": "vincent-klink",
+    "limitations": "Stupor Mundi was recorded and copyrighted in 2014, while several download retailers give later digital release dates; the 2015 award pertains to the project, not a separate performance.",
+    "primary_source_url": "https://holvi.com/shop/dml-records/products/",
+    "summary": "German bass-trumpeter Vincent Klink joined Patrick Bebelaar's Stupor Mundi project, recorded in 2014, and appeared on Bavarian Radio jazz programming in 2016.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original dml-records project, Bebelaar's musician discography and Bavarian public radio independently establish Klink as an actual performing musician."
   },
   "vinnie-burke": {
     "evidence": [
@@ -22932,6 +23326,39 @@
     "summary": "Korean pianist and singer-songwriter Younha debuted in Japan in 2004. Her 2021 album End Theory includes Oort Cloud; Growth Theory followed in 2024.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her pop and rock catalog adds stylistic range beyond mainstream jazz."
+  },
+  "yuri-yaremchuk": {
+    "evidence": [
+      {
+        "claim": "Drummer Klaus Kugel's original discography credits Yuri Yaremchuk with soprano and tenor saxophones, clarinet and bass clarinet on YATOKU with Mark Tokar and Kugel, recorded in Krakow in 2006 and released by NotTwo in 2007.",
+        "id": "ev01",
+        "source_url": "https://www.klauskugel.com/discography/"
+      },
+      {
+        "claim": "Zeromoon Records' original Live at Improvdom credits Yuri Yaremchuk on soprano saxophone and bass clarinet alongside Alexei Borisov's live electronics and voice.",
+        "id": "ev02",
+        "source_url": "https://zeromoon.bandcamp.com/album/live-at-improvdom"
+      },
+      {
+        "claim": "The Zeromoon label dates the duo's concert at Moscow's Club Club to December 23, 2025 and the album's issue to January 11, 2026.",
+        "id": "ev03",
+        "source_url": "https://zeromoon.bandcamp.com/album/live-at-improvdom"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://www.klauskugel.com/discography/",
+        "https://zeromoon.bandcamp.com/album/live-at-improvdom"
+      ],
+      "method": "Crossmatched the original Klaus Kugel musician discography with the named performer and instrumentation in the Zeromoon label's later original concert recording.",
+      "note": "Both original recording sources identify improvising saxophonist and bass-clarinetist Yuri Yaremchuk: on YATOKU with Mark Tokar and Klaus Kugel in 2006, and later on an original live electronic-improvisation duo release with Alexei Borisov. The queue records missing_p434, not reciprocal MusicBrainz identity; no MBID was guessed or selected, and no identifier was used as historical biographical proof."
+    },
+    "key": "yuri-yaremchuk",
+    "limitations": "The 2006 YATOKU date denotes recording in Krakow and 2007 the NotTwo release; the Borisov concert was December 2025 and Zeromoon released the recording in January 2026.",
+    "primary_source_url": "https://www.klauskugel.com/discography/",
+    "summary": "Ukrainian saxophonist Yuri Yaremchuk recorded YATOKU with Mark Tokar and Klaus Kugel in 2006 and a 2025 duo performance with Alexei Borisov.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two performers' original recordings independently identify Yaremchuk, his woodwinds, collaborating musicians and specific sessions separated by nineteen years."
   },
   "zach-brock": {
     "evidence": [
