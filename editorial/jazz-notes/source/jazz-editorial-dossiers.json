@@ -1,4 +1,29 @@
 {
+  "aage-tanggaard": {
+    "evidence": [
+      {
+        "claim": "Storyville credits Aage Tanggaard on drums with Warne Marsh, Kenny Drew and Bo Stief for I Got A Good One For You, recorded April 21, 1980.",
+        "id": "ev01",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/i-got-a-good-one-for-you"
+      },
+      {
+        "claim": "Storyville's Still Fiddling credits Tanggaard on drums with Svend Asmussen, Jacob Fischer and Jesper Lundgaard, recorded in June and November 1999.",
+        "id": "ev02",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/still-fiddling"
+      },
+      {
+        "claim": "Storyville credits Aage Tanggaard on drums in the ensemble on Shoehorn Shuffle, released February 11, 2022; its listed personnel include trumpeter Marten Lundgren.",
+        "id": "ev03",
+        "source_url": "https://storyvillerecords.bandcamp.com/album/shoehorn-shuffle"
+      }
+    ],
+    "key": "aage-tanggaard",
+    "limitations": "The Warne Marsh performance was recorded in 1980 and released in 1999. The Asmussen recordings were made in 1999 and released in 2002. The exact names of the Shoehorn Shuffle players with diacritics are preserved in the original Storyville personnel list.",
+    "primary_source_url": "https://storyvillerecords.bandcamp.com/album/i-got-a-good-one-for-you",
+    "summary": "Danish jazz drummer Aage Tanggaard recorded with Warne Marsh and Kenny Drew in 1980 and with Svend Asmussen's quartet in 1999.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Storyville's label documentation confirms Tanggaard's individual drum credits in distinct ensembles across different decades."
+  },
   "aaron-bell": {
     "evidence": [
       {
@@ -359,6 +384,31 @@
     "summary": "Vocalist Al Jarreau won the 1982 Grammy for jazz vocal Blue Rondo a la Turk and also won pop vocal honors for Breakin Away.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Distinct 1982 Grammy jazz and pop award categories document his stylistic range without flattening the music into one genre."
+  },
+  "al-killian": {
+    "evidence": [
+      {
+        "claim": "Al Killian is credited on trumpet for tracks 6-8 of Earle Spencer's Black & White recordings, made at Radio Recorders in Hollywood on September 5, 1946.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/earle-spencer-albums/2121-the-complete-black-white-recordings-1946-1949-2-cd-set.html"
+      },
+      {
+        "claim": "Killian is also credited on trumpet for tracks 9-12 from another personnel group recorded at Radio Recorders on September 5, 1946.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/earle-spencer-albums/2121-the-complete-black-white-recordings-1946-1949-2-cd-set.html"
+      },
+      {
+        "claim": "The October 19, 1946 Hollywood session credits Killian with trumpeters Frank Beach, Bob Fowler, Dick Binns and Mike Bryan.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/earle-spencer-albums/2121-the-complete-black-white-recordings-1946-1949-2-cd-set.html"
+      }
+    ],
+    "key": "al-killian",
+    "limitations": "The anthology spans 1946-1949, but Killian's confirmed credits here concern the 1946 sessions. Later personnel cannot automatically be attributed to him.",
+    "primary_source_url": "https://www.freshsoundrecords.com/earle-spencer-albums/2121-the-complete-black-white-recordings-1946-1949-2-cd-set.html",
+    "summary": "Jazz trumpeter Al Killian recorded with Earle Spencer's progressive big band in Hollywood in September and October 1946.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical Black & White session documentation identifies Killian's trumpet credits and specific recording dates."
   },
   "al-lucas": {
     "evidence": [
@@ -2809,6 +2859,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Swing saxophone arranging and performance leading into bebop."
   },
+  "buddy-banks": {
+    "evidence": [
+      {
+        "claim": "Buddy Banks played bass in Guy Lafitte's ensemble with Geo Daly, Andre Persiany and Jacques David, recorded in Paris on June 1, 1954.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/guy-lafitte-albums/6704-with-his-quartette-his-quintette-feat-geo-daly.html"
+      },
+      {
+        "claim": "Banks led a Jazz de Chambre trio and quartet session with Jimmy Gourley and Bob Dorough at Geneix Studio in Paris on October 28, 1954.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/jimmy-gourley-albums/53981-the-cool-guitar-of-jimmy-gourley-quartet-trio-sessions-1953-1961.html"
+      },
+      {
+        "claim": "The Jazz de Chambre reissue credits drummer Roy Haynes on tracks 10, 12, 14 and 16.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/jimmy-gourley-albums/53981-the-cool-guitar-of-jimmy-gourley-quartet-trio-sessions-1953-1961.html"
+      }
+    ],
+    "key": "buddy-banks",
+    "limitations": "The Guy Lafitte and Jazz de Chambre recordings are separate projects. Roy Haynes is credited only on specified quartet tracks.",
+    "primary_source_url": "https://www.freshsoundrecords.com/jimmy-gourley-albums/53981-the-cool-guitar-of-jimmy-gourley-quartet-trio-sessions-1953-1961.html",
+    "summary": "Jazz bassist Buddy Banks recorded with Guy Lafitte in Paris in June 1954 and led his own Jazz de Chambre quartet with guitarist Jimmy Gourley.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical French recording credits document Banks as both bassist and leader in distinct Paris ensembles."
+  },
   "buddy-bregman": {
     "evidence": [
       {
@@ -5081,6 +5156,31 @@
     "summary": "French jazz pianist and arranger Christian Chevallier led 1950s small groups and orchestrated Kenny Clarke's 1957 Paris studio recordings.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original Philips/Columbia session personnel and reissue dates document Chevallier's roles as player and arranger on distinct Paris projects."
+  },
+  "christian-garros": {
+    "evidence": [
+      {
+        "claim": "Christian Garros played drums in Roger Guerin's quartet with Martial Solal and Pierre Michelot, recorded in Paris in July 1956.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/roger-guerin-albums/6630-le-formidable-roger-guerin-paris-meetings.html"
+      },
+      {
+        "claim": "Garros played drums on Christian Chevallier's quartet Columbia EP session of November 13, 1956 with Roger Guerin and Pierre Michelot.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/roger-guerin-albums/6630-le-formidable-roger-guerin-paris-meetings.html"
+      },
+      {
+        "claim": "A December 12, 1958 Paris session credits Garros with Roger Guerin, Benny Golson, Bobby Timmons and Pierre Michelot.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/roger-guerin-albums/6630-le-formidable-roger-guerin-paris-meetings.html"
+      }
+    ],
+    "key": "christian-garros",
+    "limitations": "The reissue combines separate sessions. Garros is not credited on the James Moody or Jimmy Raney tracks.",
+    "primary_source_url": "https://www.freshsoundrecords.com/roger-guerin-albums/6630-le-formidable-roger-guerin-paris-meetings.html",
+    "summary": "French jazz drummer Christian Garros recorded with Roger Guerin, Christian Chevallier and Benny Golson in Paris sessions during 1956-1958.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical Versailles and Columbia EP credits identify Garros in several distinct French modern-jazz ensembles."
   },
   "christian-kellens": {
     "evidence": [
@@ -8462,6 +8562,31 @@
     "summary": "Jazz-fusion keyboardist George Duke recorded The Inner Source for MPS in 1971 and released DreamWeaver on Heads Up in 2013 with Stanley Clarke and Christian McBride.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "An original fusion-label discography and Duke's later record label independently establish named musician credits, the recording/reissue timeline and a later collaborative ensemble."
+  },
+  "george-e-lee": {
+    "evidence": [
+      {
+        "claim": "Fremeaux identifies George E. Lee as tenor saxophonist and leader on Meritt Stomp, original Meritt 2206, recorded in Kansas City in 1927.",
+        "id": "ev01",
+        "source_url": "https://www.fremeaux.com/en/2584-kansas-city-jazz-3561302509525-fa5095.html"
+      },
+      {
+        "claim": "The Meritt Stomp session personnel include Sam Utterbach on trumpet, Thurston Maupins on trombone, Clarence Taylor on saxophone and Jesse Stone on piano.",
+        "id": "ev02",
+        "source_url": "https://www.fremeaux.com/en/2584-kansas-city-jazz-3561302509525-fa5095.html"
+      },
+      {
+        "claim": "Fremeaux documents Lee's 1929 Brunswick recordings and identifies Paseo Street and Ruff Scufflin' as performances by his expanded orchestra.",
+        "id": "ev03",
+        "source_url": "https://www.fremeaux.com/en/2584-kansas-city-jazz-3561302509525-fa5095.html"
+      }
+    ],
+    "key": "george-e-lee",
+    "limitations": "The original Meritt recordings have poor sound quality. The 1927 and 1929 ensembles differ, and individual saxophone solos cannot be attributed without further evidence.",
+    "primary_source_url": "https://www.fremeaux.com/en/2584-kansas-city-jazz-3561302509525-fa5095.html",
+    "summary": "Kansas City saxophonist and bandleader George E. Lee led the Novelty Singing Orchestra on Meritt recordings in 1927 and Brunswick sides in 1929.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Historical Fremeaux recording documentation identifies Lee as tenor saxophonist and leader, with original Meritt and Brunswick record references."
   },
   "george-freeman": {
     "evidence": [
@@ -12039,6 +12164,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The Smithsonian Folkways archive documents his work as both a band member and a named leader in original early-jazz recording reissues."
   },
+  "johnny-scott": {
+    "evidence": [
+      {
+        "claim": "The Museum of Canadian Music catalogs Johnny Scott's 1986 jazz LP From Now On on JazzCo JC 101, identifying the nine-song repertoire including Just in Time, Mean to Me and Just Friends.",
+        "id": "ev01",
+        "source_url": "https://www.citizenfreak.com/titles/299719-johnny-scott-from-now-on"
+      },
+      {
+        "claim": "The museum's original sleeve notes list Johnny Scott on vocals with Geoffrey Lapp on piano, Camil Belisle on drums, Ron Seguin on bass and Janis Steprans on saxophone.",
+        "id": "ev02",
+        "source_url": "https://www.citizenfreak.com/titles/299719-johnny-scott-from-now-on"
+      },
+      {
+        "claim": "The museum's account identifies Scott's subsequent 1990 Contrasts production with Montreal musicians Geoff Lapp, bassist George Mitchel and drummer David Lang.",
+        "id": "ev03",
+        "source_url": "https://www.citizenfreak.com/titles/299719-johnny-scott-from-now-on"
+      }
+    ],
+    "key": "johnny-scott",
+    "limitations": "The museum reproduces historical sleeve notes for one original LP and references the following album; the latter's studio recording date is not supplied. John Kerningham Sidney Scott is distinguished from namesake film and pop composers.",
+    "primary_source_url": "https://www.citizenfreak.com/titles/299719-johnny-scott-from-now-on",
+    "summary": "Buffalo-born jazz singer and tenor saxophonist Johnny Scott recorded From Now On in Montreal and followed it with the 1990 album Contrasts.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Museum of Canadian Music preserves an original JazzCo sleeve, named player credits, track list, label catalog and the later Contrasts personnel."
+  },
   "joki-freund": {
     "evidence": [
       {
@@ -13604,6 +13754,36 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His keyboard language combines jazz improvisation with go-go, raga and electronic influences."
   },
+  "marc-edwards": {
+    "evidence": [
+      {
+        "claim": "AUM Fidelity identifies Marc Edwards on drums in the Apogee trio with David S. Ware and Cooper-Moore, recorded at C.I. Recording in New York on April 14-15, 1977.",
+        "id": "ev01",
+        "source_url": "https://aumfidelity.com/collections/aum-fidelity/products/david-s-ware-apogee-birth-of-a-being-expanded"
+      },
+      {
+        "claim": "AUM Fidelity documents the 1977 Apogee recordings as originally issued in 1979 by hatHut, with additional unreleased takes recovered from analog masters for the expanded edition.",
+        "id": "ev02",
+        "source_url": "https://aumfidelity.com/collections/aum-fidelity/products/david-s-ware-apogee-birth-of-a-being-expanded"
+      },
+      {
+        "claim": "Ayler Records credits Edwards on drums with pianist Jeffrey Hayden Shurdut and guitarists Tor Snyder and Ernest Anderson III on Ode to a Dying Planet, recorded October 20, 2007 at Michiko's Rehearsal Studios, New York.",
+        "id": "ev03",
+        "source_url": "https://ayler-records.bandcamp.com/album/ode-to-a-dying-planet"
+      },
+      {
+        "claim": "Ayler credits Edwards alone for the title composition; the two other pieces are collective compositions by Edwards, Shurdut, Snyder and Anderson.",
+        "id": "ev04",
+        "source_url": "https://ayler-records.bandcamp.com/album/ode-to-a-dying-planet"
+      }
+    ],
+    "key": "marc-edwards",
+    "limitations": "The Apogee album was originally issued in 1979, while the AUM expanded reissue appeared later; Ode to a Dying Planet was recorded in 2007 and released in 2008.",
+    "primary_source_url": "https://aumfidelity.com/collections/aum-fidelity/products/david-s-ware-apogee-birth-of-a-being-expanded",
+    "summary": "Free-jazz drummer Marc Edwards recorded with David S. Ware's Apogee trio in 1977 and led Slipstream Time Travel's Ode to a Dying Planet in 2007.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "AUM Fidelity's archival master-tape reissue and Ayler Records' artist-authored original release notes give two independent, dated performances and exact personnel."
+  },
   "marc-ribot": {
     "evidence": [
       {
@@ -13663,6 +13843,31 @@
     "summary": "French jazz accordionist Marcel Loeffler grew up in a musical Manouche family and played dances with his guitarist father from childhood, drawing on jazz and swing.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Shows accordion within French Manouche and swing traditions."
+  },
+  "marcel-zanini": {
+    "evidence": [
+      {
+        "claim": "Fremeaux's Saint-Germain-des-Pres reissue dates three numbered selections to Paris on January 7, 1980 and credits Zanini with pianist Marc Hemmeler, drummer Sam Woodyard and a horn section.",
+        "id": "ev01",
+        "source_url": "https://www.fremeaux.com/en/3347-saint-germain-des-pres-patchwork-3448960247924-fa479.html"
+      },
+      {
+        "claim": "The same Fremeaux archival notes date another set to Paris on March 30, 1989, listing Zanini with pianist Philippe Milanta, bassist Pascal Chebel and drummer Michel Denis.",
+        "id": "ev02",
+        "source_url": "https://www.fremeaux.com/en/3347-saint-germain-des-pres-patchwork-3448960247924-fa479.html"
+      },
+      {
+        "claim": "Fremeaux's 2008 edition of Tu veux ou tu veux pas? explicitly describes a newly produced album recorded in 2007 that includes the title song, Kelbokuta and Un Scotch, un Bourbon, une Biere.",
+        "id": "ev03",
+        "source_url": "https://www.fremeaux.com/en/3355-tu-veux-ou-tu-veux-pas-nouvel-enregistrement-2008-3448960249423-fa494.html"
+      }
+    ],
+    "key": "marcel-zanini",
+    "limitations": "The Saint-Germain-des-Pres release is a retrospective compilation from different sessions. The Tu veux ou tu veux pas? edition is a 2008 issue of a 2007 recording, not the 1969 hit master.",
+    "primary_source_url": "https://www.fremeaux.com/en/3347-saint-germain-des-pres-patchwork-3448960247924-fa479.html",
+    "summary": "French jazz clarinetist and tenor saxophonist Marcel Zanini recorded with Sam Woodyard in Paris in 1980 and a later small group in March 1989.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Fr\u00e9meaux's original-archive reissues identify two separately dated groups, instrumental personnel and the label's own studio recordings."
   },
   "marcin-wasilewski": {
     "evidence": [
@@ -14658,6 +14863,26 @@
     "summary": "Swiss flugelhornist Matthieu Michel recorded Elina Duni's Lost Ships in February 2020 with Rob Luft and Fred Thomas, blending folk songs and jazz ballads.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His flugelhorn offers a quiet melodic countervoice to Duni's singing and Luft's guitar."
+  },
+  "matty-malneck": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Folkways credits Matty Malneck on violin in Frank Trumbauer and His Orchestra's Mississippi Mud, alongside Bix Beiderbecke, Bing Crosby and Min Leibrook.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/frank-trumbauer-and-his-orchestra/mississippi-mud/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "The Library of Congress moving-image finding aid documents Matty Malneck and His Orchestra as a 1940 Vitaphone motion-picture item, copyright registration MP 10461.",
+        "id": "ev02",
+        "source_url": "https://findingaids.loc.gov/repositories/5/archival_objects/478837"
+      }
+    ],
+    "key": "matty-malneck",
+    "limitations": "The Folkways 1953 anthology date is a reissue year, not the original recording date. The Library of Congress preserves a film copyright description, not proof that the film's score was recorded in 1940.",
+    "primary_source_url": "https://folkways.si.edu/frank-trumbauer-and-his-orchestra/mississippi-mud/jazz-ragtime/music/track/smithsonian",
+    "summary": "Jazz violinist Matty Malneck played on Frank Trumbauer's Mississippi Mud with Bix Beiderbecke and led an orchestra filmed by Vitaphone in 1940.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian's original personnel credits and the Library of Congress' 1940 Vitaphone registration establish a recorded instrumental role and a distinct orchestra-leading event."
   },
   "maurice-vander": {
     "evidence": [
@@ -17736,6 +17961,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His big-band era singing became a prominent pop standard, adjacent to vocal jazz."
   },
+  "pete-briggs": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Folkways' Keyhole Blues track credits Pete Briggs on tuba in Louis Armstrong's Hot Seven with Johnny Dodds, Johnny St. Cyr, Lillian Hardin Armstrong and Baby Dodds.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/louis-armstrong-his-hot-seven/keyhole-blues/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Jazz Education Network's original instructional notes identify Briggs on tuba for Potato Head Blues, recorded in 1927 and originally issued as Okeh 8503.",
+        "id": "ev02",
+        "source_url": "https://jazzednet.org/tradjazz/content/track--6.html"
+      },
+      {
+        "claim": "The same educational source identifies the cornet, clarinet, trombone, piano, banjo and drum performers surrounding Briggs on Potato Head Blues and analyzes the instrumental solos separately.",
+        "id": "ev03",
+        "source_url": "https://jazzednet.org/tradjazz/content/track--6.html"
+      }
+    ],
+    "key": "pete-briggs",
+    "limitations": "Smithsonian's anthology years 1950 and 2011 are reissue years. Its broad West End Blues anthology personnel mix may span different Hot Five/Seven groups, so no Pete Briggs credit is inferred for that track.",
+    "primary_source_url": "https://folkways.si.edu/louis-armstrong-his-hot-seven/keyhole-blues/jazz-ragtime/music/track/smithsonian",
+    "summary": "Jazz tubist Pete Briggs played with Louis Armstrong's Hot Seven on the 1927 recordings Potato Head Blues and Keyhole Blues, supporting its early rhythm section.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian original recording performer credits and Jazz Education Network's score notes establish track-specific tuba contributions and distinguish 1927 sessions from later anthology issue dates."
+  },
   "pete-candoli": {
     "evidence": [
       {
@@ -19387,6 +19637,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His blues-rooted bop solos shaped crucial Mingus small-group recordings."
   },
+  "shinji-takeda": {
+    "evidence": [
+      {
+        "claim": "Blue Note Tokyo's original July 22, 2022 event announcement identifies Shinji Takeda as leader and saxophonist and cites his 1995 single Blow up.",
+        "id": "ev01",
+        "source_url": "https://www.bluenote.co.jp/jp/artists/shinji-takeda/"
+      },
+      {
+        "claim": "Warner Music Japan's original artist profile identifies Takeda as saxophonist, notes his own 1995 Blow up single and saxophone performances at Blue Note and Billboard Live.",
+        "id": "ev02",
+        "source_url": "https://wmg.jp/takeda-shinji"
+      },
+      {
+        "claim": "Blue Note Tokyo's original performance program identifies the 2020 solo album Breath of Life as a Warner Music Japan release and records Takeda's 2022 leader-band date.",
+        "id": "ev03",
+        "source_url": "https://www.bluenote.co.jp/jp/artists/shinji-takeda/"
+      }
+    ],
+    "key": "shinji-takeda",
+    "limitations": "The Blue Note concert and Warner catalog establish jazz-club and crossover activity; they do not classify every Takeda release as jazz or assign him unlisted sideman sessions.",
+    "primary_source_url": "https://www.bluenote.co.jp/jp/artists/shinji-takeda/",
+    "summary": "Japanese saxophonist Shinji Takeda issued his debut single Blow up in 1995, recorded Breath of Life and led a Blue Note Tokyo concert in July 2022.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Blue Note Tokyo original event announcement and Warner Music Japan artist page independently establish his saxophone performance and original releases."
+  },
   "shirley-horn": {
     "evidence": [
       {
@@ -19505,6 +19780,31 @@
     "summary": "Norwegian vocalist Silje Nergaard joined Espen Berg Trio on the Paul Simon song I'd Do It For Your Love, released in March 2022.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Nordic jazz singer collaborating on acoustic piano trio reinterpretations."
+  },
+  "simon-brehm": {
+    "evidence": [
+      {
+        "claim": "The Swedish Performing Arts Agency history identifies the Brehm Bal Palais band, recordings Seven Eleven and Things Ain't What They Used to Be (1952) and Blues for a Broken Bass (1954).",
+        "id": "ev01",
+        "source_url": "https://carkiv.musikverk.se/www/epublikationer/Kjellberg_Erik_Svensk_jazzhistoria.pdf"
+      },
+      {
+        "claim": "Bear Family's original Lill-Babs album notes say Brehm engaged the singer in early 1954 and ended his touring orchestra in 1958.",
+        "id": "ev02",
+        "source_url": "https://www.bear-family.com/babs-lill-wo-finde-ich-den-mann-cd.html"
+      },
+      {
+        "claim": "Povel Ramel's historical society identifies Brehm on bass in the 1941 Embassy sextet and with Ramel's radio work in 1946-1951.",
+        "id": "ev03",
+        "source_url": "https://www.povelramelsallskapet.se/index.php?action=m2&id=1&tema1=OmSallskapet&tema2=ViMinnsSimonBrehm"
+      }
+    ],
+    "key": "simon-brehm",
+    "limitations": "Dates concern different endeavors: 1952 label founding, 1954 touring and 1958 end of his touring orchestra; these are not asserted as recording years.",
+    "primary_source_url": "https://carkiv.musikverk.se/www/epublikationer/Kjellberg_Erik_Svensk_jazzhistoria.pdf",
+    "summary": "Swedish jazz bassist Simon Brehm led a Bal Palais dance band, started the Karusell label in 1952 and recruited singer Lill-Babs for a 1954 tour.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Swedish national music history, the original Bear Family reissue and Povel Ramel's society identify separate work."
   },
   "simone-eriksrud": {
     "evidence": [
@@ -19900,6 +20200,31 @@
     "summary": "Improviser Steve Beresford supplied electronics to Simon H. Fell's large-ensemble work Positions & Descriptions alongside Tim Berne and Rhodri Davies.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His electronics help merge electroacoustic sound with ensemble improvisation."
+  },
+  "steve-harris": {
+    "evidence": [
+      {
+        "claim": "Zaum original Bandcamp liner notes identify Steve Harris on drums on the October 31, 2007 Live in Brighton concert with Cathy Stevens, Geoff Hearn, Udo Dzierzanowski, Karen Wimhurst, J'm Black and Adrian Newton.",
+        "id": "ev01",
+        "source_url": "https://steveharriszaum.bandcamp.com/album/live-in-brighton"
+      },
+      {
+        "claim": "Zaum release notes state Live in Brighton appeared via Amazon Records in 2008 and was remastered from the original concert tapes in November 2018.",
+        "id": "ev02",
+        "source_url": "https://steveharriszaum.bandcamp.com/album/live-in-brighton"
+      },
+      {
+        "claim": "The ensemble's Eye of the Sea archival release directly credits Steve Harris on drums and Jan Kopinski on tenor sax for their late-2007 duet concert; the digital release was November 8, 2018.",
+        "id": "ev03",
+        "source_url": "https://steveharriszaum.bandcamp.com/album/eye-of-the-sea"
+      }
+    ],
+    "key": "steve-harris",
+    "limitations": "Live in Brighton was performed October 31, 2007, originally released in 2008 and digitally remastered in 2018; the 2018 Eye of the Sea issue likewise preserves a 2007 concert, not a 2018 performance.",
+    "primary_source_url": "https://steveharriszaum.bandcamp.com/album/live-in-brighton",
+    "summary": "English drummer Steve Harris founded the improvising group Zaum, recorded a 2007 Brighton concert and played a late duet with saxophonist Jan Kopinski.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original ensemble recordings identify two separate performances and directly credit Harris on drums, with first-hand notes explaining later digital reissues."
   },
   "steve-kuhn": {
     "evidence": [
@@ -20851,6 +21176,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His London ensemble connects contemporary improvisation to the cello-led music of Abdul Wadud."
   },
+  "tom-talbert": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound documents Thomas Talbert arranging, conducting and producing Patty McGovern's Atlantic 1245 Wednesday's Child, recorded in New York in August 1956.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/marcy-lutes-patty-mcgovern-albums/45802-debut-wednesday-s-child-2-lp-on-1-cd.html"
+      },
+      {
+        "claim": "Original track credits identify Wednesday's Child (Talbert-McGovern), Winter Song (Talbert-Wolfe) and Summer Rain (Talbert-McGovern).",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/marcy-lutes-patty-mcgovern-albums/45802-debut-wednesday-s-child-2-lp-on-1-cd.html"
+      },
+      {
+        "claim": "The separate Kai Winding archival reissue Bop City credits Tom Talbert as composer of The Moonshower on an April 27, 1951 recording.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/kai-winding-albums/2880-bop-city-small-groups-1949-1951.html"
+      }
+    ],
+    "key": "tom-talbert",
+    "limitations": "August 1956 McGovern Atlantic sessions differ from February 1957 Decca tracks in the same reissue. Talbert wrote The Moonshower; no instrumental performance is inferred.",
+    "primary_source_url": "https://www.freshsoundrecords.com/marcy-lutes-patty-mcgovern-albums/45802-debut-wednesday-s-child-2-lp-on-1-cd.html",
+    "summary": "Arranger Tom Talbert produced Patty McGovern's 1956 Atlantic album Wednesday's Child and composed The Moonshower, recorded by Kai Winding in 1951.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Archival restorations of Atlantic and Winding original albums preserve specific composing, arranging and production credits."
+  },
   "tommy-dorsey": {
     "evidence": [
       {
@@ -21216,6 +21566,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Craft's archival Catalyst reissue documents the personnel succession and confirms Brown's participation in separate Pat Martino recordings."
   },
+  "uli-trepte": {
+    "evidence": [
+      {
+        "claim": "Sireena Records' original Portrait product description identifies Trepte in the Irene Schweizer Trio (1966-1967) and Guru Guru (1968-1972).",
+        "id": "ev01",
+        "source_url": "https://www.sireena.de/cat-t.html"
+      },
+      {
+        "claim": "Sireena's notes identify Trepte leading Spacebox (1975-1984) and Move Groove (1996-2001) and personally compiling Portrait.",
+        "id": "ev02",
+        "source_url": "https://www.sireena.de/cat-t.html"
+      },
+      {
+        "claim": "The musician's preserved website links Trepte's performances with Guru Guru, Neu!, Faust, Spacebox and Move Groove and confirms his Portrait project.",
+        "id": "ev03",
+        "source_url": "https://www.ulitrepte.de/"
+      }
+    ],
+    "key": "uli-trepte",
+    "limitations": "Portrait was published after Trepte's death although assembled by him, so its issue year is not a recording date for earlier bands.",
+    "primary_source_url": "https://www.sireena.de/cat-t.html",
+    "summary": "German bassist Uli Trepte played in the Irene Schweizer Trio and Guru Guru, later led Spacebox and compiled his career album Portrait for Sireena.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Sireena release catalog and Trepte's preserved artist site identify specific ensembles, recordings and his own retrospective selection."
+  },
   "valaida-snow": {
     "evidence": [
       {
@@ -21455,6 +21830,31 @@
     "summary": "Drummer Vinnie Colaiuta performed on John McLaughlin's Five Peace Band Live and contributed to The Wind Cries Mary with Sting and McLaughlin, according to Grammy credits.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Verifiable jazz-to-pop crossover through recording credits."
+  },
+  "virgil-gonsalves": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's Nocturne restoration lists Gonsalves on baritone sax with Bob Enevoldsen, Buddy Wise, Lou Levy, Harry Babasin and Larry Bunker, recorded September 29, 1954.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/nocturne-recordings-albums/1228-the-complete-nocturne-recordings-jazz-in-hollywood-series-volume-1-box-set-3-cds.html"
+      },
+      {
+        "claim": "The Liberty LJH-6010 Jazz San Francisco Style original November 1955 sessions credit Gonsalves on baritone with Dan Patiris and Clyde Pound.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/virgil-gonsalves-albums/55312-jazz-in-the-bay-area-1954-1959-feat-rudy-salvini-big-band-2-cd-box-set.html"
+      },
+      {
+        "claim": "The same archival original-label reconstruction credits him on the Rudy Salvini Big Band's November 1956 Sands Ballroom session in Oakland.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/virgil-gonsalves-albums/55312-jazz-in-the-bay-area-1954-1959-feat-rudy-salvini-big-band-2-cd-box-set.html"
+      }
+    ],
+    "key": "virgil-gonsalves",
+    "limitations": "The modern compilations are later releases; original sessions were in 1954 and 1955. Both label reconstructions are published by Fresh Sound.",
+    "primary_source_url": "https://www.freshsoundrecords.com/nocturne-recordings-albums/1228-the-complete-nocturne-recordings-jazz-in-hollywood-series-volume-1-box-set-3-cds.html",
+    "summary": "Baritone saxophonist Virgil Gonsalves recorded a 1954 Nocturne sextet with Lou Levy and a 1955 Liberty sextet with Dan Patiris and Clyde Pound.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Separate Nocturne and Liberty album restorations identify exact recorded sessions and participating musicians."
   },
   "virgilio-savona": {
     "evidence": [
