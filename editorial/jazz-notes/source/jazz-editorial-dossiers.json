@@ -3178,6 +3178,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His leadership preserves the trombone sound of several swing orchestras."
   },
+  "buddy-stewart": {
+    "evidence": [
+      {
+        "claim": "Westchester County Archives lists physical Columbia 36954-A, matrix HCO1679, Gimme A Little Kiss, with vocal chorus by Carolyn Grey and Buddy Stewart in Gene Krupa's orchestra, dated 1946.",
+        "id": "ev01",
+        "source_url": "https://archives.westchestergov.com/images/stories/pdfs/Series139_ForWeb.pdf"
+      },
+      {
+        "claim": "The archive catalogs Columbia 36954-B, matrix HCO1678, We'll Gather Lilacs, as Gene Krupa and His Orchestra with Buddy Stewart alone credited for vocal chorus in 1946.",
+        "id": "ev02",
+        "source_url": "https://archives.westchestergov.com/images/stories/pdfs/Series139_ForWeb.pdf"
+      },
+      {
+        "claim": "The original August 1946 Tune In review identifies Stewart and Carolyn Grey singing Gimme A Little Kiss, while Stewart supplies vocals on the reverse We'll Gather Lilacs.",
+        "id": "ev03",
+        "source_url": "https://www.worldradiohistory.com/Archive-Tune-In/Tune-In-1946-08.pdf"
+      }
+    ],
+    "key": "buddy-stewart",
+    "limitations": "Two original titles are two sides of one Columbia disc; the 1946 dates in inventory mean record year, not session date. The original PDF was indexed but its screenshot endpoint refused access; no claims about a third session.",
+    "primary_source_url": "https://archives.westchestergov.com/images/stories/pdfs/Series139_ForWeb.pdf",
+    "summary": "Buddy Stewart sang on both sides of Gene Krupa's 1946 Columbia 36954 disc, sharing one vocal with Carolyn Grey and singing the other himself.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two individually credited physical 78-rpm sides are preserved in a county archive, and a period music magazine independently reviewed both performances."
+  },
   "buell-neidlinger": {
     "evidence": [
       {
@@ -5669,6 +5694,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Innovative five-string bass and big-band swing."
   },
+  "chuck-e-weiss": {
+    "evidence": [
+      {
+        "claim": "ANTI's original release page gives April 15, 2014 as the release date for Chuck E. Weiss album Red Beans and Weiss, and 2013 as its recording year.",
+        "id": "ev01",
+        "source_url": "https://www.anti.com/releases/red-beans-and-weiss/"
+      },
+      {
+        "claim": "The record-label album metadata identifies studio1480, The Village and Electronic Recording as recording locations, alongside Weiss tracks Tupelo Joe, Shushie, Boston Blackie and Bomb The Tracks.",
+        "id": "ev02",
+        "source_url": "https://www.anti.com/releases/red-beans-and-weiss/"
+      },
+      {
+        "claim": "ANTI's March 2014 original press release says Select Records issued Weiss's early demos as The Other Side of Town in 1981, alongside its own catalog of later albums.",
+        "id": "ev03",
+        "source_url": "https://www.anti.com/press/anti-records-to-release-chuck-e-weiss-red-beans-and-weiss-april-15/?month=9&year=2017"
+      }
+    ],
+    "key": "chuck-e-weiss",
+    "limitations": "ANTI says recording began October 2012 whereas the album entry gives recording year 2013; the former does not override the latter. Tom Waits and Johnny Depp were executive producers, not assumed track performers.",
+    "primary_source_url": "https://www.anti.com/releases/red-beans-and-weiss/",
+    "summary": "Chuck E. Weiss recorded Red Beans and Weiss for ANTI in 2013, issued in 2014 after his earlier Select and independent album releases.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An original record label supplies specific album tracks, recording studios, release date and independently dated original press history."
+  },
   "chuck-folds": {
     "evidence": [
       {
@@ -6233,6 +6283,31 @@
     "summary": "Guitarist David Torn mixed ambient textures and jazz-rock on 'Cloud About Mercury' (1987), recording with Mark Isham, Tony Levin and Bill Bruford.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Soundscape guitar and experimental jazz-rock in an ECM supergroup"
+  },
+  "dean-benedetti": {
+    "evidence": [
+      {
+        "claim": "Christie's inspected six original Dean Benedetti acetate discs used for the 1990 Mosaic collection, including a Packard-Bell label annotated with September in the Rain and March 1, 1947.",
+        "id": "ev01",
+        "source_url": "https://www.christies.com/en/lot/lot-6440252"
+      },
+      {
+        "claim": "Christie's itemizes a Soundcraft acetate whose handwritten labels date March 6, 1947, with Ornithology, Sentimental Journey, Body and Soul and other Charlie Parker fragments.",
+        "id": "ev02",
+        "source_url": "https://www.christies.com/en/lot/lot-6440252"
+      },
+      {
+        "claim": "Mosaic Records' official out-of-print discography identifies issue number 129 as The Complete Dean Benedetti Recordings of Charlie Parker in seven CDs or ten LPs.",
+        "id": "ev03",
+        "source_url": "https://www.mosaicrecords.com/out-of-print-limited-edition-jazz-collections/"
+      }
+    ],
+    "key": "dean-benedetti",
+    "limitations": "Recording engineer/collector credit is certain, but sources do not show Benedetti performing saxophone on the Parker discs. Christie's provenance line contains conflicting death chronology; no lifespan asserted.",
+    "primary_source_url": "https://www.christies.com/en/lot/lot-6440252",
+    "summary": "Saxophonist and recordist Dean Benedetti documented Charlie Parker in 1947 and 1948; his surviving acetates became Mosaic's 1990 seven-CD archive.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original annotated acetates, issuing label catalogs and physical provenance establish Benedetti's firsthand documentation of bebop performances."
   },
   "dee-dee-bridgewater": {
     "evidence": [
@@ -8667,6 +8742,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Captures a pianist deliberately traversing classical and jazz traditions."
   },
+  "fritz-brocksieper": {
+    "evidence": [
+      {
+        "claim": "Bear Family's Freddie Brocksieper Drums Boogie CD BCD15988 carries 27 recordings including Taktik, Harmonie, Cymbal Promenade and Drums Boogie, attributed to Brocksieper.",
+        "id": "ev01",
+        "source_url": "https://www.bear-family.com/brocksieper-freddie-drums-boogie.html"
+      },
+      {
+        "claim": "Bear Family's archival liner text identifies the Brunswick recordings under Brocksieper's own name as spanning October 1941 through May 1948, with BCD15988 presenting material from April 1943 onward.",
+        "id": "ev02",
+        "source_url": "https://www.bear-family.com/brocksieper-freddie-drums-boogie.html"
+      },
+      {
+        "claim": "The four-disc Freddie Brocksieper Edition 1941-59 includes Caravan, Take The A Train, Sing Sing Sing, and C Jam Blues among recordings attributed to Freddie Brocksieper.",
+        "id": "ev03",
+        "source_url": "https://www.bear-family.com/brocksieper-freddie-freddie-brocksieper-edition-1941-59-4-cd.html"
+      }
+    ],
+    "key": "fritz-brocksieper",
+    "limitations": "Bear Family is a researched historical reissue, not the original Brunswick issue; its essay describes Fritz becoming Freddie after World War II. Individual titles are not assigned conjectural session dates.",
+    "primary_source_url": "https://www.bear-family.com/brocksieper-freddie-drums-boogie.html",
+    "summary": "German jazz drummer Fritz, later Freddie, Brocksieper led Brunswick recordings from 1941 to 1948, documented across Bear Family's archival editions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A specialized historical reissue label traces the drummer's own Brunswick recordings and names representative pieces in distinct collection volumes."
+  },
   "fritz-pauer": {
     "evidence": [
       {
@@ -10145,6 +10245,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original issue catalogs and specialist sessionographies distinguish Fuller's arranging and conducting in 1949 and his separate Pacific Jazz leadership in the 1960s."
   },
+  "gil-rodin": {
+    "evidence": [
+      {
+        "claim": "Mosaic Records' researched Teagarden discography identifies Gil Rodin's orchestra at a circa-September 1930 New York session issuing Beale Street Blues on Crown 3017.",
+        "id": "ev01",
+        "source_url": "https://www.mosaicrecords.com/the-great-jazz-artists/bix-beiderbecke/"
+      },
+      {
+        "claim": "The same research lists Rodin's orchestra on Crown 3045 Ninety-Nine Out of a Hundred Wanna Be Loved and Crown 3046 Hello Beautiful from circa January 1931.",
+        "id": "ev02",
+        "source_url": "https://www.mosaicrecords.com/the-great-jazz-artists/bix-beiderbecke/"
+      },
+      {
+        "claim": "Hindsight Records' 2021 Bob Crosby reissue credits Gil Rodin among the composers of Dixieland Shuffle, separate from Bob Crosby's main-artist credit.",
+        "id": "ev03",
+        "source_url": "https://www.qobuz.com/us-en/album/the-essential-series-remastered-bob-crosby-and-his-orchestra-22-original-big-band-hits-bob-crosby/lq368rnts16vc"
+      }
+    ],
+    "key": "gil-rodin",
+    "limitations": "Mosaic's historical session listings are researched discography, not individually inspected original label scans. Dates are approximate and no soloist assignments or initially issued alternate takes are invented.",
+    "primary_source_url": "https://www.mosaicrecords.com/the-great-jazz-artists/bix-beiderbecke/",
+    "summary": "Clarinetist and saxophonist Gil Rodin led Crown jazz 78 sessions around 1930 and 1931, and was later credited as a composer on Bob Crosby's Dixieland Shuffle.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Label-matrix discography distinguishes two ensembles billed under Rodin's name, while a later record-label reissue recognizes a separate composition credit."
+  },
   "ginger-baker": {
     "evidence": [
       {
@@ -11050,6 +11175,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His economical trumpet soloing complemented swing and vocal jazz."
   },
+  "harry-gibson": {
+    "evidence": [
+      {
+        "claim": "Florida Atlantic University's Recorded Sound Archives catalogs Boogie Woogie in Blue as an eight-track 10-inch 78-rpm Musicraft release attributed to Harry The Hipster Gibson.",
+        "id": "ev01",
+        "source_url": "https://rsa.fau.edu/album/6663"
+      },
+      {
+        "claim": "The university archive identifies Musicraft sides 290 through 293 and Gibson compositions including Handsome Harry, The Hipster, Riot in Boogie, and Barrelhouse Boogie.",
+        "id": "ev02",
+        "source_url": "https://rsa.fau.edu/album/6663"
+      },
+      {
+        "claim": "The later Cosmic Spy Music restoration Boogie-Woogie in Blue credits Irwin Chusid and separately lists archival V-Disc, Armed Forces Radio, and film versions of Gibson performances.",
+        "id": "ev03",
+        "source_url": "https://cosmicspy.bandcamp.com/album/boogie-woogie-in-blue"
+      }
+    ],
+    "key": "harry-gibson",
+    "limitations": "The Florida Atlantic library record gives no recording date. The 2022 Cosmic Spy compilation includes later 1940s film and broadcast takes, not original Musicraft 78 issues. No speculative instrumental personnel is assigned.",
+    "primary_source_url": "https://rsa.fau.edu/album/6663",
+    "summary": "Pianist and singer Harry 'The Hipster' Gibson cut the eight-side Musicraft 78 album Boogie Woogie in Blue, mixing jazz, blues and comic boogie-woogie.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A university library holds the Musicraft 78 album; a later restoration label documents surviving radio, V-Disc and film performances without confusing them with original 78 takes."
+  },
   "harry-james": {
     "evidence": [
       {
@@ -11074,6 +11224,31 @@
     "summary": "Swing trumpeter Harry James led broadcasts at the 1940 New York World's Fair and 1941 Hotel Lincoln and recorded Memphis Blues in 1942.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Library of Congress archival records identify actual broadcast performances and contemporary photographs of James as trumpeter and bandleader."
+  },
+  "harry-prime": {
+    "evidence": [
+      {
+        "claim": "All About Jazz says its Harry Prime profile drew on telephone correspondence with the singer, documenting engagements with the Randy Brooks, Jack Fina, Tommy Dorsey, and Ralph Flanagan orchestras.",
+        "id": "ev01",
+        "source_url": "https://www.allaboutjazz.com/musicians/harry-prime/"
+      },
+      {
+        "claim": "A numerical RCA Victor 78 discography lists Tommy Dorsey orchestra record 20-3061A Until with vocal credits to Harry Prime, the Clark Sisters, and the Town Criers.",
+        "id": "ev02",
+        "source_url": "https://www.78discography.com/RCA203000.htm"
+      },
+      {
+        "claim": "The collector catalog for RCA Victor 20-4656, issued in April 1952, attributes the Honest and Truly vocal to Harry Prime and the Singing Winds.",
+        "id": "ev03",
+        "source_url": "https://www.45cat.com/78rpm/record/204656"
+      }
+    ],
+    "key": "harry-prime",
+    "limitations": "All About Jazz profile is based on correspondence with Prime, not session ledgers. RCA discography reproduces historic labels. Some original 78 record entries rely on collector metadata; no assumed recording dates beyond listed issues.",
+    "primary_source_url": "https://www.allaboutjazz.com/musicians/harry-prime/",
+    "summary": "Big-band vocalist Harry Prime sang with Tommy Dorsey and Ralph Flanagan, appearing on RCA Victor's Until and later Flanagan 78 sides including Honest and Truly.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Firsthand interview-derived biography and physically cataloged RCA/Bluebird sides provide distinct evidence for his featured big-band vocal work."
   },
   "hartmut-kracht": {
     "evidence": [
@@ -14691,6 +14866,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Independent specialist original session research preserves precise 1991-93 Delmark recording dates and changing bass and drum partners."
   },
+  "lionel-benhamou": {
+    "evidence": [
+      {
+        "claim": "Orchestre National de Jazz credits Lionel Benhamou on guitar and an identified solo on Le lion, recorded live in May 1994 at Theatre Dunois, Paris.",
+        "id": "ev01",
+        "source_url": "https://orchestrenationaldejazz.bandcamp.com/track/le-lion"
+      },
+      {
+        "claim": "The ONJ's own In tempo issue credits Benhamou on guitar and lists live recordings in November 1994 and May 1995 and studio material from September 1995.",
+        "id": "ev02",
+        "source_url": "https://orchestrenationaldejazz.bandcamp.com/album/in-tempo"
+      },
+      {
+        "claim": "The original ONJ personnel credits for Monk Mingus Ellington identify Lionel Benhamou on guitar at a June 1993 Studio Ferber, Paris session.",
+        "id": "ev03",
+        "source_url": "https://orchestrenationaldejazz.bandcamp.com/album/monk-mingus-ellington"
+      }
+    ],
+    "key": "lionel-benhamou",
+    "limitations": "The Bandcamp 2020 dates are reissue or digitization release dates. The documented sessions occurred in 1993-1995; no unsupported solo or individual authorship on other pieces is inferred.",
+    "primary_source_url": "https://orchestrenationaldejazz.bandcamp.com/track/le-lion",
+    "summary": "Guitarist Lionel Benhamou performed with Orchestre National de Jazz on 1993, 1994 and 1995 sessions, including a featured solo on Le lion.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The French national jazz orchestra's own credits document the guitarist across multiple original session years, including an explicitly credited solo."
+  },
   "lionel-ferbos": {
     "evidence": [
       {
@@ -15411,6 +15611,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents specific recordings, ensembles or performance roles and their place in jazz or adjacent genres."
   },
+  "margaret-bonds": {
+    "evidence": [
+      {
+        "claim": "The Library of Congress African American Odyssey exhibit preserves a 1942 Handy Brothers Music Company sheet music edition of The Negro Speaks of Rivers, identifying Margaret Bonds as composer of the Hughes setting.",
+        "id": "ev01",
+        "source_url": "https://www.loc.gov/exhibits/african-american-odyssey/depression-new-deal-and-world-war-ii.html"
+      },
+      {
+        "claim": "The Library of Congress Florence B. Price manuscript collection finding aid names Margaret Bonds as pianist for a December 1932 Katherine Dunham dance troupe presentation using Price's Fantasie Negre No. 1.",
+        "id": "ev02",
+        "source_url": "https://findingaids.loc.gov/exist_collections/ead3pdf/music/2021/mu021056.pdf"
+      },
+      {
+        "claim": "The same Library of Congress Florence Price historical chronology records Bonds as piano soloist for the 1934 Chicago Women's Symphony Orchestra premiere of Price's Piano Concerto.",
+        "id": "ev03",
+        "source_url": "https://findingaids.loc.gov/exist_collections/ead3pdf/music/2021/mu021056.pdf"
+      }
+    ],
+    "key": "margaret-bonds",
+    "limitations": "Bonds is primarily a concert composer and pianist; none of the cited material establishes a jazz recording or sideman role. Do not portray the 1932 and 1934 events as jazz sessions. LOC manuscript PDF screenshots were unavailable.",
+    "primary_source_url": "https://www.loc.gov/exhibits/african-american-odyssey/depression-new-deal-and-world-war-ii.html",
+    "summary": "Pianist and composer Margaret Bonds performed Florence Price works in 1932 and 1934 and published a Langston Hughes song setting in 1942.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two separate Library of Congress collections document Bonds as original concert performer and named composer with dated publication and performance records."
+  },
   "margie-hyams": {
     "evidence": [
       {
@@ -15965,6 +16190,31 @@
     "summary": "Drummer Martin France joined Kenny Wheeler for Songs for Quintet, recorded in December 2013 at Abbey Road with Stan Sulzmann, John Parricelli and Chris Laurence.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His nuanced rhythmic backing shapes Wheeler's final ensemble studio session."
+  },
+  "martin-scales": {
+    "evidence": [
+      {
+        "claim": "John Hollenbeck's original Songs We Like A Lot album page credits Martin Scales on guitar in the Frankfurt Radio Big Band, recorded August 11 through 13, 2010 at Hessischer Rundfunk.",
+        "id": "ev01",
+        "source_url": "https://johnhollenbeck.bandcamp.com/album/songs-we-like-a-lot"
+      },
+      {
+        "claim": "Hollenbeck's own Songs You Like A Lot credits Martin Scales on guitar among the Frankfurt Radio Big Band, with sessions recorded May 27 and 28, 2019.",
+        "id": "ev02",
+        "source_url": "https://johnhollenbeck.bandcamp.com/album/songs-you-like-a-lot"
+      },
+      {
+        "claim": "Sunnyside Records' 2026 Jim McNeely Expeditions original credits list Martin Scales as guitar player in the Frankfurt Radio Big Band ensemble.",
+        "id": "ev03",
+        "source_url": "https://sunnysiderecords.bandcamp.com/album/jim-mcneely-expeditions"
+      }
+    ],
+    "key": "martin-scales",
+    "limitations": "Hollenbeck pages were digitally issued in 2020 but date the underlying studio sessions to 2010 and 2019. Sunnyside's 2026 date is album release, not necessarily session date; no guitar solos or composition credits are inferred.",
+    "primary_source_url": "https://johnhollenbeck.bandcamp.com/album/songs-we-like-a-lot",
+    "summary": "Guitarist Martin Scales recorded with the Frankfurt Radio Big Band for John Hollenbeck in 2010 and 2019 and is credited on a 2026 Sunnyside Records album.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three creator-published recordings identify the same guitarist in distinct dated Frankfurt big-band recording projects, without speculative solo credits."
   },
   "martin-schlumpf": {
     "evidence": [
@@ -18482,6 +18732,31 @@
     "summary": "Saxophonist and flutist Nathan Davis recorded Happy Girl in 1965 with Woody Shaw, Larry Young, Jimmy Woode and Billy Brooks; he composed The Flute in the Blues.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents a saxophonist and flutist's 1965 European hard-bop work through original label personnel and an individually credited composition."
+  },
+  "nathen-page": {
+    "evidence": [
+      {
+        "claim": "University of Central Florida RICHES catalogs Thinking of You as composed and performed by Nathen Page on WUCF-FM June 23, 2000, with Kevin Bales, Leon Anderson and Jeff Handley.",
+        "id": "ev01",
+        "source_url": "https://richesmi.cah.ucf.edu/omeka/items/show/4840"
+      },
+      {
+        "claim": "The separate WUCF original Stepping recording is attributed to Nathen Page on June 23, 2000, with his regular Bales, Anderson and Handley quartet.",
+        "id": "ev02",
+        "source_url": "https://richesmi.cah.ucf.edu/omeka/items/show/4835"
+      },
+      {
+        "claim": "RICHES records Blues in the Key of Page as a seven-minute and 51-second composition and performance by Nathen Page on June 23, 2000.",
+        "id": "ev03",
+        "source_url": "https://richesmi.cah.ucf.edu/omeka/items/show/4842"
+      }
+    ],
+    "key": "nathen-page",
+    "limitations": "All three separately documented tunes are from the same June 23, 2000 radio session; not three separate sessions. RICHES describes original audio donations, not independent commercial albums.",
+    "primary_source_url": "https://richesmi.cah.ucf.edu/omeka/items/show/4840",
+    "summary": "Jazz guitarist Nathen Page composed and performed Thinking of You, Stepping and Blues in the Key of Page during a June 2000 WUCF radio session.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three University of Central Florida original WUCF-FM audio records preserve individually attributed compositions and performance personnel."
   },
   "natsuki-tamura": {
     "evidence": [
