@@ -2899,6 +2899,40 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The original Riverside jazz album descriptions establish the exact drum chair in Byrd's trio across several contrasting releases."
   },
+  "buddy-greco": {
+    "evidence": [
+      {
+        "claim": "NAMM's Buddy Greco oral-history profile documents his piano training, early arranging with Benny Goodman and later professional work as a singer and pianist.",
+        "id": "ev01",
+        "source_url": "https://www.namm.org/library/oral-history/buddy-greco"
+      },
+      {
+        "claim": "The Verve/Universal reissue credits Buddy Greco with both piano and vocals and John Frigo on bass for But Not for Me and They Can't Take That Away from Me.",
+        "id": "ev02",
+        "source_url": "https://www.universalmusic.it/musica-jazz/album/buddy-greco-at-mister-kellys_36220810528/"
+      },
+      {
+        "claim": "The Verve-licensed Buddy Greco at Mister Kelly's performance listing gives the club recording date July 24, 1955, for the piano/vocal duo with bassist John Frigo.",
+        "id": "ev03",
+        "source_url": "https://www.prestomusic.com/jazz/products/9473754--buddy-greco-at-mister-kellys"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://www.namm.org/library/oral-history/buddy-greco",
+        "https://www.universalmusic.it/musica-jazz/album/buddy-greco-at-mister-kellys_36220810528/",
+        "https://www.allmusic.com/artist/buddy-greco-mn0000638960"
+      ],
+      "method": "NAMM firsthand oral history crossmatched with Verve/Universal original track credits and independent AllMusic artist biography.",
+      "note": "NAMM explicitly identifies Buddy Greco as the Benny Goodman-era pianist and singer, while Verve/Universal credits the same Buddy Greco as pianist and vocalist in the historic Mister Kelly's duo and AllMusic separately documents the Goodman's pianist and original album. The seed describes a 1926-born American pianist/vocalist. Two competing historical MBID records remain unresolved; no arbitrary MBID assignment was used to construct this artist's biography."
+    },
+    "key": "buddy-greco",
+    "limitations": "The Universal/Verve digital issue date is 2023, not the 1955 live recording date. The Newberry original-nightclub archive search index describes this performance but its direct archival page returned 403, so the Newberry record is not counted as an independently opened claim. Original MusicBrainz identifier collision is not resolved.",
+    "primary_source_url": "https://www.universalmusic.it/musica-jazz/album/buddy-greco-at-mister-kellys_36220810528/",
+    "summary": "Jazz singer and pianist Buddy Greco worked with Benny Goodman and recorded the live Buddy Greco at Mister Kelly's with bassist John Frigo in 1955.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original 1955 club recording, currently reissued by Verve, directly credits Greco as both pianist and vocalist on individual tracks, a distinct ensemble role from his Goodman years."
+  },
   "buddy-morrow": {
     "evidence": [
       {
@@ -3214,6 +3248,31 @@
     "summary": "Afro-Cuban bassist Cachao and brother Orestes helped create mambo in 1937; he brought jazz-style jam sessions into Cuban dance music in 1957.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His work connects danzon and mambo to improvised Latin jazz."
+  },
+  "cal-collins": {
+    "evidence": [
+      {
+        "claim": "Concord Jazz's official From The Beginning reissue credits Cal Collins on guitar exclusively on disc two, Scott Hamilton 2, with Nat Pierce, Monty Budwig and Jake Hanna.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/scott-hamilton-from-the-beginning/"
+      },
+      {
+        "claim": "The original 1978 Concord Jazz CJ-61 issue of Scott Hamilton 2 credits Cal Collins on guitar with saxophonist Scott Hamilton and pianist Nat Pierce.",
+        "id": "ev02",
+        "source_url": "https://eil.com/shop/moreinfo.asp?catalogid=492712"
+      },
+      {
+        "claim": "The original Concord Jazz CJ-137 Interplay LP features two guitarists Cal Collins and Herb Ellis, bassist Ray Brown and drummer Jake Hanna; it is cataloged as a 1980 issue.",
+        "id": "ev03",
+        "source_url": "https://parisjazzcorner.com/en/dis_fiche.php?ArtNum=60202"
+      }
+    ],
+    "key": "cal-collins",
+    "limitations": "Concord's 2-CD retrospective combines the Hamilton debut without Collins and Scott Hamilton 2 with Collins: his guitar is credited only on disc two. Interplay is a distinct 1980 original LP issue, not a second Hamilton session. The 1982 scanned periodical review could not be visually verified and was excluded.",
+    "primary_source_url": "https://concord.com/concord-albums/scott-hamilton-from-the-beginning/",
+    "summary": "Jazz guitarist Cal Collins recorded on Scott Hamilton 2 for Concord Jazz in 1978 and performed alongside Herb Ellis, Ray Brown and Jake Hanna on Interplay.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Concord's original reissue credits specify Collins on Scott Hamilton's second LP, while a cataloged original Interplay pressing shows his separate small-group collaboration."
   },
   "cal-massey": {
     "evidence": [
@@ -5165,6 +5224,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Highlights the role of session bass in cross-genre rhythm sections."
   },
+  "clarence-williams": {
+    "evidence": [
+      {
+        "claim": "Columbia A3844 Gulf Coast Blues credits Clarence Williams on piano, composer and lyricist with Bessie Smith, recorded in New York on February 16, 1923.",
+        "id": "ev01",
+        "source_url": "https://www.loc.gov/item/jukebox-670192/"
+      },
+      {
+        "claim": "The Library of Congress identifies Clarence Williams's Blue Five as the group that recorded Wild Cat Blues in 1923, featuring Sidney Bechet.",
+        "id": "ev02",
+        "source_url": "https://www.loc.gov/programs/national-recording-preservation-board/recording-registry/registry-by-induction-years/2015/"
+      },
+      {
+        "claim": "The Library of Congress documents Williams's 1915 music publishing partnership with jazz violinist Armand J. Piron in New Orleans.",
+        "id": "ev03",
+        "source_url": "https://blogs.loc.gov/music/2018/10/sheet-music-spotlight-new-orleans-turns-300/"
+      }
+    ],
+    "key": "clarence-williams",
+    "limitations": "Wild Cat Blues was led by Williams's Blue Five, with Sidney Bechet featured. Williams is not assumed to play piano on every group recording.",
+    "primary_source_url": "https://www.loc.gov/item/jukebox-670192/",
+    "summary": "Jazz pianist and composer Clarence Williams accompanied Bessie Smith on her 1923 Columbia recording Gulf Coast Blues and led the early Blue Five.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Library of Congress original Columbia disc data confirms Williams as a recording pianist, composer and early jazz group leader."
+  },
   "cleo-laine": {
     "evidence": [
       {
@@ -6898,6 +6982,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "University of Louisiana's original recorded interview catalog gives first-person career context beyond commercial session databases."
   },
+  "frank-froeba": {
+    "evidence": [
+      {
+        "claim": "The Keynote K613 matrix reconstruction credits Frankie Froeba on piano with trumpeter George Hartman, Vernon Brown, Leonard Centobie, Jack Lesberg and George Wettling in New York on September 27, 1944.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/mercury-records/keynote-records-catalog-78rpm-500-600-1300-100-series/"
+      },
+      {
+        "claim": "Keynote K627 drew Hindustan matrix HL57-4 and Angry matrix HL60-1 from the same 1944 Froeba-Hartman date; the later K627 issue is not a second session.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/mercury-records/keynote-records-catalog-78rpm-500-600-1300-100-series/"
+      },
+      {
+        "claim": "Jazz-on-Film historian Mark Cantor records Frank Froeba's work as a Decca house pianist in the 1930s, accompanying Lil Hardin, Bob Howard and other bandleaders.",
+        "id": "ev03",
+        "source_url": "https://www.jazz-on-film.com/swing-styles/"
+      }
+    ],
+    "key": "frank-froeba",
+    "limitations": "The September 27, 1944 Keynote masters are one session rather than several. The original 1944 Metronome PDF could not be visually verified, so its reported review is excluded. The Decca period is from independent historical research, not a list of particular Decca masters.",
+    "primary_source_url": "https://www.jazzdisco.org/mercury-records/keynote-records-catalog-78rpm-500-600-1300-100-series/",
+    "summary": "New Orleans jazz pianist Frank Froeba played on George Hartman's 1944 Keynote 78-rpm session and worked as a Decca recording pianist in the 1930s.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Reconstructed original Keynote matrices and an independent jazz-film historian's musician research connect Froeba to a dated recording and to his broader studio role."
+  },
   "frank-gant": {
     "evidence": [
       {
@@ -7368,6 +7477,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents Canadian mainstream jazz and international trio touring."
   },
+  "fred-elizalde": {
+    "evidence": [
+      {
+        "claim": "Bibliotheque nationale de France catalogues Fred Elizalde and His Hot Music's 1928 Brunswick 177 record coupling The Darktown Strutters Ball and Somebody Stole My Gal.",
+        "id": "ev01",
+        "source_url": "https://catalogue.bnf.fr/rechercher.do?index=AUT3&numNotice=13899132"
+      },
+      {
+        "claim": "The same original Brunswick catalogue record expressly identifies Adrian Rollini, Bobby Davis and Chelsea Quealey as featured members of Elizalde's 1928 ensemble.",
+        "id": "ev02",
+        "source_url": "https://catalogue.bnf.fr/rechercher.do?index=AUT3&numNotice=13899132"
+      },
+      {
+        "claim": "The National Jazz Archive's British Jazz Timeline describes Fred Elizalde's Anglo-American orchestra as a prominent example of visiting Americans working in 1920s British jazz bands.",
+        "id": "ev03",
+        "source_url": "https://nationaljazzarchive.org.uk/explore/jazz-timeline"
+      }
+    ],
+    "key": "fred-elizalde",
+    "limitations": "The cited BnF list is part of the Adrian Rollini authority catalog and identifies the specific Fred Elizalde issue; it is not a comprehensive Elizalde studio ledger. A 1944 Melody Maker scanned account of 1927 solos was excluded because its PDF could not be visually checked.",
+    "primary_source_url": "https://catalogue.bnf.fr/rechercher.do?index=AUT3&numNotice=13899132",
+    "summary": "Jazz pianist Fred Elizalde led an Anglo-American orchestra in Britain, recording for Brunswick in 1928 with bass saxophonist Adrian Rollini.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The French national library catalogs the original 1928 Brunswick 177 disc with named soloists, while the National Jazz Archive independently places Elizalde's band in British jazz history."
+  },
   "fred-guy": {
     "evidence": [
       {
@@ -7512,6 +7646,31 @@
     "summary": "Trombonist Fred Wesley arranged for James Brown and Parliament-Funkadelic, joined the Count Basie Orchestra in 1978 and made his jazz album To Someone in 1988.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His record-backed trajectory links the horn arrangements of classic funk with active jazz ensemble and trombone bandleading work."
+  },
+  "freddie-jenkins": {
+    "evidence": [
+      {
+        "claim": "The Ellington sessionography lists Freddie Jenkins on trumpet at the November 22, 1928 OKeh orchestra session for The Blues with a Feeling.",
+        "id": "ev01",
+        "source_url": "https://ellingtonia.com/discography/full/"
+      },
+      {
+        "claim": "Freddie Jenkins is listed in the May 3, 1929 Duke Ellington Victor orchestra personnel on Cotton Club Stomp, matrix BVE51971-2.",
+        "id": "ev02",
+        "source_url": "https://ellingtonia.com/discography/full/"
+      },
+      {
+        "claim": "The May 28, 1929 Columbia session credits Jenkins on trumpet for That Rhythm Man and Beggars Blues, issued from separate matrices.",
+        "id": "ev03",
+        "source_url": "https://ellingtonia.com/discography/full/"
+      }
+    ],
+    "key": "freddie-jenkins",
+    "limitations": "The source is a specialist sessionography based on early recording logs and original matrix numbers. It confirms trumpet-section personnel, not an individual Jenkins trumpet solo on each credited track.",
+    "primary_source_url": "https://ellingtonia.com/discography/full/",
+    "summary": "Jazz trumpeter Freddie Jenkins recorded with Duke Ellington's Cotton Club Orchestra in 1928 and 1929 on OKeh, Victor and Columbia sessions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A dedicated Duke Ellington session archive identifies Jenkins's trumpet chair and original record matrices across separate dated studio sessions."
   },
   "freddie-kohlman": {
     "evidence": [
@@ -8269,6 +8428,41 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Adds a documented performer or composer and a specific musical contribution to the catalog."
   },
+  "george-duke": {
+    "evidence": [
+      {
+        "claim": "MPS Records documents George Duke recording two projects beginning April 1971, originally issued together in 1973 as The Inner Source, with bassist John Heard and drummer Dick Berk on its Solus portion.",
+        "id": "ev01",
+        "source_url": "https://www.mps-music.com/releases/the-inner-source/"
+      },
+      {
+        "claim": "Concord/Heads Up announced Duke's DreamWeaver for July 16, 2013, listing Stanley Clarke, Christian McBride, Lalah Hathaway and other named contributing musicians.",
+        "id": "ev02",
+        "source_url": "https://concord.com/concord-albums/dreamweaver/"
+      },
+      {
+        "claim": "The Recording Academy lists Stanley Clarke and George Duke's The Clarke/Duke Project as a 1982 Grammy nominee for R&B Performance by a Duo or Group with Vocals, not a winner.",
+        "id": "ev03",
+        "source_url": "https://www.grammy.com/artists/george-duke/2208/"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://www.mps-music.com/releases/the-inner-source/",
+        "https://concord.com/concord-albums/dreamweaver/",
+        "https://www.grammy.com/artists/george-duke/2208/",
+        "https://www.georgedukemusic.com/bio"
+      ],
+      "method": "MPS's artist-specific original releases matched against Concord Heads Up label personnel and the Recording Academy's named performer credits.",
+      "note": "All four separate musician-authority sites describe a keyboardist named George Duke whose 1971 fusion recordings, later Heads Up catalog, Clarke/Duke collaborations and lifetime career form the same performing person. The original seed identifies the American keyboardist born in 1946 and deceased in 2013. Several database MBID candidates remain in conflict, but their identifiers were not treated as historical evidence or arbitrarily selected."
+    },
+    "key": "george-duke",
+    "limitations": "The 1971 MPS session was issued as a two-LP set in 1973; these are different events. Duke's 1982 Clarke/Duke Project was Grammy-nominated, not a winner. Heads Up label's collective album personnel are not asserted to appear on every song. MusicBrainz identity ambiguity is preserved.",
+    "primary_source_url": "https://www.mps-music.com/releases/the-inner-source/",
+    "summary": "Jazz-fusion keyboardist George Duke recorded The Inner Source for MPS in 1971 and released DreamWeaver on Heads Up in 2013 with Stanley Clarke and Christian McBride.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "An original fusion-label discography and Duke's later record label independently establish named musician credits, the recording/reissue timeline and a later collaborative ensemble."
+  },
   "george-freeman": {
     "evidence": [
       {
@@ -8930,6 +9124,31 @@
     "summary": "Pianist Gil Coggins played on Miles Davis Blue Note sessions at WOR Studios in May 1952 and April 1953, with J.J. Johnson, Jackie McLean and Jimmy Heath.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Blue Note session files identify Coggins as pianist on named early Davis bebop sides and distinguish personnel for 1952 from those for 1953."
+  },
+  "gil-fuller": {
+    "evidence": [
+      {
+        "claim": "The original Pacific Jazz PJ-93 issue, catalogued as a 1965 album, identifies Gil Fuller leading the Monterey Jazz Festival Orchestra featuring trumpeter Dizzy Gillespie.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/gil-fuller-albums/5627-gil-fuller-the-monterey-jazz-festival-orchestra-featuring-dizzy-gillespie-vinyl.html"
+      },
+      {
+        "claim": "Original Pacific Jazz PJ-93 discographical credits identify Gil Fuller as the arranger and conductor on compositions Man From Monterey, Angel City and Big Sur.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/pacific-jazz-records/discography-1965-1966/"
+      },
+      {
+        "claim": "Michael Fitzgerald's specialist sessionography lists Gil Fuller as arranger and conductor on 1949 Discovery 78-rpm originals Blues For A Debutante and Tropicana, with Art Blakey and Milt Jackson in the ensemble.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdiscography.com/Leaders/FullerGil-ldr.php"
+      }
+    ],
+    "key": "gil-fuller",
+    "limitations": "The 1949 Discovery recording date differs among specialist discographies (June 11 versus July 11), and 1965 Pacific Jazz studio dates conflict across sources. Neither disputed recording day is asserted here. The 1964 Down Beat scanned PDF was not visually verifiable and is excluded.",
+    "primary_source_url": "https://www.freshsoundrecords.com/gil-fuller-albums/5627-gil-fuller-the-monterey-jazz-festival-orchestra-featuring-dizzy-gillespie-vinyl.html",
+    "summary": "Jazz arranger Gil Fuller conducted a Discovery bebop studio ensemble in 1949 and led the Pacific Jazz Monterey Jazz Festival Orchestra featuring Dizzy Gillespie in 1965.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original issue catalogs and specialist sessionographies distinguish Fuller's arranging and conducting in 1949 and his separate Pacific Jazz leadership in the 1960s."
   },
   "ginger-baker": {
     "evidence": [
@@ -9841,6 +10060,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Adds a documented performer or composer and a specific musical contribution to the catalog."
   },
+  "henry-kaiser": {
+    "evidence": [
+      {
+        "claim": "Cuneiform credits Henry Kaiser on guitar and Wadada Leo Smith on trumpet for Yo Miles! Sky Garden, released May 4, 2004.",
+        "id": "ev01",
+        "source_url": "https://cuneiformrecords.bandcamp.com/album/sky-garden"
+      },
+      {
+        "claim": "Sky Garden also credits Greg Osby on alto sax, John Tchicai on tenor and soprano sax, and Steve Smith on drums.",
+        "id": "ev02",
+        "source_url": "https://cuneiformrecords.bandcamp.com/album/sky-garden"
+      },
+      {
+        "claim": "Cuneiform identifies Upriver as the next Yo Miles! release and credits Henry Kaiser on electric guitar with Wadada Leo Smith and other ensemble members.",
+        "id": "ev03",
+        "source_url": "https://cuneiformrecords.bandcamp.com/album/upriver"
+      }
+    ],
+    "key": "henry-kaiser",
+    "limitations": "These are interpretations and extensions of electric Miles Davis music, not sessions with Miles Davis. Release dates do not establish original recording dates.",
+    "primary_source_url": "https://cuneiformrecords.bandcamp.com/album/sky-garden",
+    "summary": "Guitarist Henry Kaiser co-led the electric Miles Davis tribute ensemble Yo Miles! with trumpeter Wadada Leo Smith on Sky Garden and Upriver.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Cuneiform Records gives individual guitar credits and documents two separate releases by the Kaiser-Smith improvising ensemble."
+  },
   "henry-mancini": {
     "evidence": [
       {
@@ -10352,6 +10596,31 @@
     "summary": "Jazz singer Irene Kral spent nine months with Maynard Ferguson's band in 1957 and made 1974-77 recordings including two intimate piano duets with Alan Broadbent.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her duet albums exemplify understated jazz phrasing and lyrical precision."
+  },
+  "irene-reid": {
+    "evidence": [
+      {
+        "claim": "Van Gelder's documented January 15, 1965 Irene Reid session with Oliver Nelson Orchestra includes Why Don't You Tell Me So and Ev'ry Time We Say Goodbye on Verve V/V6-8621.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/van-gelder-studio/discography-1965/"
+      },
+      {
+        "claim": "The January 17 session on the same Verve album includes They All Say I'm the Biggest Fool and When Did You Leave Heaven, with Irene Reid singing and Oliver Nelson arranging.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/van-gelder-studio/discography-1965/"
+      },
+      {
+        "claim": "A distinct January 19 session records Room for One More and Theme From Bewitched with a brass and reed orchestra and Kenny Burrell on guitar.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/van-gelder-studio/catalog-1965/"
+      }
+    ],
+    "key": "irene-reid",
+    "limitations": "The source is specialist archival matrix research, not a live Verve first-party album page. The record uses both possible drummers for some sessions; no single drummer is assigned without track-specific evidence.",
+    "primary_source_url": "https://www.jazzdisco.org/van-gelder-studio/discography-1965/",
+    "summary": "Jazz and blues vocalist Irene Reid recorded Room for One More with Oliver Nelson's orchestra across three January 1965 sessions at Van Gelder Studio.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The reconstructed Verve master matrix lists three dated performances, individual songs, and Nelson's detailed orchestra personnel."
   },
   "isabelle-antena": {
     "evidence": [
@@ -13690,6 +13959,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His independent bass line balances open improvisation with a strong blues and swing pulse."
   },
+  "mark-isham": {
+    "evidence": [
+      {
+        "claim": "ECM's Rubisa Patrol credits Mark Isham on trumpet, flugelhorn and soprano saxophone beside Art Lande, Bill Douglass and Glenn Cronkhite, recorded in Oslo in May 1976.",
+        "id": "ev01",
+        "source_url": "https://ecmrecords.com/product/rubisa-patrol-art-lande-mark-isham-bill-douglass-glenn-cronkhite/"
+      },
+      {
+        "claim": "ECM's 1987 We Begin documents Isham on trumpet, piccolo trumpet and synthesizer in a duo with pianist Art Lande, recorded January 1987 in Oslo.",
+        "id": "ev02",
+        "source_url": "https://ecmrecords.com/product/we-begin-mark-isham-art-lande/"
+      },
+      {
+        "claim": "ECM credits Isham on trumpet, piccolo trumpet and synthesizer for David Torn's Cloud About Mercury, recorded in March 1986 with Tony Levin and Bill Bruford.",
+        "id": "ev03",
+        "source_url": "https://ecmrecords.com/product/cloud-about-mercury-david-torn/"
+      }
+    ],
+    "key": "mark-isham",
+    "limitations": "ECM's 1994 CD reissue of Rubisa Patrol carries a different reissue date from the original 1976 LP; the underlying studio date is May 1976.",
+    "primary_source_url": "https://ecmrecords.com/product/rubisa-patrol-art-lande-mark-isham-bill-douglass-glenn-cronkhite/",
+    "summary": "Trumpeter Mark Isham recorded with Art Lande's Rubisa Patrol in Oslo in 1976 and later collaborated with Lande on the 1987 ECM duo album We Begin.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original ECM release entries provide instrumentation, compositions, recording years and two different configurations."
+  },
   "mark-lockheart": {
     "evidence": [
       {
@@ -15916,6 +16210,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The artist maintained biography gives exact years for touring bands and original early Landmark recordings."
   },
+  "musa-kaleem": {
+    "evidence": [
+      {
+        "claim": "The Prestige original catalog records Musa Kaleem on flute beside Coleman Hawkins, Tiny Grimes and Ray Bryant at Van Gelder Studio on February 28, 1958 for Blues Groove.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/prestige-records/catalog-7700-series/"
+      },
+      {
+        "claim": "The Blue Note discography credits Kaleem on tenor saxophone and flute in Dizzy Reece's July 17, 1960 sextet with Stanley Turrentine and Duke Jordan, including Goose Dance and Comin' On.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/blue-note-records/discography-1959-1960/"
+      },
+      {
+        "claim": "Prestige's 1958 45 rpm catalog separately lists Tiny Grimes' Blues Wail Parts 1 and 2 with Kaleem on flute, from the February 28 recording.",
+        "id": "ev03",
+        "source_url": "https://www.jazzdisco.org/prestige-records/catalog-45-rpm-100-200-series/"
+      }
+    ],
+    "key": "musa-kaleem",
+    "limitations": "Jazzdisco is an independently compiled specialist sessionography reproducing original label catalog data; the label masters themselves were not directly inspected. Prestige's 1958 release and 1970 reissue must not be confused.",
+    "primary_source_url": "https://www.jazzdisco.org/prestige-records/catalog-7700-series/",
+    "summary": "Multi-reed jazz player Musa Kaleem recorded flute with Coleman Hawkins and Tiny Grimes in 1958 and tenor saxophone with Dizzy Reece in 1960.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Specialist archives reconstruct original Prestige and Blue Note matrices, session dates, instrument changes and original record titles."
+  },
   "myra-melford": {
     "evidence": [
       {
@@ -16337,6 +16656,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The restored record's original Priam catalog number and credits document a specific group and Brignola's multiple instruments."
   },
+  "nick-evans": {
+    "evidence": [
+      {
+        "claim": "Cuneiform's archival Bremen to Bridgwater credits Nick Evans on trombone in Brotherhood of Breath recordings from Bremen in June 1971 and Bridgwater in February and November 1975.",
+        "id": "ev01",
+        "source_url": "https://cuneiformrecords.bandcamp.com/album/bremen-to-bridgwater"
+      },
+      {
+        "claim": "Ogun's Happy Daze + Oh! For The Edge credits Evans on trombone in Elton Dean's Ninesense, documenting a 1976 London concert and a 1977 studio album.",
+        "id": "ev02",
+        "source_url": "https://eltondean.bandcamp.com/album/happy-daze-oh-for-the-edge"
+      },
+      {
+        "claim": "Jazz in Britain's preserved BBC archive lists Evans among Brotherhood of Breath's two trombonists for Sun Song, broadcast November 2, 1970.",
+        "id": "ev03",
+        "source_url": "https://jazzinbritain1.bandcamp.com/merch/talking-the-groove-jazz-words-from-the-morning-star-plus-two-cds-of-rare-music"
+      }
+    ],
+    "key": "nick-evans",
+    "limitations": "Bremen to Bridgwater is a 2004 compilation of recordings from 1971 and 1975; dates in the original notes are not publication dates.",
+    "primary_source_url": "https://cuneiformrecords.bandcamp.com/album/bremen-to-bridgwater",
+    "summary": "Welsh jazz trombonist Nick Evans played with Chris McGregor's Brotherhood of Breath in 1971-75 and joined Elton Dean's Ninesense recordings in 1976-77.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Cuneiform's original Radio Bremen tape reissues and Ogun's Elton Dean reissue establish separate ensembles and dated sessions."
+  },
   "nick-travis": {
     "evidence": [
       {
@@ -16705,6 +17049,40 @@
     "summary": "Venezuelan conga player Orlando Poleo performs on Paoli Mejias's 2025 PAPOLEO, adding quitipla and congas to the Latin-jazz arrangement.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Connects Afro-Venezuelan percussion techniques with contemporary Afro-Caribbean jazz."
+  },
+  "orrin-evans": {
+    "evidence": [
+      {
+        "claim": "Smoke Sessions describes Evans leading the quartet with Vicente Archer on bass, Bill Stewart on drums and Immanuel Wilkins on alto saxophone on The Magic of Now.",
+        "id": "ev01",
+        "source_url": "https://smokesessionsrecords.com/shop/albums/the-magic-of-now/"
+      },
+      {
+        "claim": "Smoke Sessions identifies The Captain Black Big Band's Presence as a live recording at Chris' Jazz Cafe and South Kitchen and Jazz Parlor in Philadelphia.",
+        "id": "ev02",
+        "source_url": "https://smokesessionsrecords.com/shop/albums/presence-feat-the-captain-black-big-band/"
+      },
+      {
+        "claim": "Jazz at Lincoln Center lists Evans as pianist in a March 2025 quartet with Robert Hurst and Jeff Tain Watts, with guest vocalist Lisa Fischer.",
+        "id": "ev03",
+        "source_url": "https://ticketing.jazz.org/18231/18234"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://smokesessionsrecords.com/shop/albums/the-magic-of-now/",
+        "https://ticketing.jazz.org/18231/18234",
+        "https://sites.temple.edu/libraryprograms/2011/09/29/september_29_wrtis_legendary_b/"
+      ],
+      "method": "Independent identity triangulation between original record-label discographies, an original jazz concert presenter, and a university jazz-program event.",
+      "note": "All three independently identify the same Philadelphia jazz pianist Orrin Evans: Smoke Sessions as a recording bandleader, Jazz at Lincoln Center as a performing pianist, and Temple University as the pianist, composer and Imani Records founder. The ambiguous queue MBID collision remains unresolved; no arbitrary MBID chosen or assigned."
+    },
+    "key": "orrin-evans",
+    "limitations": "Queue classifies this name as ambiguous. Distinct original institutional authorities identify the same Philadelphia pianist; reciprocal MBID remains unresolved and no arbitrary MBID is asserted.",
+    "primary_source_url": "https://smokesessionsrecords.com/shop/albums/the-magic-of-now/",
+    "summary": "Jazz pianist Orrin Evans recorded The Magic of Now with Vicente Archer, Bill Stewart and Immanuel Wilkins and led the Captain Black Big Band.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Smoke Sessions releases document separate small-group and big-band recordings; three independent institutions establish exact identity."
   },
   "othello-molineaux": {
     "evidence": [
@@ -17424,6 +17802,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Rhythmic post-bop experiment on a widely studied 1965 quartet session"
   },
+  "peter-appleyard": {
+    "evidence": [
+      {
+        "claim": "The Museum of Canadian Music catalogs Peter Appleyard's 1990 Concord jazz album Barbados Heat with eight tracks including Take the A Train, Nuages and Caravan.",
+        "id": "ev01",
+        "source_url": "https://www.citizenfreak.com/titles/323223-peter-appleyard-barbados-heat"
+      },
+      {
+        "claim": "The museum's Barbados Cool catalog identifies Appleyard on vibes with Bucky Pizzarelli on guitar, Major Holley on bass, Butch Miles on drums and Rick Wilkins on tenor sax.",
+        "id": "ev02",
+        "source_url": "https://www.citizenfreak.com/titles/323222-peter-appleyard-barbados-cool"
+      },
+      {
+        "claim": "Barbados Cool's original Concord track list includes Tangerine, Air Mail Special, Passion Flower and Cherokee in a ten-piece program.",
+        "id": "ev03",
+        "source_url": "https://www.citizenfreak.com/titles/323222-peter-appleyard-barbados-cool"
+      }
+    ],
+    "key": "peter-appleyard",
+    "limitations": "The museum's stylistic comparisons are reviewers' opinions; dates refer to catalogued releases, not necessarily recording sessions.",
+    "primary_source_url": "https://www.citizenfreak.com/titles/323223-peter-appleyard-barbados-heat",
+    "summary": "Vibraphonist Peter Appleyard led the 1990 Concord album Barbados Heat and the 1991 follow-up Barbados Cool with Bucky Pizzarelli and Butch Miles.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Museum of Canadian Music preserves two separately catalogued original Concord releases with specific repertoires and musicians."
+  },
   "peter-beets": {
     "evidence": [
       {
@@ -17842,6 +18245,31 @@
     "summary": "Singer Randy Crawford performed the Crusaders' 1979 Street Life and later recorded All Night Long with Joe Sample and No Regrets.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "An original MCA/Verve recording credit and the Recording Academy establish two independent performance projects."
+  },
+  "randy-jackson": {
+    "evidence": [
+      {
+        "claim": "Concord's original Randy Jackson Music Club label biography names his first session assignment with jazz violinist Jean-Luc Ponty and its 2008 Stax/Concord album.",
+        "id": "ev01",
+        "source_url": "https://concord.com/artist/randy-jacksons-music-club/"
+      },
+      {
+        "claim": "Concord's Tom Coster artist interview identifies Randy Jackson as bassist in Coster's early solo ensemble, alongside Joaquin Lievano and Steve Smith.",
+        "id": "ev02",
+        "source_url": "https://concord.com/artist/tom-coster/"
+      },
+      {
+        "claim": "Concord's original Ivory Expeditions release notes credit Randy Jackson as a member of Tom Coster's ensemble on T.C. (1981) and Ivory Expeditions (1983).",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/ivory-expeditions/"
+      }
+    ],
+    "key": "randy-jackson",
+    "limitations": "This is the American Idol judge and session bassist, not a namesake rock singer. Concord's 2008 Music Club is not categorized as a straight-ahead jazz album.",
+    "primary_source_url": "https://concord.com/artist/randy-jacksons-music-club/",
+    "summary": "Bassist Randy Jackson played on Jean-Luc Ponty sessions and Tom Coster's early solo albums before producing Randy Jackson's Music Club Vol. 1.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two original Concord artist profiles and a project album page corroborate roles as bassist, producer and band member."
   },
   "ray-anthony": {
     "evidence": [
@@ -18709,6 +19137,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A first-hand NAMM oral-history archive and the contemporary drumming press document specific pedagogical and performance work."
   },
+  "sammy-davis-jr": {
+    "evidence": [
+      {
+        "claim": "Smithsonian National Museum of American History preserves the Sammy Davis Jr. Show AFRTS RL-42-6 disc naming Davis, Sinatra and Dean Martin.",
+        "id": "ev01",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_670435"
+      },
+      {
+        "claim": "The Recording Academy identifies Sammy Davis Jr.'s Reprise What Kind of Fool Am I as nominated for Record of the Year and Male Solo Vocal Performance in 1963.",
+        "id": "ev02",
+        "source_url": "https://www.grammy.com/artists/sammy-davis-jr/8491"
+      },
+      {
+        "claim": "The Recording Academy's Grammy Hall of Fame lists Davis's Reprise single What Kind of Fool Am I? (1962) as inducted in 2002.",
+        "id": "ev03",
+        "source_url": "https://www.grammy.com/awards/hall-of-fame-award/"
+      }
+    ],
+    "key": "sammy-davis-jr",
+    "limitations": "The Reprise recording was nominated in 1963 and entered the Hall of Fame in 2002; Davis did not win the 1963 recording categories.",
+    "primary_source_url": "https://americanhistory.si.edu/collections/object/nmah_670435",
+    "summary": "Singer Sammy Davis Jr. recorded What Kind of Fool Am I for Reprise and appeared with Frank Sinatra and Dean Martin on an armed-forces radio disc.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Smithsonian's physical sound-recording catalog and Recording Academy's original 1963 award records document different named performances."
+  },
   "sammy-nestico": {
     "evidence": [
       {
@@ -19183,6 +19636,26 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A leading big-band brass player with a distinctive cup-mute sound."
   },
+  "sol-yaged": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's original Urania Accent on Trombone reissue credits Sol Yaged on clarinet alongside Jack Teagarden, Ruby Braff and Lucky Thompson, recorded in New York in October 1954.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/jack-teagarden-albums/2857-accent-on-trombone.html"
+      },
+      {
+        "claim": "Library of Congress Gottlieb collection lists Sol Solomon Yaged in a photograph with Doc Pomus, John Levy, Rex Stewart and Uffe Bode at New York's Pied Piper circa September 1947.",
+        "id": "ev02",
+        "source_url": "https://www.loc.gov/collections/jazz-photography-of-william-p-gottlieb/articles-and-essays/gottlieb-in-his-own-words/"
+      }
+    ],
+    "key": "sol-yaged",
+    "limitations": "The 1947 Gottlieb photo documents presence with jazz colleagues, not a recorded performance. The 1954 session date is distinct from the Fresh Sound reissue date.",
+    "primary_source_url": "https://www.freshsoundrecords.com/jack-teagarden-albums/2857-accent-on-trombone.html",
+    "summary": "Clarinetist Sol Yaged played a 1954 Jack Teagarden session and appeared at New York's Pied Piper in 1947 with Rex Stewart and Doc Pomus.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A restored original Urania session ledger and a Library of Congress contemporary performance-scene photograph document separate musical contexts."
+  },
   "solveig-slettahjell": {
     "evidence": [
       {
@@ -19382,6 +19855,31 @@
     "summary": "Multi-instrumentalist Stephan Micus studies instruments worldwide and overdubs them in solo compositions. His 2024 album To the Rising Moon featured Colombian tiples.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His ECM catalog explores the sound of non-Western acoustic instruments in new combinations."
+  },
+  "sterling-bose": {
+    "evidence": [
+      {
+        "claim": "Jazz Lives' original record analysis identifies Sterling Bose on trumpet with Johnny Mercer, Jack Teagarden, Fulton McGrath, Dick McDonough and Hank Wayland in Victor Young's August 24, 1934 session of The Bathtub Ran Over Again.",
+        "id": "ev01",
+        "source_url": "https://jazzlives.wordpress.com/2015/03/30/your-homework-assignment-johnny-mercer-1934/"
+      },
+      {
+        "claim": "The Syncopated Times' original historical investigation identifies Bose as a member of the Original Crescent City Jazzers and as a later player with Jean Goldkette.",
+        "id": "ev02",
+        "source_url": "https://syncopatedtimes.com/sterling-bose-forgotten-hot-jazz-cornetist/"
+      },
+      {
+        "claim": "The original historical article traces Bose recordings and orchestral work between 1930 and 1936 with Pollack, Teagarden, Haymes and Ray Noble.",
+        "id": "ev03",
+        "source_url": "https://syncopatedtimes.com/sterling-bose-forgotten-hot-jazz-cornetist/"
+      }
+    ],
+    "key": "sterling-bose",
+    "limitations": "The Library of Congress Joe Haymes finding aid could not be directly inspected. The 1934 session is documented by a specialist's listening and record-history investigation, not by an original Decca session ledger.",
+    "primary_source_url": "https://jazzlives.wordpress.com/2015/03/30/your-homework-assignment-johnny-mercer-1934/",
+    "summary": "Cornetist Sterling Bose played in Joe Haymes's big band and performed with the Original Crescent City Jazzers before later swing-orchestra work.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Specialist investigations of original early swing recordings document Bose's dated trumpet work and his orchestral affiliations."
   },
   "steve-beresford": {
     "evidence": [
@@ -21461,6 +21959,31 @@
     "summary": "Dutch jazz-pop singer Wouter Hamel made his North Sea Jazz Festival debut in 2005 and released Hamel, Nobody's Tune and the self-produced Lohengrin.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Dutch public broadcaster NPO, an international festival biography and the artist's own album catalog document his trajectory beyond generic genre labeling."
+  },
+  "wyatt-ruther": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's RCA Victor Basses Loaded reissue identifies Wyatt Bull Ruther as solo bass leader on tracks 9-12 recorded January 29, 1955 in New York.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/milt-hinton-wendell-marshall-wyatt-ruther-albums/53684-basses-loaded-east-coast-jazz5-2-lp-on-1-cd.html"
+      },
+      {
+        "claim": "Fresh Sound's Boots Mussulli / Toshiko Akiyoshi Storyville restoration credits Ruther on bass with Akiyoshi and Ed Thigpen at a July 1956 session.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/boots-mussulli-albums/56624-little-man-1954-1956-quartet-sessions.html"
+      },
+      {
+        "claim": "Fresh Sound's Playtime reissue lists Ruther on bass in unreleased Buddy Rich Argo sessions circa January 1961 and in October 1961 NBC broadcasts.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/buddy-rich-albums/5753-buddy-rich-and-his-buddies-playtime-2-lps-on-2-cds-bonus-tracks.html"
+      }
+    ],
+    "key": "wyatt-ruther",
+    "limitations": "All three accounts are archival reissue research from one record company; recording dates in 1955, 1956 and 1961 are distinct from modern CD reissues.",
+    "primary_source_url": "https://www.freshsoundrecords.com/milt-hinton-wendell-marshall-wyatt-ruther-albums/53684-basses-loaded-east-coast-jazz5-2-lp-on-1-cd.html",
+    "summary": "Bassist Wyatt Ruther led a 1955 Basses Loaded date and joined Toshiko Akiyoshi's quartet in 1956 and Buddy Rich's small group in 1961.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Fresh Sound's three independently described original-label sessions identify specific ensembles and recording locations."
   },
   "wynonie-harris": {
     "evidence": [
