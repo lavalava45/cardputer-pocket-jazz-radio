@@ -170,6 +170,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Extended cello beyond jazz rhythm-section roles into independent free improvisation"
   },
+  "abe-lyman": {
+    "evidence": [
+      {
+        "claim": "Abe Lyman directed and played drums for his orchestra on Sallys Got The Blues, July 17, 1924, Brunswick matrix 13555.",
+        "id": "ev01",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Abe Lyman and His Orchestra recorded A Jazz Holiday on November 28, 1928, matrix C-2615, Brunswick 4155.",
+        "id": "ev02",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Lyman directed a May 2, 1932 session including Twelfth Street Rag, matrix B-11763-A, Brunswick 6314; Gary Gillis was drummer.",
+        "id": "ev03",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      }
+    ],
+    "key": "abe-lyman",
+    "limitations": "By 1932 Gary Gillis had replaced Lyman on drums; that later recording is attributed to Lyman as director only. Rust's personnel requires caution.",
+    "primary_source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf",
+    "summary": "Abe Lyman recorded Brunswick dance-orchestra sides from 1924 onward, initially as drummer and later directing the band.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three distinct original Brunswick matrix references separate documented performance from conducting."
+  },
   "abe-most": {
     "evidence": [
       {
@@ -3044,6 +3069,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The original Riverside jazz album descriptions establish the exact drum chair in Byrd's trio across several contrasting releases."
   },
+  "buddy-featherstonhaugh": {
+    "evidence": [
+      {
+        "claim": "Featherstonhaugh played tenor sax with Spike Hughes on Tap Your Feet, April 8, 1931, matrix GB-2764-2, Decca F-2323.",
+        "id": "ev01",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "He played tenor sax with Spike Hughes on St. James Infirmary, September 30, 1931, matrix GB-3345-3, Decca F-2584.",
+        "id": "ev02",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "He played tenor sax in Benny Carter's orchestra on These Foolish Things, April 15, 1936, matrix S-106-1, Vocalion S-5.",
+        "id": "ev03",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      }
+    ],
+    "key": "buddy-featherstonhaugh",
+    "limitations": "The specialist discography lists ensemble participation, not a definite personal solo; original labels are not separately inspected.",
+    "primary_source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf",
+    "summary": "Buddy Featherstonhaugh recorded tenor saxophone with Spike Hughes in 1931 and with Benny Carter's orchestra in 1936.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Two original bandleaders and dated 78-rpm matrices personally credit the tenor saxophonist."
+  },
   "buddy-greco": {
     "evidence": [
       {
@@ -3863,6 +3913,31 @@
     "summary": "Trumpeter Carmell Jones played on Horace Silver's 'Song for My Father' (1964) with Joe Henderson, Teddy Smith and Roger Humphries before moving to Berlin.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His trumpet recorded a definitive hard-bop quintet with Horace Silver at the moment the group changed personnel."
+  },
+  "carmen-lombardo": {
+    "evidence": [
+      {
+        "claim": "Carmen Lombardo played clarinet and alto sax and sang with Guy Lombardo on Cotton Pickers Ball, March 10, 1924, Gennett matrix 11792-B.",
+        "id": "ev01",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "He sang and played reeds on Louisiana Rhythm Kings Mississippi Mud, January 24, 1928, Vocalion matrix C-1664-5.",
+        "id": "ev02",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Library of Congress Vernon Duke collection lists Guy Lombardo Decca 3575 Taking a Chance on Love with Carmen Lombardo in the vocal trio.",
+        "id": "ev03",
+        "source_url": "https://findingaids.loc.gov/exist_collections/ead3pdf/music/2005/mu005004.pdf"
+      }
+    ],
+    "key": "carmen-lombardo",
+    "limitations": "Do not merge the different 1935 Radio Mirror and later Decca vocal-trio lineups; historical matrix personnel is reconstructed.",
+    "primary_source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf",
+    "summary": "Carmen Lombardo played reeds and sang with Guy Lombardo's orchestra in the 1920s and received separate later vocal-trio credits.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Separate original 78-matrix and institutional discographical records establish his recorded musical work."
   },
   "carmen-lundy": {
     "evidence": [
@@ -5754,6 +5829,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Adds a documented performer or composer and a specific musical contribution to the catalog."
   },
+  "cousin-joe": {
+    "evidence": [
+      {
+        "claim": "The Smithsonian 1973 Folklife Festival tape FP-1973-7RR-0098 lists Cousin Joe performing Going Down Slow, Black Berry Boogie, Bad Luck Blues and Blueberry Hill on piano, recorded July 4 in Washington, DC.",
+        "id": "ev01",
+        "source_url": "https://sova.si.edu/record/cfch.sff.1973/contents?i=0&n=100&q=Washington+--+Place+names&s=0&t=W"
+      },
+      {
+        "claim": "Smithsonian tape FP-1973-7RR-0099 separately records Cousin Joe's For Lovin' You/Blue Monday, Ice Cream Freezer and Let the Good Times Roll on July 4, 1973.",
+        "id": "ev02",
+        "source_url": "https://collections.si.edu/search/results.htm?q=%22Joe+Cousin+1907-%22"
+      },
+      {
+        "claim": "Smithsonian Folklife Archives catalog the distinct Louisiana fieldwork cassette FP-1985-CT-0057 with Pleasant Joseph, Cousin Joe, in a blues piano interview conducted by Allison Miner on April 29, 1985.",
+        "id": "ev03",
+        "source_url": "https://collections.si.edu/search/results.htm?fq=-object_type%3A%22Sound+recordings%22&fq=name%3A%22Smithsonian+Institution.+Center+for+Folklife+and+Cultural+Heritage%22&q=%22Piano%22&view=list"
+      }
+    ],
+    "key": "cousin-joe",
+    "limitations": "The July 1973 festival performances and April 1985 field interview are distinct archival events. Smithsonian finding-aid catalog entries do not establish commercial record release dates.",
+    "primary_source_url": "https://sova.si.edu/record/cfch.sff.1973/contents?i=0&n=100&q=Washington+--+Place+names&s=0&t=W",
+    "summary": "New Orleans pianist Cousin Joe played Black Berry Boogie and Going Down Slow at the 1973 Smithsonian festival and gave a 1985 blues-piano field interview.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian original recording inventories identify individual piano tracks and separately archived oral-history fieldwork."
+  },
   "dakota-staton": {
     "evidence": [
       {
@@ -5993,6 +6093,36 @@
     "summary": "Jazz guitarist David Gilmore recorded with Wayne Shorter on High Life and released leader albums including Numerology and Energies of Change.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The musician original site explicitly distinguishes Wayne Shorter recording credits from Gilmore own recorded albums."
+  },
+  "david-moss": {
+    "evidence": [
+      {
+        "claim": "Yatak's original Full House restoration credits David Moss on percussion and voice on 19 duets recorded October 1983 and January 1984 at Martin Bisi's Brooklyn studio, with partners including Bill Laswell, John Zorn and Fred Frith.",
+        "id": "ev01",
+        "source_url": "https://david-moss.bandcamp.com/album/full-house"
+      },
+      {
+        "claim": "Yatak's original Dense Band liner notes identify Moss on drums, voice and percussion, co-composing songs with Fred Frith, recorded February-March 1985 at B.C. Studio, Brooklyn; original issue June 1985.",
+        "id": "ev02",
+        "source_url": "https://david-moss.bandcamp.com/album/dense-band"
+      },
+      {
+        "claim": "Intakt's original Five Voices album credits David Moss on vocals alongside Greetje Bijma, Shelley Hirsch, Anna Homler and Carles Santos; its catalog identifies Intakt CD 015 released in 1989.",
+        "id": "ev03",
+        "source_url": "https://david-moss-intakt.bandcamp.com/album/five-voices"
+      },
+      {
+        "claim": "Intakt's Vocal Village Project album directly credits Moss on voice and drums at a live Zurich concert recorded October 24, 1997 and issued in 2002.",
+        "id": "ev04",
+        "source_url": "https://david-moss-intakt.bandcamp.com/album/vocal-village-project"
+      }
+    ],
+    "key": "david-moss",
+    "limitations": "The new Full House and Dense Band digital releases are 2026 remasters of 1984 and 1985 originals. The Five Voices Intakt issue is dated 1989; no original studio session date is assumed.",
+    "primary_source_url": "https://david-moss.bandcamp.com/album/full-house",
+    "summary": "Improviser David Moss recorded Full House duets in 1983-84, led the 1985 Dense Band sessions and sang on Intakt's Five Voices in 1989.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Yatak/Moers and Intakt reissue credits document Moss's personally attributed singing, drumming, production and collaborators."
   },
   "david-sanborn": {
     "evidence": [
@@ -6359,6 +6489,31 @@
     "summary": "Clarinetist Don Byron produced and arranged Bug Music, recorded at Master Sound in May 1996 with players including Kenny Davis, Uri Caine and Joey Baron.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "He reframed early cartoon-era jazz repertoire for a modern improvising ensemble."
+  },
+  "don-joseph": {
+    "evidence": [
+      {
+        "claim": "Fresh Sound's original EmArcy MG-36093 source credits Don Joseph on cornet with Al Cohn, Milt Gold, John Williams, Teddy Kotick and Art Mardigan at a New York session on May 20, 1954.",
+        "id": "ev01",
+        "source_url": "https://www.freshsoundrecords.com/don-joseph-albums/6526-three-leaders-one-sideman-a-tribute-to-the-jazz-poetry-of-don-joseph.html"
+      },
+      {
+        "claim": "Fresh Sound's Vik LX-1098 original session inventory credits Joseph on cornet with guitarist Chuck Wayne on July 22, 1957 and on trumpet on July 23, 1957, at RCA Studio A, New York.",
+        "id": "ev02",
+        "source_url": "https://www.freshsoundrecords.com/don-joseph-albums/6526-three-leaders-one-sideman-a-tribute-to-the-jazz-poetry-of-don-joseph.html"
+      },
+      {
+        "claim": "The same archival Columbia The Arranger sessions credit Joseph on cornet and list him as a soloist on Mullenium and All the Things You Are, recorded April 19-20, 1957 with Gerry Mulligan.",
+        "id": "ev03",
+        "source_url": "https://www.freshsoundrecords.com/don-joseph-albums/6526-three-leaders-one-sideman-a-tribute-to-the-jazz-poetry-of-don-joseph.html"
+      }
+    ],
+    "key": "don-joseph",
+    "limitations": "All three original-label session groups are reconstructed by one modern archival publisher, Fresh Sound; its reissue date must not replace 1954 or 1957 recording dates.",
+    "primary_source_url": "https://www.freshsoundrecords.com/don-joseph-albums/6526-three-leaders-one-sideman-a-tribute-to-the-jazz-poetry-of-don-joseph.html",
+    "summary": "Cornetist Don Joseph recorded with Al Cohn in May 1954, Chuck Wayne in July 1957 and Gerry Mulligan's orchestra in April 1957.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original EmArcy, Vik and Columbia album sessions are reconstructed with separate original masters, dates, personnel and solo credits."
   },
   "don-lusher": {
     "evidence": [
@@ -6833,6 +6988,31 @@
     "summary": "Jazz saxophonist and arranger Ernie Wilkins contributed to Count Basie's orchestral repertory and played on Osie Johnson's 1955 Osie's Oasis.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The label's own reissue documentation names Wilkins among Basie's arrangers and as a specifically credited player in a 1955 jazz session."
+  },
+  "erskine-butterfield": {
+    "evidence": [
+      {
+        "claim": "Erskine Butterfield recorded piano solos Saturday Night Twist and Piano Cocktail around December 1939, issued on JD 8191.",
+        "id": "ev01",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Butterfield played piano with his Blue Boys on Tuxedo Junction, February 21, 1940, matrix 67220-A, Decca 3042.",
+        "id": "ev02",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Butterfield sang The Down Home Blues on May 27, 1940, matrix 67821-A, Decca 3252.",
+        "id": "ev03",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      }
+    ],
+    "key": "erskine-butterfield",
+    "limitations": "The piano-only session is dated circa December 1939 rather than an exact day; Rust personnel may require original label confirmation.",
+    "primary_source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf",
+    "summary": "Erskine Butterfield recorded piano solos circa 1939 and led his Blue Boys on Decca sides in 1940, including vocals.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Specific dated issued piano and vocal matrix credits identify individual contributions."
   },
   "erwin-lehn": {
     "evidence": [
@@ -8372,6 +8552,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His recordings interpret both the American songbook and Brazilian popular music."
   },
+  "freddy-gardner": {
+    "evidence": [
+      {
+        "claim": "Freddy Gardner recorded reed solos on China Boy in London on December 16, 1935, matrix CE-7302-1, Parlophone R-2153.",
+        "id": "ev01",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Gardner recorded Japanese Sandman on March 7, 1936, matrix CE-7491-1, Parlophone R-2189.",
+        "id": "ev02",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Freddy Gardner and His Swing Orchestra recorded Limehouse Blues on December 17, 1937, matrix R-2538-1, Rex 9225.",
+        "id": "ev03",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      }
+    ],
+    "key": "freddy-gardner",
+    "limitations": "Rust is a legacy discography with known personnel errors. Gardner should not be credited on the separate June 1936 Benny Carter session without independent proof.",
+    "primary_source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf",
+    "summary": "Freddy Gardner recorded reed solos for Parlophone in 1935-36 and led a swing orchestra on Rex sides in 1937-38.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Matrix-identified original issues document Gardner as a recorded instrumentalist and leader."
+  },
   "fredrik-ljungkvist": {
     "evidence": [
       {
@@ -8867,6 +9072,31 @@
     "summary": "Bassist Gene Perla switched from piano to upright bass in 1964 and played with Elvin Jones and Sarah Vaughan. He founded Stone Alliance with Steve Grossman and Don Alias.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Perla bridges acoustic jazz, electric groups and self-produced releases."
+  },
+  "gene-rodgers": {
+    "evidence": [
+      {
+        "claim": "Gene Rodgers recorded solo piano sides Was It A Lie and Three Minutes Of Blues in October 1936, matrices S-128 and S-129, Vocalion 527.",
+        "id": "ev01",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Rodgers is listed on piano for Coleman Hawkins Body And Soul, New York October 11, 1939, matrix 042936-1.",
+        "id": "ev02",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Rodgers played piano with the Coleman Hawkins All-Star Octet on Bouncing With Bean on January 3, 1940, matrix 046159-1.",
+        "id": "ev03",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      }
+    ],
+    "key": "gene-rodgers",
+    "limitations": "Historical personnel is reconstructed from Rust, whose publisher warns of errors; no unlisted piano solos should be attributed.",
+    "primary_source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf",
+    "summary": "Gene Rodgers recorded solo piano for Vocalion in 1936 and accompanied Coleman Hawkins on landmark sessions in 1939-40.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original matrix identifiers document both a solo piano session and sideman recordings."
   },
   "gene-roland": {
     "evidence": [
@@ -10364,6 +10594,31 @@
     "summary": "Swedish jazz pianist Gunnar Svensson recorded with Lars Gullin in 1951-1952 and accompanied Rita Reys and Rolf Blomquist in 1953.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Historical Metronome session records identify Svensson's piano credits across distinct ensembles and recording dates."
+  },
+  "gus-aiken": {
+    "evidence": [
+      {
+        "claim": "Gus Aiken played cornet in Perry Bradford's Jazz Phools on Memphis Tennessee, June 26, 1923, Victor matrix 28234-2.",
+        "id": "ev01",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "Aiken played trumpet with Luis Russell on Goin To Town, August 28, 1931, Victor matrix 70196-1.",
+        "id": "ev02",
+        "source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf"
+      },
+      {
+        "claim": "A Smithsonian 1934 original negative independently labels Gus Aiken with Luis Russell's orchestra.",
+        "id": "ev03",
+        "source_url": "https://www.americanhistory.si.edu/it/collections/archival-item/sova-nmah-ac-1323-ref4436"
+      }
+    ],
+    "key": "gus-aiken",
+    "limitations": "Birth years conflict between 1899 ship records and 1902 in Grove; no year of birth accepted. Rust is a fallible secondary personnel reconstruction.",
+    "primary_source_url": "https://mainspringpress.org/wp-content/uploads/2026/09/RUST_JRR-6.pdf",
+    "summary": "Gus Aiken played cornet or trumpet on Perry Bradford, Luis Russell and Sidney Bechet sessions between 1923 and 1941.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Specific session matrices and a Smithsonian original orchestra portrait establish personal recorded activity."
   },
   "gus-johnson": {
     "evidence": [
@@ -13022,6 +13277,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Connects South African jazz with its historical political context."
   },
+  "jonathan-sass": {
+    "evidence": [
+      {
+        "claim": "ATS-Records issued Jon Sass's jazz album Sassified on February 1, 2005, with 13 tracks.",
+        "id": "ev01",
+        "source_url": "https://music.apple.com/us/album/sassified/129846019"
+      },
+      {
+        "claim": "The original label catalog credits Jon Sass on Pictures At an Exhibition, issued in 2004.",
+        "id": "ev02",
+        "source_url": "https://music.apple.com/us/album/pictures-at-an-exhibition/135057575"
+      },
+      {
+        "claim": "ATS labels Jon Sass on the original 1994 jazz album Faces.",
+        "id": "ev03",
+        "source_url": "https://music.apple.com/us/album/faces/134849738"
+      }
+    ],
+    "key": "jonathan-sass",
+    "limitations": "Artist listed as Jon Sass in the source credits; the encyclopedia key Jonathan Sass is an identity normalization, not an extra musician.",
+    "primary_source_url": "https://music.apple.com/us/album/sassified/129846019",
+    "summary": "Tubist Jon Sass made the ATS jazz albums Faces in 1994, Pictures at an Exhibition in 2004 and Sassified in 2005.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three separate publisher-attributed recordings tie the performer to distinct dated jazz releases."
+  },
   "joris-teepe": {
     "evidence": [
       {
@@ -13676,6 +13956,31 @@
     "summary": "Norwegian drummer Kim Ofstad co-founded D'Sound after studying at Berklee. He has released seven albums with the group and worked with Jill Scott and Snoop Dogg.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His career reflects a crossover of jazz, funk and hip-hop groove."
+  },
+  "kip-hanrahan": {
+    "evidence": [
+      {
+        "claim": "Nonesuch's Tango: Zero Hour original session credits name Kip Hanrahan as producer and document May 1986 recording and mixing at Sound Ideas Studio in New York.",
+        "id": "ev01",
+        "source_url": "https://www.nonesuch.com/albums/tango-zero-hour"
+      },
+      {
+        "claim": "Nonesuch credits Hanrahan as co-producer with Piazzolla on The Rough Dancer and the Cyclical Night, recorded August-September 1987 at three New York studios.",
+        "id": "ev02",
+        "source_url": "https://www.nonesuch.com/albums/rough-dancer-and-cyclical-night"
+      },
+      {
+        "claim": "Nonesuch's 2022 original vault reissue notes identify Hanrahan as founder of American Clave and author of original and new liner notes for its three Piazzolla albums.",
+        "id": "ev03",
+        "source_url": "https://www.nonesuch.com/journal/nonesuch-releases-astor-piazzolla-american-clav-recordings-vinyl-and-cd-box-sets-first-time"
+      }
+    ],
+    "key": "kip-hanrahan",
+    "limitations": "Hanrahan is the producer, not identified as a bandoneon or trumpet performer on either album; 1998, 2000 and 2022 refer to Nonesuch reissues, not the original 1986-87 recordings.",
+    "primary_source_url": "https://www.nonesuch.com/albums/tango-zero-hour",
+    "summary": "Percussionist and producer Kip Hanrahan founded American Clave and produced Astor Piazzolla's Tango: Zero Hour and The Rough Dancer sessions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Nonesuch production credits tie Hanrahan to separately dated Piazzolla studio recordings, and its archival box-set notes identify his label ownership and liner writing."
   },
   "kippie-moeketsi": {
     "evidence": [
@@ -14506,6 +14811,26 @@
     "summary": "Blues singer Mamie Smith recorded Crazy Blues in 1920 for OKeh, helping launch commercial recording of Black women blues vocalists.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The Library of Congress National Recording Registry ties the historic 1920 recording to a new market for female blues singers."
+  },
+  "manny-klein": {
+    "evidence": [
+      {
+        "claim": "Manny Klein is credited on trumpet for Benny Goodman's October 18, 1933 Columbia session, including Ain'tcha Glad, matrix 265165.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/prestige-records/discography-1933-1940/"
+      },
+      {
+        "claim": "Klein is credited with the Benny Goodman orchestra on the October 27, 1933 recording Texas Tea Party, original Columbia matrix 265167.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/prestige-records/discography-1933-1940/"
+      }
+    ],
+    "key": "manny-klein",
+    "limitations": "His first name sometimes appears as Mannie in historical personnel. Exact featured trumpet solo is not established.",
+    "primary_source_url": "https://www.jazzdisco.org/prestige-records/discography-1933-1940/",
+    "summary": "Trumpeter Manny Klein played on the original Benny Goodman 1933 Columbia jazz sessions, including Ain'tcha Glad and Texas Tea Party.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Columbia master numbers and sessions establish an individual instrumental credit."
   },
   "manu-delago": {
     "evidence": [
@@ -15581,6 +15906,31 @@
     "summary": "Blues vocalist Mary Stafford recorded Royal Garden Blues and Crazy Blues with Charlie Johnson's band in 1921, then cut her final sides in 1926.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Archeophone's original archival restoration gives distinct 1921 and 1926 recordings, named accompanists, and separate studio phases; Folkways' primary label scholarship corroborates the Columbia sessions."
+  },
+  "marzette-watts": {
+    "evidence": [
+      {
+        "claim": "The ESP-Disk session listing identifies Marzette Watts on tenor and soprano saxophone and bass clarinet for his 1966 And Company recordings.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/esp-disk/discography-1963-present/"
+      },
+      {
+        "claim": "The ESP original-matrix session reconstruction documents Watts on tenor and soprano saxophones and bass clarinet with Byard Lancaster, Sonny Sharrock and Henry Grimes on And Company.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/esp-disk/discography-1963-present/"
+      },
+      {
+        "claim": "The musician's original interview in The Wire describes his later Savoy ensemble recording after the ESP session and recounts his own move into sound engineering.",
+        "id": "ev03",
+        "source_url": "https://www.thewire.co.uk/in-writing/interviews/p%3D14111"
+      }
+    ],
+    "key": "marzette-watts",
+    "limitations": "Original ESP session date is December 1966 but 1968 is the cataloged issue year; an eyewitness interview gives a different day than sessionography, so no exact day appears in the summary. His Savoy record is mentioned as a second project, not given an unsupported exact issue date.",
+    "primary_source_url": "https://www.jazzdisco.org/esp-disk/discography-1963-present/",
+    "summary": "Saxophonist Marzette Watts recorded the 1966 ESP-Disk And Company session with Sonny Sharrock and Clifford Thornton and later recorded for Savoy.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original ESP-Disk inventory identifies his album, the specialist original matrix catalog specifies individual instruments and tracks, and a primary interview documents later work."
   },
   "masha-bijlsma": {
     "evidence": [
@@ -18343,6 +18693,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents this musician's distinctive role in jazz and related music."
   },
+  "norma-teagarden": {
+    "evidence": [
+      {
+        "claim": "The original Commodore 1521 disc Rockin' Chair / Pitchin' a Bit Short lists Norma Teagarden among the credited recording artists, with a 1944 recording year.",
+        "id": "ev01",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_1061480"
+      },
+      {
+        "claim": "A separate 1944 Commodore 592 shellac artifact Big T Blues / Chinatown, My Chinatown again lists Norma with Jack Teagarden's Swingin' Gates and Max Kaminsky.",
+        "id": "ev02",
+        "source_url": "https://americanhistory.si.edu/collections/object/nmah_1060903"
+      },
+      {
+        "claim": "Smithsonian's original Jazz Oral History archive preserves three Norma Teagarden DAT cassettes dated February 19-22, 1993.",
+        "id": "ev03",
+        "source_url": "https://americanhistory.si.edu/ar/collections/archival-item/sova-nmah-ac-0808-ref155"
+      }
+    ],
+    "key": "norma-teagarden",
+    "limitations": "The Smithsonian discs list her as a recording artist without a track-specific piano-solo annotation; the 1993 oral history is an interview, not a music recording. No precise 1944 session days stated.",
+    "primary_source_url": "https://americanhistory.si.edu/collections/object/nmah_1061480",
+    "summary": "Pianist Norma Teagarden appeared on two 1944 Jack Teagarden and His Swingin' Gates Commodore discs and later recorded a jazz oral history for Smithsonian.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian retains separate original Commodore shellac objects with exact side titles, plus dated original historical interview recordings."
+  },
   "norma-winstone": {
     "evidence": [
       {
@@ -18964,6 +19339,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original Route 66 and El Toro retrospective label notes preserve named singles and his combined roles as pianist, bandleader and producer."
   },
+  "paul-hanmer": {
+    "evidence": [
+      {
+        "claim": "Hanmer formed Unofficial Language with drummer Ian Herman and bassist Peter Sklair and the trio recorded Primal Steps in 1994.",
+        "id": "ev01",
+        "source_url": "https://paulhanmer.wordpress.com/about/"
+      },
+      {
+        "claim": "Unofficial Language made its second album Move Moves in 1996, according to Hanmer's career archive.",
+        "id": "ev02",
+        "source_url": "https://paulhanmer.wordpress.com/about/"
+      },
+      {
+        "claim": "Sheer Sound released Hanmer's first leader album Trains to Taung in 1997 with Denis Lalouette and Louis Mhlanga among his collaborators.",
+        "id": "ev03",
+        "source_url": "https://paulhanmer.wordpress.com/about/"
+      }
+    ],
+    "key": "paul-hanmer",
+    "limitations": "The artist biography gives dates for original recordings; later digital store dates must not be mistaken for those sessions.",
+    "primary_source_url": "https://paulhanmer.wordpress.com/about/",
+    "summary": "South African pianist Paul Hanmer recorded two Unofficial Language trio albums in 1994 and 1996 and led Trains to Taung in 1997.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The musician's own documented ensemble history ties original recording years, personnel and his leader debut."
+  },
   "paul-jackson-jr": {
     "evidence": [
       {
@@ -19048,6 +19448,31 @@
     "summary": "Jazz pianist Paul Smith accompanied Karrin Allyson on multiple Concord albums including Daydream and Sweet Home Cookin' and worked at Montreux.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Multiple original Concord release credits identify Smith's instrument and separate recording contexts for vocal accompaniment."
+  },
+  "paula-kelly": {
+    "evidence": [
+      {
+        "claim": "Smithsonian's original Bluebird artifact lists Kelly and the Four Modernaires as vocalists on I Know Why with Glenn Miller and His Orchestra.",
+        "id": "ev01",
+        "source_url": "https://americanhistory.si.edu/de/collections/archival-item/sova-nmah-ac-0750-ref2196"
+      },
+      {
+        "claim": "A second Bluebird artifact in Smithsonian's Harry Warren Papers credits Kelly with Ray Eberle, Tex Beneke and the Modernaires for It Happened in Sun Valley.",
+        "id": "ev02",
+        "source_url": "https://americanhistory.si.edu/ko/collections/archival-item/sova-nmah-ac-0750-ref1971"
+      },
+      {
+        "claim": "The paired Bluebird recording credits Kelly and Ernie Caceres in the vocals for The Kiss Polka; a separate damaged commercial disc is also preserved.",
+        "id": "ev03",
+        "source_url": "https://americanhistory.si.edu/ja/collections/archival-item/sova-nmah-ac-0750-ref2194"
+      }
+    ],
+    "key": "paula-kelly",
+    "limitations": "Original Bluebird catalog artifacts do not provide precise session days. These are recorded singer credits, not songwriting credits; the Smithsonian archive should not be used to assign Kelly to the other disc side.",
+    "primary_source_url": "https://americanhistory.si.edu/de/collections/archival-item/sova-nmah-ac-0750-ref2196",
+    "summary": "Big-band singer Paula Kelly sang on Glenn Miller's Bluebird records I Know Why, It Happened in Sun Valley and The Kiss Polka with the Modernaires.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Smithsonian's Harry Warren Papers preserve separate original Bluebird recording artifacts and name Kelly individually rather than inferring her voice from group membership."
   },
   "peer-baierlein": {
     "evidence": [
@@ -20258,6 +20683,31 @@
     "summary": "Cameroonian bassist and vocalist Richard Bona folds African melody into jazz and Afropop; his collaborations include Pat Metheny and Herbie Hancock.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "African vocal phrasing and bass groove brought into modern crossover jazz"
+  },
+  "richard-carpenter": {
+    "evidence": [
+      {
+        "claim": "Richard Carpenter wrote and arranged Prelude and played piano on the track alongside clarinetist Jim Kanter and Earle Dumler on English horn.",
+        "id": "ev01",
+        "source_url": "https://www.richardandkarencarpenter.com/Album_PianistArrangerComposerConductor.htm"
+      },
+      {
+        "claim": "On Yesterday Once More, the original credit lists Carpenter as co-writer with John Bettis, arranger and keyboard player.",
+        "id": "ev02",
+        "source_url": "https://www.richardandkarencarpenter.com/Album_PianistArrangerComposerConductor.htm"
+      },
+      {
+        "claim": "Karen's Theme is credited as written by Richard Carpenter, with Richard on piano and Earle Dumler on English horn.",
+        "id": "ev03",
+        "source_url": "https://www.richardandkarencarpenter.com/Album_PianistArrangerComposerConductor.htm"
+      }
+    ],
+    "key": "richard-carpenter",
+    "limitations": "Richard Carpenter's official catalog has inconsistent 1997/1998 issue dating; no exact year is claimed. Original pop arranging is not automatically called jazz.",
+    "primary_source_url": "https://www.richardandkarencarpenter.com/Album_PianistArrangerComposerConductor.htm",
+    "summary": "Richard Carpenter played piano on Prelude and wrote and arranged Karen's Theme for his own instrumental solo album.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The artist's original album credits distinguish his piano, keyboard, composition and arrangement roles by track."
   },
   "richard-elliot": {
     "evidence": [
@@ -23456,6 +23906,26 @@
     "summary": "Chicago jazz bassist Victor Sproles recorded with Sun Ra on Sound of Joy and backed Eddie Davis and Johnny Griffin on Battle Stations.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Delmark original recording personnel and Concord original album notes establish independent sessions for a documented Chicago bassist."
+  },
+  "victoria-abril": {
+    "evidence": [
+      {
+        "claim": "The Radio Swiss Jazz catalog credits Victoria Abril on vocals for Mais que nada with Rosa Passos providing guitar and additional vocals.",
+        "id": "ev01",
+        "source_url": "https://www.radioswissjazz.ch/de/musikdatenbank/titel/14653ff928b7a469d0e637e0c35f8b18812e0"
+      },
+      {
+        "claim": "Radio Swiss Jazz separately credits Abril as vocalist for Desde que samba e samba, from Putcheros do Brasil, recorded in Madrid in October 2004.",
+        "id": "ev02",
+        "source_url": "https://www.radioswissjazz.ch/de/musikdatenbank/titel/14966eadb935079bfa4df285d39f0e1b0c1c8"
+      }
+    ],
+    "key": "victoria-abril",
+    "limitations": "These are crossover Brazilian repertoire performances recorded in Madrid in 2004; do not infer earlier jazz instrumental experience.",
+    "primary_source_url": "https://www.radioswissjazz.ch/de/musikdatenbank/titel/14653ff928b7a469d0e637e0c35f8b18812e0",
+    "summary": "Victoria Abril sang the bossa nova titles Mais que nada and Desde que samba e samba for the 2005 Putcheros do Brasil album.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Radio Swiss Jazz's track-level catalog individually identifies the vocalist and recording program."
   },
   "vincent-chancey": {
     "evidence": [
