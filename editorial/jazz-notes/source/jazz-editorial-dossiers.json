@@ -2838,6 +2838,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His rhythm guitar and seven-string playing sustained mainstream swing traditions."
   },
+  "bud-scott": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Folkways credits Bud Scott on banjo for King Oliver's Creole Jazz Band performance of Snake Rag with Louis Armstrong, Johnny Dodds and Lillian Hardin Armstrong.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/king-olivers-creole-jazz-band/snake-rag/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian credits Bud Scott on banjo for the King Oliver Creole Jazz Band recording of High Society, catalog track FW02803_202.",
+        "id": "ev02",
+        "source_url": "https://folkways.si.edu/king-olivers-creole-jazz-band/high-society/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian identifies Scott on banjo for Four or Five Times by Jimmie Noone's Apex Club Orchestra, with Earl Hines on piano and Jimmie Noone on clarinet.",
+        "id": "ev03",
+        "source_url": "https://folkways.si.edu/jimmie-noones-apex-club-orchestra/four-or-five-times/jazz-ragtime/music/track/smithsonian"
+      }
+    ],
+    "key": "bud-scott",
+    "limitations": "The 1950 and 1951 Folkways dates are anthology release dates, not original recording dates. The three exact performer credits are independently indexed Smithsonian track entries but derive from one archival institution, not multiple separate institutional sources. An earlier inaccessible Pete Welding PDF was not relied on.",
+    "primary_source_url": "https://folkways.si.edu/king-olivers-creole-jazz-band/snake-rag/jazz-ragtime/music/track/smithsonian",
+    "summary": "Jazz banjoist Bud Scott recorded with King Oliver's Creole Jazz Band and Jimmie Noone's Apex Club Orchestra during early Chicago jazz.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Smithsonian Folkways archival track catalog names the banjoist individually on several original early-jazz performances by two distinct bands."
+  },
   "budd-johnson": {
     "evidence": [
       {
@@ -3092,6 +3117,31 @@
     "summary": "Berlin percussionist Burkhard Beins joined Polwechsel in 2004; the quartet's Traces of Wood features member-composed pieces and electroacoustic improvisation.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "European improvisation explores the ambiguous border between written structures and collective invention."
+  },
+  "burt-bales": {
+    "evidence": [
+      {
+        "claim": "Stanford Archive of Recorded Sound holds the Burt Bales Collection, including unpublished recordings, concert programs and correspondence from 1937-1992.",
+        "id": "ev01",
+        "source_url": "https://oac.cdlib.org/findaid/ark%3A%2F13030%2Fc8dj5n66"
+      },
+      {
+        "claim": "Stanford's archival biography documents Bales playing jazz piano with Lu Watters, Bunk Johnson, Turk Murphy and Bob Scobey.",
+        "id": "ev02",
+        "source_url": "https://oac.cdlib.org/findaid/ark%3A%2F13030%2Fc8dj5n66"
+      },
+      {
+        "claim": "Smithsonian Folkways credits Burt Bales on piano for Kansas City Stomp by Benny Strickler and the Yerba Buena Jazz Band.",
+        "id": "ev03",
+        "source_url": "https://folkways.si.edu/benny-strickler-and-the-yerba-buena-jazz-band/kansas-city-stomp/jazz-ragtime/music/track/smithsonian"
+      }
+    ],
+    "key": "burt-bales",
+    "limitations": "The Stanford finding aid describes a collection spanning 1937-1992, not a single recording session. Smithsonian's 1979 date is the anthology release year, not the recording date.",
+    "primary_source_url": "https://oac.cdlib.org/findaid/ark%3A%2F13030%2Fc8dj5n66",
+    "summary": "Jazz pianist Burt Bales worked with the Yerba Buena Jazz Band and was recorded on Kansas City Stomp; his own recordings survive in the Stanford archive.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Stanford's original archival collection and Smithsonian's track-level recording credits independently document Bales's jazz career."
   },
   "burton-greene": {
     "evidence": [
@@ -4490,6 +4540,31 @@
     "summary": "Saxophonist Charlie Barnet led an orchestra filmed performing Skyliner, Andy's Boogie and Cherokee. Smithsonian reels document his tenor, soprano and alto playing.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original film holdings identify his saxophone roles in multiple swing performances."
+  },
+  "charlie-dixon": {
+    "evidence": [
+      {
+        "claim": "Smithsonian Folkways credits Charlie Dixon on banjo for Fletcher Henderson's Copenhagen with Louis Armstrong, Coleman Hawkins and Fletcher Henderson.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/fletcher-henderson-and-his-orchestra/copenhagen/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian credits Dixon on banjo for Sugar Foot Stomp, with Louis Armstrong on trumpet, Fletcher Henderson on piano and Kaiser Marshall on drums.",
+        "id": "ev02",
+        "source_url": "https://folkways.si.edu/fletcher-henderson-orchestra-with-louis-armstrong-and-coleman-hawkins/sugar-foot-stomp/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian also identifies Dixon on banjo for Jackass Blues in a Henderson orchestra featuring Rex Stewart, Buster Bailey and Coleman Hawkins.",
+        "id": "ev03",
+        "source_url": "https://folkways.si.edu/fletcher-henderson-and-his-orchestra/jackass-blues/jazz-ragtime/music/track/smithsonian"
+      }
+    ],
+    "key": "charlie-dixon",
+    "limitations": "The Folkways release years are anthology issue dates, not original performance dates. Ensemble credits do not establish individual banjo solos.",
+    "primary_source_url": "https://folkways.si.edu/fletcher-henderson-and-his-orchestra/copenhagen/jazz-ragtime/music/track/smithsonian",
+    "summary": "Banjoist Charlie Dixon recorded with Fletcher Henderson's orchestra on Copenhagen, Sugar Foot Stomp and other early New York jazz sides.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian Folkways provides explicit individual banjo credits on separate recordings with original ensemble personnel."
   },
   "charlie-fowlkes": {
     "evidence": [
@@ -7151,6 +7226,31 @@
     "summary": "Jazz guitarist and educator Frank Haunschild trained in Cologne and later became a professor of jazz guitar at its music university.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Shows the educational lineage of German jazz guitar."
+  },
+  "frank-hewitt": {
+    "evidence": [
+      {
+        "claim": "JazzTimes identifies Fresh From the Cooler as a 1996 Smalls trio recording with pianist Frank Hewitt, bassist Ari Roland and drummer Jimmy Lovelace.",
+        "id": "ev01",
+        "source_url": "https://www.jazztimes.com/archives/frank-hewitt-fresh-from-the-cooler/?v=a672068055fa"
+      },
+      {
+        "claim": "Stereophile's 2007 record review independently credits Hewitt on piano, Roland on bass and Lovelace on drums for the 2006 Smalls CD SRCD-0016.",
+        "id": "ev02",
+        "source_url": "https://www.stereophile.com/content/2007-records-die-page-3"
+      },
+      {
+        "claim": "JazzTimes reports that the Smalls label began issuing previously unavailable Hewitt recordings in 2004, after the pianist died in 2002.",
+        "id": "ev03",
+        "source_url": "https://www.jazztimes.com/archives/frank-hewitt-never-stop-playing/?v=a672068055fa"
+      }
+    ],
+    "key": "frank-hewitt",
+    "limitations": "Smalls Records' original website is no longer available. These are contemporary independent record reviews rather than studio recording ledgers; 2006 is the issue year, not the original 1996 recording year.",
+    "primary_source_url": "https://www.jazztimes.com/archives/frank-hewitt-fresh-from-the-cooler/?v=a672068055fa",
+    "summary": "Bebop pianist Frank Hewitt recorded at New York's Smalls with Ari Roland and Jimmy Lovelace; his trio recordings were issued after his 2002 death.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Contemporary record reviews identify the pianist's trio personnel, the original 1996 recording period and posthumous Smalls Records releases."
   },
   "frank-kimbrough": {
     "evidence": [
@@ -10185,6 +10285,26 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Adds a documented performer or composer and a specific musical contribution to the catalog."
   },
+  "henry-busse": {
+    "evidence": [
+      {
+        "claim": "The Library of Congress catalog lists Henry Busse on trumpet for Paul Whiteman's Ambassador Orchestra Victor recording Avalon, made in Camden on August 23, 1920.",
+        "id": "ev01",
+        "source_url": "https://www.loc.gov/item/jukebox-37794/"
+      },
+      {
+        "claim": "The original Victor recording Anytime, Anyday, Anywhere identifies Henry Busse as a member of the trumpet section of Whiteman's 1920 Ambassador Orchestra.",
+        "id": "ev02",
+        "source_url": "https://www.loc.gov/item/jukebox-37845/"
+      }
+    ],
+    "key": "henry-busse",
+    "limitations": "The recordings were jazz-influenced dance-band performances, not verified evidence of individual improvised Busse trumpet solos. An inaccessible Library of Congress PDF concerning a later 1948 motion picture was excluded.",
+    "primary_source_url": "https://www.loc.gov/item/jukebox-37794/",
+    "summary": "Trumpeter Henry Busse played in Paul Whiteman's Ambassador Orchestra on 1920 Victor recordings of Avalon and Anytime, Anyday, Anywhere.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Victor recording records preserved by the Library of Congress establish Busse's trumpet credits in specific early dance-band ensembles."
+  },
   "henry-kaiser": {
     "evidence": [
       {
@@ -11843,6 +11963,39 @@
     "summary": "Improvising pianist Joel Futterman recorded The Deep in 2022 with William Parker, Chad Fowler and Steve Hirsh. His 2023 Innerpause is a duo with Michael Wimberly.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His artist-maintained discography documents evolving free-improvisation partnerships."
+  },
+  "john-campbell": {
+    "evidence": [
+      {
+        "claim": "Concord's Too Darn Hot credits Campbell on piano with Bob Maize and Donny Osborne behind Mel Torme at two separate concerts recorded in 1990.",
+        "id": "ev01",
+        "source_url": "https://concord.com/concord-albums/mel-torme-too-darn-hot/"
+      },
+      {
+        "claim": "Illinois Wesleyan University's jazz festival program credits Campbell's 1988 After Hours trio with bassist Todd Coolman and drummer Gerry Gibbs.",
+        "id": "ev02",
+        "source_url": "https://www.iwu.edu/news/2024/jazz-fest-program.pdf"
+      },
+      {
+        "claim": "The university's performer history identifies Campbell as the pianist for Mel Torme in the late 1980s and names his 1993 Live at Maybeck Recital Hall Volume 29.",
+        "id": "ev03",
+        "source_url": "https://www.iwu.edu/news/2024/jazz-fest-program.pdf"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://concord.com/concord-albums/mel-torme-too-darn-hot/",
+        "https://www.iwu.edu/news/2024/jazz-fest-program.pdf"
+      ],
+      "method": "Independent exact-person cross-check between original Concord Jazz concert credits and an Illinois Wesleyan University jazz concert artist program.",
+      "note": "Both original institutions identify the Illinois-born pianist John Campbell as Mel Torme's accompanist, and the university program additionally identifies his After Hours and Maybeck releases. The queue's reciprocal MBID remains unverified; no arbitrary MBID has been selected or inferred."
+    },
+    "key": "john-campbell",
+    "limitations": "The source queue lacks reciprocal identification; two original institutional sources match an Illinois pianist associated with Torme. No arbitrary MBID was chosen. The 2002 Concord two-CD issue reissues 1990 concert material.",
+    "primary_source_url": "https://concord.com/concord-albums/mel-torme-too-darn-hot/",
+    "summary": "Illinois jazz pianist John Campbell accompanied Mel Torme on two 1990 Concord concert recordings and led his own 1988 After Hours piano trio.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Concord's original concert reissue and an independent university jazz program establish the same pianist, named instrumental partners and separate projects."
   },
   "john-carter": {
     "evidence": [
@@ -15364,6 +15517,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His rhythmic responses anchor a collective quartet of reeds, trombone and cello."
   },
+  "michel-colombier": {
+    "evidence": [
+      {
+        "claim": "The A&M archives list Wings as Colombier's 1971 ten-part orchestral album, catalog SP 3503, featuring Freedom and Fear, Thalassa and Emmanuel.",
+        "id": "ev01",
+        "source_url": "https://www.onamrecords.com/artists/michel-colombier/discography/united-states/a-m-records/sp-3503/wings"
+      },
+      {
+        "claim": "A&M's historical artist account attributes the inception of Wings to Herb Alpert's commission of a jazz ensemble, symphony orchestra and soloists, with Paul Williams later supplying song lyrics.",
+        "id": "ev02",
+        "source_url": "https://www.onamrecords.com/artists/michel-colombier"
+      },
+      {
+        "claim": "The archive documents a separate 1977 A&M 1928 single of Emmanuel and Pourquoi Pas? as altered versions from the original Wings album.",
+        "id": "ev03",
+        "source_url": "https://www.onamrecords.com/artists/michel-colombier/discography/united-states/a-m-records/1928/emmanuel-pourquoi-pas"
+      }
+    ],
+    "key": "michel-colombier",
+    "limitations": "The A&M history is an independent archival catalog of original record credits rather than today's record-label site; Wings combines classical, pop and jazz ensembles, not a conventional jazz quartet.",
+    "primary_source_url": "https://www.onamrecords.com/artists/michel-colombier/discography/united-states/a-m-records/sp-3503/wings",
+    "summary": "French composer Michel Colombier wrote and orchestrated the 1971 A&M jazz-orchestral suite Wings and reworked Emmanuel for a 1977 single.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A&M historical catalog reproduces original release details, arrangements and the specifically altered later single, distinguishing composition from sideman performance."
+  },
   "michel-gaudry": {
     "evidence": [
       {
@@ -16280,6 +16458,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His clarinet feature helped bring British traditional jazz to international pop charts."
   },
+  "monty-waters": {
+    "evidence": [
+      {
+        "claim": "In an original Concord interview, Dewey Redman says he ran a 12-piece San Francisco big band with Monty Waters while living in the city from 1961 to 1968.",
+        "id": "ev01",
+        "source_url": "https://concord.com/artist/dewey-redman/"
+      },
+      {
+        "claim": "SJRecords identifies Monty Waters as the featured archival spoken-word and vocal performer on Kazimierz Jonkisz Quartet's Monty & Soul.",
+        "id": "ev02",
+        "source_url": "https://www.sjrecords.eu/en/product/kazimierz-jonkisz-quartet-monty-soul-0"
+      },
+      {
+        "claim": "The label's Monty & Soul notes credit most of the repertoire to Waters, including Casimir the Great, a piece dedicated to Jonkisz.",
+        "id": "ev03",
+        "source_url": "https://www.sjrecords.eu/en/product/kazimierz-jonkisz-quartet-monty-soul-0"
+      }
+    ],
+    "key": "monty-waters",
+    "limitations": "The modern Monty & Soul release uses archival spoken vocals by Waters while the current quartet instrumentation is played by other musicians; Waters is not claimed as saxophonist on those new studio tracks.",
+    "primary_source_url": "https://concord.com/artist/dewey-redman/",
+    "summary": "Alto saxophonist Monty Waters co-led a San Francisco big band with Dewey Redman and later supplied archival vocals and compositions to Monty & Soul.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A first-person Dewey Redman interview preserved by Concord and the artist-releasing SJRecords catalog document two distinct decades and creative roles."
+  },
   "morris-goldberg": {
     "evidence": [
       {
@@ -17070,6 +17273,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His stage and dance-band work opened doors for Black jazz entertainers."
   },
+  "nora-brockstedt": {
+    "evidence": [
+      {
+        "claim": "Norway's National Library preserves the original RCA 78 rpm issue Tango for to / Sonnavindvalsen, dated February 19, 1957, crediting Brockstedt as singer with Egil Monn-Iversen's orchestra.",
+        "id": "ev01",
+        "source_url": "https://www.nb.no/items/d6f200b93279533d739ddd407738eca6"
+      },
+      {
+        "claim": "The library catalogs Nora Brockstedt: 1956-1957 Pa svensk with Swedish songs including Tango for tva and Karleksbrev i sanden, and lists Normann's 2015 compilation separately from the historic performances.",
+        "id": "ev02",
+        "source_url": "https://www.nb.no/items/b038816d0521b319e97b396f57ade311"
+      },
+      {
+        "claim": "The National Library's jazz seminar program singled out Brockstedt and Monica Zetterlund as vocalists bringing jazz inflection into Nordic popular song.",
+        "id": "ev03",
+        "source_url": "https://www.nb.no/hva-skjer/jazzens-inntog-i-nordisk-visesang-fagseminar/"
+      }
+    ],
+    "key": "nora-brockstedt",
+    "limitations": "The 2015 Normann issue gathers recordings labelled 1956-57; 2015 is the reissue date. Brockstedt's music also includes popular song and is not exclusively jazz.",
+    "primary_source_url": "https://www.nb.no/items/d6f200b93279533d739ddd407738eca6",
+    "summary": "Norwegian singer Nora Brockstedt recorded Tango for to for RCA in 1957 with Egil Monn-Iversen's orchestra and later released a Swedish-language repertoire.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The National Library of Norway archives a dated original RCA shellac release and distinctly catalogs a later Swedish-recordings collection."
+  },
   "norah-jones": {
     "evidence": [
       {
@@ -17308,6 +17536,31 @@
     "summary": "Jazz pianist Orrin Evans recorded The Magic of Now with Vicente Archer, Bill Stewart and Immanuel Wilkins and led the Captain Black Big Band.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Original Smoke Sessions releases document separate small-group and big-band recordings; three independent institutions establish exact identity."
+  },
+  "oscar-klein": {
+    "evidence": [
+      {
+        "claim": "MPS identifies Oscar Klein on trumpet in the reunited Tremble Kids group on The Tremble Kids Are Back, released in 1972, and describes his solo on Collier's Clambake.",
+        "id": "ev01",
+        "source_url": "https://www.mps-music.com/releases/the-tremble-kids-are-back/"
+      },
+      {
+        "claim": "MPS credits Klein as the trumpet and guitar player in Fatty George's 1978 Chicago Jazz Band sextet, alongside drummer Charly Antolini.",
+        "id": "ev02",
+        "source_url": "https://www.mps-music.com/releases/fatty-78/"
+      },
+      {
+        "claim": "MPS documents Klein's muted and open trumpet on Big Butter and Egg Man in the Tremble Kids' Midnight Session, whose release entry gives March 12, 1973.",
+        "id": "ev03",
+        "source_url": "https://www.mps-music.com/releases/midnight-session/"
+      }
+    ],
+    "key": "oscar-klein",
+    "limitations": "MPS album release years do not guarantee the precise recording dates. Klein's guitar playing on Fatty '78 must not be generalized to every track.",
+    "primary_source_url": "https://www.mps-music.com/releases/the-tremble-kids-are-back/",
+    "summary": "Austrian trumpeter Oscar Klein played in the Tremble Kids revival on MPS and appeared with clarinetist Fatty George and singer Miriam Klein.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Three distinct original MPS releases provide exact ensemble roles, instrumental solos and the boundaries of separate sessions."
   },
   "othello-molineaux": {
     "evidence": [
@@ -18411,6 +18664,45 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His arranging and production work links jazz big bands to global pop."
   },
+  "rajesh-mehta": {
+    "evidence": [
+      {
+        "claim": "MIT Libraries' March 27, 2001 oral history has Rajesh Mehta describing his own hybrid-trumpet design and first recording with Paul Lovens on Orka.",
+        "id": "ev01",
+        "source_url": "https://libraries.mit.edu/music-oral-history/interview/rajesh-mehta-3272001/"
+      },
+      {
+        "claim": "The original hatOLOGY 524 Orka recording credits document Mehta on trumpet, bass trumpet and hybrid trumpet with Paul Lovens on drums, recorded in August 1996 and May 24, 1997.",
+        "id": "ev02",
+        "source_url": "https://www.squidco.com/miva/merchant.mvc?Category_Code=HAT&Product_Code=18471&Screen=PROD&Store_Code=S"
+      },
+      {
+        "claim": "MIT News identifies alumnus Rajesh Mehta as an MIT artist-in-residence in April 2001 who presented experimental trumpet compositions and invented the hybrid trumpet.",
+        "id": "ev03",
+        "source_url": "https://news.mit.edu/2001/mehta-0425"
+      },
+      {
+        "claim": "Mehta's own discography names the Mehta-Lovens Orka recording and his Mehta-Metric Ensemble release Reconfigurations.",
+        "id": "ev04",
+        "source_url": "https://www.rajeshmehtamusic.com/music"
+      }
+    ],
+    "identity_resolution": {
+      "authorities": [
+        "https://libraries.mit.edu/music-oral-history/interview/rajesh-mehta-3272001/",
+        "https://khojstudios.org/person/rajesh-mehta/",
+        "https://www.rajeshmehtamusic.com/music"
+      ],
+      "method": "three_domain_original_institutional_and_artist_crosscheck",
+      "note": "MIT's first-person oral history, Khoj Studios' institutional artist biography and the performer's original Orka discography all identify the experimental hybrid-trumpet player Rajesh Mehta, born in India and educated at MIT, associated with drummer Paul Lovens. The previous queue classification is insufficient_evidence with wikidata_p434_only, not a reciprocal MusicBrainz relationship. No unique MBID has been established or selected; any MBID collision remains unresolved. No Wikidata identifier was used as factual evidence."
+    },
+    "key": "rajesh-mehta",
+    "limitations": "Previous classification insufficient_evidence with Wikidata-only identifier; MIT oral history, MIT news and the player's own discography identify the same trumpeter, but no reciprocal MBID assertion is made. The 1998 Orka issue differs from sessions recorded in 1996 and 1997.",
+    "primary_source_url": "https://libraries.mit.edu/music-oral-history/interview/rajesh-mehta-3272001/",
+    "summary": "Experimental trumpeter Rajesh Mehta developed hybrid trumpets, recorded Orka with Paul Lovens and premiered Reconfigurations at MIT in 2001.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "MIT preserves the performer's direct oral history and the original hatOLOGY release documents an exact duo and recording sessions."
+  },
   "ralph-burns": {
     "evidence": [
       {
@@ -18450,6 +18742,31 @@
     "summary": "Oregon co-founder Ralph Towner recorded solo classical-guitar album At First Light in Lugano in February 2022 for ECM release in March 2023.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His approach folds keyboard voicings and chamber sensibility into improvised guitar music."
+  },
+  "rambo-amadeus": {
+    "evidence": [
+      {
+        "claim": "Rambo Amadeus's own discography lists the 1989 LP Hocemo gusle on PGP-RTB as a release by the named performer.",
+        "id": "ev01",
+        "source_url": "https://ramboamadeus.com/en/albums/hocemo-gusle-album-rambo"
+      },
+      {
+        "claim": "The Eurovision organizer's official 2012 participant list identifies Rambo Amadeus performing Euro Neuro for Montenegro in Baku.",
+        "id": "ev02",
+        "source_url": "https://www.eurovision.com/eurovision-song-contest/baku-2012/participants/"
+      },
+      {
+        "claim": "Original 2024 credits for Priznati Eminentni Umjetnik list music and words by Rambo Amadeus, editing and arrangement by STO1K and mixing by Alek Kotan.",
+        "id": "ev03",
+        "source_url": "https://ramboamadeus.com/news/rambo-amadeus-i-sto1k-priznati-eminentni-umjetnik"
+      }
+    ],
+    "key": "rambo-amadeus",
+    "limitations": "The festival entry is a 2012 performance, not a jazz album; the 2024 studio track belongs to a 2022-2024 project. The artist blends genres and is not classified as exclusively jazz.",
+    "primary_source_url": "https://ramboamadeus.com/en/albums/hocemo-gusle-album-rambo",
+    "summary": "Montenegrin musician Rambo Amadeus issued Hocemo Gusle in 1989, performed Euro Neuro at Eurovision 2012 and composed 2024 studio work with STO1K.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The musician's own discography and production credits plus Eurovision's official participant register document distinct works and exact authorship."
   },
   "ran-blake": {
     "evidence": [
@@ -19315,6 +19632,31 @@
     "summary": "Japanese alto saxophonist Sadao Watanabe studied at Berklee, recorded the 1969 album Pastoral and joined Hank Jones, Ron Carter and Tony Williams for Carnaval in 1978.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His official chronology, Berklee's history and Concord's original album notes independently identify one specific saxophonist and document three recording periods."
+  },
+  "safy-boutella": {
+    "evidence": [
+      {
+        "claim": "The Saint-Hilaire media library's musician biography identifies Safy Boutella as co-producer and arranger of Cheb Khaled's Kutche, and documents his Mejnoun album in 1992.",
+        "id": "ev01",
+        "source_url": "https://mediatheque.sainthilairederiez.fr/node/952812"
+      },
+      {
+        "claim": "Original Indigo 44329 recording catalog credits identify Safy Boutella as composer of Orient, Nomade, Shiria and other tracks on the 1992 Mejnoun album.",
+        "id": "ev02",
+        "source_url": "https://www.prestomusic.com/jazz/products/8708706--mejnoun"
+      },
+      {
+        "claim": "The original Indigo digital rights catalog identifies Mejnoun under Safy Boutella and gives the 1992 release year, rather than the 2012 soundtrack reissue.",
+        "id": "ev03",
+        "source_url": "https://www.qobuz.com/gb-en/interpreter/safy-boutella/54943"
+      }
+    ],
+    "key": "safy-boutella",
+    "limitations": "The local library's 1986 Kutche production statement differs from retail issue dates in 1988-1989, so no exact Kutche issue year is asserted. Mejnoun's 1992 date is an issue date, not a proven recording date.",
+    "primary_source_url": "https://mediatheque.sainthilairederiez.fr/node/952812",
+    "summary": "Algerian composer Safy Boutella co-produced Khaled's Kutche project and released the 1992 fusion album Mejnoun, composing Orient and Nomade.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "A public cultural-library historical biography and original Indigo catalog credits document two separate artist-led album projects."
   },
   "sahib-shihab": {
     "evidence": [
@@ -20402,6 +20744,56 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Sofia Philharmonic's original performer profile and the artist's primary biography document separate ensemble and training details."
   },
+  "stuart-zender": {
+    "evidence": [
+      {
+        "claim": "Sony's licensed Apple Music credits identify Stuart Zender as bass guitarist and songwriter on Jamiroquai's Virtual Insanity, originally released in 1996.",
+        "id": "ev01",
+        "source_url": "https://music.apple.com/us/song/1479062292"
+      },
+      {
+        "claim": "Licensed track personnel for Travelling Without Moving identify Zender on bass guitar and among the songwriters; the track is dated August 28, 1996.",
+        "id": "ev02",
+        "source_url": "https://music.apple.com/us/song/603752448"
+      },
+      {
+        "claim": "The separate remastered 2013 track metadata retains Zender as bassist and writer on Travelling Without Moving; this is a remaster, not a 2013 performance.",
+        "id": "ev03",
+        "source_url": "https://music.apple.com/us/song/1675554591"
+      }
+    ],
+    "key": "stuart-zender",
+    "limitations": "Both credits refer to Jamiroquai's 1996 music; later remastered editions are not new performance dates. Album-wide membership has not been used to infer other track participation.",
+    "primary_source_url": "https://music.apple.com/us/song/1479062292",
+    "summary": "Bassist Stuart Zender performed and co-wrote Jamiroquai's 1996 tracks Virtual Insanity and Travelling Without Moving, before the 2016 remasters.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Licensed track-level rights and musician metadata document an actual bass performance and composition credit for two named recordings."
+  },
+  "sue-evans": {
+    "evidence": [
+      {
+        "claim": "ECM's Trance release credits Sue Evans on percussion with Steve Kuhn, Steve Swallow and Jack DeJohnette in November 1974 New York sessions, originally released February 1975.",
+        "id": "ev01",
+        "source_url": "https://ecmrecords.com/product/trance-steve-kuhn/"
+      },
+      {
+        "claim": "A collector's transcription of original CTI Good King Bad jacket credits identifies Sue Evans on percussion in the George Benson personnel.",
+        "id": "ev02",
+        "source_url": "https://www.jazzmusicarchives.com/album/george-benson/good-king-bad"
+      },
+      {
+        "claim": "The original CTI 1976 sleeve and 1982 Cast Your Fate to the Wind reissue notes reproduced by a physical-record seller name Sue Evans and differentiate 1975 recording sessions from later issue years.",
+        "id": "ev03",
+        "source_url": "https://highfidelityla.com/release/9074249/george-benson-cast-your-fate-to-the-wind"
+      }
+    ],
+    "key": "sue-evans",
+    "limitations": "Good King Bad was recorded in July and December 1975 and issued in 1976; a later 1982 release is a reissue. The CTI original cover credit does not establish Evans on every specific track.",
+    "primary_source_url": "https://ecmrecords.com/product/trance-steve-kuhn/",
+    "summary": "Percussionist Sue Evans recorded Steve Kuhn's Trance in November 1974 and played on George Benson's CTI album Good King Bad in 1975.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "ECM's own session notes and reproduced original CTI physical-record credits document her on two independently recorded jazz projects."
+  },
   "sunny-murray": {
     "evidence": [
       {
@@ -20890,6 +21282,31 @@
     "summary": "Pianist Thomas A. Dorsey recorded blues as Georgia Tom, directed Pilgrim Baptist Church's choir and narrated his life on 1973's Precious Lord.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Smithsonian and Library of Congress sources document his blues-to-gospel transition and the 1973 Precious Lord recording preserved in the National Recording Registry."
+  },
+  "thomas-klemm": {
+    "evidence": [
+      {
+        "claim": "Original NABEL 4642 LP credits for ChoralConcert name Thomas Klemm on saxophone and flute, Karl Scharnweber on organ and Wolfgang Schmiedt on guitar; recording took place July 26-28, 1990.",
+        "id": "ev01",
+        "source_url": "https://recordsale.de/en/artists/thomas-klemm/albums/choralconcert-improvisation-meditation"
+      },
+      {
+        "claim": "Original BuschFunk publisher roster lists Thomas Klemm with Pascal von Wroblewsky and Axel Donner on their 1991 collaboration and on So Easy issued in 1993.",
+        "id": "ev02",
+        "source_url": "https://verlag.buschfunk.com/kuenstler/pascal-von-wroblewsky/"
+      },
+      {
+        "claim": "The Thuringian archive's 1996 ChoralConcert poster directly credits Thomas Klemm on saxophone and flutes with Scharnweber and Schmiedt in a July 17 program.",
+        "id": "ev03",
+        "source_url": "https://www.archive-in-thueringen.de/de/findbuch/view/bestand/20345/systematik/96028"
+      }
+    ],
+    "key": "thomas-klemm",
+    "limitations": "The 2013 NABEL digital issue is not the July 1990 session; the 1996 ChoralConcert evidence is a performance poster, not an album session. Independent identity supported by named ensembles, not an inferred generic jazz career.",
+    "primary_source_url": "https://recordsale.de/en/artists/thomas-klemm/albums/choralconcert-improvisation-meditation",
+    "summary": "German saxophonist Thomas Klemm recorded ChoralConcert with Karl Scharnweber and Wolfgang Schmiedt in 1990 and joined Wroblewsky and Donner in 1991.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original NABEL LP credits, a music publisher's recording list and an institutional concert-poster archive identify specific instruments and ensembles."
   },
   "thomas-lang": {
     "evidence": [

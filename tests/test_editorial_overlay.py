@@ -52,18 +52,18 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
  def test_manifests_cover_six_independent_source_files(self):
   m=self.manifest
   self.assertEqual(m['catalog_entries'],1498)
-  self.assertEqual(m['individually_source_reviewed'],1190)
-  self.assertEqual(m['researched_extra'],1127)
-  self.assertEqual(m['source_dossiers'],1040)
-  self.assertEqual(m['claims_individually_attributed'],2437)
-  self.assertEqual(m['pending_not_source_reviewed'],308)
-  self.assertEqual(m['wave30_new_individual'],16)
-  self.assertEqual(m['wave30_new_claims'],48)
+  self.assertEqual(m['individually_source_reviewed'],1206)
+  self.assertEqual(m['researched_extra'],1143)
+  self.assertEqual(m['source_dossiers'],1056)
+  self.assertEqual(m['claims_individually_attributed'],2485)
+  self.assertEqual(m['pending_not_source_reviewed'],292)
+  self.assertEqual(m['wave31_new_individual'],16)
+  self.assertEqual(m['wave31_new_claims'],48)
   self.assertEqual(m['remaining_by_category'],
-                   {'evidence_candidate':183,'insufficient_evidence':79,'ambiguous':46})
-  self.assertEqual(m['wave30_promotions_by_previous_category'],
-                   {'evidence_candidate':16,'insufficient_evidence':0,'ambiguous':0})
-  self.assertEqual(m['research_stage_sha256'],'562d68d72c770450de2d2be5827cadddaa6f65ac86df322d9258514ddf4789bf')
+                   {'evidence_candidate':170,'insufficient_evidence':76,'ambiguous':46})
+  self.assertEqual(m['wave31_promotions_by_previous_category'],
+                   {'evidence_candidate':13,'insufficient_evidence':3,'ambiguous':0})
+  self.assertEqual(m['research_stage_sha256'],'1364f9eab341ff5360a2c96db1dd0128280228d5fa67275d7ef3e08132ac3838')
   self.assertEqual(len(m['files']),6)
   self.assertEqual(sum(r['bytes'] for r in m['files'].values()),
     sum((OVERLAY/k).stat().st_size for k in m['files']))
@@ -82,7 +82,7 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   catalog={p[0]:p for line in lines if len(p:=line.split('\t'))==5}
   self.assertEqual(len(catalog),1498)
   raw=(OVERLAY/'source/jazz-researched-context.tsv').read_text('ascii').splitlines()
-  self.assertEqual(len(raw),1127)
+  self.assertEqual(len(raw),1143)
   for row in raw:
    key,short,source=row.split('\t')
    self.assertIn(key,catalog)
@@ -90,9 +90,9 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
    self.assertTrue(80<=len(short)<=180 and short.isascii())
    self.assertTrue(source.startswith('https://'))
 
- def test_all_1040_individual_dossiers_link_to_specific_claims(self):
+ def test_all_1056_individual_dossiers_link_to_specific_claims(self):
   docs=json.loads((OVERLAY/'source/jazz-editorial-dossiers.json').read_text('ascii'))
-  self.assertEqual(len(docs),1040)
+  self.assertEqual(len(docs),1056)
   claim_sum=0
   for key,doc in docs.items():
    with self.subTest(key=key):
@@ -104,7 +104,25 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
     self.assertTrue(all(isinstance(r['claim'],str) and
                       len(r['claim'])>=20 and r['source_url'].startswith('https://') for r in proof))
     claim_sum+=len(proof)
-  self.assertEqual(claim_sum,2437)
+  self.assertEqual(claim_sum,2485)
+
+ def test_wave31_16_source_histories_and_identity_limits(self):
+  docs=json.loads((OVERLAY/'source/jazz-editorial-dossiers.json').read_text('ascii'))
+  keys=('bud-scott','burt-bales','charlie-dixon','frank-hewitt','henry-busse',
+        'john-campbell','michel-colombier','monty-waters','nora-brockstedt',
+        'oscar-klein','rajesh-mehta','rambo-amadeus','safy-boutella',
+        'stuart-zender','sue-evans','thomas-klemm')
+  self.assertEqual(len(keys),16)
+  self.assertEqual(len(set(keys)),16)
+  self.assertTrue(set(keys)<=set(docs))
+  self.assertEqual(sum(len(docs[k]['evidence']) for k in keys),48)
+  self.assertNotIn('freddy-randall',docs)
+  self.assertEqual(len(docs['bud-scott']['evidence']),3)
+  self.assertEqual(len(docs['henry-busse']['evidence']),2)
+  self.assertTrue(all('folkways.si.edu' in e['source_url'] for e in docs['bud-scott']['evidence']))
+  self.assertIn('MBID',docs['john-campbell']['identity_resolution']['note'])
+  self.assertIn('MBID',docs['rajesh-mehta']['identity_resolution']['note'])
+  self.assertEqual(len({urlsplit(url).netloc for url in docs['rajesh-mehta']['identity_resolution']['authorities']}),3)
 
  def test_wave30_16_personal_source_histories_not_broadened_to_unverified_credits(self):
   docs=json.loads((OVERLAY/'source/jazz-editorial-dossiers.json').read_text('ascii'))
@@ -116,7 +134,6 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   self.assertEqual(len(set(keys)),16)
   self.assertTrue(set(keys)<=set(docs))
   self.assertEqual(sum(len(docs[key]['evidence']) for key in keys),48)
-  self.assertNotIn('bud-scott',docs)
   self.assertEqual(len(docs['matty-malneck']['evidence']),2)
   self.assertEqual(len(docs['marc-edwards']['evidence']),4)
   self.assertEqual(len(docs['aage-tanggaard']['evidence']),3)
@@ -270,9 +287,9 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   self.assertEqual(docs['gerardo-velez']['evidence'][0]['source_url'],
                    'https://www.bethelwoodscenter.org/news/detail/jimi-hendrix-50-years-of-peace-music')
 
- def test_generated_future_source_has_1190_exact_hints(self):
+ def test_generated_future_source_has_1206_exact_hints(self):
   header=(OVERLAY/'source/JazzNowPlaying.h').read_text('ascii')
-  self.assertIn('static constexpr size_t kCuratedCount = 1190;',header)
+  self.assertIn('static constexpr size_t kCuratedCount = 1206;',header)
   self.assertIn('Exact ICY matches only.',header)
   self.assertIn('static bool sameName',header)
   self.assertIn('return !*a && !*b',header)
@@ -299,6 +316,9 @@ class IndependentJazzEditorialOverlay(unittest.TestCase):
   self.assertIn('Aage Tanggaard',header)
   self.assertIn('George E. Lee',header)
   self.assertIn('Simon Brehm',header)
+  self.assertIn('Bud Scott',header)
+  self.assertIn('John Campbell',header)
+  self.assertIn('Rajesh Mehta',header)
 
  def test_frozen_public_firmware_source_was_not_replaced(self):
   self.assertTrue((ROOT/'firmware/SHA256-SOURCES.txt').is_file())

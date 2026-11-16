@@ -1,34 +1,34 @@
 {
   "catalog_entries": 1498,
-  "claims_individually_attributed": 2437,
+  "claims_individually_attributed": 2485,
   "files": {
     "sd/jazz-encyclopedia.idx": {
       "bytes": 30719,
-      "sha256": "57101fda07c03f3497efda402fd64cdb6efec974f5921f4a1aebc822df8d2642"
+      "sha256": "27bba3e7f6787ce935b985dd0312e0f8afcf0573e4e30452ee9ed5927d2cf878"
     },
     "sd/jazz-encyclopedia.tsv": {
-      "bytes": 343135,
-      "sha256": "9b4ff70f48d8175fb8e84e6ddfc5983df252968af48b26892fb3ec297ffef032"
+      "bytes": 343540,
+      "sha256": "bed11eb8956b9da5b51461e3b5e767a7228803fa6bf34a880e261c0046e66c26"
     },
     "source/JAZZ-ENCYCLOPEDIA-PROVENANCE.md": {
       "bytes": 4975,
-      "sha256": "cda6717586f37241f4596b41fb265570e2f1419e5f152af9ebabb78c4ac08a88"
+      "sha256": "9ecf068693c0b6076b26472616f4d0513c4eadbc3984c0d7b5d221cc0c1a7272"
     },
     "source/JazzNowPlaying.h": {
-      "bytes": 68701,
-      "sha256": "c8c955d23778666eab8433519d21ce2e23b6ced4c6693c5e35fa2164ee6e3be2"
+      "bytes": 69633,
+      "sha256": "7670a60f8104552ce5344ad39b78a2fa4f856b65a27cedce59fb47f7f1cc6e84"
     },
     "source/jazz-editorial-dossiers.json": {
-      "bytes": 1275796,
-      "sha256": "b06c87fe5c340840527975ec7ea25af624840225463aa1cfd80ee13f4826aec0"
+      "bytes": 1304558,
+      "sha256": "204b04ac9382b985538922021dc717f05aa98906f88647e26968a838503e3d42"
     },
     "source/jazz-researched-context.tsv": {
-      "bytes": 250585,
-      "sha256": "c7dc12b1cd4a6729c95b2de13368698d6255589761db06ce7d154fce31123f33"
+      "bytes": 254176,
+      "sha256": "039219271c7f841019f27fef9d5e40a5713214ac9a10384b23a4f4bffc3c95a0"
     }
   },
   "immutability": "Existing firmware/ SHA manifest, v0.8.0 assets, and release tag are NOT modified",
-  "individually_source_reviewed": 1190,
+  "individually_source_reviewed": 1206,
   "initial_editorials": 63,
   "local_wave22_checkpoint_sha256": "df4ec87e2441764c3d0013563ae2e5558a6bc3374d665774473cffe5c0b4d88d",
   "local_wave23_checkpoint_sha256": "9c2ef1328659be2ebe969ca77f240921a98bd6c2e6cde59823402f01ccea56d4",
@@ -39,18 +39,19 @@
   "local_wave28_checkpoint_sha256": "b293aea359ececf40000d422eede14882daca335f89459541b0820b5b30b06f1",
   "local_wave29_checkpoint_sha256": "1d33a97ef22b3f82f54107e0cfcad98c2d94af757561a7d21dc1d834ba1c469a",
   "local_wave30_checkpoint_sha256": "4c95a606d81af0b411dfdd0ac01ff01984b1166a6c129615d204f517e308a197",
-  "pending_not_source_reviewed": 308,
-  "previous_editorial_checkpoint_sha256": "1d33a97ef22b3f82f54107e0cfcad98c2d94af757561a7d21dc1d834ba1c469a",
+  "local_wave31_checkpoint_sha256": "318e5ee11e600e40dd1cccea81315ec3af13aa65cbadcb91c5a622908f98dba6",
+  "pending_not_source_reviewed": 292,
+  "previous_editorial_checkpoint_sha256": "4c95a606d81af0b411dfdd0ac01ff01984b1166a6c129615d204f517e308a197",
   "remaining_by_category": {
     "ambiguous": 46,
-    "evidence_candidate": 183,
-    "insufficient_evidence": 79
+    "evidence_candidate": 170,
+    "insufficient_evidence": 76
   },
-  "research_stage_sha256": "562d68d72c770450de2d2be5827cadddaa6f65ac86df322d9258514ddf4789bf",
-  "researched_extra": 1127,
+  "research_stage_sha256": "1364f9eab341ff5360a2c96db1dd0128280228d5fa67275d7ef3e08132ac3838",
+  "researched_extra": 1143,
   "schema": 1,
-  "snapshot": "2026-11-16-wave30-sourced",
-  "source_dossiers": 1040,
+  "snapshot": "2026-11-16-wave31-sourced",
+  "source_dossiers": 1056,
   "spark_unchanged": 150,
   "versioning": "standalone_editorial_data_on_main_no_firmware_build",
   "wave22_new_claims": 63,
@@ -100,5 +101,12 @@
     "ambiguous": 0,
     "evidence_candidate": 16,
     "insufficient_evidence": 0
+  },
+  "wave31_new_claims": 48,
+  "wave31_new_individual": 16,
+  "wave31_promotions_by_previous_category": {
+    "ambiguous": 0,
+    "evidence_candidate": 13,
+    "insufficient_evidence": 3
   }
 }
