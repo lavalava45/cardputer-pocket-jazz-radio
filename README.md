@@ -12,7 +12,7 @@
 
 Listen. Discover. Remember. No streaming account, phone app or subscription required.
 
-**Jazz Notes editorial update (16 Nov 2026, wave24):** [1,028 individually source-reviewed musician histories and an optional updated SD search index](editorial/jazz-notes/README.md), independently downloadable on `main`. The original **v0.8.0 firmware and seven release assets are unchanged**; its compiled Now Playing hints remain at 595 until a later, separately tested firmware build. The latest offline data are a *manual*, optional SD update, not an automatic patch.
+**Jazz Notes editorial update (16 Nov 2026, wave25):** [1,079 individually source-reviewed musician histories and an optional updated SD search index](editorial/jazz-notes/README.md), independently downloadable on `main`. The original **v0.8.0 firmware and seven release assets are unchanged**; its compiled Now Playing hints remain at 595 until a later, separately tested firmware build. The latest offline data are a *manual*, optional SD update, not an automatic patch.
 
 [**Start in 3 steps**](docs/QUICK-START.md) · [**Why Pocket Jazz?**](docs/WHY-POCKET-JAZZ.md) · [**Explore the features**](docs/FEATURE-TOUR.md) · [**Download the preview**](https://github.com/lavalava45/cardputer-pocket-jazz-radio/releases/tag/v0.8.0)
 
