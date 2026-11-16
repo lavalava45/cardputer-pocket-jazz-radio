@@ -3714,6 +3714,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents a distinctive European electric-guitar and double-bass trio."
   },
+  "carlos-garnett": {
+    "evidence": [
+      {
+        "claim": "The Miles Davis official archive identifies Carlos Garnett on soprano and tenor saxophones as a collaborator primarily in 1972.",
+        "id": "ev01",
+        "source_url": "https://www.milesdavis.com/person/carlos-garnett/"
+      },
+      {
+        "claim": "The official On the Corner album history lists Garnett among three reed players in the Columbia recording project taped during June and July 1972.",
+        "id": "ev02",
+        "source_url": "https://www.milesdavis.com/albums/on-the-corner/"
+      },
+      {
+        "claim": "The official In Concert album history credits Garnett as a saxophonist in Davis's electric concert group at Philharmonic Hall, New York, in 1972.",
+        "id": "ev03",
+        "source_url": "https://www.milesdavis.com/albums/miles-davis-in-concert-live-at-philharmonic-hall/"
+      }
+    ],
+    "key": "carlos-garnett",
+    "limitations": "The album On the Corner involved several reed players and complex overdubs; participation is not proof of an individual solo on every track. The album release date is not its studio date.",
+    "primary_source_url": "https://www.milesdavis.com/person/carlos-garnett/",
+    "summary": "Panamanian tenor and soprano saxophonist Carlos Garnett recorded with Miles Davis in 1972 on On the Corner and the live album In Concert.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The official Miles Davis recording archive provides exact saxophone roles and identifies Garnett on studio and concert projects from 1972."
+  },
   "carlos-lyra": {
     "evidence": [
       {
@@ -6446,6 +6471,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His lyric setting made recorded saxophone improvisation into a vocal jazz standard."
   },
+  "eddie-johnson": {
+    "evidence": [
+      {
+        "claim": "Delmark's original Love You Madly album page identifies Eddie Johnson as the tenor saxophone leader on DE 515, issued in 1999.",
+        "id": "ev01",
+        "source_url": "https://delmark.com/product/515/"
+      },
+      {
+        "claim": "The sessionography based on Delmark's original liner notes credits Johnson with pianist John Young, bassist Eddie de Haas and drummer George Hughes at Riverside Studios, Chicago, on January 6-7, 1999.",
+        "id": "ev02",
+        "source_url": "https://campber.people.clemson.edu/johnson.html"
+      },
+      {
+        "claim": "Delmark's label history states that Johnson had previously recorded for Chess in the early 1950s and for Nessa in 1981.",
+        "id": "ev03",
+        "source_url": "https://delmark.com/product/515/"
+      }
+    ],
+    "key": "eddie-johnson",
+    "limitations": "Delmark issued the CD in 1999; the sessions were January 6-7, 1999. The older Chess and Nessa associations are confirmed by label history, without inferring individual track credits.",
+    "primary_source_url": "https://delmark.com/product/515/",
+    "summary": "Chicago tenor saxophonist Eddie Johnson recorded his quartet album Love You Madly for Delmark in January 1999 after earlier Chess and Nessa sessions.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Delmark's original album account and a sessionography transcribing its liner notes establish Johnson's exact quartet and late-career recording."
+  },
   "edu-lobo": {
     "evidence": [
       {
@@ -7472,6 +7522,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "A fluent modern trombonist bridging big-band swing and West Coast bebop."
   },
+  "frank-signorelli": {
+    "evidence": [
+      {
+        "claim": "Smithsonian credits Frank Signorelli on piano for Yankee Doodle Blues by the Original Memphis Five with Phil Napoleon, Jimmy Lytell, Miff Mole and Jack Roth.",
+        "id": "ev01",
+        "source_url": "https://folkways.si.edu/original-memphis-five/yankee-doodle-blues/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "Smithsonian credits Signorelli on piano for Bix Beiderbecke and His Gang's Margie with Bill Rank, Izzy Friedman, Min Leibrook and Harry Gale.",
+        "id": "ev02",
+        "source_url": "https://folkways.si.edu/bix-beiderbecke-and-his-gang/margie/jazz-ragtime/music/track/smithsonian"
+      },
+      {
+        "claim": "The Smithsonian Beale Street Blues catalog credits Signorelli on piano alongside Eddie Lang, Joe Venuti, Jack Teagarden and Benny Goodman.",
+        "id": "ev03",
+        "source_url": "https://folkways.si.edu/lang-venuti-all-star-orchestra/beale-street-blues/jazz-ragtime/music/track/smithsonian"
+      }
+    ],
+    "key": "frank-signorelli",
+    "limitations": "The Folkways anthology dates of 1952, 1953 and 1975 are reissue years, not original studio dates. The credits confirm participation, not a piano solo on every track.",
+    "primary_source_url": "https://folkways.si.edu/original-memphis-five/yankee-doodle-blues/jazz-ragtime/music/track/smithsonian",
+    "summary": "Jazz pianist Frank Signorelli recorded with Bix Beiderbecke's Gang, the Original Memphis Five and the Lang-Venuti All Star Orchestra.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Smithsonian Folkways preserves individual piano credits across three different early jazz recording ensembles."
+  },
   "frank-sinatra": {
     "evidence": [
       {
@@ -7687,6 +7762,26 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Long-running collaborations and teaching carry modern jazz phrasing into younger ensembles."
   },
+  "frankie-masters": {
+    "evidence": [
+      {
+        "claim": "The Library of Congress NBC history places Frankie Masters and his band at Chicago's Winter Garden for the New Year's Eve broadcasts welcoming 1933.",
+        "id": "ev01",
+        "source_url": "https://blogs.loc.gov/now-see-hear/2023/12/new-years-eve-with-nbc-repost/"
+      },
+      {
+        "claim": "New York State Archives' original motion-picture script index lists Frankie Masters And His Orchestra as a 1939 Paramount Pictures production, certificate 38004.",
+        "id": "ev02",
+        "source_url": "https://www.archives.nysed.gov/research/motion-picture-division-index?field_mpd_additional_material_tid=All&field_mpd_country_tid=All&field_mpd_determination_tid=All&field_mpd_notes_value=All&field_mpd_script_type_tid=All&field_mpd_year_tid=All&order=field_filmtitle&page=826&sort=asc&title=Enter+Madame"
+      }
+    ],
+    "key": "frankie-masters",
+    "limitations": "The NBC account establishes the 1932-1933 New Year's broadcast, not an exact recorded song. The 1939 film copyright documents the named orchestra, not each instrumentalist or a specific solo.",
+    "primary_source_url": "https://blogs.loc.gov/now-see-hear/2023/12/new-years-eve-with-nbc-repost/",
+    "summary": "American bandleader Frankie Masters led a Chicago orchestra broadcast on New Year's Eve 1932 and appeared in a Paramount musical short in 1939.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original NBC broadcasting history and the Library of Congress motion-picture copyright collection document separate performing activities."
+  },
   "franklin-kiermyer": {
     "evidence": [
       {
@@ -7821,6 +7916,31 @@
     "summary": "Banjoist Fred Guy played on Duke Ellington's Washingtonians' 1927 Columbia East St. Louis Toodle-O and Victor Creole Love Call studio sessions.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His documented banjo work traces the chordal pulse of Ellington's early New York orchestra before swing-era rhythm guitars."
+  },
+  "fred-hess": {
+    "evidence": [
+      {
+        "claim": "Capri Records credits Fred Hess on tenor saxophone and flute for Ron Miles's Witness, recorded January 31, 1989.",
+        "id": "ev01",
+        "source_url": "https://caprirecords.com/album/witness/"
+      },
+      {
+        "claim": "The Witness track listing identifies Hess as the composer of Our Time.",
+        "id": "ev02",
+        "source_url": "https://caprirecords.com/album/witness/"
+      },
+      {
+        "claim": "Capri credits Hess on tenor saxophone and flute as arranger and producer of You Know I Care, recorded at Akashic Studios in Boulder on June 21-22, 1994, with Ron Miles and Art Lande.",
+        "id": "ev03",
+        "source_url": "https://caprirecords.com/supportingartist/ron-miles/"
+      }
+    ],
+    "key": "fred-hess",
+    "limitations": "The 1989 and 1994 dates are original studio dates. Witness was led by Ron Miles; Hess was a participating musician, not its leader.",
+    "primary_source_url": "https://caprirecords.com/album/witness/",
+    "summary": "Tenor saxophonist and composer Fred Hess recorded with Ron Miles on Witness in 1989 and led the Capri album You Know I Care in 1994.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Capri label credits establish Hess as saxophonist, flutist, composer and later recording leader on separately dated sessions."
   },
   "fred-ho": {
     "evidence": [
@@ -10090,6 +10210,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The Canadian Jazz Archive documents the jazz ensemble work; the Canadian governor official honours register and original music-collection document the broader career."
   },
+  "hal-kemp": {
+    "evidence": [
+      {
+        "claim": "The Library of Congress film guide identifies Hal Kemp and His Orchestra in a 1936 musical short performing The Bride Comes Home and I'm Building Up to an Awful Letdown with named vocalists.",
+        "id": "ev01",
+        "source_url": "https://wwws.loc.gov/rr/mopic/findaid/jazz/s.html"
+      },
+      {
+        "claim": "A separate 1939 short documents Kemp's orchestra performing In an 18th Century Drawing Room, Swampfire and Vagabond Dreams.",
+        "id": "ev02",
+        "source_url": "https://wwws.loc.gov/rr/mopic/findaid/jazz/s.html"
+      },
+      {
+        "claim": "The Library of Congress Dana Suesse collection states that Kemp's orchestra recorded her 1931 composition Ho Hum, with lyrics by Edward Heyman.",
+        "id": "ev03",
+        "source_url": "https://findingaids.loc.gov/repositories/15/resources/1611"
+      }
+    ],
+    "key": "hal-kemp",
+    "limitations": "The LOC film guide describes original shorts in a later video anthology. The 1984 video issue is not an original performance date. Orchestra attribution is not evidence of a saxophone solo by Kemp.",
+    "primary_source_url": "https://wwws.loc.gov/rr/mopic/findaid/jazz/s.html",
+    "summary": "American dance-band leader Hal Kemp led filmed orchestral performances in 1936 and 1939 and recorded Ho Hum from Dana Suesse's songbook.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Library of Congress music and film collections independently document Kemp's named orchestras, original repertory and filmed performances."
+  },
   "hannes-zerbe": {
     "evidence": [
       {
@@ -10860,6 +11005,31 @@
     "summary": "Danish bassist Hugo Rasmussen recorded with Ben Webster and Dexter Gordon and played on more than 1,000 recordings. His basses were lent to other players after his death.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Danish Musicians' Union documents his recorded legacy and posthumous instrument lending foundation."
+  },
+  "ian-christie": {
+    "evidence": [
+      {
+        "claim": "The original Lake Records reissue credits list Ian Christie on clarinet in Mick Mulligan and His Jazz Band Featuring George Melly for Ravers, drawn from 1956-57 performances.",
+        "id": "ev01",
+        "source_url": "https://recordsale.de/en/artists/george-melly/albums/ravers"
+      },
+      {
+        "claim": "Lake Records' original album credits document Christie as clarinetist with Alex Welsh and his Dixielanders on Live at the Royal Festival Hall 1954/55.",
+        "id": "ev02",
+        "source_url": "https://recordsale.de/en/artists/alex-welsh/albums/live-at-the-royal-festival-hall-1954-55"
+      },
+      {
+        "claim": "The Jazz Northwest obituary recounts Christie's participation in a 1949 Lyttelton-band concert and recording with Sidney Bechet, independently identifying that early collaboration.",
+        "id": "ev03",
+        "source_url": "https://www.jazznorthwest.co.uk/christie.htm"
+      }
+    ],
+    "key": "ian-christie",
+    "limitations": "The Lake Records issues are later archival releases of 1954-57 performances, not recordings made when the CDs were released. Sleeve personnel is an ensemble roster and cannot identify every track without a track-level breakdown.",
+    "primary_source_url": "https://recordsale.de/en/artists/george-melly/albums/ravers",
+    "summary": "British clarinetist Ian Christie played with Humphrey Lyttelton and the Christie Brothers Stompers, later recording with Mick Mulligan's jazz band.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Original Lake Records-reproduced musician credits and a firsthand British jazz obituary connect separate concert ensembles and recordings."
   },
   "ian-hamer": {
     "evidence": [
@@ -14172,6 +14342,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Shows accordion within French Manouche and swing traditions."
   },
+  "marcel-papaux": {
+    "evidence": [
+      {
+        "claim": "The Willisau Jazz Archive lists drummer Marcel Papaux in Zounds with Carlos Baumann, Ohad Talmor and Jean-Philippe Zwahlen for an August 29, 1996 tent concert.",
+        "id": "ev01",
+        "source_url": "https://www.willisaujazzarchive.ch/people-acts/person/marcel-papaux.html"
+      },
+      {
+        "claim": "The same original festival archive identifies Papaux on drums in Harald Haerter Group featuring Michael Brecker on August 30, 1997, with bassist Banz Oester.",
+        "id": "ev02",
+        "source_url": "https://www.willisaujazzarchive.ch/people-acts/person/marcel-papaux.html"
+      },
+      {
+        "claim": "Bauer Studios' original Neuklang catalog credits Papaux on drums with Jean-Christophe Cholet and Heiri Kaenzig for the trio album Exchange (NCD4105).",
+        "id": "ev03",
+        "source_url": "https://www.bauerstudios.de/storage/Labels/2018_Neuklang_Katalog_LV.pdf"
+      }
+    ],
+    "key": "marcel-papaux",
+    "limitations": "The dated Willisau performances were live concerts, not album recording sessions. The Neuklang 2018 PDF is a retrospective label catalog and 2014 is the release year of Exchange.",
+    "primary_source_url": "https://www.willisaujazzarchive.ch/people-acts/person/marcel-papaux.html",
+    "summary": "Swiss drummer Marcel Papaux played at the Willisau jazz festival with Zounds in 1996 and Harald Haerter's Michael Brecker group in 1997.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Willisau festival archive has individual performer and stage-date entries for two separate bands; Neuklang's original label catalog documents a later piano trio."
+  },
   "marcel-zanini": {
     "evidence": [
       {
@@ -14857,6 +15052,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Modern European piano jazz with a Cuban bass voice and strongly melodic originals."
   },
+  "marty-cook": {
+    "evidence": [
+      {
+        "claim": "The official rights-authorized Jeanne Lee Conspiracy reissue credits Marty Cook on trombone at the 1974 New York recording with Sam Rivers, Gunter Hampel and Steve McCall.",
+        "id": "ev01",
+        "source_url": "https://moved-by-sound.bandcamp.com/album/conspiracy-2"
+      },
+      {
+        "claim": "Finland's National Library catalog lists Marty Cook on trombone with Jim Pepper on tenor, Essiet Essiet on bass and John Betsch on drums for the Enja album Nightwork (ENJA5033).",
+        "id": "ev02",
+        "source_url": "https://kansalliskirjasto.finna.fi/Record/vaari.1991903"
+      },
+      {
+        "claim": "The same national library catalog documents separate Nightwork recording dates October 9, 1986 and January 12, 1987, rather than inferring those dates from the album's printed issue year.",
+        "id": "ev03",
+        "source_url": "https://kansalliskirjasto.finna.fi/Record/vaari.1991903"
+      }
+    ],
+    "key": "marty-cook",
+    "limitations": "Conspiracy was recorded in 1974, originally released in 1975 and reissued in 2021. The Finnish library lists the Nightwork release as 1986 despite identifying a January 1987 session; release-date discrepancy is left unresolved.",
+    "primary_source_url": "https://moved-by-sound.bandcamp.com/album/conspiracy-2",
+    "summary": "Free-jazz trombonist Marty Cook performed on Jeanne Lee's 1974 Conspiracy and co-led the 1986-87 Nightwork sessions with Jim Pepper.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The rights-authorized Jeanne Lee original-recording reissue and a national library's original Enja release catalog establish two distinct projects and exact roles."
+  },
   "marty-ehrlich": {
     "evidence": [
       {
@@ -15522,6 +15742,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Documents creative guitar practice across avant-garde jazz and other music."
   },
+  "michael-hashim": {
+    "evidence": [
+      {
+        "claim": "The Van Gelder original session discography lists Michael Hashim on alto sax in a 1991 quartet with organist Mike LeDonne, guitarist Peter Bernstein and drummer Kenny Washington.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/van-gelder-studio/discography-1991/"
+      },
+      {
+        "claim": "The same session catalog attributes Smoke-Down, Our Miss Brooks and Rose Street Summer to Hashim's original Stash album A Blue Streak, catalog ST-CD-546.",
+        "id": "ev02",
+        "source_url": "https://www.jazzdisco.org/van-gelder-studio/catalog-1991/"
+      },
+      {
+        "claim": "BBC Music Magazine's contemporary review of Transatlantic Airs documents Hashim on soprano and alto saxophone beside pianist David Newton, drummer Clark Tracey and singer Tina May for the 33 Records release.",
+        "id": "ev03",
+        "source_url": "https://www.classical-music.com/features/jazz/michael-hashim"
+      }
+    ],
+    "key": "michael-hashim",
+    "limitations": "The exact day of the 1991 Van Gelder session is not given in the archive and is not inferred. The 2012 review describes a recording on 33 Records but does not establish the original recording date.",
+    "primary_source_url": "https://www.jazzdisco.org/van-gelder-studio/discography-1991/",
+    "summary": "Alto saxophonist Michael Hashim recorded A Blue Streak with Mike LeDonne and Peter Bernstein in 1991, then made Transatlantic Airs with a UK quartet.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Van Gelder studio session index preserves precise original Stash personnel and title repertoire; a contemporary BBC Music Magazine review identifies his later London ensemble."
+  },
   "michael-hornstein": {
     "evidence": [
       {
@@ -16036,6 +16281,31 @@
     "summary": "British jazz organist Mike Carr led BBC-recorded trios in 1966 with guitarist John McLaughlin and in 1983 with bassist Paul Morgan and drummer Spike Wells.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "The British Jazz Sound Archive catalog identifies exact broadcast sessions, dates, musicians and performed tunes."
+  },
+  "mike-fahn": {
+    "evidence": [
+      {
+        "claim": "On his personal artist biography, Fahn describes his first leader album Stepping Out and explicitly identifies John Patitucci as bassist.",
+        "id": "ev01",
+        "source_url": "https://www.mikefahnmusic.com/bio"
+      },
+      {
+        "claim": "In his original contemporary 1990 review of Steppin' Out, Leonard Feather identifies John Patitucci, Tad Weed and Peter Donald with Fahn, and locates the recording at Mad Hatter Studios.",
+        "id": "ev02",
+        "source_url": "https://www.latimes.com/archives/la-xpm-1990-01-14-ca-200-story.html"
+      },
+      {
+        "claim": "Bassist-producer Mary Ann McSweeney's official discography lists Mike Fahn Quintets East and West as a project she produced.",
+        "id": "ev03",
+        "source_url": "https://maryannmcsweeney.com/recordings/"
+      }
+    ],
+    "key": "mike-fahn",
+    "limitations": "Fahn's own website calls Stepping Out his first CD, while the contemporary record review prints the title Steppin' Out. The exact album title is retained as printed in the review; no session date inferred.",
+    "primary_source_url": "https://www.mikefahnmusic.com/bio",
+    "summary": "Valve trombonist Mike Fahn made Steppin' Out with John Patitucci and later led East and West Coast Quintets, produced by Mary Ann McSweeney.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The trombonist's first-person biography and the producer's own release list connect two specific leader projects and collaborators, corroborated by a contemporary original review."
   },
   "mike-ledonne": {
     "evidence": [
@@ -17608,6 +17878,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Vocal improvisation meets movie themes and newly written lyrics in a chamber-jazz setting."
   },
+  "odell-brown": {
+    "evidence": [
+      {
+        "claim": "The International Archives for the Jazz Organ identifies Brown on organ for the Cadet Raising the Roof LP, catalog LPS-775, with saxophonists Artee Payne and Thomas Purvis and drummer Curtis Prince.",
+        "id": "ev01",
+        "source_url": "https://www.iajo.org/iajo04/usa/browno.htm"
+      },
+      {
+        "claim": "The same organ archive dates Raising the Roof to a July 1966 Chicago session and identifies the group's 1967 Cadet Mellow Yellow LP as catalog LPS-788.",
+        "id": "ev02",
+        "source_url": "https://www.iajo.org/iajo04/usa/browno.htm"
+      },
+      {
+        "claim": "The archive separately documents Brown as organist in a Chicago April 1966 session with alto saxophonists Sonny Stitt and Bunky Green and drummer Maurice White.",
+        "id": "ev03",
+        "source_url": "https://www.iajo.org/iajo04/usa/browno.htm"
+      }
+    ],
+    "key": "odell-brown",
+    "limitations": "The jazz organ archive is a historical specialist reconstruction rather than a direct Chess master ledger; Cadet release dates are separate from recording dates, and the lineup may vary between releases.",
+    "primary_source_url": "https://www.iajo.org/iajo04/usa/browno.htm",
+    "summary": "Organist Odell Brown formed the Organ-Izers and recorded the 1966 Cadet LP Raising the Roof and the 1967 follow-up Mellow Yellow.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The specialist International Archives for the Jazz Organ reproduces original Cadet catalog numbers, recording years and organ-group instrumental personnel."
+  },
   "ohad-talmor": {
     "evidence": [
       {
@@ -18880,6 +19175,31 @@
     "summary": "Chicago trombonist Preston Jackson recorded Richard M. Jones' traditional jazz with Darnell Howard and Baby Dodds and later played with Lil Hardin Armstrong.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Smithsonian original track credits document the precise Jones band, while Concord identifies Jackson in Lil Hardin Armstrong's later Chicago all-star group."
+  },
+  "pupi-avati": {
+    "evidence": [
+      {
+        "claim": "Rai Teche identifies Pupi Avati as clarinetist in Reno Jazz Gang on the January 16, 1962 episode of Jazz in Italia, with named players including Franco Franchini and Luigi Nasalvi.",
+        "id": "ev01",
+        "source_url": "https://www.teche.rai.it/2023/11/pupi-avati-giovane-jazzista/"
+      },
+      {
+        "claim": "Bologna's municipal library documents Avati on clarinet in the Criminal Jazz Band ensemble which recorded the soundtrack to his 1978 television film Jazz Band, with Amedeo Tommasi on piano.",
+        "id": "ev02",
+        "source_url": "https://www.bibliotecasalaborsa.it/bolognaonline/lang/it/cronologia-di-bologna/1978/il_film_jazz_band_di_pupi_avati_e_la_doctor_dixie_jazz_band"
+      },
+      {
+        "claim": "The Bologna institutional history specifies that the first episode of the three-part Jazz Band television film aired on April 30, 1978, distinct from Avati's 1962 television performance.",
+        "id": "ev03",
+        "source_url": "https://www.bibliotecasalaborsa.it/bolognaonline/lang/it/cronologia-di-bologna/1978/il_film_jazz_band_di_pupi_avati_e_la_doctor_dixie_jazz_band"
+      }
+    ],
+    "key": "pupi-avati",
+    "limitations": "Avati directed the 1978 film, but this alone is not an instrumental credit; the municipal archive separately identifies him as clarinetist on the soundtrack. The 1962 performance date belongs to television broadcast footage, not a commercial LP.",
+    "primary_source_url": "https://www.teche.rai.it/2023/11/pupi-avati-giovane-jazzista/",
+    "summary": "Before his film career, Pupi Avati played clarinet with Bologna's Reno Jazz Gang on Italian television and on the 1978 Jazz Band soundtrack.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Rai Teche preserves a dated original TV performance, and Bologna's public library identifies his soundtrack clarinet performance for the later film."
   },
   "putte-wickman": {
     "evidence": [
@@ -20643,6 +20963,31 @@
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Her voice joins Balke's percussion and speech-driven experimental jazz."
   },
+  "sonny-brown": {
+    "evidence": [
+      {
+        "claim": "The original Argo LP-669 session inventory credits Sonny Brown on drums with Roland Kirk, Ira Sullivan, William Burton and Donald Garrett at a Chicago date on June 7, 1960.",
+        "id": "ev01",
+        "source_url": "https://www.jazzdisco.org/roland-kirk/discography/"
+      },
+      {
+        "claim": "Resonance Records' original tape-restoration release credits drummer Sonny Brown with Rahsaan Roland Kirk at the Village Gate in New York on November 26-27, 1963.",
+        "id": "ev02",
+        "source_url": "https://resonancerecords.org/product/rahsaan-roland-kirkvibrations-in-the-village-live-at-the-village-gate-cd/"
+      },
+      {
+        "claim": "Resonance's archival album documentation distinguishes the November 1963 live tapes from its first issue as Vibrations in the Village in December 2025.",
+        "id": "ev03",
+        "source_url": "https://resonancerecords.org/product/rahsaan-roland-kirkvibrations-in-the-village-live-at-the-village-gate-cd/"
+      }
+    ],
+    "key": "sonny-brown",
+    "limitations": "Introducing Roland Kirk was recorded June 1960 and issued in 1960; Resonance's 2025 CD is a first archival release of November 1963 concert tapes, not a new 2025 performance.",
+    "primary_source_url": "https://www.jazzdisco.org/roland-kirk/discography/",
+    "summary": "Drummer Sonny Brown joined Roland Kirk on the 1960 Argo Introducing Roland Kirk session and at the Village Gate concert tapes recorded in 1963.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The original Argo matrix-based discography and Resonance's archival tape release document two separately recorded Kirk ensembles featuring Brown."
+  },
   "sophie-hunger": {
     "evidence": [
       {
@@ -20867,6 +21212,36 @@
     "summary": "Improviser Steve Beresford supplied electronics to Simon H. Fell's large-ensemble work Positions & Descriptions alongside Tim Berne and Rhodri Davies.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "His electronics help merge electroacoustic sound with ensemble improvisation."
+  },
+  "steve-brown": {
+    "evidence": [
+      {
+        "claim": "Tulane's Music Rising archival research identifies bassist Steve Brown as a New Orleans musician who recorded with the New Orleans Rhythm Kings in Chicago in 1922.",
+        "id": "ev01",
+        "source_url": "https://musicrising.tulane.edu/discover/people/steve-brown/"
+      },
+      {
+        "claim": "Tulane dates Brown's electrically recorded slap-bass work with Jean Goldkette's Orchestra to January 1927 and places him with Paul Whiteman in 1927-1928.",
+        "id": "ev02",
+        "source_url": "https://musicrising.tulane.edu/discover/people/steve-brown/"
+      },
+      {
+        "claim": "Concord's New Orleans Rhythm Kings original-label reissue includes Steve Brown among the musicians across recordings made in August 1922, March 1923 and July 1923.",
+        "id": "ev03",
+        "source_url": "https://concord.com/concord-albums/new-orleans-rhythm-kings-2/"
+      },
+      {
+        "claim": "A specialist study published by Cambridge University Press documents Brown's slap-bass approach and his experience recording the Goldkette orchestra for Victor.",
+        "id": "ev04",
+        "source_url": "https://www.cambridge.org/core/journals/prospects/article/abs/music-in-the-twenties-the-jean-goldkette-orchestra/171481CB455A8FBF9545B3BE8700B7A5"
+      }
+    ],
+    "key": "steve-brown",
+    "limitations": "Concord's three-session compilation names Brown in a collective roster but does not allocate him to every track; the 1927 Goldkette recording work is independently documented by Tulane and historical scholarship.",
+    "primary_source_url": "https://musicrising.tulane.edu/discover/people/steve-brown/",
+    "summary": "New Orleans bassist Steve Brown recorded with the New Orleans Rhythm Kings in 1922 and made influential slap-bass sides with Jean Goldkette in 1927.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "Tulane's original Gulf South music research establishes the artist's two recording eras, while Concord preserves the original NORK label-session grouping."
   },
   "steve-harris": {
     "evidence": [
@@ -22412,6 +22787,31 @@
     "summary": "Hungarian singer Veronika Harcsa recorded Lampafeny in Budapest in January 2011 with pianist Attila Blaho and guitarist Balint Gyemant.",
     "tier": "individual_editorial_music_research",
     "why_it_matters": "Jazz interpretation of Hungarian poetry joins small-ensemble vocals with modern harmonic textures."
+  },
+  "vic-berton": {
+    "evidence": [
+      {
+        "claim": "The Library of Congress National Jukebox catalogs Vic Berton as a songwriter, with Art Kassel, of Sobbin' Blues recorded August 17, 1923 by Benson Orchestra of Chicago for Victor 19130, matrix B-28432.",
+        "id": "ev01",
+        "source_url": "https://www.loc.gov/item/jukebox-67766/"
+      },
+      {
+        "claim": "The Bix Beiderbecke record chronology identifies Vic Berton replacing Vic Moore on drums at the Wolverines' June 20, 1924 session, distinguishing it from May 6 takes.",
+        "id": "ev02",
+        "source_url": "https://bixbeiderbecke.com/bix-beiderbecke-recordings-in-chronological-order/"
+      },
+      {
+        "claim": "The June 20, 1924 Gennett matrix inventory lists I Need Some Pettin', Royal Garden Blues and Tiger Rag in the Wolverines session associated with drummer Vic Berton.",
+        "id": "ev03",
+        "source_url": "https://bixbeiderbecke.com/bix-beiderbecke-recordings-in-chronological-order/"
+      }
+    ],
+    "key": "vic-berton",
+    "limitations": "The 1923 Sobbin' Blues recording identifies Berton only as songwriter, not performer. The June 1924 Wolverines sessions are documented through record-matrix research; individual take personnel can be disputed.",
+    "primary_source_url": "https://www.loc.gov/item/jukebox-67766/",
+    "summary": "Jazz drummer Vic Berton replaced Vic Moore for the Wolverines' June 1924 Gennett sessions and co-wrote Sobbin' Blues recorded by Victor in 1923.",
+    "tier": "individual_editorial_music_research",
+    "why_it_matters": "The Library of Congress' original Victor record shows an author credit, while a specialist chronological inventory of Gennett matrices establishes his actual drumming session."
   },
   "vicki-genfan": {
     "evidence": [
